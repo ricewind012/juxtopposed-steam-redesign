@@ -1,0 +1,33 @@
+:root {
+  --spacing-05x: calc(var(--spacing) / 2);
+  --spacing: 10px;
+  --spacing-2x: calc(var(--spacing) * 2);
+}
+
+._33Kl16vpskBOQpwINGA8ah {
+  gap: var(--spacing-05x) !important;
+  margin-right: 0 !important;
+  margin-bottom: var(--spacing-2x) !important;
+  display: flex !important;
+  flex-wrap: wrap !important;
+  width: unset !important;
+  max-width: unset !important;
+}
+
+._3rtIpqfC_9VWz4DRSTPach {
+  padding: 0 var(--spacing-2x) !important;
+  margin-bottom: 0 !important;
+}
+
+._58Mghr8vhm_-IZP3Mkcb_ {
+  display: none !important;
+}
+
+._3iaJsP4avEYu4oI9gP8Gro {
+  margin: 0 !important;
+  margin-top: var(--spacing-05x) !important;
+}
+
+._2kqKZFxhF8XvzaoAekjV7m {
+  flex-direction: column !important;
+}

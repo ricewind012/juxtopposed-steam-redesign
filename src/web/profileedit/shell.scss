@@ -1,0 +1,35 @@
+// Tabs on top
+:root {
+  --spacing-05x: calc(var(--spacing) / 2);
+  --spacing: 10px;
+  --spacing-2x: calc(var(--spacing) * 2);
+}
+
+#Navigation {
+  gap: var(--spacing-05x) !important;
+  margin-right: 0 !important;
+  margin-bottom: var(--spacing-2x) !important;
+
+  display: flex !important;
+  flex-wrap: wrap !important;
+  width: unset !important;
+  max-width: unset !important;
+}
+
+#NavLink {
+  padding: 0 var(--spacing-2x) !important;
+  margin-bottom: 0 !important;
+}
+
+#ProfileEditLine {
+  display: none !important;
+}
+
+#ProfileEditStoreLink {
+  margin: 0 !important;
+  margin-top: var(--spacing-05x) !important;
+}
+
+#Shell {
+  flex-direction: column !important;
+}
