@@ -1,0 +1,17 @@
+{
+	"name": "Juxtopposed Steam Redesign",
+	"author": "ricewind",
+	"description": "lol",
+	"version": "1.0.0",
+    "Steam-WebKit": "dist/index.css",
+	"Patches": [
+		{
+			"MatchRegexString": ".DesktopUI",
+			"TargetCss": "dist/index.css"
+		},
+		{
+			"MatchRegexString": ".fullheight",
+			"TargetCss": "dist/index.css"
+		}
+	]
+}

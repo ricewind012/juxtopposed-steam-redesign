@@ -1,7 +1,7 @@
 {
   "type": "module",
   "scripts": {
-    "build": "node get_steam_version && npx postcss --verbose 'src/**/*.scss' --base src --dir dist --ext css"
+    "build": "npx postcss --verbose src --base src --dir dist --ext css"
   },
   "dependencies": {
     "@csstools/postcss-sass": "^5.1.1",
