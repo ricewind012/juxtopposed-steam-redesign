@@ -1,0 +1,73 @@
+.market_paging {
+	line-height: unset !important;
+	gap: 5px !important;
+	padding: 5px !important;
+	padding-right: 0 !important;
+	margin: 0 !important;
+	margin-top: var(--market-row-spacing-outer) !important;
+
+	display: flex !important;
+	flex-direction: row-reverse !important;
+	align-items: center !important;
+	justify-content: space-between !important;
+	height: unset !important;
+
+	& > [style="clear: both;"] {
+		display: none;
+	}
+}
+
+.commentthread_paging,
+.market_paging_controls {
+	gap: 24px !important;
+	padding: 0 !important;
+	margin: 0 !important;
+
+	display: flex !important;
+}
+
+.pagebtn,
+.commentthread_pagelink,
+.market_paging_pagelink {
+	background-color: var(--bg-hl) !important;
+	font: var(--gpText-BodyMedium) !important;
+	color: inherit !important;
+	text-decoration: none !important;
+	border-radius: var(--border-radius) !important;
+
+	display: flex !important;
+	align-items: center !important;
+	justify-content: center !important;
+
+	&.active,
+	&:not(.disabled):hover {
+		background-color: var(--bg-hover) !important;
+	}
+}
+
+.commentthread_pagelinks,
+#searchResults_links {
+	gap: 5px !important;
+	margin: 0 !important;
+
+	display: flex !important;
+	align-items: center !important;
+}
+
+.pagebtn {
+	border: none !important;
+	padding: 0 !important;
+
+	width: 70px !important;
+	height: 30px !important;
+
+	&.disabled {
+		opacity: 0.5 !important;
+	}
+}
+
+.commentthread_pagelink,
+.market_paging_pagelink {
+	padding: 5px 7px !important;
+	margin: 0 !important;
+}

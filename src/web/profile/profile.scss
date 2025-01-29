@@ -1,0 +1,20 @@
+:root {
+	--avatar-border-radius: 4px;
+	--profile-width: 1241px;
+	--sidebar-gutter: 30px;
+	--sidebar-width: 293px;
+}
+
+body.profile_page {
+	--btn-background: color-mix(in srgb, var(--bg-hl) 50%, transparent);
+	--btn-background-hover: color-mix(in srgb, var(--bg-hover) 50%, transparent);
+	--gradient-background: color-mix(in srgb, var(--bg-hover) 35%, transparent);
+}
+
+div.profile_page {
+	padding-bottom: 187px !important;
+
+	[style^="clear: "] {
+		display: none;
+	}
+}

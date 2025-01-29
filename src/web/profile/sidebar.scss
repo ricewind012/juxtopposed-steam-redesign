@@ -1,0 +1,249 @@
+/* sidebar, global first 2 */
+.profile_rightcol {
+	background-color: transparent !important;
+	backdrop-filter: none !important;
+	padding: 0 !important;
+
+	flex-shrink: 0;
+	width: var(--sidebar-width) !important;
+
+	& > * {
+		background-color: var(--bg-main-50) !important;
+		backdrop-filter: blur(20px) !important;
+		border-radius: var(--border-radius-large) !important;
+		padding: 15px !important;
+		margin-bottom: 20px !important;
+	}
+}
+
+.profile_count_link_preview {
+	padding: var(--spacing) !important;
+	gap: 6px;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+
+	.profile_awards &,
+	.profile_badges & {
+		flex-direction: row;
+	}
+}
+
+.profile_in_game {
+	margin: 0 !important;
+}
+
+.profile_in_game_header {
+	font: var(--gpText-HeadingMedium);
+}
+
+.profile_in_game_name {
+	font: var(--gpText-BodyMedium);
+	margin: 0 !important;
+
+	.persona.offline & {
+		color: var(--fg-dim) !important;
+	}
+}
+
+.profile_ban_status {
+	color: var(--accent-red) !important;
+	font: var(--gpText-BodyMedium) !important;
+	margin-top: 10px !important;
+	margin-bottom: 0 !important;
+}
+
+.profile_ban_info {
+	color: var(--fg-dim) !important;
+}
+
+.profile_badges,
+.profile_item_links,
+.profile_friend_links {
+	margin: 0 !important;
+}
+
+.profile_item_links {
+	gap: 6px;
+
+	display: flex;
+	flex-direction: column;
+}
+
+.profile_count_link {
+	background-color: var(--bg-main) !important;
+	border-radius: var(--border-radius) !important;
+	margin-bottom: 0 !important;
+
+	a {
+		padding: 10px !important;
+
+		display: flex;
+
+		&:hover {
+			background-color: var(--bg-hover) !important;
+			color: inherit !important;
+		}
+	}
+
+	span {
+		font: var(--gpText-BodyLarge) !important;
+	}
+
+	.count_link_label {
+		text-decoration: none !important;
+
+		flex-grow: 1;
+	}
+
+	.profile_count_link_total {
+		color: var(--fg-dim) !important;
+	}
+}
+
+.profile_count_link_preview_ctn {
+	--spacing: 10px;
+
+	background-color: var(--bg-main) !important;
+	border-radius: var(--border-radius) !important;
+
+	.profile_count_link {
+		padding: var(--spacing) !important;
+		padding-bottom: 0 !important;
+
+		a {
+			margin: calc(var(--spacing) * -1) !important;
+			margin-bottom: 0 !important;
+		}
+	}
+}
+
+.profile_awards,
+.profile_badges {
+	margin-bottom: 6px !important;
+}
+
+.profile_badges_badge {
+	margin: 0 !important;
+
+	&,
+	img {
+		--size: 45px;
+
+		width: var(--size) !important;
+		height: var(--size) !important;
+	}
+}
+
+.profile_group_links,
+.profile_friend_links {
+	background-color: var(--bg-main-50) !important;
+
+	.profile_count_link {
+		--spacing: 15px;
+
+		background-color: transparent !important;
+		margin: calc(var(--spacing) * -1) !important;
+		margin-bottom: 0 !important;
+
+		overflow: visible !important;
+
+		a {
+			padding: var(--spacing) !important;
+
+			display: block !important;
+		}
+	}
+
+	.profile_count_link_preview {
+		padding: 0 !important;
+	}
+
+	.profile_count_link_total {
+		display: inline-flex;
+
+		&::before {
+			content: "(";
+		}
+
+		&::after {
+			content: ")";
+		}
+	}
+}
+
+.profile_group_avatar {
+	box-shadow: none !important;
+}
+
+.profile_group_membercount {
+	color: var(--fg-dim);
+}
+
+.profile_group {
+	height: unset;
+
+	&.profile_primary_group {
+		margin: 0 !important;
+	}
+
+	&:not(.profile_primary_group) {
+		padding-top: 0 !important;
+
+		.profile_group_avatar {
+			top: 6px;
+		}
+	}
+
+	.whiteLink {
+		font: var(--gpText-BodyLarge);
+	}
+}
+
+.profile_in_common {
+	color: var(--fg-dim) !important;
+}
+
+.friendBlock {
+	background-color: var(--bg-main) !important;
+	border-radius: var(--border-radius) !important;
+	padding: 10px !important;
+	margin: 0 !important;
+
+	display: flex !important;
+	align-items: center !important;
+	height: unset !important;
+
+	&:hover {
+		background-color: var(--bg-hover) !important;
+	}
+
+	.friendBlockContent {
+		font: var(--gpText-BodyLarge) !important;
+
+		flex-grow: 1;
+	}
+
+	.friendPlayerLevel {
+		margin: 0 !important;
+		margin-left: 9px !important;
+
+		order: 1;
+		display: flex;
+		justify-content: center;
+	}
+
+	.friendSmallText {
+		font: var(--gpText-BodySmall) !important;
+	}
+
+	.playerAvatar {
+		--size: 46px;
+		margin-right: 9px !important;
+	}
+}
+
+.friendPlayerLevelNum {
+	color: var(--fg-main) !important;
+}

@@ -1,0 +1,97 @@
+.market_header_bg {
+	background-color: transparent !important;
+
+	/* TODO share? */
+	margin-top: 69px !important;
+}
+
+.market_header_logo {
+	background-image: none !important;
+
+	width: unset !important;
+}
+
+.market_header_text {
+	gap: 24px !important;
+	padding: 0 !important;
+
+	display: flex !important;
+	flex-direction: column !important;
+	width: unset !important;
+
+	br {
+		display: none;
+	}
+}
+
+.market_title_text {
+	color: var(--fg-main) !important;
+	font: var(--gpText-HeadingLarge) !important;
+}
+
+.market_subtitle_text {
+	color: var(--fg-dim) !important;
+	font: var(--gpText-HeadingMedium) !important;
+}
+
+#BG_top {
+	background-color: transparent !important;
+	gap: 24px !important;
+
+	display: flex !important;
+	justify-content: space-between;
+
+	.user_info {
+		background-color: transparent !important;
+		border: none !important;
+		padding: 0 !important;
+
+		position: unset !important;
+		min-width: unset !important;
+		max-width: unset !important;
+		height: unset !important;
+
+		br,
+		& > span:nth-child(2),
+		#marketWalletBalance {
+			display: none !important;
+		}
+
+		a {
+			background-color: var(--bg-hl);
+			padding: 17px 56px !important;
+			border-radius: var(--border-radius) !important;
+
+			white-space: nowrap !important;
+		}
+	}
+
+	.user_info_text {
+		font: var(--gpText-BodyLarge) !important;
+		margin: 0 !important;
+
+		display: flex !important;
+	}
+}
+
+.pick_and_sell_button {
+	right: 0 !important;
+	bottom: 100px !important;
+}
+
+.item_market_action_button_contents {
+	background: none var(--color-secondary) !important;
+	color: var(--fg-main) !important;
+	font: var(--gpText-BodyLarge) !important;
+	line-height: inherit !important;
+	border-radius: var(--border-radius) !important;
+	box-shadow: var(--button-shadow) !important;
+	padding: 17px 56px !important;
+
+	float: unset !important;
+	height: unset !important;
+
+	&:hover {
+		background-color: var(--color-primary) !important;
+	}
+}

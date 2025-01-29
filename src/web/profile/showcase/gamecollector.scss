@@ -1,0 +1,17 @@
+.showcase_bodylabel {
+	font: var(--gpText-HeadingSmall) !important;
+	color: var(--fg-main) !important;
+	display: none !important;
+}
+
+.showcase_gamecollector_game {
+	margin: 0 !important;
+}
+
+.showcase_gamecollector_games {
+	gap: 10px;
+
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}

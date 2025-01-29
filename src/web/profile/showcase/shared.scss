@@ -1,0 +1,19 @@
+.game_capsule {
+	border-radius: var(--border-radius) !important;
+}
+
+.item_count_stat,
+.showcase_stat {
+	margin-left: 20px !important;
+
+	.value {
+		font: var(--gpText-HeadingLarge) !important;
+		padding: 0 !important;
+	}
+
+	.label {
+		font: var(--gpText-BodyLarge) !important;
+		color: var(--fg-dim) !important;
+		padding: 0 !important;
+	}
+}

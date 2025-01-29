@@ -1,0 +1,30 @@
+* {
+	box-sizing: border-box !important;
+}
+
+body {
+	background-color: var(--bg-main) !important;
+	background-image: linear-gradient(
+		180deg,
+		var(--bg-hl),
+		var(--bg-tertiary)
+	) !important;
+	background-attachment: fixed !important;
+	color: var(--fg-main) !important;
+	font: var(--gpText-BodyMedium) !important;
+}
+
+a,
+.underlinedLink,
+.whiteLink {
+	color: var(--fg-main);
+
+	&:hover {
+		color: var(--color-primary) !important;
+	}
+}
+
+::placeholder {
+	font: var(--gpText-BodyMedium) !important;
+	color: var(--fg-dim) !important;
+}

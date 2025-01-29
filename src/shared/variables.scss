@@ -1,0 +1,31 @@
+:root {
+	/* use --gpText instead */
+	--bg-main: #0e141b;
+	--bg-hl: #1e2329;
+	--bg-hover: #313843;
+	--bg-secondary: #14344b;
+	--bg-tertiary: #222b44;
+
+	--bg-main-20: color-mix(in srgb, var(--bg-main) 20%, transparent);
+	--bg-main-50: color-mix(in srgb, var(--bg-main) 50%, transparent);
+
+	--fg-main: #f3f3f3;
+	--fg-dim: #76808c;
+
+	--color-primary: #66c0f4;
+	--color-secondary: #4b619b;
+
+	--accent-green: #a1cd44;
+	--accent-yellow: #c1b15f;
+	--accent-red: #cd5444;
+
+	--border-radius: 3px;
+	--border-radius-large: 5px;
+	--shadow: rgba(0, 0, 0, 0.25);
+	--button-shadow: 0 4px 4px var(--shadow);
+	--transition: ease-in 100ms;
+
+	@media (prefers-reduced-motion) {
+		--transition: none;
+	}
+}

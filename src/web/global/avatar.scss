@@ -1,0 +1,96 @@
+.playerAvatar {
+	--size: 32px;
+	--border-size: 2px;
+	--img-size: calc(var(--size) - var(--border-size) * 2);
+
+	background: none var(--bg) !important;
+	border-radius: var(--avatar-border-radius) !important;
+	padding: var(--border-size) !important;
+
+	width: var(--size) !important;
+	height: var(--size) !important;
+
+	&.offline {
+		--bg: var(--fg-dim);
+	}
+
+	&.online {
+		--bg: var(--color-primary);
+	}
+
+	&.golden {
+		--bg: var(--accent-yellow);
+	}
+
+	&.in-game {
+		--bg: var(--accent-green);
+	}
+
+	&.medium {
+		--size: 64px;
+	}
+
+	&.full {
+		--size: 184px;
+	}
+
+	img {
+		border-radius: calc(var(--avatar-border-radius) / 2) !important;
+		padding: 0 !important;
+
+		width: var(--img-size) !important;
+		height: var(--img-size) !important;
+	}
+}
+
+.persona,
+a.persona,
+.persona a,
+.friend_status_offline,
+.friend_status_offline div,
+.friend_status_offline a {
+	color: var(--fg-dim) !important;
+}
+
+.persona.online,
+a.persona.online,
+.persona.online a,
+.friend_status_online,
+.friend_status_online div,
+.friend_status_online a {
+	color: var(--color-primary) !important;
+}
+
+.persona.in-game,
+a.persona.in-game,
+.persona.in-game a,
+.friend_status_in-game,
+.friend_status_in-game div,
+.friend_status_in-game a {
+	color: var(--accent-green) !important;
+}
+
+.persona.golden,
+a.persona.golden,
+.persona.golden a,
+.friend_status_golden,
+.friend_status_golden div,
+.friend_status_golden a {
+	color: var(--accent-yellow) !important;
+}
+
+.border_color_offline {
+	border-color: var(--fg-dim) !important;
+}
+
+.border_color_online {
+	border-color: var(--color-primary) !important;
+}
+
+.border_color_in-game {
+	border-color: var(--accent-green) !important;
+}
+
+.border_color_golden {
+	border-color: var(--accent-yellow) !important;
+}

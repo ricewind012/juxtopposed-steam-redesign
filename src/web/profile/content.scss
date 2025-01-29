@@ -1,0 +1,75 @@
+.customization_edit_instructions {
+	padding: 10px !important;
+
+	.profile_customization_header {
+		--spacing: 0.25em;
+
+		font: var(--gpText-HeadingMedium) !important;
+		color: var(--fg-main) !important;
+		padding: 0 !important;
+		margin-top: calc(var(--spacing) * -1) !important;
+		margin-bottom: var(--spacing) !important;
+	}
+}
+
+.customization_edit_instructions_text {
+	font: var(--gpText-BodyLarge) !important;
+	padding: 0 !important;
+}
+
+.profile_content_inner {
+	gap: var(--sidebar-gutter);
+
+	display: flex;
+	flex-direction: row-reverse;
+}
+
+.profile_comment_area,
+.profile_customization {
+	background-color: var(--bg-main-20) !important;
+	font: var(--gpText-BodyMedium) !important;
+	border-radius: var(--border-radius) !important;
+	padding: 0 !important;
+	margin-bottom: 23px !important;
+}
+
+.profile_comment_area {
+	margin-top: 0 !important;
+}
+
+.profile_customization_block {
+	font: var(--gpText-BodyMedium) !important;
+	border-radius: 0 !important;
+	padding: 10px !important;
+}
+
+.profile_customization_editlink {
+	font: var(--gpText-BodyLarge) !important;
+	line-height: inherit !important;
+	padding: 10px !important;
+
+	display: block !important;
+	right: 0 !important;
+}
+
+.profile_customization_editlink_text {
+	text-decoration: none !important;
+}
+
+.profile_customization_edit_icon {
+	display: none !important;
+}
+
+/* This uses secondary text color in the mockup,
+ * but primary is better for contrast. */
+.commentthread_header,
+.profile_customization_header {
+	font: var(--gpText-BodyLarge) !important;
+	color: var(--fg-main) !important;
+	padding: 10px !important;
+	margin: 0 !important;
+}
+
+.profile_leftcol {
+	width: 100% !important;
+}

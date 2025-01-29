@@ -1,0 +1,109 @@
+.commentthread_allcommentslink {
+	font: var(--gpText-BodyMedium) !important;
+}
+
+.commentthread_area {
+	--avatar-gutter: 12px;
+	--avatar-size: 45px;
+	--spacing: 8px;
+
+	.playerAvatar {
+		--size: var(--avatar-size);
+	}
+}
+
+.commentthread_comment {
+	padding: var(--spacing) !important;
+	padding-left: calc(
+		var(--avatar-size) + var(--avatar-gutter) + var(--spacing)
+	) !important;
+	margin-bottom: var(--spacing) !important;
+
+	display: flex !important;
+}
+
+.commentthread_comment_author {
+	/* HeadingSmall is too large */
+	font: var(--gpText-BodyLarge) !important;
+	font-weight: bold !important;
+
+	a {
+		font: inherit !important;
+	}
+}
+
+.commentthread_comment_avatar {
+	left: var(--spacing) !important;
+}
+
+.commentthread_comment_container {
+	padding: 0 !important;
+	margin: 0 !important;
+}
+
+.commentthread_comment_content {
+	width: 100% !important;
+}
+
+.commentthread_comment_friendindicator {
+	top: 39px;
+	left: var(--avatar-size);
+}
+
+.commentthread_comment_text {
+	font: var(--gpText-BodyMedium) !important;
+	color: var(--fg-main) !important;
+}
+
+.commentthread_comment_timestamp {
+	font: inherit !important;
+	color: var(--fg-dim) !important;
+}
+
+.commentthread_entry {
+	background-color: transparent !important;
+	padding: 0 !important;
+	margin: var(--spacing) !important;
+	margin-bottom: 0 !important;
+
+	min-height: unset !important;
+}
+
+.commentthread_entry_error {
+	color: var(--accent-red) !important;
+	/* + 6px from top */
+	padding-bottom: 18px !important;
+}
+
+.commentthread_entry_quotebox {
+	background-color: var(--bg-main) !important;
+	border: none !important;
+	border-radius: var(--border-radius) !important;
+	box-shadow: none !important;
+	padding: 12px 18px !important;
+
+	&:hover {
+		background-color: var(--bg-hover) !important;
+	}
+}
+
+.commentthread_footer {
+	border: none !important;
+	padding: calc(var(--spacing) * 2) 0 !important;
+	margin: 0 !important;
+}
+
+.commentthread_paging.has_view_all_link {
+	display: none !important;
+}
+
+.commentthread_textarea {
+	font: var(--gpText-BodyMedium) !important;
+	color: var(--fg-main) !important;
+	padding: 0 !important;
+	margin: 0 !important;
+}
+
+.commentthread_user_avatar {
+	margin-right: var(--avatar-gutter) !important;
+}

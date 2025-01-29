@@ -1,0 +1,143 @@
+.btn_profile_action {
+	border-radius: var(--border-radius) !important;
+	padding: 0 !important;
+
+	& > span {
+		color: var(--fg-main) !important;
+		font: var(--gpText-BodyLarge) !important;
+		border-radius: inherit !important;
+		padding: 11px 26px !important;
+	}
+}
+
+.favorite_badge {
+	gap: 15px !important;
+	padding: 10px 15px !important;
+
+	.name {
+		font: var(--gpText-BodyMedium) !important;
+	}
+
+	.xp {
+		font: var(--gpText-BodySmall) !important;
+		color: var(--fg-dim) !important;
+	}
+}
+
+.profile_content {
+	font: var(--gpText-BodyMedium) !important;
+	padding: 40px !important;
+	padding-top: 0 !important;
+
+	width: var(--profile-width) !important;
+}
+
+.profile_header {
+	--avatar-gap: 33px;
+	--avatar-size: 220px;
+
+	padding: 40px !important;
+	padding-bottom: 31px !important;
+	margin: 0 !important;
+
+	max-width: unset !important;
+
+	.header_real_name_spacer {
+		height: 59px !important;
+	}
+
+	.namehistory_link {
+		--size: 24px;
+
+		background-color: var(--fg-main);
+		mask: url("data:image/svg+xml,%3Csvg%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M8.12021%209.29055L12.0002%2013.1705L15.8802%209.29055C16.2702%208.90055%2016.9002%208.90055%2017.2902%209.29055C17.6802%209.68055%2017.6802%2010.3105%2017.2902%2010.7005L12.7002%2015.2905C12.3102%2015.6805%2011.6802%2015.6805%2011.2902%2015.2905L6.70021%2010.7005C6.31021%2010.3105%206.31021%209.68055%206.70021%209.29055C7.09021%208.91055%207.73021%208.90055%208.12021%209.29055Z%22%20fill%3D%22%23F3F3F3%22%2F%3E%3C%2Fsvg%3E%0A");
+
+		display: inline-block;
+		vertical-align: middle;
+		width: var(--size);
+		height: var(--size);
+
+		img {
+			display: none;
+		}
+	}
+
+	.persona_name {
+		color: var(--fg-main) !important;
+		font: var(--gpText-HeadingLarge) !important;
+	}
+
+	.playerAvatar {
+		--size: var(--avatar-size);
+		--border-size: 4px;
+		margin-right: var(--avatar-gap) !important;
+	}
+
+	.playerAvatarAutoSizeInner {
+		inset: var(--avatar-border-radius) !important;
+	}
+}
+
+.profile_header_actions {
+	gap: 6px;
+
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: end !important;
+}
+
+.profile_header_badge {
+	background-color: var(--bg-main-50) !important;
+	border-radius: var(--border-radius-large) !important;
+
+	height: unset !important;
+}
+
+.profile_header_badge_instructions {
+	padding: 10px 15px !important;
+}
+
+.profile_header_badgeinfo {
+	display: flex !important;
+	flex-direction: column;
+}
+
+.profile_header_actions,
+.profile_header_badgeinfo_badge_area {
+	width: var(--sidebar-width) !important;
+}
+
+.profile_header_bg {
+	padding-top: 51px !important;
+
+	max-width: var(--profile-width) !important;
+}
+
+.profile_header_bg_texture {
+	max-width: var(--profile-width) !important;
+}
+
+.profile_header_centered_persona {
+	padding: 0 !important;
+
+	left: calc(var(--avatar-size) + var(--avatar-gap)) !important;
+	right: calc(var(--sidebar-width) + var(--sidebar-gutter)) !important;
+}
+
+.profile_header_content {
+	color: var(--fg-main) !important;
+	font: var(--gpText-BodyLarge) !important;
+	padding: 0 !important;
+}
+
+.profile_header_summary {
+	padding-left: 0 !important;
+	padding-right: var(--sidebar-gutter) !important;
+}
+
+.profile_summary {
+	font: var(--gpText-BodyLarge) !important;
+
+	/* 4 lines tall */
+	height: 96px !important;
+}

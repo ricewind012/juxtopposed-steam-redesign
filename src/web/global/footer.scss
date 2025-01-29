@@ -1,0 +1,19 @@
+#footer_spacer {
+	display: none;
+}
+
+#footer {
+	background-color: var(--bg-hl) !important;
+	/* TODO exact */
+	padding: 16px 0 !important;
+
+	position: unset !important;
+
+	a {
+		color: var(--fg-main) !important;
+	}
+}
+
+#footerText {
+	color: var(--fg-dim) !important;
+}
