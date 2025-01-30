@@ -25,6 +25,6 @@ a,
 }
 
 ::placeholder {
+	color: var(--color-secondary) !important;
 	font: var(--gpText-BodyMedium) !important;
-	color: var(--fg-dim) !important;
 }

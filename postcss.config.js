@@ -20,10 +20,10 @@ fs.writeFileSync(path.join(argv.dir, "index.css"), text);
  * @param {string} name File name without the extension.
  */
 function icon(name) {
-	const file = path.join("assets", `${name.replace(/"/g, "")}.svg`);
+	const file = path.join("assets", "icons", `${name.replace(/"/g, "")}.svg`);
 	const base64 = fs.readFileSync(file, { encoding: "base64" });
 
-	return `url("data:image/png;base64,${base64}")`;
+	return `url("data:image/svg+xml;base64,${base64}")`;
 }
 
 /** @type {import("postcss-load-config").Config} */

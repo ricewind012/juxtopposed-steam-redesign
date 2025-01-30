@@ -1,8 +1,7 @@
 .market_header_bg {
 	background-color: transparent !important;
 
-	/* TODO share? */
-	margin-top: 69px !important;
+	margin-top: var(--top-content-margin) !important;
 }
 
 .market_header_logo {

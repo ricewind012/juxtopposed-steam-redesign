@@ -17,3 +17,16 @@
 		padding: 0 !important;
 	}
 }
+
+.showcase_content_bg {
+	background-color: var(--bg-main-50) !important;
+	border-radius: 0 !important;
+	padding: 15px !important;
+}
+
+.showcase_item_detail_title {
+	font: var(--gpText-HeadingLarge) !important;
+	padding-top: 0 !important;
+
+	max-height: 69px !important;
+}

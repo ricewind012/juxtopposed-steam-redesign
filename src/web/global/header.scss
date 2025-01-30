@@ -26,11 +26,12 @@
 	.menuitem {
 		color: var(--fg-main) !important;
 		font: var(--gpText-BodyLarge) !important;
-		/* TODO: replace with my own ?
-    text-transform: unset !important;
-    */
 		border-radius: var(--border-radius) !important;
 		padding: 13px 29px !important;
+
+		&:not(.username) {
+			text-transform: lowercase !important;
+		}
 
 		&:not(.supernav_active):hover {
 			background-color: var(--bg-hover) !important;
@@ -38,6 +39,10 @@
 
 		&::after {
 			display: none !important;
+		}
+
+		&::first-letter {
+			text-transform: uppercase !important;
 		}
 	}
 }
@@ -107,7 +112,7 @@
 		content: "";
 
 		background-color: var(--fg-main);
-		mask-image: url("data:image/svg+xml,%3Csvg%20width%3D%2210%22%20height%3D%226%22%20viewBox%3D%220%200%2010%206%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22M1.76668%200.241797L5.00002%203.47513L8.23335%200.241797C8.55835%20-0.0832031%209.08335%20-0.0832031%209.40835%200.241797C9.73335%200.566797%209.73335%201.0918%209.40835%201.4168L5.58335%205.2418C5.25835%205.5668%204.73335%205.5668%204.40835%205.2418L0.58335%201.4168C0.25835%201.0918%200.25835%200.566797%200.58335%200.241797C0.90835%20-0.0748698%201.44168%20-0.0832031%201.76668%200.241797Z%22%2F%3E%3C%2Fsvg%3E%0A");
+		mask-image: var(--icon-arrow);
 
 		width: 10px;
 		height: 6px;

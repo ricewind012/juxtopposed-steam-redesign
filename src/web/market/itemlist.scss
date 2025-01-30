@@ -173,12 +173,6 @@
 
 	width: 100% !important;
 	height: unset !important;
-
-	/* TODO cant see in ff */
-	&::placeholder {
-		color: var(--color-secondary) !important;
-		font: var(--gpText-BodyMedium) !important;
-	}
 }
 
 #findItemsSearchSubmit {
@@ -248,6 +242,5 @@
 
 .market_page_left {
 	padding: 0 !important;
-	/* TODO --gpNavWidth 240 -> 299 px */
-	margin-left: calc(var(--gpNavWidth) + 17px) !important;
+	margin-left: var(--sidebar-width) !important;
 }
