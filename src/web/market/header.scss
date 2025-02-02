@@ -1,22 +1,22 @@
 .market_header_bg {
-	background-color: transparent !important;
+	background-color: transparent;
 
-	margin-top: var(--top-content-margin) !important;
+	margin-top: var(--top-content-margin);
 }
 
 .market_header_logo {
-	background-image: none !important;
+	background-image: none;
 
-	width: unset !important;
+	width: unset;
 }
 
 .market_header_text {
-	gap: 24px !important;
-	padding: 0 !important;
+	gap: 24px;
+	padding: 0;
 
-	display: flex !important;
-	flex-direction: column !important;
-	width: unset !important;
+	display: flex;
+	flex-direction: column;
+	width: unset;
 
 	br {
 		display: none;
@@ -24,73 +24,73 @@
 }
 
 .market_title_text {
-	color: var(--fg-main) !important;
-	font: var(--gpText-HeadingLarge) !important;
+	color: var(--fg-main);
+	font: var(--gpText-HeadingLarge);
 }
 
 .market_subtitle_text {
-	color: var(--fg-dim) !important;
-	font: var(--gpText-HeadingMedium) !important;
+	color: var(--fg-dim);
+	font: var(--gpText-HeadingMedium);
 }
 
 #BG_top {
-	background-color: transparent !important;
-	gap: 24px !important;
+	background-color: transparent;
+	gap: 24px;
 
-	display: flex !important;
+	display: flex;
 	justify-content: space-between;
 
 	.user_info {
-		background-color: transparent !important;
-		border: none !important;
-		padding: 0 !important;
+		background-color: transparent;
+		border: none;
+		padding: 0;
 
-		position: unset !important;
-		min-width: unset !important;
-		max-width: unset !important;
-		height: unset !important;
+		position: unset;
+		min-width: unset;
+		max-width: unset;
+		height: unset;
 
 		br,
 		& > span:nth-child(2),
 		#marketWalletBalance {
-			display: none !important;
+			display: none;
 		}
 
 		a {
 			background-color: var(--bg-hl);
-			padding: 17px 56px !important;
-			border-radius: var(--border-radius) !important;
+			padding: 17px 56px;
+			border-radius: var(--border-radius);
 
-			white-space: nowrap !important;
+			white-space: nowrap;
 		}
 	}
 
 	.user_info_text {
-		font: var(--gpText-BodyLarge) !important;
-		margin: 0 !important;
+		font: var(--gpText-BodyLarge);
+		margin: 0;
 
-		display: flex !important;
+		display: flex;
 	}
 }
 
 .pick_and_sell_button {
-	right: 0 !important;
-	bottom: 100px !important;
+	right: 0;
+	bottom: 100px;
 }
 
 .item_market_action_button_contents {
-	background: none var(--color-secondary) !important;
-	color: var(--fg-main) !important;
-	font: var(--gpText-BodyLarge) !important;
-	line-height: inherit !important;
-	border-radius: var(--border-radius) !important;
-	box-shadow: var(--button-shadow) !important;
-	padding: 17px 56px !important;
+	background: none var(--color-secondary);
+	color: var(--fg-main);
+	font: var(--gpText-BodyLarge);
+	line-height: inherit;
+	border-radius: var(--border-radius);
+	box-shadow: var(--button-shadow);
+	padding: 17px 56px;
 
-	float: unset !important;
-	height: unset !important;
+	float: unset;
+	height: unset;
 
 	&:hover {
-		background-color: var(--color-primary) !important;
+		background-color: var(--color-primary);
 	}
 }

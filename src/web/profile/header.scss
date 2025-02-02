@@ -1,49 +1,49 @@
 .btn_profile_action {
-	border-radius: var(--border-radius) !important;
-	padding: 0 !important;
+	border-radius: var(--border-radius);
+	padding: 0;
 
 	& > span {
-		color: var(--fg-main) !important;
-		font: var(--gpText-BodyLarge) !important;
-		border-radius: inherit !important;
-		padding: 11px 26px !important;
+		color: var(--fg-main);
+		font: var(--gpText-BodyLarge);
+		border-radius: inherit;
+		padding: 11px 26px;
 	}
 }
 
 .favorite_badge {
-	gap: 15px !important;
-	padding: 10px 15px !important;
+	gap: 15px;
+	padding: 10px 15px;
 
 	.name {
-		font: var(--gpText-BodyMedium) !important;
+		font: var(--gpText-BodyMedium);
 	}
 
 	.xp {
-		font: var(--gpText-BodySmall) !important;
-		color: var(--fg-dim) !important;
+		font: var(--gpText-BodySmall);
+		color: var(--fg-dim);
 	}
 }
 
 .profile_content {
-	font: var(--gpText-BodyMedium) !important;
-	padding: 40px !important;
-	padding-top: 0 !important;
+	font: var(--gpText-BodyMedium);
+	padding: 40px;
+	padding-top: 0;
 
-	width: var(--profile-width) !important;
+	width: var(--profile-width);
 }
 
 .profile_header {
 	--avatar-gap: 33px;
 	--avatar-size: 220px;
 
-	padding: 40px !important;
-	padding-bottom: 31px !important;
-	margin: 0 !important;
+	padding: 40px;
+	padding-bottom: 31px;
+	margin: 0;
 
-	max-width: unset !important;
+	max-width: unset;
 
 	.header_real_name_spacer {
-		height: 59px !important;
+		height: 59px;
 	}
 
 	.namehistory_link {
@@ -63,18 +63,18 @@
 	}
 
 	.persona_name {
-		color: var(--fg-main) !important;
-		font: var(--gpText-HeadingLarge) !important;
+		color: var(--fg-main);
+		font: var(--gpText-HeadingLarge);
 	}
 
 	.playerAvatar {
 		--size: var(--avatar-size);
 		--border-size: 4px;
-		margin-right: var(--avatar-gap) !important;
+		margin-right: var(--avatar-gap);
 	}
 
 	.playerAvatarAutoSizeInner {
-		inset: var(--avatar-border-radius) !important;
+		inset: var(--avatar-border-radius);
 	}
 }
 
@@ -83,61 +83,61 @@
 
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: end !important;
+	justify-content: end;
 }
 
 .profile_header_badge {
-	background-color: var(--bg-main-50) !important;
-	border-radius: var(--border-radius-large) !important;
+	background-color: var(--bg-main-50);
+	border-radius: var(--border-radius-large);
 
-	height: unset !important;
+	height: unset;
 }
 
 .profile_header_badge_instructions {
-	padding: 10px 15px !important;
+	padding: 10px 15px;
 }
 
 .profile_header_badgeinfo {
-	display: flex !important;
+	display: flex;
 	flex-direction: column;
 }
 
 .profile_header_actions,
 .profile_header_badgeinfo_badge_area {
-	width: var(--sidebar-width) !important;
+	width: var(--sidebar-width);
 }
 
 .profile_header_bg {
-	padding-top: 51px !important;
+	padding-top: 51px;
 
-	max-width: var(--profile-width) !important;
+	max-width: var(--profile-width);
 }
 
 .profile_header_bg_texture {
-	max-width: var(--profile-width) !important;
+	max-width: var(--profile-width);
 }
 
 .profile_header_centered_persona {
-	padding: 0 !important;
+	padding: 0;
 
-	left: calc(var(--avatar-size) + var(--avatar-gap)) !important;
-	right: calc(var(--sidebar-width) + var(--sidebar-gutter)) !important;
+	left: calc(var(--avatar-size) + var(--avatar-gap));
+	right: calc(var(--sidebar-width) + var(--sidebar-gutter));
 }
 
 .profile_header_content {
-	color: var(--fg-main) !important;
-	font: var(--gpText-BodyLarge) !important;
-	padding: 0 !important;
+	color: var(--fg-main);
+	font: var(--gpText-BodyLarge);
+	padding: 0;
 }
 
 .profile_header_summary {
-	padding-left: 0 !important;
-	padding-right: var(--sidebar-gutter) !important;
+	padding-left: 0;
+	padding-right: var(--sidebar-gutter);
 }
 
 .profile_summary {
-	font: var(--gpText-BodyLarge) !important;
+	font: var(--gpText-BodyLarge);
 
 	/* 4 lines tall */
-	height: 96px !important;
+	height: 96px;
 }

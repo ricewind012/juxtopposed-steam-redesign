@@ -4,100 +4,100 @@
 }
 
 .market_content_block {
-	padding: 0 !important;
+	padding: 0;
 }
 
 .my_listing_section {
-	margin: 0 !important;
+	margin: 0;
 }
 
 .my_market_header {
-	font: var(--gpText-HeadingSmall) !important;
-	color: var(--fg-main) !important;
+	font: var(--gpText-HeadingSmall);
+	color: var(--fg-main);
 }
 
 .my_market_header_count {
-	font: var(--gpText-BodySmall) !important;
-	color: var(--fg-dim) !important;
+	font: var(--gpText-BodySmall);
+	color: var(--fg-dim);
 }
 
 .market_listing_table_message,
 .market_listing_table_header {
-	background-color: var(--bg-main-20) !important;
-	font: var(--gpText-BodyLarge) !important;
-	border: none !important;
-	border-radius: var(--border-radius-large) !important;
-	padding: 8.5px var(--market-row-spacing-inner) !important;
-	margin: 0 !important;
+	background-color: var(--bg-main-20);
+	font: var(--gpText-BodyLarge);
+	border: none;
+	border-radius: var(--border-radius-large);
+	padding: 8.5px var(--market-row-spacing-inner);
+	margin: 0;
 
-	height: unset !important;
+	height: unset;
 }
 
 .market_listing_table_header {
-	color: var(--fg-dim) !important;
-	margin: var(--market-row-spacing-outer) 0 !important;
+	color: var(--fg-dim);
+	margin: var(--market-row-spacing-outer) 0;
 }
 
 .market_listing_left_cell,
 .market_listing_right_cell {
-	color: var(--fg-dim) !important;
-	line-height: unset !important;
-	border: none !important;
+	color: var(--fg-dim);
+	line-height: unset;
+	border: none;
 
-	height: unset !important;
+	height: unset;
 }
 
 .market_listing_header_namespacer {
-	width: 0 !important;
+	width: 0;
 }
 
 .market_listing_action_buttons {
-	height: 1px !important;
+	height: 1px;
 }
 
 .market_listing_row {
-	background-color: var(--bg-main-50) !important;
-	border: none !important;
-	border-radius: var(--border-radius-large) !important;
-	padding: var(--market-row-spacing-inner) !important;
-	margin-top: var(--market-row-spacing-outer) !important;
+	background-color: var(--bg-main-50);
+	border: none;
+	border-radius: var(--border-radius-large);
+	padding: var(--market-row-spacing-inner);
+	margin-top: var(--market-row-spacing-outer);
 
 	&:hover {
-		background-color: var(--bg-main) !important;
+		background-color: var(--bg-main);
 	}
 }
 
 .market_listing_item_img {
-	margin: 0 !important;
+	margin: 0;
 
-	width: 62px !important;
-	height: 62px !important;
+	width: 62px;
+	height: 62px;
 }
 
 .market_listing_item_name_block {
-	padding-left: var(--market-row-spacing-inner) !important;
-	margin-top: 10px !important;
+	padding-left: var(--market-row-spacing-inner);
+	margin-top: 10px;
 }
 
 .market_listing_item_name {
-	font: var(--gpText-HeadingSmall) !important;
+	font: var(--gpText-HeadingSmall);
 
 	&[style="color: #D2D2D2;"] {
-		color: var(--fg-main) !important;
+		color: var(--fg-main);
 	}
 }
 
 .market_listing_game_name {
-	color: var(--fg-dim) !important;
-	font: var(--gpText-BodyMedium) !important;
+	color: var(--fg-dim);
+	font: var(--gpText-BodyMedium);
 }
 
 .market_listing_whoactedwith,
 .market_listing_row .market_listing_listed_date,
 .market_listing_price,
 .market_listing_num_listings_qty {
-	color: var(--fg-main) !important;
-	font: var(--gpText-BodyLarge) !important;
+	color: var(--fg-main);
+	font: var(--gpText-BodyLarge);
 }
 
 .market_listing_gainorloss,
@@ -105,15 +105,15 @@
 .market_listing_row .market_listing_listed_date,
 .market_listing_num_listings > span,
 .market_listing_their_price > span {
-	margin: 20.5px 0 !important;
+	margin: 20.5px 0;
 }
 
 .market_listing_row .market_listing_their_price {
-	font-size: 0 !important;
+	font-size: 0;
 
 	:is(.normal_price, .sale_price)[data-price] {
-		color: var(--fg-main) !important;
-		font: var(--gpText-BodyLarge) !important;
+		color: var(--fg-main);
+		font: var(--gpText-BodyLarge);
 	}
 }
 
@@ -121,26 +121,26 @@
 	--sidebar-spacing: 15px;
 	--icon-size: 20px;
 
-	margin-top: calc(var(--sidebar-spacing) * -1) !important;
+	margin-top: calc(var(--sidebar-spacing) * -1);
 
-	position: absolute !important;
+	position: absolute;
 
 	& > div {
-		margin-top: var(--sidebar-spacing) !important;
+		margin-top: var(--sidebar-spacing);
 	}
 }
 
 .market_search_sidebar_contents {
-	background-color: var(--bg-main) !important;
-	border-radius: var(--border-radius-large) !important;
-	padding: var(--sidebar-spacing) !important;
+	background-color: var(--bg-main);
+	border-radius: var(--border-radius-large);
+	padding: var(--sidebar-spacing);
 
-	width: var(--gpNavWidth) !important;
+	width: var(--gpNavWidth);
 }
 
 .market_search_sidebar_section_tip_small {
-	color: var(--fg-main) !important;
-	font: var(--gpText-BodyMedium) !important;
+	color: var(--fg-main);
+	font: var(--gpText-BodyMedium);
 
 	&::before {
 		content: "";
@@ -155,92 +155,92 @@
 }
 
 .escrow_description_link {
-	font: var(--gpText-BodySmall) !important;
+	font: var(--gpText-BodySmall);
 }
 
 .market_search_box_container {
-	margin-top: var(--sidebar-spacing) !important;
+	margin-top: var(--sidebar-spacing);
 }
 
 #findItemsSearchBox {
-	background-color: color-mix(in srgb, #212b45 20%, transparent) !important;
-	color: var(--fg-main) !important;
-	font: var(--gpText-BodyMedium) !important;
-	border: none !important;
-	border-radius: var(--border-radius) !important;
-	padding: 12px var(--sidebar-spacing) !important;
-	padding-right: calc(var(--sidebar-spacing) + var(--icon-size)) !important;
+	background-color: color-mix(in srgb, #212b45 20%, transparent);
+	color: var(--fg-main);
+	font: var(--gpText-BodyMedium);
+	border: none;
+	border-radius: var(--border-radius);
+	padding: 12px var(--sidebar-spacing);
+	padding-right: calc(var(--sidebar-spacing) + var(--icon-size));
 
-	width: 100% !important;
-	height: unset !important;
+	width: 100%;
+	height: unset;
 }
 
 #findItemsSearchSubmit {
-	background: none var(--color-secondary) !important;
-	mask: url("data:image/svg+xml,%3Csvg%20width%3D%2220%22%20height%3D%2220%22%20viewBox%3D%220%200%2020%2020%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cg%20clip-path%3D%22url(%23clip0_1022_3793)%22%3E%3Cpath%20d%3D%22M12.9167%2011.6672H12.2584L12.025%2011.4422C13.025%2010.2755%2013.5417%208.68385%2013.2584%206.99219C12.8667%204.67552%2010.9334%202.82552%208.60003%202.54219C5.07503%202.10885%202.10837%205.07552%202.5417%208.60052C2.82503%2010.9339%204.67503%2012.8672%206.9917%2013.2589C8.68337%2013.5422%2010.275%2013.0255%2011.4417%2012.0255L11.6667%2012.2589V12.9172L15.2084%2016.4589C15.55%2016.8005%2016.1084%2016.8005%2016.45%2016.4589C16.7917%2016.1172%2016.7917%2015.5589%2016.45%2015.2172L12.9167%2011.6672ZM7.9167%2011.6672C5.8417%2011.6672%204.1667%209.99219%204.1667%207.91719C4.1667%205.84219%205.8417%204.16719%207.9167%204.16719C9.9917%204.16719%2011.6667%205.84219%2011.6667%207.91719C11.6667%209.99219%209.9917%2011.6672%207.9167%2011.6672Z%22%20fill%3D%22%234B619B%22%2F%3E%3C%2Fg%3E%3Cdefs%3E%3CclipPath%20id%3D%22clip0_1022_3793%22%3E%3Crect%20width%3D%2220%22%20height%3D%2220%22%20fill%3D%22white%22%2F%3E%3C%2FclipPath%3E%3C%2Fdefs%3E%3C%2Fsvg%3E") !important;
+	background: none var(--color-secondary);
+	mask: url("data:image/svg+xml,%3Csvg%20width%3D%2220%22%20height%3D%2220%22%20viewBox%3D%220%200%2020%2020%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cg%20clip-path%3D%22url(%23clip0_1022_3793)%22%3E%3Cpath%20d%3D%22M12.9167%2011.6672H12.2584L12.025%2011.4422C13.025%2010.2755%2013.5417%208.68385%2013.2584%206.99219C12.8667%204.67552%2010.9334%202.82552%208.60003%202.54219C5.07503%202.10885%202.10837%205.07552%202.5417%208.60052C2.82503%2010.9339%204.67503%2012.8672%206.9917%2013.2589C8.68337%2013.5422%2010.275%2013.0255%2011.4417%2012.0255L11.6667%2012.2589V12.9172L15.2084%2016.4589C15.55%2016.8005%2016.1084%2016.8005%2016.45%2016.4589C16.7917%2016.1172%2016.7917%2015.5589%2016.45%2015.2172L12.9167%2011.6672ZM7.9167%2011.6672C5.8417%2011.6672%204.1667%209.99219%204.1667%207.91719C4.1667%205.84219%205.8417%204.16719%207.9167%204.16719C9.9917%204.16719%2011.6667%205.84219%2011.6667%207.91719C11.6667%209.99219%209.9917%2011.6672%207.9167%2011.6672Z%22%20fill%3D%22%234B619B%22%2F%3E%3C%2Fg%3E%3Cdefs%3E%3CclipPath%20id%3D%22clip0_1022_3793%22%3E%3Crect%20width%3D%2220%22%20height%3D%2220%22%20fill%3D%22white%22%2F%3E%3C%2FclipPath%3E%3C%2Fdefs%3E%3C%2Fsvg%3E");
 
-	width: var(--icon-size) !important;
-	height: var(--icon-size) !important;
-	top: 0 !important;
-	right: var(--sidebar-spacing) !important;
+	width: var(--icon-size);
+	height: var(--icon-size);
+	top: 0;
+	right: var(--sidebar-spacing);
 }
 
 .game_button,
 #market_search_advanced_show,
 .market_show_more_games {
-	margin-top: 9px !important;
+	margin-top: 9px;
 
-	width: 100% !important;
+	width: 100%;
 }
 
 .game_button {
-	line-height: unset !important;
+	line-height: unset;
 
-	height: unset !important;
+	height: unset;
 }
 
 .game_button_contents {
-	height: unset !important;
+	height: unset;
 }
 
 .game_button_game_icon > img {
-	border-radius: var(--border-radius) !important;
+	border-radius: var(--border-radius);
 }
 
 .market_show_more_games > a,
 .game_button_contents,
 .market_search_advanced_button {
-	background: none !important;
-	font: var(--gpText-BodySmall) !important;
-	color: var(--fg-main) !important;
-	border: none !important;
-	border-radius: var(--border-radius) !important;
-	padding: 8px 13px !important;
+	background: none;
+	font: var(--gpText-BodySmall);
+	color: var(--fg-main);
+	border: none;
+	border-radius: var(--border-radius);
+	padding: 8px 13px;
 
-	width: 100% !important;
+	width: 100%;
 
 	&:hover {
-		background-color: var(--bg-hover) !important;
+		background-color: var(--bg-hover);
 	}
 }
 
 .market_show_more_games > a {
 	.arrow_down {
-		display: none !important;
+		display: none;
 	}
 }
 
 .market_search_advanced_button {
-	color: var(--fg-main) !important;
-	font: var(--gpText-BodyMedium) !important;
-	text-align: center !important;
+	color: var(--fg-main);
+	font: var(--gpText-BodyMedium);
+	text-align: center;
 
 	& > .btn_details_arrow {
-		display: none !important;
+		display: none;
 	}
 }
 
 .market_page_left {
-	padding: 0 !important;
-	margin-left: var(--sidebar-width) !important;
+	padding: 0;
+	margin-left: var(--sidebar-width);
 }

@@ -1,5 +1,5 @@
 .commentthread_allcommentslink {
-	font: var(--gpText-BodyMedium) !important;
+	font: var(--gpText-BodyMedium);
 }
 
 .commentthread_area {
@@ -13,36 +13,36 @@
 }
 
 .commentthread_comment {
-	padding: var(--spacing) !important;
+	padding: var(--spacing);
 	padding-left: calc(
 		var(--avatar-size) + var(--avatar-gutter) + var(--spacing)
-	) !important;
-	margin-bottom: var(--spacing) !important;
+	);
+	margin-bottom: var(--spacing);
 
-	display: flex !important;
+	display: flex;
 }
 
 .commentthread_comment_author {
 	/* HeadingSmall is too large */
-	font: var(--gpText-BodyLarge) !important;
-	font-weight: bold !important;
+	font: var(--gpText-BodyLarge);
+	font-weight: bold;
 
 	a {
-		font: inherit !important;
+		font: inherit;
 	}
 }
 
 .commentthread_comment_avatar {
-	left: var(--spacing) !important;
+	left: var(--spacing);
 }
 
 .commentthread_comment_container {
-	padding: 0 !important;
-	margin: 0 !important;
+	padding: 0;
+	margin: 0;
 }
 
 .commentthread_comment_content {
-	width: 100% !important;
+	width: 100%;
 }
 
 .commentthread_comment_friendindicator {
@@ -51,59 +51,59 @@
 }
 
 .commentthread_comment_text {
-	font: var(--gpText-BodyMedium) !important;
-	color: var(--fg-main) !important;
+	font: var(--gpText-BodyMedium);
+	color: var(--fg-main);
 }
 
 .commentthread_comment_timestamp {
-	font: inherit !important;
-	color: var(--fg-dim) !important;
+	font: inherit;
+	color: var(--fg-dim);
 }
 
 .commentthread_entry {
-	background-color: transparent !important;
-	padding: 0 !important;
-	margin: var(--spacing) !important;
-	margin-bottom: 0 !important;
+	background-color: transparent;
+	padding: 0;
+	margin: var(--spacing);
+	margin-bottom: 0;
 
-	min-height: unset !important;
+	min-height: unset;
 }
 
 .commentthread_entry_error {
-	color: var(--accent-red) !important;
+	color: var(--accent-red);
 	/* + 6px from top */
-	padding-bottom: 18px !important;
+	padding-bottom: 18px;
 }
 
 .commentthread_entry_quotebox {
-	background-color: var(--bg-main) !important;
-	border: none !important;
-	border-radius: var(--border-radius) !important;
-	box-shadow: none !important;
-	padding: 12px 18px !important;
+	background-color: var(--bg-main);
+	border: none;
+	border-radius: var(--border-radius);
+	box-shadow: none;
+	padding: 12px 18px;
 
 	&:hover {
-		background-color: var(--bg-hover) !important;
+		background-color: var(--bg-hover);
 	}
 }
 
 .commentthread_footer {
-	border: none !important;
-	padding: calc(var(--spacing) * 2) 0 !important;
-	margin: 0 !important;
+	border: none;
+	padding: calc(var(--spacing) * 2) 0;
+	margin: 0;
 }
 
 .commentthread_paging.has_view_all_link {
-	display: none !important;
+	display: none;
 }
 
 .commentthread_textarea {
-	font: var(--gpText-BodyMedium) !important;
-	color: var(--fg-main) !important;
-	padding: 0 !important;
-	margin: 0 !important;
+	font: var(--gpText-BodyMedium);
+	color: var(--fg-main);
+	padding: 0;
+	margin: 0;
 }
 
 .commentthread_user_avatar {
-	margin-right: var(--avatar-gutter) !important;
+	margin-right: var(--avatar-gutter);
 }

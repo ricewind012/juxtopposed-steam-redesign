@@ -1,32 +1,32 @@
 .game_capsule {
-	border-radius: var(--border-radius) !important;
+	border-radius: var(--border-radius);
 }
 
 .item_count_stat,
 .showcase_stat {
-	margin-left: 20px !important;
+	margin-left: 20px;
 
 	.value {
-		font: var(--gpText-HeadingLarge) !important;
-		padding: 0 !important;
+		font: var(--gpText-HeadingLarge);
+		padding: 0;
 	}
 
 	.label {
-		font: var(--gpText-BodyLarge) !important;
-		color: var(--fg-dim) !important;
-		padding: 0 !important;
+		font: var(--gpText-BodyLarge);
+		color: var(--fg-dim);
+		padding: 0;
 	}
 }
 
 .showcase_content_bg {
-	background-color: var(--bg-main-50) !important;
-	border-radius: 0 !important;
-	padding: 15px !important;
+	background-color: var(--bg-main-50);
+	border-radius: 0;
+	padding: 15px;
 }
 
 .showcase_item_detail_title {
-	font: var(--gpText-HeadingLarge) !important;
-	padding-top: 0 !important;
+	font: var(--gpText-HeadingLarge);
+	padding-top: 0;
 
-	max-height: 69px !important;
+	max-height: 69px;
 }

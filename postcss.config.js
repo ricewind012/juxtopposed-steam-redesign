@@ -26,6 +26,17 @@ function icon(name) {
 	return `url("data:image/svg+xml;base64,${base64}")`;
 }
 
+const appendImportantPlugin = () => (css) => {
+	css.walkRules((rule) => {
+		const nodes = rule.nodes.filter((e) => e.parent.selector !== ":root");
+		for (const node of nodes) {
+			console.log(node.parent.selector);
+			node.important = true;
+		}
+	});
+};
+appendImportantPlugin.postcss = true;
+
 /** @type {import("postcss-load-config").Config} */
 export default {
 	map: false,
@@ -39,5 +50,6 @@ export default {
 				icon,
 			},
 		}),
+		appendImportantPlugin(),
 	],
 };

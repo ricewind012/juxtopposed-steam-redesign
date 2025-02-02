@@ -1,20 +1,20 @@
 .customization_edit_instructions {
-	padding: 10px !important;
+	padding: 10px;
 
 	.profile_customization_header {
 		--spacing: 0.25em;
 
-		font: var(--gpText-HeadingMedium) !important;
-		color: var(--fg-main) !important;
-		padding: 0 !important;
-		margin-top: calc(var(--spacing) * -1) !important;
-		margin-bottom: var(--spacing) !important;
+		font: var(--gpText-HeadingMedium);
+		color: var(--fg-main);
+		padding: 0;
+		margin-top: calc(var(--spacing) * -1);
+		margin-bottom: var(--spacing);
 	}
 }
 
 .customization_edit_instructions_text {
-	font: var(--gpText-BodyLarge) !important;
-	padding: 0 !important;
+	font: var(--gpText-BodyLarge);
+	padding: 0;
 }
 
 .profile_content_inner {
@@ -26,50 +26,50 @@
 
 .profile_comment_area,
 .profile_customization {
-	background-color: var(--bg-main-20) !important;
-	font: var(--gpText-BodyMedium) !important;
-	border-radius: var(--border-radius) !important;
-	padding: 0 !important;
-	margin-bottom: 23px !important;
+	background-color: var(--bg-main-20);
+	font: var(--gpText-BodyMedium);
+	border-radius: var(--border-radius);
+	padding: 0;
+	margin-bottom: 23px;
 }
 
 .profile_comment_area {
-	margin-top: 0 !important;
+	margin-top: 0;
 }
 
 .profile_customization_block {
-	font: var(--gpText-BodyMedium) !important;
-	border-radius: 0 !important;
-	padding: 10px !important;
+	font: var(--gpText-BodyMedium);
+	border-radius: 0;
+	padding: 10px;
 }
 
 .profile_customization_editlink {
-	font: var(--gpText-BodyLarge) !important;
-	line-height: inherit !important;
-	padding: 10px !important;
+	font: var(--gpText-BodyLarge);
+	line-height: inherit;
+	padding: 10px;
 
-	display: block !important;
-	right: 0 !important;
+	display: block;
+	right: 0;
 }
 
 .profile_customization_editlink_text {
-	text-decoration: none !important;
+	text-decoration: none;
 }
 
 .profile_customization_edit_icon {
-	display: none !important;
+	display: none;
 }
 
 /* This uses secondary text color in the mockup,
  * but primary is better for contrast. */
 .commentthread_header,
 .profile_customization_header {
-	font: var(--gpText-BodyLarge) !important;
-	color: var(--fg-main) !important;
-	padding: 10px !important;
-	margin: 0 !important;
+	font: var(--gpText-BodyLarge);
+	color: var(--fg-main);
+	padding: 10px;
+	margin: 0;
 }
 
 .profile_leftcol {
-	width: 100% !important;
+	width: 100%;
 }

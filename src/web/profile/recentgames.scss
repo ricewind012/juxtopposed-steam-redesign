@@ -2,22 +2,22 @@
 	gap: 8px;
 	margin-left: 8px;
 
-	display: flex !important;
-	width: unset !important;
+	display: flex;
+	width: unset;
 }
 
 .achievement_progress_bar_ctn {
-	background-color: var(--bg-hl) !important;
-	border: none !important;
-	box-shadow: none !important;
-	padding: 0 !important;
-	margin: 0 !important;
+	background-color: var(--bg-hl);
+	border: none;
+	box-shadow: none;
+	padding: 0;
+	margin: 0;
 
-	width: var(--ach-progress-bar-width) !important;
-	height: unset !important;
+	width: var(--ach-progress-bar-width);
+	height: unset;
 
 	.progress_bar {
-		background: none var(--color-primary) !important;
+		background: none var(--color-primary);
 	}
 }
 
@@ -25,34 +25,34 @@
 	--cap-gutter: 13px;
 	--cap-width: 216px;
 
-	height: 81px !important;
+	height: 81px;
 }
 
 .game_info_achievement {
 	--size: 30px;
 
-	margin: 0 !important;
+	margin: 0;
 
-	width: var(--size) !important;
-	height: var(--size) !important;
+	width: var(--size);
+	height: var(--size);
 
 	&.plus_more {
-		background-color: var(--bg-hl) !important;
-		color: var(--fg-main) !important;
-		border: none !important;
-		border-radius: var(--border-radius) !important;
-		box-shadow: none !important;
+		background-color: var(--bg-hl);
+		color: var(--fg-main);
+		border: none;
+		border-radius: var(--border-radius);
+		box-shadow: none;
 
 		&:hover {
-			background-color: var(--bg-hover) !important;
+			background-color: var(--bg-hover);
 		}
 	}
 
 	img {
-		border-radius: var(--border-radius) !important;
+		border-radius: var(--border-radius);
 
-		width: var(--size) !important;
-		height: var(--size) !important;
+		width: var(--size);
+		height: var(--size);
 	}
 }
 
@@ -60,12 +60,12 @@
 	--ach-progress-bar-width: 200px;
 	--ach-progress-width: 85px;
 
-	gap: 8px !important;
+	gap: 8px;
 
-	float: unset !important;
-	display: flex !important;
-	align-items: center !important;
-	width: unset !important;
+	float: unset;
+	display: flex;
+	align-items: center;
+	width: unset;
 
 	.ellipsis {
 		width: var(--ach-progress-width);
@@ -74,7 +74,7 @@
 }
 
 .game_info_achievement_summary {
-	margin: 0 !important;
+	margin: 0;
 }
 
 .game_info_achievements_summary_area {
@@ -82,21 +82,21 @@
 	align-items: center;
 	width: calc(
 		160px + var(--ach-progress-bar-width) + var(--ach-progress-width)
-	) !important;
+	);
 }
 
 .game_info_badge_border {
-	display: none !important;
+	display: none;
 }
 
 .game_info_cap {
-	margin-right: var(--cap-gutter) !important;
+	margin-right: var(--cap-gutter);
 
-	width: var(--cap-width) !important;
+	width: var(--cap-width);
 }
 
 .game_info_details {
-	text-align: unset !important;
+	text-align: unset;
 
 	&::before,
 	&::after {
@@ -125,14 +125,14 @@
 }
 
 .game_info_stats {
-	background-color: var(--bg-main-50) !important;
-	padding: 15px !important;
-	margin-top: 10px !important;
+	background-color: var(--bg-main-50);
+	padding: 15px;
+	margin-top: 10px;
 }
 
 .game_name {
-	font: var(--gpText-BodyLarge) !important;
-	padding: 0 !important;
+	font: var(--gpText-BodyLarge);
+	padding: 0;
 
 	display: flex;
 	align-items: center;
@@ -140,11 +140,11 @@
 }
 
 .recent_game {
-	background-color: var(--bg-main-50) !important;
-	border-radius: 0 !important;
-	margin-bottom: 11px !important;
+	background-color: var(--bg-main-50);
+	border-radius: 0;
+	margin-bottom: 11px;
 }
 
 .recent_game_content {
-	padding: 15px !important;
+	padding: 15px;
 }

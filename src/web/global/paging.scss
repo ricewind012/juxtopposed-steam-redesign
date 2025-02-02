@@ -1,16 +1,16 @@
 .market_paging {
-	line-height: unset !important;
-	gap: 5px !important;
-	padding: 5px !important;
-	padding-right: 0 !important;
-	margin: 0 !important;
-	margin-top: var(--market-row-spacing-outer) !important;
+	line-height: unset;
+	gap: 5px;
+	padding: 5px;
+	padding-right: 0;
+	margin: 0;
+	margin-top: var(--market-row-spacing-outer);
 
-	display: flex !important;
-	flex-direction: row-reverse !important;
-	align-items: center !important;
-	justify-content: space-between !important;
-	height: unset !important;
+	display: flex;
+	flex-direction: row-reverse;
+	align-items: center;
+	justify-content: space-between;
+	height: unset;
 
 	& > [style="clear: both;"] {
 		display: none;
@@ -19,55 +19,55 @@
 
 .commentthread_paging,
 .market_paging_controls {
-	gap: 24px !important;
-	padding: 0 !important;
-	margin: 0 !important;
+	gap: 24px;
+	padding: 0;
+	margin: 0;
 
-	display: flex !important;
+	display: flex;
 }
 
 .pagebtn,
 .commentthread_pagelink,
 .market_paging_pagelink {
-	background-color: var(--bg-hl) !important;
-	font: var(--gpText-BodyMedium) !important;
-	color: inherit !important;
-	text-decoration: none !important;
-	border-radius: var(--border-radius) !important;
+	background-color: var(--bg-hl);
+	font: var(--gpText-BodyMedium);
+	color: inherit;
+	text-decoration: none;
+	border-radius: var(--border-radius);
 
-	display: flex !important;
-	align-items: center !important;
-	justify-content: center !important;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 
 	&.active,
 	&:not(.disabled):hover {
-		background-color: var(--bg-hover) !important;
+		background-color: var(--bg-hover);
 	}
 }
 
 .commentthread_pagelinks,
 #searchResults_links {
-	gap: 5px !important;
-	margin: 0 !important;
+	gap: 5px;
+	margin: 0;
 
-	display: flex !important;
-	align-items: center !important;
+	display: flex;
+	align-items: center;
 }
 
 .pagebtn {
-	border: none !important;
-	padding: 0 !important;
+	border: none;
+	padding: 0;
 
-	width: 70px !important;
-	height: 30px !important;
+	width: 70px;
+	height: 30px;
 
 	&.disabled {
-		opacity: 0.5 !important;
+		opacity: 0.5;
 	}
 }
 
 .commentthread_pagelink,
 .market_paging_pagelink {
-	padding: 5px 7px !important;
-	margin: 0 !important;
+	padding: 5px 7px;
+	margin: 0;
 }

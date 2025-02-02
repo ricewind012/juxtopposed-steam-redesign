@@ -1,17 +1,13 @@
 * {
-	box-sizing: border-box !important;
+	box-sizing: border-box;
 }
 
 body {
-	background-color: var(--bg-main) !important;
-	background-image: linear-gradient(
-		180deg,
-		var(--bg-hl),
-		var(--bg-tertiary)
-	) !important;
-	background-attachment: fixed !important;
-	color: var(--fg-main) !important;
-	font: var(--gpText-BodyMedium) !important;
+	background-color: var(--bg-main);
+	background-image: linear-gradient(180deg, var(--bg-hl), var(--bg-tertiary));
+	background-attachment: fixed;
+	color: var(--fg-main);
+	font: var(--gpText-BodyMedium);
 }
 
 a,
@@ -20,11 +16,11 @@ a,
 	color: var(--fg-main);
 
 	&:hover {
-		color: var(--color-primary) !important;
+		color: var(--color-primary);
 	}
 }
 
 ::placeholder {
-	color: var(--color-secondary) !important;
-	font: var(--gpText-BodyMedium) !important;
+	color: var(--color-secondary);
+	font: var(--gpText-BodyMedium);
 }

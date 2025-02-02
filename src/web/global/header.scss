@@ -1,55 +1,51 @@
 #global_header {
-	backdrop-filter: blur(9px) !important;
-	background-color: color-mix(
-		in srgb,
-		var(--bg-tertiary) 50%,
-		transparent
-	) !important;
-	padding: 8px !important;
+	backdrop-filter: blur(9px);
+	background-color: color-mix(in srgb, var(--bg-tertiary) 50%, transparent);
+	padding: 8px;
 
-	position: sticky !important;
-	top: 0 !important;
-	z-index: 999 !important;
+	position: sticky;
+	top: 0;
+	z-index: 999;
 
 	.content {
-		background-color: transparent !important;
+		background-color: transparent;
 
 		display: flex;
 		justify-content: space-between;
-		height: unset !important;
+		height: unset;
 	}
 
 	.logo {
-		display: none !important;
+		display: none;
 	}
 
 	.menuitem {
-		color: var(--fg-main) !important;
-		font: var(--gpText-BodyLarge) !important;
-		border-radius: var(--border-radius) !important;
-		padding: 13px 29px !important;
+		color: var(--fg-main);
+		font: var(--gpText-BodyLarge);
+		border-radius: var(--border-radius);
+		padding: 13px 29px;
 
 		&:not(.username) {
-			text-transform: lowercase !important;
+			text-transform: lowercase;
 		}
 
 		&:not(.supernav_active):hover {
-			background-color: var(--bg-hover) !important;
+			background-color: var(--bg-hover);
 		}
 
 		&::after {
-			display: none !important;
+			display: none;
 		}
 
 		&::first-letter {
-			text-transform: uppercase !important;
+			text-transform: uppercase;
 		}
 	}
 }
 
 .supernav_active {
-	background-color: var(--color-secondary) !important;
-	box-shadow: var(--button-shadow) !important;
+	background-color: var(--color-secondary);
+	box-shadow: var(--button-shadow);
 }
 
 .supernav_container {
@@ -60,53 +56,53 @@
 }
 
 .supernav_content {
-	background-color: var(--bg-hl) !important;
-	border-radius: var(--border-radius) !important;
-	box-shadow: 0 0 4px 1px var(--shadow) !important;
+	background-color: var(--bg-hl);
+	border-radius: var(--border-radius);
+	box-shadow: 0 0 4px 1px var(--shadow);
 
-	overflow: hidden !important;
-	top: 48px !important;
+	overflow: hidden;
+	top: 48px;
 
 	.submenuitem {
-		color: var(--fg-main) !important;
-		font: var(--gpText-BodyMedium) !important;
-		padding: 16px 20px !important;
+		color: var(--fg-main);
+		font: var(--gpText-BodyMedium);
+		padding: 16px 20px;
 
 		&:hover {
-			background-color: var(--bg-hover) !important;
-			transition: var(--transition) !important;
+			background-color: var(--bg-hover);
+			transition: var(--transition);
 		}
 	}
 }
 
 #global_actions {
-	color: var(--fg-main) !important;
-	font: var(--gpText-BodyMedium) !important;
-	gap: 15px !important;
+	color: var(--fg-main);
+	font: var(--gpText-BodyMedium);
+	gap: 15px;
 
-	display: flex !important;
-	flex-direction: row-reverse !important;
-	position: unset !important;
-	height: unset !important;
+	display: flex;
+	flex-direction: row-reverse;
+	position: unset;
+	height: unset;
 
 	.user_avatar {
 		--size: 46px;
-		margin: 0 !important;
+		margin: 0;
 	}
 }
 
 .header_installsteam_btn {
-	display: none !important;
+	display: none;
 }
 
 #account_pulldown {
-	background-image: none !important;
-	line-height: 24px !important;
-	padding: 0 !important;
-	margin-left: 4px !important;
+	background-image: none;
+	line-height: 24px;
+	padding: 0;
+	margin-left: 4px;
 
-	display: inline-flex !important;
-	align-items: center !important;
+	display: inline-flex;
+	align-items: center;
 
 	&::after {
 		content: "";
@@ -120,18 +116,18 @@
 }
 
 #header_wallet_ctn {
-	padding: 0 !important;
-	padding-top: 4px !important;
+	padding: 0;
+	padding-top: 4px;
 }
 
 #header_wallet_balance {
-	color: var(--fg-dim) !important;
+	color: var(--fg-dim);
 	gap: 8px;
-	padding: 0 !important;
+	padding: 0;
 
-	display: flex !important;
+	display: flex;
 
 	&:hover {
-		color: var(--fg-main) !important;
+		color: var(--fg-main);
 	}
 }

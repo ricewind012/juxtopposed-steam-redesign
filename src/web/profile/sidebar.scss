@@ -1,23 +1,23 @@
 /* sidebar, global first 2 */
 .profile_rightcol {
-	background-color: transparent !important;
-	backdrop-filter: none !important;
-	padding: 0 !important;
+	background-color: transparent;
+	backdrop-filter: none;
+	padding: 0;
 
 	flex-shrink: 0;
-	width: var(--sidebar-width) !important;
+	width: var(--sidebar-width);
 
 	& > * {
-		background-color: var(--bg-main-50) !important;
-		backdrop-filter: blur(20px) !important;
-		border-radius: var(--border-radius-large) !important;
-		padding: 15px !important;
-		margin-bottom: 20px !important;
+		background-color: var(--bg-main-50);
+		backdrop-filter: blur(20px);
+		border-radius: var(--border-radius-large);
+		padding: 15px;
+		margin-bottom: 20px;
 	}
 }
 
 .profile_count_link_preview {
-	padding: var(--spacing) !important;
+	padding: var(--spacing);
 	gap: 6px;
 
 	display: flex;
@@ -31,7 +31,7 @@
 }
 
 .profile_in_game {
-	margin: 0 !important;
+	margin: 0;
 }
 
 .profile_in_game_header {
@@ -40,28 +40,28 @@
 
 .profile_in_game_name {
 	font: var(--gpText-BodyMedium);
-	margin: 0 !important;
+	margin: 0;
 
 	.persona.offline & {
-		color: var(--fg-dim) !important;
+		color: var(--fg-dim);
 	}
 }
 
 .profile_ban_status {
-	color: var(--accent-red) !important;
-	font: var(--gpText-BodyMedium) !important;
-	margin-top: 10px !important;
-	margin-bottom: 0 !important;
+	color: var(--accent-red);
+	font: var(--gpText-BodyMedium);
+	margin-top: 10px;
+	margin-bottom: 0;
 }
 
 .profile_ban_info {
-	color: var(--fg-dim) !important;
+	color: var(--fg-dim);
 }
 
 .profile_badges,
 .profile_item_links,
 .profile_friend_links {
-	margin: 0 !important;
+	margin: 0;
 }
 
 .profile_item_links {
@@ -72,92 +72,92 @@
 }
 
 .profile_count_link {
-	background-color: var(--bg-main) !important;
-	border-radius: var(--border-radius) !important;
-	margin-bottom: 0 !important;
+	background-color: var(--bg-main);
+	border-radius: var(--border-radius);
+	margin-bottom: 0;
 
 	a {
-		padding: 10px !important;
+		padding: 10px;
 
 		display: flex;
 
 		&:hover {
-			background-color: var(--bg-hover) !important;
-			color: inherit !important;
+			background-color: var(--bg-hover);
+			color: inherit;
 		}
 	}
 
 	span {
-		font: var(--gpText-BodyLarge) !important;
+		font: var(--gpText-BodyLarge);
 	}
 
 	.count_link_label {
-		text-decoration: none !important;
+		text-decoration: none;
 
 		flex-grow: 1;
 	}
 
 	.profile_count_link_total {
-		color: var(--fg-dim) !important;
+		color: var(--fg-dim);
 	}
 }
 
 .profile_count_link_preview_ctn {
 	--spacing: 10px;
 
-	background-color: var(--bg-main) !important;
-	border-radius: var(--border-radius) !important;
+	background-color: var(--bg-main);
+	border-radius: var(--border-radius);
 
 	.profile_count_link {
-		padding: var(--spacing) !important;
-		padding-bottom: 0 !important;
+		padding: var(--spacing);
+		padding-bottom: 0;
 
 		a {
-			margin: calc(var(--spacing) * -1) !important;
-			margin-bottom: 0 !important;
+			margin: calc(var(--spacing) * -1);
+			margin-bottom: 0;
 		}
 	}
 }
 
 .profile_awards,
 .profile_badges {
-	margin-bottom: 6px !important;
+	margin-bottom: 6px;
 }
 
 .profile_badges_badge {
-	margin: 0 !important;
+	margin: 0;
 
 	&,
 	img {
 		--size: 45px;
 
-		width: var(--size) !important;
-		height: var(--size) !important;
+		width: var(--size);
+		height: var(--size);
 	}
 }
 
 .profile_group_links,
 .profile_friend_links {
-	background-color: var(--bg-main-50) !important;
+	background-color: var(--bg-main-50);
 
 	.profile_count_link {
 		--spacing: 15px;
 
-		background-color: transparent !important;
-		margin: calc(var(--spacing) * -1) !important;
-		margin-bottom: 0 !important;
+		background-color: transparent;
+		margin: calc(var(--spacing) * -1);
+		margin-bottom: 0;
 
-		overflow: visible !important;
+		overflow: visible;
 
 		a {
-			padding: var(--spacing) !important;
+			padding: var(--spacing);
 
-			display: block !important;
+			display: block;
 		}
 	}
 
 	.profile_count_link_preview {
-		padding: 0 !important;
+		padding: 0;
 	}
 
 	.profile_count_link_total {
@@ -174,7 +174,7 @@
 }
 
 .profile_group_avatar {
-	box-shadow: none !important;
+	box-shadow: none;
 }
 
 .profile_group_membercount {
@@ -185,11 +185,11 @@
 	height: unset;
 
 	&.profile_primary_group {
-		margin: 0 !important;
+		margin: 0;
 	}
 
 	&:not(.profile_primary_group) {
-		padding-top: 0 !important;
+		padding-top: 0;
 
 		.profile_group_avatar {
 			top: 6px;
@@ -202,32 +202,32 @@
 }
 
 .profile_in_common {
-	color: var(--fg-dim) !important;
+	color: var(--fg-dim);
 }
 
 .friendBlock {
-	background-color: var(--bg-main) !important;
-	border-radius: var(--border-radius) !important;
-	padding: 10px !important;
-	margin: 0 !important;
+	background-color: var(--bg-main);
+	border-radius: var(--border-radius);
+	padding: 10px;
+	margin: 0;
 
-	display: flex !important;
-	align-items: center !important;
-	height: unset !important;
+	display: flex;
+	align-items: center;
+	height: unset;
 
 	&:hover {
-		background-color: var(--bg-hover) !important;
+		background-color: var(--bg-hover);
 	}
 
 	.friendBlockContent {
-		font: var(--gpText-BodyLarge) !important;
+		font: var(--gpText-BodyLarge);
 
 		flex-grow: 1;
 	}
 
 	.friendPlayerLevel {
-		margin: 0 !important;
-		margin-left: 9px !important;
+		margin: 0;
+		margin-left: 9px;
 
 		order: 1;
 		display: flex;
@@ -235,15 +235,15 @@
 	}
 
 	.friendSmallText {
-		font: var(--gpText-BodySmall) !important;
+		font: var(--gpText-BodySmall);
 	}
 
 	.playerAvatar {
 		--size: 46px;
-		margin-right: 9px !important;
+		margin-right: 9px;
 	}
 }
 
 .friendPlayerLevelNum {
-	color: var(--fg-main) !important;
+	color: var(--fg-main);
 }

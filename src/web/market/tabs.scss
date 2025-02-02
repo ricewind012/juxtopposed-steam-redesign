@@ -1,40 +1,40 @@
 #myMarketTabs,
 .market_large_tab_well {
-	padding: 0 !important;
-	margin: 0 !important;
+	padding: 0;
+	margin: 0;
 
-	height: unset !important;
+	height: unset;
 }
 
 .market_large_tab_well img,
 .resultsbluebg {
-	display: none !important;
+	display: none;
 }
 
 .market_tab_well_tabs {
-	background-color: var(--bg-main) !important;
-	font-size: 0 !important;
-	border: none !important;
-	border-radius: var(--border-radius-large) !important;
+	background-color: var(--bg-main);
+	font-size: 0;
+	border: none;
+	border-radius: var(--border-radius-large);
 	/* 5 / 2 for whitespace */
-	gap: 2.5px !important;
-	padding: 8px !important;
+	gap: 2.5px;
+	padding: 8px;
 
-	display: flex !important;
-	position: unset !important;
+	display: flex;
+	position: unset;
 }
 
 .market_tab_well_tab_contents {
-	color: var(--fg-main) !important;
-	font: var(--gpText-BodyLarge) !important;
-	border-radius: var(--border-radius) !important;
-	padding: 7px 20px !important;
+	color: var(--fg-main);
+	font: var(--gpText-BodyLarge);
+	border-radius: var(--border-radius);
+	padding: 7px 20px;
 
-	min-width: unset !important;
+	min-width: unset;
 
 	&:hover,
 	.market_tab_well_tab_active > & {
-		background: none var(--bg-hl) !important;
+		background: none var(--bg-hl);
 	}
 }
 
