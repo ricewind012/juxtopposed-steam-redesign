@@ -2,15 +2,24 @@ import fs from "node:fs";
 import path from "node:path";
 import yargs from "yargs";
 import postcssFunctions from "postcss-functions";
-import postcssSass from "@csstools/postcss-sass";
-import { selectorReplacerPlugin } from "steam-theming-utils/postcss-plugin";
+import postcssSassParser from "postcss-scss";
+import postcssSassPlugin from "@csstools/postcss-sass";
+import {
+	appendImportantPlugin,
+	selectorReplacerPlugin,
+} from "steam-theming-utils/postcss-plugins";
+
+const { argv } = yargs(process.argv);
+
+// Recreate the CSS output directory
+fs.rmSync(argv.dir, { recursive: true, force: true });
+fs.mkdirSync(argv.dir);
 
 // Generate an index.css file that imports everything
-const { argv } = yargs(process.argv);
 const text = fs
 	.readdirSync(argv.base, { recursive: true })
 	.filter((e) => e.endsWith(".scss"))
-	.map((e) => `@import "${e.replace("scss", "css")}";`)
+	.map((e) => `@import "${e.replace(/\\/g, "/").replace("scss", "css")}";`)
 	.join("\n");
 fs.writeFileSync(path.join(argv.dir, "index.css"), text);
 
@@ -26,23 +35,12 @@ function icon(name) {
 	return `url("data:image/svg+xml;base64,${base64}")`;
 }
 
-const appendImportantPlugin = () => (css) => {
-	css.walkRules((rule) => {
-		const nodes = rule.nodes.filter((e) => e.parent.selector !== ":root");
-		for (const node of nodes) {
-			console.log(node.parent.selector);
-			node.important = true;
-		}
-	});
-};
-appendImportantPlugin.postcss = true;
-
 /** @type {import("postcss-load-config").Config} */
 export default {
 	map: false,
+	parser: postcssSassParser,
 	plugins: [
-		selectorReplacerPlugin(),
-		postcssSass({
+		postcssSassPlugin({
 			silenceDeprecations: ["legacy-js-api"],
 		}),
 		postcssFunctions({
@@ -50,6 +48,9 @@ export default {
 				icon,
 			},
 		}),
-		appendImportantPlugin(),
+		appendImportantPlugin({
+			filter: [/^:root/],
+		}),
+		selectorReplacerPlugin(),
 	],
 };

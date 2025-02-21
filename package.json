@@ -7,6 +7,7 @@
     "@csstools/postcss-sass": "^5.1.1",
     "postcss-cli": "^11.0.0",
     "postcss-functions": "^4.0.2",
-    "steam-theming-utils": "^3.0.0"
+    "postcss-scss": "^4.0.9",
+    "steam-theming-utils": "^3.2.0"
   }
 }
