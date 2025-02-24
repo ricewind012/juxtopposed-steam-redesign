@@ -1,0 +1,7 @@
+@mixin link {
+	color: var(--fg-main);
+
+	&:hover {
+		color: var(--color-primary);
+	}
+}

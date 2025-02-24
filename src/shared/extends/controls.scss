@@ -1,0 +1,14 @@
+@mixin text-input {
+	--spacing: 15px;
+
+	background-color: color-mix(in srgb, var(--bg-tertiary) 20%, transparent);
+	color: var(--fg-main);
+	font: var(--gpText-BodyMedium);
+	border: none;
+	border-radius: var(--border-radius);
+	padding: 12px var(--spacing);
+	padding-right: calc(var(--spacing) + var(--icon-size));
+
+	width: 100%;
+	height: unset;
+}

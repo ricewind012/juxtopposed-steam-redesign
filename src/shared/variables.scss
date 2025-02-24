@@ -1,5 +1,5 @@
 :root {
-	/* use --gpText instead */
+	// Background
 	--bg-main: #0e141b;
 	--bg-hl: #1e2329;
 	--bg-hover: #313843;
@@ -9,9 +9,11 @@
 	--bg-main-20: color-mix(in srgb, var(--bg-main) 20%, transparent);
 	--bg-main-50: color-mix(in srgb, var(--bg-main) 50%, transparent);
 
+	// Text
 	--fg-main: #f3f3f3;
 	--fg-dim: #76808c;
 
+	// Other colors
 	--color-primary: #66c0f4;
 	--color-secondary: #4b619b;
 
@@ -25,6 +27,15 @@
 	--shadow: rgba(0, 0, 0, 0.25);
 	--button-shadow: 0 4px 4px var(--shadow);
 	--transition: ease-in 100ms;
+
+	// Typography
+	--gpText-HeadingLarge: normal 700 26px/1.4 "Motiva Sans", Arial, Sans-serif;
+	--gpText-HeadingMedium: normal 700 22px/1.4 "Motiva Sans", Arial, Sans-serif;
+	--gpText-HeadingSmall: normal 700 18px/1.4 "Motiva Sans", Arial, Sans-serif;
+
+	--gpText-BodyLarge: normal 400 16px/1.4 "Motiva Sans", Arial, Sans-serif;
+	--gpText-BodyMedium: normal 400 14px/1.4 "Motiva Sans", Arial, Sans-serif;
+	--gpText-BodySmall: normal 400 12px/1.4 "Motiva Sans", Arial, Sans-serif;
 
 	@media (prefers-reduced-motion) {
 		--transition: none;

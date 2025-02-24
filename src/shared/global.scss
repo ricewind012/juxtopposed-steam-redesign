@@ -1,3 +1,5 @@
+@use "shared/extends/text";
+
 * {
 	box-sizing: border-box;
 }
@@ -10,14 +12,8 @@ body {
 	font: var(--gpText-BodyMedium);
 }
 
-a,
-.underlinedLink,
-.whiteLink {
-	color: var(--fg-main);
-
-	&:hover {
-		color: var(--color-primary);
-	}
+a {
+	@include text.link;
 }
 
 ::placeholder {

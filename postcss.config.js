@@ -41,6 +41,9 @@ export default {
 	parser: postcssSassParser,
 	plugins: [
 		postcssSassPlugin({
+			// TODO: use "loadPaths" when @csstools/postcss-sass switches to
+			// normal sass API.
+			includePaths: ["src"],
 			silenceDeprecations: ["legacy-js-api"],
 		}),
 		postcssFunctions({
