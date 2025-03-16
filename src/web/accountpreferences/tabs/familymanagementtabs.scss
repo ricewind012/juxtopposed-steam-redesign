@@ -1,0 +1,16 @@
+@use "shared/extends/controls";
+
+#GraphicalAssetsTabs {
+	@include controls.tabs-container;
+
+	border: none;
+	margin-bottom: var(--spacing-lg);
+}
+
+#GraphicalAssetsTab {
+	@include controls.tab("#Active");
+
+	letter-spacing: 0;
+	text-transform: unset;
+	border: none;
+}

@@ -1,0 +1,17 @@
+@use "shared/extends/controls";
+
+#NotificationSection {
+	background-color: transparent;
+	padding: 0;
+
+	align-items: center;
+}
+
+#NotificationSendWhen {
+	font: var(--gpText-HeadingLarge);
+	padding: 0;
+}
+
+#PrefDetailsToggle {
+	@include controls.button;
+}

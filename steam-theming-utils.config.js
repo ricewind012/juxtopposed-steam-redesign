@@ -1,0 +1,10 @@
+/** @type {import("steam-theming-utils").Config} */
+export default {
+	ignore: [
+		"web/accountpreferences/tabs/account",
+		"web/accountpreferences/tabs/language",
+		"web/accountpreferences/tabs/store",
+		"web/accountpreferences/shared",
+		"web/accountpreferences/sidebar",
+	],
+};

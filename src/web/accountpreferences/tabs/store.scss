@@ -1,0 +1,71 @@
+@use "shared/extends/controls";
+
+.account_manage_checkbox {
+	display: flex;
+	align-items: center;
+
+	& + br {
+		display: none;
+	}
+}
+
+.account_settings_container {
+	form {
+		width: unset;
+	}
+}
+
+.content_two_column {
+	width: 40%;
+
+	.word_form {
+		& > form > div {
+			display: flex;
+			flex-direction: row-reverse;
+			justify-content: start;
+		}
+
+		& > [data-panel] {
+			margin-top: var(--spacing-lg);
+			gap: var(--spacing-lg);
+
+			display: flex;
+			flex-direction: column;
+		}
+	}
+}
+
+.preference_row {
+	border-bottom: 2px solid var(--bg-hl);
+
+	&:first-of-type {
+		margin-block: var(--spacing-lg);
+	}
+}
+
+.sub_text {
+	color: var(--fg-dim);
+	font: var(--gpText-BodySmall);
+	margin-top: var(--spacing-xs);
+}
+
+.tag_form {
+	.app_tag_form_ctn {
+		display: flex;
+		flex-direction: row-reverse;
+		justify-content: start;
+		align-items: center;
+	}
+
+	button {
+		margin-left: var(--spacing-sm);
+	}
+}
+
+.text_filter_action_link {
+	@include controls.button;
+}
+
+.text_filter_toggle_icon {
+	display: none;
+}

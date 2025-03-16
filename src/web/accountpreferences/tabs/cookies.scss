@@ -1,0 +1,76 @@
+@use "shared/extends/controls";
+
+#AllButton {
+	@include controls.button;
+
+	color: inherit;
+	font: inherit;
+
+	// TODO mixin for ts
+	&#ButtonHighlight {
+		background-color: var(--color-primary);
+	}
+}
+
+#ButtonGroup {
+	background-color: transparent;
+	padding: 0;
+	margin: 0;
+
+	justify-content: start;
+}
+
+#CookieGroup {
+	padding: 0;
+}
+
+#NecessaryDesc {
+}
+
+#NecessaryGroup {
+}
+
+#NecessaryTitle {
+}
+
+#SectionDescription {
+	color: var(--fg-dim);
+}
+
+// TODO
+
+.DialogToggle_Description {
+	color: var(--fg-dim);
+	font: inherit;
+	padding-top: var(--spacing-sm);
+}
+
+.DialogToggle_Label {
+	font: var(--gpText-HeadingSmall);
+}
+
+.DialogToggleField {
+	color: inherit;
+	font: inherit;
+	padding: 0;
+	margin: 0;
+}
+
+.DialogToggleField_Control {
+	background-color: transparent;
+	font-size: 0;
+}
+
+.DialogToggleField_Option {
+	&.Off {
+		display: none;
+	}
+
+	&.On {
+		@include controls.toggle(".Active", ".hack");
+
+		.Disabled & {
+			background: var(--bg-hover);
+		}
+	}
+}

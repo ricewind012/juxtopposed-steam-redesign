@@ -1,3 +1,144 @@
+@mixin button-colors($variant) {
+	@if $variant == "primary" {
+		--bg: var(--color-secondary);
+		--bg2: var(--color-primary);
+		--fg: var(--fg-main);
+		--fg2: var(--bg-main);
+	}
+
+	@if $variant == "secondary" {
+		--bg: var(--bg-hl);
+		--bg2: var(--bg-hover);
+		--fg: var(--fg-main);
+		--fg2: var(--fg-main);
+	}
+
+	@if $variant == "red" {
+		--bg: var(--accent-red);
+		--bg2: color-mix(in srgb, var(--accent-red) 50%, var(--bg-hover));
+		--fg: var(--fg-main);
+		--fg2: var(--fg-main);
+	}
+	// TODO: tertiary/disabled
+}
+
+/* TODO: a market button has the same padding, mixin ? */
+@mixin button($variant: "secondary") {
+	@include button-colors($variant);
+
+	background: var(--bg);
+	color: var(--fg);
+	border-radius: var(--border-radius);
+	// --spacing-sm
+	padding: 11px;
+
+	min-width: 166px;
+	min-height: 44px;
+
+	&:hover {
+		background: var(--bg2);
+		color: var(--fg2);
+	}
+}
+
+@mixin checkbox($checked-selector, $disabled-selector) {
+	--size: 24px;
+
+	appearance: none;
+	background: var(--fg-dim);
+	mask: var(--icon-checkbox);
+
+	width: var(--size);
+	height: var(--size);
+
+	&:hover {
+		background: var(--fg-main);
+	}
+
+	&#{$checked-selector} {
+		mask: var(--icon-checkbox-checked);
+	}
+
+	&#{$disabled-selector} {
+		background: var(--bg-hover);
+	}
+}
+
+@mixin tabs-container {
+	background-color: var(--bg-main);
+	border-radius: var(--border-radius-large);
+	gap: 5px;
+	padding: 8px;
+
+	display: flex;
+}
+
+@mixin tab($active-selector) {
+	color: var(--fg-main);
+	font: var(--gpText-BodyLarge);
+	border-radius: var(--border-radius);
+	padding: 7px 20px;
+
+	&:hover {
+		background-color: var(--bg-hover);
+	}
+
+	&#{$active-selector} {
+		background-color: var(--bg-hl);
+	}
+}
+
+@mixin toggle($checked-selector, $disabled-selector) {
+	--spacing: var(--spacing-xs);
+	--swatch-size: 20px;
+	--swatch-pos: calc(100% - var(--swatch-size) - var(--spacing));
+
+	appearance: none;
+	background-color: var(--bg);
+	border-radius: var(--swatch-size);
+
+	position: relative;
+	width: 63px;
+	height: calc(var(--swatch-size) + var(--spacing) * 2);
+
+	&:not(#{$checked-selector}) {
+		--bg: var(--bg-hl);
+		--swatch-bg: var(--bg-hover);
+		--swatch-pos-start: var(--spacing);
+		--swatch-pos-end: var(--swatch-pos);
+	}
+
+	&#{$checked-selector} {
+		--bg: var(--bg-tertiary);
+		--swatch-bg: var(--color-primary);
+		--swatch-pos-start: var(--swatch-pos);
+		--swatch-pos-end: var(--spacing);
+	}
+
+	&#{$disabled-selector} {
+		--swatch-bg: var(--fg-dim);
+		--swatch-pos-start: var(--spacing);
+		--swatch-pos-end: var(--swatch-pos);
+
+		opacity: 0.5;
+	}
+
+	&::before {
+		content: "";
+
+		position: absolute;
+		inset-block: var(--spacing);
+		inset-inline: var(--swatch-pos-start) var(--swatch-pos-end);
+		width: var(--swatch-size);
+		height: var(--swatch-size);
+
+		background-color: var(--swatch-bg);
+		border-radius: var(--swatch-size);
+
+		transition: var(--transition);
+	}
+}
+
 @mixin text-input {
 	--spacing: 15px;
 

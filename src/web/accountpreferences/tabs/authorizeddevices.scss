@@ -1,0 +1,84 @@
+@use "shared/extends/controls";
+
+#ActiveNow,
+#AuthorizedDevicesRecentHeader {
+	color: var(--fg-main);
+	font: var(--gpText-HeadingMedium);
+	margin-top: var(--spacing-lg);
+}
+
+#ActiveNowDot {
+	display: none;
+}
+
+#DetailsToggle {
+	display: none;
+}
+
+#DeviceContainer {
+	@include controls.button;
+
+	gap: var(--spacing-sm);
+	margin: 0;
+
+	align-items: center;
+
+	&#ActiveDevice {
+		@include controls.button-colors("primary");
+	}
+}
+
+#DeviceContent {
+	padding: 0;
+}
+
+#DeviceGroup {
+	gap: var(--spacing-xs);
+	padding: 0;
+}
+
+#DeviceHeaderRow {
+	font: var(--gpText-HeadingSmall);
+}
+
+#DeviceLogo {
+	color: inherit;
+	margin: 0;
+}
+
+#DeviceName {
+	color: inherit;
+	font: inherit;
+}
+
+#LastActive {
+	color: inherit;
+	font: inherit;
+}
+
+#LastSeenRow {
+	color: var(--fg-dim);
+	font: var(--gpText-BodyLarge);
+}
+
+#RemoveDevicesRow {
+	background-color: transparent;
+	padding: 0;
+	margin: 0;
+
+	.DialogButton.DialogButton {
+		@include controls.button("red");
+
+		border: none;
+
+		// Some guy really thought putting an !important would be hilarious af
+		&:hover {
+			background-color: var(--bg2);
+		}
+	}
+}
+
+// yes, I know this is my current device, tyvm
+#ThisDevice {
+	display: none;
+}

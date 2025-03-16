@@ -1,0 +1,18 @@
+.nav_item {
+	background: transparent !important;
+	border-radius: var(--border-radius) !important;
+	padding: 8px 13px !important;
+	margin-bottom: var(--spacing-md) !important;
+
+	&:is(:hover, .active) {
+		background: var(--bg-hover) !important;
+	}
+
+	&:last-child {
+		margin: 0 !important;
+	}
+
+	&::after {
+		display: none !important;
+	}
+}

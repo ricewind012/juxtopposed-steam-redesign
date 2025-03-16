@@ -1,0 +1,18 @@
+
+
+.country_settings {
+	font: var(--gpText-HeadingSmall);
+
+	[style="margin-top: 10px"] {
+		font: var(--gpText-BodyLarge);
+		margin-block: var(--spacing-sm);
+	}
+}
+
+.phone_header_description {
+	font: var(--gpText-HeadingSmall) !important;
+
+	img {
+		display: none !important;
+	}
+}

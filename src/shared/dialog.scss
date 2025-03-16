@@ -1,5 +1,15 @@
 @use "shared/extends/controls";
 
+.DialogCheckbox {
+	@include controls.checkbox(".Active", ".Disabled");
+
+	box-shadow: none;
+
+	svg {
+		display: none;
+	}
+}
+
 .DialogInput {
 	@include controls.text-input;
 }
