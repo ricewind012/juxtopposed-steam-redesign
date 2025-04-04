@@ -1,0 +1,22 @@
+#BadgeDetails {
+	color: var(--fg-main);
+	font: var(--gpText-HeadingSmall);
+
+	#GameName {
+		color: var(--fg-dim);
+		font: var(--gpText-BodyLarge);
+	}
+}
+
+#BadgeOption {
+	margin: 0;
+
+	// V*lve forgot about that
+	align-items: center;
+}
+
+#FavoriteBadge {
+	& + div {
+		--columns: 3;
+	}
+}

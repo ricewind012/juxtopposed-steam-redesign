@@ -1,0 +1,6 @@
+@mixin section {
+	background-color: var(--bg-main);
+	border-radius: var(--border-radius-large);
+	padding: var(--spacing-lg);
+	margin-bottom: var(--spacing-lg);
+}

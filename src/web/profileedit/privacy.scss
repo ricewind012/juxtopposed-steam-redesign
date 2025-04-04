@@ -1,0 +1,74 @@
+@use "shared/extends/controls";
+@use "web/extends/layout";
+
+.ProfilePrivacyCheckbox {
+	padding: 0;
+
+	label {
+		align-items: center;
+	}
+}
+
+.ProfilePrivacyCheckbox_Input {
+	margin: 0;
+}
+
+.ProfilePrivacyDesc {
+	@include layout.settings-section;
+
+	a {
+		text-decoration: underline;
+	}
+}
+
+.ProfilePrivacyDropDown {
+	color: var(--fg-dim);
+
+	&:not(.readonly):hover {
+		color: var(--fg-main);
+	}
+
+	&.readonly {
+	}
+}
+
+.ProfilePrivacyDropDown_Arrow {
+	--size: 24px;
+
+	background-color: currentColor;
+	mask-image: var(--icon-arrow);
+
+	vertical-align: sub;
+	width: var(--size);
+	height: var(--size);
+}
+
+.ProfilePrivacyHeader {
+	@include layout.settings-section;
+
+	color: var(--color-primary);
+	font: var(--gpText-HeadingMedium);
+	padding-bottom: 0;
+	margin: 0;
+
+	display: flex;
+	align-items: center;
+}
+
+.ProfilePrivacyHR {
+	display: none;
+}
+
+.ProfilePrivacyRoot {
+	color: var(--fg-main);
+	font: var(--gpText-BodyLarge);
+}
+
+.ProfilePrivacyRoot_Indent {
+	padding: 0;
+}
+
+.PrivacySaveNotice {
+	color: inherit;
+	font: var(--gpText-BodyLarge);
+}

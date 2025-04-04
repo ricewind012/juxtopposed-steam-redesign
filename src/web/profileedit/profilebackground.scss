@@ -1,0 +1,26 @@
+#Details {
+	padding-block: var(--spacing-xs) 0;
+
+	#BackgroundOption#Active & {
+		#App {
+			color: color-mix(in srgb, var(--color-primary) 25%, var(--fg-dim));
+		}
+
+		#Title {
+			color: var(--color-primary);
+		}
+	}
+
+	#App {
+		color: var(--fg-dim);
+		font: var(--gpText-BodyMedium);
+	}
+
+	#Title {
+		font: var(--gpText-HeadingSmall);
+
+		// AMAZING
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+}

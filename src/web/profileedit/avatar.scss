@@ -1,0 +1,20 @@
+@use "web/extends/layout";
+
+#AvatarDialogTop {
+	@include layout.settings-section;
+}
+
+#AvatarDialogUploadArea {
+	color: var(--fg-dim);
+	font: var(--gpText-BodyMedium);
+	margin: 0;
+}
+
+#AvatarRow {
+	padding: 0;
+
+	#size {
+		padding-top: var(--spacing-md);
+		font: var(--gpText-BodySmall);
+	}
+}

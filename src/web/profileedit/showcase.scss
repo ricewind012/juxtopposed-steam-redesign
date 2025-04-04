@@ -1,0 +1,162 @@
+@use "shared/extends/controls";
+
+.customization_controls {
+	background-color: var(--bg-main);
+	border-radius: var(--border-radius-large) var(--border-radius-large) 0 0;
+	padding: var(--spacing-lg);
+	margin: 0;
+
+	display: flex;
+	align-items: center;
+	flex-direction: row-reverse;
+	justify-content: start;
+
+	&.has_showcase {
+		justify-content: space-between;
+	}
+
+	// TODO: unify later
+	.btnv6_white_transparent > span {
+		border: none;
+	}
+
+	select {
+		@include controls.dropdown;
+
+		line-height: calc(44px - 5px * 2);
+
+		// TODO: can't use ::after here... idk man
+		&:hover {
+			background-color: var(--bg-hover);
+		}
+	}
+
+	// weird empty div
+	& > [id]:empty {
+		display: none;
+	}
+}
+
+.customization_controls_nextprev {
+	gap: var(--spacing-sm);
+
+	display: flex;
+}
+
+.customization_edit_area {
+	background: transparent;
+	margin-bottom: var(--spacing-md);
+
+	.btn_grey_black {
+		@include controls.button;
+
+		// TODO: unify later
+		span {
+			font: var(--gpText-BodyLarge);
+			text-align: center;
+			padding: 0;
+		}
+	}
+
+	.emoticon_container {
+		@include controls.button;
+	}
+
+	.profile_customization {
+		margin-bottom: 0;
+	}
+
+	.profile_customization_block {
+		background-color: var(--bg-hl);
+	}
+
+	.showcase_content_bg {
+		background-color: transparent;
+		padding: 0;
+	}
+
+	[style="text-align: right;"] {
+		margin-top: var(--spacing-sm);
+	}
+
+	// This looks much better
+	input[type="text"],
+	textarea {
+		background-color: var(--bg-main-20);
+		border: none;
+
+		&:hover {
+			background-color: var(--bg-main-50);
+		}
+	}
+}
+
+.customtext_showcase_editheader {
+	background: linear-gradient(
+		90deg,
+		var(--gradient-showcase-header-left) 0%,
+		var(--color-showcase-header) 90%
+	);
+	font: var(--gpText-BodyLarge);
+	color: var(--fg-main);
+	padding: 10px;
+	margin: 0;
+}
+
+.profile_showcase_drag_and_drop_highlight {
+	border: 2px dashed var(--fg-main);
+	background-color: var(--fg-dim);
+	margin-block: 0 var(--spacing-lg);
+}
+
+.profile_showcase_drag_handle {
+	mask-image: url(https://community.cloudflare.steamstatic.com/public/images/profile/icon_grab_sort.png);
+}
+
+.profile_showcase_selection_options_ctn {
+	gap: 10px;
+
+	max-width: unset;
+}
+
+.profile_showcase_selector {
+	background: none;
+	border: none;
+	padding: 0;
+	margin-bottom: var(--spacing-lg);
+}
+
+.profile_showcase_sort_btn {
+	margin: 0;
+}
+
+.profile_showcase_sort_controls {
+	position: unset;
+}
+
+.profile_showcase_sort_down {
+	transform: rotate(180deg);
+	mask-image: var(--icon-arrow);
+}
+
+.profile_showcase_sort_up {
+	mask-image: var(--icon-arrow);
+}
+
+.showcase_preview_ctn {
+	background-color: var(--bg-main);
+	border-radius: 0 0 var(--border-radius-large) var(--border-radius-large);
+	padding: var(--spacing-lg);
+	padding-top: 0;
+
+	width: unset;
+
+	&:has(> .customization_edit.none_selected:not([style="display: none;"])) {
+		display: none;
+	}
+}
+
+.showcase_selection_pre,
+.showcase_selection_post {
+	display: none;
+}

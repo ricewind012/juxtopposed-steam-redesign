@@ -1,0 +1,25 @@
+@mixin settings-section {
+	background-color: var(--bg-main);
+	border-radius: var(--border-radius-large);
+	padding: var(--spacing-lg);
+	margin-bottom: var(--spacing-lg);
+}
+
+@mixin sidebar-container {
+	background-color: var(--bg-main);
+	border-radius: var(--border-radius-large);
+	padding: var(--spacing-md);
+
+	min-width: var(--sidebar-width);
+}
+
+@mixin sidebar-item($active-selector) {
+	background: transparent !important;
+	border-radius: var(--border-radius) !important;
+	padding: 8px 13px !important;
+	margin-bottom: var(--spacing-md) !important;
+
+	&:is(:hover, #{$active-selector}) {
+		background: var(--bg-hover) !important;
+	}
+}

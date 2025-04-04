@@ -1,0 +1,18 @@
+@use "shared/extends/controls";
+
+#formattingButton {
+	@include controls.button;
+
+	// Yellow highlight
+	.tool-tip-source > div {
+		display: none;
+	}
+}
+
+#summaryTextArea {
+	@include controls.text-input;
+
+	color: var(--fg-main);
+	font: inherit;
+	box-shadow: none;
+}

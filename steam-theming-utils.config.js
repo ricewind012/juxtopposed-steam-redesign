@@ -6,5 +6,8 @@ export default {
 		"web/accountpreferences/tabs/store",
 		"web/accountpreferences/shared",
 		"web/accountpreferences/sidebar",
+		"web/profileedit/content",
+		"web/profileedit/privacy",
+		"web/profileedit/showcase",
 	],
 };

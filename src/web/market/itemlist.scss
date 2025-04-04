@@ -165,7 +165,7 @@
 }
 
 #findItemsSearchBox {
-	@include controls.text-input;
+	@include controls.search-input;
 }
 
 #findItemsSearchSubmit {

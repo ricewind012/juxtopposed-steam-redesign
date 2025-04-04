@@ -1,0 +1,111 @@
+@use "shared/extends/controls";
+@use "web/extends/layout/sidebar";
+
+#BackToProfileCtn {
+	margin-bottom: 20px;
+
+	a {
+		@include controls.button;
+
+		text-decoration: none;
+	}
+}
+
+#Navigation {
+	@include sidebar.container;
+}
+
+#NavLink {
+	@include sidebar.item("#Active");
+
+	line-height: unset;
+}
+
+// #profilethemecolors_DefaultTheme (and others... that's why it's here)
+#PageContent > div {
+	--btn-background: color-mix(in srgb, var(--bg-hl) 50%, transparent);
+	--btn-background-hover: color-mix(in srgb, var(--bg-hover) 50%, transparent);
+	--gradient-background: color-mix(in srgb, var(--bg-hover) 35%, transparent);
+}
+
+#Shell {
+	// TODO: move
+	--spacing-xs: 5px;
+	--spacing-sm: 10px;
+	--spacing-md: 15px;
+	--spacing-lg: 20px;
+	--spacing-xl: 30px;
+
+	font: var(--gpText-BodyLarge);
+
+	margin: 0;
+
+	// TODO: move these one day
+	.DialogButton {
+		@include controls.button;
+
+		margin-left: var(--spacing-md);
+
+		&.Primary {
+			@include controls.button("primary");
+		}
+	}
+
+	.DialogCheckbox {
+		@include controls.toggle(".Active", ".Disabled");
+
+		box-shadow: none;
+
+		svg {
+			display: none;
+		}
+	}
+
+	.DialogCheckbox_Container {
+		padding: 0;
+		margin: 0;
+
+		display: flex;
+		flex-direction: row-reverse;
+		justify-content: start;
+	}
+
+	.DialogInput {
+		@include controls.text-input;
+
+		color: var(--fg-main);
+		font: inherit;
+		box-shadow: none;
+
+		&::placeholder {
+			color: var(--fg-dim);
+			font: var(--gpText-BodyMedium);
+		}
+	}
+
+	.DialogLabel {
+		all: unset;
+		color: var(--fg-main);
+		font: var(--gpText-HeadingSmall);
+		width: 265px;
+
+		svg {
+			@include controls.tooltip-icon;
+
+			margin: 0;
+
+			path {
+				display: none;
+			}
+		}
+	}
+
+	// can't fit this shit
+	.DialogLabelExplainer {
+		display: none;
+	}
+
+	.DialogToggle_Label {
+		width: 265px;
+	}
+}

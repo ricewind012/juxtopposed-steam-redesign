@@ -1,5 +1,7 @@
 @use "shared/extends/controls";
 
+// TODO
+/*
 .DialogCheckbox {
 	@include controls.checkbox(".Active", ".Disabled");
 
@@ -9,7 +11,16 @@
 		display: none;
 	}
 }
+*/
 
 .DialogInput {
 	@include controls.text-input;
+}
+
+.DialogLabel {
+	color: var(--fg-dim);
+	font: var(--gpText-BodySmall);
+	text-transform: none;
+	// var(--spacing-xs)
+	margin-bottom: 5px;
 }

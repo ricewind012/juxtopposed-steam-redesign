@@ -1,0 +1,18 @@
+@mixin container {
+	background-color: var(--bg-main);
+	border-radius: var(--border-radius-large);
+	padding: var(--spacing-md);
+
+	min-width: var(--sidebar-width);
+}
+
+@mixin item($active-selector) {
+	background: transparent !important;
+	border-radius: var(--border-radius) !important;
+	padding: 8px 13px !important;
+	margin-bottom: var(--spacing-md) !important;
+
+	&:is(:hover, #{$active-selector}) {
+		background: var(--bg-hover) !important;
+	}
+}

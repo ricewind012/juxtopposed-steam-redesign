@@ -1,0 +1,18 @@
+body.profile_edit_page {
+	background: #11171e;
+
+	.DialogBodyText,
+	.DialogHeader {
+		display: none;
+	}
+}
+
+.maincontent {
+	margin-top: var(--top-content-margin);
+
+	width: 1241px;
+}
+
+.profile_small_header_bg {
+	display: none;
+}

@@ -49,19 +49,9 @@ input[type="checkbox"] {
 	background-color: transparent;
 
 	.trigger {
-		@include controls.button;
+		@include controls.dropdown;
 
 		font: var(--gpText-BodyLarge);
-
-		&::after {
-			// TODO: 15px? Or just @mixin
-			right: var(--spacing-sm);
-
-			background-color: var(--fg-main);
-			mask: var(--icon-arrow);
-			mask-position: center;
-			mask-repeat: no-repeat;
-		}
 	}
 }
 
@@ -92,15 +82,10 @@ input[type="checkbox"] {
 }
 
 .tooltip {
-	--size: 20px;
-
-	background-color: var(--fg-dim);
-	mask: var(--icon-info);
+	@include controls.tooltip-icon;
 
 	display: inline-block;
 	vertical-align: sub;
-	width: var(--size);
-	height: var(--size);
 
 	img {
 		display: none;
@@ -265,7 +250,8 @@ input[type="checkbox"] {
 	margin: 0;
 	all: unset;
 
-	input[type="text"] {
+	input[type="text"],
+	textarea {
 		background: transparent;
 		border: 1px solid var(--bg-hover);
 		border-radius: var(--border-radius);
@@ -273,12 +259,14 @@ input[type="checkbox"] {
 
 		font: inherit;
 
-		height: unset;
-
 		&::placeholder {
 			color: var(--bg-hover);
 			font: var(--gpText-BodyMedium);
 		}
+	}
+
+	input[type="text"] {
+		height: unset;
 	}
 }
 

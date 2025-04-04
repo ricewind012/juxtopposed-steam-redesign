@@ -28,6 +28,8 @@
 
 	background: var(--bg);
 	color: var(--fg);
+	// Must be 1.4, see --gpText
+	line-height: inherit;
 	border-radius: var(--border-radius);
 	// --spacing-sm
 	padding: 11px;
@@ -61,6 +63,29 @@
 
 	&#{$disabled-selector} {
 		background: var(--bg-hover);
+	}
+}
+
+@mixin dropdown {
+	background-color: var(--bg-hl);
+	border-radius: var(--border-radius);
+	// TODO: not actually 43px height
+	padding: 5px 15px;
+	gap: 10px;
+
+	display: flex;
+	position: relative;
+
+	&::after {
+		content: "";
+
+		// TODO: 15px? Or just @mixin
+		right: 10px;
+
+		background-color: currentColor;
+		mask: var(--icon-arrow);
+		mask-position: center;
+		mask-repeat: no-repeat;
 	}
 }
 
@@ -139,7 +164,7 @@
 	}
 }
 
-@mixin text-input {
+@mixin search-input {
 	--spacing: 15px;
 
 	background-color: color-mix(in srgb, var(--bg-tertiary) 20%, transparent);
@@ -152,4 +177,26 @@
 
 	width: 100%;
 	height: unset;
+}
+
+@mixin text-input {
+	background-color: transparent;
+	border: 1px solid var(--bg-hover);
+	border-radius: var(--border-radius);
+	padding: 12px 15px;
+}
+
+@mixin tooltip-icon {
+	--size: 20px;
+
+	background-color: var(--fg-dim);
+	mask-image: var(--icon-info);
+	mask-position: center;
+
+	width: var(--size);
+	height: var(--size);
+
+	&:hover {
+		background-color: var(--fg-main);
+	}
 }
