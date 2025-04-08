@@ -1,3 +1,5 @@
+@use "shared/extends/controls";
+
 .achievement_icons {
 	gap: 8px;
 	margin-left: 8px;
@@ -7,18 +9,14 @@
 }
 
 .achievement_progress_bar_ctn {
-	background-color: var(--bg-hl);
 	border: none;
 	box-shadow: none;
-	padding: 0;
 	margin: 0;
 
 	width: var(--ach-progress-bar-width);
 	height: unset;
 
-	.progress_bar {
-		background: none var(--color-primary);
-	}
+	@include controls.progress_bar(".progress_bar");
 }
 
 .game_info {
@@ -105,12 +103,11 @@
 		background-color: color-mix(in srgb, var(--fg-dim) 50%, transparent);
 		mask: var(--icon);
 
-		--size: 20px;
 		display: block;
 		position: absolute;
-		left: calc(var(--size) * -1 - 5px);
-		width: var(--size);
-		height: var(--size);
+		left: calc(var(--icon-size) * -1 - 5px);
+		width: var(--icon-size);
+		height: var(--icon-size);
 	}
 
 	&::before {

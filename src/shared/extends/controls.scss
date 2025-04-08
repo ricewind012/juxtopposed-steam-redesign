@@ -89,6 +89,19 @@
 	}
 }
 
+@mixin progress-bar($inner) {
+	background-color: var(--bg-hl);
+	border-radius: 10px;
+	padding: 2px;
+
+	#{$inner} {
+		background: none var(--color-primary);
+		border-radius: 10px;
+
+		height: 6px;
+	}
+}
+
 @mixin tabs-container {
 	background-color: var(--bg-main);
 	border-radius: var(--border-radius-large);
@@ -99,7 +112,7 @@
 }
 
 @mixin tab($active-selector) {
-	color: var(--fg-main);
+	color: var(--fg-dim);
 	font: var(--gpText-BodyLarge);
 	border-radius: var(--border-radius);
 	padding: 7px 20px;
@@ -110,6 +123,7 @@
 
 	&#{$active-selector} {
 		background-color: var(--bg-hl);
+		color: var(--fg-main);
 	}
 }
 
@@ -187,14 +201,12 @@
 }
 
 @mixin tooltip-icon {
-	--size: 20px;
-
 	background-color: var(--fg-dim);
 	mask-image: var(--icon-info);
 	mask-position: center;
 
-	width: var(--size);
-	height: var(--size);
+	width: var(--icon-size);
+	height: var(--icon-size);
 
 	&:hover {
 		background-color: var(--fg-main);

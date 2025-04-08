@@ -1,0 +1,120 @@
+@use "shared/extends/controls";
+@use "shared/extends/style";
+
+// NOTE: Do NOT edit any spacing here if that means changing the entry's height,
+// the list is virtualized. That's also why it doesn't align with the actual
+// design.
+
+#AchievementContainer {
+	background-color: var(--bg-main);
+	border-radius: var(--border-radius);
+	gap: var(--spacing-lg);
+	padding: var(--spacing-md);
+	padding-left: calc(var(--spacing-md) + var(--icon-size) + 16px);
+
+	position: relative;
+
+	&::before {
+		content: "";
+
+		position: absolute;
+		// TODO: XDDDDDD just make it flex holy shit
+		top: calc(var(--spacing-md) + 8px - 0.25em);
+		left: var(--spacing-md);
+
+		@include style.icon("achievements");
+	}
+}
+
+#AchievementsFraction {
+	font: var(--gpText-BodySmall);
+	margin-top: 0.125em;
+
+	min-width: 3rem;
+}
+
+#AchievementsProgress {
+	display: flex;
+}
+
+#AchievementsProgressBar {
+	@include controls.progress-bar("&::after");
+
+	height: unset;
+}
+
+#AchievementsProgressLabel {
+	display: none;
+}
+
+#FactLabel {
+	font-size: 0;
+
+	&::before {
+		content: "";
+
+		@include style.icon("clock");
+
+		background-color: color-mix(in srgb, var(--fg-dim) 50%, transparent);
+
+		display: block;
+	}
+}
+
+#GameItemPortrait img {
+	border-radius: var(--border-radius);
+}
+
+#GameLinksButton {
+	padding: 2px;
+
+	width: var(--icon-size);
+	height: var(--icon-size);
+}
+
+#GameName {
+	font: var(--gpText-BodyLarge);
+	padding: 0;
+}
+
+#GameNameContainer {
+	height: unset;
+}
+
+#GamesListItem {
+	--spacing-sm: calc(var(--padding) / 2);
+	--spacing-md: var(--padding);
+	--spacing-lg: calc(var(--padding) * 1.5);
+	--spacing-xl: calc(var(--padding) * 2);
+
+	background-color: var(--bg-main-50);
+	row-gap: 8px;
+}
+
+#Hours,
+#Hours2weeks,
+#LastPlayed {
+	--offset: calc(var(--spacing-md) * 4 + var(--spacing-xl));
+
+	color: var(--fg-main);
+	font: var(--gpText-BodySmall);
+	gap: var(--spacing-sm);
+
+	position: absolute;
+	top: var(--spacing-md);
+	right: var(--offset);
+	align-items: center;
+	flex-direction: row;
+}
+
+#Hours2weeks,
+#LastPlayed {
+	right: calc(var(--offset) + 130px);
+}
+
+#List {
+	margin-top: 10px;
+}
+
+#NavButton {
+}

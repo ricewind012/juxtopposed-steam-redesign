@@ -1,0 +1,47 @@
+@use "shared/extends/controls";
+
+#DisplayControls {
+	padding-block: 10px 0;
+}
+
+#FilterInput {
+	height: unset;
+
+	input {
+		@include controls.search-input;
+	}
+}
+
+#Gameslistapp {
+	margin-top: var(--top-content-margin);
+
+	max-width: 1241px;
+}
+
+.migrated_profile_page {
+	.responsive_tab_baseline {
+		display: none;
+	}
+
+	.sectionTab {
+		@include controls.tab(".active");
+
+		background: none;
+		margin: 0;
+
+		// wishlist
+		position: unset;
+		transform: none;
+		height: unset;
+
+		& > span {
+			all: unset;
+		}
+	}
+
+	.sectionTabs {
+		@include controls.tabs-container;
+
+		margin: 0;
+	}
+}
