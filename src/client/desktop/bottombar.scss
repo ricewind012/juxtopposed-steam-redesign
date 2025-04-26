@@ -1,0 +1,44 @@
+@use "client/extends/titlebarcontrols";
+
+@mixin -button($icon) {
+	--icon-name: var(--icon-#{$icon});
+	--icon-size: var(--dialog_window-control-size);
+
+	@include titlebarcontrols.button;
+}
+
+#AddGameButton {
+	@include -button("plus");
+}
+
+#BottomBar {
+	background-color: transparent;
+	box-shadow: none;
+	gap: var(--spacing-sm);
+	padding: 0;
+	margin-right: var(--spacing-sm);
+
+	position: absolute;
+	position-anchor: --titlebarcontrols;
+	top: anchor(top);
+	right: anchor(left);
+}
+
+#DownloadStatusContent {
+	@include -button("download");
+}
+
+#FriendsButton {
+	@include -button("people");
+}
+
+#Icon {
+	display: flex;
+	width: unset;
+	height: unset;
+}
+
+#Text,
+#Queue {
+	display: none;
+}

@@ -1,0 +1,28 @@
+@use "shared/extends/style";
+
+#RootMenuBar {
+	gap: var(--dialog_window-control-spacing);
+	padding: 0;
+	margin: 0;
+}
+
+#RootMenuButton {
+	color: var(--fg-dim);
+	font: var(--gpText-BodyLarge);
+	padding: 0;
+
+	&:hover {
+		color: var(--fg-main);
+	}
+
+	&:nth-child(3),
+	&:nth-child(4) {
+		display: none;
+	}
+
+	&::after {
+		content: "";
+
+		@include style.icon("arrow");
+	}
+}

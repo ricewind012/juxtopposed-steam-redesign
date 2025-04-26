@@ -1,0 +1,20 @@
+@use "shared/extends/style";
+
+@mixin button {
+	background-color: var(--bg-hl);
+	color: var(--fg-dim);
+	border-radius: var(--border-radius);
+	padding: 6px 15px;
+
+	&:hover {
+		background-color: var(--bg-hover);
+	}
+
+	svg {
+		@include style.icon("name");
+
+		& > * {
+			display: none;
+		}
+	}
+}

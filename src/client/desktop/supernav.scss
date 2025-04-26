@@ -1,0 +1,48 @@
+@use "shared/extends/style";
+
+#Arrow {
+	--size: 24px;
+
+	@include style.icon("keyboard-arrow");
+
+	padding: 0;
+
+	width: var(--size);
+	height: var(--size);
+
+	&:nth-child(2) {
+		margin-right: 16px;
+		margin-left: 5px;
+	}
+
+	&:hover {
+		background-color: var(--fg-main);
+	}
+
+	path {
+		display: none;
+	}
+}
+
+#SuperNav {
+}
+
+#SuperNavMenu {
+	font: var(--gpText-HeadingSmall);
+	padding: 0;
+	margin-right: 66px;
+
+	&#Selected {
+		color: var(--color-primary);
+	}
+}
+
+#MenuButton {
+	color: inherit;
+	font: inherit;
+	text-shadow: none;
+
+	&::after {
+		display: none;
+	}
+}

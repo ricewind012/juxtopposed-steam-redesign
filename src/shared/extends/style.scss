@@ -1,6 +1,8 @@
 @mixin icon($name) {
 	background-color: var(--fg-dim);
 	mask: var(--icon-#{$name});
+	mask-position: center;
+	mask-size: var(--icon-size);
 
 	width: var(--icon-size);
 	height: var(--icon-size);

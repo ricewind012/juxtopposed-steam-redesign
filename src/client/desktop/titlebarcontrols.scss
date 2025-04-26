@@ -1,0 +1,70 @@
+@use "shared/extends/style";
+@use "client/extends/titlebarcontrols";
+
+#AccountMenu {
+	@include titlebarcontrols.button;
+
+	font: var(--gpText-BodyMedium);
+	gap: 8px;
+	padding: 2px;
+	margin-right: var(--spacing-sm);
+
+	max-height: unset;
+
+	&.online {
+		color: var(--color-primary);
+	}
+
+	&.ingame {
+		color: var(--accent-green);
+	}
+
+	.avatar {
+		border: none;
+		border-radius: var(--border-radius);
+		box-shadow: none;
+
+		width: 100%;
+		height: 100%;
+	}
+
+	.avatarHolder {
+		--size: 32px;
+
+		transform: unset;
+
+		position: relative;
+		width: var(--size);
+		height: var(--size);
+	}
+
+	#Chevron {
+		--fg-dim: var(--fg-main);
+		--icon-name: var(--icon-arrow);
+		--icon-size: 20px;
+
+		margin-right: 4px;
+
+		order: 1;
+	}
+
+	#WalletBalance {
+		color: var(--fg-dim);
+	}
+}
+
+#Button {
+	@include titlebarcontrols.button;
+}
+
+#NotificationButtonContainer {
+	--icon-name: var(--icon-notifications);
+	--icon-size: var(--dialog_window-control-size);
+	margin-right: var(--spacing-sm);
+}
+
+// most useless fucking buttons ever FUCK YOU
+#AnnouncementsButton,
+#GamepadUIToggle {
+	display: none;
+}

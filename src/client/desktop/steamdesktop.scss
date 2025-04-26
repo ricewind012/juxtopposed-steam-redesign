@@ -1,0 +1,60 @@
+#DragArea {
+	display: none;
+}
+
+#FocusBar#Focused {
+	background-image: linear-gradient(
+		to right,
+		transparent 10%,
+		#1aa0ff 50%,
+		transparent 90%
+	);
+}
+
+#SuperNavBar {
+	padding: 0;
+
+	height: unset;
+	min-height: unset;
+}
+
+#TitleBar {
+	gap: var(--dialog_window-control-spacing);
+
+	align-items: center;
+	justify-content: end;
+	height: unset;
+}
+
+#TitleBarControls {
+	order: -1;
+	margin-top: 0;
+	margin-right: 40px;
+
+	anchor-name: --titlebarcontrols;
+}
+
+#TopBar {
+	background-color: var(--bg-main);
+	box-shadow: none;
+	padding: var(--spacing-sm) var(--spacing-lg);
+
+	flex-direction: row-reverse;
+	align-items: center;
+}
+
+#URLBarReplacement {
+	display: none;
+}
+
+#WindowControls {
+	flex-basis: calc(
+		var(--dialog_window-control-size) * 3 +
+			var(--dialog_window-control-spacing) * 2
+	);
+	height: 32px;
+}
+
+#Wrapper {
+	border: none;
+}
