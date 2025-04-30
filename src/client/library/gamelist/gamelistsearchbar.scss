@@ -1,0 +1,153 @@
+@use "client/extends/gamelist";
+@use "shared/extends/controls";
+@use "shared/extends/style";
+
+@mixin -search-input {
+	@include controls.search-input;
+
+	background: var(--bg-main-20);
+}
+
+#AdvancedSearchButton {
+	@include gamelist.icon-button("filter", "#ContainerHide");
+
+	min-width: unset;
+
+	// Fix some bullshit CSS behavior
+	& > div {
+		display: flex;
+	}
+}
+
+#AdvancedSearchContainer {
+	background-color: transparent;
+
+	height: unset;
+
+	svg {
+		margin: 0;
+	}
+}
+
+#AdvancedSearchPane {
+	background-color: var(--bg-main);
+	border-radius: var(--border-radius-large);
+	box-shadow: none;
+
+	top: 100%;
+	left: 0;
+
+	&::before {
+		display: none;
+	}
+}
+
+#Container {
+	@include gamelist.part-container;
+
+	border-radius: 0;
+	padding-block: calc(var(--spacing-sm) + 2px);
+	padding-left: var(--library_gamelist-bar-spacing);
+	margin: 0;
+
+	position: absolute;
+	position-anchor: --gamelisthomeandsearch;
+	anchor-name: --gamelistsearchbar;
+	top: anchor(top);
+	left: anchor(right);
+
+	.DialogInput {
+		@include -search-input;
+	}
+
+	// TODO(shared/dialog): Is this seen elsewhere ?
+	.DialogInput_ClearAction {
+		@extend #SearchFilterInputClear;
+	}
+
+	.DialogInput_Wrapper {
+		position: relative;
+
+		&:has(> .DialogInput_ClearAction)::after {
+			display: none;
+		}
+
+		&::after {
+			content: "";
+
+			position: absolute;
+			right: var(--spacing-md);
+
+			@include gamelist.search-icon;
+		}
+	}
+}
+
+#FilterTag {
+	@include controls.store-tag;
+
+	padding-block: 0;
+	margin: 0;
+
+	align-items: center;
+	height: unset;
+
+	// Fix some bullshit CSS behavior (see above), but this time make it
+	// centered
+	& > div {
+		display: flex;
+	}
+
+	svg {
+		// Not half of that, since that makes it even smaller than that for
+		// whatever reason
+		--icon-size: 15px;
+
+		@include style.icon("close");
+
+		opacity: 1;
+		background-color: var(--fg-dim);
+		margin-left: 6px;
+
+		&:hover {
+			background-color: var(--fg-main);
+		}
+
+		// TODO: look into style.icon() svg children handling
+		* {
+			display: none;
+		}
+	}
+}
+
+#SearchByTypePrompt {
+	color: var(--color-secondary);
+	font: var(--gpText-BodyLarge);
+	padding: 4px 0;
+}
+
+#SearchFilterInput {
+	@include -search-input;
+
+	gap: 3px;
+	--spacing-sm: var(--spacing-xs);
+}
+
+#SearchFilterInputClear {
+	--fg-dim: var(--color-secondary);
+
+	@include style.icon("close");
+
+	top: calc(50% - var(--icon-size) / 2) !important;
+	right: var(--spacing-md);
+	width: var(--icon-size);
+	height: var(--icon-size);
+
+	&:hover {
+		--fg-dim: var(--color-primary);
+	}
+
+	svg {
+		display: none;
+	}
+}

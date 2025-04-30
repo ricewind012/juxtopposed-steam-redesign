@@ -1,3 +1,5 @@
+@use "shared/extends/header";
+
 #global_header {
 	backdrop-filter: blur(9px);
 	background-color: color-mix(in srgb, var(--bg-tertiary) 50%, transparent);
@@ -20,17 +22,10 @@
 	}
 
 	.menuitem {
-		color: var(--fg-main);
-		font: var(--gpText-BodyLarge);
-		border-radius: var(--border-radius);
-		padding: 13px 29px;
+		@include header.tab(".supernav_active");
 
 		&:not(.username) {
 			text-transform: lowercase;
-		}
-
-		&:not(.supernav_active):hover {
-			background-color: var(--bg-hover);
 		}
 
 		&::after {
@@ -41,11 +36,6 @@
 			text-transform: uppercase;
 		}
 	}
-}
-
-.supernav_active {
-	background-color: var(--color-secondary);
-	box-shadow: var(--button-shadow);
 }
 
 .supernav_container {

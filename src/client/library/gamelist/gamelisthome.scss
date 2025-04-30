@@ -1,0 +1,43 @@
+@use "shared/extends/header";
+
+#Bar {
+	@include header.tab("#Selected");
+
+	background-color: transparent;
+	border: none;
+	margin: 0;
+
+	height: unset;
+
+	// This isn't in the figma for some reason
+	&#Selected {
+		box-shadow: none;
+	}
+}
+
+#CollectionButton {
+	letter-spacing: 0;
+}
+
+#CollectionIcon {
+	all: unset;
+
+	// TODO: js
+	&::before {
+		content: "Collections";
+	}
+}
+
+#CollectionIconBox {
+	display: none;
+}
+
+#Icon {
+	display: none;
+}
+
+#Label {
+	color: inherit;
+	font: inherit;
+	margin: 0;
+}

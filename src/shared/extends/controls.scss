@@ -128,9 +128,9 @@
 }
 
 @mixin toggle($checked-selector, $disabled-selector) {
-	--spacing: var(--spacing-xs);
+	--spacing-md: var(--spacing-xs);
 	--swatch-size: 20px;
-	--swatch-pos: calc(100% - var(--swatch-size) - var(--spacing));
+	--swatch-pos: calc(100% - var(--swatch-size) - var(--spacing-md));
 
 	appearance: none;
 	background-color: var(--bg);
@@ -138,12 +138,12 @@
 
 	position: relative;
 	width: 63px;
-	height: calc(var(--swatch-size) + var(--spacing) * 2);
+	height: calc(var(--swatch-size) + var(--spacing-md) * 2);
 
 	&:not(#{$checked-selector}) {
 		--bg: var(--bg-hl);
 		--swatch-bg: var(--bg-hover);
-		--swatch-pos-start: var(--spacing);
+		--swatch-pos-start: var(--spacing-md);
 		--swatch-pos-end: var(--swatch-pos);
 	}
 
@@ -151,12 +151,12 @@
 		--bg: var(--bg-tertiary);
 		--swatch-bg: var(--color-primary);
 		--swatch-pos-start: var(--swatch-pos);
-		--swatch-pos-end: var(--spacing);
+		--swatch-pos-end: var(--spacing-md);
 	}
 
 	&#{$disabled-selector} {
 		--swatch-bg: var(--fg-dim);
-		--swatch-pos-start: var(--spacing);
+		--swatch-pos-start: var(--spacing-md);
 		--swatch-pos-end: var(--swatch-pos);
 
 		opacity: 0.5;
@@ -166,7 +166,7 @@
 		content: "";
 
 		position: absolute;
-		inset-block: var(--spacing);
+		inset-block: var(--spacing-md);
 		inset-inline: var(--swatch-pos-start) var(--swatch-pos-end);
 		width: var(--swatch-size);
 		height: var(--swatch-size);
@@ -179,18 +179,23 @@
 }
 
 @mixin search-input {
-	--spacing: 15px;
-
 	background-color: color-mix(in srgb, var(--bg-tertiary) 20%, transparent);
 	color: var(--fg-main);
 	font: var(--gpText-BodyMedium);
 	border: none;
 	border-radius: var(--border-radius);
-	padding: 12px var(--spacing);
-	padding-right: calc(var(--spacing) + var(--icon-size));
+	padding: var(--spacing-sm) var(--spacing-md);
+	padding-right: calc(var(--spacing-md) * 2 + var(--icon-size));
 
 	width: 100%;
 	height: unset;
+}
+
+// TODO: really similiar to a button
+@mixin store-tag {
+	background-color: var(--bg-hover);
+	border-radius: var(--border-radius);
+	padding: 6.5px 13px;
 }
 
 @mixin text-input {

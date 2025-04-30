@@ -1,0 +1,17 @@
+@use "client/extends/gamelist";
+
+#GameListHomeAndSearch {
+	@include gamelist.part-container;
+
+	box-shadow: none;
+
+	position: absolute;
+	anchor-name: --gamelisthomeandsearch;
+	top: 0;
+	height: unset;
+}
+
+#HomeBox {
+	overflow: visible;
+	flex-grow: 0;
+}

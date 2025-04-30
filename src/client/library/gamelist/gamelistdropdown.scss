@@ -1,0 +1,82 @@
+@use "client/extends/gamelist";
+@use "shared/extends/controls";
+
+#Arrow {
+	display: none;
+}
+
+#Bar {
+	@include gamelist.part-container;
+
+	anchor-name: --gamelistdropdown;
+	padding-block: calc(var(--spacing-sm) + 2px);
+	padding-left: var(--library_gamelist-bar-spacing);
+
+	position: fixed;
+	position-anchor: --gamelistsearchbar;
+	top: anchor(top);
+	left: anchor(right);
+
+	&::before {
+		content: "";
+
+		position: fixed;
+		position-anchor: --gamelistdropdown;
+		top: anchor(top);
+		bottom: anchor(bottom);
+		left: anchor(right);
+		width: 100%;
+
+		background-color: var(--bg-tertiary);
+	}
+}
+
+#CheckboxWithImage {
+	// TODO: this looks like ass lol
+	@include gamelist.icon-button("name", "#Active");
+
+	margin: 0;
+
+	width: unset;
+	height: unset;
+
+	.SVGIcon_LinuxLogo {
+		--icon-name: var(--icon-steam-circled);
+	}
+
+	.SVGIcon_SortBy {
+		--icon-name: var(--icon-clock);
+	}
+
+	.SVGIcon_ReadyToPlay {
+		--icon-name: var(--icon-play);
+	}
+}
+
+#Filters {
+	gap: 7px;
+}
+
+#MenuHeader {
+	@include controls.dropdown;
+
+	color: var(--fg-main);
+	font: var(--gpText-BodyLarge);
+
+	width: unset;
+	height: unset;
+
+	// TODO: include in mixin ?
+	&::after {
+		width: var(--icon-size);
+		height: var(--icon-size);
+	}
+}
+
+#ViewFiltersBar {
+	margin: 0;
+
+	svg {
+		transform: unset;
+	}
+}

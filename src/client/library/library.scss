@@ -1,0 +1,11 @@
+:root {
+	--library_gamelist-bar-spacing: 34px;
+}
+
+#Container {
+	margin-top: calc(var(--spacing-sm) * 2 + 1lh + 25px);
+}
+
+#LeftListSizableContainer {
+	position: unset;
+}

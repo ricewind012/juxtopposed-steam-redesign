@@ -1,0 +1,106 @@
+@use "shared/extends/controls";
+
+#Buttons {
+	margin: 0;
+
+	.DialogButton {
+		@include controls.button;
+
+		font: var(--gpText-BodyMedium);
+
+		&.Primary {
+			@include controls.button-colors("primary");
+		}
+	}
+}
+
+#Checkbox {
+	border-radius: var(--border-radius);
+	padding: 6.5px 13px;
+
+	&:hover {
+		background-color: var(--bg-hl);
+	}
+
+	&:has(> .DialogCheckbox.Active) {
+		color: var(--color-primary);
+	}
+
+	.DialogCheckbox {
+		display: none;
+	}
+
+	// TODO: maybe stop using HeadingSmall globally & color
+	.DialogToggle_Label {
+		color: inherit;
+		font: var(--gpText-BodySmall);
+	}
+}
+
+#CompatDropDown {
+	padding-block: var(--spacing-xs) 0;
+
+	.DialogDropDown {
+		@include controls.dropdown;
+
+		color: inherit;
+
+		&::after {
+			width: var(--icon-size);
+			height: var(--icon-size);
+		}
+	}
+
+	.DialogDropDown_Arrow {
+		display: none;
+	}
+
+	.DialogDropDown_CurrentDisplay {
+		padding: 0;
+	}
+}
+
+#Container {
+	padding: var(--spacing-lg);
+
+	.DialogInput {
+		// TODO: reduce selector specificity
+		--bg-main-20: color-mix(in srgb, var(--bg-tertiary) 20%, transparent);
+	}
+
+	.DialogInput_Wrapper {
+		margin: 0;
+	}
+}
+
+#FilterArea {
+	gap: var(--spacing-md);
+}
+
+#FilterBucket {
+	&:not(#Player, #PlayState, #Genre) {
+		border-top: 1px solid var(--bg-hl);
+		padding-top: var(--spacing-sm);
+	}
+}
+
+#FilterBucketBoxes {
+	padding: 0;
+}
+
+#FilterBucketLabel {
+	color: var(--fg-main);
+	font: var(--gpText-BodyLarge);
+	text-transform: unset;
+	margin-bottom: var(--spacing-sm);
+}
+
+#Row {
+	&:not(:last-child) {
+		margin-bottom: var(--spacing-xs);
+	}
+
+	& > .tool-tip-source {
+		width: 100%;
+	}
+}
