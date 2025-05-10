@@ -1,0 +1,37 @@
+@use "shared/extends/controls";
+@use "shared/extends/style";
+
+#ButtonText {
+	all: unset;
+	font: var(--gpText-HeadingSmall);
+}
+
+#PlayButton {
+	@include controls.button("primary");
+
+	padding: var(--spacing-md);
+
+	#Green > & {
+		@include controls.button-colors("green");
+	}
+
+	svg {
+		--icon-size: 24px;
+
+		@include style.icon("name");
+
+		// TODO(icons): currentColor
+		background-color: currentColor;
+		color: inherit;
+		margin-right: var(--spacing-sm);
+	}
+
+	// TODO(icons):
+	path {
+		display: none;
+	}
+}
+
+#PlayButtonContainer {
+	min-width: 151px;
+}

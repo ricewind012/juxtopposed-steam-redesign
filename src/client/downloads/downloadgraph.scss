@@ -1,0 +1,91 @@
+#DownloadGraph {
+	mask: none;
+}
+
+#DownloadGraphStatsWrapper {
+	--icon-size: 16px;
+
+	position: fixed;
+	top: var(--downloads_top-bar-height);
+	height: 44px;
+	display: flex;
+	align-items: center;
+
+	#Figure {
+		all: initial;
+		color: var(--fg-main);
+		font: var(--gpText-BodyMedium);
+	}
+
+	#LegendBox {
+		margin-right: var(--spacing-xs);
+
+		width: var(--icon-size);
+		height: var(--icon-size);
+
+		&#Disk {
+			background-color: var(--accent-green);
+
+			height: 4px;
+		}
+
+		&#Network {
+			svg {
+				color: var(--color-primary);
+
+				width: var(--icon-size);
+				height: var(--icon-size);
+			}
+		}
+	}
+
+	#LegendRow {
+		height: unset;
+	}
+
+	#LegendText {
+		all: unset;
+		color: var(--fg-main);
+		font: var(--gpText-HeadingSmall);
+	}
+
+	#Stat {
+		padding-left: calc(var(--icon-size) + var(--spacing-xs));
+	}
+}
+
+#DownloadGraphWrapper {
+	margin-left: var(--spacing-lg);
+}
+
+#GraphBarDownload {
+	color: var(--color-primary);
+}
+
+#GraphLine {
+	stroke: var(--accent-green);
+
+	display: initial;
+}
+
+#HeroAndLogo {
+	position: unset;
+	width: var(--appportrait_width);
+}
+
+#HeroContainer {
+	display: none;
+}
+
+#Logo,
+#LogoShadow {
+	margin: 0;
+
+	left: 0;
+	width: var(--appportrait_width);
+	height: 100%;
+}
+
+#LogoShadow {
+	opacity: 1;
+}

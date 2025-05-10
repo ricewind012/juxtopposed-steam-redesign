@@ -1,0 +1,7 @@
+@use "shared/extends/controls";
+
+#DetailsProgressContainer {
+	@include controls.progress-bar("#DetailsProgressBar");
+
+	height: unset;
+}

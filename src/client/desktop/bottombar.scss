@@ -1,4 +1,5 @@
 @use "client/extends/titlebarcontrols";
+@use "shared/extends/controls";
 
 @mixin -button($icon) {
 	--icon-name: var(--icon-#{$icon});
@@ -24,8 +25,24 @@
 	right: anchor(left);
 }
 
+#DetailedDownloadProgress {
+	width: unset;
+}
+
 #DownloadStatusContent {
 	@include -button("download");
+
+	#Icon {
+		border-radius: var(--border-radius);
+		box-shadow: none;
+
+		overflow: hidden;
+	}
+
+	#Status {
+		color: var(--fg-main);
+		font: var(--gpText-BodyLarge);
+	}
 }
 
 #FriendsButton {
@@ -34,10 +51,13 @@
 
 #Icon {
 	display: flex;
-	width: unset;
-	height: unset;
+	width: var(--icon-size);
+	height: var(--icon-size);
 }
 
+#IconBevel,
+#ProgressBar,
+#Status:not(#Percentage),
 #Text,
 #Queue {
 	display: none;

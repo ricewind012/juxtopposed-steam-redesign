@@ -1,0 +1,16 @@
+:root {
+	--appportrait_width: 363px;
+}
+
+// TODO: I don't think it'll be usable without #InDownloads
+#LibraryItemBox#InDownloads {
+	border-radius: var(--border-radius);
+	box-shadow: none;
+
+	width: var(--appportrait_width);
+	height: 106px;
+
+	#PortraitImage {
+		padding-top: 106px;
+	}
+}

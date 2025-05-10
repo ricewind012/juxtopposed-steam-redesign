@@ -13,11 +13,11 @@
 		--fg2: var(--fg-main);
 	}
 
-	@if $variant == "red" {
-		--bg: var(--accent-red);
-		--bg2: color-mix(in srgb, var(--accent-red) 50%, var(--bg-hover));
-		--fg: var(--fg-main);
-		--fg2: var(--fg-main);
+	@if $variant == "red" or $variant == "green" or $variant == "yellow" {
+		--bg: var(--accent-#{$variant});
+		--bg2: color-mix(in srgb, var(--accent-#{$variant}) 50%, var(--bg-hover));
+		--fg: var(--bg-main);
+		--fg2: var(--bg-main);
 	}
 	// TODO: tertiary/disabled
 }

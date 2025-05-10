@@ -1,0 +1,230 @@
+@use "shared/extends/controls";
+@use "shared/extends/style";
+
+:root {
+	--downloads_top-bar-height: calc(var(--spacing-sm) * 2 + 37px + 25px);
+}
+
+#DownloadItemName > #Name {
+	color: var(--fg-main);
+	font: var(--gpText-HeadingSmall);
+	padding-block: var(--spacing-sm) 0;
+	margin: 0;
+}
+
+#DownloadsPage {
+	background: none;
+	margin-top: calc(44px + 25px);
+
+	.DialogButton {
+		// Assume download as this doesn't have a distinguishing class name lol
+		--icon-name: var(--icon-download);
+
+		@include controls.button;
+
+		opacity: 1;
+
+		// Match appactionbutton
+		min-width: 44px;
+
+		svg {
+			@include style.icon("name");
+
+			// TODO(icons): currentColor
+			background-color: currentColor;
+
+			width: unset;
+			height: unset;
+		}
+
+		&#RemoveFromQueue {
+			--icon-name: var(--icon-delete);
+		}
+	}
+}
+
+#DownloadSectionActiveItem {
+	gap: var(--spacing-lg);
+
+	position: unset;
+}
+
+#ItemLists {
+	margin-left: 25px;
+	// 16px = scrollbar for now
+	margin-right: calc(25px - 16px);
+}
+
+#Progress {
+	color: var(--fg-dim);
+	font: var(--gpText-BodyMedium);
+	text-transform: uppercase;
+}
+
+#Section {
+	padding: 0;
+	margin: 0;
+}
+
+#SectionItem {
+	--icon-size: 24px;
+
+	background-color: var(--bg-main);
+	padding: var(--spacing-sm);
+	padding-left: calc(var(--icon-size) + var(--spacing-sm) * 2);
+	margin-bottom: var(--spacing-md);
+	border-radius: var(--border-radius-large);
+
+	height: unset;
+
+	#ActiveItemProgressBar #Label {
+		color: inherit;
+	}
+
+	#Buttons {
+		gap: var(--spacing-sm);
+	}
+
+	#ButtonWrapper {
+		margin: 0;
+
+		width: unset;
+		height: unset;
+
+		path {
+			display: none;
+		}
+	}
+
+	#DetailsAndType {
+		height: unset;
+	}
+
+	// TODO: fix for top later
+	#DragHandle {
+		@include style.icon("drag-handle");
+
+		opacity: 1;
+		margin: 0;
+
+		left: var(--spacing-sm);
+	}
+
+	#ProgressDetails {
+		all: unset;
+		color: var(--fg-dim);
+		font: var(--gpText-BodySmall);
+
+		#Denominator {
+			color: inherit;
+		}
+
+		#Icon,
+		#Label {
+			display: none;
+		}
+
+		#InProgress {
+			color: var(--fg-main);
+		}
+	}
+}
+
+#SectionItemButtons {
+	min-width: 250px;
+}
+
+#SectionItemCenter {
+	gap: var(--spacing-lg);
+
+	height: 100%;
+}
+
+#SectionItemContent {
+	gap: var(--spacing-lg);
+}
+
+#SectionItemColumn:not(#SectionItemStatus) {
+	align-self: start;
+}
+
+#SectionItemStatus {
+	all: unset;
+	color: var(--fg-dim);
+	font: var(--gpText-BodyMedium);
+
+	flex-grow: 1;
+
+	#Denominator {
+		color: inherit;
+	}
+
+	#InProgress {
+		color: var(--fg-main);
+	}
+}
+
+#SectionList {
+	padding: 0;
+	margin: 0;
+}
+
+#SectionTitle {
+	display: none;
+}
+
+#SettingsButton {
+	gap: var(--spacing-sm);
+
+	display: flex;
+	align-items: center;
+	top: 25px;
+	left: 25px;
+
+	// TODO(localization):
+	&::before {
+		content: "Downloads Manager";
+
+		font: var(--gpText-HeadingMedium);
+	}
+
+	.DialogButton {
+		--icon-name: var(--icon-settings);
+		--bg: color-mix(in srgb, var(--fg-dim) 10%, transparent);
+		--fg: var(--fg-dim);
+	}
+}
+
+// TODO: xxl
+#TopSection {
+	margin: 25px;
+	margin-bottom: 0;
+
+	height: unset;
+
+	.DialogButton {
+		--icon-name: var(--icon-pause);
+	}
+
+	#DetailsAndType {
+		position: fixed;
+		top: var(--downloads_top-bar-height);
+		right: 25px;
+
+		height: 44px;
+
+		#Throttle {
+			all: unset;
+			color: var(--fg-dim);
+			font: var(--gpText-BodyLarge);
+		}
+
+		#ThrottleValue {
+			color: var(--fg-main);
+		}
+	}
+
+	#SectionItemColumn {
+		padding: 0;
+	}
+}
