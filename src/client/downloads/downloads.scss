@@ -28,10 +28,7 @@
 		min-width: 44px;
 
 		svg {
-			@include style.icon("name");
-
-			// TODO(icons): currentColor
-			background-color: currentColor;
+			@include style.icon;
 
 			width: unset;
 			height: unset;
@@ -100,7 +97,6 @@
 		height: unset;
 	}
 
-	// TODO: fix for top later
 	#DragHandle {
 		@include style.icon("drag-handle");
 

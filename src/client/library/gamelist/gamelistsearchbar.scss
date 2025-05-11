@@ -11,6 +11,8 @@
 #AdvancedSearchButton {
 	@include gamelist.icon-button("filter", "#ContainerHide");
 
+	color: var(--fg-dim);
+
 	min-width: unset;
 
 	// Fix some bullshit CSS behavior
@@ -103,19 +105,13 @@
 		// whatever reason
 		--icon-size: 15px;
 
-		@include style.icon("close");
+		@include style.icon($name: "close", $remove: true);
 
 		opacity: 1;
-		background-color: var(--fg-dim);
 		margin-left: 6px;
 
 		&:hover {
-			background-color: var(--fg-main);
-		}
-
-		// TODO: look into style.icon() svg children handling
-		* {
-			display: none;
+			color: var(--fg-main);
 		}
 	}
 }
@@ -134,9 +130,9 @@
 }
 
 #SearchFilterInputClear {
-	--fg-dim: var(--color-secondary);
+	@include style.icon($name: "close", $remove: true);
 
-	@include style.icon("close");
+	color: var(--color-secondary);
 
 	top: calc(50% - var(--icon-size) / 2) !important;
 	right: var(--spacing-md);
@@ -144,10 +140,6 @@
 	height: var(--icon-size);
 
 	&:hover {
-		--fg-dim: var(--color-primary);
-	}
-
-	svg {
-		display: none;
+		color: var(--color-primary);
 	}
 }

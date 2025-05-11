@@ -7,6 +7,7 @@
 
 #AchievementContainer {
 	background-color: var(--bg-main);
+	color: var(--fg-dim);
 	border-radius: var(--border-radius);
 	gap: var(--spacing-lg);
 	padding: var(--spacing-md);
@@ -55,7 +56,7 @@
 
 		@include style.icon("clock");
 
-		background-color: color-mix(in srgb, var(--fg-dim) 50%, transparent);
+		color: color-mix(in srgb, var(--fg-dim) 50%, transparent);
 
 		display: block;
 	}

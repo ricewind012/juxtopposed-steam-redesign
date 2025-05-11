@@ -32,9 +32,9 @@
 }
 
 #CheckboxWithImage {
-	// TODO: this looks like ass lol
 	@include gamelist.icon-button("name", "#Active");
 
+	color: var(--fg-dim);
 	margin: 0;
 
 	width: unset;
@@ -65,12 +65,6 @@
 
 	width: unset;
 	height: unset;
-
-	// TODO: include in mixin ?
-	&::after {
-		width: var(--icon-size);
-		height: var(--icon-size);
-	}
 }
 
 #ViewFiltersBar {

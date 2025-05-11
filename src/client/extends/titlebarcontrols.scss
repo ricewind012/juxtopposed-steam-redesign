@@ -11,10 +11,6 @@
 	}
 
 	svg {
-		@include style.icon("name");
-
-		& > * {
-			display: none;
-		}
+		@include style.icon($remove: true);
 	}
 }

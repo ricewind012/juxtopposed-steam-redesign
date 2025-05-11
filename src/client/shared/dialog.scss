@@ -6,13 +6,12 @@
 }
 
 .title-area-icon {
-	// TODO: lol this looks like ass
-	@include style.icon("name");
+	@include style.icon;
 
 	--icon-size: var(--dialog_window-control-size);
 
 	&:hover {
-		background-color: var(--fg-main);
+		color: var(--fg-main);
 	}
 
 	&.closeButton {
@@ -38,5 +37,6 @@
 }
 
 .title-bar-actions {
+	color: var(--fg-dim);
 	gap: var(--dialog_window-control-spacing);
 }

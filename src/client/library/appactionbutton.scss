@@ -18,17 +18,10 @@
 	svg {
 		--icon-size: 24px;
 
-		@include style.icon("name");
+		@include style.icon($remove: true);
 
-		// TODO(icons): currentColor
-		background-color: currentColor;
 		color: inherit;
 		margin-right: var(--spacing-sm);
-	}
-
-	// TODO(icons):
-	path {
-		display: none;
 	}
 }
 

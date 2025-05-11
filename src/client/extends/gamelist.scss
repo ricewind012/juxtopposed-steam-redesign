@@ -25,11 +25,7 @@
 	}
 
 	svg {
-		@include style.icon($icon-name);
-
-		* {
-			display: none;
-		}
+		@include style.icon($name: $icon-name, $remove: true);
 	}
 }
 

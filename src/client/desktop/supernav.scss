@@ -3,7 +3,7 @@
 #Arrow {
 	--size: 24px;
 
-	@include style.icon("keyboard-arrow");
+	@include style.icon($name: "keyboard-arrow", $remove: true);
 
 	padding: 0;
 
@@ -17,10 +17,6 @@
 
 	&:hover {
 		background-color: var(--fg-main);
-	}
-
-	path {
-		display: none;
 	}
 }
 

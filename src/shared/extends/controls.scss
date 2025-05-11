@@ -81,6 +81,8 @@
 
 		// TODO: 15px? Or just @mixin
 		right: 10px;
+		width: var(--icon-size);
+		height: var(--icon-size);
 
 		background-color: currentColor;
 		mask: var(--icon-arrow);
