@@ -1,7 +1,7 @@
 @use "shared/extends/controls";
 
 #DisplayControls {
-	padding-block: 10px 0;
+	padding-block: var(--spacing-sm) 0;
 }
 
 #FilterInput {

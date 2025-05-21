@@ -11,8 +11,8 @@
 		background-color: var(--bg-main-50);
 		backdrop-filter: blur(20px);
 		border-radius: var(--border-radius-large);
-		padding: 15px;
-		margin-bottom: 20px;
+		padding: var(--spacing-md);
+		margin-bottom: var(--spacing-lg);
 	}
 }
 
@@ -50,7 +50,7 @@
 .profile_ban_status {
 	color: var(--accent-red);
 	font: var(--gpText-BodyMedium);
-	margin-top: 10px;
+	margin-top: var(--spacing-sm);
 	margin-bottom: 0;
 }
 
@@ -77,7 +77,7 @@
 	margin-bottom: 0;
 
 	a {
-		padding: 10px;
+		padding: var(--spacing-sm);
 
 		display: flex;
 
@@ -103,17 +103,15 @@
 }
 
 .profile_count_link_preview_ctn {
-	--spacing: 10px;
-
 	background-color: var(--bg-main);
 	border-radius: var(--border-radius);
 
 	.profile_count_link {
-		padding: var(--spacing);
+		padding: var(--spacing-sm);
 		padding-bottom: 0;
 
 		a {
-			margin: calc(var(--spacing) * -1);
+			margin: calc(var(--spacing-sm) * -1);
 			margin-bottom: 0;
 		}
 	}
@@ -141,16 +139,14 @@
 	background-color: var(--bg-main-50);
 
 	.profile_count_link {
-		--spacing: 15px;
-
 		background-color: transparent;
-		margin: calc(var(--spacing) * -1);
+		margin: calc(var(--spacing-md) * -1);
 		margin-bottom: 0;
 
 		overflow: visible;
 
 		a {
-			padding: var(--spacing);
+			padding: var(--spacing-md);
 
 			display: block;
 		}
@@ -208,7 +204,7 @@
 .friendBlock {
 	background-color: var(--bg-main);
 	border-radius: var(--border-radius);
-	padding: 10px;
+	padding: var(--spacing-sm);
 	margin: 0;
 
 	display: flex;

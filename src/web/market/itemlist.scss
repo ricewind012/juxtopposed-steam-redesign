@@ -1,4 +1,6 @@
 @use "shared/extends/controls";
+@use "shared/extends/style";
+@use "web/extends/layout/sidebar";
 
 :root {
 	--market-row-spacing-outer: 18px;
@@ -78,7 +80,7 @@
 
 .market_listing_item_name_block {
 	padding-left: var(--market-row-spacing-inner);
-	margin-top: 10px;
+	margin-top: var(--spacing-sm);
 }
 
 .market_listing_item_name {
@@ -120,22 +122,19 @@
 }
 
 #sideBar {
-	--sidebar-spacing: 15px;
-	--icon-size: 20px;
-
-	margin-top: calc(var(--sidebar-spacing) * -1);
+	margin-top: calc(var(--spacing-md) * -1);
 
 	position: absolute;
 
 	& > div {
-		margin-top: var(--sidebar-spacing);
+		margin-top: var(--spacing-md);
 	}
 }
 
 .market_search_sidebar_contents {
 	background-color: var(--bg-main);
 	border-radius: var(--border-radius-large);
-	padding: var(--sidebar-spacing);
+	padding: var(--spacing-md);
 
 	width: var(--gpNavWidth);
 }
@@ -152,7 +151,7 @@
 		height: 1px;
 
 		background-color: var(--bg-hl);
-		margin: var(--sidebar-spacing) 0;
+		margin: var(--spacing-md) 0;
 	}
 }
 
@@ -161,7 +160,7 @@
 }
 
 .market_search_box_container {
-	margin-top: var(--sidebar-spacing);
+	margin-top: var(--spacing-md);
 }
 
 #findItemsSearchBox {
@@ -169,13 +168,10 @@
 }
 
 #findItemsSearchSubmit {
-	background: none var(--color-secondary);
-	mask: var(--icon-search);
+	@include style.icon("search");
 
-	width: var(--icon-size);
-	height: var(--icon-size);
 	top: 0;
-	right: var(--sidebar-spacing);
+	right: var(--spacing-md);
 }
 
 .game_button,
@@ -203,18 +199,13 @@
 .market_show_more_games > a,
 .game_button_contents,
 .market_search_advanced_button {
-	background: none;
+	@include sidebar.item(".hack");
+
 	font: var(--gpText-BodySmall);
 	color: var(--fg-main);
 	border: none;
-	border-radius: var(--border-radius);
-	padding: 8px 13px;
 
 	width: 100%;
-
-	&:hover {
-		background-color: var(--bg-hover);
-	}
 }
 
 .market_show_more_games > a {

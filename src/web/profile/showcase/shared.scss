@@ -4,7 +4,7 @@
 
 .item_count_stat,
 .showcase_stat {
-	margin-left: 20px;
+	margin-left: var(--spacing-lg);
 
 	.value {
 		font: var(--gpText-HeadingLarge);
@@ -21,7 +21,7 @@
 .showcase_content_bg {
 	background-color: var(--bg-main-50);
 	border-radius: 0;
-	padding: 15px;
+	padding: var(--spacing-md);
 }
 
 .showcase_item_detail_title {

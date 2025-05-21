@@ -23,7 +23,7 @@
 	select {
 		@include controls.dropdown;
 
-		line-height: calc(44px - 5px * 2);
+		line-height: calc(44px - var(--spacing-xs) * 2);
 
 		// TODO: can't use ::after here... idk man
 		&:hover {
@@ -99,7 +99,7 @@
 	);
 	font: var(--gpText-BodyLarge);
 	color: var(--fg-main);
-	padding: 10px;
+	padding: var(--spacing-sm);
 	margin: 0;
 }
 
@@ -114,7 +114,7 @@
 }
 
 .profile_showcase_selection_options_ctn {
-	gap: 10px;
+	gap: var(--spacing-sm);
 
 	max-width: unset;
 }

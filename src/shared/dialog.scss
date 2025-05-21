@@ -1,9 +1,15 @@
 @use "shared/extends/controls";
 
-// TODO
-/*
+.DialogButton {
+	@include controls.button;
+
+	&.Primary {
+		@include controls.button("primary");
+	}
+}
+
 .DialogCheckbox {
-	@include controls.checkbox(".Active", ".Disabled");
+	@include controls.toggle(".Active", ".Disabled");
 
 	box-shadow: none;
 
@@ -11,11 +17,26 @@
 		display: none;
 	}
 }
-*/
+
+.DialogDropDown {
+	@include controls.dropdown;
+
+	color: inherit;
+}
+
+.DialogDropDown_Arrow {
+	display: none;
+}
+
+.DialogDropDown_CurrentDisplay {
+	padding: 0;
+}
 
 .DialogInput {
 	@include controls.text-input;
 
+	color: var(--fg-main);
+	font: inherit;
 	box-shadow: none;
 }
 
@@ -23,6 +44,42 @@
 	color: var(--fg-dim);
 	font: var(--gpText-BodySmall);
 	text-transform: none;
-	// var(--spacing-xs)
-	margin-bottom: 5px;
+	margin-bottom: var(--spacing-xs);
+}
+
+.DialogToggle_Description {
+	color: var(--fg-dim);
+	font: inherit;
+	padding-top: var(--spacing-sm);
+}
+
+.DialogToggle_Label {
+	color: inherit;
+	font: var(--gpText-BodySmall);
+}
+
+.DialogToggleField {
+	color: inherit;
+	font: inherit;
+	padding: 0;
+	margin: 0;
+}
+
+.DialogToggleField_Control {
+	background-color: transparent;
+	font-size: 0;
+}
+
+.DialogToggleField_Option {
+	&.Off {
+		display: none;
+	}
+
+	&.On {
+		@include controls.toggle(".Active", ".hack");
+
+		.Disabled & {
+			background: var(--bg-hover);
+		}
+	}
 }

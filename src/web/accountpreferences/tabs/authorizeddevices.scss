@@ -67,7 +67,7 @@
 	margin: 0;
 
 	.DialogButton.DialogButton {
-		@include controls.button("red");
+		@include controls.button-colors("red");
 
 		border: none;
 

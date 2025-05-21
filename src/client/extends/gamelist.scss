@@ -34,12 +34,3 @@
 	gap: 7px;
 	padding: var(--spacing-sm);
 }
-
-// TODO: Used in market, don't know where to put.
-@mixin search-icon {
-	background-color: var(--color-secondary);
-	mask: var(--icon-search);
-
-	width: var(--icon-size);
-	height: var(--icon-size);
-}

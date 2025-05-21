@@ -4,101 +4,7 @@ body:is(.account, .account_preferences) {
 	background: #11171e;
 }
 
-// TODO: store.css
-h2 {
-	color: var(--fg-main);
-	font: var(--gpText-HeadingMedium);
-	letter-spacing: 0;
-	padding: 0;
-	margin: 0;
-
-	& ~ p {
-		color: var(--fg-dim);
-	}
-}
-
-h3 {
-	color: var(--fg-main);
-	font: var(--gpText-HeadingSmall);
-}
-
-.breadcrumbs {
-	display: none;
-}
-
-.btn_medium.btn_medium {
-	@include controls.button;
-
-	& > span {
-		background: none;
-		font: inherit;
-		text-align: center;
-		padding: 0;
-	}
-}
-
-.btn_green_white_innerfade.btn_green_white_innerfade {
-	@include controls.button-colors("primary");
-}
-
-input[type="checkbox"] {
-	@include controls.checkbox(":checked", ":disabled");
-}
-
-.dselect_container {
-	background-color: transparent;
-
-	.trigger {
-		@include controls.dropdown;
-
-		font: var(--gpText-BodyLarge);
-	}
-}
-
-.page_content {
-	display: flex;
-	// --spacing-md & content width
-	width: calc(var(--sidebar-width) + 15px + 1247px);
-}
-
-.pageheader {
-	color: var(--fg-main);
-	font: var(--gpText-HeadingLarge);
-	letter-spacing: 0;
-	text-shadow: none;
-	text-transform: none;
-	padding: 0;
-}
-
-.page_header_ctn {
-	background: none;
-	padding: 0;
-	margin-top: var(--top-content-margin);
-	margin-bottom: 30px;
-
-	.page_content {
-		flex-direction: column;
-	}
-}
-
-.tooltip {
-	@include controls.tooltip-icon;
-
-	display: inline-block;
-	vertical-align: sub;
-
-	img {
-		display: none;
-	}
-}
-
 .two_column {
-	--spacing-xs: 5px;
-	--spacing-sm: 10px;
-	--spacing-md: 15px;
-	--spacing-lg: 20px;
-	--spacing-xl: 30px;
-
 	font: var(--gpText-BodyLarge);
 
 	&.left {
@@ -255,7 +161,7 @@ input[type="checkbox"] {
 		background: transparent;
 		border: 1px solid var(--bg-hover);
 		border-radius: var(--border-radius);
-		padding: 10px 15px;
+		padding: var(--spacing-sm) var(--spacing-md);
 
 		font: inherit;
 

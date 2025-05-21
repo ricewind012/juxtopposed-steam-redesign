@@ -68,7 +68,7 @@
 #global_actions {
 	color: var(--fg-main);
 	font: var(--gpText-BodyMedium);
-	gap: 15px;
+	gap: var(--spacing-md);
 
 	display: flex;
 	flex-direction: row-reverse;

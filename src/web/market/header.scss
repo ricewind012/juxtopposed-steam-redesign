@@ -1,3 +1,5 @@
+@use "shared/extends/controls";
+
 .market_header_bg {
 	background-color: transparent;
 
@@ -57,9 +59,7 @@
 		}
 
 		a {
-			background-color: var(--bg-hl);
-			padding: 17px 56px;
-			border-radius: var(--border-radius);
+			@include controls.button;
 
 			white-space: nowrap;
 		}
@@ -79,18 +79,11 @@
 }
 
 .item_market_action_button_contents {
-	background: none var(--color-secondary);
-	color: var(--fg-main);
+	@include controls.button("primary");
+
 	font: var(--gpText-BodyLarge);
-	line-height: inherit;
-	border-radius: var(--border-radius);
 	box-shadow: var(--button-shadow);
-	padding: 17px 56px;
 
 	float: unset;
 	height: unset;
-
-	&:hover {
-		background-color: var(--color-primary);
-	}
 }

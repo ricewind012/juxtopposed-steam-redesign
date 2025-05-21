@@ -39,11 +39,10 @@
 	}
 
 	#Chevron {
-		--fg-dim: var(--fg-main);
 		--icon-name: var(--icon-arrow);
-		--icon-size: 20px;
 
-		margin-right: 4px;
+		color: var(--fg-main);
+		margin-right: var(--spacing-xs);
 
 		order: 1;
 	}

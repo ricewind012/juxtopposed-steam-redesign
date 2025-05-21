@@ -77,10 +77,12 @@
 		&::after {
 			content: "";
 
+			@include style.icon("search");
+
 			position: absolute;
 			right: var(--spacing-md);
 
-			@include gamelist.search-icon;
+			color: var(--color-secondary);
 		}
 	}
 }
@@ -136,8 +138,6 @@
 
 	top: calc(50% - var(--icon-size) / 2) !important;
 	right: var(--spacing-md);
-	width: var(--icon-size);
-	height: var(--icon-size);
 
 	&:hover {
 		color: var(--color-primary);

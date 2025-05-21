@@ -9,7 +9,7 @@
 }
 
 .showcase_slot_row {
-	gap: 10px;
+	gap: var(--spacing-sm);
 	margin: 0;
 
 	display: flex;

@@ -1,4 +1,5 @@
 @use "shared/extends/controls";
+@use "shared/extends/style";
 @use "web/extends/layout";
 
 .ProfilePrivacyCheckbox {
@@ -33,14 +34,11 @@
 }
 
 .ProfilePrivacyDropDown_Arrow {
-	--size: 24px;
+	--icon-size: 24px;
 
-	background-color: currentColor;
-	mask-image: var(--icon-arrow);
+	@include style.icon("arrow");
 
 	vertical-align: sub;
-	width: var(--size);
-	height: var(--size);
 }
 
 .ProfilePrivacyHeader {

@@ -1,0 +1,88 @@
+@use "shared/extends/controls";
+
+h2 {
+	color: var(--fg-main);
+	font: var(--gpText-HeadingMedium);
+	letter-spacing: 0;
+	padding: 0;
+	margin: 0;
+
+	& ~ p {
+		color: var(--fg-dim);
+	}
+}
+
+h3 {
+	color: var(--fg-main);
+	font: var(--gpText-HeadingSmall);
+}
+
+.breadcrumbs {
+	display: none;
+}
+
+.btn_medium.btn_medium {
+	@include controls.button;
+
+	& > span {
+		background: none;
+		font: inherit;
+		text-align: center;
+		padding: 0;
+	}
+}
+
+.btn_green_white_innerfade.btn_green_white_innerfade {
+	@include controls.button-colors("primary");
+}
+
+input[type="checkbox"] {
+	@include controls.checkbox(":checked", ":disabled");
+}
+
+.dselect_container {
+	background-color: transparent;
+
+	.trigger {
+		@include controls.dropdown;
+
+		font: var(--gpText-BodyLarge);
+	}
+}
+
+.page_content {
+	display: flex;
+	// content width
+	width: calc(var(--sidebar-width) + var(--spacing-md) + 1247px);
+}
+
+.pageheader {
+	color: var(--fg-main);
+	font: var(--gpText-HeadingLarge);
+	letter-spacing: 0;
+	text-shadow: none;
+	text-transform: none;
+	padding: 0;
+}
+
+.page_header_ctn {
+	background: none;
+	padding: 0;
+	margin-top: var(--top-content-margin);
+	margin-bottom: 30px;
+
+	.page_content {
+		flex-direction: column;
+	}
+}
+
+.tooltip {
+	@include controls.tooltip-icon;
+
+	display: inline-block;
+	vertical-align: sub;
+
+	img {
+		display: none;
+	}
+}

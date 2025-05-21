@@ -1,3 +1,5 @@
+@use "shared/extends/controls";
+
 #myMarketTabs,
 .market_large_tab_well {
 	padding: 0;
@@ -12,29 +14,25 @@
 }
 
 .market_tab_well_tabs {
-	background-color: var(--bg-main);
+	@include controls.tabs-container;
+
 	font-size: 0;
 	border: none;
-	border-radius: var(--border-radius-large);
-	/* 5 / 2 for whitespace */
-	gap: 2.5px;
-	padding: 8px;
+	// Divide by 2 for whitespace
+	gap: calc(var(--spacing-xs) / 2);
 
 	display: flex;
 	position: unset;
 }
 
 .market_tab_well_tab_contents {
-	color: var(--fg-main);
-	font: var(--gpText-BodyLarge);
-	border-radius: var(--border-radius);
-	padding: 7px 20px;
+	@include controls.tab(".hack");
 
 	min-width: unset;
 
-	&:hover,
 	.market_tab_well_tab_active > & {
-		background: none var(--bg-hl);
+		background-color: var(--bg-hl);
+		color: var(--fg-main);
 	}
 }
 

@@ -1,3 +1,5 @@
+@use "shared/extends/style";
+
 @mixin button-colors($variant) {
 	@if $variant == "primary" {
 		--bg: var(--color-secondary);
@@ -44,21 +46,19 @@
 }
 
 @mixin checkbox($checked-selector, $disabled-selector) {
-	--size: 24px;
+	--icon-size: 24px;
+
+	@include style.icon("checkbox");
 
 	appearance: none;
-	background: var(--fg-dim);
-	mask: var(--icon-checkbox);
-
-	width: var(--size);
-	height: var(--size);
+	color: var(--fg-dim);
 
 	&:hover {
 		background: var(--fg-main);
 	}
 
 	&#{$checked-selector} {
-		mask: var(--icon-checkbox-checked);
+		--icon-name: var(--icon-checkbox-checked);
 	}
 
 	&#{$disabled-selector} {
@@ -70,8 +70,8 @@
 	background-color: var(--bg-hl);
 	border-radius: var(--border-radius);
 	// TODO: not actually 43px height
-	padding: 5px 15px;
-	gap: 10px;
+	padding: var(--spacing-xs) var(--spacing-md);
+	gap: var(--spacing-sm);
 
 	display: flex;
 	position: relative;
@@ -79,15 +79,9 @@
 	&::after {
 		content: "";
 
-		// TODO: 15px? Or just @mixin
-		right: 10px;
-		width: var(--icon-size);
-		height: var(--icon-size);
+		@include style.icon("arrow");
 
-		background-color: currentColor;
-		mask: var(--icon-arrow);
-		mask-position: center;
-		mask-repeat: no-repeat;
+		right: var(--spacing-md);
 	}
 }
 
@@ -208,12 +202,7 @@
 }
 
 @mixin tooltip-icon {
-	background-color: var(--fg-dim);
-	mask-image: var(--icon-info);
-	mask-position: center;
-
-	width: var(--icon-size);
-	height: var(--icon-size);
+	@include style.icon("info");
 
 	&:hover {
 		background-color: var(--fg-main);

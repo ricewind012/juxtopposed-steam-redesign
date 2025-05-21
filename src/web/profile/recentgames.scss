@@ -1,4 +1,5 @@
 @use "shared/extends/controls";
+@use "shared/extends/style";
 
 .achievement_icons {
 	gap: 8px;
@@ -100,31 +101,30 @@
 	&::after {
 		content: "";
 
-		background-color: color-mix(in srgb, var(--fg-dim) 50%, transparent);
-		mask: var(--icon);
+		@include style.icon;
+
+		color: color-mix(in srgb, var(--fg-dim) 50%, transparent);
 
 		display: block;
 		position: absolute;
-		left: calc(var(--icon-size) * -1 - 5px);
-		width: var(--icon-size);
-		height: var(--icon-size);
+		left: calc(var(--icon-size) * -1 - var(--spacing-xs));
 	}
 
 	&::before {
-		--icon: var(--icon-calendar);
+		--icon-name: var(--icon-calendar);
 		top: -1px;
 	}
 
 	&::after {
-		--icon: var(--icon-clock);
+		--icon-name: var(--icon-clock);
 		top: 20px;
 	}
 }
 
 .game_info_stats {
 	background-color: var(--bg-main-50);
-	padding: 15px;
-	margin-top: 10px;
+	padding: var(--spacing-md);
+	margin-top: var(--spacing-sm);
 }
 
 .game_name {
@@ -143,5 +143,5 @@
 }
 
 .recent_game_content {
-	padding: 15px;
+	padding: var(--spacing-md);
 }

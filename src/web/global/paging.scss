@@ -1,7 +1,7 @@
 .market_paging {
 	line-height: unset;
-	gap: 5px;
-	padding: 5px;
+	gap: var(--spacing-xs);
+	padding: var(--spacing-xs);
 	padding-right: 0;
 	margin: 0;
 	margin-top: var(--market-row-spacing-outer);
@@ -47,7 +47,7 @@
 
 .commentthread_pagelinks,
 #searchResults_links {
-	gap: 5px;
+	gap: var(--spacing-xs);
 	margin: 0;
 
 	display: flex;

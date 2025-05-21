@@ -1,3 +1,5 @@
+@use "shared/extends/style";
+
 .btn_profile_action {
 	border-radius: var(--border-radius);
 	padding: 0;
@@ -11,8 +13,8 @@
 }
 
 .favorite_badge {
-	gap: 15px;
-	padding: 10px 15px;
+	gap: var(--spacing-md);
+	padding: var(--spacing-sm) var(--spacing-md);
 
 	.name {
 		font: var(--gpText-BodyMedium);
@@ -47,15 +49,12 @@
 	}
 
 	.namehistory_link {
-		--size: 24px;
+		--icon-size: 24px;
 
-		background-color: var(--fg-main);
-		mask: var(--icon-arrow);
+		@include style.icon("arrow");
 
 		display: inline-block;
 		vertical-align: middle;
-		width: var(--size);
-		height: var(--size);
 
 		img {
 			display: none;
@@ -94,7 +93,7 @@
 }
 
 .profile_header_badge_instructions {
-	padding: 10px 15px;
+	padding: var(--spacing-sm) var(--spacing-md);
 }
 
 .profile_header_badgeinfo {

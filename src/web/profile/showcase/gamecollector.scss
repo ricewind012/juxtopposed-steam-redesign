@@ -9,7 +9,7 @@
 }
 
 .showcase_gamecollector_games {
-	gap: 10px;
+	gap: var(--spacing-sm);
 
 	display: flex;
 	flex-wrap: wrap;

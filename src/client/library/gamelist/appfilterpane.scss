@@ -4,13 +4,7 @@
 	margin: 0;
 
 	.DialogButton {
-		@include controls.button;
-
 		font: var(--gpText-BodyMedium);
-
-		&.Primary {
-			@include controls.button-colors("primary");
-		}
 	}
 }
 
@@ -29,30 +23,10 @@
 	.DialogCheckbox {
 		display: none;
 	}
-
-	// TODO: maybe stop using HeadingSmall globally & color
-	.DialogToggle_Label {
-		color: inherit;
-		font: var(--gpText-BodySmall);
-	}
 }
 
 #CompatDropDown {
 	padding-block: var(--spacing-xs) 0;
-
-	.DialogDropDown {
-		@include controls.dropdown;
-
-		color: inherit;
-	}
-
-	.DialogDropDown_Arrow {
-		display: none;
-	}
-
-	.DialogDropDown_CurrentDisplay {
-		padding: 0;
-	}
 }
 
 #Container {
