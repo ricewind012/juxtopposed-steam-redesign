@@ -6,6 +6,10 @@
 	&.Primary {
 		@include controls.button("primary");
 	}
+
+	&::before {
+		display: none;
+	}
 }
 
 .DialogCheckbox {

@@ -1,0 +1,90 @@
+@use "shared/extends/controls";
+@use "shared/extends/style";
+
+@mixin -icon-button($name) {
+	--size: 43px;
+
+	@include controls.button;
+
+	font-size: 0;
+
+	min-width: var(--size);
+	min-height: var(--size);
+
+	&:not(:hover) {
+		color: var(--fg-dim);
+	}
+
+	&::before {
+		content: "";
+
+		display: block;
+
+		@include style.icon($name);
+	}
+}
+
+#AddRemoveLinks {
+	font-size: 0;
+	// There is a separator in a text form, so divide by 2
+	gap: var(--spacing-xs);
+
+	#AddLineItem {
+		@include -icon-button("plus");
+	}
+
+	#RemoveLineItem {
+		@include -icon-button("delete");
+	}
+}
+
+#HeaderImg {
+	border-radius: var(--border-radius);
+}
+
+#InnerLineItemCtn {
+	// TODO: xxl
+	gap: 25px;
+}
+
+#LineItemsCtn {
+	gap: var(--spacing-sm);
+}
+
+#LineItemDetailsCtn {
+	gap: var(--spacing-sm);
+
+	display: flex;
+}
+
+#LineItemDetailsRow {
+	margin: 0;
+}
+
+#LineItemDetailsRowTop {
+	flex: 1;
+}
+
+#LineItemRightCol {
+	flex-shrink: 0;
+}
+
+#LineItemSpaceBetween {
+	gap: var(--spacing-sm);
+
+	// OS
+	&:nth-child(3) {
+		margin-right: auto;
+	}
+}
+
+#LineItemTitle {
+	color: var(--fg-main);
+	font: var(--gpText-HeadingMedium);
+}
+
+#LineItemWrapper {
+	background-color: var(--bg-main);
+	border-radius: var(--border-radius-large);
+	padding: var(--spacing-md);
+}

@@ -1,0 +1,12 @@
+@use "shared/extends/controls";
+
+#LinkButton {
+	@include controls.button;
+
+	font: inherit;
+	text-decoration: none;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}

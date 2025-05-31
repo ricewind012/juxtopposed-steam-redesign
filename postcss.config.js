@@ -44,7 +44,7 @@ export default {
 			// TODO: use "loadPaths" when @csstools/postcss-sass switches to
 			// normal sass API.
 			includePaths: ["src"],
-			silenceDeprecations: ["legacy-js-api"],
+			silenceDeprecations: ["legacy-js-api", "mixed-decls"],
 		}),
 		postcssFunctions({
 			functions: {

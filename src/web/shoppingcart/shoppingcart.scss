@@ -1,0 +1,78 @@
+:root {
+	--shoppingcart_left-col-size: 1090px;
+	--shoppingcart_right-col-size: 445px;
+}
+
+#BackgroundImage {
+	opacity: 1;
+	background: linear-gradient(77.55deg, #14344b 12.47%, #0e141b 96.75%);
+}
+
+#CartNoteText {
+	color: var(--fg-main);
+}
+
+#CartRightColStickyCtn {
+	border-radius: var(--border-radius-large);
+
+	max-width: var(--shoppingcart_right-col-size);
+}
+
+#CartSummaryCtn {
+	background-color: var(--bg-main-50);
+	padding: var(--spacing-lg);
+
+	.DialogButton {
+		margin: 0;
+	}
+}
+
+#LicenseContextCtn {
+	background: var(--bg-main-50);
+	padding: var(--spacing-lg);
+
+	img {
+		margin-bottom: var(--spacing-lg);
+	}
+}
+
+#LicenseLink {
+	color: var(--fg-dim);
+	font: var(--gpText-BodySmall);
+}
+
+#LicenseTitle {
+	color: var(--fg-main);
+	font: var(--gpText-BodyLarge);
+	margin-bottom: var(--spacing-sm);
+}
+
+#ShoppingCartBreadcrumbs {
+	display: none;
+}
+
+#ShoppingCartCtn {
+	// TODO: xxl
+	gap: 25px;
+}
+
+#ShoppingCartHeader {
+	color: var(--fg-main);
+	font: var(--gpText-HeadingLarge);
+	margin-block: var(--top-content-margin) 46px;
+}
+
+#ShoppingCartLeftCol {
+	gap: var(--spacing-sm);
+
+	max-width: var(--shoppingcart_left-col-size);
+}
+
+#ShoppingCartPage {
+	padding: 0;
+
+	max-width: calc(
+		var(--shoppingcart_right-col-size) + 25px +
+			var(--shoppingcart_left-col-size)
+	);
+}

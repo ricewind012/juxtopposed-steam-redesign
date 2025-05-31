@@ -1,0 +1,17 @@
+#StoreOriginalPrice {
+	color: var(--fg-dim);
+	font: var(--gpText-HeadingSmall);
+}
+
+#StoreSaleDiscountBox {
+	display: none;
+}
+
+#StoreSalePriceBox {
+	font: var(--gpText-HeadingSmall);
+	padding: 0;
+
+	#StoreSaleDiscountedPriceCtn & {
+		color: var(--accent-green);
+	}
+}
