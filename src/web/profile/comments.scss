@@ -1,3 +1,5 @@
+@use "shared/extends/controls";
+
 .commentthread_allcommentslink {
 	font: var(--gpText-BodyMedium);
 }
@@ -93,8 +95,39 @@
 	margin: 0;
 }
 
+.commentthread_header_and_count {
+	background-image: none;
+	padding: 0;
+}
+
 .commentthread_paging.has_view_all_link {
 	display: none;
+}
+
+.commentthread_subscribe_check {
+	display: none;
+}
+
+.commentthread_subscribe_checkbox {
+	@include controls.checkbox(".hack", ".hack2");
+
+	border: none;
+}
+
+.commentthread_subscribe_ctn {
+	font: inherit;
+
+	&.checked .commentthread_subscribe_checkbox {
+		--icon-name: var(--icon-checkbox-checked);
+	}
+}
+
+.commentthread_subscribe_hint {
+	font: inherit;
+}
+
+.commentthread_subscribe_hint_q {
+	color: var(--color-primary);
 }
 
 .commentthread_textarea {

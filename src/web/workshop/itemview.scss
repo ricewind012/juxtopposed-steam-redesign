@@ -1,0 +1,341 @@
+@use "shared/extends/controls";
+@use "shared/extends/style";
+
+@mixin -icon($name) {
+	min-width: 44px;
+
+	&::before {
+		content: "";
+
+		@include style.icon($name);
+	}
+}
+
+@mixin -section {
+	background: var(--bg-main-50);
+	border-radius: var(--border-radius-large);
+	padding: 25px;
+}
+
+@mixin -section-header {
+	color: var(--fg-dim);
+	font: var(--gpText-HeadingSmall);
+	margin-block-end: 30px;
+}
+
+@mixin -tag {
+	background: var(--bg-hl);
+	color: var(--fg-dim);
+	font: var(--gpText-BodySmall);
+	border-radius: var(--border-radius);
+	padding: 8px 13px;
+
+	&:hover {
+		background-color: var(--bg-hover);
+		color: var(--fg-main);
+	}
+}
+
+#sharedfiles_content_ctn {
+	.commentthread_header {
+		@include -section-header;
+
+		// TODO: move to comments.scss if I see this again
+		background-color: transparent;
+		padding: 25px;
+		margin: -25px;
+		margin-block-end: 30px;
+	}
+
+	#rightContents {
+		background-color: transparent;
+		padding: 0;
+		margin-left: var(--spacing-sm);
+
+		.panel {
+			background-color: var(--bg-main);
+			border-radius: var(--border-radius-large);
+			padding: var(--spacing-md);
+			margin-bottom: var(--spacing-sm);
+
+			display: block;
+
+			.hr {
+				display: none;
+			}
+
+			.title {
+				color: var(--fg-main);
+				font: var(--gpText-BodyLarge);
+				text-transform: none;
+				margin-top: 0;
+			}
+		}
+	}
+}
+
+.detailBox:not(.plain) {
+	@include -section;
+
+	margin-bottom: var(--spacing-md);
+}
+
+.game_area_purchase_game {
+	@include -section;
+
+	border: none;
+
+	align-items: center;
+	justify-content: space-between;
+
+	br {
+		display: none;
+	}
+
+	& > h1 {
+		color: var(--fg-main);
+		font: var(--gpText-HeadingMedium);
+
+		display: flex;
+		flex-direction: column-reverse;
+		width: unset;
+
+		span {
+			color: var(--fg-dim);
+			font: var(--gpText-BodyMedium);
+		}
+	}
+
+	.subscribeIcon {
+		display: none;
+	}
+
+	.subscribeOption.selected {
+		line-height: inherit;
+	}
+}
+
+.game_area_purchase_margin {
+	margin-bottom: var(--spacing-sm);
+}
+
+.just_added_text {
+	float: unset;
+	width: unset;
+}
+
+.just_added_to_list {
+	@include -section;
+
+	background: color-mix(in srgb, var(--color-primary) 50%, transparent);
+	color: var(--fg-main);
+	font: var(--gpText-BodyLarge);
+	margin-block: 0 var(--spacing-sm);
+
+	.close_notification {
+		@include style.icon($name: "close", $remove: true);
+	}
+
+	[style="float: left"] {
+		float: unset;
+	}
+}
+
+.just_subscribed_icon {
+	display: none;
+}
+
+.parentCollection {
+	// just reuse it lol
+	@include -section;
+
+	margin-bottom: 20px;
+
+	&:hover {
+		background-color: var(--bg-main);
+	}
+}
+
+.parentCollectionNumChildren {
+	font: var(--gpText-BodyLarge);
+}
+
+.parentCollectionsNumOthers {
+	padding: 0;
+	color: var(--fg-dim);
+}
+
+.parentCollectionTitle {
+	color: var(--fg-main);
+	font: var(--gpText-HeadingSmall);
+	padding: 0;
+}
+
+.parentCollections {
+	padding: 0;
+}
+
+.parentCollectionsTitle {
+	@include -section-header;
+}
+
+.requiredItem {
+	background-color: var(--bg-hl);
+	border-radius: var(--border-radius-large);
+	padding: var(--spacing-sm);
+	margin-bottom: var(--spacing-sm);
+}
+
+.requiredItemSubscribed {
+	@include style.icon($name: "checkbox-checked", $remove: true);
+}
+
+.stats_table {
+	color: var(--fg-dim);
+
+	tr > td:first-child {
+		color: var(--color-primary);
+	}
+}
+
+.workshopItemControls {
+	.general_btn {
+		@include controls.button-colors("secondary");
+
+		margin-right: var(--spacing-sm);
+
+		&#ReportItemBtn {
+			@include -icon("flag");
+		}
+
+		&#VoteDownBtn {
+			@include -icon("thumb-up");
+		}
+
+		&#VoteUpBtn {
+			@include -icon("thumb-up");
+		}
+	}
+
+	.vertical_divider {
+		display: none;
+	}
+}
+
+.workshopItemDescription {
+	color: var(--fg-main);
+	font: var(--gpText-BodyLarge);
+	padding: 0;
+	margin: 0;
+}
+
+.workshopItemDescriptionTitle {
+	@include -section-header;
+
+	text-transform: none;
+	margin-top: 0;
+
+	& > .detail {
+		font: inherit;
+		margin: 0;
+	}
+}
+
+.workshopItemDetailsHeader {
+	margin: 0;
+
+	display: flex;
+	flex-direction: column-reverse;
+	align-items: start;
+
+	#detailsHeaderRight {
+		padding: 0;
+	}
+
+	.numRatings {
+		color: var(--fg-dim);
+		font: var(--gpText-BodyMedium);
+	}
+
+	.ratingSection {
+		gap: var(--spacing-xs);
+
+		display: flex;
+		align-items: center;
+	}
+}
+
+.workshop_item_header {
+	@include -section;
+
+	gap: 25px;
+	box-shadow: none;
+
+	.col_right {
+		// TODO(js): original is 416px
+		//width: 416px;
+	}
+
+	.detailsStatLeft,
+	.detailsStatRight {
+		color: var(--fg-dim);
+	}
+
+	.detailsStatNumChangeNotes {
+		color: var(--fg-dim);
+		font: inherit;
+
+		a {
+			font: inherit;
+		}
+	}
+
+	.highlight_ctn {
+		max-width: unset;
+	}
+
+	.hr {
+		background: var(--bg-hover);
+		margin-block: 8px;
+	}
+
+	.rightDetailsBlock {
+		font: inherit;
+	}
+}
+
+.workshopItemPreviewArea {
+	margin: 0;
+}
+
+.workshopItemPreviewImageMain {
+	border-radius: var(--border-radius);
+	padding: 0;
+	margin: 0;
+	margin-bottom: 8px;
+}
+
+.workshopItemRatings {
+	padding-bottom: var(--spacing-sm);
+}
+
+.workshopTags {
+	font-size: 0;
+	gap: 4px;
+	padding: 0;
+	margin-bottom: 8px;
+
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+
+	a {
+		@include -tag;
+	}
+}
+
+.workshopTagsTitle {
+	color: var(--fg-dim);
+	font: var(--gpText-BodyMedium);
+	margin-right: 12px;
+}

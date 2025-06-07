@@ -1,0 +1,34 @@
+// cheap imitation, whatever
+@mixin bg {
+	&::before {
+		--color: color-mix(in srgb, var(--color-secondary) 25%, transparent);
+		--line-size: 2px;
+		--spacing: 26px;
+
+		content: "";
+
+		position: fixed;
+		inset: 0;
+		height: 75vh;
+		z-index: -999;
+
+		pointer-events: none;
+
+		background-image:
+			repeating-linear-gradient(
+				0deg,
+				transparent 0 var(--spacing),
+				var(--color) var(--spacing),
+				var(--color) calc(var(--spacing) + var(--line-size))
+			),
+			repeating-linear-gradient(
+				90deg,
+				transparent 0 var(--spacing),
+				var(--color) var(--spacing),
+				var(--color) calc(var(--spacing) + var(--line-size))
+			),
+			radial-gradient(farthest-corner at 50% 0%, var(--color), transparent);
+		mask: radial-gradient(farthest-corner at 50% 0%, black, transparent);
+		image-rendering: pixelated;
+	}
+}

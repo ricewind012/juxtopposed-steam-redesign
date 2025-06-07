@@ -1,0 +1,61 @@
+@use "shared/extends/style";
+
+@mixin -right-side-text {
+	color: var(--color-primary);
+	font: var(--gpText-BodyLarge);
+	// Can't center it, don't care
+	line-height: 48px;
+}
+
+.forum_topic {
+	// TODO: pasted from workshop/itemview.scss
+	background: var(--bg-main-50);
+	border-radius: var(--border-radius-large);
+	padding: 20px;
+	margin-bottom: 20px;
+
+	height: unset;
+}
+
+.forum_topic_icon {
+	display: none;
+}
+
+.forum_topic_lastpost {
+	@include -right-side-text;
+
+	padding-right: var(--spacing-lg);
+}
+
+.forum_topic_name {
+	color: var(--fg-main);
+	font: var(--gpText-HeadingSmall);
+}
+
+.forum_topic_op {
+	color: var(--color-primary);
+	font: var(--gpText-BodyMedium);
+}
+
+.forum_topic_reply_count {
+	@include -right-side-text;
+
+	gap: var(--spacing-xs);
+
+	display: flex;
+	align-items: center;
+
+	&::before {
+		content: "";
+
+		display: block;
+
+		@include style.icon("chat-bubble");
+
+		color: var(--fg-main);
+	}
+
+	img {
+		display: none;
+	}
+}

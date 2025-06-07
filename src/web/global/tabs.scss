@@ -1,0 +1,36 @@
+@use "shared/extends/controls";
+
+.responsive_tab_baseline {
+	display: none;
+}
+
+.sectionTab {
+	all: unset;
+
+	@include controls.tab(".active");
+
+	& > span {
+		all: unset;
+	}
+}
+
+.sectionTabs {
+	@include controls.tabs-container;
+
+	margin-bottom: var(--spacing-sm);
+}
+
+.tabCount {
+	background-color: transparent;
+	color: var(--fg-dim);
+	font: inherit;
+	padding: 0;
+
+	&::before {
+		content: "(";
+	}
+
+	&::after {
+		content: ")";
+	}
+}

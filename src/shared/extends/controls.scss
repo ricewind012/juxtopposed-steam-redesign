@@ -46,9 +46,10 @@
 }
 
 @mixin checkbox($checked-selector, $disabled-selector) {
+	--icon-name: var(--icon-checkbox);
 	--icon-size: 24px;
 
-	@include style.icon("checkbox");
+	@include style.icon("name");
 
 	appearance: none;
 	color: var(--fg-dim);
@@ -74,7 +75,12 @@
 	gap: var(--spacing-sm);
 
 	display: flex;
+	align-items: center;
 	position: relative;
+
+	&:hover {
+		background-color: var(--bg-hover);
+	}
 
 	&::after {
 		content: "";
@@ -182,9 +188,6 @@
 	border-radius: var(--border-radius);
 	padding: var(--spacing-sm) var(--spacing-md);
 	padding-right: calc(var(--spacing-md) * 2 + var(--icon-size));
-
-	width: 100%;
-	height: unset;
 }
 
 // TODO: really similiar to a button

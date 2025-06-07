@@ -18,6 +18,7 @@
 }
 
 .commentthread_paging,
+.commentthread_pagelinks_ctn,
 .market_paging_controls {
 	gap: 24px;
 	padding: 0;
@@ -26,6 +27,7 @@
 	display: flex;
 }
 
+.pagelink, // Workshop
 .pagebtn,
 .commentthread_pagelink,
 .market_paging_pagelink {
@@ -45,6 +47,7 @@
 	}
 }
 
+.workshopBrowsePagingControls,
 .commentthread_pagelinks,
 #searchResults_links {
 	gap: var(--spacing-xs);
@@ -54,6 +57,7 @@
 	align-items: center;
 }
 
+.pagelink, // Workshop
 .pagebtn {
 	border: none;
 	padding: 0;

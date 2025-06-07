@@ -21,8 +21,11 @@ h3 {
 	display: none;
 }
 
-.btn_medium.btn_medium {
+.btn_medium.btn_medium,
+.btn_small.btn_small {
 	@include controls.button;
+
+	border: none;
 
 	& > span {
 		background: none;
@@ -76,6 +79,7 @@ input[type="checkbox"] {
 	}
 }
 
+/* TODO: restrict to account preferences
 .tooltip {
 	@include controls.tooltip-icon;
 
@@ -85,4 +89,32 @@ input[type="checkbox"] {
 	img {
 		display: none;
 	}
+}
+*/
+
+.review_award {
+	background: var(--bg-main);
+	line-height: inherit;
+	border-radius: var(--border-radius);
+	padding: calc(var(--spacing-xs) / 2) var(--spacing-sm);
+	margin: 0;
+
+	height: unset;
+}
+
+.review_award_count {
+	color: var(--color-primary);
+	font: var(--gpText-BodySmall);
+	margin-left: var(--spacing-sm);
+}
+
+.review_award_ctn {
+	gap: var(--spacing-sm);
+}
+
+.review_award_icon {
+	--size: 25px;
+
+	width: var(--size);
+	height: var(--size);
 }

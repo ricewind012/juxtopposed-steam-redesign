@@ -1,0 +1,273 @@
+@use "shared/extends/controls";
+@use "shared/extends/style";
+@use "web/extends/layout/sidebar";
+@use "web/extends/workshop";
+
+.browseOption {
+	@include sidebar.item(".hack");
+
+	margin-inline: 0;
+
+	.browseOptionImage ~ & {
+		background-color: var(--bg-hover);
+	}
+
+	a {
+		font: inherit;
+	}
+}
+
+.browseOptionImage {
+	display: none;
+}
+
+.filterOption {
+	@include sidebar.item(".TODO");
+
+	gap: var(--spacing-xs);
+	margin-inline: 0;
+
+	display: flex;
+	align-items: center;
+
+	label {
+		all: unset;
+
+		gap: var(--spacing-xs);
+		font: var(--gpText-BodyLarge);
+
+		display: flex;
+		align-items: center;
+	}
+}
+
+.flags_incompatible_desc {
+	color: var(--fg-dim);
+	font: var(--gpText-BodyMedium);
+	margin: 0;
+}
+
+.general_btn {
+	@include controls.button("primary");
+
+	margin-right: 0;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#ig_bottom {
+	@include workshop.bg;
+
+	max-width: var(--workshop_content-width);
+}
+
+#mainContents {
+	gap: var(--spacing-md);
+	margin-top: calc(13px + var(--spacing-lg));
+
+	max-width: var(--workshop_content-width);
+
+	#ig_bottom:not(.smallheader) & {
+		display: flex;
+	}
+
+	[style="clear:both"] {
+		display: none;
+	}
+}
+
+#profileBlock {
+	padding: 0;
+	margin: 0;
+
+	flex-grow: 1;
+	max-width: unset;
+}
+
+#rightContents {
+	@include sidebar.container;
+
+	margin: 0;
+
+	width: var(--sidebar-width);
+
+	.panel {
+		all: unset;
+	}
+
+	.sidebar {
+		all: unset;
+	}
+
+	select {
+		@include controls.dropdown;
+	}
+}
+
+.rightDetailsBlock {
+	padding: 0;
+
+	hr {
+		display: none;
+	}
+}
+
+.rightSectionMinorText {
+	color: var(--fg-dim);
+	font: var(--gpText-BodySmall);
+	margin-bottom: var(--spacing-sm);
+}
+
+.rightSectionTitle {
+	display: none;
+}
+
+.rightSectionTopTitle {
+	color: var(--fg-main);
+	font: var(--gpText-BodyLarge);
+	text-transform: none;
+	padding: 0;
+	margin-bottom: var(--spacing-sm);
+}
+
+.searchedTermsContainer {
+	margin: 0;
+
+	.workshop_browsing {
+		color: var(--fg-main);
+		font: var(--gpText-HeadingLarge);
+	}
+
+	.workshop_browsing_section {
+		color: inherit;
+	}
+}
+
+.tag_category_desc {
+	color: var(--fg-main);
+	font: var(--gpText-BodyLarge);
+	text-transform: none;
+	border-block-start: 1px solid var(--bg-hl);
+	padding-block-start: var(--spacing-md);
+	margin-block: var(--spacing-md) var(--spacing-sm);
+}
+
+.tag_filter_control_not {
+	@include style.icon($name: "filter-off", $remove: true);
+
+	margin: 0;
+	margin-left: auto;
+
+	&:not(:hover) {
+		color: var(--fg-dim);
+	}
+}
+
+.user_action_history_icon {
+	&[style="display: none"] {
+		display: none;
+	}
+}
+
+.workshopBrowseItems {
+	gap: var(--spacing-md);
+
+	grid-template-columns: repeat(5, 1fr);
+}
+
+.workshopBrowsePaging {
+	font: var(--gpText-BodyLarge);
+	padding: 0;
+
+	align-items: center;
+	justify-content: space-between;
+
+	& > :first-child > a:not(:hover) {
+		color: var(--fg-dim);
+	}
+
+	.pagination_space {
+		display: none;
+	}
+}
+
+.workshopBrowsePagingInfo {
+	color: inherit;
+	font: inherit;
+}
+
+.workshopBrowsePagingWithBG {
+	background-color: transparent;
+	color: var(--fg-dim);
+	font: var(--gpText-BodyLarge);
+	padding: 0;
+	margin-block: 0 var(--spacing-sm);
+
+	align-items: center;
+
+	// TODO(controls): unify somehow
+	.dropdown {
+		@include controls.dropdown;
+
+		background-image: none;
+		font: inherit;
+		margin: 0;
+	}
+}
+
+.workshopBrowseSortingControls {
+	gap: var(--spacing-xs);
+
+	display: flex;
+	align-items: center;
+}
+
+.workshopItem {
+	background-color: var(--bg-main-50);
+	border-radius: var(--border-radius-large);
+	padding: var(--spacing-md);
+	margin: 0;
+
+	.general_btn.subscribe {
+		--size: calc(var(--icon-size) + var(--spacing-lg));
+
+		background-color: var(--bg-main-50);
+
+		min-width: var(--size);
+		min-height: var(--size);
+
+		.subscribeIcon {
+			@include style.icon("plus");
+
+			background-image: none;
+		}
+	}
+
+	.ugc {
+		margin-bottom: var(--spacing-md);
+	}
+}
+
+.workshopItemAuthorName {
+	color: var(--fg-dim);
+	font: var(--gpText-BodySmall);
+	margin-top: var(--spacing-xs);
+}
+
+.workshopItemPreviewHolder {
+	border-radius: var(--border-radius);
+	box-shadow: none;
+}
+
+.workshopItemSubscriptionControls {
+	right: var(--spacing-sm);
+	bottom: var(--spacing-sm);
+}
+
+.workshopItemTitle {
+	color: var(--fg-main);
+	font: var(--gpText-HeadingSmall);
+	margin: 0;
+}

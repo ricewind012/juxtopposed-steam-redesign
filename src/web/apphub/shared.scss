@@ -1,0 +1,55 @@
+@use "shared/extends/controls";
+
+.apphub_AppName {
+	color: var(--fg-main);
+	font: var(--gpText-HeadingLarge);
+}
+
+.apphub_HeaderBottomBG_ctn {
+	display: none;
+}
+
+.apphub_HeaderTop {
+	background-image: none;
+	padding: 0;
+}
+
+.apphub_HomeHeader {
+	margin-bottom: calc(13px + var(--spacing-lg));
+
+	max-width: var(--workshop_content-width);
+}
+
+.apphub_HomeHeaderContent {
+	padding-top: var(--top-content-margin);
+
+	max-width: var(--workshop_content-width);
+}
+
+.apphub_sectionTab {
+	@include controls.tab(".active");
+
+	background-image: none;
+	margin: 0;
+
+	height: unset;
+
+	span {
+		all: unset;
+	}
+}
+
+.apphub_sectionTabs {
+	@include controls.tabs-container;
+
+	margin: 0;
+	margin-block: 24px 48px;
+}
+
+.apphub_sectionTabsHR {
+	display: none;
+}
+
+.apphub_WorkshopPistonHolder {
+	display: none;
+}

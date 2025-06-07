@@ -1,0 +1,171 @@
+@use "shared/extends/controls";
+@use "web/extends/layout/sidebar";
+
+.workshop_home_content {
+	width: var(--workshop_content-width);
+
+	& > div {
+		gap: var(--spacing-md);
+
+		display: flex;
+	}
+
+	.left_column {
+		padding: 0;
+
+		width: unset;
+	}
+
+	.panel,
+	.primary_panel_border {
+		all: unset;
+	}
+
+	.primary_panel {
+		background: none;
+
+		.browse_option {
+			@include sidebar.item(".hack");
+
+			color: inherit;
+			font: inherit;
+			margin-inline: 0;
+
+			a {
+				background: none;
+				padding: 0;
+			}
+		}
+
+		.current_player_files_ctn {
+			gap: var(--spacing-sm);
+
+			display: flex;
+
+			.avatar_workshop_overlay {
+				display: none;
+			}
+
+			.playerAvatar {
+				--size: 84px;
+			}
+		}
+
+		.current_player_workshop_link {
+			padding: 0;
+
+			a {
+				@include controls.dropdown;
+
+				background-image: none;
+				font: inherit;
+			}
+		}
+
+		.current_player_workshop_title a {
+			color: var(--fg-main);
+			font: var(--gpText-HeadingSmall);
+			padding: 0;
+		}
+
+		.menu_panel {
+			padding: 0;
+		}
+	}
+
+	.right_column {
+		@include sidebar.container;
+
+		.browseTitle {
+			display: none;
+		}
+
+		.filterOption {
+			@include sidebar.item(".TODO");
+
+			margin-inline: 0;
+
+			.tag_count {
+				color: var(--fg-dim);
+			}
+
+			.tag_label {
+				all: unset;
+
+				display: flex;
+				justify-content: space-between;
+			}
+		}
+
+		.title {
+			color: var(--fg-main);
+			font: var(--gpText-BodyLarge);
+			text-transform: none;
+			border-block-start: 1px solid var(--bg-hl);
+			padding-block-start: var(--spacing-md);
+			margin-block: var(--spacing-md) var(--spacing-sm);
+		}
+	}
+
+	.section {
+		padding: 0;
+		margin-bottom: var(--spacing-sm);
+
+		&:not(.tabbed) {
+			background: var(--bg-main);
+			border-radius: var(--border-radius);
+			padding: var(--spacing-lg);
+		}
+	}
+
+	.section_bottom_bar {
+		all: unset;
+	}
+
+	.section_title {
+		color: var(--fg-main);
+		font: var(--gpText-HeadingMedium);
+
+		a {
+			color: inherit;
+			font: inherit;
+		}
+	}
+
+	.section_title_ctn {
+		padding: 0;
+		margin-bottom: var(--spacing-lg);
+
+		.section_subtitle {
+			color: var(--fg-dim);
+			font: var(--gpText-HeadingMedium);
+		}
+	}
+}
+
+.workshop_item_row {
+	background: var(--bg-main);
+	border: none;
+	border-radius: var(--border-radius);
+	padding: var(--spacing-md);
+	margin-bottom: var(--spacing-sm);
+
+	&:hover {
+		background-color: var(--bg-hover);
+	}
+
+	.preview_image {
+		border-radius: var(--border-radius);
+		margin-right: var(--spacing-md);
+	}
+}
+
+.workshop_item_tags {
+	color: var(--fg-dim);
+}
+
+.workshop_item_title {
+	color: var(--fg-main);
+	font: var(--gpText-HeadingMedium);
+	padding: 0;
+}
