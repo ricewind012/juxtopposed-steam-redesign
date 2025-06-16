@@ -19,6 +19,7 @@
 
 .commentthread_paging,
 .commentthread_pagelinks_ctn,
+.forum_paging_controls,
 .market_paging_controls {
 	gap: 24px;
 	padding: 0;
@@ -30,6 +31,7 @@
 .pagelink, // Workshop
 .pagebtn,
 .commentthread_pagelink,
+.forum_paging_pagelink,
 .market_paging_pagelink {
 	background-color: var(--bg-hl);
 	font: var(--gpText-BodyMedium);
@@ -71,6 +73,7 @@
 }
 
 .commentthread_pagelink,
+.forum_paging_pagelink,
 .market_paging_pagelink {
 	padding: 5px 7px;
 	margin: 0;

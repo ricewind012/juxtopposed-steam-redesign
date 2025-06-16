@@ -3,10 +3,6 @@
 @use "web/extends/layout/sidebar";
 @use "web/extends/workshop";
 
-:root {
-	--workshop_content-width: 1564px;
-}
-
 .home_tab {
 	@include controls.tab(".active");
 
@@ -98,7 +94,7 @@
 
 	box-shadow: none;
 
-	max-width: var(--workshop_content-width);
+	max-width: var(--apphub_content-width);
 
 	[style="clear:both"] {
 		display: none;

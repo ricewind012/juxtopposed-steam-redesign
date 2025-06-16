@@ -1,5 +1,9 @@
 @use "shared/extends/controls";
 
+:root {
+	--apphub_content-width: 1564px;
+}
+
 .apphub_AppName {
 	color: var(--fg-main);
 	font: var(--gpText-HeadingLarge);
@@ -17,13 +21,13 @@
 .apphub_HomeHeader {
 	margin-bottom: calc(13px + var(--spacing-lg));
 
-	max-width: var(--workshop_content-width);
+	max-width: var(--apphub_content-width);
 }
 
 .apphub_HomeHeaderContent {
 	padding-top: var(--top-content-margin);
 
-	max-width: var(--workshop_content-width);
+	max-width: var(--apphub_content-width);
 }
 
 .apphub_sectionTab {

@@ -2,7 +2,7 @@
 @use "web/extends/layout/sidebar";
 
 .workshop_home_content {
-	width: var(--workshop_content-width);
+	width: var(--apphub_content-width);
 
 	& > div {
 		gap: var(--spacing-md);

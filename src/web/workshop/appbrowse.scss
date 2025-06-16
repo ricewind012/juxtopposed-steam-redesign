@@ -60,14 +60,14 @@
 #ig_bottom {
 	@include workshop.bg;
 
-	max-width: var(--workshop_content-width);
+	max-width: var(--apphub_content-width);
 }
 
 #mainContents {
 	gap: var(--spacing-md);
 	margin-top: calc(13px + var(--spacing-lg));
 
-	max-width: var(--workshop_content-width);
+	max-width: var(--apphub_content-width);
 
 	#ig_bottom:not(.smallheader) & {
 		display: flex;

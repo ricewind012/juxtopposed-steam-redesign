@@ -8,13 +8,16 @@
 }
 
 .forum_topic {
-	// TODO: pasted from workshop/itemview.scss
 	background: var(--bg-main-50);
 	border-radius: var(--border-radius-large);
 	padding: 20px;
 	margin-bottom: 20px;
 
 	height: unset;
+
+	&:hover {
+		background: var(--bg-main);
+	}
 }
 
 .forum_topic_icon {

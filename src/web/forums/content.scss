@@ -1,0 +1,172 @@
+@use "shared/extends/controls";
+@use "shared/extends/style";
+@use "web/extends/layout/sidebar";
+
+.apphub_Discussion_Content {
+	gap: 20px;
+
+	display: flex;
+	flex-direction: row-reverse;
+	max-width: var(--apphub_content-width);
+
+	.leftcol {
+		flex-grow: 1;
+		width: unset;
+	}
+
+	.rightbox {
+		background: none;
+		gap: var(--spacing-sm);
+		padding: 0;
+
+		display: flex;
+		flex-direction: column;
+
+		.content {
+			padding: 0;
+		}
+
+		.rule {
+			display: none;
+		}
+
+		.weblink {
+			font: inherit;
+
+			img {
+				display: none;
+			}
+		}
+	}
+
+	.rightbox_content_header {
+		color: var(--fg-dim);
+		font: var(--gpText-BodyMedium);
+		padding: 0;
+	}
+
+	.rightbox_footer,
+	.rightbox_header {
+		display: none;
+	}
+
+	.rightbox_list_header {
+		color: var(--fg-dim);
+		font: var(--gpText-BodyMedium);
+		margin-bottom: var(--spacing-sm);
+	}
+
+	.rightbox_list_option {
+		@include sidebar.item(".selected");
+
+		font: var(--gpText-BodyLarge);
+
+		height: unset;
+
+		.forum_list_postcount {
+			color: var(--fg-dim);
+			font: var(--gpText-BodyMedium);
+		}
+	}
+
+	.rightbox_list_selection_background {
+		display: none;
+	}
+
+	.rightcol {
+		background: var(--bg-main);
+		border-radius: var(--border-radius-large);
+		gap: var(--spacing-sm);
+		padding: var(--spacing-md);
+
+		display: flex;
+		flex-direction: column;
+		width: var(--sidebar-width);
+	}
+
+	.rightcol_minor_text {
+		color: var(--fg-dim);
+		font: var(--gpText-BodySmall);
+		margin-bottom: var(--spacing-sm);
+	}
+
+	br,
+	[style="clear: both;"] {
+		display: none;
+	}
+}
+
+#DiscussionSearchForm {
+}
+
+.discussionSearchText {
+	all: unset;
+
+	// TODO(controls): umm make it better? why did i have to do all of this
+	@include controls.search-input;
+
+	color: inherit;
+
+	&::placeholder {
+		color: inherit;
+	}
+}
+
+.discussionSearchTextContainer {
+	all: unset;
+
+	color: var(--color-secondary);
+
+	position: relative;
+
+	&:after {
+		content: "";
+
+		display: block;
+		position: absolute;
+		top: 0;
+		right: var(--spacing-md);
+
+		@include style.icon("search");
+	}
+}
+
+.discussionSearchTextSubmitImg {
+	display: none;
+}
+
+.forum_area {
+	color: var(--fg-main);
+
+	display: flex;
+	flex-direction: column;
+}
+
+.forum_list_postcount {
+	padding: 0;
+}
+
+.forum_pagesize_options {
+	all: unset;
+	color: var(--fg-dim);
+	margin-top: var(--spacing-sm);
+
+	// selected
+	& > span {
+		color: var(--color-primary);
+		margin-right: 5px;
+	}
+}
+
+.forum_paging {
+	all: unset;
+
+	display: flex;
+	flex-direction: row-reverse;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.forum_topics_container {
+	margin-top: var(--spacing-lg);
+}
