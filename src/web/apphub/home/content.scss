@@ -1,0 +1,376 @@
+@use "shared/extends/style";
+
+%-content-type {
+	background: var(--bg-main-50);
+	color: var(--fg-main);
+	font: inherit;
+	border-radius: 0 0 var(--border-radius-large) var(--border-radius-large);
+	padding: var(--spacing-sm);
+}
+
+.apphub_Content {
+	--avatar-size: 32px;
+
+	padding: 0;
+
+	// TODO: I don't wanna deal with this shit
+	max-width: var(--apphub_content-width);
+
+	[style="clear: left"] {
+		display: none;
+	}
+}
+
+.apphub_CardRow {
+	gap: 20px;
+
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.apphub_Card {
+	background: var(--bg-main-50);
+	border: none;
+	border-radius: var(--border-radius-large);
+	gap: var(--spacing-sm);
+	padding: var(--spacing-md);
+	padding-bottom: calc(var(--spacing-md) + var(--spacing-sm) * 2 + 1lh);
+	margin: 0;
+
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+	height: unset;
+	max-height: 50vh;
+
+	.review_award_aggregated {
+		color: var(--color-primary);
+		font: var(--gpText-BodyLarge);
+		gap: var(--spacing-xs);
+
+		display: inline-flex;
+
+		&::before {
+			content: "";
+
+			@include style.icon("military-tech");
+
+			display: block;
+		}
+	}
+
+	.reward_btn_icon {
+		display: none;
+	}
+}
+
+.apphub_CardAnnouncementBG,
+.apphub_CardBG {
+	display: none;
+}
+
+.apphub_CardClear {
+	display: none;
+}
+
+.apphub_Cards > div {
+	gap: 20px;
+
+	display: flex;
+	flex-direction: column;
+}
+
+.apphub_CardCommentCount {
+	background: none;
+	padding: 0;
+
+	display: flex;
+	align-items: center;
+
+	&.alignDiscussion {
+		margin-top: var(--spacing-sm);
+
+		height: var(--avatar-size);
+	}
+
+	&::before {
+		content: "";
+
+		@include style.icon("chat-bubble");
+
+		color: var(--fg-dim);
+		margin-right: var(--spacing-xs);
+	}
+}
+
+.apphub_CardContentAuthorBlock {
+	all: unset;
+
+	gap: var(--spacing-sm);
+
+	order: -1;
+	display: flex;
+	align-items: center;
+
+	.apphub_Card:not(.Announcement_Card) & {
+		justify-content: space-between;
+	}
+
+	.apphub_CardContentAuthorName {
+		padding: 0;
+	}
+
+	.apphub_CardContentMoreLink {
+		font: var(--gpText-BodyMedium);
+		padding: 0;
+
+		& > a:not(:hover) {
+			color: var(--fg-dim);
+		}
+	}
+
+	.apphub_friend_block {
+		gap: var(--spacing-sm);
+
+		display: flex;
+		align-items: center;
+	}
+
+	.apphub_friend_block_container {
+		max-width: unset;
+	}
+
+	.appHubIconHolder,
+	.appHubNewsIconHolder {
+		position: unset;
+	}
+
+	.apphub_UserReviewCardStats {
+		padding: 0;
+	}
+}
+
+.apphub_CardContentAuthorName {
+	font: var(--gpText-BodyMedium);
+}
+
+.apphub_CardContentDiscussionAuthorBlock {
+	padding: 0;
+	padding-top: var(--spacing-sm);
+
+	height: unset;
+}
+
+.apphub_CardContentDiscussionDate {
+	color: var(--fg-dim);
+	font: var(--gpText-BodySmall);
+	padding-left: 45px;
+}
+
+.apphub_CardContentDiscussionText {
+	background-color: var(--bg-main-50);
+	border: none;
+	border-radius: var(--border-radius-large);
+	padding: var(--spacing-sm);
+}
+
+.apphub_CardContentDiscussionTitle {
+	color: var(--fg-main);
+	font: var(--gpText-HeadingSmall);
+	padding: 0;
+	margin-bottom: var(--spacing-sm);
+}
+
+.apphub_CardContentDiscussionType {
+	@extend %-content-type;
+
+	border: none;
+
+	height: unset;
+}
+
+.apphub_CardContentGuideDesc {
+	color: var(--fg-main);
+	font: var(--gpText-BodyLarge);
+	padding: 0;
+	margin-top: var(--spacing-sm);
+
+	height: unset;
+}
+
+.apphub_CardContentGuideTitle {
+	background-color: transparent;
+	color: var(--fg-main);
+	font: var(--gpText-HeadingSmall);
+	border: none;
+	padding: 0;
+	margin: 0;
+}
+
+.apphub_CardContentMain {
+	position: unset;
+
+	& > .apphub_CardContentType {
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+	}
+}
+
+.apphub_CardContentNewsDate {
+	color: var(--fg-dim);
+	font: var(--gpText-BodySmall);
+	padding: 0;
+}
+
+.apphub_CardContentNewsDesc {
+	--speech-bubble-size: 1.25em;
+
+	color: var(--fg-main);
+	padding: 0;
+	margin-bottom: var(--speech-bubble-size);
+
+	position: relative;
+
+	&::after {
+		content: "";
+
+		position: absolute;
+		bottom: 0;
+		left: calc(var(--avatar-size) / 2 + var(--spacing-xs));
+
+		border: var(--speech-bubble-size) solid transparent;
+		border-top-color: var(--bg-main-50);
+		border-bottom: none;
+		border-left: none;
+		// TODO: 1px????
+		margin-bottom: calc(var(--speech-bubble-size) * -1);
+	}
+
+	p {
+		clear: unset;
+	}
+
+	.apphub_NewsCardStats {
+		right: var(--spacing-md);
+	}
+}
+
+.apphub_CardContentNewsFade {
+	display: none;
+}
+
+.apphub_CardContentNewsTitle {
+	color: var(--fg-main);
+	font: var(--gpText-HeadingSmall);
+	padding: 0;
+
+	max-width: unset;
+}
+
+.apphub_CardContentPreviewImage {
+	width: inherit;
+	height: inherit;
+}
+
+.apphub_CardContentPreviewImageBorder {
+	padding: 0;
+}
+
+.apphub_CardContentSpeechCorner {
+	display: none;
+}
+
+.apphub_CardContentTitle {
+	color: var(--fg-main);
+	font: var(--gpText-HeadingSmall);
+	padding: 0;
+}
+
+.apphub_CardContentType {
+	@extend %-content-type;
+
+	visibility: visible;
+	margin: 0 calc(var(--spacing-md) * -1);
+}
+
+.apphub_CardContentTypeContainer {
+	width: calc(100% - var(--spacing-md) * 2);
+	bottom: 0;
+}
+
+.apphub_CardControls {
+	align-items: center;
+
+	.apphub_CardRating {
+		background-position-y: center;
+		color: inherit;
+		margin: 0;
+	}
+
+	.apphub_CardRightData {
+		gap: var(--spacing-sm);
+	}
+}
+
+.apphub_CardMetaData {
+	all: unset;
+
+	gap: var(--spacing-sm);
+
+	display: flex;
+	flex-direction: column-reverse;
+}
+
+.apphub_CardRatingButtons {
+	padding: 0;
+
+	height: unset;
+}
+
+// avatar
+.appHubIconHolder.greyOverlay {
+	display: none;
+}
+
+.apphub_UserReviewCardContent {
+	padding: 0;
+
+	display: flex;
+	flex-direction: column;
+
+	// TODO: is this shared ?
+	.hours {
+		color: var(--fg-dim);
+		font: var(--gpText-BodyMedium);
+	}
+
+	.reviewInfo {
+		background-color: var(--bg-main);
+		border-radius: var(--border-radius);
+		padding: var(--spacing-xs);
+	}
+
+	.thumb img {
+		border-radius: var(--border-radius);
+	}
+
+	.title {
+		color: var(--fg-main);
+		font: var(--gpText-BodyMedium);
+		padding: 0;
+	}
+}
+
+.UserReviewCardContent_Footer {
+	@extend %-content-type;
+
+	// TODO(localization): localize, webpack should be available
+	&::before {
+		content: "Review";
+	}
+
+	.gradient {
+		display: none;
+	}
+}

@@ -1,0 +1,101 @@
+@use "shared/extends/controls";
+
+.apphub_AllContentText {
+	display: none;
+}
+
+.apphub_friend_block_row {
+	padding: 0;
+
+	display: flex;
+}
+
+.apphub_HeaderBottom {
+	background-color: var(--bg-main);
+	border-radius: var(--border-radius-large);
+	padding: var(--spacing-sm);
+
+	display: flex;
+	flex-direction: row-reverse;
+	align-items: center;
+	justify-content: space-between;
+	min-height: unset;
+
+	[style="clear: both"] {
+		display: none;
+	}
+}
+
+.apphub_HubDivider {
+	display: none;
+}
+
+.apphub_more_friends_who_play {
+	all: unset;
+
+	@include controls.button;
+
+	padding: 6px 3px;
+
+	--size: 32px;
+	box-sizing: border-box;
+	display: block;
+	min-width: var(--size);
+	min-height: var(--size);
+}
+
+.apphub_NumInApp {
+	color: var(--accent-green);
+}
+
+.apphub_recentFriendsArea {
+	padding: 0;
+
+	.btnv6_blue_hoverfade {
+		display: none;
+	}
+}
+
+.apphub_Stats {
+	color: inherit;
+	font: inherit;
+	gap: var(--spacing-sm);
+	padding: 0;
+
+	display: flex;
+	align-items: center;
+
+	.pipe_separator {
+		display: none;
+	}
+
+	.responsive_hidden {
+		gap: var(--spacing-sm);
+
+		display: flex;
+		align-items: center;
+	}
+
+	.statsselect {
+		all: unset;
+
+		@include controls.dropdown;
+
+		img,
+		#statsselect_arrow {
+			display: none;
+		}
+	}
+
+	.statsselect_text {
+		all: unset;
+	}
+}
+
+.apphub_StoreInfoHeader {
+	background-color: var(--bg-main);
+	border-radius: var(--border-radius-large);
+	padding: var(--spacing-sm);
+	// XXX(units): keep in sync with .apphub_sectionTabs
+	margin-block: 24px 48px;
+}
