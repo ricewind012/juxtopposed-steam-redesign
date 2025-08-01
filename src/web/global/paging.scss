@@ -28,6 +28,12 @@
 	display: flex;
 }
 
+.forum_paging_controls {
+	&[style="display: none;"] {
+		visibility: hidden;
+	}
+}
+
 .pagelink, // Workshop
 .pagebtn,
 .commentthread_pagelink,

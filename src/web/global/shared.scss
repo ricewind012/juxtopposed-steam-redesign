@@ -17,6 +17,23 @@ h3 {
 	font: var(--gpText-HeadingSmall);
 }
 
+.bb_blockquote {
+	background-color: var(--bg-main-50);
+	font: inherit;
+	border: none;
+	border-radius: var(--border-radius);
+	padding: var(--spacing-sm);
+	margin: 0;
+	margin-bottom: var(--spacing-sm);
+
+	.bb_quoteauthor {
+		color: var(--fg-dim);
+		font: inherit;
+		margin-bottom: var(--spacing-xs);
+	}
+}
+
+// TODO: style in forums
 .breadcrumbs {
 	display: none;
 }
