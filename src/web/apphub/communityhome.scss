@@ -1,0 +1,137 @@
+@use "shared/extends/controls";
+
+%-box {
+	background-color: var(--bg-main-50);
+	border-radius: var(--border-radius);
+
+	min-height: 200px;
+}
+
+.community_home_app_shortcuts {
+	@extend %-box;
+
+	.appHubShortcut {
+		margin-bottom: var(--spacing-xs);
+
+		height: unset;
+	}
+
+	.appHubShortcut_Icon {
+		--icon-size: 16px;
+		--size: calc(var(--icon-size) * 2);
+
+		width: var(--size);
+		height: var(--size);
+	}
+
+	.appHubShortcut_Title {
+		font: var(--gpText-BodyMedium);
+	}
+
+	.new_items_num,
+	.new_items_text {
+		color: var(--fg-dim);
+		font: var(--gpText-BodySmall);
+	}
+}
+
+.community_home_app_shortcuts_list_header {
+	color: var(--fg-main);
+	font: var(--gpText-HeadingSmall);
+	text-transform: none;
+}
+
+.community_home_header,
+.community_home_sort_options {
+	padding: 0;
+	padding-block: 24px 48px;
+	margin: 0 auto;
+
+	max-width: var(--apphub_content-width);
+}
+
+.community_home_search_apps,
+.community_home_search_players {
+	@include controls.text-input;
+
+	box-shadow: none;
+	margin: 0;
+
+	height: unset;
+
+	.appHubSearchTextForm {
+		all: unset;
+	}
+
+	.community_home_search_app_input,
+	.community_home_search_players_input {
+		all: unset;
+
+		&::placeholder {
+			color: var(--fg-dim);
+		}
+	}
+
+	.community_home_search_apps_image,
+	.community_home_search_players_image {
+		background-color: transparent;
+		content: var(--icon-search);
+
+		inset: var(--spacing-md);
+		left: unset;
+	}
+}
+
+.community_home_search_box {
+	@extend %-box;
+}
+
+.community_home_search_divider {
+	background-color: transparent;
+	border-top-color: transparent;
+	margin-block: var(--spacing-sm);
+}
+
+.community_home_search_title {
+	color: var(--fg-main);
+	font: var(--gpText-BodyMedium);
+	text-transform: none;
+	padding-bottom: var(--spacing-xs);
+}
+
+.community_home_shortcut_content {
+	padding: var(--spacing-md);
+}
+
+.community_home_sort_buttons {
+	@include controls.tabs-container;
+
+	color: var(--fg-dim);
+
+	align-items: center;
+
+	.btn_small.btn_small {
+		all: unset;
+
+		@include controls.tab(".btn_darkblue_white_innerfade");
+
+		box-shadow: none;
+	}
+}
+
+.community_home_subtitle {
+	color: var(--fg-dim);
+	font: var(--gpText-BodyLarge);
+	padding: 0;
+}
+
+.community_home_tabs {
+	padding: 0;
+
+	max-width: var(--apphub_content-width);
+}
+
+.community_home_title {
+	color: var(--fg-main);
+	font: var(--gpText-HeadingLarge);
+}
