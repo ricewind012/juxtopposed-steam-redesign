@@ -1,0 +1,38 @@
+#Container {
+	--icon-size: 24px;
+
+	background-image: none;
+	border: none;
+	gap: var(--spacing-sm);
+
+	flex-direction: row-reverse;
+
+	&#Selected,
+	&:hover {
+		background-color: var(--bg-hl);
+		box-shadow: none;
+	}
+}
+
+#SectionCount {
+	font: inherit;
+	color: var(--fg-dim);
+	margin: 0;
+
+	height: unset;
+}
+
+#SectionHeaderContent {
+	color: var(--fg-main);
+	font: var(--gpText-BodyLarge);
+	gap: var(--spacing-xs);
+	padding: 0;
+}
+
+#SectionName {
+	color: inherit;
+	font: inherit;
+	letter-spacing: 0;
+
+	height: unset;
+}

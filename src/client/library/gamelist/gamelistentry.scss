@@ -1,0 +1,40 @@
+#Container {
+	color: var(--fg-dim);
+	font: var(--gpText-BodyMedium);
+	box-shadow: none;
+	border: none;
+	border-radius: var(--border-radius);
+
+	&#Selected,
+	&:hover {
+		background-color: var(--bg-hl);
+	}
+
+	&#Installed,
+	&#Running {
+		color: var(--fg-main);
+	}
+
+	&#Updating {
+		color: var(--color-primary);
+	}
+}
+
+#DownloadProgress {
+	color: var(--color-secondary);
+}
+
+#AppIconDownloading,
+#GameIcon {
+	--size: 21px;
+
+	border-radius: var(--border-radius);
+	margin-inline-end: 12px;
+
+	width: var(--size);
+	height: var(--size);
+}
+
+#GameListEntryContainer {
+	padding: 3px 8px;
+}

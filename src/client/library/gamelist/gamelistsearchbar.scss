@@ -125,10 +125,16 @@
 }
 
 #SearchFilterInput {
-	@include -search-input;
+	&:empty {
+		display: none;
+	}
 
-	gap: 3px;
-	--spacing-sm: var(--spacing-xs);
+	&:not(:empty) {
+		@include -search-input;
+
+		gap: 3px;
+		--spacing-sm: var(--spacing-xs);
+	}
 }
 
 #SearchFilterInputClear {

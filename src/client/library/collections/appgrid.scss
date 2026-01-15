@@ -1,0 +1,45 @@
+#AppGridSectionFooter,
+#AppGridSectionHeader {
+	display: none;
+}
+
+#CollectionOptions {
+	padding-block: var(--spacing-sm) 46px;
+}
+
+#EmptyGridMessageContainer {
+	padding: var(--spacing-lg);
+
+	#EmptyGridMessageLine {
+		color: inherit;
+		margin-block: var(--spacing-xs);
+
+		&:nth-child(1) {
+			font: var(--gpText-HeadingLarge);
+		}
+
+		&:nth-child(2) {
+			font: var(--gpText-BodyLarge);
+		}
+	}
+}
+
+#GridWithControls {
+	padding: 0;
+}
+
+#SortingDropDown {
+	align-items: center;
+
+	.DialogDropDown_CurrentDisplay {
+		background-color: transparent;
+	}
+}
+
+#SortingDropDownLabel {
+	color: var(--fg-dim);
+	font: var(--gpText-BodyLarge);
+	letter-spacing: 0;
+	text-transform: none;
+	margin: 0;
+}

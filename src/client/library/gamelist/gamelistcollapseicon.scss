@@ -1,0 +1,15 @@
+@use "shared/extends/style";
+
+#Container {
+	@include style.icon("arrow", "svg");
+
+	color: var(--fg-main);
+
+	transition: var(--transition);
+
+	&#Collapsed {
+		transform: rotate(-90deg);
+
+		transition: var(--transition);
+	}
+}

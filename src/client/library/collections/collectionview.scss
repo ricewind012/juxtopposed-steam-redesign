@@ -1,0 +1,115 @@
+@use "shared/extends/controls";
+@use "shared/extends/style";
+
+#Container {
+	padding: var(--spacing-lg);
+}
+
+#DynamicCollectionLabel {
+	display: none;
+}
+
+#DynamicCollectionLabelAndButton {
+	all: unset;
+}
+
+#DynamicCollectionSubHeader {
+	gap: var(--spacing-sm);
+	margin-block-start: var(--spacing-sm);
+
+	align-items: center;
+
+	#FreezeButton {
+		@include controls.button;
+
+		text-align: center;
+		text-transform: none;
+	}
+
+	#RightSideButtons {
+		padding: 0;
+	}
+}
+
+#EditButton {
+	--bg: var(--fg-dim);
+	--bg-percentage: 5%;
+	--icon-name: var(--icon-settings);
+	--size: 26px;
+
+	background-color: color-mix(
+		in srgb,
+		var(--bg) var(--bg-percentage),
+		transparent
+	);
+	border-radius: var(--border-radius);
+	margin: 0;
+
+	order: 1;
+	width: var(--size);
+	height: var(--size);
+
+	#DynamicCollectionLabelAndButton & {
+		--icon-name: var(--icon-filter);
+	}
+
+	#Header & {
+		align-self: unset;
+	}
+
+	// oh my god bruh
+	#Header:has(+ div #FreezeButton) #DynamicCollectionLabelAndButton & {
+		--bg: var(--color-primary);
+	}
+
+	&:hover {
+		--bg-percentage: 10%;
+	}
+
+	&#Close {
+		--icon-name: var(--icon-close);
+	}
+
+	svg {
+		@include style.icon("name", "line");
+
+		color: var(--fg-dim);
+		margin: calc((var(--size) - var(--icon-size)) / 2);
+	}
+}
+
+#Header {
+	color: var(--fg-main);
+	font: var(--gpText-HeadingSmall);
+	gap: 9px;
+
+	height: unset;
+
+	#CollectionName {
+		font: inherit;
+		letter-spacing: 0;
+	}
+
+	#Rule {
+		display: none;
+	}
+
+	#SectionCount {
+		color: inherit;
+		font: inherit;
+		margin: 0;
+	}
+
+	& > .tool-tip-source {
+		order: 1;
+	}
+
+	// lmao but at least it will be visible (I hope)
+	.DialogInput {
+		@include controls.search-input;
+	}
+}
+
+#OuterContainer {
+	background-image: none;
+}

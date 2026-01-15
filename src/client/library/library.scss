@@ -11,9 +11,23 @@
 }
 
 #Container {
+	background: linear-gradient(
+		173.45deg,
+		var(--bg-hover) 1.6%,
+		var(--bg-hl) 89.87%
+	);
 	margin-top: calc(var(--spacing-sm) * 2 + 1lh + 25px);
 }
 
 #LeftListSizableContainer {
 	position: unset;
+}
+
+#LibraryWindowDivider {
+	--size: 4px;
+
+	background-color: transparent;
+	margin-inline-end: calc(var(--size) * -1);
+
+	width: var(--size);
 }

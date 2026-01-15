@@ -1,0 +1,88 @@
+#Collection {
+	--bg-opacity: 0;
+	--border-width: 2px;
+
+	background-color: transparent;
+	border: var(--border-width) solid transparent;
+	border-radius: var(--border-radius-large);
+	box-shadow: none;
+
+	transition: var(--transition);
+
+	&:not(#NewCollection) {
+		background-color: var(--bg-hl);
+
+		&::before {
+			content: "";
+
+			position: absolute;
+			inset: 0;
+
+			opacity: var(--bg-opacity);
+			background-image: radial-gradient(
+				farthest-corner at -40px -40px,
+				color-mix(in srgb, var(--color-primary) 50%, var(--bg-hl)),
+				transparent
+			);
+			border-radius: var(--border-radius);
+
+			transition: var(--transition);
+		}
+
+		&:hover {
+			--bg-opacity: 0.5;
+		}
+
+		&:active {
+			--bg-opacity: 1;
+		}
+	}
+
+	&#NewCollection {
+		background-image: none;
+		border: var(--border-width) dotted var(--fg-dim);
+
+		&:hover {
+			--fg-dim: var(--fg-main);
+		}
+	}
+}
+
+#CollectionLabel {
+	color: var(--fg-main);
+	font: var(--gpText-BodyMedium);
+	text-shadow: none;
+	letter-spacing: 0;
+}
+
+#CollectionLabelCount {
+	color: var(--fg-dim);
+	font: var(--gpText-BodyMedium);
+}
+
+#Grid {
+	padding-block: 46px 0;
+}
+
+#Header {
+	color: var(--fg-main);
+	font: var(--gpText-HeadingSmall);
+	gap: 9px;
+
+	height: unset;
+
+	#Label {
+		font: inherit;
+		letter-spacing: 0;
+		text-transform: none;
+	}
+
+	#Rule {
+		display: none;
+	}
+}
+
+#ScrollContainer {
+	background-image: none;
+	padding: var(--spacing-lg);
+}

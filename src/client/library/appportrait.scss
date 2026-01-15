@@ -1,16 +1,28 @@
 :root {
-	--appportrait_width: 363px;
+	--appportrait_landscape-width: 363px;
+	--appportrait_landscape-height: 106px;
+	// --appportrait_portrait-width: 191px;
+	// --appportrait_portrait-height: 262px;
 }
 
-// TODO: I don't think it'll be usable without #InDownloads
-#LibraryItemBox#InDownloads {
-	border-radius: var(--border-radius);
+#LibraryItemBox {
 	box-shadow: none;
 
-	width: var(--appportrait_width);
-	height: 106px;
+	&#InCollection {
+		border-radius: var(--border-radius-large);
 
-	#PortraitImage {
-		padding-top: 106px;
+		// width: var(--appportrait_portrait-width);
+		// height: var(--appportrait_portrait-height);
+	}
+
+	&#InDownloads {
+		border-radius: var(--border-radius);
+
+		width: var(--appportrait_landscape-width);
+		height: var(--appportrait_landscape-height);
+
+		#PortraitImage {
+			padding-top: var(--appportrait_landscape-height);
+		}
 	}
 }
