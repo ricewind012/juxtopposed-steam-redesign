@@ -15,11 +15,6 @@
 		justify-content: space-between;
 	}
 
-	// TODO: unify later
-	.btnv6_white_transparent > span {
-		border: none;
-	}
-
 	select {
 		@include controls.dropdown;
 

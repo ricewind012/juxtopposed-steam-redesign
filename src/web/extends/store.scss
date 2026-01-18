@@ -1,0 +1,9 @@
+@mixin carousel {
+	--icon-size: 24px;
+
+	background-color: var(--bg-main-20);
+	font: var(--gpText-HeadingSmall);
+	border-radius: var(--border-radius-large);
+	padding-block: var(--spacing-lg);
+	padding-inline: var(--carousel-arrow-size);
+}

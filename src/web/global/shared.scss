@@ -4,8 +4,21 @@ h2 {
 	color: var(--fg-main);
 	font: var(--gpText-HeadingMedium);
 	letter-spacing: 0;
+	text-transform: none;
 	padding: 0;
 	margin: 0;
+
+	// TODO: tab stuff in the home page has this, but some aren't supposed to be
+	// seen
+	&:has(> .header_inline) {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.header_inline {
+		color: var(--fg-dim);
+		font: var(--gpText-BodyLarge);
+	}
 
 	& ~ p {
 		color: var(--fg-dim);
@@ -38,6 +51,7 @@ h3 {
 	display: none;
 }
 
+.btnv6_blue_hoverfade.btnv6_blue_hoverfade,
 .btn_medium.btn_medium,
 .btn_small.btn_small {
 	@include controls.button;
@@ -45,17 +59,34 @@ h3 {
 	border: none;
 
 	& > span {
-		background: none;
-		font: inherit;
-		text-align: center;
-		text-transform: none;
-		box-shadow: none;
-		padding: 0;
+		all: unset;
 	}
 }
 
 .btn_green_white_innerfade.btn_green_white_innerfade {
 	@include controls.button-colors("primary");
+}
+
+// HELP
+$sel: ".btnv6_white_transparent";
+#{$sel}#{$sel}#{$sel}#{$sel}#{$sel}#{$sel}#{$sel} {
+	all: unset;
+
+	color: var(--fg-dim);
+	font: var(--gpText-BodyLarge);
+	border: 1px solid color-mix(in srgb, currentColor 20%, transparent);
+	border-radius: var(--border-radius);
+	padding: var(--spacing-xs) var(--spacing-lg);
+
+	cursor: pointer;
+
+	&:hover {
+		border-color: color-mix(in srgb, currentColor 40%, transparent);
+	}
+
+	& > span {
+		all: unset;
+	}
 }
 
 input[type="checkbox"] {

@@ -1,0 +1,294 @@
+@use "shared/extends/style";
+@use "web/extends/store";
+
+// Differences from the original mockup:
+// - The live broadcast icon uses --bg-main-50 instead of --bg-hl to make it
+//   consistent with the rest of in-capsule content
+
+%-in-capsule {
+	background-color: var(--bg-main-50);
+	backdrop-filter: blur(20px);
+	border-radius: var(--border-radius);
+}
+
+body {
+	// These are put here, because some stuff in home page uses this
+	// TODO: not sure what causes the 4px
+	--carousel-arrow-size: calc(var(--icon-size) + var(--spacing-md) * 2 + 4px);
+	--carousel-section-spacing: 30px;
+}
+
+.broadcast_live_stream_icon {
+	--circle-size: 1em;
+	--offset: var(--spacing-md);
+
+	@extend %-in-capsule;
+
+	color: var(--accent-red);
+	font: var(--gpText-BodyMedium);
+	letter-spacing: 0;
+	box-shadow: none;
+	gap: var(--spacing-xs);
+	padding: var(--spacing-xs);
+
+	display: flex;
+	align-items: center;
+	inset-block-start: var(--offset);
+	inset-inline-start: var(--offset);
+
+	&::before {
+		content: "";
+
+		display: block;
+		width: var(--circle-size);
+		height: var(--circle-size);
+
+		background-color: currentColor;
+		border-radius: 100%;
+	}
+}
+
+.carousel_container {
+	--carousel-arrow-container-height: calc(
+		100% - var(--carousel-section-spacing) - var(--carousel-thumb-height)
+	);
+	--carousel-item-count: 4;
+	--carousel-item-width: 100%;
+	--carousel-thumb-height: 8px;
+
+	// calculations for image width
+	--item-count-x2f5: calc(var(--carousel-item-count) * 2.5);
+	--container-width: calc(
+		var(--store-page-width) - var(--carousel-arrow-size) * 2
+	);
+	--item-width: calc(
+		var(--container-width) - var(--spacing-md) * var(--item-count-x2f5)
+	);
+	--carousel-image-width: calc(var(--item-width) / var(--carousel-item-count));
+
+	.arrow {
+		background-image: none;
+		border-radius: var(--border-radius);
+		padding: 0 var(--spacing-sm);
+
+		display: flex;
+		align-items: center;
+		inset-block-start: 0;
+		width: unset;
+		height: var(--carousel-arrow-container-height);
+
+		&:hover {
+			background-color: var(--bg-main-20);
+		}
+
+		&.left {
+			--deg: 90deg;
+
+			inset-inline-start: 0;
+		}
+
+		&.right {
+			--deg: -90deg;
+
+			inset-inline-end: 0;
+		}
+
+		& > div {
+			@include style.icon("arrow");
+
+			transform: rotate(var(--deg));
+			// I wonder if this declines an HTTP request...
+			background-image: none;
+		}
+	}
+
+	.carousel_thumbs[style="visibility: hidden;"] ~ .arrow {
+		color: var(--fg-dim);
+
+		height: 100%;
+
+		pointer-events: none;
+	}
+
+	.carousel_items {
+		@include store.carousel;
+
+		& > * > * {
+			margin: 0;
+		}
+
+		&:not(.no_paging) > * {
+			transition: opacity var(--transition);
+
+			justify-content: space-between;
+			width: var(--carousel-item-width);
+		}
+
+		&:not(.no_paging) > :not(.focus) {
+			--carousel-item-width: calc(100% - var(--carousel-arrow-size) * 2);
+
+			inset-block-start: var(--spacing-lg);
+			inset-inline: var(--carousel-arrow-size);
+		}
+	}
+
+	.carousel_thumbs {
+		gap: var(--spacing-sm);
+		padding-block: var(--carousel-section-spacing) 0;
+
+		display: flex;
+		justify-content: center;
+		min-height: unset;
+
+		// Used in #module_top_new_releases
+		&[style="visibility: hidden;"] {
+			display: none;
+		}
+
+		& > div {
+			transition: var(--transition);
+			background-color: var(--bg-main);
+			border-radius: 40px;
+			margin: 0;
+
+			width: 36px;
+			height: var(--carousel-thumb-height);
+
+			&.focus {
+				background-color: var(--color-secondary);
+			}
+		}
+	}
+}
+
+.discount_block {
+	font: var(--gpText-HeadingSmall);
+	gap: var(--spacing-sm);
+
+	.discount_final_price {
+		color: var(--accent-green);
+		font: inherit;
+		line-height: 1;
+		padding: 0;
+	}
+
+	.discount_final_price.free,
+	&[data-discount="0"] .discount_final_price {
+		color: var(--fg-main);
+	}
+
+	.discount_pct {
+		background-color: var(--accent-green);
+		color: var(--bg-main);
+		font: inherit;
+		border-radius: var(--border-radius);
+		padding: 8px 12px;
+	}
+
+	.discount_original_price {
+		color: var(--bg-hover);
+		font: inherit;
+		line-height: 1;
+		text-decoration: line-through;
+
+		&::before {
+			display: none;
+		}
+	}
+
+	.discount_prices {
+		background-color: transparent;
+		padding: 0;
+
+		flex-direction: column;
+		align-items: start;
+		justify-content: space-between;
+	}
+}
+
+.ds_options {
+	--offset: var(--spacing-md);
+	--size: 1lh;
+
+	@extend %-in-capsule;
+
+	opacity: 1;
+	color: var(--fg-dim);
+	font: var(--gpText-HeadingLarge);
+	padding: 0;
+
+	display: none;
+	inset-block-start: var(--offset);
+	inset-inline-end: var(--offset);
+	width: var(--size);
+	height: var(--size);
+
+	&.ds_hover,
+	:hover > & {
+		display: flex;
+	}
+
+	&:hover {
+		background-color: var(--bg-hover);
+	}
+
+	& > div {
+		@include style.icon("settings");
+
+		background-image: none;
+		color: inherit;
+		margin: calc((var(--size) - var(--icon-size)) / 2);
+
+		position: unset;
+	}
+}
+
+.game_review_summary {
+	color: color-mix(in srgb, var(--accent-red) 50%, white);
+
+	&.mixed {
+		color: var(--accent-yellow);
+	}
+
+	&.positive {
+		color: var(--color-primary);
+	}
+
+	&.no_reviews,
+	&.not_enough_reviews {
+		color: var(--fg-dim);
+	}
+}
+
+.main_cap_discount,
+.main_cap_price {
+	@extend %-in-capsule;
+
+	padding: var(--spacing-sm);
+
+	inset-block-end: 0;
+
+	.discount_original_price {
+		color: var(--fg-dim);
+	}
+}
+
+.platform_img {
+	--icon-size: 25px;
+
+	@include style.icon("name");
+
+	background-image: none;
+
+	&.linux {
+		--icon-name: var(--icon-platform-linux);
+	}
+
+	&.mac {
+		--icon-name: var(--icon-platform-mac);
+	}
+
+	&.win {
+		--icon-name: var(--icon-platform-win);
+	}
+}

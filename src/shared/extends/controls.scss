@@ -193,6 +193,8 @@
 // TODO: really similiar to a button
 @mixin store-tag {
 	background-color: var(--bg-hover);
+	color: var(--fg-dim);
+	font: var(--gpText-BodySmall);
 	border-radius: var(--border-radius);
 	padding: 6.5px 13px;
 }
@@ -206,6 +208,8 @@
 
 @mixin tooltip-icon {
 	@include style.icon("info");
+
+	color: var(--fg-dim);
 
 	&:hover {
 		background-color: var(--fg-main);

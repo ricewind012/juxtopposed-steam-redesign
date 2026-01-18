@@ -1,0 +1,1069 @@
+@use "shared/extends/controls";
+@use "shared/extends/style";
+@use "web/extends/store";
+
+// Differences from the original mockup:
+// - capsules use --border-radius-large instead of --border-radius to match with
+//   the buttons inside them
+
+%-capsule {
+	background-color: var(--bg-main);
+	background-image: none;
+	border-radius: var(--border-radius-large);
+	padding: var(--spacing-md);
+}
+
+body.no_home_gutter.infinite_scrolling {
+	--capsule-info-gap: 17px;
+	--store-home-bg: #202b3c;
+	--store-home-section-gap: 70px;
+	// steam var
+	--store-page-width: 1388px;
+
+	background: linear-gradient(180deg, #040011 13.77%, var(--store-home-bg));
+	// BrowserView has a bug where a transparent background renders like shit(?)
+	background-color: var(--store-home-bg);
+	background-repeat: no-repeat;
+
+	.home_ctn.bottom_content,
+	#footer {
+		display: none;
+	}
+}
+
+.community_recommendations_by_steam_labs_ctn {
+	.community_recommendation_app {
+		@extend %-capsule;
+
+		gap: var(--capsule-info-gap);
+		box-shadow: none;
+
+		.right_col {
+			background-image: none;
+		}
+	}
+
+	.community_recommendations_block {
+		all: unset;
+
+		.review_box {
+			padding: 0;
+
+			position: unset;
+			height: 100%;
+
+			.author_block {
+				inset-block-end: var(--spacing-md);
+
+				.hours {
+					color: var(--fg-dim);
+					font: var(--gpText-BodySmall);
+				}
+
+				.persona_name {
+					margin-block-start: 2px;
+
+					a {
+						color: var(--fg-main);
+						font: var(--gpText-BodySmall);
+						margin: 0;
+					}
+				}
+			}
+
+			.avatar {
+				margin-inline-end: var(--spacing-xs);
+			}
+
+			.content {
+				color: var(--fg-main);
+				font: var(--gpText-BodyMedium);
+
+				height: 4lh;
+			}
+
+			.view_more {
+				text-align: start;
+
+				a {
+					@include controls.button;
+
+					font: var(--gpText-BodyMedium);
+				}
+			}
+		}
+	}
+
+	.community_recommendation_capsule {
+		background-color: transparent;
+		box-shadow: none;
+
+		flex-shrink: 0;
+
+		img,
+		video {
+			border-radius: var(--border-radius-large);
+		}
+
+		.capsule {
+			display: flex;
+			width: 616px;
+			height: 353px;
+		}
+
+		.ds_options {
+			--offset: 0;
+		}
+	}
+
+	.recommended_by_steam_labs_ctn {
+		margin-block-end: var(--carousel-section-spacing);
+
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		#community_recommendations_preferences_last_updated {
+			display: none;
+		}
+
+		.subtitle {
+			all: unset;
+		}
+	}
+}
+
+.content_hub_carousel_ctn {
+	.content_hub_capsule_ctn {
+		background: rgba(217, 217, 217, 0.01);
+		border-radius: var(--border-radius-large);
+		margin: 0;
+
+		width: var(--carousel-image-width);
+		height: var(--carousel-image-width);
+
+		$-colors: (
+			1: #171124,
+			2: #23374b,
+			3: #163f24,
+			4: #583c1a,
+		);
+
+		@each $n, $color in $-colors {
+			&:nth-child(#{$n}) {
+				--bg: #{$color};
+			}
+		}
+
+		img {
+			filter: none;
+			box-shadow: none;
+			border-radius: var(--border-radius-large);
+
+			height: 100%;
+		}
+	}
+
+	.gradient {
+		background: linear-gradient(
+			180deg,
+			color-mix(in srgb, var(--bg) 45%, transparent) 0%,
+			color-mix(in srgb, var(--bg) 80%, transparent) 100%
+		);
+		backdrop-filter: blur(1px);
+	}
+
+	.label {
+		all: unset;
+	}
+
+	.label_ctn {
+		transform: none;
+		transition: var(--transition);
+		color: var(--fg-main);
+		font: var(--gpText-HeadingMedium);
+		// Not in the original design, but a bit of visibility...
+		text-shadow: 0 1px 4px black;
+		padding: var(--spacing-lg);
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		inset: 0;
+		width: 100%;
+	}
+
+	.title {
+		color: var(--fg-main);
+		font: var(--gpText-HeadingSmall);
+		letter-spacing: 0;
+		text-transform: none;
+	}
+}
+
+.carousel_container {
+	// wrong layout, AMAZING
+	.home_page_content > &:first-child {
+		.arrow {
+			--top-offset: calc(1lh + var(--carousel-section-spacing));
+
+			font: var(--gpText-HeadingMedium);
+
+			inset-block-start: var(--top-offset);
+			height: calc(var(--carousel-arrow-container-height) - var(--top-offset));
+		}
+	}
+
+	&.maincap {
+		margin: 0;
+
+		height: unset;
+
+		.carousel_items {
+			box-shadow: none;
+
+			height: unset;
+		}
+	}
+
+	&.spotlight {
+		--carousel-item-count: 3;
+
+		.home_area_spotlight {
+			@extend %-capsule;
+
+			box-shadow: none;
+
+			height: unset;
+		}
+
+		.spotlight_body {
+			color: var(--fg-dim);
+			font: var(--gpText-BodyMedium);
+		}
+
+		.spotlight_col {
+			gap: var(--spacing-sm);
+
+			display: flex;
+			flex-direction: column;
+		}
+
+		.spotlight_content {
+			background-image: none;
+			padding: 0;
+
+			position: unset;
+			min-height: unset;
+		}
+
+		.spotlight_img {
+			border-radius: var(--border-radius-large);
+			margin-block-end: var(--spacing-sm);
+
+			width: var(--carousel-image-width);
+			height: unset;
+
+			a {
+				// Fix some bullshit CSS behavior
+				display: flex;
+				position: relative;
+				height: unset;
+			}
+
+			img {
+				width: 100%;
+			}
+		}
+
+		.spotilight_price {
+			margin-block-start: var(--spacing-sm);
+		}
+
+		.spotlight_title {
+			color: var(--fg-main);
+			font: var(--gpText-HeadingMedium);
+			letter-spacing: 0;
+			text-transform: none;
+			padding: 0;
+			margin-block: 0 var(--spacing-xs);
+		}
+
+		.store_capsule {
+			margin: 0;
+		}
+	}
+
+	.arrow {
+		// Seen in .basic_caps_carousel & .best_selling_vr_ctn
+		transform: none;
+	}
+}
+
+.deep_dive_key_tags {
+	color: var(--fg-dim);
+	border: none;
+	gap: var(--spacing-xs);
+	padding: 0;
+	margin-block-start: auto;
+
+	display: flex;
+	flex-wrap: wrap;
+	max-width: var(--carousel-image-width);
+	height: unset;
+
+	& > br {
+		display: none;
+	}
+
+	.deep_dive_tag {
+		all: unset;
+
+		@include controls.store-tag;
+	}
+}
+
+// I can't be removing this, but looks good enough, I guess
+.discovery_queue_static {
+	padding: 0;
+
+	.begin_exploring {
+		font: var(--gpText-BodyLarge);
+		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+		padding-block: var(--spacing-md);
+		margin-inline: 10%;
+
+		&::after {
+			height: 38px;
+		}
+	}
+
+	.dq_item {
+		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+	}
+
+	.dq_item_cap {
+		border-radius: var(--border-radius-large);
+	}
+}
+
+.friends_recently_purchased {
+	.avatars {
+		display: flex;
+
+		& > a {
+			margin-inline-end: var(--spacing-xs);
+
+			display: flex;
+		}
+
+		img {
+			border-radius: var(--border-radius);
+		}
+	}
+
+	.friends_container {
+		all: unset;
+	}
+}
+
+.home_cluster_ctn {
+	background-image: none;
+}
+
+// The thing after the footer
+.home_content {
+	background-color: var(--bg-main-50);
+	padding: var(--spacing-md);
+
+	&.single {
+		border-radius: var(--border-radius-large) var(--border-radius-large) 0 0;
+		padding-block-end: var(--spacing-sm);
+		margin-block-start: var(--store-home-section-gap);
+
+		.capsule {
+			border-radius: var(--border-radius-large);
+			box-shadow: none;
+			margin-block-end: var(--spacing-sm);
+		}
+
+		.gamelink > a {
+			display: inline-flex;
+		}
+
+		.screenshot {
+			border-radius: var(--border-radius-large);
+			margin: 0;
+
+			display: flex;
+
+			&:hover img {
+				transition: var(--transition);
+				box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+			}
+
+			img {
+				border-radius: inherit;
+			}
+		}
+
+		.screenshots {
+			--screenshots-gap: 7px;
+
+			// 17px = capsule height - screenshot height
+			margin-block: calc(17px / 2);
+			margin-inline-start: calc(var(--screenshots-gap) * 2);
+
+			display: inline-flex;
+			gap: var(--screenshots-gap);
+		}
+	}
+
+	&.single_buttonbar {
+		border: none;
+		border-radius: 0 0 var(--border-radius-large) var(--border-radius-large);
+		padding-block-start: 0;
+		margin: 0;
+
+		.btnv6_blue_hoverfade {
+			// TODO: unify maybe
+			text-align: center;
+			margin: 0;
+		}
+
+		.single_buttonbar_group {
+			gap: var(--spacing-sm);
+			margin: 0;
+		}
+	}
+
+	&:not(.single, .single_buttonbar) {
+		background-color: transparent;
+		padding: 0;
+		border-radius: var(--border-radius-large);
+
+		& + & {
+			margin-block-start: var(--store-home-section-gap);
+		}
+
+		&.twowide {
+			--item-count: 2;
+		}
+
+		&.fourwide {
+			--item-count: 4;
+		}
+
+		.home_content_item_info {
+			margin-block-start: var(--spacing-sm);
+		}
+
+		.home_content_item {
+			@extend %-capsule;
+
+			margin: 0;
+
+			width: unset;
+
+			img {
+				border-radius: var(--border-radius-large);
+
+				display: flex;
+			}
+		}
+
+		.home_content_items {
+			@include store.carousel;
+
+			color: var(--fg-dim);
+			gap: var(--spacing-md);
+			margin-block-start: var(--carousel-section-spacing);
+
+			display: grid;
+			grid-template-columns: repeat(var(--item-count), 1fr);
+			position: relative;
+
+			// Make it consistent with the rest, emulating disabled arrows...
+			&::before,
+			&::after {
+				content: "";
+
+				position: absolute;
+				inset-block-start: calc(50% - var(--icon-size) / 2);
+
+				@include style.icon("arrow");
+			}
+
+			&::before {
+				transform: rotate(90deg);
+
+				inset-inline-start: var(--spacing-sm);
+			}
+
+			&::after {
+				transform: rotate(-90deg);
+
+				inset-inline-end: var(--spacing-sm);
+			}
+		}
+
+		// Make it consistent with the rest of the page
+		.home_smallcap_title {
+			display: none;
+		}
+	}
+
+	.home_content_reason {
+		color: var(--fg-dim);
+		font: var(--gpText-BodySmall);
+		margin-block-end: var(--spacing-sm);
+	}
+}
+
+.home_ctn {
+	padding-block: calc(var(--store-home-section-gap) / 2);
+}
+
+#home_featured_and_recommended {
+	text-transform: uppercase;
+}
+
+.home_page_body_ctn {
+	margin-block-start: 104px;
+}
+
+.home_page_content {
+	width: var(--store-page-width);
+
+	&.special_offers {
+		margin-block-end: 0;
+	}
+}
+
+.home_page_content_title {
+	margin-block-end: var(--carousel-section-spacing);
+
+	display: flex;
+	justify-content: space-between;
+
+	&.nonresponsive_hidden {
+		display: none;
+	}
+
+	// HELP
+	$sel: ".btnv6_white_transparent";
+	#{$sel}#{$sel}#{$sel}#{$sel}#{$sel}#{$sel} {
+		margin-inline-start: var(--spacing-sm);
+	}
+
+	.right {
+		all: unset;
+
+		// Such order is seen in #browse_vr
+		order: 1;
+	}
+}
+
+.home_page_takeunder {
+	--shadow-color: rgba(0, 0, 0, 0.5);
+
+	transition: var(--transition);
+	box-shadow: 0 2px 8px var(--shadow-color);
+
+	// im so sorry XDDD
+	max-width: unset;
+
+	&:hover {
+		box-shadow: 0 4px 16px var(--shadow-color);
+	}
+}
+
+// TODO: this is in store.css, maybe move to store/shared.scss one day ?
+.page_content_ctn.dark {
+	background-color: transparent;
+	padding: 0;
+
+	&:not(:first-child, :last-child) {
+		margin-block-start: var(--store-home-section-gap);
+	}
+}
+
+.recommended_by_steam_labs_ctn {
+	.btnv6_white_transparent {
+		margin: 0;
+	}
+
+	.lower_left_block {
+		display: flex;
+		align-items: center;
+	}
+}
+
+.recommended_creators_ctn {
+	.recommended_creators_container {
+		background: none;
+		border: none;
+		padding: 0;
+		margin-block-start: auto;
+
+		position: relative;
+		height: 48px;
+	}
+
+	.actions {
+		display: flex;
+		inset: 0;
+	}
+
+	.avatars {
+		display: flex;
+		align-items: end;
+		inset: 0;
+
+		& > a {
+			margin-inline-end: var(--spacing-sm);
+
+			height: 48px;
+		}
+
+		img {
+			border-radius: var(--border-radius);
+			box-shadow: none;
+		}
+	}
+
+	.discount_block {
+		justify-content: start;
+	}
+}
+
+.store_capsule {
+	@extend %-capsule;
+
+	gap: var(--spacing-sm);
+	box-shadow: none;
+
+	display: flex;
+	flex-direction: column;
+	width: unset;
+
+	.capsule {
+		border-radius: var(--border-radius-large);
+		// See below
+		padding: 0;
+
+		// Fix the live broadcast icon
+		position: unset;
+		width: var(--carousel-image-width);
+		height: calc(var(--carousel-image-width) / 2);
+
+		& > img {
+			// See above
+			position: unset;
+			height: 100%;
+		}
+	}
+
+	.dailydeal_desc {
+		color: var(--fg-dim);
+		font: var(--gpText-BodyMedium);
+		padding: 0;
+	}
+
+	.discount_block {
+		padding: 0;
+	}
+}
+
+.store_main_capsule {
+	@extend %-capsule;
+
+	gap: var(--capsule-info-gap);
+
+	.app_name {
+		color: var(--fg-main);
+		font: var(--gpText-HeadingLarge);
+		padding: 0;
+		margin-block-end: 11px;
+		// For the button
+		margin-inline-end: calc(1lh + var(--spacing-sm));
+
+		height: unset;
+
+		& > div {
+			all: unset;
+		}
+	}
+
+	.capsule {
+		border-radius: var(--border-radius-large);
+		box-shadow: none;
+		margin: 0;
+
+		width: 766px;
+		height: 458px;
+
+		.screenshot {
+			width: inherit;
+			height: inherit;
+		}
+	}
+
+	.discount_block {
+		margin-block-start: auto;
+
+		position: unset;
+	}
+
+	.info {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.platforms {
+		opacity: 1;
+		color: var(--fg-dim);
+		gap: var(--spacing-xs);
+
+		// Fix some bullshit CSS behavior
+		display: flex;
+		inset-inline-end: var(--spacing-md);
+		inset-block-end: var(--spacing-md);
+	}
+
+	.reason {
+		padding: 0;
+		margin: 0;
+		margin-block-start: var(--capsule-info-gap);
+
+		width: unset;
+
+		.avatar > img {
+			--size: 48px;
+
+			border: none;
+			border-radius: var(--border-radius);
+			margin: 0;
+			margin-inline-end: var(--spacing-sm);
+
+			width: var(--size);
+			height: var(--size);
+		}
+
+		.main {
+			color: var(--fg-main);
+			font: var(--gpText-BodyMedium);
+			padding: 0;
+
+			strong {
+				color: var(--accent-green);
+				font: inherit;
+			}
+		}
+
+		.additional,
+		.tags {
+			gap: 4px;
+			margin-block-start: var(--capsule-info-gap);
+
+			display: flex;
+		}
+
+		.additional > div,
+		.tags > span {
+			@include controls.store-tag;
+
+			margin: 0;
+		}
+
+		.tags {
+			height: unset;
+		}
+	}
+
+	.screenshots {
+		gap: 7px;
+		margin: 0;
+
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(2, 1fr);
+		width: unset;
+		max-height: unset;
+
+		& > div {
+			all: unset;
+
+			// Fix some bullshit CSS behavior
+			display: flex;
+
+			& > div {
+				opacity: 1;
+				border-radius: var(--border-radius-large);
+
+				width: 231px;
+				height: 111px;
+			}
+		}
+	}
+}
+
+.tab_container {
+	--tab-container-spacing: 8px;
+	--tab-item-border-radius: var(--border-radius-large);
+	--tab-item-focus-bg: var(--bg-main);
+	--tab-right-col-spacing: var(--spacing-md);
+
+	background-image: none;
+	margin-inline-end: 0;
+
+	& > div {
+		margin-block: 0;
+	}
+
+	.store_horizontal_minislider_ctn {
+		height: unset;
+
+		.slider_left,
+		.slider_right {
+			display: none;
+		}
+	}
+
+	.tab_control {
+		padding: 0;
+		margin-inline-end: var(--spacing-lg);
+
+		& > label {
+			gap: var(--spacing-xs);
+
+			display: flex;
+			align-items: center;
+		}
+	}
+
+	%-tab-item {
+		background-color: var(--bg-main-20);
+		border-radius: var(--tab-item-border-radius);
+		padding: var(--tab-container-spacing);
+	}
+
+	.tab_controls {
+		@extend %-tab-item;
+
+		margin-block-end: var(--spacing-sm);
+	}
+
+	.tab_item {
+		@extend %-tab-item;
+
+		gap: var(--spacing-sm);
+		margin: 0;
+		margin-block-end: var(--spacing-sm);
+
+		display: flex;
+		height: unset;
+
+		&.focus {
+			background: var(--tab-item-focus-bg);
+
+			&::after {
+				content: "";
+
+				position: absolute;
+				inset-block: 0;
+				inset-inline-end: calc(
+					var(--tab-right-col-spacing) * -1 - var(--tab-item-border-radius)
+				);
+				width: calc(
+					var(--tab-right-col-spacing) + var(--tab-item-border-radius) * 2
+				);
+
+				background-color: var(--tab-item-focus-bg);
+			}
+		}
+
+		.discount_block[data-discount="0"] .discount_final_price {
+			// Align with the game name
+			line-height: inherit;
+		}
+
+		.ds_options {
+			inset: unset;
+			inset-block-start: var(--tab-container-spacing);
+			inset-inline-start: var(--tab-container-spacing);
+		}
+
+		.platform_img {
+			--icon-size: inherit;
+
+			opacity: 1;
+			margin-block-start: var(--spacing-xs);
+		}
+
+		.release_date {
+			color: var(--fg-dim);
+			font: var(--gpText-BodySmall);
+
+			inset-block-end: var(--tab-container-spacing);
+			inset-inline-end: var(--tab-container-spacing);
+		}
+	}
+
+	.tab_item_cap {
+		display: flex;
+
+		position: unset;
+		height: 73px;
+	}
+
+	.tab_item_cap_img {
+		border-radius: var(--border-radius-large);
+	}
+
+	.tab_item_content {
+		padding: 0;
+
+		flex-grow: 1;
+	}
+
+	.tab_item_discount {
+		margin: 0;
+
+		order: 1;
+		justify-content: start;
+		width: 175px;
+		height: min-content;
+	}
+
+	.tab_item_name {
+		color: var(--fg-main);
+		font: var(--gpText-HeadingSmall);
+	}
+
+	.tab_item_top_tags {
+		color: var(--fg-dim);
+		font: var(--gpText-BodySmall);
+		margin-block-start: var(--spacing-xs);
+
+		height: unset;
+	}
+
+	.tab_preview {
+		@extend %-tab-item;
+
+		transition: var(--transition);
+		background-color: var(--tab-item-focus-bg);
+
+		inset: 0;
+
+		.screenshot {
+			border-radius: var(--border-radius-large);
+			margin-block-start: var(--spacing-xs);
+
+			height: 205px;
+		}
+
+		.tab_review_summary {
+			background-color: transparent;
+			color: var(--fg-dim);
+			padding: 0;
+			margin-block-start: var(--spacing-sm);
+		}
+
+		.tab_title {
+			color: var(--fg-main);
+			font: var(--gpText-HeadingSmall);
+			padding: 0;
+			margin-block-end: var(--spacing-sm);
+
+			height: unset;
+		}
+
+		.tags {
+			gap: var(--spacing-xs);
+			margin-block: var(--spacing-sm);
+
+			display: flex;
+			flex-wrap: wrap;
+			height: unset;
+
+			& > a {
+				@include controls.store-tag;
+
+				margin: 0;
+			}
+		}
+	}
+
+	#tab_preview_container {
+		background-image: none;
+		border-radius: 0;
+		margin: 0;
+	}
+
+	.tab_see_more {
+		background-color: transparent;
+		gap: var(--spacing-sm);
+		padding: 0;
+
+		display: flex;
+		align-items: center;
+		justify-content: end;
+	}
+
+	.top_sellers_info {
+		@include controls.tooltip-icon;
+
+		margin-inline-start: auto;
+
+		flex-grow: 0;
+
+		& > img {
+			display: none;
+		}
+	}
+
+	.topsellers_see_more:not([style="display: none;"]) {
+		gap: var(--spacing-sm);
+
+		display: flex;
+		align-items: center;
+	}
+}
+
+.top_new_releases {
+	margin: 0;
+
+	.top_new_releases_background {
+		display: none;
+	}
+
+	.top_new_releases_banner_ctn {
+		margin: 0;
+		margin-block-end: var(--carousel-section-spacing);
+
+		a {
+			background: transparent;
+			box-shadow: none;
+
+			text-align: start;
+			height: unset;
+		}
+
+		.dateline {
+			color: var(--fg-dim);
+			font: var(--gpText-BodyMedium);
+			letter-spacing: 0;
+			text-transform: none;
+		}
+
+		.title {
+			color: var(--fg-main);
+			font: var(--gpText-HeadingMedium);
+			letter-spacing: 0;
+			text-shadow: none;
+			text-transform: none;
+		}
+	}
+}
