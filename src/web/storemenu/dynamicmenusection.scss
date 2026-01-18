@@ -1,0 +1,47 @@
+@use "shared/extends/style";
+@use "shared/extends/text";
+
+#HorizontalRule {
+	opacity: 1;
+	background-image: var(--storemenu_border-gradient);
+	margin-block: var(--spacing-xs);
+}
+
+#Link {
+	color: inherit;
+	font: inherit;
+}
+
+:where(#LinkColumn) {
+	gap: var(--spacing-xs);
+	margin: 0;
+}
+
+#SectionTitle {
+	display: none;
+}
+
+#SectionWithLinkColumn {
+	gap: var(--spacing-lg);
+}
+
+#ViewAllLink {
+	@include text.link;
+
+	font: inherit;
+	gap: var(--spacing-xs);
+	margin: 0;
+
+	display: flex;
+	align-items: center;
+
+	svg {
+		@include style.icon("arrow", "path");
+
+		margin: 0;
+
+		&:not([style]) {
+			transform: rotate(-90deg);
+		}
+	}
+}

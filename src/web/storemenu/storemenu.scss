@@ -1,0 +1,87 @@
+@use "shared/extends/controls";
+@use "shared/extends/style";
+
+:root {
+	--storemenu_border-gradient: linear-gradient(
+		90deg,
+		var(--fg-dim),
+		transparent
+	);
+	--storemenu_button-gap: 7px;
+}
+
+#Backdrop {
+	background-color: var(--bg-main-50);
+	backdrop-filter: blur(20px);
+
+	@media (prefers-reduced-motion: no-preference) {
+		transition-duration: 250ms;
+	}
+}
+
+#DynamicMenuButtons {
+	gap: var(--storemenu_button-gap);
+}
+
+#MenuButton {
+	@include controls.dropdown;
+
+	background-color: transparent;
+	color: var(--fg-main);
+	font: var(--gpText-BodyLarge);
+	text-shadow: none;
+
+	&:not(#FlyoutButton) {
+		color: var(--fg-main);
+
+		&::after {
+			display: none;
+		}
+	}
+
+	&#Active {
+		background-color: var(--color-secondary);
+
+		#MenuUnderscoreCtn {
+			display: none;
+		}
+	}
+
+	svg {
+		display: none;
+	}
+}
+
+#RightButtons {
+	gap: var(--storemenu_button-gap);
+	padding: 0;
+	margin: 0;
+
+	#CartButton {
+		margin: 0;
+	}
+
+	#ItemCount {
+		color: var(--fg-dim);
+		font: inherit;
+		margin: 0;
+	}
+}
+
+#StoreMenu {
+	background: var(--bg-tertiary);
+	color: inherit;
+	font: inherit;
+	border: none;
+	box-shadow: none;
+	padding: 8px 10px;
+
+	&#Hidden {
+		height: unset;
+	}
+
+	#Content {
+		width: unset;
+		height: unset;
+	}
+}

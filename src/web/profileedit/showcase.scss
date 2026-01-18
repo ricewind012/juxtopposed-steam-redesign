@@ -44,13 +44,6 @@
 
 	.btn_grey_black {
 		@include controls.button;
-
-		// TODO: unify later
-		span {
-			font: var(--gpText-BodyLarge);
-			text-align: center;
-			padding: 0;
-		}
 	}
 
 	.emoticon_container {

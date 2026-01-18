@@ -30,8 +30,7 @@
 
 	background: var(--bg);
 	color: var(--fg);
-	// Must be 1.4, see --gpText
-	line-height: inherit;
+	font: var(--gpText-BodyLarge);
 	border-radius: var(--border-radius);
 	// --spacing-sm
 	padding: 11px;

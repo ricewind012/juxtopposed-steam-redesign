@@ -1,0 +1,36 @@
+#CapsuleList {
+	gap: var(--spacing-xs);
+}
+
+#ItemCapsule {
+	background: var(--bg-main-20);
+	border-radius: var(--border-radius);
+	gap: 0;
+
+	// For border-radius
+	overflow: hidden;
+	height: unset;
+
+	&:hover {
+		background: var(--bg-main-50);
+	}
+
+	#Capsule {
+		width: 242px;
+	}
+
+	#Content {
+		margin: var(--spacing-sm);
+	}
+
+	#DiscountCtn {
+		color: var(--fg-dim);
+		font: var(--gpText-BodyLarge);
+	}
+
+	#Title {
+		color: var(--fg-main);
+		font: var(--gpText-HeadingSmall);
+		margin-block-end: var(--spacing-xs);
+	}
+}

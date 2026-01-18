@@ -1,3 +1,9 @@
+@mixin capsule-icon {
+	background-color: var(--bg-main-50);
+	backdrop-filter: blur(20px);
+	border-radius: var(--border-radius);
+}
+
 @mixin carousel {
 	--icon-size: 24px;
 
@@ -6,4 +12,65 @@
 	border-radius: var(--border-radius-large);
 	padding-block: var(--spacing-lg);
 	padding-inline: var(--carousel-arrow-size);
+}
+
+/// All args are selectors.
+@mixin category($gradient, $label) {
+	background: rgba(217, 217, 217, 0.01);
+	border-radius: var(--border-radius-large);
+	margin: 0;
+
+	$-colors: (
+		1: #171124,
+		2: #0e1325,
+		3: #23374b,
+		4: #163f24,
+		5: #583c1a,
+		6: #3b1a58,
+	);
+
+	@each $n, $color in $-colors {
+		&:nth-child(#{$n}) {
+			--bg: #{$color};
+		}
+	}
+
+	&:hover {
+		img {
+			transform: scale(1.05);
+			transition: var(--transition);
+		}
+
+		#{$gradient} {
+			opacity: 0.5;
+		}
+	}
+
+	img {
+		transition: var(--transition);
+	}
+
+	#{$gradient} {
+		transition: var(--transition);
+		background: linear-gradient(
+			180deg,
+			color-mix(in srgb, var(--bg) 45%, transparent) 0%,
+			color-mix(in srgb, var(--bg) 80%, transparent) 100%
+		);
+		backdrop-filter: blur(1px);
+	}
+
+	#{$label} {
+		transform: none;
+		color: var(--fg-main);
+		font: var(--gpText-HeadingMedium);
+		// Not in the original design, but a bit of visibility...
+		text-shadow: 0 1px 4px black;
+		padding: var(--spacing-lg);
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		inset: 0;
+	}
 }

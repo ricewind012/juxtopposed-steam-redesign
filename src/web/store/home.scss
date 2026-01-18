@@ -87,8 +87,6 @@ body.no_home_gutter.infinite_scrolling {
 
 				a {
 					@include controls.button;
-
-					font: var(--gpText-BodyMedium);
 				}
 			}
 		}
@@ -133,44 +131,18 @@ body.no_home_gutter.infinite_scrolling {
 	}
 }
 
-.content_hub_carousel_ctn {
-	.content_hub_capsule_ctn {
-		background: rgba(217, 217, 217, 0.01);
+.content_hub_capsule_ctn {
+	@include store.category($gradient: ".gradient", $label: ".label_ctn");
+
+	width: var(--carousel-image-width);
+	height: var(--carousel-image-width);
+
+	img {
+		filter: none;
+		box-shadow: none;
 		border-radius: var(--border-radius-large);
-		margin: 0;
 
-		width: var(--carousel-image-width);
-		height: var(--carousel-image-width);
-
-		$-colors: (
-			1: #171124,
-			2: #23374b,
-			3: #163f24,
-			4: #583c1a,
-		);
-
-		@each $n, $color in $-colors {
-			&:nth-child(#{$n}) {
-				--bg: #{$color};
-			}
-		}
-
-		img {
-			filter: none;
-			box-shadow: none;
-			border-radius: var(--border-radius-large);
-
-			height: 100%;
-		}
-	}
-
-	.gradient {
-		background: linear-gradient(
-			180deg,
-			color-mix(in srgb, var(--bg) 45%, transparent) 0%,
-			color-mix(in srgb, var(--bg) 80%, transparent) 100%
-		);
-		backdrop-filter: blur(1px);
+		height: 100%;
 	}
 
 	.label {
@@ -178,26 +150,7 @@ body.no_home_gutter.infinite_scrolling {
 	}
 
 	.label_ctn {
-		transform: none;
-		transition: var(--transition);
-		color: var(--fg-main);
-		font: var(--gpText-HeadingMedium);
-		// Not in the original design, but a bit of visibility...
-		text-shadow: 0 1px 4px black;
-		padding: var(--spacing-lg);
-
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		inset: 0;
 		width: 100%;
-	}
-
-	.title {
-		color: var(--fg-main);
-		font: var(--gpText-HeadingSmall);
-		letter-spacing: 0;
-		text-transform: none;
 	}
 }
 

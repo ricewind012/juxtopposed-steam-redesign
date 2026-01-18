@@ -5,12 +5,6 @@
 // - The live broadcast icon uses --bg-main-50 instead of --bg-hl to make it
 //   consistent with the rest of in-capsule content
 
-%-in-capsule {
-	background-color: var(--bg-main-50);
-	backdrop-filter: blur(20px);
-	border-radius: var(--border-radius);
-}
-
 body {
 	// These are put here, because some stuff in home page uses this
 	// TODO: not sure what causes the 4px
@@ -22,7 +16,7 @@ body {
 	--circle-size: 1em;
 	--offset: var(--spacing-md);
 
-	@extend %-in-capsule;
+	@include store.capsule-icon;
 
 	color: var(--accent-red);
 	font: var(--gpText-BodyMedium);
@@ -210,7 +204,7 @@ body {
 	--offset: var(--spacing-md);
 	--size: 1lh;
 
-	@extend %-in-capsule;
+	@include store.capsule-icon;
 
 	opacity: 1;
 	color: var(--fg-dim);
@@ -262,7 +256,7 @@ body {
 
 .main_cap_discount,
 .main_cap_price {
-	@extend %-in-capsule;
+	@include store.capsule-icon;
 
 	padding: var(--spacing-sm);
 

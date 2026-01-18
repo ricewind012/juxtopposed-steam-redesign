@@ -1,0 +1,34 @@
+#DiscountBlock {
+	font: var(--gpText-HeadingSmall);
+	gap: var(--spacing-sm);
+}
+
+#FinalPrice {
+	color: var(--accent-green);
+	line-height: 1;
+}
+
+#DiscountPct {
+	background-color: var(--accent-green);
+	color: var(--bg-main);
+	font: inherit;
+	border-radius: var(--border-radius);
+	padding: 8px 12px;
+}
+
+#OriginalPrice {
+	color: var(--fg-dim);
+	text-decoration: line-through;
+
+	&::before {
+		display: none;
+	}
+}
+
+#Prices {
+	gap: 0;
+
+	flex-direction: column;
+	align-items: start;
+	justify-content: space-between;
+}

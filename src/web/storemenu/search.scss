@@ -1,0 +1,100 @@
+@use "shared/extends/controls";
+@use "shared/extends/style";
+@use "web/extends/store";
+
+// ??? you guys maybe wanna unify this into one component ?
+#CategorySuggestion {
+	@include store.category($gradient: "#BackgroundGradient", $label: "#Content");
+
+	img {
+		opacity: 1;
+	}
+
+	#Content {
+		background-color: transparent;
+		text-transform: none;
+	}
+
+	#TiledGradient {
+		background-image: none;
+	}
+}
+
+#InnerPosition {
+	inset-block-start: 8px;
+}
+
+#SearchBar {
+	margin-inline: calc(var(--storemenu_button-gap) + 5%);
+
+	justify-content: center;
+}
+
+#SearchForm {
+	// this design sucks... or I forgot my shit fucking code
+	--spacing-sm: 12px;
+
+	background-color: var(--bg-main-20);
+	color: var(--color-secondary);
+	border-radius: var(--border-radius);
+
+	position: relative;
+	height: unset;
+	max-width: 100%;
+}
+
+#SearchIcon {
+	all: unset;
+
+	position: absolute;
+	inset-block-start: var(--spacing-sm);
+	inset-inline-end: var(--spacing-md);
+
+	svg {
+		@include style.icon("search", "path");
+	}
+}
+
+#SearchInput {
+	@include controls.search-input;
+
+	color: var(--color-secondary);
+
+	&:focus-visible {
+		box-shadow: none;
+	}
+
+	&::placeholder {
+		color: inherit;
+	}
+}
+
+#Suggestions {
+	background: var(--bg-tertiary);
+	border-radius: 0 0 var(--border-radius) var(--border-radius);
+	box-shadow: none;
+	gap: var(--spacing-lg);
+	padding: var(--spacing-md);
+
+	#AdvancedSearch {
+		@include controls.button($variant: "primary");
+	}
+
+	#SectionTitle {
+		color: var(--fg-main);
+		font: var(--gpText-HeadingSmall);
+		margin-block-end: var(--spacing-xs);
+	}
+
+	#SuggestionList {
+		gap: var(--spacing-sm);
+	}
+
+	#SuggestionTextList {
+		color: var(--fg-dim);
+	}
+}
+
+#TextLink {
+	text-decoration: none;
+}

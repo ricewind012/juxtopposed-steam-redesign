@@ -1,0 +1,10 @@
+#Popover {
+	height: unset;
+	// 274px = largest out of sections (categories)
+	min-height: calc(274px + var(--spacing-lg) * 2);
+}
+
+#PopoverContent {
+	padding: 0;
+	margin: var(--spacing-lg) auto;
+}

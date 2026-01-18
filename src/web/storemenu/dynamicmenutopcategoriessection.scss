@@ -1,0 +1,65 @@
+@use "shared/extends/controls";
+@use "web/extends/store";
+
+// ??? you guys maybe wanna unify this into one component ?
+#CategoryLink {
+	@include store.category(
+		$gradient: "#Gradient",
+		$label: "#CategoryTitleAlign"
+	);
+
+	box-shadow: none;
+
+	max-width: unset;
+	// its width / 1.5
+	max-height: 149px;
+
+	#CategoryTileImage {
+		filter: none;
+	}
+
+	#CategoryTitle {
+		all: unset;
+	}
+
+	#Gradient {
+		box-shadow: none;
+	}
+}
+
+#ExtraPadding {
+	padding: 0;
+}
+
+#FullCategoryList {
+	border-block-start: 1px solid;
+	border-image: var(--storemenu_border-gradient) 1;
+	gap: var(--spacing-sm);
+	padding-block-start: var(--spacing-xs);
+	margin-block-start: var(--spacing-xs);
+}
+
+#TagLink {
+	@include controls.store-tag;
+
+	height: unset;
+}
+
+#TagLinks {
+	gap: var(--spacing-xs);
+
+	height: unset;
+}
+
+#TagLinksContainer {
+	gap: var(--spacing-lg);
+	margin-block-end: var(--spacing-lg);
+
+	align-items: center;
+}
+
+#TopCategories {
+	padding-block-end: var(--spacing-sm);
+
+	max-height: unset;
+}

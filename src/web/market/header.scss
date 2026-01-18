@@ -81,7 +81,6 @@
 .item_market_action_button_contents {
 	@include controls.button("primary");
 
-	font: var(--gpText-BodyLarge);
 	box-shadow: var(--button-shadow);
 
 	float: unset;

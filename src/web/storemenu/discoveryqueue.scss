@@ -1,0 +1,80 @@
+@use "shared/extends/controls";
+@use "shared/extends/style";
+@use "web/extends/store";
+
+#DiscoveryQueue {
+	--badge-offset: var(--spacing-md);
+	--overlay-bg: var(--bg-main);
+
+	border-radius: var(--border-radius);
+	padding: var(--spacing-md);
+	margin: 0;
+
+	&:hover {
+		--overlay-bg: var(--bg-hover);
+	}
+
+	#BackgroundOverlay {
+		background-image: linear-gradient(
+			270deg,
+			transparent 37.15%,
+			var(--overlay-bg) 81.31%
+		);
+	}
+
+	#LeftColumn {
+		margin: 0;
+
+		svg {
+			fill: currentColor;
+		}
+	}
+
+	#New {
+		@include store.capsule-icon;
+
+		color: var(--accent-green);
+		font: var(--gpText-BodyMedium);
+		letter-spacing: 0;
+		padding: var(--spacing-xs);
+
+		inset-block-start: var(--badge-offset);
+		inset-inline-end: var(--badge-offset);
+	}
+
+	#RightColumn {
+		gap: var(--spacing-xs);
+
+		#ActionButton {
+			@include controls.button($variant: "primary");
+
+			gap: var(--spacing-xs);
+			margin-block-start: var(--spacing-md);
+
+			svg {
+				@include style.icon("arrow");
+
+				transform: rotate(-90deg);
+				fill: currentColor;
+			}
+
+			#ButtonText {
+				all: unset;
+			}
+		}
+
+		#Description {
+			color: var(--fg-dim);
+			font: var(--gpText-BodyMedium);
+		}
+
+		#Title {
+			color: inherit;
+			font: var(--gpText-HeadingSmall);
+		}
+	}
+}
+
+#RecommendationTwoCol {
+	gap: var(--spacing-lg);
+}
