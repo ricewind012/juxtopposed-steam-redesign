@@ -1,0 +1,243 @@
+@use "shared/extends/carousel";
+@use "shared/extends/controls";
+@use "shared/extends/style";
+
+@keyframes attention {
+	0% {
+		--libraryhomeshowcases_drag-handle-pos-y: 0;
+	}
+
+	50% {
+		--libraryhomeshowcases_drag-handle-pos-y: calc(var(--icon-size) / -2);
+	}
+
+	100% {
+		--libraryhomeshowcases_drag-handle-pos-y: 0;
+	}
+}
+
+@property --libraryhomeshowcases_drag-handle-pos-y {
+	syntax: "<length>";
+	inherits: false;
+	initial-value: 0;
+}
+
+#AddShowcase {
+	@include controls.button;
+
+	opacity: 1;
+
+	justify-content: center;
+
+	svg {
+		display: none;
+	}
+}
+
+#AddShowcaseRow {
+	margin-block-end: 70px;
+
+	#Rule {
+		// Keep the button centered
+		visibility: hidden;
+	}
+}
+
+#DoneReordering {
+	margin-block: 0 70px;
+}
+
+#EmptyMessage {
+	--header-height: 32px;
+
+	#Message {
+		font: var(--gpText-BodyLarge);
+		margin-block-start: calc(var(--header-height) / 2);
+
+		inset-inline-start: 100px;
+	}
+
+	#ShowcaseArrow {
+		inset-block-start: var(--header-height);
+		height: 100%;
+
+		line,
+		path {
+			stroke: var(--fg-dim);
+		}
+	}
+}
+
+#Showcase {
+	border: none;
+	padding: 0;
+
+	position: relative;
+
+	&:not(#EmptyShowcase) {
+		#ShowcaseGrid {
+			@include carousel.container;
+		}
+	}
+
+	#ChildrenContainer {
+		--pageablecontainer_header-offset: 0px;
+
+		margin: 0;
+	}
+}
+
+#ShowcaseHeader {
+	--drag-handle-offset: calc(var(--icon-size) + var(--spacing-sm));
+
+	font: var(--gpText-HeadingSmall);
+	border: none;
+	gap: var(--spacing-sm);
+	padding: 0;
+	padding-inline-end: var(--drag-handle-offset);
+	margin-block-end: var(--carousel-section-spacing);
+
+	position: unset;
+
+	#ShowcaseOuter#DragElement & {
+		background-color: var(--bg-main);
+		border-radius: var(--border-radius);
+		box-shadow: none;
+		padding-inline-start: var(--spacing-md);
+		padding-inline-end: calc(var(--drag-handle-offset) + var(--spacing-md));
+		margin-inline: calc(var(--spacing-md) * -1);
+	}
+
+	&#Reordering {
+		background-color: transparent;
+
+		#Rule {
+			opacity: 1;
+		}
+	}
+
+	.DialogDropDown {
+		font: inherit;
+
+		&:not(:hover) {
+			background-color: transparent;
+		}
+	}
+
+	// #CollectionDropDown parent
+	& > .Focusable {
+		margin-inline-end: auto;
+	}
+
+	& > :not(#Rule) {
+		z-index: 1;
+	}
+
+	#Collapser {
+		@include carousel.button($child: "svg", $icon: "arrow");
+
+		background-color: transparent;
+		margin: 0;
+
+		svg {
+			transform: none;
+
+			&[style="transform: rotate(90deg);"] {
+				transform: rotate(-180deg);
+			}
+
+			polyline {
+				display: none;
+			}
+		}
+	}
+
+	#CollectionDropDown {
+		margin: 0;
+		margin-inline-start: calc(var(--spacing-md) * -1);
+
+		flex-grow: 1;
+	}
+
+	#CountDisplay {
+		color: var(--fg-dim);
+		font: inherit;
+		margin-inline-start: var(--spacing-xs);
+	}
+
+	// Seen when reordering
+	#DeleteButton {
+		@include carousel.button($child: "svg", $icon: "delete");
+
+		opacity: 1;
+	}
+
+	#DragHandle {
+		display: none;
+	}
+
+	#PageButtons {
+		margin: 0;
+		// --spacing-xs = header dropdown vertical spacing
+		margin-block-start: calc(
+			var(--pageablecontainer_header-offset) + var(--spacing-xs) * 2
+		);
+
+		justify-content: space-between;
+		position: absolute;
+		inset: 0;
+		z-index: 1;
+
+		pointer-events: none;
+
+		& > div {
+			--carousel-arrow-container-height: 100%;
+
+			@include carousel.arrow(
+				$left: "&#PageLeft",
+				$right: "&#PageRight",
+				$child: "svg"
+			);
+
+			opacity: 1;
+			margin: 0;
+
+			pointer-events: all;
+
+			&#Disabled {
+				opacity: 0.5;
+
+				pointer-events: none;
+			}
+		}
+	}
+
+	#Rule {
+		@include style.icon("drag-handle");
+
+		position: absolute;
+		inset-inline-end: 0;
+
+		width: 100%;
+		mask-repeat: no-repeat;
+		mask-position: 100% var(--libraryhomeshowcases_drag-handle-pos-y);
+	}
+
+	// Give attention to the handle, because IDK how else to do it here
+	@media not (prefers-reduced-motion) {
+		&:not(#Reordering) #Rule:hover {
+			animation: attention 0.5s ease-in-out;
+			animation-iteration-count: 2;
+		}
+	}
+}
+
+#ShowcaseOuter {
+	&:not(:last-child) {
+		margin-block-end: 70px;
+	}
+
+	#Reordering & {
+		margin: 0;
+	}
+}

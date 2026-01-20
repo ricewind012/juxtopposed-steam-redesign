@@ -27,13 +27,9 @@
 	@include controls.dropdown;
 
 	background-color: transparent;
-	color: var(--fg-main);
-	font: var(--gpText-BodyLarge);
 	text-shadow: none;
 
 	&:not(#FlyoutButton) {
-		color: var(--fg-main);
-
 		&::after {
 			display: none;
 		}

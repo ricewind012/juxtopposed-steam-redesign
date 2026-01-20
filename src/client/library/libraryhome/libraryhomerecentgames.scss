@@ -1,0 +1,24 @@
+#RecentGame {
+	&:not(:last-child) {
+		margin-inline-end: var(--spacing-md);
+	}
+
+	#AddedDate {
+		color: var(--fg-dim);
+		font: var(--gpText-BodySmall);
+	}
+
+	#EmptyDate {
+		font: var(--gpText-BodySmall);
+
+		height: 1lh;
+	}
+}
+
+#RecentGameMediaContainer {
+	margin-block-start: 8px;
+}
+
+#RecentGames {
+	margin: 0;
+}

@@ -60,9 +60,6 @@
 #MenuHeader {
 	@include controls.dropdown;
 
-	color: var(--fg-main);
-	font: var(--gpText-BodyLarge);
-
 	width: unset;
 	height: unset;
 }

@@ -4,16 +4,6 @@
 	border-radius: var(--border-radius);
 }
 
-@mixin carousel {
-	--icon-size: 24px;
-
-	background-color: var(--bg-main-20);
-	font: var(--gpText-HeadingSmall);
-	border-radius: var(--border-radius-large);
-	padding-block: var(--spacing-lg);
-	padding-inline: var(--carousel-arrow-size);
-}
-
 /// All args are selectors.
 @mixin category($gradient, $label) {
 	background: rgba(217, 217, 217, 0.01);

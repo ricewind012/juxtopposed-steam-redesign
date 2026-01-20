@@ -45,6 +45,15 @@
 	--gpText-BodyMedium: normal 400 14px/1.4 "Motiva Sans", Arial, Sans-serif;
 	--gpText-BodySmall: normal 400 12px/1.4 "Motiva Sans", Arial, Sans-serif;
 
+	// Controls
+	// TODO: not sure what causes the 4px
+	--carousel-arrow-container-height: calc(
+		100% - var(--carousel-section-spacing) - var(--carousel-thumb-height)
+	);
+	--carousel-arrow-size: calc(var(--icon-size) + var(--spacing-md) * 2 + 4px);
+	--carousel-section-spacing: 30px;
+	--carousel-thumb-height: 8px;
+
 	@media (prefers-reduced-motion) {
 		--transition: none;
 	}

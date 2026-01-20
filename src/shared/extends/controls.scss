@@ -68,10 +68,12 @@
 
 @mixin dropdown {
 	background-color: var(--bg-hl);
+	color: var(--fg-main);
+	font: var(--gpText-BodyLarge);
 	border-radius: var(--border-radius);
 	// TODO: not actually 43px height
 	padding: var(--spacing-xs) var(--spacing-md);
-	gap: var(--spacing-sm);
+	gap: var(--spacing-xs);
 
 	display: flex;
 	align-items: center;

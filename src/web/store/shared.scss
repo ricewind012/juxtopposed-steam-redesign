@@ -1,16 +1,10 @@
+@use "shared/extends/carousel";
 @use "shared/extends/style";
 @use "web/extends/store";
 
 // Differences from the original mockup:
 // - The live broadcast icon uses --bg-main-50 instead of --bg-hl to make it
 //   consistent with the rest of in-capsule content
-
-body {
-	// These are put here, because some stuff in home page uses this
-	// TODO: not sure what causes the 4px
-	--carousel-arrow-size: calc(var(--icon-size) + var(--spacing-md) * 2 + 4px);
-	--carousel-section-spacing: 30px;
-}
 
 .broadcast_live_stream_icon {
 	--circle-size: 1em;
@@ -43,12 +37,8 @@ body {
 }
 
 .carousel_container {
-	--carousel-arrow-container-height: calc(
-		100% - var(--carousel-section-spacing) - var(--carousel-thumb-height)
-	);
 	--carousel-item-count: 4;
 	--carousel-item-width: 100%;
-	--carousel-thumb-height: 8px;
 
 	// calculations for image width
 	--item-count-x2f5: calc(var(--carousel-item-count) * 2.5);
@@ -61,36 +51,15 @@ body {
 	--carousel-image-width: calc(var(--item-width) / var(--carousel-item-count));
 
 	.arrow {
+		@include carousel.arrow(
+			$left: "&.left",
+			$right: "&.right",
+			$child: "& > div"
+		);
+
 		background-image: none;
-		border-radius: var(--border-radius);
-		padding: 0 var(--spacing-sm);
-
-		display: flex;
-		align-items: center;
-		inset-block-start: 0;
-		width: unset;
-		height: var(--carousel-arrow-container-height);
-
-		&:hover {
-			background-color: var(--bg-main-20);
-		}
-
-		&.left {
-			--deg: 90deg;
-
-			inset-inline-start: 0;
-		}
-
-		&.right {
-			--deg: -90deg;
-
-			inset-inline-end: 0;
-		}
 
 		& > div {
-			@include style.icon("arrow");
-
-			transform: rotate(var(--deg));
 			// I wonder if this declines an HTTP request...
 			background-image: none;
 		}
@@ -105,7 +74,7 @@ body {
 	}
 
 	.carousel_items {
-		@include store.carousel;
+		@include carousel.container;
 
 		& > * > * {
 			margin: 0;
@@ -202,36 +171,24 @@ body {
 
 .ds_options {
 	--offset: var(--spacing-md);
-	--size: 1lh;
 
+	@include carousel.button($child: "& > div", $icon: "settings");
 	@include store.capsule-icon;
 
 	opacity: 1;
-	color: var(--fg-dim);
-	font: var(--gpText-HeadingLarge);
 	padding: 0;
 
 	display: none;
 	inset-block-start: var(--offset);
 	inset-inline-end: var(--offset);
-	width: var(--size);
-	height: var(--size);
 
 	&.ds_hover,
 	:hover > & {
 		display: flex;
 	}
 
-	&:hover {
-		background-color: var(--bg-hover);
-	}
-
 	& > div {
-		@include style.icon("settings");
-
 		background-image: none;
-		color: inherit;
-		margin: calc((var(--size) - var(--icon-size)) / 2);
 
 		position: unset;
 	}

@@ -1,0 +1,83 @@
+@use "shared/extends/carousel";
+@use "shared/extends/style";
+
+:root {
+	// --gpText-HeadingSmall, like in store home page
+	--pageablecontainer_header-offset: calc(
+		18px * 1.4 + var(--carousel-section-spacing)
+	);
+}
+
+// Don't position: absolute this in order to get the correct position for arrows
+#HeaderPageControls {
+	// empty div
+	& > :not([class]):nth-child(3) {
+		display: none;
+	}
+}
+
+#Name {
+	color: var(--fg-main);
+	font: var(--gpText-HeadingSmall);
+
+	position: absolute;
+	inset-block-start: calc(var(--pageablecontainer_header-offset) * -1);
+	inset-inline-start: 0;
+}
+
+#PageableContainer {
+	@include carousel.container;
+
+	margin-block-start: var(--pageablecontainer_header-offset);
+
+	position: relative;
+}
+
+#PageClickContainer {
+	justify-content: space-between;
+	position: absolute;
+	inset: 0;
+
+	pointer-events: none;
+
+	&:empty {
+		--inset-inline: 0;
+
+		@include carousel.arrow(
+			$left: "&::before",
+			$right: "&::after",
+			$child: "&::before, &::after"
+		);
+
+		color: var(--fg-dim);
+
+		width: 100%;
+		height: 100%;
+
+		&::before,
+		&::after {
+			content: "";
+		}
+	}
+
+	& > div {
+		--carousel-arrow-container-height: 100%;
+
+		@include carousel.arrow(
+			$left: "&#PageLeft",
+			$right: "&#PageRight",
+			$child: "svg"
+		);
+
+		opacity: 1;
+		margin: 0;
+
+		pointer-events: all;
+
+		&#Disabled {
+			opacity: 0.5;
+
+			pointer-events: none;
+		}
+	}
+}

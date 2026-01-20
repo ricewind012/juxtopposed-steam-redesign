@@ -1,0 +1,79 @@
+@use "shared/extends/carousel";
+@use "shared/extends/text";
+
+#EventRowCarousel {
+	margin: 0;
+}
+
+#EventTime {
+	color: var(--fg-dim);
+	font: var(--gpText-BodySmall);
+	padding-block-end: 8px;
+}
+
+#GameIconAndName {
+	@include text.link;
+
+	background-color: transparent;
+	font: var(--gpText-BodyMedium);
+	margin-block-start: var(--spacing-xs);
+
+	align-items: center;
+
+	#GameIcon {
+		--icon-size: 24px;
+
+		border-radius: var(--border-radius);
+		margin-inline-end: var(--spacing-xs);
+
+		width: var(--icon-size);
+		height: var(--icon-size);
+	}
+
+	#GameName {
+		color: inherit;
+	}
+}
+
+// TODO: capsule mixin
+#PartnerEventRowCapsule {
+	background-color: var(--bg-main);
+	border-radius: var(--border-radius-large);
+	padding: var(--spacing-md);
+
+	&:not(:last-child) {
+		margin-inline-end: var(--spacing-md);
+	}
+}
+
+#PartnerEventRowCapsule_MainImageContainer {
+	background-color: var(--bg-main);
+	border-radius: var(--border-radius);
+}
+
+#PartnerEventRowCapsule_TextCtn {
+	padding: 0;
+	padding-block-start: 8px;
+
+	cursor: pointer;
+}
+
+#PartnerEventRowCapsule_TextTitle {
+	--height: 2lh;
+
+	color: var(--fg-main);
+	font: var(--gpText-BodyLarge);
+
+	max-height: var(--height);
+	min-height: var(--height);
+}
+
+#SettingsButton {
+	@include carousel.button($child: "svg", $icon: "settings");
+
+	margin: 0;
+
+	position: absolute;
+	inset-block-start: calc(-1lh - var(--carousel-section-spacing));
+	inset-inline-end: 0;
+}

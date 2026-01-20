@@ -1,0 +1,67 @@
+@use "shared/extends/style";
+
+/// All args are selectors.
+@mixin arrow($left, $right, $child) {
+	--icon-size: 24px;
+
+	border-radius: var(--border-radius);
+	padding: 0 var(--spacing-sm);
+
+	display: flex;
+	align-items: center;
+	inset-block-start: 0;
+	inset-inline: var(--inset-inline);
+	width: unset;
+	height: var(--carousel-arrow-container-height);
+
+	&:hover {
+		background-color: var(--bg-main-20);
+	}
+
+	#{$left} {
+		--deg: 90deg;
+		--inset-inline: 0 auto;
+	}
+
+	#{$right} {
+		--deg: -90deg;
+		--inset-inline: auto 0;
+	}
+
+	#{$child} {
+		@include style.icon("arrow");
+
+		transform: rotate(var(--deg));
+	}
+}
+
+/// @param {String} $child - Child selector
+/// @param {String} $icon - Icon name found in `assets/icons`
+@mixin button($child, $icon) {
+	--size: 1lh;
+
+	font: var(--gpText-HeadingSmall);
+	border-radius: var(--border-radius);
+
+	width: var(--size);
+	height: var(--size);
+
+	&:hover {
+		background-color: var(--bg-hover);
+	}
+
+	#{$child} {
+		@include style.icon(#{$icon});
+
+		color: var(--fg-dim);
+		margin: calc((var(--size) - var(--icon-size)) / 2);
+	}
+}
+
+@mixin container {
+	background-color: var(--bg-main-20);
+	font: var(--gpText-HeadingSmall);
+	border-radius: var(--border-radius-large);
+	padding-block: var(--spacing-lg);
+	padding-inline: var(--carousel-arrow-size);
+}

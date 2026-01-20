@@ -1,3 +1,4 @@
+@use "shared/extends/carousel";
 @use "shared/extends/controls";
 @use "shared/extends/style";
 @use "web/extends/store";
@@ -24,6 +25,10 @@ body.no_home_gutter.infinite_scrolling {
 	// BrowserView has a bug where a transparent background renders like shit(?)
 	background-color: var(--store-home-bg);
 	background-repeat: no-repeat;
+
+	h2 {
+		font: var(--gpText-HeadingSmall);
+	}
 
 	.home_ctn.bottom_content,
 	#footer {
@@ -426,7 +431,7 @@ body.no_home_gutter.infinite_scrolling {
 		}
 
 		.home_content_items {
-			@include store.carousel;
+			@include carousel.container;
 
 			color: var(--fg-dim);
 			gap: var(--spacing-md);

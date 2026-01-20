@@ -31,6 +31,10 @@
 #SortingDropDown {
 	align-items: center;
 
+	.DialogDropDown {
+		margin-inline: var(--spacing-xs) 0;
+	}
+
 	.DialogDropDown_CurrentDisplay {
 		background-color: transparent;
 	}
@@ -38,8 +42,10 @@
 
 #SortingDropDownLabel {
 	color: var(--fg-dim);
-	font: var(--gpText-BodyLarge);
+	font: var(--gpText-BodyMedium);
 	letter-spacing: 0;
 	text-transform: none;
 	margin: 0;
+	// TODO: wtf
+	margin-block-start: -2px;
 }

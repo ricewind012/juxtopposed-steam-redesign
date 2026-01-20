@@ -98,8 +98,6 @@ input[type="checkbox"] {
 
 	.trigger {
 		@include controls.dropdown;
-
-		font: var(--gpText-BodyLarge);
 	}
 }
 

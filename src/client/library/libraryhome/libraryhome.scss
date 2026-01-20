@@ -1,0 +1,20 @@
+#Container {
+	background-image: none;
+}
+
+#InnerContainer {
+	color: inherit;
+}
+
+#LibraryHome {
+	background-image: none;
+	padding: var(--spacing-lg);
+}
+
+#UpdatesContainer {
+	background-image: none;
+	padding: var(--spacing-lg);
+	margin-block-end: calc(70px / 2 - var(--spacing-lg));
+
+	height: unset;
+}
