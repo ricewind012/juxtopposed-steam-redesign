@@ -1,0 +1,59 @@
+@use "shared/extends/carousel";
+
+%-thumb-base {
+	transition: var(--transition);
+	border-radius: 40px;
+
+	inset-block: 0;
+	height: inherit;
+}
+
+#carouselBody {
+	--carousel-arrow-container-height: 100%;
+
+	@include carousel.container;
+
+	.carousel__slider {
+		padding: 0;
+	}
+
+	.carousel__slider-tray {
+		gap: var(--spacing-md);
+	}
+}
+
+#carouselBtnCtn {
+	@include carousel.arrow($left: "&#left", $right: "&#right", $child: "svg");
+
+	svg {
+		opacity: 1;
+		color: var(--fg-main);
+
+		* {
+			display: none;
+		}
+	}
+}
+
+#pipScrollerContainer {
+	margin: 0;
+	margin-block-start: var(--carousel-section-spacing);
+
+	height: var(--carousel-thumb-height);
+
+	#scrollBackground {
+		@extend %-thumb-base;
+
+		background-color: var(--bg-main);
+	}
+
+	#scrollForeground {
+		@extend %-thumb-base;
+
+		background-color: var(--color-secondary);
+	}
+}
+
+#sliderBody {
+	position: unset;
+}

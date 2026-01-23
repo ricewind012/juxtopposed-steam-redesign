@@ -1,3 +1,9 @@
+@mixin capsule {
+	background-color: var(--bg-main);
+	border-radius: var(--border-radius-large);
+	padding: var(--spacing-md);
+}
+
 @mixin capsule-icon {
 	background-color: var(--bg-main-50);
 	backdrop-filter: blur(20px);
@@ -62,5 +68,65 @@
 		align-items: center;
 		justify-content: center;
 		inset: 0;
+	}
+}
+
+/// Because apparently there are currently 3 discount components in the theme,
+/// amazing job v*lve.
+/// All args are selectors.
+@mixin discount(
+	$discount-pct,
+	$final-price,
+	$no-discount,
+	$original-price,
+	$prices-container
+) {
+	--discount-pct-padding-block: 8px;
+	--gpText-lh: 1.4;
+	// gpText lh - (gpText lh - normal lh) / text lines
+	--right-side-line-height: calc(var(--gpText-lh) - (var(--gpText-lh) - 1) / 2);
+
+	font: var(--gpText-HeadingSmall);
+	gap: var(--spacing-sm);
+
+	height: calc(1lh + var(--discount-pct-padding-block) * 2);
+
+	#{$discount-pct} {
+		background-color: var(--accent-green);
+		color: var(--bg-main);
+		font: inherit;
+		border-radius: var(--border-radius);
+		padding: var(--discount-pct-padding-block) 12px;
+	}
+
+	#{$no-discount} {
+		color: var(--fg-main);
+	}
+
+	#{$final-price} {
+		color: var(--accent-green);
+		font: inherit;
+		padding: 0;
+	}
+
+	#{$original-price} {
+		color: var(--bg-hover);
+		font: inherit;
+		text-decoration: line-through;
+		text-decoration-color: var(--fg-dim);
+
+		&::before {
+			display: none;
+		}
+	}
+
+	#{$prices-container} {
+		line-height: var(--right-side-line-height);
+		gap: 0;
+		padding: 0;
+
+		flex-direction: column;
+		align-items: start;
+		justify-content: space-between;
 	}
 }

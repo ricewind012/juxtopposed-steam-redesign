@@ -1,0 +1,48 @@
+@use "shared/extends/controls";
+
+#Background {
+	display: none;
+}
+
+#ButtonContainer {
+	gap: var(--spacing-sm);
+
+	// !important
+	.btnv6_grey_black.btnv6_grey_black,
+	#CarouselFollowButton#CarouselFollowButton#CarouselFollowButton {
+		@include controls.button("tertiary");
+
+		transition: none;
+		box-shadow: none;
+
+		min-width: unset;
+		min-height: unset;
+
+		// !important
+		.FollowBtnText.FollowBtnText {
+			font: inherit;
+		}
+	}
+}
+
+#CreatorHomeWithItems {
+	background: transparent;
+	box-shadow: none;
+	padding: 0;
+	margin-block-end: 100px;
+}
+
+#Header {
+	margin-block-end: var(--carousel-section-spacing);
+
+	#AvatarBackground,
+	#ClanInfoRow > :first-child {
+		display: none;
+	}
+
+	#ClanName {
+		font: var(--gpText-HeadingSmall);
+		letter-spacing: 0;
+		text-transform: none;
+	}
+}

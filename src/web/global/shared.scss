@@ -63,6 +63,10 @@ h3 {
 	}
 }
 
+.btn_green_steamui.btn_green_steamui {
+	text-shadow: none;
+}
+
 .btn_green_white_innerfade.btn_green_white_innerfade {
 	@include controls.button-colors("primary");
 }
@@ -72,17 +76,7 @@ $sel: ".btnv6_white_transparent";
 #{$sel}#{$sel}#{$sel}#{$sel}#{$sel}#{$sel}#{$sel} {
 	all: unset;
 
-	color: var(--fg-dim);
-	font: var(--gpText-BodyLarge);
-	border: 1px solid color-mix(in srgb, currentColor 20%, transparent);
-	border-radius: var(--border-radius);
-	padding: var(--spacing-xs) var(--spacing-lg);
-
-	cursor: pointer;
-
-	&:hover {
-		border-color: color-mix(in srgb, currentColor 40%, transparent);
-	}
+	@include controls.button("tertiary");
 
 	& > span {
 		all: unset;
@@ -105,6 +99,7 @@ input[type="checkbox"] {
 	display: flex;
 	// content width
 	width: calc(var(--sidebar-width) + var(--spacing-md) + 1247px);
+	max-width: unset;
 }
 
 .pageheader {
@@ -139,6 +134,16 @@ input[type="checkbox"] {
 	}
 }
 */
+
+.responsive_page_template_content {
+	// TODO: store menu vertical spacing is 8px
+	--store-menu-height: calc(1lh + var(--spacing-sm) * 2 + 9px * 2);
+	// steam vars
+	--store-menu-overlap-height: var(--store-menu-height);
+	--store-menu-floating-height: var(--store-menu-height);
+
+	font: var(--gpText-BodyLarge);
+}
 
 .review_award {
 	background: var(--bg-main);

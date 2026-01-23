@@ -1,0 +1,76 @@
+@use "shared/extends/style";
+
+%-icon-button {
+	@include style.icon("name");
+
+	background-image: none;
+
+	&:not(:hover) {
+		color: var(--fg-dim);
+	}
+}
+
+#bordered_container {
+	background: var(--bg-main-50);
+	border-radius: var(--border-radius-large);
+	// TODO: xxl
+	padding: 25px;
+	margin-block-start: var(--spacing-sm);
+}
+
+#bordered_corner_container {
+	gap: var(--spacing-sm);
+	margin-inline-start: auto;
+}
+
+#bordered_corner_expanded {
+	transform: rotate(180deg);
+}
+
+#bordered_corner_expanded,
+#bordered_corner_shrinked {
+	--icon-name: var(--icon-arrow);
+	@extend %-icon-button;
+}
+
+#bordered_title {
+	--icon-size: 1lh;
+
+	color: var(--fg-main);
+	font: var(--gpText-HeadingSmall);
+	letter-spacing: 0;
+	text-transform: none;
+	gap: var(--spacing-sm);
+
+	display: flex;
+	align-items: center;
+}
+
+.broadcast_embed_top_ctn_trgt {
+	width: var(--store-page-width);
+}
+
+#broadcast_settings_icon {
+	--icon-name: var(--icon-settings);
+	@extend %-icon-button;
+
+	margin: 0;
+}
+
+#clear_div {
+	display: none;
+}
+
+#container {
+	border-radius: var(--border-radius);
+	margin-block-start: var(--spacing-sm);
+}
+
+#LeftPanelCtn,
+#RightPanelCtn {
+	max-height: unset;
+}
+
+#viewer_bar {
+	background: var(--bg-main-50);
+}

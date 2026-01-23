@@ -1,0 +1,64 @@
+@use "web/extends/store";
+
+@mixin -horizontal {
+	#OtherEvents_EventCtn#HorizontalEvent & {
+		@content;
+	}
+}
+
+#EventSummaryContainer {
+	border-radius: var(--border-radius-large);
+
+	inset: var(--spacing-md);
+	width: unset;
+	height: 276px;
+}
+
+#OtherEvents_BGImage {
+	display: none;
+}
+
+#OtherEvents_EventCtn {
+	@include store.capsule;
+
+	background-image: none;
+	box-shadow: none;
+	margin: 0;
+}
+
+#OtherEvents_MainImageCtn {
+	border-radius: var(--border-radius-large);
+
+	@include -horizontal {
+		box-shadow: none;
+	}
+}
+
+#HorizontalDescription,
+#OtherEvents_SubTitle {
+	display: none;
+}
+
+#OtherEvents_TextCtn {
+	color: var(--fg-dim);
+	font: var(--gpText-BodyMedium);
+	padding: 0;
+	margin-block-start: var(--spacing-sm);
+
+	height: unset;
+
+	@include -horizontal {
+		margin-block-start: 0;
+		margin-inline-start: var(--spacing-sm);
+
+		flex-direction: column-reverse;
+		justify-content: start;
+	}
+}
+
+#HorizontalTitle,
+#OtherEvents_TextTitle {
+	color: var(--fg-main);
+	font: var(--gpText-HeadingSmall);
+	margin-block-end: var(--spacing-xs);
+}

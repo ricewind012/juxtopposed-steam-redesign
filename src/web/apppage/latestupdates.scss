@@ -1,0 +1,45 @@
+@use "shared/extends/controls";
+
+%-button {
+	@include controls.button("tertiary");
+
+	min-width: unset;
+	min-height: unset;
+}
+
+#EventsSummariesCtn {
+	gap: var(--spacing-md);
+	margin: 0;
+}
+
+#LatestUpdateButton {
+	@extend %-button;
+}
+
+#LatestUpdateButtonCtn {
+	justify-content: end;
+	position: absolute;
+	position-anchor: --top-button;
+	right: calc(anchor(self-start) + var(--spacing-sm));
+	top: anchor(start);
+}
+
+#LatestUpdateIcon {
+	display: none;
+}
+
+#SectionButton {
+	@extend %-button;
+
+	inset: 0;
+}
+
+#SectionButtonCtn {
+	margin: 0;
+
+	position: absolute;
+	inset-block-start: 25px;
+	inset-inline-end: 25px;
+
+	anchor-name: --top-button;
+}

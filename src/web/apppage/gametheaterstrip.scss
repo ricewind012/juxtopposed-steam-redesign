@@ -1,0 +1,67 @@
+@use "shared/extends/style";
+
+#Item {
+	&#Active::after {
+		border: var(--focus-border-size) solid var(--color-secondary);
+		border-radius: var(--border-radius);
+	}
+
+	img {
+		border-radius: var(--border-radius);
+
+		width: 231px;
+		height: 111px;
+	}
+}
+
+#Strip {
+	--arrow-size: calc(var(--icon-size) + var(--spacing-sm) * 2);
+	--focus-border-size: 3px;
+	--icon-size: 24px;
+
+	position: relative;
+}
+
+#StripItems {
+	gap: 7px;
+	padding-block: var(--focus-border-size);
+	margin-block-start: var(--spacing-lg);
+	margin-inline: calc(var(--arrow-size) + var(--spacing-md));
+}
+
+#StripScrollbar {
+	color: var(--fg-main);
+
+	justify-content: space-between;
+	position: absolute;
+	inset: 0;
+	height: unset;
+
+	svg {
+		@include style.icon("arrow", "path");
+
+		transform: rotate(var(--deg));
+	}
+
+	#Arrow {
+		background: none;
+
+		flex-basis: var(--arrow-size);
+
+		&:first-child {
+			--deg: 90deg;
+		}
+
+		&:last-child {
+			--deg: -90deg;
+		}
+
+		&:hover {
+			background: var(--bg-main-20);
+		}
+	}
+
+	#Track {
+		display: none;
+	}
+}

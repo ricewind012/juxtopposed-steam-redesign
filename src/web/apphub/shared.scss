@@ -31,7 +31,16 @@
 .apphub_HomeHeaderContent {
 	padding-top: var(--top-content-margin);
 
+	width: 100%;
 	max-width: var(--apphub_content-width);
+
+	.apphub_HeaderStandardTop {
+		display: flex;
+		align-items: center;
+		flex-direction: row-reverse;
+		justify-content: space-between;
+		min-height: unset;
+	}
 }
 
 .apphub_sectionTab {

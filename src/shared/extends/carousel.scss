@@ -65,3 +65,17 @@
 	padding-block: var(--spacing-lg);
 	padding-inline: var(--carousel-arrow-size);
 }
+
+/// All args are selectors.
+@mixin thumb($active) {
+	transition: var(--transition);
+	background-color: var(--bg-main);
+	border-radius: 40px;
+
+	width: 36px;
+	height: var(--carousel-thumb-height);
+
+	#{$active} {
+		background-color: var(--color-secondary);
+	}
+}

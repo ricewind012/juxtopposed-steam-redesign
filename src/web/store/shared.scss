@@ -109,63 +109,29 @@
 		}
 
 		& > div {
-			transition: var(--transition);
-			background-color: var(--bg-main);
-			border-radius: 40px;
+			@include carousel.thumb($active: "&.focus");
+
 			margin: 0;
-
-			width: 36px;
-			height: var(--carousel-thumb-height);
-
-			&.focus {
-				background-color: var(--color-secondary);
-			}
 		}
 	}
 }
 
 .discount_block {
-	font: var(--gpText-HeadingSmall);
-	gap: var(--spacing-sm);
-
-	.discount_final_price {
-		color: var(--accent-green);
-		font: inherit;
-		line-height: 1;
-		padding: 0;
-	}
-
-	.discount_final_price.free,
-	&[data-discount="0"] .discount_final_price {
-		color: var(--fg-main);
-	}
-
-	.discount_pct {
-		background-color: var(--accent-green);
-		color: var(--bg-main);
-		font: inherit;
-		border-radius: var(--border-radius);
-		padding: 8px 12px;
-	}
-
-	.discount_original_price {
-		color: var(--bg-hover);
-		font: inherit;
-		line-height: 1;
-		text-decoration: line-through;
-
-		&::before {
-			display: none;
-		}
-	}
+	@include store.discount(
+		$discount-pct: ".discount_pct",
+		$final-price: ".discount_final_price",
+		$no-discount:
+			'.discount_final_price.free, &[data-discount="0"] .discount_final_price',
+		$original-price: ".discount_original_price",
+		$prices-container: ".discount_prices"
+	);
 
 	.discount_prices {
 		background-color: transparent;
-		padding: 0;
+	}
 
-		flex-direction: column;
-		align-items: start;
-		justify-content: space-between;
+	.your_price_label {
+		display: none;
 	}
 }
 
@@ -229,7 +195,16 @@
 
 	@include style.icon("name");
 
-	background-image: none;
+	// There are actually other icons, these are just the most common ones
+	&:where(.linux, .mac, .win) {
+		background-image: none;
+	}
+
+	&:not(.linux, .mac, .win) {
+		background-color: transparent;
+		background-position: center;
+		mask: none;
+	}
 
 	&.linux {
 		--icon-name: var(--icon-platform-linux);

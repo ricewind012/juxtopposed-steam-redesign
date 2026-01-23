@@ -1,0 +1,9 @@
+@use "web/extends/store";
+
+#Capsule:not(:empty) {
+	@include store.capsule;
+
+	&#TwoWide {
+		box-shadow: none;
+	}
+}

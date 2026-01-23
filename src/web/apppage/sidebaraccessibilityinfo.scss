@@ -1,0 +1,45 @@
+@use "shared/extends/controls";
+@use "web/extends/apppage";
+
+#FeatureList {
+	#FeatureNameContainer {
+		@include apppage.sidebar-list-item;
+	}
+}
+
+#FeatureName {
+	all: unset;
+}
+
+#FeatureNameContainer {
+	// HOW does the cursor even touch it
+	background: none;
+	color: var(--color-primary);
+	padding: 0;
+}
+
+#GroupLabel {
+	color: var(--fg-dim);
+	font: var(--gpText-BodySmall);
+	margin-block: calc(7px * 2) 7px;
+}
+
+#InfoLink {
+	@include controls.tooltip-icon;
+}
+
+#Summary {
+	--icon-size: 1lh;
+
+	@include apppage.sidebar-list-item;
+
+	#FeatureName {
+		all: unset;
+	}
+
+	#ImageContainer {
+		background-color: transparent;
+		color: inherit;
+		padding: 0;
+	}
+}

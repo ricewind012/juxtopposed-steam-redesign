@@ -1,0 +1,21 @@
+#Reason {
+	background-color: transparent;
+	color: var(--fg-main);
+	font: var(--gpText-HeadingSmall);
+	letter-spacing: 0;
+	text-transform: none;
+	padding: 0;
+	margin: 0;
+}
+
+#StoreSaleItemRelease {
+	color: var(--fg-dim);
+	font: var(--gpText-BodySmall);
+	text-transform: none;
+	margin-block-end: var(--spacing-xs);
+}
+
+#TwoWidthSideInfo {
+	background-color: transparent;
+	padding: 0 var(--spacing-sm);
+}

@@ -8,10 +8,9 @@
 //   the buttons inside them
 
 %-capsule {
-	background-color: var(--bg-main);
+	@include store.capsule;
+
 	background-image: none;
-	border-radius: var(--border-radius-large);
-	padding: var(--spacing-md);
 }
 
 body.no_home_gutter.infinite_scrolling {

@@ -1,0 +1,27 @@
+@use "shared/extends/carousel";
+@use "shared/extends/controls";
+
+#Header {
+	margin-block-end: var(--carousel-section-spacing);
+
+	#Title {
+		color: var(--fg-main);
+		font: var(--gpText-HeadingSmall);
+		letter-spacing: 0;
+		text-transform: none;
+	}
+
+	.btnv6_grey_black.btnv6_grey_black {
+		@include controls.button("tertiary");
+
+		min-width: unset;
+		min-height: unset;
+	}
+}
+
+#StoreItemsCarousel {
+	background: none;
+	box-shadow: none;
+	padding: 0;
+	margin: 0;
+}

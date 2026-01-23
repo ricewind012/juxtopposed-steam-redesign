@@ -21,7 +21,20 @@
 		--fg: var(--bg-main);
 		--fg2: var(--bg-main);
 	}
-	// TODO: tertiary/disabled
+
+	@if $variant == "tertiary" {
+		--bg: transparent;
+		--bg2: transparent;
+		--fg: var(--fg-dim);
+		--fg2: var(--fg-dim);
+
+		border: 1px solid color-mix(in srgb, currentColor 20%, transparent);
+		--padding: var(--spacing-xs) var(--spacing-lg);
+
+		&:hover {
+			border-color: color-mix(in srgb, currentColor 40%, transparent);
+		}
+	}
 }
 
 /* TODO: a market button has the same padding, mixin ? */
@@ -33,7 +46,7 @@
 	font: var(--gpText-BodyLarge);
 	border-radius: var(--border-radius);
 	// --spacing-sm
-	padding: 11px;
+	padding: var(--padding, 11px);
 
 	min-width: 166px;
 	min-height: 44px;

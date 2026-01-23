@@ -50,7 +50,7 @@
 	--carousel-arrow-container-height: calc(
 		100% - var(--carousel-section-spacing) - var(--carousel-thumb-height)
 	);
-	--carousel-arrow-size: calc(var(--icon-size) + var(--spacing-md) * 2 + 4px);
+	--carousel-arrow-size: calc(var(--icon-size) + var(--spacing-sm) * 3 + 4px);
 	--carousel-section-spacing: 30px;
 	--carousel-thumb-height: 8px;
 

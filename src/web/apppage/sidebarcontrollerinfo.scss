@@ -1,0 +1,52 @@
+@use "shared/extends/style";
+@use "web/extends/apppage";
+
+#ControllerSupportLevelString {
+	color: var(--fg-dim);
+	margin-block-end: 7px;
+}
+
+#ImgSection {
+	background-color: transparent;
+	color: var(--fg-main);
+	padding: 0;
+}
+
+#InfoRow {
+	@include apppage.sidebar-list-item;
+
+	color: var(--color-primary);
+
+	align-items: center;
+}
+
+#LocSection,
+#LocString {
+	all: unset;
+}
+
+#NoticeContainer {
+	--icon-size: 26px;
+
+	font: var(--gpText-BodyMedium);
+	margin-block: 7px 0;
+
+	#PurchaseNoticeContainer {
+		margin: 0;
+
+		height: unset;
+	}
+
+	#PurchaseNoticeImage {
+		margin-block: 0;
+		margin-inline: 13px var(--spacing-sm);
+
+		flex-shrink: 0;
+		width: var(--icon-size);
+		height: var(--icon-size);
+	}
+}
+
+#StoreSidebarContainer {
+	margin-block-start: calc(7px * 2);
+}

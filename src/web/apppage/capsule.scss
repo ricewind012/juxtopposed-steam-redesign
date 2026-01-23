@@ -1,0 +1,95 @@
+@use "shared/extends/controls";
+@use "shared/extends/style";
+@use "web/extends/store";
+
+// TODO: icon-button mixin
+%-icon-button {
+	background-color: var(--bg-hl);
+	border-radius: var(--border-radius);
+
+	width: 47px;
+	height: 44px;
+}
+
+#AddToWishlistButton {
+	--icon-size: 24px;
+
+	@extend %-icon-button;
+
+	box-shadow: none;
+
+	&:hover {
+		background-color: var(--bg-hover);
+	}
+
+	svg {
+		@include style.icon("favorite", "polygon");
+	}
+}
+
+#Banner {
+	@include store.capsule-icon;
+
+	color: var(--color-primary);
+	font: var(--gpText-BodyMedium);
+	text-transform: none;
+	box-shadow: none;
+	padding: var(--spacing-xs);
+
+	height: unset;
+
+	#LinesImg {
+		display: none;
+	}
+}
+
+#CapsuleBottomBar {
+	background-color: transparent;
+	padding: 0;
+	margin-block-start: var(--spacing-sm);
+
+	height: unset;
+}
+
+#CapsuleDecorators {
+	inset-block-start: 0;
+}
+
+#HeaderCapsuleImageContainer img {
+	border-radius: var(--border-radius-large);
+}
+
+#StoreSalePriceWidgetContainer {
+	background-color: transparent;
+
+	@include store.discount(
+		$discount-pct: "#StoreSaleDiscountBox",
+		$final-price: "#StoreSalePriceBox",
+		$no-discount: "&:not(#Discounted) #StoreSalePriceBox",
+		$original-price: "#StoreOriginalPrice",
+		$prices-container: "#StoreSaleDiscountedPriceCtn"
+	);
+
+	#StoreOriginalPrice {
+		letter-spacing: 0;
+		margin: 0;
+	}
+
+	#StoreSalePriceBox {
+		text-shadow: none;
+	}
+}
+
+#Tag {
+	@include controls.store-tag;
+
+	text-shadow: none;
+}
+
+#TagBox {
+	--tag-height: calc(1lh + 6.5px * 2);
+
+	font: var(--gpText-BodySmall);
+
+	max-height: calc(var(--tag-height) * 2 + 4px);
+}
