@@ -1,0 +1,17 @@
+#playerName {
+	color: inherit;
+	font: var(--gpText-BodyLarge);
+}
+
+#richPresenceLabel {
+	color: inherit;
+	font: var(--gpText-BodySmall);
+	margin-block-start: 7px;
+}
+
+#statusAndName {
+	// #friendsnooze_SnoozeContainer
+	& > :where(.in-game, .online) {
+		display: none;
+	}
+}

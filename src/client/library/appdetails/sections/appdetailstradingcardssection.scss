@@ -1,0 +1,34 @@
+#Badge {
+	--size: 64px;
+
+	margin: 0;
+	margin-inline-end: var(--spacing-md);
+
+	width: var(--size);
+	height: var(--size);
+
+	&#EmptyCircle {
+		border-color: var(--fg-dim);
+	}
+}
+
+#BadgeName {
+	color: var(--fg-main);
+	font: var(--gpText-HeadingSmall);
+}
+
+#BadgeLevel {
+	color: var(--fg-dim);
+	font: var(--gpText-BodySmall);
+}
+
+#CardsLeft {
+	color: var(--fg-dim);
+	font: var(--gpText-BodyMedium);
+	margin-block-end: 7px;
+}
+
+#CardsSection {
+	gap: var(--spacing-sm);
+	margin: 0;
+}

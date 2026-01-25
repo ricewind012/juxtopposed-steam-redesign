@@ -1,0 +1,20 @@
+@use "client/extends/appdetails";
+
+#AddToFeed {
+	margin: 0;
+}
+
+#FetchMoreContainer {
+	@include appdetails.button;
+
+	align-self: start;
+}
+
+#ViewLastNews {
+	@include appdetails.button;
+
+	text-align: center;
+	margin-block-end: var(--spacing-lg);
+
+	align-self: start;
+}

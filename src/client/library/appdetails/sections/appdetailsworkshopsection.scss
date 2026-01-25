@@ -1,0 +1,79 @@
+@use "shared/extends/other";
+@use "shared/extends/style";
+@use "shared/extends/text";
+
+#FeaturedItem {
+	align-items: start;
+
+	#FeaturedItemDesc {
+		color: var(--fg-dim);
+		font: var(--gpText-BodySmall);
+		margin-block-end: 7px;
+	}
+
+	#FeaturedItemHeader {
+		color: var(--fg-dim);
+		font: var(--gpText-BodyMedium);
+		margin-block-end: 7px;
+	}
+
+	#FeaturedItemHideButton {
+		color: var(--fg-dim);
+		padding: 0;
+
+		inset-block-start: 0;
+		inset-inline-end: 0;
+		width: var(--icon-size);
+		height: var(--icon-size);
+
+		&:hover {
+			color: var(--fg-main);
+		}
+
+		svg {
+			@include style.icon("close", true);
+		}
+	}
+
+	#FeaturedItemImage {
+		--size: 160px;
+
+		border-radius: var(--border-radius);
+		margin-inline-end: var(--spacing-md);
+
+		width: var(--size);
+		height: var(--size);
+	}
+
+	#FeaturedItemLink {
+		@include text.link;
+
+		font: var(--gpText-BodyLarge);
+		padding-block: 7px;
+	}
+
+	#FeaturedItemName {
+		color: var(--fg-main);
+		font: var(--gpText-BodyLarge);
+		margin-block-end: 7px;
+	}
+}
+
+#WorkshopContainer {
+	background: none;
+}
+
+#WorkshopHightlight {
+	margin: 0;
+}
+
+#WorkshopSection {
+	position: relative;
+
+	&::before {
+		@include other.workshop-bg;
+
+		position: absolute;
+		inset: 0;
+	}
+}

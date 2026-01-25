@@ -1,0 +1,72 @@
+@use "shared/extends/controls";
+
+#AchievementProgressContainer {
+	@include controls.progress-bar("#AchievementProgress");
+
+	margin-block: 7px 0;
+
+	height: unset;
+}
+
+#Additional {
+	margin-block-end: var(--spacing-md);
+}
+
+#AdditionalItem {
+	height: unset;
+}
+
+#Featured {
+	& > div:first-child {
+		height: unset;
+	}
+
+	#Desc {
+		color: var(--fg-dim);
+		font: var(--gpText-BodySmall);
+	}
+
+	#Icon {
+		margin-inline-end: 7px;
+	}
+
+	#Name {
+		color: var(--fg-main);
+		font: var(--gpText-HeadingSmall);
+	}
+
+	#TextSection {
+		margin: 0;
+	}
+}
+
+#Remainder {
+	background-color: var(--bg-hl);
+	border-radius: var(--border-radius);
+
+	width: var(--achievementiconbase_size);
+	height: var(--achievementiconbase_size);
+}
+
+#RemainderText {
+	color: var(--fg-main);
+	font: var(--gpText-BodyLarge);
+	line-height: var(--achievementiconbase_size);
+	letter-spacing: 0;
+	text-shadow: none;
+}
+
+#UnachievedSection {
+	all: unset;
+
+	#Label {
+		color: var(--fg-dim);
+		font: var(--gpText-BodyMedium);
+		margin-block-end: 7px;
+	}
+}
+
+#UnlockedLabel,
+#UnlockedLabelPercent {
+	color: inherit;
+}

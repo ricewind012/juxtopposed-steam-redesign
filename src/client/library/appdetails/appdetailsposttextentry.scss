@@ -1,0 +1,34 @@
+@use "shared/extends/controls";
+@use "shared/extends/style";
+
+#Controls {
+	padding: 0;
+	margin: 0;
+	margin-block-start: var(--spacing-sm);
+
+	#EmoticonButton {
+		--icon-size: 1lh;
+
+		@include controls.button;
+
+		& > div {
+			@include style.icon("emoticon", true);
+		}
+	}
+
+	#PostButton {
+		@include controls.button("primary");
+
+		margin-inline-start: var(--spacing-sm);
+	}
+}
+
+#PostTextEntryArea {
+	@include controls.text-input;
+
+	color: var(--fg-main);
+	font: var(--gpText-BodyLarge);
+	box-shadow: none;
+
+	width: 100%;
+}

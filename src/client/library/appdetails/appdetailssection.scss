@@ -1,0 +1,26 @@
+@use "client/extends/appdetails";
+
+#AppDetailsSection {
+	@include appdetails.section;
+}
+
+#AppDetailsSectionContainer {
+	background: none;
+	border: none;
+	box-shadow: none;
+	margin: 0;
+}
+
+#Body {
+	padding: 0;
+}
+
+#Highlight {
+	background: color-mix(in srgb, currentColor 10%, transparent);
+	color: var(--color-primary);
+	font: var(--gpText-BodyMedium);
+	box-shadow: none;
+	border-radius: var(--border-radius);
+	padding: var(--spacing-md);
+	margin-block-end: var(--spacing-lg);
+}

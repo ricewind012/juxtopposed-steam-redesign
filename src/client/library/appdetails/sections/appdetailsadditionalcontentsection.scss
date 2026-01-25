@@ -1,0 +1,31 @@
+#AdditionalItem {
+	padding: 0;
+
+	&:hover {
+		background-color: var(--bg-main-20);
+		border-radius: var(--border-radius);
+	}
+
+	&:not(:last-child) {
+		margin-block-end: 7px;
+	}
+
+	#Image {
+		width: 144px;
+	}
+
+	#Title {
+		color: var(--fg-main);
+		font: var(--gpText-BodyMedium);
+		margin-inline-start: 7px;
+	}
+}
+
+#AssetImage {
+	filter: none;
+
+	// #libraryassetimage_Image
+	& > img {
+		border-radius: var(--border-radius);
+	}
+}

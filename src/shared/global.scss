@@ -16,6 +16,22 @@ a {
 	@include text.link;
 }
 
+:where(.ingame) {
+	color: var(--accent-green);
+}
+
+:where(.offline) {
+	color: var(--fg-dim);
+}
+
+:where(.online) {
+	color: var(--color-primary);
+}
+
+:where(.awayOrSnooze) {
+	color: var(--accent-yellow);
+}
+
 ::placeholder {
 	color: var(--fg-dim);
 	font: var(--gpText-BodyMedium);

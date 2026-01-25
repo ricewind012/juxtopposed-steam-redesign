@@ -1,0 +1,18 @@
+:root {
+	--achievementiconbase_size: 72px;
+}
+
+#AchievementIconWrapper {
+	border-radius: var(--border-radius);
+
+	width: var(--achievementiconbase_size);
+	height: var(--achievementiconbase_size);
+}
+
+#Icon {
+	box-shadow: none;
+}
+
+#RareAchievementIconGlowContainerRoot {
+	display: none;
+}

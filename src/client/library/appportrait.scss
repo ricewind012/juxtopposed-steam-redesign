@@ -1,3 +1,5 @@
+@use "shared/extends/style";
+
 :root {
 	--appportrait_landscape-width: 363px;
 	--appportrait_landscape-height: 106px;
@@ -5,10 +7,41 @@
 	// --appportrait_portrait-height: 262px;
 }
 
+#FooterBlurImageContainer {
+	display: none;
+}
+
+#LibraryItemActionButton {
+	--icon-size: 24px;
+
+	background: color-mix(in srgb, var(--fg-dim) 20%, transparent);
+	border: none;
+	border-radius: var(--border-radius);
+	box-shadow: none;
+	padding: var(--spacing-xs);
+
+	width: var(--action-button-size);
+	height: var(--action-button-size);
+
+	&#Play {
+		--icon-name: var(--icon-play);
+	}
+
+	svg {
+		@include style.icon("name", "path");
+
+		margin: 0;
+	}
+}
+
 #LibraryItemBox {
+	--action-button-size: 51px;
+
+	border: none;
 	box-shadow: none;
 
-	&#InCollection {
+	&#InCollection,
+	&#InRecentGames {
 		border-radius: var(--border-radius-large);
 
 		// width: var(--appportrait_portrait-width);
@@ -25,4 +58,55 @@
 			padding-top: var(--appportrait_landscape-height);
 		}
 	}
+
+	&#InRecentGames#FeaturedCapsule {
+		background: linear-gradient(
+			190.47deg,
+			color-mix(in srgb, var(--bg-main) 95%, transparent) 13.71%,
+			color-mix(in srgb, var(--color-secondary) 41.8%, transparent) 91.45%
+		);
+	}
+}
+
+#PlaytimeDetails {
+	color: var(--fg-main);
+	font: var(--gpText-BodySmall);
+	gap: 6px;
+	padding: 0;
+
+	flex-direction: row;
+
+	#RecentGameFooter > & {
+		margin-inline-start: calc(var(--action-button-size) + 6px);
+
+		flex-direction: column;
+
+		&::before {
+			display: none;
+		}
+	}
+
+	&::before {
+		content: "";
+
+		@include style.icon("name");
+	}
+
+	&#Header {
+		display: none;
+	}
+
+	&#PlayedRecent {
+		--icon-name: var(--icon-clock);
+	}
+
+	&#PlayedTotal {
+		--icon-name: var(--icon-calendar);
+	}
+}
+
+#RecentGameFooter {
+	background-color: color-mix(in srgb, var(--bg-hl) 2%, transparent);
+
+	height: 74px;
 }

@@ -1,0 +1,9 @@
+@use "client/extends/appdetails";
+
+#HeaderStyles {
+	background: none;
+}
+
+#LoadContentButton {
+	@include appdetails.button;
+}

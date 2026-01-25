@@ -1,0 +1,261 @@
+@use "shared/extends/style";
+
+// TODO: Maybe remove the images and unify non-featured events this way...
+
+%-event {
+	transition: var(--transition);
+	background: none;
+	border: none;
+	box-shadow: none;
+}
+
+%-event-image {
+	border-radius: var(--border-radius-large);
+
+	&:hover {
+		background-color: var(--bg-main-20);
+	}
+}
+
+/// For whatever reason an extend doesn't work here...
+@mixin -event-contents {
+	&_TextColumn {
+		gap: 7px;
+	}
+
+	&_Title {
+		color: var(--fg-main);
+		font: var(--gpText-BodyLarge);
+	}
+}
+
+#AppActivityDate {
+	color: var(--color-primary);
+	font: var(--gpText-BodyLarge);
+	letter-spacing: 0;
+	border-block-end: 2px solid var(--color-secondary);
+	text-transform: none;
+	padding-block-end: 4px;
+	margin-block-end: var(--spacing-sm);
+
+	#Rule {
+		display: none;
+	}
+}
+
+#AppActivityDay {
+	border: none;
+	padding: 0;
+	margin-block-end: var(--spacing-lg);
+
+	& > :not(:first-child) > #Event,
+	& > div > :not(:first-child) > #Event {
+		margin-block-start: var(--spacing-lg);
+	}
+}
+
+#Event {
+	--steamavatar_size: 40px;
+
+	#EventActorAvatar {
+		width: unset;
+		height: unset;
+	}
+
+	#EventHeadline {
+		color: var(--fg-main);
+		font: var(--gpText-BodyMedium);
+		padding: 0;
+		margin-block-end: var(--spacing-sm);
+
+		#SpanEvent {
+			margin-inline: var(--spacing-sm);
+		}
+	}
+}
+
+#EventBody {
+	@extend %-event;
+
+	background-color: var(--bg-main-20);
+	border-radius: var(--border-radius-large);
+	margin-inline-start: calc(var(--steamavatar_size) + var(--spacing-sm));
+
+	#ActiveScreenshot {
+		margin: var(--spacing-md);
+	}
+
+	#ActivityPublishedScreenshot {
+		#CarouselThumb {
+			opacity: 1;
+			transform: none;
+			background-color: transparent;
+			border: 2px solid transparent;
+			border-radius: var(--border-radius-large);
+			margin-block-end: var(--spacing-xs);
+			margin-inline-end: var(--spacing-xs);
+
+			&#Active {
+				border-color: var(--color-secondary);
+			}
+		}
+
+		#CarouselThumbs {
+			margin-block-start: var(--spacing-md);
+		}
+
+		#ImageWrapper {
+			border-radius: var(--border-radius-large);
+		}
+
+		#ScreenshotCaption#HasCaption {
+			background: var(--bg-main-50);
+			backdrop-filter: blur(20px);
+			border-radius: 0;
+			border-end-start-radius: var(--border-radius-large);
+			margin-block-end: 24px;
+		}
+
+		#TimeStamp {
+			color: var(--fg-dim);
+			font: var(--gpText-BodySmall);
+			margin-block-start: 7px;
+			margin-inline: 0;
+		}
+	}
+
+	#ActivityAchievementUnlocked {
+		padding: var(--spacing-md);
+	}
+}
+
+#MediumImageContainer {
+	margin-inline-end: var(--spacing-md);
+}
+
+#PartnerEventFeatured {
+	@extend %-event;
+	@extend %-event-image;
+
+	margin: 0;
+}
+
+#PartnerEventFeaturedHeader {
+	background: none;
+	font: var(--gpText-BodyLarge);
+	letter-spacing: 0;
+	text-transform: none;
+	padding: 0;
+	margin-block-end: var(--spacing-sm);
+
+	height: 30px;
+}
+
+#PartnerEventLargeUpdate {
+	@extend %-event;
+	@extend %-event-image;
+
+	#ImageContainer {
+		padding: 0;
+		margin-inline-end: var(--spacing-sm);
+	}
+
+	#LeftSideMajorUpdateBar {
+		display: none;
+	}
+}
+
+#PartnerEventLargeImage,
+#PartnerEventMediumImage {
+	@include -event-contents;
+
+	&_Container {
+		background: none;
+	}
+
+	&_Contents {
+		padding: 0;
+	}
+
+	&_Image {
+		border-radius: var(--border-radius-large);
+	}
+
+	&_Summary {
+		color: var(--fg-dim);
+		font: var(--gpText-BodyMedium);
+		text-shadow: none;
+		padding: 0;
+	}
+
+	&_TextColumn {
+		text-shadow: none;
+	}
+}
+
+#PartnerEventLargeImage {
+	&_Image#Blur {
+		display: none;
+	}
+
+	&_TextColumn {
+		padding: 0;
+		margin: 0;
+
+		display: flex;
+		flex-direction: column;
+
+		#PartnerEventType {
+			text-shadow: none;
+		}
+	}
+
+	&_Title {
+		text-shadow: none;
+	}
+}
+
+#PartnerEventMediumImage {
+	@extend %-event;
+}
+
+#PartnerEventTextOnly {
+	@extend %-event;
+	@include -event-contents;
+
+	background-color: var(--bg-hl);
+	border-radius: var(--border-radius-large);
+	border-inline-start: var(--border-radius-large) solid var(--color-secondary);
+
+	&:hover {
+		background-color: var(--bg-hover);
+	}
+
+	&_Container {
+		gap: 7px;
+		padding: var(--spacing-sm);
+	}
+
+	&_Icon {
+		--icon-size: 40px;
+
+		margin: 0;
+
+		width: var(--icon-size);
+		height: var(--icon-size);
+
+		svg {
+			@include style.icon("name", true);
+		}
+	}
+}
+
+#PartnerEventType {
+	color: var(--fg-dim);
+	font: var(--gpText-BodyMedium);
+	text-transform: none;
+
+	#DayPosted {
+		all: unset;
+	}
+}

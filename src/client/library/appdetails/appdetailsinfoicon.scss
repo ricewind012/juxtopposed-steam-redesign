@@ -1,11 +1,16 @@
+@use "shared/extends/controls";
+
 #MoreInfoIcon {
-	background-color: color-mix(in srgb, currentColor 20%, transparent);
-	color: var(--fg-dim);
-	line-height: unset;
+	--icon-size: 1lh;
+
+	@include controls.tooltip-icon;
+
+	font: inherit;
 	margin: 0;
+
+	align-self: unset;
 }
 
 #MoreInfoIconQuestionMark {
-	font: var(--gpText-BodyMedium);
-	margin: 0;
+	display: none;
 }

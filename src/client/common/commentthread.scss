@@ -1,0 +1,48 @@
+#ActivityCommentThread {
+	background-color: var(--bg-main-20);
+	border-radius: var(--border-radius-large);
+	padding: var(--spacing-md);
+	margin-block-start: var(--spacing-sm);
+	margin-inline-start: calc(var(--steamavatar_size) + var(--spacing-sm));
+}
+
+#AddReply {
+	padding: 0;
+	padding-block-start: var(--spacing-lg);
+}
+
+#Comment {
+	padding: 0;
+	margin: 0;
+	margin-block-start: var(--spacing-lg);
+
+	#CommentBody {
+		margin-block-start: var(--spacing-sm);
+		margin-inline-start: 0;
+	}
+
+	#CommenterandTime {
+		margin: 0;
+
+		align-items: center;
+		height: var(--steamavatar_size);
+
+		#ActorName {
+			margin: 0;
+		}
+
+		#CommentTime {
+			color: var(--fg-dim);
+			font: var(--gpText-BodySmall);
+		}
+	}
+
+	#CommentText {
+		color: var(--fg-main);
+		font: var(--gpText-BodyMedium);
+	}
+
+	#HeaderandBody {
+		margin-inline-start: var(--spacing-sm);
+	}
+}

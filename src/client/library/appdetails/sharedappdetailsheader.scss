@@ -1,0 +1,33 @@
+#ImgContainer {
+	mask: linear-gradient(black, transparent);
+
+	height: 577px;
+
+	&::before {
+		content: "";
+
+		position: absolute;
+		inset: 0;
+		height: inherit;
+		z-index: 1;
+
+		background-image: linear-gradient(
+			180deg,
+			#272e38 0%,
+			color-mix(in srgb, #262d37 9%, transparent) 50%,
+			var(--bg-main) 100%
+		);
+		mix-blend-mode: color-dodge;
+	}
+}
+
+#ImgSrc {
+	mask: none;
+	object-position: top;
+
+	height: inherit;
+
+	&#ImgBlur {
+		display: none;
+	}
+}

@@ -1,0 +1,54 @@
+@use "shared/extends/style";
+
+#CommentsContainer {
+	font: var(--gpText-BodyMedium);
+
+	svg {
+		@include style.icon("name", true);
+
+		&#CommentIcon {
+			--icon-name: var(--icon-chat-bubble);
+		}
+
+		&#UpVotesIcon {
+			--icon-name: var(--icon-thumb-up);
+		}
+	}
+
+	#CommentCount {
+		color: var(--fg-main);
+		margin-inline-start: var(--spacing-xs);
+	}
+
+	#CommentsLabel {
+		color: var(--fg-main);
+	}
+}
+
+#CommentsGroup {
+	gap: var(--spacing-xs);
+}
+
+#PlayedForTime {
+	color: var(--fg-dim);
+	font: var(--gpText-BodyMedium);
+	padding: 0;
+}
+
+#ReviewDescription {
+	color: var(--fg-main);
+	gap: 7px;
+}
+
+#ReviewIcon {
+	--size: 49px;
+
+	width: var(--size);
+	height: var(--size);
+}
+
+#ReviewTextContainer {
+	color: var(--fg-main);
+	font: var(--gpText-BodyMedium);
+	padding-block-end: var(--spacing-sm);
+}

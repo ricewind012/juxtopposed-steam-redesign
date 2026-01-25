@@ -1,0 +1,21 @@
+#Backdrop {
+	display: none;
+}
+
+#ColumnContainer {
+	padding-block: 0;
+	padding-inline: 16px 30px;
+}
+
+#Container {
+	background-color: color-mix(in srgb, var(--bg-hl) 2%, transparent);
+	backdrop-filter: blur(20px);
+}
+
+#Spotlights {
+	padding: 0;
+
+	& > div {
+		margin: 0;
+	}
+}

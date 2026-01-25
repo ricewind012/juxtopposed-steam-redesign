@@ -1,0 +1,23 @@
+@use "client/extends/appdetails";
+
+#CompactThumbButton {
+	@include appdetails.button;
+
+	margin-inline-start: var(--spacing-sm);
+}
+
+#LeftContainer {
+	#Playtime {
+		color: var(--color-primary);
+		font: var(--gpText-HeadingSmall);
+	}
+
+	#RecommendGame {
+		color: var(--fg-dim);
+		font: var(--gpText-BodyLarge);
+	}
+}
+
+#RatingContainer {
+	@include appdetails.section;
+}

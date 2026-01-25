@@ -1,0 +1,8 @@
+@use "client/extends/appdetails";
+
+#AppDetailsButton {
+	@include appdetails.button;
+
+	text-align: center;
+	margin-block-start: var(--spacing-sm);
+}

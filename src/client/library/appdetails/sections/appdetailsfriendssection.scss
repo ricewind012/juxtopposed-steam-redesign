@@ -1,0 +1,47 @@
+@use "shared/extends/controls";
+
+#AvatarAndLabel {
+	height: unset;
+
+	&:hover {
+		background-color: var(--bg-main-20);
+		border-radius: var(--border-radius);
+	}
+}
+
+#Friends,
+#FriendsOverflow > div {
+	gap: var(--spacing-xs);
+}
+
+#LabelHolder {
+	padding: 0;
+	margin-block: auto;
+	margin-inline: var(--spacing-sm);
+
+	height: min-content;
+
+	#PlaytimeStatus {
+		color: inherit;
+	}
+}
+
+#ShowMore {
+	@include controls.button("tertiary");
+}
+
+#Subsection {
+	padding: 0;
+	margin: 0;
+
+	&#InGame,
+	&#Recent {
+		margin-block-end: var(--spacing-lg);
+	}
+}
+
+#SubsectionHeader {
+	color: var(--fg-dim);
+	font: var(--gpText-BodyMedium);
+	padding-block-end: 7px;
+}

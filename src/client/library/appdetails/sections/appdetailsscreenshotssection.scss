@@ -1,0 +1,18 @@
+#InstructionText,
+#NoneTaken {
+	color: var(--fg-dim);
+	font: var(--gpText-BodyLarge);
+	margin-block-end: 7px;
+}
+
+#Screenshots {
+	gap: 7px;
+}
+
+#Thumbnail {
+	background-color: transparent;
+
+	img {
+		border-radius: var(--border-radius);
+	}
+}

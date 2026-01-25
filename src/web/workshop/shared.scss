@@ -1,7 +1,7 @@
 @use "shared/extends/controls";
+@use "shared/extends/other";
 @use "shared/extends/style";
 @use "web/extends/layout/sidebar";
-@use "web/extends/workshop";
 
 .home_tab {
 	@include controls.tab(".active");
@@ -90,11 +90,18 @@
 }
 
 .workshop_header {
-	@include workshop.bg;
-
 	box-shadow: none;
 
 	max-width: var(--apphub_content-width);
+
+	&::before {
+		@include other.workshop-bg;
+
+		position: fixed;
+		inset: 0;
+		height: 75vh;
+		z-index: -999;
+	}
 
 	[style="clear:both"] {
 		display: none;

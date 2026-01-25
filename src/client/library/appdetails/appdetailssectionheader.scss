@@ -1,0 +1,12 @@
+#Label {
+	gap: var(--spacing-sm);
+
+	align-items: start;
+}
+
+#SectionHeader {
+	font: var(--gpText-BodyLarge);
+	margin-block-end: var(--spacing-sm);
+
+	height: 30px;
+}

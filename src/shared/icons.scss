@@ -14,6 +14,7 @@
 	--icon-controller: icon("controller");
 	--icon-delete: icon("delete");
 	--icon-drag-handle: icon("drag-handle");
+	--icon-emoticon: icon("emoticon");
 	--icon-favorite: icon("favorite");
 	--icon-filter: icon("filter");
 	--icon-filter-off: icon("filter-off");
@@ -36,15 +37,23 @@
 	--icon-restore: icon("restore");
 	--icon-search: icon("search");
 	--icon-settings: icon("settings");
+	--icon-star: icon("star");
 	--icon-steam-circled: icon("steam-circled");
 	--icon-thumb-up: icon("thumb-up");
+	--icon-timelapse: icon("timelapse");
 	--icon-user: icon("user");
 }
 
 $svg-icons: (
+	Arrow: "arrow",
 	"Download": "download",
+	FlatArrow: "arrow",
+	Information: "info",
+	Patch: "construction",
 	"Pause": "pause",
 	"Play": "play",
+	Settings: "settings",
+	X_Line: "close",
 );
 
 @each $name, $icon in $svg-icons {

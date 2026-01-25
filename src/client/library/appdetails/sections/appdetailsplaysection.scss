@@ -1,7 +1,155 @@
 @use "shared/extends/controls";
+@use "shared/extends/style";
+@use "client/extends/appdetails";
+
+#ActionSection {
+	margin-inline-end: 30px;
+
+	height: unset;
+}
+
+#Container#StickyHeader {
+	#GameStatsSection {
+		opacity: 1;
+		transform: none;
+	}
+
+	#PlayBar {
+		@include appdetails.blur;
+
+		// Otherwise, if there is a light image, you won't be able to see shit
+		background-color: color-mix(in srgb, var(--bg-hl) 75%, transparent);
+		padding: 0;
+	}
+
+	#PlayBarIconAndGame {
+		display: none;
+	}
+}
 
 #DetailsProgressContainer {
 	@include controls.progress-bar("#DetailsProgressBar");
 
 	height: unset;
+}
+
+#GameStat {
+	--icon-size: 30px;
+
+	padding: 0;
+	margin: 0;
+
+	align-items: center;
+
+	&#LastPlayed {
+		--icon-name: var(--icon-calendar);
+	}
+
+	&#MiniAchievements {
+		--icon-name: var(--icon-achievements);
+	}
+
+	&#Playtime {
+		--icon-name: var(--icon-timelapse);
+	}
+
+	&::before {
+		content: "";
+
+		@include style.icon("name");
+
+		color: color-mix(in srgb, var(--fg-dim) 20%, transparent);
+	}
+
+	#GameStatRight {
+		padding-inline-start: 12px;
+
+		#PlayBarDetailLabel {
+			color: var(--fg-main);
+			font: var(--gpText-BodyMedium);
+		}
+
+		#PlayBarLabel {
+			color: var(--fg-dim);
+			font: var(--gpText-BodyMedium);
+			letter-spacing: 0;
+			margin-block-end: var(--spacing-xs);
+		}
+	}
+}
+
+#GameStatsSection {
+	gap: 25px;
+
+	align-self: unset;
+}
+
+#GameStatIcon {
+	display: none;
+}
+
+#InnerContainer {
+	padding-block: 18px 0;
+	padding-inline: 16px 30px;
+
+	#Container#StickyHeader & {
+		padding-block-end: 18px;
+	}
+}
+
+#MenuButton {
+	--percentage: 10%;
+	--icon-size: 26px;
+	--size: 40px;
+
+	background-color: color-mix(
+		in srgb,
+		currentColor var(--percentage),
+		transparent
+	);
+	border-radius: var(--border-radius);
+	margin-inline: 11px 0;
+
+	width: var(--size);
+	height: var(--size);
+
+	&:hover {
+		--percentage: 20%;
+	}
+
+	&#FavoriteButton {
+		--icon-name: var(--icon-star);
+	}
+
+	#DotDotDot {
+		color: inherit;
+		margin: 0;
+	}
+
+	svg {
+		@include style.icon("name", true);
+	}
+
+	// "Scroll to top" button
+	.SVGIcon_Arrow {
+		transform: rotate(180deg);
+	}
+}
+
+#PlayBar {
+	background: none;
+	margin: 0;
+}
+
+#StatusAndStats {
+	height: unset;
+	max-height: unset;
+
+	#StatusNameContainer {
+		height: unset;
+	}
+}
+
+#StickyHeaderShadow {
+	display: none;
 }
