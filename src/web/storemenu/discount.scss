@@ -1,4 +1,4 @@
-@use "web/extends/store";
+@use "web/store";
 
 #DiscountBlock {
 	@include store.discount(

@@ -1,4 +1,4 @@
-@use "shared/extends/controls";
+@use "shared/controls";
 
 #LinkButton {
 	@include controls.button;

@@ -1,6 +1,6 @@
-@use "shared/extends/controls";
-@use "shared/extends/style";
-@use "web/extends/store";
+@use "shared/controls";
+@use "shared/style";
+@use "web/store";
 
 #DiscoveryQueue {
 	--badge-offset: var(--spacing-md);

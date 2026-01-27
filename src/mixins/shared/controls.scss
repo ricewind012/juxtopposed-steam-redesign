@@ -1,4 +1,4 @@
-@use "shared/extends/style";
+@use "shared/style";
 
 @mixin button-colors($variant) {
 	@if $variant == "primary" {

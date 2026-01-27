@@ -1,6 +1,6 @@
-@use "shared/extends/carousel";
-@use "shared/extends/style";
-@use "web/extends/store";
+@use "shared/carousel";
+@use "shared/style";
+@use "web/store";
 
 // Differences from the original mockup:
 // - The live broadcast icon uses --bg-main-50 instead of --bg-hl to make it

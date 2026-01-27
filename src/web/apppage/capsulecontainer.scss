@@ -1,4 +1,4 @@
-@use "web/extends/store";
+@use "web/store";
 
 #Capsule:not(:empty) {
 	@include store.capsule;

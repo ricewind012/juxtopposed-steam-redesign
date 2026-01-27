@@ -1,5 +1,5 @@
-@use "client/extends/titlebarcontrols";
-@use "shared/extends/controls";
+@use "client/titlebarcontrols";
+@use "shared/controls";
 
 @mixin -button($icon) {
 	--icon-name: var(--icon-#{$icon});

@@ -1,5 +1,5 @@
-@use "shared/extends/controls";
-@use "web/extends/layout/sidebar";
+@use "shared/controls";
+@use "web/layout/sidebar";
 
 .workshop_home_content {
 	width: var(--apphub_content-width);

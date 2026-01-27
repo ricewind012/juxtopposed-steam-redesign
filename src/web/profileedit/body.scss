@@ -1,5 +1,5 @@
-@use "shared/extends/controls";
-@use "web/extends/layout";
+@use "shared/controls";
+@use "web/layout";
 
 #HTMLErrorBox {
 	background: var(--accent-red);

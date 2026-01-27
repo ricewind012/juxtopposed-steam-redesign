@@ -1,7 +1,7 @@
-@use "shared/extends/controls";
-@use "shared/extends/other";
-@use "shared/extends/style";
-@use "web/extends/layout/sidebar";
+@use "shared/controls";
+@use "shared/other";
+@use "shared/style";
+@use "web/layout/sidebar";
 
 .browseOption {
 	@include sidebar.item(".hack");

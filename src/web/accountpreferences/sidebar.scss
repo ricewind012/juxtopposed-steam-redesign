@@ -1,4 +1,4 @@
-@use "web/extends/layout/sidebar";
+@use "web/layout/sidebar";
 
 .nav_item {
 	@include sidebar.item(".active");

@@ -1,5 +1,5 @@
-@use "shared/extends/style";
-@use "client/extends/titlebarcontrols";
+@use "shared/style";
+@use "client/titlebarcontrols";
 
 #AccountMenu {
 	@include titlebarcontrols.button;

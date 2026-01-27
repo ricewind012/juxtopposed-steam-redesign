@@ -1,5 +1,5 @@
-@use "shared/extends/carousel";
-@use "shared/extends/style";
+@use "shared/carousel";
+@use "shared/style";
 
 // Don't position: absolute this in order to get the correct position for arrows
 #HeaderPageControls {

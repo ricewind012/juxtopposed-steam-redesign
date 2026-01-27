@@ -1,6 +1,6 @@
-@use "shared/extends/controls";
-@use "shared/extends/style";
-@use "web/extends/layout/sidebar";
+@use "shared/controls";
+@use "shared/style";
+@use "web/layout/sidebar";
 
 .market_content_block {
 	padding: 0;

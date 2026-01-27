@@ -1,4 +1,4 @@
-@use "shared/extends/style";
+@use "shared/style";
 
 /// All args are selectors.
 @mixin arrow($left, $right, $child) {

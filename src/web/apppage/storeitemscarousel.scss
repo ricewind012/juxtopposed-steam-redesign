@@ -1,5 +1,5 @@
-@use "shared/extends/carousel";
-@use "shared/extends/controls";
+@use "shared/carousel";
+@use "shared/controls";
 
 #Header {
 	margin-block-end: var(--carousel-section-spacing);

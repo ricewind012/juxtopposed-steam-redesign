@@ -1,5 +1,5 @@
-@use "shared/extends/controls";
-@use "web/extends/store";
+@use "shared/controls";
+@use "web/store";
 
 // ??? you guys maybe wanna unify this into one component ?
 #CategoryLink {

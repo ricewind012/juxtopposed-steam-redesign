@@ -1,4 +1,4 @@
-@use "shared/extends/controls";
+@use "shared/controls";
 
 #formattingButton {
 	@include controls.button;

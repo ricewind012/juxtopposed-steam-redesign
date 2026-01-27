@@ -43,7 +43,7 @@ export default {
 		postcssSassPlugin({
 			// TODO: use "loadPaths" when @csstools/postcss-sass switches to
 			// normal sass API.
-			includePaths: ["src"],
+			includePaths: ["src/mixins"],
 			silenceDeprecations: ["legacy-js-api", "mixed-decls"],
 		}),
 		postcssFunctions({ functions }),

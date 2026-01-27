@@ -1,5 +1,5 @@
-@use "shared/extends/controls";
-@use "web/extends/layout/sidebar";
+@use "shared/controls";
+@use "web/layout/sidebar";
 
 #BackToProfileCtn {
 	margin-bottom: var(--spacing-lg);

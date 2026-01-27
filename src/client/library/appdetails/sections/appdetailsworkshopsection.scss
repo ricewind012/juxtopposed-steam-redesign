@@ -1,6 +1,6 @@
-@use "shared/extends/other";
-@use "shared/extends/style";
-@use "shared/extends/text";
+@use "shared/other";
+@use "shared/style";
+@use "shared/text";
 
 #FeaturedItem {
 	align-items: start;

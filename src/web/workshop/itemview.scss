@@ -1,5 +1,5 @@
-@use "shared/extends/controls";
-@use "shared/extends/style";
+@use "shared/controls";
+@use "shared/style";
 
 @mixin -icon($name) {
 	min-width: 44px;

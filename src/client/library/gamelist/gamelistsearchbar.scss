@@ -1,6 +1,6 @@
-@use "client/extends/gamelist";
-@use "shared/extends/controls";
-@use "shared/extends/style";
+@use "client/gamelist";
+@use "shared/controls";
+@use "shared/style";
 
 @mixin -search-input {
 	@include controls.search-input;

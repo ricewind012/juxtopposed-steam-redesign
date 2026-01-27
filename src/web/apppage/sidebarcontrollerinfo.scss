@@ -1,5 +1,5 @@
-@use "shared/extends/style";
-@use "web/extends/apppage";
+@use "shared/style";
+@use "web/apppage";
 
 #ControllerSupportLevelString {
 	color: var(--fg-dim);

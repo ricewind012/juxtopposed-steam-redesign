@@ -1,7 +1,7 @@
-@use "shared/extends/carousel";
-@use "shared/extends/controls";
-@use "shared/extends/style";
-@use "web/extends/store";
+@use "shared/carousel";
+@use "shared/controls";
+@use "shared/style";
+@use "web/store";
 
 // Differences from the original mockup:
 // - capsules use --border-radius-large instead of --border-radius to match with
