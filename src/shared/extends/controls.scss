@@ -58,7 +58,7 @@
 }
 
 @mixin checkbox($checked-selector, $disabled-selector) {
-	--icon-name: var(--icon-checkbox);
+	--icon-name: icon("checkbox");
 	--icon-size: 24px;
 
 	@include style.icon("name");
@@ -71,7 +71,7 @@
 	}
 
 	&#{$checked-selector} {
-		--icon-name: var(--icon-checkbox-checked);
+		--icon-name: icon("checkbox-checked");
 	}
 
 	&#{$disabled-selector} {

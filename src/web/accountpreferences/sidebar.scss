@@ -4,10 +4,10 @@
 	@include sidebar.item(".active");
 
 	&:last-child {
-		margin: 0 !important;
+		margin: 0;
 	}
 
 	&::after {
-		display: none !important;
+		display: none;
 	}
 }

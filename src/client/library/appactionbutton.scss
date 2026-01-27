@@ -2,7 +2,7 @@
 @use "shared/extends/style";
 
 #ButtonChild {
-	--icon-name: var(--icon-download);
+	--icon-name: icon("download");
 	--icon-size: 24px;
 
 	@include controls.button("primary");

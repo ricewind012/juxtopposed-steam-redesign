@@ -1,10 +1,6 @@
 @use "shared/extends/controls";
 @use "shared/extends/style";
 
-:root {
-	--downloads_top-bar-height: calc(var(--spacing-sm) * 2 + 37px + 25px);
-}
-
 #DownloadItemName > #Name {
 	color: var(--fg-main);
 	font: var(--gpText-HeadingSmall);
@@ -18,7 +14,7 @@
 
 	.DialogButton {
 		// Assume download as this doesn't have a distinguishing class name lol
-		--icon-name: var(--icon-download);
+		--icon-name: icon("download");
 
 		@include controls.button;
 
@@ -35,7 +31,7 @@
 		}
 
 		&#RemoveFromQueue {
-			--icon-name: var(--icon-delete);
+			--icon-name: icon("delete");
 		}
 	}
 }
@@ -185,7 +181,7 @@
 	}
 
 	.DialogButton {
-		--icon-name: var(--icon-settings);
+		--icon-name: icon("settings");
 		--bg: color-mix(in srgb, var(--fg-dim) 10%, transparent);
 		--fg: var(--fg-dim);
 	}
@@ -199,7 +195,7 @@
 	height: unset;
 
 	.DialogButton {
-		--icon-name: var(--icon-pause);
+		--icon-name: icon("pause");
 	}
 
 	#DetailsAndType {

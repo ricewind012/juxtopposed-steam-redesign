@@ -81,8 +81,6 @@
 .item_market_action_button_contents {
 	@include controls.button("primary");
 
-	box-shadow: var(--button-shadow);
-
 	float: unset;
 	height: unset;
 }

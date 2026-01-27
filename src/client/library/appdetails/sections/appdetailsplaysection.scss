@@ -42,15 +42,15 @@
 	align-items: center;
 
 	&#LastPlayed {
-		--icon-name: var(--icon-calendar);
+		--icon-name: icon("calendar");
 	}
 
 	&#MiniAchievements {
-		--icon-name: var(--icon-achievements);
+		--icon-name: icon("achievements");
 	}
 
 	&#Playtime {
-		--icon-name: var(--icon-timelapse);
+		--icon-name: icon("timelapse");
 	}
 
 	&::before {
@@ -118,7 +118,7 @@
 	}
 
 	&#FavoriteButton {
-		--icon-name: var(--icon-star);
+		--icon-name: icon("star");
 	}
 
 	#DotDotDot {

@@ -1,0 +1,23 @@
+:root {
+	// React partials
+	--shoppingcart_left-col-size: 1090px;
+	--shoppingcart_right-col-size: 445px;
+	--storemenu_border-gradient: linear-gradient(
+		90deg,
+		var(--fg-dim),
+		transparent
+	);
+	--storemenu_button-gap: 7px;
+
+	// Pages
+	--apphub_content-width: 1564px;
+	--market_row-spacing-outer: 18px;
+	--market_row-spacing-inner: 20px;
+	--profile_width: 1241px;
+	--profile_sidebar-gutter: 30px;
+
+	// Other
+	--avatar-border-radius: 4px;
+	--sidebar-width: 293px;
+	--top-content-margin: 69px;
+}

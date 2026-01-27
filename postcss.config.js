@@ -1,39 +1,39 @@
 import fs from "node:fs";
 import path from "node:path";
-import yargs from "yargs";
+import postcssSassPlugin from "@csstools/postcss-sass";
+import removeComments from "postcss-discard-comments";
 import postcssFunctions from "postcss-functions";
 import postcssSassParser from "postcss-scss";
-import postcssSassPlugin from "@csstools/postcss-sass";
 import {
 	appendImportantPlugin,
 	selectorReplacerPlugin,
 } from "steam-theming-utils/postcss-plugins";
 
-const { argv } = yargs(process.argv);
+const unquote = (str) => str.replace(/"/g, "");
 
-// Recreate the CSS output directory
-fs.rmSync(argv.dir, { recursive: true, force: true });
-fs.mkdirSync(argv.dir);
+const functions = {
+	/**
+	 * Output: `file("name")` => `url("data:image/svg+xml;base64,${base64}")`
+	 *
+	 * @param {string} name File name without the extension.
+	 */
+	file: (name) => {
+		const fileName = `${unquote(name)}.svg`;
+		const file = path.join("assets", "icons", fileName);
+		const base64 = fs.readFileSync(file, { encoding: "base64" });
 
-// Generate an index.css file that imports everything
-const text = fs
-	.readdirSync(argv.base, { recursive: true })
-	.filter((e) => e.endsWith(".scss"))
-	.map((e) => `@import "${e.replace(/\\/g, "/").replace("scss", "css")}";`)
-	.join("\n");
-fs.writeFileSync(path.join(argv.dir, "index.css"), text);
+		return `url("data:image/svg+xml;base64,${base64}")`;
+	},
 
-/**
- * `icon("name")` => `url("data:image/png;base64,${base64}")`
- *
- * @param {string} name File name without the extension.
- */
-function icon(name) {
-	const file = path.join("assets", "icons", `${name.replace(/"/g, "")}.svg`);
-	const base64 = fs.readFileSync(file, { encoding: "base64" });
-
-	return `url("data:image/svg+xml;base64,${base64}")`;
-}
+	/**
+	 * Output: `icon("name")` => `var(--icon-${name})`
+	 *
+	 * @param {string} name File name without the extension.
+	 */
+	icon: (name) => {
+		return `var(--icon-${unquote(name)})`;
+	},
+};
 
 /** @type {import("postcss-load-config").Config} */
 export default {
@@ -46,11 +46,8 @@ export default {
 			includePaths: ["src"],
 			silenceDeprecations: ["legacy-js-api", "mixed-decls"],
 		}),
-		postcssFunctions({
-			functions: {
-				icon,
-			},
-		}),
+		postcssFunctions({ functions }),
+		removeComments(),
 		appendImportantPlugin({
 			filter: [/^:root/],
 		}),

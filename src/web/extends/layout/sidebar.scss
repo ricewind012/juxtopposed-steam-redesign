@@ -7,12 +7,12 @@
 }
 
 @mixin item($active-selector) {
-	background: transparent !important;
-	border-radius: var(--border-radius) !important;
-	padding: 8px 13px !important;
-	margin-bottom: var(--spacing-xs) !important;
+	background: transparent;
+	border-radius: var(--border-radius);
+	padding: 8px 13px;
+	margin-bottom: var(--spacing-xs);
 
 	&:is(:hover, #{$active-selector}) {
-		background: var(--bg-hover) !important;
+		background: var(--bg-hover);
 	}
 }

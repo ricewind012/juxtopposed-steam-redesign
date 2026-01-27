@@ -1,15 +1,6 @@
 @use "shared/extends/controls";
 @use "shared/extends/style";
 
-:root {
-	--storemenu_border-gradient: linear-gradient(
-		90deg,
-		var(--fg-dim),
-		transparent
-	);
-	--storemenu_button-gap: 7px;
-}
-
 #Backdrop {
 	background-color: var(--bg-main-50);
 	backdrop-filter: blur(20px);

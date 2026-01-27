@@ -2,11 +2,6 @@
 @use "shared/extends/style";
 @use "web/extends/layout/sidebar";
 
-:root {
-	--market-row-spacing-outer: 18px;
-	--market-row-spacing-inner: 20px;
-}
-
 .market_content_block {
 	padding: 0;
 }
@@ -31,7 +26,7 @@
 	font: var(--gpText-BodyLarge);
 	border: none;
 	border-radius: var(--border-radius-large);
-	padding: 8.5px var(--market-row-spacing-inner);
+	padding: 8.5px var(--market_row-spacing-inner);
 	margin: 0;
 
 	height: unset;
@@ -39,7 +34,7 @@
 
 .market_listing_table_header {
 	color: var(--fg-dim);
-	margin: var(--market-row-spacing-outer) 0;
+	margin: var(--market_row-spacing-outer) 0;
 }
 
 .market_listing_left_cell,
@@ -63,8 +58,8 @@
 	background-color: var(--bg-main-50);
 	border: none;
 	border-radius: var(--border-radius-large);
-	padding: var(--market-row-spacing-inner);
-	margin-top: var(--market-row-spacing-outer);
+	padding: var(--market_row-spacing-inner);
+	margin-top: var(--market_row-spacing-outer);
 
 	&:hover {
 		background-color: var(--bg-main);
@@ -79,7 +74,7 @@
 }
 
 .market_listing_item_name_block {
-	padding-left: var(--market-row-spacing-inner);
+	padding-left: var(--market_row-spacing-inner);
 	margin-top: var(--spacing-sm);
 }
 

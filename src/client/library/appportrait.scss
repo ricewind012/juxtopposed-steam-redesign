@@ -1,12 +1,5 @@
 @use "shared/extends/style";
 
-:root {
-	--appportrait_landscape-width: 363px;
-	--appportrait_landscape-height: 106px;
-	// --appportrait_portrait-width: 191px;
-	// --appportrait_portrait-height: 262px;
-}
-
 #FooterBlurImageContainer {
 	display: none;
 }
@@ -24,7 +17,7 @@
 	height: var(--action-button-size);
 
 	&#Play {
-		--icon-name: var(--icon-play);
+		--icon-name: icon("play");
 	}
 
 	svg {
@@ -97,11 +90,11 @@
 	}
 
 	&#PlayedRecent {
-		--icon-name: var(--icon-clock);
+		--icon-name: icon("clock");
 	}
 
 	&#PlayedTotal {
-		--icon-name: var(--icon-calendar);
+		--icon-name: icon("calendar");
 	}
 }
 

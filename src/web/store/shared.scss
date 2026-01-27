@@ -207,14 +207,14 @@
 	}
 
 	&.linux {
-		--icon-name: var(--icon-platform-linux);
+		--icon-name: icon("platform-linux");
 	}
 
 	&.mac {
-		--icon-name: var(--icon-platform-mac);
+		--icon-name: icon("platform-mac");
 	}
 
 	&.win {
-		--icon-name: var(--icon-platform-win);
+		--icon-name: icon("platform-win");
 	}
 }

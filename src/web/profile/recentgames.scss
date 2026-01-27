@@ -111,12 +111,12 @@
 	}
 
 	&::before {
-		--icon-name: var(--icon-calendar);
+		--icon-name: icon("calendar");
 		top: -1px;
 	}
 
 	&::after {
-		--icon-name: var(--icon-clock);
+		--icon-name: icon("clock");
 		top: 20px;
 	}
 }

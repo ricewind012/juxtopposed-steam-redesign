@@ -3,15 +3,11 @@
 	"author": "ricewind",
 	"description": "lol",
 	"version": "1.0.0",
-    "Steam-WebKit": "dist/index.css",
+	"Steam-WebKit": "import_web.css",
 	"Patches": [
 		{
-			"MatchRegexString": ".DesktopUI",
-			"TargetCss": "dist/index.css"
-		},
-		{
-			"MatchRegexString": ".fullheight",
-			"TargetCss": "dist/index.css"
+			"MatchRegexString": ".*",
+			"TargetCss": ["dist/client.css", "dist/shared.css"]
 		}
 	]
 }

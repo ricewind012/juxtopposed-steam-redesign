@@ -41,15 +41,15 @@
 	height: unset;
 
 	.SVGIcon_LinuxLogo {
-		--icon-name: var(--icon-steam-circled);
+		--icon-name: icon("steam-circled");
 	}
 
 	.SVGIcon_SortBy {
-		--icon-name: var(--icon-clock);
+		--icon-name: icon("clock");
 	}
 
 	.SVGIcon_ReadyToPlay {
-		--icon-name: var(--icon-play-circle);
+		--icon-name: icon("play-circle");
 	}
 }
 

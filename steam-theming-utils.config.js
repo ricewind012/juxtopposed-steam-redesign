@@ -1,7 +1,7 @@
 /** @type {import("steam-theming-utils").Config} */
 export default {
 	ignore: [
-		"client/shared/dialog",
+		"client/shared",
 		"web/accountpreferences/tabs/account",
 		"web/accountpreferences/tabs/language",
 		"web/accountpreferences/tabs/store",

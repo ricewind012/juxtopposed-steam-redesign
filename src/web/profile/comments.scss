@@ -118,7 +118,7 @@
 	font: inherit;
 
 	&.checked .commentthread_subscribe_checkbox {
-		--icon-name: var(--icon-checkbox-checked);
+		--icon-name: icon("checkbox-checked");
 	}
 }
 

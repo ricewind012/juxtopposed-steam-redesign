@@ -124,11 +124,11 @@
 
 .profile_showcase_sort_down {
 	transform: rotate(180deg);
-	mask-image: var(--icon-arrow);
+	mask-image: icon("arrow");
 }
 
 .profile_showcase_sort_up {
-	mask-image: var(--icon-arrow);
+	mask-image: icon("arrow");
 }
 
 .showcase_preview_ctn {

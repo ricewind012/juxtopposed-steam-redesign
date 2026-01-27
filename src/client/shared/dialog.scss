@@ -1,10 +1,5 @@
 @use "shared/extends/style";
 
-:root {
-	--dialog_window-control-size: 25px;
-	--dialog_window-control-spacing: 18px;
-}
-
 .title-area-icon {
 	@include style.icon;
 
@@ -15,20 +10,20 @@
 	}
 
 	&.closeButton {
-		--icon-name: var(--icon-close);
+		--icon-name: icon("close");
 	}
 
 	// TODO
 	&.maximizeButton {
-		--icon-name: var(--icon-restore);
+		--icon-name: icon("restore");
 	}
 
 	&.minimizeButton {
-		--icon-name: var(--icon-minimize);
+		--icon-name: icon("minimize");
 	}
 
 	&.restoreButton {
-		--icon-name: var(--icon-restore);
+		--icon-name: icon("restore");
 	}
 }
 

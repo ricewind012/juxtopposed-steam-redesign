@@ -834,7 +834,7 @@ body.game_bg {
 			justify-content: space-between;
 
 			&[href^="steam://openurl_external"] {
-				--icon-name: var(--icon-language);
+				--icon-name: icon("language");
 			}
 
 			&:not([href^="steam://openurl_external"])::after {
@@ -907,17 +907,17 @@ body.game_bg {
 
 			&.against {
 				--icon-color: var(--accent-red);
-				--icon-name: var(--icon-close);
+				--icon-name: icon("close");
 			}
 
 			&.for {
 				--icon-color: var(--accent-green);
-				--icon-name: var(--icon-check);
+				--icon-name: icon("check");
 			}
 
 			&.info {
 				--icon-color: var(--accent-yellow);
-				--icon-name: var(--icon-info);
+				--icon-name: icon("info");
 			}
 
 			&::before {

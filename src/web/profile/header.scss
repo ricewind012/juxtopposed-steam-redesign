@@ -31,7 +31,7 @@
 	padding: 40px;
 	padding-top: 0;
 
-	width: var(--profile-width);
+	width: var(--profile_width);
 }
 
 .profile_header {
@@ -109,18 +109,18 @@
 .profile_header_bg {
 	padding-top: 51px;
 
-	max-width: var(--profile-width);
+	max-width: var(--profile_width);
 }
 
 .profile_header_bg_texture {
-	max-width: var(--profile-width);
+	max-width: var(--profile_width);
 }
 
 .profile_header_centered_persona {
 	padding: 0;
 
 	left: calc(var(--avatar-size) + var(--avatar-gap));
-	right: calc(var(--sidebar-width) + var(--sidebar-gutter));
+	right: calc(var(--sidebar-width) + var(--profile_sidebar-gutter));
 }
 
 .profile_header_content {
@@ -131,7 +131,7 @@
 
 .profile_header_summary {
 	padding-left: 0;
-	padding-right: var(--sidebar-gutter);
+	padding-right: var(--profile_sidebar-gutter);
 }
 
 .profile_summary {

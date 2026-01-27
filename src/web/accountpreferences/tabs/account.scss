@@ -1,5 +1,3 @@
-
-
 .country_settings {
 	font: var(--gpText-HeadingSmall);
 
@@ -10,9 +8,7 @@
 }
 
 .phone_header_description {
-	font: var(--gpText-HeadingSmall) !important;
-
-	img {
-		display: none !important;
+	font: var(--gpText-HeadingSmall) img {
+		display: none;
 	}
 }

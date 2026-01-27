@@ -20,7 +20,7 @@
 	}
 
 	#Chevron {
-		--icon-name: var(--icon-arrow);
+		--icon-name: icon("arrow");
 
 		color: var(--fg-main);
 		margin-right: var(--spacing-xs);
@@ -38,7 +38,7 @@
 }
 
 #NotificationButtonContainer {
-	--icon-name: var(--icon-notifications);
+	--icon-name: icon("notifications");
 	--icon-size: var(--dialog_window-control-size);
 	margin-right: var(--spacing-sm);
 }

@@ -36,3 +36,21 @@ a {
 	color: var(--fg-dim);
 	font: var(--gpText-BodyMedium);
 }
+
+$svg-icons: (
+	Arrow: "arrow",
+	"Download": "download",
+	FlatArrow: "arrow",
+	Information: "info",
+	Patch: "construction",
+	"Pause": "pause",
+	"Play": "play",
+	Settings: "settings",
+	X_Line: "close",
+);
+
+@each $name, $icon in $svg-icons {
+	.SVGIcon_#{$name} {
+		--icon-name: var(--icon-#{$icon});
+	}
+}

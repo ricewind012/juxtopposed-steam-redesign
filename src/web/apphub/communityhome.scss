@@ -75,7 +75,7 @@
 	.community_home_search_apps_image,
 	.community_home_search_players_image {
 		background-color: transparent;
-		content: var(--icon-search);
+		content: icon("search");
 
 		inset: var(--spacing-md);
 		left: unset;

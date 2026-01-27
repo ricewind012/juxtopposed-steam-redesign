@@ -24,9 +24,6 @@
 	--border-radius: 3px;
 	--border-radius-large: 5px;
 	--icon-size: 20px;
-	--sidebar-width: 299px;
-	--shadow: rgba(0, 0, 0, 0.25);
-	--button-shadow: 0 4px 4px var(--shadow);
 	--transition: ease-in 100ms;
 
 	// Spacing
@@ -46,11 +43,11 @@
 	--gpText-BodySmall: normal 400 12px/1.4 "Motiva Sans", Arial, Sans-serif;
 
 	// Controls
-	// TODO: not sure what causes the 4px
 	--carousel-arrow-container-height: calc(
 		100% - var(--carousel-section-spacing) - var(--carousel-thumb-height)
 	);
-	--carousel-arrow-size: calc(var(--icon-size) + var(--spacing-sm) * 3 + 4px);
+	// 24px = icon size
+	--carousel-arrow-size: calc(24px + var(--spacing-sm) * 3);
 	--carousel-section-spacing: 30px;
 	--carousel-thumb-height: 8px;
 

@@ -1,63 +1,45 @@
 :root {
-	--icon-achievements: icon("achievements");
-	--icon-arrow: icon("arrow");
-	--icon-calendar: icon("calendar");
-	--icon-carousel: icon("carousel");
-	--icon-chat-bubble: icon("chat-bubble");
-	--icon-check: icon("check");
-	--icon-checkbox: icon("checkbox");
-	--icon-checkbox-checked: icon("checkbox-checked");
-	--icon-clock: icon("clock");
-	--icon-close: icon("close");
-	--icon-cloud: icon("cloud");
-	--icon-construction: icon("construction");
-	--icon-controller: icon("controller");
-	--icon-delete: icon("delete");
-	--icon-drag-handle: icon("drag-handle");
-	--icon-emoticon: icon("emoticon");
-	--icon-favorite: icon("favorite");
-	--icon-filter: icon("filter");
-	--icon-filter-off: icon("filter-off");
-	--icon-flag: icon("flag");
-	--icon-download: icon("download");
-	--icon-info: icon("info");
-	--icon-keyboard-arrow: icon("keyboard-arrow");
-	--icon-language: icon("language");
-	--icon-military-tech: icon("military-tech");
-	--icon-minimize: icon("minimize");
-	--icon-notifications: icon("notifications");
-	--icon-pause: icon("pause");
-	--icon-people: icon("people");
-	--icon-platform-linux: icon("platform-linux");
-	--icon-platform-mac: icon("platform-mac");
-	--icon-platform-win: icon("platform-win");
-	--icon-play: icon("play");
-	--icon-play-circle: icon("play-circle");
-	--icon-plus: icon("plus");
-	--icon-restore: icon("restore");
-	--icon-search: icon("search");
-	--icon-settings: icon("settings");
-	--icon-star: icon("star");
-	--icon-steam-circled: icon("steam-circled");
-	--icon-thumb-up: icon("thumb-up");
-	--icon-timelapse: icon("timelapse");
-	--icon-user: icon("user");
-}
-
-$svg-icons: (
-	Arrow: "arrow",
-	"Download": "download",
-	FlatArrow: "arrow",
-	Information: "info",
-	Patch: "construction",
-	"Pause": "pause",
-	"Play": "play",
-	Settings: "settings",
-	X_Line: "close",
-);
-
-@each $name, $icon in $svg-icons {
-	.SVGIcon_#{$name} {
-		--icon-name: var(--icon-#{$icon});
-	}
+	--icon-achievements: file("achievements");
+	--icon-arrow: file("arrow");
+	--icon-calendar: file("calendar");
+	--icon-carousel: file("carousel");
+	--icon-chat-bubble: file("chat-bubble");
+	--icon-check: file("check");
+	--icon-checkbox: file("checkbox");
+	--icon-checkbox-checked: file("checkbox-checked");
+	--icon-clock: file("clock");
+	--icon-close: file("close");
+	--icon-cloud: file("cloud");
+	--icon-construction: file("construction");
+	--icon-controller: file("controller");
+	--icon-delete: file("delete");
+	--icon-drag-handle: file("drag-handle");
+	--icon-emoticon: file("emoticon");
+	--icon-favorite: file("favorite");
+	--icon-filter: file("filter");
+	--icon-filter-off: file("filter-off");
+	--icon-flag: file("flag");
+	--icon-download: file("download");
+	--icon-info: file("info");
+	--icon-keyboard-arrow: file("keyboard-arrow");
+	--icon-language: file("language");
+	--icon-military-tech: file("military-tech");
+	--icon-minimize: file("minimize");
+	--icon-notifications: file("notifications");
+	--icon-pause: file("pause");
+	--icon-people: file("people");
+	--icon-platform-linux: file("platform-linux");
+	--icon-platform-mac: file("platform-mac");
+	--icon-platform-win: file("platform-win");
+	--icon-play: file("play");
+	--icon-play-circle: file("play-circle");
+	--icon-plus: file("plus");
+	--icon-restore: file("restore");
+	--icon-search: file("search");
+	--icon-settings: file("settings");
+	--icon-star: file("star");
+	--icon-steam-circled: file("steam-circled");
+	--icon-thumb-up: file("thumb-up");
+	--icon-timelapse: file("timelapse");
+	--icon-user: file("user");
 }

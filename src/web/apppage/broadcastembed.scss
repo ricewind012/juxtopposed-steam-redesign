@@ -29,7 +29,7 @@
 
 #bordered_corner_expanded,
 #bordered_corner_shrinked {
-	--icon-name: var(--icon-arrow);
+	--icon-name: icon("arrow");
 	@extend %-icon-button;
 }
 
@@ -51,7 +51,7 @@
 }
 
 #broadcast_settings_icon {
-	--icon-name: var(--icon-settings);
+	--icon-name: icon("settings");
 	@extend %-icon-button;
 
 	margin: 0;

@@ -48,7 +48,7 @@
 .supernav_content {
 	background-color: var(--bg-hl);
 	border-radius: var(--border-radius);
-	box-shadow: 0 0 4px 1px var(--shadow);
+	box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.25);
 
 	overflow: hidden;
 	top: 48px;
@@ -98,7 +98,7 @@
 		content: "";
 
 		background-color: var(--fg-main);
-		mask-image: var(--icon-arrow);
+		mask-image: icon("arrow");
 
 		width: 10px;
 		height: 6px;

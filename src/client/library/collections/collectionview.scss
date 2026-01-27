@@ -34,7 +34,7 @@
 #EditButton {
 	--bg: var(--fg-dim);
 	--bg-percentage: 5%;
-	--icon-name: var(--icon-settings);
+	--icon-name: icon("settings");
 	--size: 26px;
 
 	background-color: color-mix(
@@ -50,7 +50,7 @@
 	height: var(--size);
 
 	#DynamicCollectionLabelAndButton & {
-		--icon-name: var(--icon-filter);
+		--icon-name: icon("filter");
 	}
 
 	#Header & {
@@ -67,7 +67,7 @@
 	}
 
 	&#Close {
-		--icon-name: var(--icon-close);
+		--icon-name: icon("close");
 	}
 
 	svg {

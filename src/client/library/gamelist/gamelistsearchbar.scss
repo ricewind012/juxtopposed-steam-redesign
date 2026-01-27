@@ -142,7 +142,7 @@
 
 	color: var(--color-secondary);
 
-	top: calc(50% - var(--icon-size) / 2) !important;
+	top: calc(50% - var(--icon-size) / 2);
 	right: var(--spacing-md);
 
 	&:hover {

@@ -7,11 +7,11 @@
 		@include style.icon("name", true);
 
 		&#CommentIcon {
-			--icon-name: var(--icon-chat-bubble);
+			--icon-name: icon("chat-bubble");
 		}
 
 		&#UpVotesIcon {
-			--icon-name: var(--icon-thumb-up);
+			--icon-name: icon("thumb-up");
 		}
 	}
 
