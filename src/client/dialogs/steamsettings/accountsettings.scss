@@ -1,0 +1,24 @@
+#AvatarAndLabel {
+	gap: var(--spacing-sm);
+
+	#Avatar {
+		--steamavatar_size: 48px;
+
+		margin: 0;
+	}
+
+	#LabelHolder {
+		padding: 0;
+	}
+}
+
+#EntryLabel {
+	font: var(--gpText-HeadingSmall);
+}
+
+#EntryValue {
+	color: var(--fg-dim);
+	font: var(--gpText-BodySmall);
+
+	display: block;
+}

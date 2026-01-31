@@ -1,0 +1,21 @@
+@use "web/layout";
+
+#Advanced {
+	margin-block-start: var(--spacing-lg);
+}
+
+#AdvancedDescription {
+	@include layout.settings-info;
+}
+
+#TopMargin {
+	display: none;
+}
+
+#MicrophoneTestButton {
+	flex: 1 0 auto;
+}
+
+#VolumeBar {
+	background-color: var(--bg-main);
+}

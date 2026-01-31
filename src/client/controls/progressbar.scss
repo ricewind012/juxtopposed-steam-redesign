@@ -1,0 +1,7 @@
+@use "shared/controls";
+
+:where(#ProgressBar) {
+	@include controls.progress-bar("#Percent");
+
+	height: unset;
+}

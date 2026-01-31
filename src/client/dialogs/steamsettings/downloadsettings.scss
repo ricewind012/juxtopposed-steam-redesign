@@ -1,0 +1,17 @@
+@use "web/layout";
+
+#Indent {
+	margin-inline-start: var(--spacing-lg);
+
+	// #gamepaddialog_Field (Shader Pre-Caching description)
+	& + .DialogControlsSection > :nth-child(2) {
+		padding: 0;
+
+		// #gamepaddialog_FieldDescription
+		& > :nth-child(2) {
+			@include layout.settings-info;
+
+			margin-block-start: 0;
+		}
+	}
+}

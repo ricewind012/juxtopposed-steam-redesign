@@ -1,3 +1,37 @@
+@use "shared/style";
+
+@mixin settings-info {
+	--icon-size: 1lh;
+	--offset: calc(var(--icon-size) + var(--spacing-md));
+
+	color: var(--fg-main);
+	font: var(--gpText-BodyMedium);
+	margin-block-end: var(--spacing-sm);
+	margin-inline-start: var(--offset);
+
+	position: relative;
+
+	&::before {
+		content: "";
+
+		@include style.icon("info");
+
+		position: absolute;
+
+		color: var(--fg-dim);
+		margin-inline-start: calc(var(--offset) * -1);
+	}
+}
+
+@mixin settings-header {
+	color: var(--fg-dim);
+	font: var(--gpText-HeadingMedium);
+	letter-spacing: 0;
+	text-transform: none;
+
+	min-height: 50px;
+}
+
 @mixin settings-section {
 	background-color: var(--bg-main);
 	border-radius: var(--border-radius-large);
@@ -17,7 +51,7 @@
 	background: transparent;
 	border-radius: var(--border-radius);
 	padding: 8px 13px;
-	margin-bottom: var(--spacing-md);
+	margin-bottom: var(--spacing-xs);
 
 	&:is(:hover, #{$active-selector}) {
 		background: var(--bg-hover);

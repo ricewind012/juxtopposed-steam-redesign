@@ -1,0 +1,61 @@
+@use "shared/style";
+@use "web/layout";
+
+// TODO: icon-button mixin
+@mixin -icon-button {
+	background-color: var(--bg-hl);
+	border-radius: var(--border-radius);
+
+	min-width: 47px;
+	min-height: 44px;
+
+	&:hover {
+		background-color: var(--bg-hover);
+	}
+}
+
+#FriendsDescription {
+	@include layout.settings-info;
+}
+
+#NotificationFeedToggle {
+	margin-inline-end: var(--spacing-sm);
+}
+
+#NotificationGroup {
+	background-color: transparent;
+	border: none;
+	margin-block-end: var(--spacing-sm);
+}
+
+#NotificationPrefDetails {
+	background-color: transparent;
+	box-shadow: none;
+	gap: var(--spacing-sm);
+	padding: 0;
+	margin-inline-start: calc(63px + var(--spacing-sm));
+
+	flex-direction: column;
+}
+
+#NotificationSection {
+	padding: 0;
+}
+
+#PrefDetailsToggle {
+	--icon-size: 24px;
+
+	@include -icon-button;
+
+	margin: 0;
+
+	&#Selected svg {
+		transform: rotate(180deg);
+	}
+
+	svg {
+		all: unset;
+
+		@include style.icon("arrow", true);
+	}
+}

@@ -1,0 +1,94 @@
+@use "shared/controls";
+
+#BackgroundPathField {
+	#ClearButton {
+		margin-inline-start: var(--spacing-sm);
+
+		min-width: 47px;
+	}
+}
+
+#BackgroundSettingRow {
+	color: var(--fg-main);
+	font: var(--gpText-BodyLarge);
+	border-block-end: 1px solid var(--bg-hover);
+	padding-block-end: var(--spacing-sm);
+	margin-block-start: var(--spacing-sm);
+
+	&:last-child {
+		border: none;
+		padding: 0;
+	}
+}
+
+#BackgroundSettingSecondRow {
+	gap: var(--spacing-sm);
+}
+
+// In gamerecordingwarning
+#ClearDiskSpaceRightColumn {
+	#ClearDiskSpaceButton {
+		padding: 0;
+		margin-block-start: auto;
+
+		flex: unset;
+	}
+
+	// No idea what to do with these, but looks good enough (no it looks off)
+	#Label {
+		color: inherit;
+	}
+
+	#Value {
+		opacity: 0.5;
+		color: inherit;
+	}
+}
+
+#GameIconAndName {
+	span {
+		color: inherit;
+		font: inherit;
+	}
+}
+
+#HeaderContent {
+	margin: 0;
+
+	#LinkContainer {
+		display: none;
+	}
+}
+
+#ModeDescriptionText {
+	padding: 0;
+}
+
+#RecordingMode {
+	all: unset;
+
+	@include controls.radio-alt-container;
+}
+
+#RecordingModeOption {
+	all: unset;
+
+	@include controls.radio-alt($active: "&#Active");
+
+	#Body {
+		opacity: 0.5;
+		color: inherit;
+		font: var(--gpText-BodyMedium);
+		gap: 0;
+		margin-block-start: var(--spacing-xs);
+	}
+
+	#Header {
+		color: inherit;
+		font: inherit;
+	}
+
+	#Pip {
+		display: none;
+	}
+}

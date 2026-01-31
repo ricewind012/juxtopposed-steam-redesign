@@ -118,6 +118,30 @@
 	}
 }
 
+@mixin radio-alt($active) {
+	transition: var(--transition);
+	background-color: var(--bg-main-50);
+	font: var(--gpText-HeadingSmall);
+	padding: var(--spacing-md);
+
+	&:hover {
+		background-color: var(--bg-hover);
+	}
+
+	#{$active} {
+		background-color: var(--color-primary);
+		color: var(--bg-main);
+	}
+}
+
+@mixin radio-alt-container {
+	border-radius: var(--border-radius-large);
+
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+}
+
 @mixin tabs-container {
 	background-color: var(--bg-main);
 	border-radius: var(--border-radius-large);
@@ -144,7 +168,9 @@
 }
 
 @mixin toggle($checked-selector, $disabled-selector) {
+	--bg: var(--bg-hl);
 	--spacing-md: var(--spacing-xs);
+	--swatch-bg: var(--bg-hover);
 	--swatch-size: 20px;
 	--swatch-pos: calc(100% - var(--swatch-size) - var(--spacing-md));
 
@@ -157,8 +183,6 @@
 	height: calc(var(--swatch-size) + var(--spacing-md) * 2);
 
 	&:not(#{$checked-selector}) {
-		--bg: var(--bg-hl);
-		--swatch-bg: var(--bg-hover);
 		--swatch-pos-start: var(--spacing-md);
 		--swatch-pos-end: var(--swatch-pos);
 	}
@@ -171,7 +195,6 @@
 	}
 
 	&#{$disabled-selector} {
-		--swatch-bg: var(--fg-dim);
 		--swatch-pos-start: var(--spacing-md);
 		--swatch-pos-end: var(--swatch-pos);
 

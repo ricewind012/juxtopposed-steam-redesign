@@ -1,0 +1,83 @@
+@use "web/layout";
+
+#PageListItem_Icon {
+	display: none;
+}
+
+#PageListSeparator {
+	background-color: var(--bg-hover);
+	margin-block: var(--spacing-sm);
+	margin-inline: 0;
+}
+
+#PagedSettingsDialog {
+	background-color: var(--bg-main);
+}
+
+#PagedSettingsDialog_PageContent {
+	background: linear-gradient(
+		173.45deg,
+		var(--bg-hover) 1.6%,
+		var(--bg-hl) 89.87%
+	);
+	padding: 0;
+	padding-inline: 18px;
+
+	:where(& .DialogButton, & .DialogDropDown) {
+		&:not(:hover) {
+			background-color: var(--bg-main-50);
+		}
+	}
+
+	:where(& .DialogControlsSection) {
+		@include layout.settings-section;
+
+		background-color: var(--bg-main-50);
+		margin-block: var(--spacing-lg) 0;
+	}
+
+	:where(& .DialogControlsSection:first-child) {
+		margin-block-start: 0;
+	}
+
+	// TODO: unify into a button
+	.DialogDropDown {
+		padding-block: 11px;
+	}
+
+	.DialogHeader {
+		visibility: hidden;
+		margin: 0;
+
+		height: calc(var(--dialog_window-control-size) + var(--spacing-md) * 2);
+	}
+}
+
+#PagedSettingsDialog_PageList {
+	padding: var(--spacing-md);
+}
+
+#PagedSettingsDialog_PageListColumn {
+	background-color: var(--bg-hl);
+	border-radius: 0;
+	padding: 0;
+
+	min-width: var(--sidebar-width);
+}
+
+#PagedSettingsDialog_PageListItem {
+	@include layout.sidebar-item("#Active");
+
+	color: var(--fg-main);
+	font: var(--gpText-BodyLarge);
+}
+
+#PagedSettingsDialog_Title {
+	color: var(--fg-main);
+	font: var(--gpText-HeadingLarge);
+	text-transform: none;
+	padding: 0;
+	margin: var(--spacing-md);
+
+	text-align: center;
+}

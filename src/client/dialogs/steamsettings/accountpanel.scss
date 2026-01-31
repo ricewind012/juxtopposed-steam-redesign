@@ -1,0 +1,40 @@
+#FatButton {
+	--spacing-inline: var(--spacing-lg);
+
+	text-align: start;
+	border-radius: 0;
+	padding-inline: var(--spacing-inline);
+	margin: calc(var(--spacing-xs) * -1) calc(var(--spacing-inline) * -1);
+
+	position: relative;
+	width: calc(100% + var(--spacing-inline) * 2);
+
+	&:not(:hover) {
+		background-color: transparent;
+	}
+
+	svg {
+		color: inherit;
+		margin: 12px 0;
+
+		position: absolute;
+		inset-inline-end: var(--spacing-inline);
+		width: var(--icon-size);
+		height: var(--icon-size);
+	}
+
+	#Label {
+		color: var(--fg-main);
+		font: var(--gpText-HeadingSmall);
+	}
+
+	#Details {
+		color: var(--fg-dim);
+		font: var(--gpText-BodySmall);
+	}
+}
+
+#Highlight {
+	color: var(--color-primary);
+	margin: 0;
+}

@@ -1,6 +1,8 @@
 @use "shared/controls";
+@use "shared/style";
+@use "web/layout";
 
-.DialogButton {
+:where(.DialogButton) {
 	@include controls.button;
 
 	&.Primary {
@@ -13,7 +15,7 @@
 }
 
 .DialogCheckbox {
-	@include controls.toggle(".Active", ".Disabled");
+	@include controls.checkbox(".Active", ".Disabled");
 
 	box-shadow: none;
 
@@ -22,7 +24,12 @@
 	}
 }
 
-.DialogDropDown {
+.DialogCheckbox_Container {
+	padding: 0;
+	margin: 0;
+}
+
+:where(.DialogDropDown) {
 	@include controls.dropdown;
 }
 
@@ -57,7 +64,7 @@
 
 .DialogToggle_Label {
 	color: inherit;
-	font: var(--gpText-BodySmall);
+	font: inherit;
 }
 
 .DialogToggleField {
@@ -84,4 +91,67 @@
 			background: var(--bg-hover);
 		}
 	}
+}
+
+.ModalPosition_Content {
+	color: var(--fg-main);
+}
+
+.ModalPosition_TopBar {
+	transition: var(--transition);
+	background-image: linear-gradient(
+		90deg,
+		transparent,
+		var(--color-primary),
+		transparent
+	);
+}
+
+.SettingsDialogSubHeader {
+	@include layout.settings-header;
+}
+
+.title-area {
+	--height: calc(var(--dialog_window-control-size) + var(--spacing) * 2);
+	--icon-size: var(--dialog_window-control-size);
+	--spacing: var(--spacing-md);
+
+	height: var(--height);
+}
+
+.title-area-icon {
+	@include style.icon;
+
+	&:hover {
+		color: var(--fg-main);
+	}
+
+	&.closeButton {
+		--icon-name: icon("close");
+	}
+
+	// TODO
+	&.maximizeButton {
+		--icon-name: icon("restore");
+	}
+
+	&.minimizeButton {
+		--icon-name: icon("minimize");
+	}
+
+	&.restoreButton {
+		--icon-name: icon("restore");
+	}
+}
+
+.title-area-icon-inner {
+	display: none;
+}
+
+.title-bar-actions {
+	color: var(--fg-dim);
+	gap: var(--dialog_window-control-spacing);
+	margin-inline-end: calc(var(--spacing) / 2);
+
+	max-height: var(--height);
 }

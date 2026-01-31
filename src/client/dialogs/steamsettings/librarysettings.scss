@@ -1,0 +1,19 @@
+@use "web/layout";
+
+#ActionSection {
+	gap: var(--spacing-sm);
+	margin-block-start: var(--spacing-lg);
+
+	flex-direction: column;
+}
+
+#DescriptionText {
+	@include layout.settings-header;
+
+	margin: 0;
+}
+
+// Separator
+#TopMargin {
+	display: none;
+}

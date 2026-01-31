@@ -1,0 +1,236 @@
+@use "shared/controls";
+@use "shared/style";
+@use "web/layout";
+
+// TODO: icon-button mixin
+@mixin -icon-button {
+	background-color: var(--bg-hl);
+	border-radius: var(--border-radius);
+
+	min-width: 47px;
+	min-height: 44px;
+
+	&:hover {
+		background-color: var(--bg-hover);
+	}
+}
+
+$-bar-colors: (
+	DLC: 0,
+	Games: h,
+	Media: 180,
+	Other: 60,
+	Shader: 300,
+	Updates: lightred,
+	Workshop: 120,
+);
+
+#AppActionBar {
+	@include layout.settings-section;
+
+	background-color: var(--bg-main-50);
+	border-radius: 0 0 var(--border-radius) var(--border-radius);
+	margin: 0;
+
+	#ActionButton {
+		margin-inline-start: var(--spacing-sm);
+	}
+
+	#AppActionSelected {
+		color: var(--fg-main);
+		font: var(--gpText-BodySmall);
+		letter-spacing: 0;
+		text-transform: none;
+	}
+}
+
+#AppBody {
+	// Can't change the vertical padding as it's a virtualized list.
+	padding-inline: var(--spacing-sm);
+
+	&:hover {
+		background-color: var(--bg-main);
+		border-radius: var(--border-radius);
+	}
+
+	#AppInfoItem {
+		font: var(--gpText-BodyMedium);
+		letter-spacing: 0;
+		text-transform: none;
+
+		svg {
+			display: none;
+		}
+	}
+
+	#AppName {
+		color: var(--fg-main);
+		font: var(--gpText-HeadingSmall);
+	}
+
+	#AppSize {
+		color: var(--fg-dim);
+		font: var(--gpText-BodySmall);
+		letter-spacing: 0;
+	}
+
+	#AppUsageText,
+	#SpecialSectionText {
+		color: var(--fg-main);
+		margin: 0;
+	}
+
+	#AppUsageValue {
+		color: var(--fg-dim);
+	}
+
+	#NoCheckboxSpacer {
+		--icon-size: 24px;
+
+		width: var(--icon-size);
+		height: var(--icon-size);
+	}
+}
+
+#AppBodyInfo {
+	margin: 0;
+}
+
+#AppHeader {
+	@include layout.settings-header;
+
+	padding: 0;
+
+	#Rule {
+		visibility: hidden;
+	}
+}
+
+#AppHeaderValue {
+	color: inherit;
+
+	display: flex;
+
+	&::before {
+		content: "(";
+	}
+
+	&::after {
+		content: ")";
+	}
+}
+
+#AppsGrid {
+	@include layout.settings-section;
+
+	background-color: var(--bg-main-50);
+	border-radius: var(--border-radius) var(--border-radius) 0 0;
+	padding-block-end: 0;
+	margin-block: var(--spacing-lg) 0;
+
+	&::after {
+		content: "";
+
+		width: 100%;
+
+		border-block-end: 1px solid var(--bg-hl);
+	}
+}
+
+#ContentManagement {
+	position: relative;
+}
+
+#DriveDropdownControl {
+	margin: 0;
+	margin-inline-end: calc(var(--spacing-sm) + 47px);
+}
+
+#DriveName {
+	color: var(--fg-main);
+	font: var(--gpText-BodySmall);
+	letter-spacing: 0;
+	text-transform: none;
+}
+
+#DriveSettingsButton {
+	@include -icon-button;
+
+	margin: 0;
+
+	position: absolute;
+	inset-block-start: 0;
+	// TODO: wtf is this
+	inset-inline-end: 12px;
+
+	&:not(:hover) {
+		background-color: var(--bg-main-50);
+	}
+
+	svg {
+		@include style.icon("arrow", true);
+	}
+}
+
+@each $k, $v in $-bar-colors {
+	#DriveUsage#{$k} {
+		background-color: hsl(from var(--color-primary) #{$v} s l);
+	}
+}
+
+#DriveUsageDot {
+	font: var(--gpText-BodySmall);
+
+	width: 1em;
+	height: 1em;
+}
+
+#DriveUsageIndicator {
+	background: var(--bg-main);
+
+	min-height: 4px;
+}
+
+#InstallDropdownOption {
+	font: inherit;
+
+	& > svg {
+		color: var(--fg-main);
+	}
+
+	svg {
+		margin-inline-end: var(--spacing-sm);
+
+		flex-shrink: 0;
+		width: 1em;
+		height: 1em;
+	}
+
+	.tool-tip-source {
+		display: flex;
+	}
+
+	#DriveName {
+		font: inherit;
+		text-decoration: none;
+
+		svg {
+			color: var(--accent-yellow);
+		}
+	}
+
+	#DriveSize {
+		color: var(--fg-dim);
+		font: var(--gpText-BodySmall);
+		letter-spacing: 0;
+		text-transform: none;
+	}
+}
+
+#LibraryContent {
+	padding-block-start: var(--spacing-lg);
+}
+
+#LibraryHeader {
+	padding: 0;
+}

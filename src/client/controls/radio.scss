@@ -1,0 +1,17 @@
+@use "shared/controls";
+
+#Button {
+	all: unset;
+
+	@include controls.radio-alt($active: "&#Active");
+
+	&::before {
+		display: none;
+	}
+}
+
+#Group {
+	all: unset;
+
+	@include controls.radio-alt-container;
+}

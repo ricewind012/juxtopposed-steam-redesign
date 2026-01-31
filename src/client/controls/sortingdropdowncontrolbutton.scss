@@ -1,0 +1,11 @@
+@use "shared/controls";
+
+#BasicHomeDropDownControlButton {
+	@include controls.dropdown;
+
+	margin: 0;
+
+	svg {
+		display: none;
+	}
+}
