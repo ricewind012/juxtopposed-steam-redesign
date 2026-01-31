@@ -1,0 +1,242 @@
+@use "shared/controls";
+@use "shared/style";
+@use "web/layout";
+
+:where(#BottomGap),
+:where(#BottomGapSmall),
+:where(#TopGap),
+:where(#TopGapLarge),
+:where(#TopGapSmall) {
+	margin: 0;
+}
+
+#AdvancedOptions {
+	@include layout.settings-section;
+
+	background-color: var(--bg-main-50);
+	margin-block: var(--spacing-lg) 0;
+}
+
+#AppProperties {
+	.DialogBody {
+		color: var(--fg-main);
+		font: var(--gpText-BodyLarge);
+		margin: 0;
+	}
+
+	.DialogControlsSection > .DialogControlsSection {
+		all: unset;
+	}
+}
+
+#BetaAccessCodeRow {
+	margin-block-start: var(--spacing-xs);
+}
+
+#BetaHeaderRow {
+	display: none;
+}
+
+#BetaLabel {
+	color: var(--fg-main);
+	font: var(--gpText-HeadingMedium);
+	margin-block-start: var(--spacing-lg);
+
+	& + div {
+		@include layout.settings-info;
+
+		margin-block-start: var(--spacing-sm);
+	}
+}
+
+#BetaName {
+	all: unset;
+}
+
+#BetaRadioButton {
+	display: none;
+}
+
+#BetaRow {
+	all: unset;
+
+	display: grid;
+	grid-template-columns: 75% 25%;
+
+	@include controls.radio-alt($active: "&#Selected");
+
+	#BetaLastUpdated {
+		opacity: 0.5;
+		font: var(--gpText-BodySmall);
+		// 6px = 18px (HeadingSmall) - 12px (BodySmall)
+		margin: 6px 0;
+
+		align-items: start;
+		justify-content: start;
+	}
+
+	#DescText {
+		opacity: 0.5;
+		font: var(--gpText-BodyMedium);
+		margin-block-start: var(--spacing-xs);
+	}
+}
+
+#BetasTable {
+	all: unset;
+
+	margin-block-start: var(--spacing-lg);
+
+	@include controls.radio-alt-container;
+}
+
+#BlueHighlight {
+	color: var(--color-primary);
+}
+
+#BuildInfo {
+	@include layout.settings-section;
+
+	background-color: var(--bg-main-50);
+	color: inherit;
+	font: inherit;
+	gap: var(--spacing-xs);
+	margin-block-start: var(--spacing-lg);
+
+	display: flex;
+	flex-direction: column;
+
+	// wtf
+	& > br {
+		display: none;
+	}
+}
+
+#Checkbox {
+	background-color: transparent;
+	box-shadow: none;
+	margin-block-end: var(--spacing-sm);
+
+	align-items: center;
+}
+
+#DefaultOptionText {
+	color: inherit;
+}
+
+#Detail {
+	@include layout.settings-info;
+}
+
+#LocalFilesLink {
+	text-decoration: none;
+}
+
+#SectionTopLine {
+	all: unset;
+}
+
+#SettingsDialogButton {
+	margin-block: 0;
+}
+
+#SteamCloudUsage {
+	margin-block-start: var(--spacing-sm);
+}
+
+// TODO: icon-button mixin
+@mixin -icon-button {
+	background-color: var(--bg-hl);
+	border-radius: var(--border-radius);
+
+	min-width: 36px;
+	min-height: 36px;
+
+	&:hover {
+		background-color: var(--bg-hover);
+	}
+}
+
+#WorkshopItemRow {
+	background-color: transparent;
+
+	& > :nth-child(3) {
+		flex-basis: 300px;
+	}
+}
+
+// this is awful
+#WorkshopItemRowsScroll {
+	background-color: var(--bg-main-50);
+	border-radius: var(--border-radius-large);
+	border: none;
+	box-shadow: none;
+
+	&:not(:hover) #DragHandle {
+		color: var(--fg-dim);
+	}
+
+	// TODO: unify
+	.tool-tip-source {
+		display: flex;
+	}
+
+	#Controls {
+		padding: 8px;
+	}
+
+	#DragHandle {
+		@include style.icon("drag-handle", true);
+
+		opacity: 1;
+
+		left: 67%;
+	}
+
+	#NameText {
+		color: var(--fg-main);
+		font: var(--gpText-HeadingSmall);
+	}
+
+	#SortedColumn {
+		color: var(--fg-dim);
+		font: var(--gpText-BodySmall);
+		margin: 8px;
+
+		flex-shrink: 0;
+	}
+
+	#UnsubscribeButton {
+		@include -icon-button;
+
+		margin: 0;
+
+		&:not(:hover) {
+			background-color: var(--bg-main-50);
+		}
+
+		svg {
+			@include style.icon("delete", true);
+		}
+	}
+}
+
+#WorkshopItemTagsContainer {
+	color: var(--fg-dim);
+	font: var(--gpText-BodySmall);
+	padding: 0;
+}
+
+#WorkshopTopRow {
+	gap: var(--spacing-sm);
+	padding-block-start: var(--spacing-lg);
+
+	flex-direction: column;
+	align-items: start;
+
+	.DialogLabel {
+		font: var(--gpText-BodyLarge);
+		margin-block: 0;
+		margin-inline-end: var(--spacing-sm);
+	}
+}

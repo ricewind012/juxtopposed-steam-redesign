@@ -5,6 +5,8 @@
 :where(.DialogButton) {
 	@include controls.button;
 
+	box-shadow: none;
+
 	&.Primary {
 		@include controls.button("primary");
 	}
@@ -24,9 +26,13 @@
 	}
 }
 
-.DialogCheckbox_Container {
+:where(.DialogCheckbox_Container) {
 	padding: 0;
 	margin: 0;
+
+	&:hover .DialogCheckbox {
+		color: var(--fg-main);
+	}
 }
 
 :where(.DialogDropDown) {
@@ -91,6 +97,10 @@
 			background: var(--bg-hover);
 		}
 	}
+}
+
+.DialogTwoColLayout {
+	gap: var(--spacing-sm);
 }
 
 .ModalPosition_Content {

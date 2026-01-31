@@ -1,14 +1,5 @@
 @use "web/layout";
 
-#SettingsDialogBodyFade {
-	--fade-size: var(--spacing-lg);
-
-	mask-image:
-		linear-gradient(180deg, transparent, black var(--fade-size)),
-		linear-gradient(to var(--fadeDirection), black 0px 14px, transparent 14px);
-	padding-block-start: var(--fade-size);
-}
-
 #SettingsDialogBodyText {
 	@include layout.settings-header;
 }

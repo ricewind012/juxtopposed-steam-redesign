@@ -25,7 +25,6 @@ $-others: ":where(#StandaloneFieldSeparator, .DialogControlsSection)";
 	}
 
 	.DialogBody > &:nth-child(-n + 1 of &) {
-		border-radius: 0 0 var(--border-radius-large) var(--border-radius-large);
 		border-radius: var(--border-radius-large) var(--border-radius-large) 0 0;
 	}
 

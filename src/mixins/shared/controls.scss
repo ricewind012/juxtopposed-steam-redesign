@@ -128,6 +128,14 @@
 		background-color: var(--bg-hover);
 	}
 
+	&:first-child {
+		border-radius: var(--border-radius-large) var(--border-radius-large) 0 0;
+	}
+
+	&:last-child {
+		border-radius: 0 0 var(--border-radius-large) var(--border-radius-large);
+	}
+
 	#{$active} {
 		background-color: var(--color-primary);
 		color: var(--bg-main);
@@ -135,9 +143,6 @@
 }
 
 @mixin radio-alt-container {
-	border-radius: var(--border-radius-large);
-
-	overflow: hidden;
 	display: flex;
 	flex-direction: column;
 }

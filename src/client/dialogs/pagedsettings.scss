@@ -23,6 +23,24 @@
 	padding: 0;
 	padding-inline: 18px;
 
+	:where(& .DialogBody) {
+		--fade-direction: left;
+		--fade-size: var(--spacing-lg);
+
+		mask-image:
+			linear-gradient(180deg, transparent, black var(--fade-size)),
+			linear-gradient(
+				to var(--fade-direction),
+				black 0px 14px,
+				transparent 14px
+			);
+		padding-block-start: var(--fade-size);
+
+		&:dir(rtl) {
+			--fade-direction: right;
+		}
+	}
+
 	:where(& .DialogButton, & .DialogDropDown) {
 		&:not(:hover) {
 			background-color: var(--bg-main-50);
