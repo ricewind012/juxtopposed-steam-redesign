@@ -7,7 +7,7 @@
 	font: var(--gpText-BodyMedium);
 	gap: 8px;
 	padding: 2px;
-	margin-right: var(--spacing-sm);
+	margin: 0;
 
 	max-height: unset;
 
@@ -17,6 +17,10 @@
 
 	&.ingame {
 		color: var(--accent-green);
+	}
+
+	.avatar {
+		border: none;
 	}
 
 	#Chevron {
@@ -41,6 +45,33 @@
 	--icon-name: icon("notifications");
 	--icon-size: var(--dialog_window-control-size);
 	margin-right: var(--spacing-sm);
+}
+
+#NotificationsButton {
+	--count-size: 16px;
+
+	// TODO(js): App.GetCurrentUser().NotificationCounts.offline_messages +
+	// NotificationStore.m_nUnviewedNotifications
+	//
+	// also maybe use "container-type: inline-size" then "@container (min-width: 500px)"
+	// to apply padding
+	&:where(#HasNew, #WasNew)::before {
+		content: "";
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: absolute;
+		min-width: var(--count-size);
+		height: var(--count-size);
+		inset-block-start: -2px;
+		inset-inline-end: -3px;
+
+		background-color: var(--color-primary);
+		color: var(--bg-main);
+		font: var(--gpText-BodySmall);
+		border-radius: 1337px;
+	}
 }
 
 // most useless fucking buttons ever FUCK YOU

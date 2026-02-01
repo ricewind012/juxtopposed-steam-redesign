@@ -5,15 +5,16 @@
 #FocusBar#Focused {
 	background-image: linear-gradient(
 		to right,
-		transparent 10%,
-		#1aa0ff 50%,
-		transparent 90%
+		transparent,
+		var(--color-primary),
+		transparent
 	);
 }
 
 #SuperNavBar {
 	padding: 0;
 
+	flex: 1 0 auto;
 	height: unset;
 	min-height: unset;
 }
@@ -53,6 +54,10 @@
 			var(--dialog_window-control-spacing) * 2
 	);
 	height: 32px;
+
+	.title-area {
+		height: inherit;
+	}
 }
 
 #Wrapper {

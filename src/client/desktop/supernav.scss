@@ -20,13 +20,21 @@
 	}
 }
 
-#SuperNav {
-}
-
 #SuperNavMenu {
 	font: var(--gpText-HeadingSmall);
 	padding: 0;
 	margin-right: 66px;
+
+	// TODO(localization):
+	&:nth-child(6) {
+		font-size: 0;
+
+		&::before {
+			content: "Profile";
+
+			font: var(--gpText-HeadingSmall);
+		}
+	}
 
 	&#Selected {
 		color: var(--color-primary);
