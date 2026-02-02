@@ -1,0 +1,113 @@
+@use "shared/controls";
+@use "shared/style";
+
+// TODO: icon-button mixin
+@mixin -icon-button {
+	background-color: var(--bg-hl);
+	border-radius: var(--border-radius);
+
+	min-width: 36px;
+	min-height: 36px;
+
+	&:hover {
+		background-color: var(--bg-hover);
+	}
+}
+
+#Content {
+	color: var(--fg-main);
+	font: var(--gpText-BodyMedium);
+	padding: 0;
+
+	hr {
+		border: none;
+		margin-block: var(--spacing-sm);
+	}
+}
+
+#DetailBlock {
+	font: var(--gpText-BodySmall);
+
+	#Header {
+		color: var(--fg-dim);
+		font: var(--gpText-BodyMedium);
+		letter-spacing: 0;
+		text-transform: none;
+	}
+
+	#Primary {
+		color: var(--color-primary);
+		font: var(--gpText-HeadingSmall);
+		margin-block-end: 7px;
+	}
+}
+
+#ExportPreview {
+	gap: var(--spacing-md);
+	padding-block-start: var(--spacing-lg);
+
+	#Thumbnail {
+		border-radius: var(--border-radius);
+	}
+}
+
+#PathRow {
+	gap: var(--spacing-sm);
+
+	.DialogButton {
+		@include -icon-button;
+
+		padding: 8px;
+
+		svg {
+			@include style.icon("settings", true);
+
+			color: inherit;
+		}
+	}
+
+	#File {
+		color: var(--fg-main);
+		font: var(--gpText-HeadingSmall);
+	}
+
+	#Path {
+		color: var(--fg-dim);
+		font: var(--gpText-BodyMedium);
+	}
+}
+
+#SettingRow {
+	color: var(--fg-main);
+	font: var(--gpText-HeadingSmall);
+}
+
+#Slider {
+	#ResolutionNotchLabel {
+		color: var(--fg-dim);
+		font: var(--gpText-BodySmall);
+		letter-spacing: 0;
+		padding-block-start: 7px;
+	}
+
+	#ResolutionNotchTick {
+		--pct: 20%;
+		background-color: color-mix(in srgb, var(--fg-dim) var(--pct), transparent);
+
+		&#TickActive {
+			--pct: 50%;
+		}
+	}
+}
+
+#SliderHeader {
+	color: var(--fg-main);
+	font: var(--gpText-HeadingSmall);
+	padding-block-end: var(--spacing-sm);
+}
+
+#TypeSwitcher {
+	@include controls.radio-container-horizontal;
+
+	background-color: var(--bg-hl);
+}

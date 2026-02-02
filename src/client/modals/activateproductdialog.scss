@@ -1,0 +1,21 @@
+#HeaderContainer {
+	all: unset;
+}
+
+#ProductActivationInfoContainerDesktop {
+	padding-block-end: var(--spacing-lg);
+
+	#InfoExample {
+		color: var(--fg-dim);
+		font: var(--gpText-BodySmall);
+		letter-spacing: 0;
+	}
+
+	#InfoExampleHeader {
+		color: var(--fg-main);
+		font: var(--gpText-HeadingSmall);
+		letter-spacing: 0;
+		text-transform: none;
+		margin-block-start: var(--spacing-lg);
+	}
+}

@@ -147,6 +147,30 @@
 	flex-direction: column;
 }
 
+@mixin radio-container-horizontal {
+	flex-direction: row;
+
+	& > * {
+		text-align: center;
+
+		flex: 1;
+	}
+
+	& > :first-child {
+		border-radius: var(--border-radius-large) 0 0 var(--border-radius-large);
+	}
+
+	& > :last-child {
+		border-radius: 0 var(--border-radius-large) var(--border-radius-large) 0;
+	}
+}
+
+@mixin radio-description {
+	opacity: 0.5;
+	font: var(--gpText-BodyMedium);
+	margin-block-start: var(--spacing-xs);
+}
+
 @mixin tabs-container {
 	background-color: var(--bg-main);
 	border-radius: var(--border-radius-large);

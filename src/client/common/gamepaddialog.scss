@@ -1,4 +1,3 @@
-@use "shared/controls";
 @use "shared/style";
 
 $-others: ":where(#StandaloneFieldSeparator, .DialogControlsSection)";
@@ -103,13 +102,4 @@ $-others: ":where(#StandaloneFieldSeparator, .DialogControlsSection)";
 	.DialogBody > & {
 		display: none;
 	}
-}
-
-#Toggle {
-	@include controls.toggle("#On", "#Disabled");
-}
-
-#ToggleRail,
-#ToggleSwitch {
-	display: none;
 }

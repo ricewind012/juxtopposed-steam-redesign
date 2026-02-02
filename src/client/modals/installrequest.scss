@@ -1,0 +1,158 @@
+@use "shared/controls";
+@use "shared/style";
+
+// TODO: icon-button mixin
+@mixin -icon-button {
+	background-color: var(--bg-hl);
+	border-radius: var(--border-radius);
+
+	min-width: 36px;
+	min-height: 36px;
+
+	&:hover {
+		background-color: var(--bg-hover);
+	}
+}
+
+%-folder-icon {
+	color: inherit;
+	margin: 0;
+
+	position: absolute;
+	width: var(--icon-size);
+	height: var(--icon-size);
+
+	svg {
+		width: inherit;
+		height: inherit;
+	}
+}
+
+#AppLogo {
+	margin-inline-end: var(--spacing-md);
+
+	width: 115px;
+	height: 58px;
+
+	img {
+		border-radius: var(--border-radius);
+	}
+}
+
+#AppName {
+	color: var(--fg-main);
+	font: var(--gpText-HeadingSmall);
+}
+
+#AppSizeRequired {
+	color: var(--fg-dim);
+	font: var(--gpText-BodyMedium);
+}
+
+#AppToInstall {
+	border: none;
+	padding: 0;
+
+	align-items: center;
+}
+
+#AppsToInstall {
+	border: none;
+	margin: 0;
+}
+
+#CreateShortcuts {
+	gap: var(--spacing-xs);
+	margin: 0;
+
+	flex-direction: column;
+}
+
+#FolderOption {
+	@include controls.radio-alt("&#Active");
+
+	background-color: var(--bg-hl);
+	color: var(--fg-main);
+	gap: 0;
+	margin: 0;
+
+	flex-direction: column;
+	align-items: start;
+	position: relative;
+
+	svg {
+		@include style.icon("name", true);
+	}
+
+	#FolderFlag {
+		@extend %-folder-icon;
+		--icon-name: icon("info");
+
+		inset-inline-end: var(--spacing-md);
+
+		&:not(#Warning) {
+			display: none;
+		}
+	}
+
+	#FolderFlagStar {
+		--icon-name: icon("star");
+		@extend %-folder-icon;
+
+		inset-inline-end: calc(
+			var(--spacing-md) + var(--spacing-sm) + var(--icon-size)
+		);
+	}
+
+	#FolderName {
+		color: inherit;
+	}
+
+	#FreeSpace {
+		@include controls.radio-description;
+
+		text-transform: none;
+	}
+}
+
+#FolderSelector {
+	padding: 0;
+
+	#Header {
+		color: var(--fg-main);
+		font: var(--gpText-BodyLarge);
+		letter-spacing: 0;
+		text-transform: none;
+
+		align-items: end;
+
+		// TODO
+		.tool-tip-source {
+			display: flex;
+		}
+	}
+}
+
+#FolderSettings {
+	@include -icon-button;
+
+	width: unset;
+	height: unset;
+
+	svg {
+		@include style.icon("settings", true);
+	}
+}
+
+#NoticeInstallFolder:not(:has(> span:empty)) {
+	@include style.alert;
+
+	text-transform: none;
+
+	justify-content: start;
+	min-height: 1lh;
+
+	#FolderFlag {
+		display: none;
+	}
+}

@@ -1,0 +1,15 @@
+#InsetContainer {
+	background-color: transparent;
+	border: none;
+	padding: 0;
+	margin-block-start: var(--spacing-lg);
+
+	:where(& > :first-child, #Right) > b {
+		font: var(--gpText-HeadingSmall);
+	}
+}
+
+#LinksContainer {
+	gap: var(--spacing-sm);
+	margin-block-start: var(--spacing-sm);
+}

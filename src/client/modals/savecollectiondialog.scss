@@ -1,0 +1,33 @@
+#ActionLabel {
+	filter: none;
+	text-transform: none;
+	// TODO(controls): button border
+	border: none;
+
+	svg {
+		display: none;
+	}
+}
+
+#Description {
+	background: none;
+	color: var(--fg-main);
+	font: var(--gpText-BodyMedium);
+	padding: 0;
+}
+
+#Option {
+	gap: var(--spacing-sm);
+	margin: 0;
+}
+
+#SaveCollectionContainer {
+	.DialogBodyText {
+		gap: 0;
+	}
+}
+
+#TwoOptionsContainer {
+	background-color: transparent;
+	gap: var(--spacing-lg);
+}

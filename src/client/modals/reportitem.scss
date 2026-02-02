@@ -1,0 +1,17 @@
+@use "shared/controls";
+
+#Description,
+#Description2,
+#DMCA {
+	font: inherit;
+	margin: 0;
+}
+
+#InputBox {
+	@include controls.text-input;
+
+	color: var(--fg-main);
+	margin: 0;
+
+	width: 100%;
+}

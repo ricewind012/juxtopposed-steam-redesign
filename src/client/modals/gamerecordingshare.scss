@@ -1,0 +1,59 @@
+@use "shared/style";
+@use "shared/text";
+
+#Checkmark {
+	@include style.icon("check", true);
+
+	color: inherit;
+}
+
+#Content {
+	gap: var(--spacing-sm);
+	padding: 0;
+}
+
+#Description {
+	color: var(--fg-dim);
+	font: inherit;
+}
+
+#DescriptionSmall {
+	color: var(--fg-dim);
+	font: var(--gpText-BodySmall);
+	padding: 0;
+
+	#MobileLink {
+		@include text.link;
+
+		text-decoration: none;
+	}
+}
+
+#DescriptionWarning {
+	color: var(--accent-yellow);
+	font: inherit;
+}
+
+#DialogBodyText {
+	font: inherit;
+	gap: var(--spacing-xs);
+
+	align-items: center;
+
+	&#Error {
+		color: var(--accent-red);
+	}
+
+	&#Success {
+		color: var(--accent-green);
+	}
+}
+
+#Error {
+	color: var(--accent-red);
+	font: inherit;
+}
+
+#TopPadding {
+	padding: 0;
+}

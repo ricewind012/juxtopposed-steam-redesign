@@ -1,0 +1,17 @@
+@use "shared/controls";
+
+#ButtonBox {
+	@include controls.button;
+
+	&:where(#Combobox) {
+		@include controls.dropdown;
+	}
+
+	svg {
+		display: none;
+	}
+
+	#Text {
+		color: inherit;
+	}
+}

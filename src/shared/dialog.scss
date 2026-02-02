@@ -50,6 +50,7 @@
 
 :where(.DialogContent) {
 	background: var(--bg-main);
+	font: var(--gpText-BodyMedium);
 	padding: var(--spacing-lg);
 }
 
@@ -87,11 +88,19 @@
 	box-shadow: none;
 }
 
+:where(.DialogInputLabelGroup) {
+	margin-block-end: var(--spacing-sm);
+}
+
 .DialogLabel {
 	color: var(--fg-dim);
 	font: var(--gpText-BodySmall);
 	text-transform: none;
 	margin-bottom: var(--spacing-xs);
+}
+
+:where(.DialogRoundCheckboxField) {
+	display: none;
 }
 
 .DialogToggle_Description {

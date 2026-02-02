@@ -1,0 +1,39 @@
+@use "shared/controls";
+
+// "Share on Steam" modal
+
+#CaptionField {
+	@include controls.text-input;
+}
+
+#CloudStorageImpact {
+	color: var(--fg-main);
+	font: inherit;
+}
+
+#ScreenshotShareDialog {
+	gap: var(--spacing-sm);
+
+	// TODO(controls): .DialogButton needs margin: 0 here
+	#Buttons {
+		gap: var(--spacing-sm);
+		margin-block-start: calc(30px - var(--spacing-sm));
+	}
+}
+
+#ShareDialogRow {
+	gap: var(--spacing-sm);
+
+	flex-direction: column;
+	align-items: start;
+}
+
+#SpoilerField,
+#VisibilityField {
+	gap: var(--spacing-xs);
+
+	#Label {
+		color: var(--fg-dim);
+		font: inherit;
+	}
+}

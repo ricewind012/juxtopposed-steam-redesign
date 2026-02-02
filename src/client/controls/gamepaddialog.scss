@@ -1,0 +1,10 @@
+@use "shared/controls";
+
+#Toggle {
+	@include controls.toggle("#On", "#Disabled");
+}
+
+#ToggleRail,
+#ToggleSwitch {
+	display: none;
+}

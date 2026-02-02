@@ -1,0 +1,109 @@
+@use "shared/style";
+
+%-points-icon {
+	--icon-link: url("https://steamloopback.host/skins/juxtopposed-steam-redesign/assets/images/points.png");
+
+	background-image: var(--icon-link);
+	background-size: var(--icon-size);
+	padding: 0;
+	margin-inline-end: var(--spacing-sm);
+
+	width: var(--icon-size);
+	height: var(--icon-size);
+
+	* {
+		display: none;
+	}
+}
+
+#ButtonContainer {
+	gap: 0;
+
+	#Button {
+		transition: var(--transition);
+		border: none;
+		border-radius: var(--border-radius-large);
+
+		&:hover {
+			background-color: var(--bg-hover);
+		}
+
+		&#Selected {
+			background-color: var(--color-primary);
+			color: var(--bg-main);
+
+			#Label {
+				color: inherit;
+			}
+		}
+	}
+
+	#Label {
+		color: var(--color-primary);
+		font: var(--gpText-HeadingSmall);
+		letter-spacing: 0;
+	}
+
+	#Points {
+		font: var(--gpText-BodyMedium);
+		letter-spacing: 0;
+	}
+
+	#PointsAmountIcon {
+		--icon-size: 1lh;
+		@extend %-points-icon;
+	}
+}
+
+#Description {
+	color: var(--fg-dim);
+	font: inherit;
+}
+
+#Divider {
+	display: none;
+}
+
+#Footer {
+	& > :first-child {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		flex-grow: 1;
+	}
+
+	#BalanceAmount {
+		color: var(--color-primary);
+		font: var(--gpText-HeadingSmall);
+		letter-spacing: 0;
+	}
+
+	#BalanceIcon {
+		--icon-size: 32px;
+		@extend %-points-icon;
+	}
+
+	#BalanceLabel {
+		display: none;
+	}
+}
+
+#FooterLink {
+	font: inherit;
+	text-decoration: none;
+	padding: 0;
+}
+
+#GrantAwardModal {
+	color: var(--fg-main);
+
+	.DialogContent_InnerWidth {
+		gap: var(--spacing-sm);
+	}
+}
+
+#Title {
+	font: var(--gpText-HeadingLarge);
+	letter-spacing: 0;
+	text-transform: none;
+}

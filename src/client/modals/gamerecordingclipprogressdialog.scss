@@ -1,0 +1,19 @@
+#ClipProgressDialog {
+	gap: var(--spacing-sm);
+	padding: 0;
+
+	// TODO(controls): .DialogButton needs margin: 0 here
+	.DialogButton {
+		margin-block-start: calc(30px - var(--spacing-sm));
+	}
+}
+
+#Error {
+	color: var(--accent-red);
+}
+
+#Title {
+	color: var(--fg-main);
+	font: var(--gpText-HeadingLarge);
+	margin-block-end: var(--spacing-sm);
+}

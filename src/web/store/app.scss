@@ -122,11 +122,9 @@ body.game_bg {
 
 .anticheat_nonkernel_notice,
 .DRM_notice {
-	background: color-mix(in srgb, currentColor 20%, transparent);
-	color: var(--accent-yellow);
+	@include style.alert;
+
 	font: inherit;
-	border-radius: var(--border-radius);
-	padding: var(--spacing-sm);
 	margin-block-start: calc(7px * 2);
 
 	.anticheat_name {

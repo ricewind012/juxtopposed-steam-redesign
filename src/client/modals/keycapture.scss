@@ -1,0 +1,29 @@
+@use "shared/style";
+
+#Explainer {
+	color: var(--fg-main);
+	font: var(--gpText-HeadingSmall);
+	margin-block-end: var(--spacing-xs);
+}
+
+#KeyCaptureBottomRow {
+	gap: var(--spacing-sm);
+}
+
+#Subhead {
+	color: var(--fg-dim);
+	font: inherit;
+}
+
+#UnbindButton {
+	--icon-size: 25px;
+
+	@include style.icon("close", true);
+
+	inset-block-start: 12px;
+	inset-inline-end: 15px;
+
+	&:not(:hover) {
+		color: var(--fg-dim);
+	}
+}

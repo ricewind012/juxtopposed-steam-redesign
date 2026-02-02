@@ -1,8 +1,9 @@
+@use "shared/style";
+
 #Body {
 	opacity: 0.5;
 	color: inherit;
 	font: var(--gpText-BodyMedium);
-	margin-block-start: var(--spacing-xs);
 }
 
 #Heading {
@@ -14,16 +15,10 @@
 }
 
 #WarningBox {
-	background: radial-gradient(
-		farthest-corner at 0% 0%,
-		color-mix(in srgb, currentColor 20%, var(--bg-main)),
-		var(--bg-main-50)
-	);
-	font: var(--gpText-HeadingSmall);
+	@include style.alert;
+
 	border: none;
-	border-radius: var(--border-radius-large);
 	gap: var(--spacing-sm);
-	padding: var(--spacing-md);
 	margin-block: var(--spacing-sm) 0;
 
 	&#Error {

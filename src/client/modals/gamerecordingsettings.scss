@@ -1,0 +1,60 @@
+@use "shared/controls";
+
+#GRModalOption {
+	margin: 0;
+
+	width: 100%;
+}
+
+#GRModalOptions {
+	@include controls.radio-alt-container;
+
+	background-color: var(--bg-hl);
+	gap: 0;
+
+	flex-basis: unset;
+
+	& > [role="radio"] {
+		@include controls.radio-alt("&[aria-checked='true']");
+
+		width: 100%;
+	}
+
+	& > .DialogRoundCheckboxField_Container {
+		@include controls.radio-alt("&.Active");
+
+		width: 100%;
+	}
+
+	// Doesn't fit in the first radio
+	& > #OptionExplainer {
+		display: none;
+	}
+
+	#DurationInput {
+		color: inherit;
+
+		max-width: 100px;
+	}
+
+	#OptionExplainer {
+		@include controls.radio-description;
+
+		margin-block-end: 0;
+		margin-inline: 0;
+	}
+}
+
+#GROptionLabel {
+	color: inherit;
+	font: inherit;
+
+	svg {
+		display: none;
+	}
+}
+
+#ModalButtonRow {
+	gap: var(--spacing-sm);
+	margin-block-start: 30px;
+}

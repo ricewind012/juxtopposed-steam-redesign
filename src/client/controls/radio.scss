@@ -1,6 +1,6 @@
 @use "shared/controls";
 
-#Button {
+:where(#Button) {
 	all: unset;
 
 	@include controls.radio-alt($active: "&#Active");
@@ -10,7 +10,7 @@
 	}
 }
 
-#Group {
+:where(#Group) {
 	all: unset;
 
 	@include controls.radio-alt-container;
