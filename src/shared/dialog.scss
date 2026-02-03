@@ -1,6 +1,6 @@
 @use "shared/controls";
-@use "shared/style";
-@use "web/layout";
+@use "shared/settings";
+@use "shared/utils";
 
 :where(.DialogBodyText) {
 	color: var(--fg-main);
@@ -173,7 +173,7 @@
 		all: unset;
 
 		svg {
-			@include style.icon("name");
+			@include utils.icon("name");
 		}
 	}
 }
@@ -195,7 +195,7 @@
 }
 
 .SettingsDialogSubHeader {
-	@include layout.settings-header;
+	@include settings.header;
 }
 
 .title-area {
@@ -207,7 +207,7 @@
 }
 
 .title-area-icon {
-	@include style.icon;
+	@include utils.icon;
 
 	&:hover {
 		color: var(--fg-main);

@@ -1,5 +1,5 @@
 @use "shared/controls";
-@use "shared/style";
+@use "shared/utils";
 
 #ButtonChild {
 	--icon-name: icon("download");
@@ -29,7 +29,7 @@
 	}
 
 	svg {
-		@include style.icon("name", true);
+		@include utils.icon("name", true);
 
 		color: inherit;
 	}

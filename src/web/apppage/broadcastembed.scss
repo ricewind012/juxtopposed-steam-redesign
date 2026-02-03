@@ -1,7 +1,7 @@
-@use "shared/style";
+@use "shared/utils";
 
 %-icon-button {
-	@include style.icon("name");
+	@include utils.icon("name");
 
 	background-image: none;
 

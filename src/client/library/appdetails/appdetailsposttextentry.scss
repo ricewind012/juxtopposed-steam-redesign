@@ -1,5 +1,5 @@
 @use "shared/controls";
-@use "shared/style";
+@use "shared/utils";
 
 #Controls {
 	padding: 0;
@@ -12,7 +12,7 @@
 		@include controls.button;
 
 		& > div {
-			@include style.icon("emoticon", true);
+			@include utils.icon("emoticon", true);
 		}
 	}
 

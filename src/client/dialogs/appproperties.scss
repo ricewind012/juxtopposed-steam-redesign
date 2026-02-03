@@ -1,6 +1,6 @@
 @use "shared/controls";
-@use "shared/style";
-@use "web/layout";
+@use "shared/settings";
+@use "shared/utils";
 
 :where(#BottomGap),
 :where(#BottomGapSmall),
@@ -11,7 +11,7 @@
 }
 
 #AdvancedOptions {
-	@include layout.settings-section;
+	@include settings.section;
 
 	background-color: var(--bg-main-50);
 	margin-block: var(--spacing-lg) 0;
@@ -43,7 +43,7 @@
 	margin-block-start: var(--spacing-lg);
 
 	& + div {
-		@include layout.settings-info;
+		@include settings.info;
 
 		margin-block-start: var(--spacing-sm);
 	}
@@ -63,7 +63,7 @@
 	display: grid;
 	grid-template-columns: 75% 25%;
 
-	@include controls.radio-alt($active: "&#Selected");
+	@include controls.radio($active: "&#Selected");
 
 	#BetaLastUpdated {
 		opacity: 0.5;
@@ -76,9 +76,7 @@
 	}
 
 	#DescText {
-		opacity: 0.5;
-		font: var(--gpText-BodyMedium);
-		margin-block-start: var(--spacing-xs);
+		@include controls.radio-description;
 	}
 }
 
@@ -87,7 +85,7 @@
 
 	margin-block-start: var(--spacing-lg);
 
-	@include controls.radio-alt-container;
+	@include controls.radio-container;
 }
 
 #BlueHighlight {
@@ -95,7 +93,7 @@
 }
 
 #BuildInfo {
-	@include layout.settings-section;
+	@include settings.section;
 
 	background-color: var(--bg-main-50);
 	color: inherit;
@@ -123,7 +121,7 @@
 }
 
 #Detail {
-	@include layout.settings-info;
+	@include settings.info;
 }
 
 #LocalFilesLink {
@@ -140,19 +138,6 @@
 
 #SteamCloudUsage {
 	margin-block-start: var(--spacing-sm);
-}
-
-// TODO: icon-button mixin
-@mixin -icon-button {
-	background-color: var(--bg-hl);
-	border-radius: var(--border-radius);
-
-	min-width: 36px;
-	min-height: 36px;
-
-	&:hover {
-		background-color: var(--bg-hover);
-	}
 }
 
 #WorkshopItemRow {
@@ -184,7 +169,7 @@
 	}
 
 	#DragHandle {
-		@include style.icon("drag-handle", true);
+		@include utils.icon("drag-handle", true);
 
 		opacity: 1;
 
@@ -205,16 +190,12 @@
 	}
 
 	#UnsubscribeButton {
-		@include -icon-button;
+		@include controls.icon-button($w: 36px, $child: "svg", $name: "delete");
 
 		margin: 0;
 
 		&:not(:hover) {
 			background-color: var(--bg-main-50);
-		}
-
-		svg {
-			@include style.icon("delete", true);
 		}
 	}
 }

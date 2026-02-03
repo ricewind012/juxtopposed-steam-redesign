@@ -1,6 +1,6 @@
 @use "shared/controls";
-@use "shared/style";
-@use "web/layout/sidebar";
+@use "shared/utils";
+@use "web/layout";
 
 .market_content_block {
 	padding: 0;
@@ -163,7 +163,7 @@
 }
 
 #findItemsSearchSubmit {
-	@include style.icon("search");
+	@include utils.icon("search");
 
 	top: 0;
 	right: var(--spacing-md);
@@ -194,7 +194,7 @@
 .market_show_more_games > a,
 .game_button_contents,
 .market_search_advanced_button {
-	@include sidebar.item(".hack");
+	@include layout.sidebar-item(".hack");
 
 	font: var(--gpText-BodySmall);
 	color: var(--fg-main);

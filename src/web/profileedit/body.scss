@@ -1,5 +1,5 @@
 @use "shared/controls";
-@use "web/layout";
+@use "shared/settings";
 
 #HTMLErrorBox {
 	background: var(--accent-red);
@@ -11,7 +11,7 @@
 }
 
 #ItemPickerCtn {
-	@include layout.settings-section;
+	@include settings.section;
 }
 
 #ItemPickerList {
@@ -20,7 +20,7 @@
 }
 
 #ProfileBox {
-	@include layout.settings-section;
+	@include settings.section;
 
 	.DialogInput {
 		width: 312px;

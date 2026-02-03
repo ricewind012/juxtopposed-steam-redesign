@@ -1,4 +1,4 @@
-@use "shared/style";
+@use "shared/utils";
 
 @mixin icon-button($icon-name, $active-selector) {
 	--percentage: 5%;
@@ -25,7 +25,7 @@
 	}
 
 	svg {
-		@include style.icon($name: $icon-name, $remove: true);
+		@include utils.icon($name: $icon-name, $remove: true);
 	}
 }
 

@@ -1,5 +1,7 @@
 @use "shared/carousel";
-@use "shared/text";
+@use "shared/style";
+@use "shared/utils";
+@use "web/store";
 
 #EventRowCarousel {
 	margin: 0;
@@ -12,7 +14,7 @@
 }
 
 #GameIconAndName {
-	@include text.link;
+	@include style.link;
 
 	background-color: transparent;
 	font: var(--gpText-BodyMedium);
@@ -35,11 +37,8 @@
 	}
 }
 
-// TODO: capsule mixin
 #PartnerEventRowCapsule {
-	background-color: var(--bg-main);
-	border-radius: var(--border-radius-large);
-	padding: var(--spacing-md);
+	@include store.capsule;
 
 	&:not(:last-child) {
 		margin-inline-end: var(--spacing-md);

@@ -1,5 +1,6 @@
 @use "shared/controls";
-@use "web/layout/sidebar";
+@use "shared/utils";
+@use "web/layout";
 
 #BackToProfileCtn {
 	margin-bottom: var(--spacing-lg);
@@ -12,11 +13,11 @@
 }
 
 #Navigation {
-	@include sidebar.container;
+	@include layout.sidebar-container;
 }
 
 #NavLink {
-	@include sidebar.item("#Active");
+	@include layout.sidebar-item("#Active");
 
 	line-height: unset;
 }
@@ -53,7 +54,7 @@
 		width: 265px;
 
 		svg {
-			@include controls.tooltip-icon;
+			@include utils.tooltip-icon;
 
 			margin: 0;
 

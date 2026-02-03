@@ -1,4 +1,4 @@
-@use "shared/style";
+@use "shared/utils";
 
 $-others: ":where(#StandaloneFieldSeparator, .DialogControlsSection)";
 
@@ -58,7 +58,7 @@ $-others: ":where(#StandaloneFieldSeparator, .DialogControlsSection)";
 
 			margin-inline-start: var(--spacing-sm);
 
-			@include style.icon("info");
+			@include utils.icon("info");
 		}
 	}
 

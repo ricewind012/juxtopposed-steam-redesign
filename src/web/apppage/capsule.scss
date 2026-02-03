@@ -1,30 +1,17 @@
 @use "shared/controls";
-@use "shared/style";
 @use "web/store";
-
-// TODO: icon-button mixin
-%-icon-button {
-	background-color: var(--bg-hl);
-	border-radius: var(--border-radius);
-
-	width: 47px;
-	height: 44px;
-}
 
 #AddToWishlistButton {
 	--icon-size: 24px;
 
-	@extend %-icon-button;
+	@include controls.icon-button(
+		$w: 47px,
+		$h: 44px,
+		$child: "svg",
+		$name: "favorite"
+	);
 
 	box-shadow: none;
-
-	&:hover {
-		background-color: var(--bg-hover);
-	}
-
-	svg {
-		@include style.icon("favorite", "polygon");
-	}
 }
 
 #Banner {
@@ -81,7 +68,7 @@
 }
 
 #Tag {
-	@include controls.store-tag;
+	@include store.tag;
 
 	text-shadow: none;
 }

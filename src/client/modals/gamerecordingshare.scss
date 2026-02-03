@@ -1,8 +1,8 @@
 @use "shared/style";
-@use "shared/text";
+@use "shared/utils";
 
 #Checkmark {
-	@include style.icon("check", true);
+	@include utils.icon("check", true);
 
 	color: inherit;
 }
@@ -23,7 +23,7 @@
 	padding: 0;
 
 	#MobileLink {
-		@include text.link;
+		@include style.link;
 
 		text-decoration: none;
 	}

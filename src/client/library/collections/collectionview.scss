@@ -1,5 +1,5 @@
 @use "shared/controls";
-@use "shared/style";
+@use "shared/utils";
 
 #Container {
 	padding: var(--spacing-lg);
@@ -71,7 +71,7 @@
 	}
 
 	svg {
-		@include style.icon("name", "line");
+		@include utils.icon("name", "line");
 
 		color: var(--fg-dim);
 		margin: calc((var(--size) - var(--icon-size)) / 2);

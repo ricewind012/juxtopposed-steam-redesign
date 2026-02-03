@@ -1,6 +1,6 @@
 @use "shared/controls";
-@use "shared/style";
-@use "web/layout/sidebar";
+@use "shared/utils";
+@use "web/layout";
 
 %-forum-post {
 	background: var(--bg-main-50);
@@ -88,7 +88,7 @@
 		}
 
 		.rightbox_list_option {
-			@include sidebar.item(".selected");
+			@include layout.sidebar-item(".selected");
 
 			font: var(--gpText-BodyLarge);
 
@@ -155,7 +155,7 @@
 		top: 0;
 		right: var(--spacing-md);
 
-		@include style.icon("search");
+		@include utils.icon("search");
 	}
 }
 
@@ -179,7 +179,7 @@
 }
 
 .forum_author_action_pulldown {
-	@include style.icon("arrow");
+	@include utils.icon("arrow");
 
 	background-image: none;
 }

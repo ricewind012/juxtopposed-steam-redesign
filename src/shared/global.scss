@@ -1,4 +1,4 @@
-@use "shared/text";
+@use "shared/style";
 
 * {
 	box-sizing: border-box;
@@ -13,7 +13,7 @@ body {
 }
 
 a {
-	@include text.link;
+	@include style.link;
 }
 
 :where(.ingame) {

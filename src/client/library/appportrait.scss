@@ -1,4 +1,4 @@
-@use "shared/style";
+@use "shared/utils";
 
 #FooterBlurImageContainer {
 	display: none;
@@ -21,7 +21,7 @@
 	}
 
 	svg {
-		@include style.icon("name", "path");
+		@include utils.icon("name", "path");
 
 		margin: 0;
 	}
@@ -82,7 +82,7 @@
 	&::before {
 		content: "";
 
-		@include style.icon("name");
+		@include utils.icon("name");
 	}
 
 	&#Header {

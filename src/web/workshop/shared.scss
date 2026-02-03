@@ -1,7 +1,7 @@
 @use "shared/controls";
-@use "shared/other";
 @use "shared/style";
-@use "web/layout/sidebar";
+@use "shared/utils";
+@use "web/layout";
 
 .home_tab {
 	@include controls.tab(".active");
@@ -53,7 +53,7 @@
 		right: var(--spacing-md);
 		display: block;
 
-		@include style.icon("search");
+		@include utils.icon("search");
 	}
 
 	.search_text {
@@ -95,7 +95,7 @@
 	max-width: var(--apphub_content-width);
 
 	&::before {
-		@include other.workshop-bg;
+		@include style.workshop-bg;
 
 		position: fixed;
 		inset: 0;

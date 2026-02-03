@@ -1,6 +1,7 @@
 @use "client/gamelist";
 @use "shared/controls";
-@use "shared/style";
+@use "shared/utils";
+@use "web/store";
 
 @mixin -search-input {
 	@include controls.search-input;
@@ -77,7 +78,7 @@
 		&::after {
 			content: "";
 
-			@include style.icon("search");
+			@include utils.icon("search");
 
 			position: absolute;
 			right: var(--spacing-md);
@@ -88,7 +89,7 @@
 }
 
 #FilterTag {
-	@include controls.store-tag;
+	@include store.tag;
 
 	padding-block: 0;
 	margin: 0;
@@ -107,7 +108,7 @@
 		// whatever reason
 		--icon-size: 15px;
 
-		@include style.icon($name: "close", $remove: true);
+		@include utils.icon($name: "close", $remove: true);
 
 		opacity: 1;
 		margin-left: 6px;
@@ -138,7 +139,7 @@
 }
 
 #SearchFilterInputClear {
-	@include style.icon($name: "close", $remove: true);
+	@include utils.icon($name: "close", $remove: true);
 
 	color: var(--color-secondary);
 

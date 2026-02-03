@@ -1,6 +1,5 @@
-@use "shared/other";
 @use "shared/style";
-@use "shared/text";
+@use "shared/utils";
 
 #FeaturedItem {
 	align-items: start;
@@ -31,7 +30,7 @@
 		}
 
 		svg {
-			@include style.icon("close", true);
+			@include utils.icon("close", true);
 		}
 	}
 
@@ -46,7 +45,7 @@
 	}
 
 	#FeaturedItemLink {
-		@include text.link;
+		@include style.link;
 
 		font: var(--gpText-BodyLarge);
 		padding-block: 7px;
@@ -71,7 +70,7 @@
 	position: relative;
 
 	&::before {
-		@include other.workshop-bg;
+		@include style.workshop-bg;
 
 		position: absolute;
 		inset: 0;

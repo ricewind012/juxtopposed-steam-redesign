@@ -1,5 +1,5 @@
 @use "shared/controls";
-@use "shared/style";
+@use "shared/utils";
 @use "web/store";
 
 #DiscoveryQueue {
@@ -52,7 +52,7 @@
 			margin-block-start: var(--spacing-md);
 
 			svg {
-				@include style.icon("arrow");
+				@include utils.icon("arrow");
 
 				transform: rotate(-90deg);
 				fill: currentColor;

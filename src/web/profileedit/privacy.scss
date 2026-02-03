@@ -1,6 +1,6 @@
 @use "shared/controls";
-@use "shared/style";
-@use "web/layout";
+@use "shared/settings";
+@use "shared/utils";
 
 .ProfilePrivacyCheckbox {
 	padding: 0;
@@ -15,7 +15,7 @@
 }
 
 .ProfilePrivacyDesc {
-	@include layout.settings-section;
+	@include settings.section;
 
 	a {
 		text-decoration: underline;
@@ -36,13 +36,13 @@
 .ProfilePrivacyDropDown_Arrow {
 	--icon-size: 24px;
 
-	@include style.icon("arrow");
+	@include utils.icon("arrow");
 
 	vertical-align: sub;
 }
 
 .ProfilePrivacyHeader {
-	@include layout.settings-section;
+	@include settings.section;
 
 	color: var(--color-primary);
 	font: var(--gpText-HeadingMedium);

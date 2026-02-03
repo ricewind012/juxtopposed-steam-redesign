@@ -1,4 +1,4 @@
-@use "web/layout";
+@use "shared/settings";
 
 #ActionSection {
 	gap: var(--spacing-sm);
@@ -8,7 +8,7 @@
 }
 
 #DescriptionText {
-	@include layout.settings-header;
+	@include settings.header;
 
 	margin: 0;
 }

@@ -1,6 +1,8 @@
 @use "shared/controls";
 @use "shared/style";
+@use "shared/utils";
 @use "web/apppage";
+@use "web/store";
 
 %-button-tertiary {
 	@include controls.button("tertiary");
@@ -9,7 +11,7 @@
 	min-height: unset;
 }
 
-%-shit {
+%-section {
 	background-color: var(--bg-main-50);
 	border-radius: var(--border-radius-large);
 	// TODO: xxl
@@ -71,7 +73,7 @@ body.game_bg {
 
 // TODO: move to shared ?
 .app_tag {
-	@include controls.store-tag;
+	@include store.tag;
 
 	margin: 0;
 }
@@ -115,7 +117,7 @@ body.game_bg {
 }
 
 .bundle_label_tooltip {
-	@include controls.tooltip-icon;
+	@include utils.tooltip-icon;
 
 	font-size: 0;
 }
@@ -146,7 +148,7 @@ body.game_bg {
 }
 
 .early_access_announcements {
-	@extend %-shit;
+	@extend %-section;
 
 	position: relative;
 
@@ -156,7 +158,7 @@ body.game_bg {
 }
 
 .early_access_banner {
-	@extend %-shit;
+	@extend %-section;
 
 	background-image: none;
 	margin-block-end: 0;
@@ -191,7 +193,7 @@ body.game_bg {
 }
 
 .game_area_bubble {
-	@extend %-shit;
+	@extend %-section;
 
 	background-image: none;
 	color: var(--fg-dim);
@@ -259,7 +261,7 @@ body.game_bg {
 
 		/* Not enough icons, maybe one day
 
-		@include style.icon("name");
+		@include utils.icon("name");
 
 		$-icons: (
 			achievements: "achievements",
@@ -293,7 +295,7 @@ body.game_bg {
 	}
 
 	.tooltip {
-		@include controls.tooltip-icon;
+		@include utils.tooltip-icon;
 
 		display: block;
 	}
@@ -367,7 +369,7 @@ body.game_bg {
 }
 
 .game_area_dlc_section {
-	@extend %-shit;
+	@extend %-section;
 
 	h2 {
 		display: flex;
@@ -502,7 +504,7 @@ body.game_bg {
 }
 
 #game_area_reviews {
-	@extend %-shit;
+	@extend %-section;
 }
 
 .game_background_glow {
@@ -531,7 +533,7 @@ body.game_bg {
 	}
 
 	.game_page_autocollapse {
-		@extend %-shit;
+		@extend %-section;
 	}
 	// #endregion
 
@@ -555,7 +557,7 @@ body.game_bg {
 		}
 
 		.no_curators_followed {
-			@extend %-shit;
+			@extend %-section;
 		}
 
 		.right a {
@@ -770,7 +772,7 @@ body.game_bg {
 		width: unset;
 
 		span {
-			@include style.icon("check");
+			@include utils.icon("check");
 
 			color: var(--color-primary);
 			margin: auto;
@@ -842,7 +844,7 @@ body.game_bg {
 			&::after {
 				content: "";
 
-				@include style.icon;
+				@include utils.icon;
 			}
 
 			img,
@@ -919,7 +921,7 @@ body.game_bg {
 			}
 
 			&::before {
-				@include style.icon("name");
+				@include utils.icon("name");
 
 				position: unset;
 
@@ -1101,7 +1103,7 @@ body.game_bg {
 	flex-direction: column;
 
 	.saleEventBannerLink {
-		@extend %-shit;
+		@extend %-section;
 
 		margin-block: 12px 0;
 	}
@@ -1169,7 +1171,7 @@ body.game_bg {
 	min-width: calc(11px * 2 + var(--icon-size));
 
 	& > span {
-		@include style.icon("arrow");
+		@include utils.icon("arrow");
 	}
 }
 

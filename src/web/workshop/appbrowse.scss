@@ -1,10 +1,10 @@
 @use "shared/controls";
-@use "shared/other";
 @use "shared/style";
-@use "web/layout/sidebar";
+@use "shared/utils";
+@use "web/layout";
 
 .browseOption {
-	@include sidebar.item(".hack");
+	@include layout.sidebar-item(".hack");
 
 	margin-inline: 0;
 
@@ -22,7 +22,7 @@
 }
 
 .filterOption {
-	@include sidebar.item(".TODO");
+	@include layout.sidebar-item(".TODO");
 
 	gap: var(--spacing-xs);
 	margin-inline: 0;
@@ -61,7 +61,7 @@
 	max-width: var(--apphub_content-width);
 
 	&::before {
-		@include other.workshop-bg;
+		@include style.workshop-bg;
 
 		position: fixed;
 		inset: 0;
@@ -94,7 +94,7 @@
 }
 
 #rightContents {
-	@include sidebar.container;
+	@include layout.sidebar-container;
 
 	margin: 0;
 
@@ -162,7 +162,7 @@
 }
 
 .tag_filter_control_not {
-	@include style.icon($name: "filter-off", $remove: true);
+	@include utils.icon($name: "filter-off", $remove: true);
 
 	margin: 0;
 	margin-left: auto;
@@ -246,7 +246,7 @@
 		min-height: var(--size);
 
 		.subscribeIcon {
-			@include style.icon("plus");
+			@include utils.icon("plus");
 
 			background-image: none;
 		}

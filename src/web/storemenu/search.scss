@@ -1,5 +1,5 @@
 @use "shared/controls";
-@use "shared/style";
+@use "shared/utils";
 @use "web/store";
 
 // ??? you guys maybe wanna unify this into one component ?
@@ -51,7 +51,7 @@
 	inset-inline-end: var(--spacing-md);
 
 	svg {
-		@include style.icon("search", "path");
+		@include utils.icon("search", "path");
 	}
 }
 

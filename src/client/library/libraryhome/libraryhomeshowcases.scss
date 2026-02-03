@@ -1,6 +1,6 @@
 @use "shared/carousel";
 @use "shared/controls";
-@use "shared/style";
+@use "shared/utils";
 
 @keyframes attention {
 	0% {
@@ -213,7 +213,7 @@
 	}
 
 	#Rule {
-		@include style.icon("drag-handle");
+		@include utils.icon("drag-handle");
 
 		position: absolute;
 		inset-inline-end: 0;

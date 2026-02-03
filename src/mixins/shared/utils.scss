@@ -1,0 +1,25 @@
+@mixin icon($name: "name", $remove: false) {
+	background-color: currentColor;
+	mask: var(--icon-#{$name});
+	mask-position: center;
+	mask-size: var(--icon-size);
+
+	width: var(--icon-size);
+	height: var(--icon-size);
+
+	@if $remove {
+		* {
+			display: none;
+		}
+	}
+}
+
+@mixin tooltip-icon {
+	@include icon("info");
+
+	color: var(--fg-dim);
+
+	&:hover {
+		background-color: var(--fg-main);
+	}
+}

@@ -1,7 +1,7 @@
-@use "web/layout";
+@use "shared/settings";
 
 #SettingsDialogBodyText {
-	@include layout.settings-header;
+	@include settings.header;
 }
 
 #SettingsDialogButton {
@@ -9,7 +9,7 @@
 }
 
 #SettingsDialogDescriptionText {
-	@include layout.settings-info;
+	@include settings.info;
 }
 
 #SettingsLink {

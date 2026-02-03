@@ -1,4 +1,4 @@
-@use "shared/style";
+@use "shared/utils";
 
 /// All args are selectors.
 @mixin arrow($left, $right, $child) {
@@ -29,7 +29,7 @@
 	}
 
 	#{$child} {
-		@include style.icon("arrow");
+		@include utils.icon("arrow");
 
 		transform: rotate(var(--deg));
 	}
@@ -51,7 +51,7 @@
 	}
 
 	#{$child} {
-		@include style.icon(#{$icon});
+		@include utils.icon(#{$icon});
 
 		color: var(--fg-dim);
 		margin: calc((var(--size) - var(--icon-size)) / 2);

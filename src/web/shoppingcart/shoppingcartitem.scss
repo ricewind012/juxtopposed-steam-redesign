@@ -1,5 +1,5 @@
 @use "shared/controls";
-@use "shared/style";
+@use "shared/utils";
 
 @mixin -icon-button($name) {
 	--size: 43px;
@@ -20,7 +20,7 @@
 
 		display: block;
 
-		@include style.icon($name);
+		@include utils.icon($name);
 	}
 }
 

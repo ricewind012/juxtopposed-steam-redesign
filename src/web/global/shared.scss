@@ -124,7 +124,7 @@ input[type="checkbox"] {
 
 /* TODO: restrict to account preferences
 .tooltip {
-	@include controls.tooltip-icon;
+	@include utils.tooltip-icon;
 
 	display: inline-block;
 	vertical-align: sub;

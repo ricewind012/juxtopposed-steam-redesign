@@ -3,7 +3,7 @@
 :where(#Button) {
 	all: unset;
 
-	@include controls.radio-alt($active: "&#Active");
+	@include controls.radio($active: "&#Active");
 
 	&::before {
 		display: none;
@@ -13,5 +13,5 @@
 :where(#Group) {
 	all: unset;
 
-	@include controls.radio-alt-container;
+	@include controls.radio-container;
 }

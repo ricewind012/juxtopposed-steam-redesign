@@ -1,4 +1,4 @@
-@use "shared/style";
+@use "shared/utils";
 
 // TODO: Maybe remove the images and unify non-featured events this way...
 
@@ -245,7 +245,7 @@
 		height: var(--icon-size);
 
 		svg {
-			@include style.icon("name", true);
+			@include utils.icon("name", true);
 		}
 	}
 }

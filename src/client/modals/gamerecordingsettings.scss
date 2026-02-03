@@ -7,7 +7,7 @@
 }
 
 #GRModalOptions {
-	@include controls.radio-alt-container;
+	@include controls.radio-container;
 
 	background-color: var(--bg-hl);
 	gap: 0;
@@ -15,13 +15,13 @@
 	flex-basis: unset;
 
 	& > [role="radio"] {
-		@include controls.radio-alt("&[aria-checked='true']");
+		@include controls.radio("&[aria-checked='true']");
 
 		width: 100%;
 	}
 
 	& > .DialogRoundCheckboxField_Container {
-		@include controls.radio-alt("&.Active");
+		@include controls.radio("&.Active");
 
 		width: 100%;
 	}

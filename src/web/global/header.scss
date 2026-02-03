@@ -1,4 +1,4 @@
-@use "shared/header";
+@use "shared/controls";
 
 #global_header {
 	backdrop-filter: blur(9px);
@@ -22,7 +22,11 @@
 	}
 
 	.menuitem {
-		@include header.tab(".supernav_active");
+		@include controls.button;
+
+		&.supernav_active {
+			@include controls.button-colors("primary");
+		}
 
 		&:not(.username) {
 			text-transform: lowercase;

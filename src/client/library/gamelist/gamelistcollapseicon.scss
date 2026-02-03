@@ -1,7 +1,7 @@
-@use "shared/style";
+@use "shared/utils";
 
 #Container {
-	@include style.icon("arrow", "svg");
+	@include utils.icon("arrow", "svg");
 
 	color: var(--fg-main);
 

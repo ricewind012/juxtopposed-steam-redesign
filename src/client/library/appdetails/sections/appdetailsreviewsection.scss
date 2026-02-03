@@ -1,10 +1,10 @@
-@use "shared/style";
+@use "shared/utils";
 
 #CommentsContainer {
 	font: var(--gpText-BodyMedium);
 
 	svg {
-		@include style.icon("name", true);
+		@include utils.icon("name", true);
 
 		&#CommentIcon {
 			--icon-name: icon("chat-bubble");

@@ -1,0 +1,40 @@
+@use "shared/utils";
+
+@mixin info {
+	--icon-size: 1lh;
+	--offset: calc(var(--icon-size) + var(--spacing-md));
+
+	color: var(--fg-main);
+	font: var(--gpText-BodyMedium);
+	margin-block-end: var(--spacing-sm);
+	margin-inline-start: var(--offset);
+
+	position: relative;
+
+	&::before {
+		content: "";
+
+		@include utils.icon("info");
+
+		position: absolute;
+
+		color: var(--fg-dim);
+		margin-inline-start: calc(var(--offset) * -1);
+	}
+}
+
+@mixin header {
+	color: var(--fg-dim);
+	font: var(--gpText-HeadingMedium);
+	letter-spacing: 0;
+	text-transform: none;
+
+	min-height: 50px;
+}
+
+@mixin section {
+	background-color: var(--bg-main);
+	border-radius: var(--border-radius-large);
+	padding: var(--spacing-lg);
+	margin-bottom: var(--spacing-lg);
+}

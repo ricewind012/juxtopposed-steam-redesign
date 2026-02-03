@@ -1,19 +1,6 @@
 @use "shared/controls";
-@use "shared/style";
-@use "web/layout";
-
-// TODO: icon-button mixin
-@mixin -icon-button {
-	background-color: var(--bg-hl);
-	border-radius: var(--border-radius);
-
-	min-width: 47px;
-	min-height: 44px;
-
-	&:hover {
-		background-color: var(--bg-hover);
-	}
-}
+@use "shared/settings";
+@use "shared/utils";
 
 $-bar-colors: (
 	DLC: 0,
@@ -26,7 +13,7 @@ $-bar-colors: (
 );
 
 #AppActionBar {
-	@include layout.settings-section;
+	@include settings.section;
 
 	background-color: var(--bg-main-50);
 	border-radius: 0 0 var(--border-radius) var(--border-radius);
@@ -97,7 +84,7 @@ $-bar-colors: (
 }
 
 #AppHeader {
-	@include layout.settings-header;
+	@include settings.header;
 
 	padding: 0;
 
@@ -121,7 +108,7 @@ $-bar-colors: (
 }
 
 #AppsGrid {
-	@include layout.settings-section;
+	@include settings.section;
 
 	background-color: var(--bg-main-50);
 	border-radius: var(--border-radius) var(--border-radius) 0 0;
@@ -154,7 +141,12 @@ $-bar-colors: (
 }
 
 #DriveSettingsButton {
-	@include -icon-button;
+	@include controls.icon-button(
+		$w: 47px,
+		$h: 44px,
+		$child: "svg",
+		$name: "arrow"
+	);
 
 	margin: 0;
 
@@ -165,10 +157,6 @@ $-bar-colors: (
 
 	&:not(:hover) {
 		background-color: var(--bg-main-50);
-	}
-
-	svg {
-		@include style.icon("arrow", true);
 	}
 }
 

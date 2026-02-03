@@ -1,6 +1,6 @@
 @use "shared/carousel";
 @use "shared/controls";
-@use "shared/style";
+@use "shared/utils";
 @use "web/store";
 
 // Differences from the original mockup:
@@ -276,7 +276,7 @@ body.no_home_gutter.infinite_scrolling {
 	.deep_dive_tag {
 		all: unset;
 
-		@include controls.store-tag;
+		@include store.tag;
 	}
 }
 
@@ -448,7 +448,7 @@ body.no_home_gutter.infinite_scrolling {
 				position: absolute;
 				inset-block-start: calc(50% - var(--icon-size) / 2);
 
-				@include style.icon("arrow");
+				@include utils.icon("arrow");
 			}
 
 			&::before {
@@ -728,7 +728,7 @@ body.no_home_gutter.infinite_scrolling {
 
 		.additional > div,
 		.tags > span {
-			@include controls.store-tag;
+			@include store.tag;
 
 			margin: 0;
 		}
@@ -946,7 +946,7 @@ body.no_home_gutter.infinite_scrolling {
 			height: unset;
 
 			& > a {
-				@include controls.store-tag;
+				@include store.tag;
 
 				margin: 0;
 			}
@@ -970,7 +970,7 @@ body.no_home_gutter.infinite_scrolling {
 	}
 
 	.top_sellers_info {
-		@include controls.tooltip-icon;
+		@include utils.tooltip-icon;
 
 		margin-inline-start: auto;
 

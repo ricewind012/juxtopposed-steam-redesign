@@ -1,9 +1,10 @@
+@use "shared/controls";
 @use "shared/style";
 
 #Body {
-	opacity: 0.5;
+	@include controls.radio-description;
+
 	color: inherit;
-	font: var(--gpText-BodyMedium);
 }
 
 #Heading {

@@ -1,5 +1,5 @@
 @use "shared/controls";
-@use "shared/style";
+@use "shared/utils";
 
 // NOTE: Do NOT edit any spacing here if that means changing the entry's height,
 // the list is virtualized. That's also why it doesn't align with the actual
@@ -23,7 +23,7 @@
 		top: calc(var(--spacing-md) + 8px - 0.25em);
 		left: var(--spacing-md);
 
-		@include style.icon("achievements");
+		@include utils.icon("achievements");
 	}
 }
 
@@ -54,7 +54,7 @@
 	&::before {
 		content: "";
 
-		@include style.icon("clock");
+		@include utils.icon("clock");
 
 		color: color-mix(in srgb, var(--fg-dim) 50%, transparent);
 

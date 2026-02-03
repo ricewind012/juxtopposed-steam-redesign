@@ -1,5 +1,5 @@
 @use "shared/carousel";
-@use "shared/style";
+@use "shared/utils";
 @use "web/store";
 
 // Differences from the original mockup:
@@ -193,7 +193,7 @@
 .platform_img {
 	--icon-size: 25px;
 
-	@include style.icon("name");
+	@include utils.icon("name");
 
 	// There are actually other icons, these are just the most common ones
 	&:where(.linux, .mac, .win) {

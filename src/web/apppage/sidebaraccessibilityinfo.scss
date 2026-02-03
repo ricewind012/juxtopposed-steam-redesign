@@ -1,4 +1,5 @@
 @use "shared/controls";
+@use "shared/utils";
 @use "web/apppage";
 
 #FeatureList {
@@ -25,7 +26,7 @@
 }
 
 #InfoLink {
-	@include controls.tooltip-icon;
+	@include utils.tooltip-icon;
 }
 
 #Summary {

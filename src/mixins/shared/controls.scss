@@ -1,4 +1,4 @@
-@use "shared/style";
+@use "shared/utils";
 
 @mixin button-colors($variant) {
 	@if $variant == "primary" {
@@ -61,7 +61,7 @@
 	--icon-name: icon("checkbox");
 	--icon-size: 24px;
 
-	@include style.icon("name");
+	@include utils.icon("name");
 
 	appearance: none;
 	color: var(--fg-dim);
@@ -99,9 +99,30 @@
 	&::after {
 		content: "";
 
-		@include style.icon("arrow");
+		@include utils.icon("arrow");
 
 		right: var(--spacing-md);
+	}
+}
+
+/// @param {String} $w - Button width.
+/// @param {String} $h [$w] - Button height.
+/// @param {String} $child - Child element for the icon.
+/// @param {String} $name - Icon name found in `assets/icons`.
+/// @param {Boolean} $remove [true] - Remove every child from `$child`?
+@mixin icon-button($w, $h: $w, $child, $name, $remove: true) {
+	background-color: var(--bg-hl);
+	border-radius: var(--border-radius);
+
+	min-width: #{$w};
+	min-height: #{$h};
+
+	&:hover {
+		background-color: var(--bg-hover);
+	}
+
+	#{$child} {
+		@include utils.icon(#{$name}, #{$remove});
 	}
 }
 
@@ -118,7 +139,7 @@
 	}
 }
 
-@mixin radio-alt($active) {
+@mixin radio($active) {
 	transition: var(--transition);
 	background-color: var(--bg-main-50);
 	font: var(--gpText-HeadingSmall);
@@ -142,7 +163,7 @@
 	}
 }
 
-@mixin radio-alt-container {
+@mixin radio-container {
 	display: flex;
 	flex-direction: column;
 }
@@ -256,28 +277,9 @@
 	padding-right: calc(var(--spacing-md) * 2 + var(--icon-size));
 }
 
-// TODO: really similiar to a button
-@mixin store-tag {
-	background-color: var(--bg-hover);
-	color: var(--fg-dim);
-	font: var(--gpText-BodySmall);
-	border-radius: var(--border-radius);
-	padding: 6.5px 13px;
-}
-
 @mixin text-input {
 	background-color: transparent;
 	border: 1px solid var(--bg-hover);
 	border-radius: var(--border-radius);
 	padding: 12px 15px;
-}
-
-@mixin tooltip-icon {
-	@include style.icon("info");
-
-	color: var(--fg-dim);
-
-	&:hover {
-		background-color: var(--fg-main);
-	}
 }

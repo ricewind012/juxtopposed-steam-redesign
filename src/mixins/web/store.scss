@@ -130,3 +130,11 @@
 		justify-content: space-between;
 	}
 }
+
+@mixin tag {
+	background-color: var(--bg-hover);
+	color: var(--fg-dim);
+	font: var(--gpText-BodySmall);
+	border-radius: var(--border-radius);
+	padding: 6.5px 13px;
+}

@@ -1,11 +1,11 @@
-@use "web/layout";
+@use "shared/settings";
 
 #Advanced {
 	margin-block-start: var(--spacing-lg);
 }
 
 #AdvancedDescription {
-	@include layout.settings-info;
+	@include settings.info;
 }
 
 #TopMargin {

@@ -1,21 +1,8 @@
-@use "shared/style";
-@use "web/layout";
-
-// TODO: icon-button mixin
-@mixin -icon-button {
-	background-color: var(--bg-hl);
-	border-radius: var(--border-radius);
-
-	min-width: 47px;
-	min-height: 44px;
-
-	&:hover {
-		background-color: var(--bg-hover);
-	}
-}
+@use "shared/controls";
+@use "shared/settings";
 
 #FriendsDescription {
-	@include layout.settings-info;
+	@include settings.info;
 }
 
 #NotificationFeedToggle {
@@ -45,17 +32,16 @@
 #PrefDetailsToggle {
 	--icon-size: 24px;
 
-	@include -icon-button;
+	@include controls.icon-button(
+		$w: 47px,
+		$h: 44px,
+		$child: "svg",
+		$name: "arrow"
+	);
 
 	margin: 0;
 
 	&#Selected svg {
 		transform: rotate(180deg);
-	}
-
-	svg {
-		all: unset;
-
-		@include style.icon("arrow", true);
 	}
 }

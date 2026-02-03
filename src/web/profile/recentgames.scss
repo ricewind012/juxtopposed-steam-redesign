@@ -1,5 +1,5 @@
 @use "shared/controls";
-@use "shared/style";
+@use "shared/utils";
 
 .achievement_icons {
 	gap: 8px;
@@ -101,7 +101,7 @@
 	&::after {
 		content: "";
 
-		@include style.icon;
+		@include utils.icon;
 
 		color: color-mix(in srgb, var(--fg-dim) 50%, transparent);
 

@@ -1,7 +1,7 @@
-@use "web/layout";
+@use "shared/settings";
 
 #AvatarDialogTop {
-	@include layout.settings-section;
+	@include settings.section;
 }
 
 #AvatarDialogUploadArea {

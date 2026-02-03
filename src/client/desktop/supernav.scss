@@ -1,9 +1,9 @@
-@use "shared/style";
+@use "shared/utils";
 
 #Arrow {
 	--size: 24px;
 
-	@include style.icon($name: "keyboard-arrow", $remove: true);
+	@include utils.icon($name: "keyboard-arrow", $remove: true);
 
 	padding: 0;
 

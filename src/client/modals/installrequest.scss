@@ -1,18 +1,6 @@
 @use "shared/controls";
 @use "shared/style";
-
-// TODO: icon-button mixin
-@mixin -icon-button {
-	background-color: var(--bg-hl);
-	border-radius: var(--border-radius);
-
-	min-width: 36px;
-	min-height: 36px;
-
-	&:hover {
-		background-color: var(--bg-hover);
-	}
-}
+@use "shared/utils";
 
 %-folder-icon {
 	color: inherit;
@@ -69,7 +57,7 @@
 }
 
 #FolderOption {
-	@include controls.radio-alt("&#Active");
+	@include controls.radio("&#Active");
 
 	background-color: var(--bg-hl);
 	color: var(--fg-main);
@@ -81,7 +69,7 @@
 	position: relative;
 
 	svg {
-		@include style.icon("name", true);
+		@include utils.icon("name", true);
 	}
 
 	#FolderFlag {
@@ -134,14 +122,10 @@
 }
 
 #FolderSettings {
-	@include -icon-button;
+	@include controls.icon-button($w: 36px, $child: "svg", $name: "settings");
 
 	width: unset;
 	height: unset;
-
-	svg {
-		@include style.icon("settings", true);
-	}
 }
 
 #NoticeInstallFolder:not(:has(> span:empty)) {

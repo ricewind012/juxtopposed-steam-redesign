@@ -1,4 +1,4 @@
-@use "shared/style";
+@use "shared/utils";
 
 #Explainer {
 	color: var(--fg-main);
@@ -18,7 +18,7 @@
 #UnbindButton {
 	--icon-size: 25px;
 
-	@include style.icon("close", true);
+	@include utils.icon("close", true);
 
 	inset-block-start: 12px;
 	inset-inline-end: 15px;

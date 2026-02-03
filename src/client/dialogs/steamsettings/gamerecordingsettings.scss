@@ -67,20 +67,19 @@
 #RecordingMode {
 	all: unset;
 
-	@include controls.radio-alt-container;
+	@include controls.radio-container;
 }
 
 #RecordingModeOption {
 	all: unset;
 
-	@include controls.radio-alt($active: "&#Active");
+	@include controls.radio($active: "&#Active");
 
 	#Body {
-		opacity: 0.5;
+		@include controls.radio-description;
+
 		color: inherit;
-		font: var(--gpText-BodyMedium);
 		gap: 0;
-		margin-block-start: var(--spacing-xs);
 	}
 
 	#Header {

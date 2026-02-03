@@ -1,4 +1,4 @@
-@use "web/layout";
+@use "shared/settings";
 
 #Indent {
 	margin-inline-start: var(--spacing-lg);
@@ -9,7 +9,7 @@
 
 		// #gamepaddialog_FieldDescription
 		& > :nth-child(2) {
-			@include layout.settings-info;
+			@include settings.info;
 
 			margin-block-start: 0;
 		}

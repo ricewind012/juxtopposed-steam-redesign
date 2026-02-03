@@ -1,9 +1,9 @@
-@use "shared/controls";
+@use "shared/utils";
 
 #MoreInfoIcon {
 	--icon-size: 1lh;
 
-	@include controls.tooltip-icon;
+	@include utils.tooltip-icon;
 
 	font: inherit;
 	margin: 0;

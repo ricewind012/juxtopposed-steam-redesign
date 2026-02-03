@@ -1,4 +1,3 @@
-@use "shared/controls";
 @use "web/store";
 
 // ??? you guys maybe wanna unify this into one component ?
@@ -40,7 +39,7 @@
 }
 
 #TagLink {
-	@include controls.store-tag;
+	@include store.tag;
 
 	height: unset;
 }

@@ -1,5 +1,5 @@
 @use "shared/controls";
-@use "web/layout/sidebar";
+@use "web/layout";
 
 .workshop_home_content {
 	width: var(--apphub_content-width);
@@ -25,7 +25,7 @@
 		background: none;
 
 		.browse_option {
-			@include sidebar.item(".hack");
+			@include layout.sidebar-item(".hack");
 
 			color: inherit;
 			font: inherit;
@@ -74,14 +74,14 @@
 	}
 
 	.right_column {
-		@include sidebar.container;
+		@include layout.sidebar-container;
 
 		.browseTitle {
 			display: none;
 		}
 
 		.filterOption {
-			@include sidebar.item(".TODO");
+			@include layout.sidebar-item(".TODO");
 
 			margin-inline: 0;
 
