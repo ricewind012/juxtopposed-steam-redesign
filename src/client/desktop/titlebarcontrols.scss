@@ -55,7 +55,7 @@
 	//
 	// also maybe use "container-type: inline-size" then "@container (min-width: 500px)"
 	// to apply padding
-	&:where(#HasNew, #WasNew)::before {
+	&#HasNew::before {
 		content: "";
 
 		display: flex;

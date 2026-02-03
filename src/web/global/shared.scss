@@ -96,7 +96,6 @@ input[type="checkbox"] {
 }
 
 .page_content {
-	display: flex;
 	// content width
 	width: calc(var(--sidebar-width) + var(--spacing-md) + 1247px);
 	max-width: unset;

@@ -6,7 +6,6 @@
 
 body {
 	background-color: var(--bg-main);
-	background-image: linear-gradient(180deg, var(--bg-hl), var(--bg-tertiary));
 	background-attachment: fixed;
 	color: var(--fg-main);
 	font: var(--gpText-BodyMedium);
@@ -39,12 +38,12 @@ a {
 
 $svg-icons: (
 	Arrow: "arrow",
-	"Download": "download",
+	Download: "download",
 	FlatArrow: "arrow",
 	Information: "info",
 	Patch: "construction",
-	"Pause": "pause",
-	"Play": "play",
+	Pause: "pause",
+	Play: "play",
 	Settings: "settings",
 	X_Line: "close",
 );
@@ -53,4 +52,8 @@ $svg-icons: (
 	.SVGIcon_#{$name} {
 		--icon-name: var(--icon-#{$icon});
 	}
+}
+
+.tool-tip-source {
+	display: flex;
 }
