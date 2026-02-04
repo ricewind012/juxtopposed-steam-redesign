@@ -16,6 +16,7 @@
 	@include controls.button;
 
 	box-shadow: none;
+	margin: 0;
 
 	&.Primary {
 		@include controls.button-colors("primary");
@@ -68,10 +69,6 @@
 
 :where(.DialogFooter) {
 	padding-block-start: 30px;
-
-	.DialogButton {
-		margin: 0;
-	}
 }
 
 :where(.DialogHeader) {
@@ -90,6 +87,12 @@
 
 :where(.DialogInputLabelGroup) {
 	margin-block-end: var(--spacing-sm);
+
+	&,
+	& > label {
+		display: flex;
+		align-items: center;
+	}
 }
 
 .DialogLabel {
@@ -97,6 +100,11 @@
 	font: var(--gpText-BodySmall);
 	text-transform: none;
 	margin-bottom: var(--spacing-xs);
+}
+
+:where(.DialogRequirementLabel) {
+	color: inherit;
+	font: inherit;
 }
 
 :where(.DialogRoundCheckboxField) {

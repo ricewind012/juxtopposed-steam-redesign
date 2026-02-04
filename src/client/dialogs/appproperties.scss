@@ -187,8 +187,6 @@
 	#UnsubscribeButton {
 		@include controls.icon-button($w: 36px, $child: "svg", $name: "delete");
 
-		margin: 0;
-
 		&:not(:hover) {
 			background-color: var(--bg-main-50);
 		}

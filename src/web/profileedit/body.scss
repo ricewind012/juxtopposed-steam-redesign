@@ -26,18 +26,6 @@
 		width: 312px;
 	}
 
-	.DialogInputLabelGroup {
-		color: inherit;
-		font: inherit;
-		margin-bottom: var(--spacing-sm);
-
-		&,
-		& > label {
-			display: flex;
-			align-items: center;
-		}
-	}
-
 	.react-select__control {
 		@include controls.dropdown;
 
@@ -68,10 +56,4 @@
 	all: unset;
 	color: var(--fg-dim);
 	font: var(--gpText-HeadingMedium);
-}
-
-#SaveCancelButtons {
-	.DialogButton {
-		margin-left: var(--spacing-md);
-	}
 }

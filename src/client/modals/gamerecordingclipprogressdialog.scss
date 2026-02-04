@@ -2,7 +2,6 @@
 	gap: var(--spacing-sm);
 	padding: 0;
 
-	// TODO(controls): .DialogButton needs margin: 0 here
 	.DialogButton {
 		margin-block-start: calc(30px - var(--spacing-sm));
 	}

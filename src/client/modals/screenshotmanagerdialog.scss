@@ -14,7 +14,6 @@
 #ScreenshotShareDialog {
 	gap: var(--spacing-sm);
 
-	// TODO(controls): .DialogButton needs margin: 0 here
 	#Buttons {
 		gap: var(--spacing-sm);
 		margin-block-start: calc(30px - var(--spacing-sm));

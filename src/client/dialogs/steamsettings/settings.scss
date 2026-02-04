@@ -4,10 +4,6 @@
 	@include settings.header;
 }
 
-#SettingsDialogButton {
-	margin: 0;
-}
-
 #SettingsDialogDescriptionText {
 	@include settings.info;
 }
