@@ -1,3 +1,9 @@
+body.profile_page {
+	--btn-background: color-mix(in srgb, var(--bg-hl) 50%, transparent);
+	--btn-background-hover: color-mix(in srgb, var(--bg-hover) 50%, transparent);
+	--gradient-background: color-mix(in srgb, var(--bg-hover) 35%, transparent);
+}
+
 .customization_edit_instructions {
 	padding: var(--spacing-sm);
 
@@ -72,4 +78,12 @@
 
 .profile_leftcol {
 	width: 100%;
+}
+
+div.profile_page {
+	padding-bottom: 187px;
+
+	[style^="clear: "] {
+		display: none;
+	}
 }

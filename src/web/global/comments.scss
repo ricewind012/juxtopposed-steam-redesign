@@ -1,4 +1,5 @@
 @use "shared/controls";
+@use "web/paging";
 
 .commentthread_allcommentslink {
 	font: var(--gpText-BodyMedium);
@@ -100,8 +101,26 @@
 	padding: 0;
 }
 
-.commentthread_paging.has_view_all_link {
-	display: none;
+.commentthread_pagelinks_ctn {
+	@include paging.container;
+}
+
+.commentthread_paging {
+	@include paging.container;
+
+	&.has_view_all_link {
+		display: none;
+	}
+}
+
+.commentthread_pagelink {
+	@include paging.link($selected: "&.active");
+}
+
+.commentthread_pagelinks {
+	@include paging.links-container;
+
+	margin: 0;
 }
 
 .commentthread_subscribe_check {

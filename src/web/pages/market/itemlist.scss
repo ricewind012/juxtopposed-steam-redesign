@@ -1,6 +1,7 @@
 @use "shared/controls";
 @use "shared/utils";
 @use "web/layout";
+@use "web/paging";
 
 .market_content_block {
 	padding: 0;
@@ -222,4 +223,37 @@
 .market_page_left {
 	padding: 0;
 	margin-left: var(--sidebar-width);
+}
+
+.market_paging {
+	line-height: unset;
+	gap: var(--spacing-xs);
+	padding: var(--spacing-xs);
+	padding-right: 0;
+	margin: 0;
+	margin-top: var(--market_row-spacing-outer);
+
+	display: flex;
+	flex-direction: row-reverse;
+	align-items: center;
+	justify-content: space-between;
+	height: unset;
+
+	& > [style="clear: both;"] {
+		display: none;
+	}
+
+	#searchResults_links {
+		@include paging.links-container;
+	}
+}
+
+.market_paging_controls {
+	@include paging.container;
+}
+
+.market_paging_pagelink {
+	@include paging.link($selected: "&.active");
+
+	margin: 0;
 }

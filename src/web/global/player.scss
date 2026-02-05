@@ -1,0 +1,42 @@
+.friendBlock {
+	background-color: var(--bg-main);
+	border-radius: var(--border-radius);
+	padding: var(--spacing-sm);
+	margin: 0;
+
+	display: flex;
+	align-items: center;
+	height: unset;
+
+	&:hover {
+		background-color: var(--bg-hover);
+	}
+
+	.friendBlockContent {
+		font: var(--gpText-BodyLarge);
+
+		flex-grow: 1;
+	}
+
+	.friendPlayerLevel {
+		margin: 0;
+		margin-left: 9px;
+
+		order: 1;
+		display: flex;
+		justify-content: center;
+	}
+
+	.friendSmallText {
+		font: var(--gpText-BodySmall);
+	}
+
+	.playerAvatar {
+		--size: 46px;
+		margin-right: 9px;
+	}
+}
+
+.friendPlayerLevelNum {
+	color: var(--fg-main);
+}

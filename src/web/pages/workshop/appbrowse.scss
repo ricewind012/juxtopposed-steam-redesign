@@ -2,6 +2,7 @@
 @use "shared/style";
 @use "shared/utils";
 @use "web/layout";
+@use "web/paging";
 
 body.apphub_blue.v6 {
 	background-image: linear-gradient(180deg, var(--bg-hl), var(--bg-tertiary));
@@ -201,6 +202,18 @@ body.apphub_blue.v6 {
 
 	.pagination_space {
 		display: none;
+	}
+}
+
+.workshopBrowsePagingControls {
+	@include paging.links-container;
+
+	margin: 0;
+
+	.pagelink {
+		@include paging.link($selected: "&.active");
+
+		margin: 0;
 	}
 }
 

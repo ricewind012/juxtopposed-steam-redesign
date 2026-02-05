@@ -2,13 +2,13 @@
 export default {
 	ignore: [
 		"client/shared",
-		"web/accountpreferences/tabs/account",
-		"web/accountpreferences/tabs/language",
-		"web/accountpreferences/tabs/store",
-		"web/accountpreferences/shared",
-		"web/accountpreferences/sidebar",
-		"web/profileedit/content",
-		"web/profileedit/privacy",
-		"web/profileedit/showcase",
+		"web/react/accountpreferences/tabs/account",
+		"web/react/accountpreferences/tabs/language",
+		"web/react/accountpreferences/tabs/store",
+		"web/react/accountpreferences/shared",
+		"web/react/accountpreferences/sidebar",
+		"web/react/profileedit/content",
+		"web/react/profileedit/privacy",
+		"web/react/profileedit/showcase",
 	],
 };
