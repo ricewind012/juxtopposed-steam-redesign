@@ -18,10 +18,6 @@ body:is(.account, .account_preferences) {
 	&.right {
 		margin-left: var(--spacing-md);
 	}
-
-	[style="clear: both"] {
-		display: none;
-	}
 }
 
 .accountData {

@@ -1,6 +1,10 @@
 @use "shared/controls";
 @use "web/paging";
 
+[style^="clear"] {
+	display: none;
+}
+
 h2 {
 	color: var(--fg-main);
 	font: var(--gpText-HeadingMedium);

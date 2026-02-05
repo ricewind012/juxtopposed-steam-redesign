@@ -20,10 +20,6 @@
 
 	// TODO: I don't wanna deal with this shit
 	max-width: var(--apphub_content-width);
-
-	[style="clear: left"] {
-		display: none;
-	}
 }
 
 .apphub_CardRow {
@@ -349,10 +345,6 @@
 	align-items: center;
 	justify-content: space-between;
 	min-height: unset;
-
-	[style="clear: both"] {
-		display: none;
-	}
 }
 
 .apphub_HubDivider {

@@ -28,8 +28,7 @@
 		flex-direction: row-reverse;
 		width: unset;
 
-		br,
-		[style="clear: both;"] {
+		br {
 			display: none;
 		}
 	}
@@ -42,8 +41,7 @@
 	flex-direction: row-reverse;
 	max-width: var(--apphub_content-width);
 
-	br,
-	[style="clear: both;"] {
+	br {
 		display: none;
 	}
 

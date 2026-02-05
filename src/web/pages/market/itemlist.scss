@@ -239,10 +239,6 @@
 	justify-content: space-between;
 	height: unset;
 
-	& > [style="clear: both;"] {
-		display: none;
-	}
-
 	#searchResults_links {
 		@include paging.links-container;
 	}

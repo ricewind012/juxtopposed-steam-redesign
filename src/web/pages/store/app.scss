@@ -64,11 +64,6 @@ body.game_bg {
 	.page_content {
 		width: var(--store-page-width);
 	}
-
-	// TODO: unify
-	[style^="clear"] {
-		display: none;
-	}
 }
 
 // TODO: move to shared ?
