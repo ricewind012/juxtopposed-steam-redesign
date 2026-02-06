@@ -382,12 +382,6 @@ body.no_home_gutter.infinite_scrolling {
 		padding-block-start: 0;
 		margin: 0;
 
-		.btnv6_blue_hoverfade {
-			// TODO: unify maybe
-			text-align: center;
-			margin: 0;
-		}
-
 		.single_buttonbar_group {
 			gap: var(--spacing-sm);
 			margin: 0;
@@ -507,9 +501,7 @@ body.no_home_gutter.infinite_scrolling {
 		display: none;
 	}
 
-	// HELP
-	$sel: ".btnv6_white_transparent";
-	#{$sel}#{$sel}#{$sel}#{$sel}#{$sel}#{$sel} {
+	#{controls.button-web-selector(".btnv6_white_transparent")} {
 		margin-inline-start: var(--spacing-sm);
 	}
 
@@ -546,7 +538,7 @@ body.no_home_gutter.infinite_scrolling {
 }
 
 .recommended_by_steam_labs_ctn {
-	.btnv6_white_transparent {
+	#{controls.button-web-selector(".btnv6_white_transparent")} {
 		margin: 0;
 	}
 

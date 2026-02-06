@@ -45,6 +45,6 @@
 	min-width: 151px;
 
 	&#Green > #ButtonChild {
-		@include controls.button-colors("green");
+		@include controls.button-vars("green");
 	}
 }

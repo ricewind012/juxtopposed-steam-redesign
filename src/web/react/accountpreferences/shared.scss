@@ -72,11 +72,10 @@ body:is(.account, .account_preferences) {
 .account_manage_link {
 	@include controls.button;
 
-	text-align: center;
 	margin: 0;
 
 	&.delete_link {
-		@include controls.button-colors("red");
+		@include controls.button-vars("red");
 	}
 }
 

@@ -42,7 +42,7 @@
 	background: transparent;
 	margin-bottom: var(--spacing-md);
 
-	.btn_grey_black {
+	#{controls.button-web-selector(".btn_grey_black")} {
 		@include controls.button;
 	}
 

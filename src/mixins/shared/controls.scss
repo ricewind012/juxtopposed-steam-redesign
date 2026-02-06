@@ -1,11 +1,13 @@
 @use "shared/utils";
 
-@mixin button-colors($variant) {
+@mixin button-vars($variant: "secondary", $size: "md") {
 	@if $variant == "primary" {
 		--bg: var(--color-secondary);
 		--bg2: var(--color-primary);
 		--fg: var(--fg-main);
 		--fg2: var(--bg-main);
+		--border: transparent;
+		--border2: transparent;
 	}
 
 	@if $variant == "secondary" {
@@ -13,47 +15,68 @@
 		--bg2: var(--bg-hover);
 		--fg: var(--fg-main);
 		--fg2: var(--fg-main);
-	}
-
-	@if $variant == "red" or $variant == "green" or $variant == "yellow" {
-		--bg: var(--accent-#{$variant});
-		--bg2: color-mix(in srgb, var(--accent-#{$variant}) 50%, var(--bg-hover));
-		--fg: var(--bg-main);
-		--fg2: var(--bg-main);
+		--border: transparent;
+		--border2: transparent;
 	}
 
 	@if $variant == "tertiary" {
 		--bg: transparent;
 		--bg2: transparent;
 		--fg: var(--fg-dim);
-		--fg2: var(--fg-dim);
+		--fg2: var(--fg-main);
+		--border: color-mix(in srgb, currentColor 20%, transparent);
+		--border2: color-mix(in srgb, currentColor 40%, transparent);
+	}
 
-		border: 1px solid color-mix(in srgb, currentColor 20%, transparent);
-		--padding: var(--spacing-xs) var(--spacing-lg);
+	@if $variant == "red" or $variant == "green" or $variant == "yellow" {
+		--bg: var(--accent-#{$variant});
+		--bg2: color-mix(in srgb, var(--accent-#{$variant}) 90%, white);
+		--fg: var(--bg-main);
+		--fg2: var(--bg-main);
+		--border: transparent;
+		--border2: transparent;
+	}
 
-		&:hover {
-			border-color: color-mix(in srgb, currentColor 40%, transparent);
-		}
+	@if $size == "sm" {
+		--spacing-block: var(--spacing-xs);
+	}
+
+	@if $size == "md" {
+		--spacing-block: var(--spacing-sm);
 	}
 }
 
-/* TODO: a market button has the same padding, mixin ? */
-@mixin button($variant: "secondary") {
-	@include button-colors($variant);
+/// Returns a string with the higher specificity than the
+/// `.btnv6_white_transparent:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover > span`
+/// selector that also uses !important, ty valve
+///
+/// @return {String} - String with the highest specificity.
+@function button-web-selector($sel) {
+	@return #{$sel}#{$sel}#{$sel}#{$sel}#{$sel}#{$sel}#{$sel};
+}
 
+@mixin button($variant: "secondary", $size: "md") {
+	@include button-vars($variant, $size);
+
+	transition: var(--transition);
 	background: var(--bg);
 	color: var(--fg);
 	font: var(--gpText-BodyLarge);
+	border: 1px solid var(--border);
 	border-radius: var(--border-radius);
-	// --spacing-sm
-	padding: var(--padding, 11px);
+	gap: var(--spacing-xs);
+	padding: var(--spacing-block) var(--spacing-lg);
 
-	min-width: 166px;
-	min-height: 44px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	cursor: pointer;
 
 	&:hover {
 		background: var(--bg2);
 		color: var(--fg2);
+		border-color: var(--border2);
 	}
 }
 

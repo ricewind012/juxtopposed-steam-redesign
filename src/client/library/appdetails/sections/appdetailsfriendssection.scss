@@ -27,7 +27,7 @@
 }
 
 #ShowMore {
-	@include controls.button("tertiary");
+	@include controls.button($variant: "tertiary", $size: "sm");
 }
 
 #Subsection {

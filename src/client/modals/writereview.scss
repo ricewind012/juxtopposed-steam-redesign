@@ -13,9 +13,6 @@
 #OptionButton {
 	@include controls.button;
 
-	// TODO(controls): unify
-	justify-content: center;
-
 	span {
 		padding: 0;
 	}
@@ -77,7 +74,7 @@
 	margin-inline: var(--spacing-sm) 0;
 
 	&#Selected {
-		@include controls.button-colors("primary");
+		@include controls.button-vars("primary");
 	}
 
 	#ThumbIcon {

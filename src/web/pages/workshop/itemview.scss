@@ -188,7 +188,7 @@
 
 .workshopItemControls {
 	.general_btn {
-		@include controls.button-colors("secondary");
+		@include controls.button-vars("secondary");
 
 		margin-right: var(--spacing-sm);
 

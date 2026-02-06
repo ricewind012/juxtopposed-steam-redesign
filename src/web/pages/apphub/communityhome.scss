@@ -110,7 +110,7 @@
 
 	align-items: center;
 
-	.btn_small.btn_small {
+	#{controls.button-web-selector(".btn_small")} {
 		all: unset;
 
 		@include controls.tab(".btn_darkblue_white_innerfade");

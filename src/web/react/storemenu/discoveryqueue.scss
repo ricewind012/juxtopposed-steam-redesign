@@ -48,7 +48,6 @@
 		#ActionButton {
 			@include controls.button($variant: "primary");
 
-			gap: var(--spacing-xs);
 			margin-block-start: var(--spacing-md);
 
 			svg {

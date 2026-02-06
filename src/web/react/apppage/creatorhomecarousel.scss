@@ -7,19 +7,11 @@
 #ButtonContainer {
 	gap: var(--spacing-sm);
 
-	// !important
-	.btnv6_grey_black.btnv6_grey_black,
-	#CarouselFollowButton#CarouselFollowButton#CarouselFollowButton {
-		@include controls.button("tertiary");
+	#{controls.button-web-selector(".btnv6_grey_black")},
+	#{controls.button-web-selector("#CarouselFollowButton")} {
+		@include controls.button($variant: "tertiary", $size: "sm");
 
-		transition: none;
-		box-shadow: none;
-
-		min-width: unset;
-		min-height: unset;
-
-		// !important
-		.FollowBtnText.FollowBtnText {
+		.FollowBtnText {
 			font: inherit;
 		}
 	}

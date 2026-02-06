@@ -3,11 +3,8 @@
 #AllButton {
 	@include controls.button;
 
-	color: inherit;
-	font: inherit;
-
 	&#ButtonHighlight {
-		background-color: var(--color-primary);
+		@include controls.button-vars("primary");
 	}
 }
 

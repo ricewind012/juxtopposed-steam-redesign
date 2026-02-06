@@ -4,14 +4,12 @@
 	@include controls.button;
 
 	background-color: transparent;
-	border: none;
 	margin: 0;
 
 	height: unset;
 
-	// This isn't in the figma for some reason
 	&#Selected {
-		@include controls.button-colors("primary");
+		@include controls.button-vars("primary");
 	}
 }
 

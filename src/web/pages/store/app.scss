@@ -4,13 +4,6 @@
 @use "web/apppage";
 @use "web/store";
 
-%-button-tertiary {
-	@include controls.button("tertiary");
-
-	min-width: unset;
-	min-height: unset;
-}
-
 %-section {
 	background-color: var(--bg-main-50);
 	border-radius: var(--border-radius-large);
@@ -46,11 +39,6 @@ body.game_bg {
 	.apphub_OtherSiteInfo {
 		// Retain the container height for queue buttons
 		visibility: hidden;
-	}
-
-	// TODO: unify
-	.btnv6_blue_hoverfade {
-		text-align: center;
 	}
 
 	.leftcol {
@@ -171,8 +159,8 @@ body.game_bg {
 		width: unset;
 	}
 
-	.btn_medium.btn_medium {
-		@include controls.button-colors("primary");
+	#{controls.button-web-selector(".btn_medium")} {
+		@include controls.button-vars("primary");
 	}
 
 	// Leave it as is, looks cool
@@ -316,7 +304,7 @@ body.game_bg {
 	}
 
 	#dlc_show_all_link {
-		@extend %-button-tertiary;
+		@include controls.button($variant: "tertiary", $size: "sm");
 
 		margin: 0;
 
@@ -376,7 +364,7 @@ body.game_bg {
 		all: unset;
 
 		a {
-			@extend %-button-tertiary;
+			@include controls.button($variant: "tertiary", $size: "sm");
 		}
 
 		em {
@@ -523,10 +511,6 @@ body.game_bg {
 		margin-block-end: var(--carousel-section-spacing);
 	}
 
-	.btn_green_steamui.btn_green_steamui {
-		@include controls.button-colors("primary");
-	}
-
 	.game_page_autocollapse {
 		@extend %-section;
 	}
@@ -556,7 +540,7 @@ body.game_bg {
 		}
 
 		.right a {
-			@extend %-button-tertiary;
+			@include controls.button($variant: "tertiary", $size: "sm");
 		}
 	}
 
@@ -1040,10 +1024,7 @@ body.game_bg {
 		margin: 0;
 	}
 
-	.btn_medium {
-		// TODO: unify
-		text-align: center;
-
+	#{controls.button-web-selector(".btn_medium")} {
 		&:not(.btn_green_steamui, :hover) {
 			background-color: var(--bg-main-50);
 		}
@@ -1156,14 +1137,13 @@ body.game_bg {
 }
 
 .queue_btn_active.queue_btn_active {
-	@include controls.button-colors("primary");
+	@include controls.button-vars("primary");
 }
 
 .queue_btn_menu > .queue_menu_arrow.queue_menu_arrow {
 	color: var(--fg);
 
-	// TODO: --spacing-sm ?
-	min-width: calc(11px * 2 + var(--icon-size));
+	min-width: calc(var(--spacing-sm) * 2 + var(--icon-size));
 
 	& > span {
 		@include utils.icon("arrow");
@@ -1179,14 +1159,9 @@ body.game_bg {
 	inset-inline: calc((100vw - var(--store-page-width)) / 2 - 7px);
 	max-width: var(--store-page-width);
 
-	.btnv6_blue_hoverfade.btnv6_blue_hoverfade {
+	#{controls.button-web-selector(".btnv6_blue_hoverfade")} {
 		img {
 			display: none;
-		}
-
-		& > span {
-			display: flex;
-			justify-content: center;
 		}
 	}
 }

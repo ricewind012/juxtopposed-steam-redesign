@@ -18,13 +18,10 @@
 #DeviceContainer {
 	@include controls.button;
 
-	gap: var(--spacing-sm);
 	margin: 0;
 
-	align-items: center;
-
 	&#ActiveDevice {
-		@include controls.button-colors("primary");
+		@include controls.button-vars("primary");
 	}
 }
 
@@ -67,9 +64,7 @@
 	margin: 0;
 
 	.DialogButton.DialogButton {
-		@include controls.button-colors("red");
-
-		border: none;
+		@include controls.button-vars("red");
 
 		// Some guy really thought putting an !important would be hilarious af
 		&:hover {

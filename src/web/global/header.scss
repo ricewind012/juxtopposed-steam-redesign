@@ -25,7 +25,7 @@
 		@include controls.button;
 
 		&.supernav_active {
-			@include controls.button-colors("primary");
+			@include controls.button-vars("primary");
 		}
 
 		&:not(.username) {

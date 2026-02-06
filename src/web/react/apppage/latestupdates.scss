@@ -1,19 +1,12 @@
 @use "shared/controls";
 
-%-button {
-	@include controls.button("tertiary");
-
-	min-width: unset;
-	min-height: unset;
-}
-
 #EventsSummariesCtn {
 	gap: var(--spacing-md);
 	margin: 0;
 }
 
 #LatestUpdateButton {
-	@extend %-button;
+	@include controls.button($variant: "tertiary", $size: "sm");
 }
 
 #LatestUpdateButtonCtn {
@@ -29,7 +22,7 @@
 }
 
 #SectionButton {
-	@extend %-button;
+	@include controls.button($variant: "tertiary", $size: "sm");
 
 	inset: 0;
 }

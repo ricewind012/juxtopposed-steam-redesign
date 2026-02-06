@@ -1,6 +1,16 @@
 @use "shared/controls";
 @use "web/paging";
 
+@mixin -button($variant: "secondary", $size: "md") {
+	all: unset;
+
+	@include controls.button($variant, $size);
+
+	& > span {
+		all: unset;
+	}
+}
+
 [style^="clear"] {
 	display: none;
 }
@@ -56,36 +66,18 @@ h3 {
 	display: none;
 }
 
-.btnv6_blue_hoverfade.btnv6_blue_hoverfade,
-.btn_medium.btn_medium,
-.btn_small.btn_small {
-	@include controls.button;
-
-	border: none;
-
-	& > span {
-		all: unset;
-	}
+#{controls.button-web-selector(".btn_medium")},
+#{controls.button-web-selector(".btn_small")} {
+	@include -button;
 }
 
-.btn_green_steamui.btn_green_steamui {
-	text-shadow: none;
+#{controls.button-web-selector(".btn_green_steamui")},
+#{controls.button-web-selector(".btn_green_white_innerfade")} {
+	@include -button($variant: "primary");
 }
 
-.btn_green_white_innerfade.btn_green_white_innerfade {
-	@include controls.button-colors("primary");
-}
-
-// HELP
-$sel: ".btnv6_white_transparent";
-#{$sel}#{$sel}#{$sel}#{$sel}#{$sel}#{$sel}#{$sel} {
-	all: unset;
-
-	@include controls.button("tertiary");
-
-	& > span {
-		all: unset;
-	}
+#{controls.button-web-selector(".btnv6_white_transparent")} {
+	@include -button($variant: "tertiary", $size: "sm");
 }
 
 input[type="checkbox"] {

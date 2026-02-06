@@ -19,7 +19,7 @@
 	margin: 0;
 
 	&.Primary {
-		@include controls.button-colors("primary");
+		@include controls.button-vars("primary");
 	}
 
 	&::before {

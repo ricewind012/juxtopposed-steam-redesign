@@ -1,15 +1,8 @@
+@use "shared/controls";
 @use "shared/utils";
 
 .btn_profile_action {
-	border-radius: var(--border-radius);
-	padding: 0;
-
-	& > span {
-		color: var(--fg-main);
-		font: var(--gpText-BodyLarge);
-		border-radius: inherit;
-		padding: 11px 26px;
-	}
+	@include controls.button;
 }
 
 .favorite_badge {

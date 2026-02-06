@@ -377,7 +377,7 @@
 .apphub_recentFriendsArea {
 	padding: 0;
 
-	.btnv6_blue_hoverfade {
+	#{controls.button-web-selector(".btnv6_blue_hoverfade")} {
 		display: none;
 	}
 }

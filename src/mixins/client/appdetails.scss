@@ -8,11 +8,8 @@
 @mixin button {
 	@include controls.button;
 
+	--bg: var(--bg-main-20);
 	margin: 0;
-
-	&:not(:hover) {
-		background-color: var(--bg-main-20);
-	}
 }
 
 @mixin section {
