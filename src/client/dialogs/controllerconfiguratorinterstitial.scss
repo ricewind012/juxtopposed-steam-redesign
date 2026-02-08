@@ -1,0 +1,22 @@
+@use "shared/controls";
+
+#ButtonRow {
+	--gamepaddialog_field-spacing-block: 0px;
+
+	#OKButton {
+		@include controls.button-vars($variant: "primary");
+	}
+}
+
+#ConfiguratorInterstitialContainer {
+	background: var(--bg-main);
+	padding: var(--spacing-lg);
+}
+
+#DialogBody {
+	color: inherit;
+
+	#DescLabel {
+		margin: 0;
+	}
+}

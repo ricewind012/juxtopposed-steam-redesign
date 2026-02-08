@@ -1,0 +1,45 @@
+@use "shared/controls";
+
+#DialogCarrot {
+	background-color: inherit;
+	box-shadow: inherit;
+}
+
+#DialogInner {
+	background-color: inherit;
+	border-radius: inherit;
+	padding: var(--spacing-lg);
+
+	z-index: 1;
+
+	#ButtonRow {
+		gap: var(--spacing-sm);
+		margin: 0;
+
+		#ActionButton {
+			@include controls.button-vars($variant: "primary", $size: "sm");
+		}
+
+		#CancelButton {
+			background-color: var(--bg-hl);
+		}
+	}
+
+	#ExplainerText {
+		color: var(--fg-main);
+		font: var(--gpText-BodyMedium);
+		margin-block: var(--spacing-lg);
+	}
+
+	#Title {
+		color: var(--fg-main);
+		font: var(--gpText-HeadingSmall);
+		margin: 0;
+	}
+}
+
+#MultiSelectActionDialogContainer {
+	background-color: var(--bg-main);
+	border-radius: var(--border-radius);
+	box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.25);
+}

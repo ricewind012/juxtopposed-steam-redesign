@@ -1,0 +1,75 @@
+@use "shared/controls";
+@use "shared/utils";
+
+#AddFriendButton {
+	@include controls.button-vars($variant: "tertiary", $size: "sm");
+
+	margin-block: 2px;
+}
+
+#PlayersList {
+	border: none;
+	border-radius: var(--border-radius-large);
+	box-shadow: none;
+	margin-block: var(--spacing-sm) 0;
+}
+
+#PlayersListBody {
+	background-color: var(--bg-hl);
+	padding-block-start: 6px;
+
+	.avatarHolder {
+		--steamavatar_size: var(--avatar-size);
+	}
+
+	#AvatarAndName {
+		color: inherit;
+		font: inherit;
+	}
+}
+
+#PlayersListHeaderCell {
+	color: inherit;
+	font: inherit;
+
+	#ColumnResizer {
+		background-color: transparent;
+		border-color: color-mix(in srgb, currentColor 20%, transparent);
+	}
+}
+
+#PlayersListHeaderColumn {
+	padding-block: 6px;
+
+	#NameColumn > & {
+		padding-inline: calc(var(--avatar-size) + 12px) 12px;
+	}
+
+	&:not(:last-of-type):hover {
+		background-color: var(--bg-hover);
+	}
+}
+
+#PlayersListHeaderCtr {
+	background-color: var(--bg-hl);
+	border-block-end: 1px solid color-mix(in srgb, currentColor 20%, transparent);
+	padding-block: 0;
+}
+
+#PlayersListWrapper {
+	--avatar-size: 32px;
+
+	font: var(--gpText-BodyMedium);
+}
+
+#SortCaret {
+	--icon-size: 1em;
+
+	@include utils.icon("arrow", true);
+
+	vertical-align: text-bottom;
+
+	&:has(> [d="M17.98 10.23L3.20996 25H32.75L17.98 10.23Z"]) {
+		transform: rotate(180deg);
+	}
+}

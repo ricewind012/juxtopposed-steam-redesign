@@ -30,6 +30,8 @@
 #DetailsProgressContainer {
 	@include controls.progress-bar("#DetailsProgressBar");
 
+	margin-block-start: var(--spacing-xs);
+
 	height: unset;
 }
 
@@ -63,18 +65,6 @@
 
 	#GameStatRight {
 		padding-inline-start: 12px;
-
-		#PlayBarDetailLabel {
-			color: var(--fg-main);
-			font: var(--gpText-BodyMedium);
-		}
-
-		#PlayBarLabel {
-			color: var(--fg-dim);
-			font: var(--gpText-BodyMedium);
-			letter-spacing: 0;
-			margin-block-end: var(--spacing-xs);
-		}
 	}
 }
 
@@ -139,6 +129,19 @@
 #PlayBar {
 	background: none;
 	margin: 0;
+}
+
+#PlayBarDetailLabel {
+	color: var(--fg-main);
+	font: var(--gpText-BodyMedium);
+}
+
+#PlayBarLabel {
+	color: var(--fg-dim);
+	font: var(--gpText-BodyMedium);
+	letter-spacing: 0;
+	text-transform: none;
+	margin-block-end: var(--spacing-xs);
 }
 
 #StatusAndStats {

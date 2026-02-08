@@ -1,0 +1,12 @@
+#HighlightIcon {
+	color: var(--fg-main);
+
+	svg {
+		width: var(--icon-size);
+		height: var(--icon-size);
+	}
+
+	&#Faded {
+		opacity: 0.5;
+	}
+}

@@ -1,0 +1,212 @@
+@use "shared/controls";
+@use "shared/utils";
+
+#BottomControlsRow {
+	height: unset;
+
+	.DialogFooter {
+		padding: 0;
+	}
+
+	#AddFavoriteButton {
+		@include controls.icon-button($w: 44px, $child: "svg", $name: "plus");
+	}
+
+	#ToggleShowFilterDetailsButton {
+		@include controls.icon-button($w: 44px, $child: "svg", $name: "arrow");
+
+		font-size: 0;
+		gap: 0;
+
+		flex-shrink: 0;
+
+		&#Selected svg {
+			transform: rotate(180deg);
+		}
+	}
+}
+
+// TODO(controls): unify dropdown here with buttons so I can do $size: 'lg' ?
+#FilterOptionsCtr {
+	gap: var(--spacing-lg);
+	padding-block-end: 30px;
+
+	align-items: start;
+
+	&:not(#Collapsed) {
+		margin-block-start: var(--spacing-sm);
+
+		height: unset;
+	}
+
+	& > div {
+		gap: var(--spacing-md);
+
+		display: flex;
+		flex-direction: column;
+
+		& > span {
+			gap: var(--spacing-xs);
+
+			display: flex;
+			flex-direction: column;
+		}
+	}
+
+	#DropdownLabel {
+		font: inherit;
+	}
+
+	#FilterOptionsCheckboxesCtr {
+		align-self: unset;
+	}
+}
+
+#RadioButtonColumn {
+	display: none;
+}
+
+#ServerBrowserDialog {
+	:where(& svg) {
+		color: inherit;
+	}
+}
+
+#ServerList {
+	background-color: var(--bg-hl);
+	border: none;
+	border-radius: var(--border-radius-large);
+	box-shadow: none;
+	margin-block: var(--spacing-sm) 0;
+
+	overflow: hidden;
+
+	#SelectColumnsButton {
+		@include utils.icon("plus");
+
+		margin: 6px 3px;
+
+		&:not(:hover) {
+			color: var(--fg-dim);
+		}
+	}
+}
+
+#ServerListHeaderCell {
+	#ColumnResizer {
+		background-color: transparent;
+		padding: 0;
+
+		span {
+			border-color: color-mix(in srgb, currentColor 20%, transparent);
+			padding-inline: 3px;
+
+			display: block;
+		}
+	}
+}
+
+#ServerListHeaderCtr {
+	background-color: var(--bg-hl);
+	border-block-end: 1px solid color-mix(in srgb, currentColor 20%, transparent);
+	padding-block: 0;
+
+	#PasswordColumn,
+	#SecureColumn {
+		margin-inline: 3px;
+	}
+}
+
+#ServerListHeaderRow {
+	gap: 0;
+}
+
+#ServerListHeaderSort {
+	color: inherit;
+	font: inherit;
+	text-transform: none;
+	padding-block: 6px;
+
+	#ServerListHeaderCell:not(#PasswordColumn, #SecureColumn) > & {
+		padding-inline: 6px;
+	}
+
+	&:not(:last-of-type):hover {
+		background-color: var(--bg-hover);
+	}
+}
+
+#ServerRow {
+	gap: 9px;
+
+	&:hover {
+		background-color: var(--bg-hover);
+	}
+
+	&#SelectedRow {
+		background: var(--color-primary);
+		color: var(--bg-main);
+	}
+}
+
+#SortCaret {
+	--icon-size: 1em;
+
+	@include utils.icon("arrow", true);
+
+	vertical-align: text-bottom;
+
+	&:has(> [d="M17.98 10.23L3.20996 25H32.75L17.98 10.23Z"]) {
+		transform: rotate(180deg);
+	}
+}
+
+#TopControlsCtr {
+	gap: 0;
+
+	.DialogDropDown {
+		margin-inline: var(--spacing-sm);
+
+		flex: 1;
+	}
+
+	#SearchButton {
+		--icon-name: icon("search");
+
+		@include controls.icon-button($w: 45px, $child: "svg");
+
+		&#SearchActive {
+			--icon-name: icon("close");
+		}
+	}
+
+	#SwitchTabButton {
+		all: unset;
+
+		transition: var(--transition);
+		background-color: var(--bg-hl);
+		font: var(--gpText-HeadingSmall);
+		padding: var(--spacing-sm) var(--spacing-md);
+
+		&:nth-child(-n + 1 of &) {
+			border-radius: var(--border-radius-large) 0 0 var(--border-radius-large);
+		}
+
+		&:nth-last-child(-n + 1 of &) {
+			border-radius: 0 var(--border-radius-large) var(--border-radius-large) 0;
+		}
+
+		&:hover {
+			background-color: var(--bg-hover);
+		}
+
+		&#Selected {
+			background-color: var(--color-primary);
+			color: var(--bg-main);
+		}
+
+		svg {
+			display: none;
+		}
+	}
+}

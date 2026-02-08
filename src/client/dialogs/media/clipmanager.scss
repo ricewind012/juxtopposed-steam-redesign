@@ -1,0 +1,140 @@
+@use "shared/carousel";
+@use "shared/controls";
+@use "shared/utils";
+
+#BackgroundRecordingListScaler {
+	background-color: var(--bg-hl);
+
+	#BackgroundRecordingLabel {
+		background-color: var(--bg-main);
+		color: var(--fg-main);
+		font: var(--gpText-BodyMedium);
+		border-radius: 0 0 var(--border-radius) var(--border-radius);
+	}
+}
+
+#ChangeItem {
+	all: unset;
+
+	display: contents;
+
+	& > div {
+		display: contents;
+	}
+}
+
+#ChangeItemHoverArea {
+	--top-offset: calc(var(--dialog_window-control-size) + var(--spacing-md) * 2);
+
+	top: var(--top-offset);
+	width: unset;
+	height: calc(100% - var(--top-offset) - 103px);
+
+	svg {
+		margin: 0;
+	}
+}
+
+#ChangeItemLabel {
+	@include carousel.arrow(
+		$child: "svg",
+		$left: "#ChangeItem#Left &",
+		$right: "#ChangeItem#Right &"
+	);
+
+	height: 100%;
+}
+
+#CheckboxContainer {
+	--icon-size: 25px;
+
+	background-color: var(--fg-main);
+	color: var(--bg-main);
+	border-radius: 0;
+
+	inset-inline-start: 0;
+	inset-block-start: 0;
+	width: var(--icon-size);
+	height: var(--icon-size);
+
+	&:empty {
+		display: none;
+	}
+
+	#Check {
+		@include utils.icon("check", true);
+	}
+}
+
+#ContentPadding {
+	padding: 0;
+}
+
+#ListItem {
+	box-sizing: content-box;
+
+	&#Selected {
+		border-color: var(--fg-main);
+	}
+
+	#CornerContent {
+		inset-block-end: var(--spacing-xs);
+		inset-inline-start: var(--spacing-xs);
+	}
+
+	#DurationText {
+		color: var(--color-primary);
+		// TODO(vars): monospace typography
+		font: var(--gpText-BodySmall);
+		font-family: "Roboto-Mono", "Motiva Sans", sans-serif;
+		font-weight: bold;
+		gap: var(--spacing-xs);
+
+		&#DurationTextClip {
+			color: var(--accent-yellow);
+		}
+	}
+}
+
+#ListItemThumbnailImg {
+	filter: none;
+}
+
+#OpenedItemContainer {
+	inset: 0;
+
+	#AppName {
+		color: var(--fg-main);
+		font: var(--gpText-HeadingSmall);
+	}
+
+	#AppNameHeader {
+		gap: var(--spacing-sm);
+		padding-block: var(--spacing-sm);
+		margin-block: var(--spacing-xs);
+	}
+}
+
+#OpenedItemHeaderControls {
+	--icon-size: var(--dialog_window-control-size);
+
+	padding: var(--spacing-sm);
+
+	#BackLabel {
+		@include controls.button($variant: "primary", $size: "sm");
+
+		transform: none;
+		letter-spacing: 0;
+
+		height: unset;
+
+		svg {
+			display: none;
+		}
+	}
+
+	#GameIcon {
+		width: var(--icon-size);
+		height: var(--icon-size);
+	}
+}

@@ -1,0 +1,34 @@
+#GameInfoDialogContents {
+	--gamepaddialog_field-spacing-block: var(--spacing-xs);
+
+	gap: 0;
+}
+
+#PlayersList {
+	background-color: var(--bg-hl);
+	border-radius: var(--border-radius-large);
+	margin-block: 0 var(--spacing-sm);
+
+	order: -1;
+
+	#Details {
+		border: none;
+		padding: var(--spacing-xs) var(--spacing-sm);
+	}
+
+	#Header {
+		--table-border-color: color-mix(in srgb, currentColor 20%, transparent);
+
+		background-color: transparent;
+		color: inherit;
+		font: var(--gpText-HeadingSmall);
+		letter-spacing: 0;
+		text-transform: none;
+		border-block-end: 1px solid var(--table-border-color);
+		padding: var(--spacing-xs) var(--spacing-sm);
+
+		&:not(:nth-last-child(-n + 1 of &)) {
+			border-inline-end: 1px solid var(--table-border-color);
+		}
+	}
+}

@@ -1,0 +1,28 @@
+@use "shared/controls";
+
+#PlayHeadAnnotation {
+	svg {
+		opacity: 1;
+		color: var(--fg-main);
+	}
+}
+
+#ScrollBarCtn {
+	@include controls.progress-bar("#ScrollThumb");
+
+	// Manually set the height, since the thumb is absolutely positioned
+	height: 10px;
+}
+
+#ScrollThumb {
+	filter: none;
+	opacity: 1;
+	border: none;
+	box-shadow: none;
+
+	inset-block-start: 2px;
+}
+
+#ScrollTrack {
+	all: unset;
+}

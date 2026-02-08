@@ -1,0 +1,14 @@
+#PhaseAttribute {
+	color: var(--fg-main);
+	font: var(--gpText-BodyMedium);
+}
+
+#PhaseListIcon {
+	width: var(--icon-size);
+	height: var(--icon-size);
+
+	svg {
+		width: inherit;
+		height: inherit;
+	}
+}

@@ -6,7 +6,7 @@ $-others: ":where(#StandaloneFieldSeparator, .DialogControlsSection)";
 	--controls-child-max-width: 100%;
 	--controls-list-spacing: 0px;
 
-	gap: var(--spacing-sm);
+	gap: var(--gamepaddialog_field-spacing-block);
 
 	flex-direction: column;
 }
@@ -14,7 +14,7 @@ $-others: ":where(#StandaloneFieldSeparator, .DialogControlsSection)";
 #Field {
 	--field-row-children-spacing: 0px;
 
-	padding-block: var(--spacing-sm);
+	padding-block: var(--gamepaddialog_field-spacing-block);
 	margin-inline-start: calc(var(--spacing-lg) * var(--indent-level));
 
 	// TODO: remove .DialogBody ? where else is #Field used other than gameinfo?
@@ -94,6 +94,10 @@ $-others: ":where(#StandaloneFieldSeparator, .DialogControlsSection)";
 	&:not(:has(> #FieldLabel:empty)) {
 		min-height: 44px;
 	}
+}
+
+#LabelFieldValue {
+	color: var(--fg-dim);
 }
 
 #StandaloneFieldSeparator {

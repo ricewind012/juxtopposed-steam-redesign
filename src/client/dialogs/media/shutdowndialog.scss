@@ -1,0 +1,13 @@
+#Body {
+	gap: var(--spacing-sm);
+
+	justify-content: center;
+
+	.DialogBodyText {
+		font: var(--gpText-HeadingSmall);
+	}
+}
+
+#Buttons {
+	gap: var(--spacing-sm);
+}

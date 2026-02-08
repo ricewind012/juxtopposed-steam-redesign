@@ -1,0 +1,16 @@
+#SteamRuntimeSystemInfoContainer {
+	margin: 0;
+}
+
+#Text {
+	color: inherit;
+	font-family: "Consolas", "Lucida Console", monospace;
+	line-height: 1;
+}
+
+#TextContainer {
+	background-color: var(--bg-hl);
+	border: none;
+	border-radius: var(--border-radius-large);
+	box-shadow: none;
+}

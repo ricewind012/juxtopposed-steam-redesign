@@ -1,0 +1,120 @@
+@use "shared/controls";
+@use "shared/utils";
+
+%-phase-grid-item {
+	background-color: var(--bg-hl);
+	color: var(--fg-dim);
+	font: inherit;
+	padding: var(--spacing-sm);
+
+	#Date {
+		color: var(--fg-main);
+		font: var(--gpText-HeadingSmall);
+	}
+}
+
+#BlankPhaseGridItem {
+	@extend %-phase-grid-item;
+
+	// ??? why does this have to be different ?
+	background-image: none;
+}
+
+#DateHeader {
+	color: var(--fg-dim);
+	font: var(--gpText-HeadingMedium);
+	margin-block-start: var(--spacing-lg);
+
+	&:first-child {
+		margin-block-start: 0;
+	}
+}
+
+#GameHeader {
+	color: var(--fg-dim);
+	font: var(--gpText-BodyMedium);
+	gap: var(--spacing-xs);
+	margin-block-start: var(--spacing-md);
+
+	#Icon {
+		border-radius: var(--border-radius);
+	}
+}
+
+#InputFilter {
+	all: unset;
+
+	--bg-tertiary: var(--bg-main);
+	--spacing-sm: var(--spacing-xs);
+
+	position: relative;
+
+	input {
+		@include controls.search-input;
+
+		transition: var(--transition);
+		font: var(--gpText-BodyLarge);
+		border: 1px solid transparent;
+
+		&:focus {
+			background-color: var(--bg-main-50);
+		}
+	}
+
+	svg {
+		@include utils.icon("search", true);
+
+		color: var(--fg-dim);
+
+		position: absolute;
+		inset-inline-end: var(--spacing-md);
+		// TODO: wtf
+		inset-block-start: calc(var(--spacing-sm) + 3px);
+	}
+}
+
+#PhaseGridItem {
+	@extend %-phase-grid-item;
+}
+
+#PhaseList {
+	gap: var(--spacing-xs);
+	padding: var(--spacing-lg);
+	margin-block-start: calc(var(--stickyHeaderHeight) + var(--spacing-lg));
+}
+
+#PhaseMediaList {
+	gap: var(--spacing-sm);
+
+	#DurationBar {
+		background-color: var(--color);
+
+		height: 4px;
+	}
+
+	#DurationText {
+		color: var(--color);
+		// TODO(vars): monospace typography
+		font: var(--gpText-BodySmall);
+		font-family: "Roboto-Mono", "Motiva Sans", sans-serif;
+		font-weight: bold;
+	}
+
+	#DurationMetric {
+		gap: var(--spacing-xs);
+
+		&:has(> [style*="color: rgb(26, 159, 255)"]) {
+			--color: var(--color-primary);
+		}
+
+		&:has(> [style*="color: rgb(228, 190, 82)"]) {
+			--color: var(--accent-yellow);
+		}
+	}
+
+	#OverflowItem {
+		background-color: var(--bg-main);
+		color: var(--fg-main);
+		font: var(--gpText-BodyMedium);
+	}
+}

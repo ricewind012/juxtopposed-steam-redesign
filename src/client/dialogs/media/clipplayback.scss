@@ -1,0 +1,33 @@
+#AddMarkerIcon {
+	color: var(--fg-main);
+
+	width: var(--icon-size);
+	height: var(--icon-size);
+}
+
+#PlaybackButton {
+	color: var(--fg-dim);
+
+	width: var(--icon-size);
+	height: var(--icon-size);
+
+	&#Enabled {
+		color: var(--fg-main);
+	}
+
+	&#PlayButton {
+		--icon-size: 32px;
+	}
+}
+
+#TimeBar {
+	color: var(--fg-main);
+	// TODO(vars): monospace typography
+	font: var(--gpText-BodySmall);
+	font-family: "Roboto-Mono", "Motiva Sans", sans-serif;
+
+	#TimeDash,
+	#TimeTotal {
+		color: var(--fg-dim);
+	}
+}

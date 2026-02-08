@@ -1,0 +1,30 @@
+#GameName {
+	color: var(--fg-main);
+	font: var(--gpText-HeadingMedium);
+}
+
+#Launching {
+	color: var(--fg-dim);
+	font: var(--gpText-BodyMedium);
+}
+
+#Layout {
+	gap: var(--spacing-lg);
+	margin: auto 0;
+}
+
+#OpenSteamButton {
+	margin-block-start: auto;
+}
+
+#RightColumn {
+	padding: 0;
+}
+
+#StatusOverride {
+	padding: 0;
+}
+
+#StatusWrapper {
+	margin-block-start: var(--spacing-lg);
+}

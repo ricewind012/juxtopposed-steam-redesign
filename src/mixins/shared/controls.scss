@@ -131,14 +131,15 @@
 /// @param {String} $w - Button width.
 /// @param {String} $h [$w] - Button height.
 /// @param {String} $child - Child element for the icon.
-/// @param {String} $name - Icon name found in `assets/icons`.
+/// @param {String} $name [name] - Icon name found in `assets/icons`.
 /// @param {Boolean} $remove [true] - Remove every child from `$child`?
-@mixin icon-button($w, $h: $w, $child, $name, $remove: true) {
+@mixin icon-button($w, $h: $w, $child, $name: "name", $remove: true) {
 	background-color: var(--bg-hl);
 	border-radius: var(--border-radius);
+	padding: 0;
 
-	min-width: #{$w};
-	min-height: #{$h};
+	width: #{$w};
+	height: #{$h};
 
 	&:hover {
 		background-color: var(--bg-hover);

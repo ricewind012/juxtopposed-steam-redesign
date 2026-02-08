@@ -1,0 +1,178 @@
+@use "shared/controls";
+@use "shared/style";
+@use "shared/utils";
+
+:where(#ButtonBox) {
+	@include controls.button($size: "sm");
+
+	box-shadow: none;
+
+	height: unset;
+
+	&:where(#Active) {
+		background-color: var(--color-primary);
+		color: var(--bg-main);
+	}
+
+	&:where(#Combobox) {
+		// TODO(controls): unify with buttons
+		@include controls.dropdown;
+
+		padding-block: var(--spacing-xs);
+
+		svg {
+			display: none;
+		}
+	}
+
+	// TODO(controls): disabled button state
+	&:where(#Disabled) {
+	}
+
+	&:where(#IconButton) {
+		// BodyLarge font-size * line-height + controls.button border-size * 2
+		--size: calc(16px * 1.4 + 1px * 2 + var(--spacing-xs) * 2);
+
+		padding: 0;
+
+		width: var(--size);
+		height: var(--size);
+	}
+
+	svg {
+		fill: currentColor;
+	}
+
+	#Text {
+		color: inherit;
+	}
+}
+
+#FocusedScreenshotError {
+	background-color: #000;
+	color: var(--fg-main);
+
+	#Caution {
+		--size: 80px;
+
+		fill: currentColor;
+
+		width: var(--size);
+		height: var(--size);
+	}
+
+	#Message {
+		color: inherit;
+		font: var(--gpText-BodyLarge);
+	}
+}
+
+#FocusedScreenshotImageContainer {
+	margin: 0;
+}
+
+#ScreenshotForm {
+	gap: var(--spacing-sm);
+	padding: var(--spacing-lg);
+
+	#Link {
+		@include style.link;
+
+		text-decoration: none;
+	}
+
+	#Metadata {
+		color: var(--fg-dim);
+		font: inherit;
+	}
+}
+
+#ScreenshotFormActions {
+	gap: var(--spacing-sm);
+}
+
+#ScreenshotList {
+	padding: var(--spacing-lg);
+}
+
+#ScreenshotListInner {
+	margin: 0;
+}
+
+#TopList {
+	padding: 0;
+
+	#DesktopBottomGlass {
+		display: none;
+	}
+
+	#StickyHeader {
+		backdrop-filter: blur(20px);
+		background: var(--bg-main-50);
+		border: none;
+		box-shadow: none;
+		gap: var(--spacing-sm);
+		padding: var(--spacing-lg);
+
+		width: 100%;
+
+		#ButtonBox:not(:hover, #Active) {
+			--bg-hl: var(--bg-main-50);
+		}
+	}
+}
+
+#TopListButtonRow {
+	margin: 0;
+}
+
+#TopListTitle {
+	color: var(--fg-main);
+	font: var(--gpText-HeadingLarge);
+	text-transform: none;
+	padding: 0;
+
+	height: unset;
+}
+
+#UGCCount {
+	font: inherit;
+	gap: var(--spacing-xs);
+
+	align-items: center;
+
+	&:nth-child(1) {
+		--icon-name: icon("thumb-up");
+	}
+
+	&:nth-child(2) {
+		--icon-name: icon("chat-bubble");
+	}
+
+	&:nth-child(3) {
+		--icon-name: icon("star");
+	}
+}
+
+#UGCCountIcon {
+	@include utils.icon("name", true);
+
+	opacity: 0.5;
+	color: inherit;
+}
+
+#UGCCounts {
+	gap: var(--spacing-md);
+}
+
+#UGCMetadata {
+	color: var(--color-primary);
+}
+
+#UploadedIcon {
+	color: var(--fg-main);
+	margin-inline-end: var(--spacing-xs);
+
+	width: var(--icon-size);
+	height: var(--icon-size);
+}

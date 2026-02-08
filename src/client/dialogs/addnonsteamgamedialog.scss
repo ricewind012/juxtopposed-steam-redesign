@@ -1,0 +1,99 @@
+@use "shared/utils";
+
+%-row {
+	padding: 0;
+
+	display: grid;
+	grid-template-columns: repeat(2, var(--icon-column-size)) repeat(2, 1fr);
+
+	& > * {
+		padding: var(--spacing-xs) var(--spacing-sm);
+
+		width: unset;
+	}
+}
+
+#AddNonSteamGameDialog {
+	--icon-column-size: calc(var(--icon-size) + var(--spacing-sm) * 2);
+	--icon-size: 24px;
+	--table-border-color: color-mix(in srgb, currentColor 20%, transparent);
+
+	#AppName {
+		color: var(--fg-main);
+		font: var(--gpText-BodyLarge);
+	}
+
+	#ExePath {
+		opacity: 1;
+		color: var(--fg-dim);
+		font: var(--gpText-BodyLarge);
+	}
+}
+
+#DialogBodyText {
+	margin-block-end: var(--spacing-xs);
+}
+
+#Footer {
+	gap: var(--spacing-sm);
+	padding-block-start: 30px;
+}
+
+#GameList {
+	background-color: var(--bg-hl);
+	box-shadow: none;
+	border: none;
+	border-radius: 0 0 var(--border-radius-large) var(--border-radius-large);
+}
+
+#GameRow {
+	@extend %-row;
+
+	padding: 0;
+
+	#IconContainer {
+		margin: 0;
+		img {
+			width: var(--icon-size);
+			height: var(--icon-size);
+		}
+	}
+}
+
+#Header {
+	@extend %-row;
+
+	background-color: var(--bg-hl);
+	border: none;
+	border-block-end: 1px solid var(--table-border-color);
+	border-radius: var(--border-radius-large) var(--border-radius-large) 0 0;
+	// For scrollbar
+	padding-inline-end: 14px;
+	margin-block-start: var(--spacing-sm);
+
+	& > * {
+		text-transform: none;
+
+		&:not(:last-child) {
+			border-inline-end: 1px solid var(--table-border-color);
+		}
+
+		&:hover {
+			background-color: var(--bg-hover);
+		}
+	}
+}
+
+#SortArrowContainer {
+	--icon-size: 1em;
+
+	padding-inline-start: var(--spacing-xs);
+
+	#Arrow {
+		@include utils.icon("arrow", true);
+
+		&:has(> [d="M17.98 10.23L3.20996 25H32.75L17.98 10.23Z"]) {
+			transform: rotate(180deg);
+		}
+	}
+}

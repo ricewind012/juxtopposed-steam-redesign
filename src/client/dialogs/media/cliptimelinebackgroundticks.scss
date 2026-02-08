@@ -1,0 +1,11 @@
+#TickLine {
+	background-color: color-mix(in srgb, var(--fg-dim) var(--pct), transparent);
+
+	&#Major {
+		--pct: 100%;
+	}
+
+	&#Minor {
+		--pct: 50%;
+	}
+}

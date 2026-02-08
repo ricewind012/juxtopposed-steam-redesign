@@ -1,0 +1,80 @@
+@use "shared/controls";
+
+#AppNameHeader {
+	color: var(--fg-main);
+	font: var(--gpText-HeadingLarge);
+	margin: 0;
+	margin-block-end: var(--spacing-sm);
+}
+
+#ButtonContainer {
+	gap: var(--spacing-sm);
+	margin: 0;
+	margin-block-start: var(--spacing-sm);
+
+	#CancelButton {
+		@include controls.button;
+
+		margin: 0;
+	}
+
+	#PlayButton {
+		@include controls.button($variant: "primary");
+
+		margin: 0;
+	}
+}
+
+#LaunchOptionDialog {
+	background: var(--bg-main);
+	font: var(--gpText-BodyMedium);
+	padding: var(--spacing-lg);
+}
+
+#ListContainer {
+	@include controls.radio-container;
+
+	background-color: var(--bg-hl);
+	border: none;
+	border-radius: var(--border-radius);
+	box-shadow: none;
+	padding: 0;
+	margin-block-end: auto;
+
+	overflow: auto;
+	flex-grow: 0;
+
+	#ListItem {
+		@include controls.radio($active: "&:has(> :checked)");
+
+		background-color: transparent;
+		margin: 0;
+
+		input {
+			display: none;
+		}
+
+		label {
+			font: inherit;
+			padding: 0;
+		}
+	}
+}
+
+#ListHeader {
+	display: none;
+}
+
+#OptionList {
+	gap: var(--spacing-sm);
+	padding: 0;
+
+	#CheckboxRow {
+		margin: 0;
+	}
+
+	#SeeProperties {
+		font: var(--gpText-BodyMedium);
+		margin: 0;
+	}
+}
