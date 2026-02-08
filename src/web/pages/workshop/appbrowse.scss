@@ -223,12 +223,9 @@ body.apphub_blue.v6 {
 
 	align-items: center;
 
-	// TODO(controls): unify somehow
 	.dropdown {
 		@include controls.dropdown;
 
-		background-image: none;
-		font: inherit;
 		margin: 0;
 	}
 }

@@ -15,15 +15,11 @@
 		justify-content: space-between;
 	}
 
+	// TODO: can't use ::after here... idk man
 	select {
 		@include controls.dropdown;
 
 		line-height: calc(44px - var(--spacing-xs) * 2);
-
-		// TODO: can't use ::after here... idk man
-		&:hover {
-			background-color: var(--bg-hover);
-		}
 	}
 
 	// weird empty div

@@ -102,29 +102,17 @@
 	}
 }
 
-@mixin dropdown {
-	background-color: var(--bg-hl);
-	color: var(--fg-main);
-	font: var(--gpText-BodyLarge);
-	border-radius: var(--border-radius);
-	// TODO: not actually 43px height
-	padding: var(--spacing-xs) var(--spacing-md);
-	gap: var(--spacing-xs);
+@mixin dropdown($variant: "secondary", $size: "md") {
+	@include button($variant, $size);
 
-	display: flex;
-	align-items: center;
 	position: relative;
-
-	&:hover {
-		background-color: var(--bg-hover);
-	}
 
 	&::after {
 		content: "";
 
 		@include utils.icon("arrow");
 
-		right: var(--spacing-md);
+		right: var(--spacing-lg);
 	}
 }
 

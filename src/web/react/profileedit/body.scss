@@ -26,15 +26,11 @@
 		width: 312px;
 	}
 
+	// TODO: can't use ::after here... idk man
 	.react-select__control {
 		@include controls.dropdown;
 
 		width: 312px;
-
-		// TODO: can't use ::after here... idk man
-		&:hover {
-			background-color: var(--bg-hover);
-		}
 	}
 
 	.react-select__indicator,

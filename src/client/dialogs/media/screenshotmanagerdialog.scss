@@ -15,10 +15,7 @@
 	}
 
 	&:where(#Combobox) {
-		// TODO(controls): unify with buttons
-		@include controls.dropdown;
-
-		padding-block: var(--spacing-xs);
+		@include controls.dropdown($size: "sm");
 
 		svg {
 			display: none;

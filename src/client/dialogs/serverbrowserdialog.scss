@@ -53,6 +53,10 @@
 		}
 	}
 
+	.DialogDropDown {
+		@include controls.button-vars($size: "lg");
+	}
+
 	#DropdownLabel {
 		font: inherit;
 	}

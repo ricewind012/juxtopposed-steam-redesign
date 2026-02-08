@@ -433,8 +433,6 @@ body.game_bg {
 .game_area_purchase_game_dropdown_selection {
 	@include controls.dropdown;
 
-	padding-block: 11px;
-
 	height: unset;
 
 	&:not(:hover) {
