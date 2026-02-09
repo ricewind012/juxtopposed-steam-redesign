@@ -1,5 +1,5 @@
 #avatar {
-	border: 2px solid;
+	border: var(--avatar--border-size) solid;
 	border-radius: var(--border-radius);
 	box-shadow: none;
 
@@ -16,19 +16,19 @@
 	height: var(--steamavatar_size);
 
 	&:where(.X-Small) {
-		--steamavatar_size: 32px;
+		--steamavatar_size: var(--avatar--size-xs);
 	}
 
 	&:where(.Small) {
-		--steamavatar_size: 40px;
+		--steamavatar_size: var(--avatar--size-sm);
 	}
 
 	&:where(.Medium) {
-		--steamavatar_size: 48px;
+		--steamavatar_size: var(--avatar--size-md);
 	}
 
 	&:where(.X-Large) {
-		--steamavatar_size: 56px;
+		--steamavatar_size: var(--avatar--size-xl);
 	}
 }
 

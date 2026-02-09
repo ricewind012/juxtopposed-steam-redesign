@@ -47,7 +47,7 @@
 			}
 
 			.playerAvatar {
-				--size: 84px;
+				--size: var(--avatar--size-md);
 			}
 		}
 

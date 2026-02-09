@@ -13,5 +13,5 @@
 	--pageablecontainer_header-offset: calc(
 		18px * 1.4 + var(--carousel-section-spacing)
 	);
-	--steamavatar_size: 32px;
+	--steamavatar_size: var(--avatar--size-xs);
 }

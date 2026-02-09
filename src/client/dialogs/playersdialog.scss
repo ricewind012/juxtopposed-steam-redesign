@@ -19,7 +19,7 @@
 	padding-block-start: 6px;
 
 	.avatarHolder {
-		--steamavatar_size: var(--avatar-size);
+		--steamavatar_size: var(--avatar--size-xs);
 	}
 
 	#AvatarAndName {
@@ -42,7 +42,7 @@
 	padding-block: 6px;
 
 	#NameColumn > & {
-		padding-inline: calc(var(--avatar-size) + 12px) 12px;
+		padding-inline: calc(var(--avatar--size-xs) + 12px) 12px;
 	}
 
 	&:not(:last-of-type):hover {
@@ -57,8 +57,6 @@
 }
 
 #PlayersListWrapper {
-	--avatar-size: 32px;
-
 	font: var(--gpText-BodyMedium);
 }
 

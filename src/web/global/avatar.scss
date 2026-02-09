@@ -1,42 +1,44 @@
 .playerAvatar {
-	// TODO(vars): avatar
-	--size: 32px;
-	--border-size: 2px;
-	--img-size: calc(var(--size) - var(--border-size) * 2);
+	--size: var(--avatar--size-sm);
+	--img-size: calc(var(--size) - var(--avatar--border-size) * 2);
 
 	background: none var(--bg);
-	border-radius: var(--avatar-border-radius);
-	padding: var(--border-size);
+	border-radius: var(--avatar--border-radius);
+	padding: var(--avatar--border-size);
 
 	width: var(--size);
 	height: var(--size);
 
 	&.offline {
-		--bg: var(--fg-dim);
+		--bg: var(--avatar--color-offline);
 	}
 
 	&.online {
-		--bg: var(--color-primary);
+		--bg: var(--avatar--color-online);
 	}
 
 	&.golden {
-		--bg: var(--accent-yellow);
+		--bg: var(--avatar--color-away);
 	}
 
 	&.in-game {
-		--bg: var(--accent-green);
+		--bg: var(--avatar--color-ingame);
+	}
+
+	&.tiny {
+		--size: var(--avatar--size-xs);
 	}
 
 	&.medium {
-		--size: 64px;
+		--size: var(--avatar--size-md);
 	}
 
 	&.full {
-		--size: 184px;
+		--size: var(--avatar--size-xl);
 	}
 
 	img {
-		border-radius: calc(var(--avatar-border-radius) / 2);
+		border-radius: calc(var(--avatar--border-radius) / 2);
 		padding: 0;
 
 		width: var(--img-size);
@@ -50,7 +52,7 @@ a.persona,
 .friend_status_offline,
 .friend_status_offline div,
 .friend_status_offline a {
-	color: var(--fg-dim);
+	color: var(--avatar--color-offline);
 }
 
 .persona.online,
@@ -59,7 +61,7 @@ a.persona.online,
 .friend_status_online,
 .friend_status_online div,
 .friend_status_online a {
-	color: var(--color-primary);
+	color: var(--avatar--color-online);
 }
 
 .persona.in-game,
@@ -68,7 +70,7 @@ a.persona.in-game,
 .friend_status_in-game,
 .friend_status_in-game div,
 .friend_status_in-game a {
-	color: var(--accent-green);
+	color: var(--avatar--color-ingame);
 }
 
 .persona.golden,
@@ -77,21 +79,21 @@ a.persona.golden,
 .friend_status_golden,
 .friend_status_golden div,
 .friend_status_golden a {
-	color: var(--accent-yellow);
+	color: var(--avatar--color-away);
 }
 
 .border_color_offline {
-	border-color: var(--fg-dim);
+	border-color: var(--avatar--color-offline);
 }
 
 .border_color_online {
-	border-color: var(--color-primary);
+	border-color: var(--avatar--color-online);
 }
 
 .border_color_in-game {
-	border-color: var(--accent-green);
+	border-color: var(--avatar--color-ingame);
 }
 
 .border_color_golden {
-	border-color: var(--accent-yellow);
+	border-color: var(--avatar--color-away);
 }

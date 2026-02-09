@@ -2,7 +2,7 @@
 	gap: var(--spacing-sm);
 
 	#Avatar {
-		--steamavatar_size: 48px;
+		--steamavatar_size: var(--avatar--size-sm);
 
 		margin: 0;
 	}

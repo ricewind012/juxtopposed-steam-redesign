@@ -557,7 +557,7 @@ body.no_home_gutter.infinite_scrolling {
 		margin-block-start: auto;
 
 		position: relative;
-		height: 48px;
+		height: var(--avatar--size-sm);
 	}
 
 	.actions {
@@ -573,7 +573,7 @@ body.no_home_gutter.infinite_scrolling {
 		& > a {
 			margin-inline-end: var(--spacing-sm);
 
-			height: 48px;
+			height: var(--avatar--size-sm);
 		}
 
 		img {
@@ -689,7 +689,7 @@ body.no_home_gutter.infinite_scrolling {
 		width: unset;
 
 		.avatar > img {
-			--size: 48px;
+			--size: var(--avatar--size-sm);
 
 			border: none;
 			border-radius: var(--border-radius);

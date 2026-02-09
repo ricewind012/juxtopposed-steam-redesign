@@ -55,7 +55,7 @@
 }
 
 #Event {
-	--steamavatar_size: 40px;
+	--steamavatar_size: var(--avatar--size-sm);
 
 	#EventActorAvatar {
 		width: unset;

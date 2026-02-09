@@ -9,7 +9,7 @@
 
 .commentthread_area {
 	--avatar-gutter: 12px;
-	--avatar-size: 45px;
+	--avatar-size: var(--avatar--size-md);
 	--spacing: 8px;
 
 	.playerAvatar {

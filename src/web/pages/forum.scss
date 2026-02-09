@@ -358,7 +358,7 @@
 .forumtopic_comments {
 	&.commentthread_area {
 		--avatar-gutter: var(--spacing-sm);
-		--avatar-size: 40px;
+		--avatar-size: var(--avatar--size-sm);
 	}
 
 	.commentthread_comment {

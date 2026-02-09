@@ -44,6 +44,19 @@
 	--gpText-BodySmall: normal 400 12px/1.4 "Motiva Sans", Arial, Sans-serif;
 
 	// Controls
+	--avatar--border-radius: 4px;
+	--avatar--border-size: 2px;
+
+	--avatar--color-offline: var(--fg-dim);
+	--avatar--color-online: var(--color-primary);
+	--avatar--color-away: var(--accent-yellow);
+	--avatar--color-ingame: var(--accent-green);
+
+	--avatar--size-xs: 32px;
+	--avatar--size-sm: 40px;
+	--avatar--size-md: 48px;
+	--avatar--size-xl: 64px;
+
 	--button--border-size: 1px;
 	--button--spacing-block-sm: var(--spacing-xs);
 	--button--spacing-block-md: var(--spacing-sm);

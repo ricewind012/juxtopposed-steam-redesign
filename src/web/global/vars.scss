@@ -7,6 +7,7 @@
 		var(--fg-dim),
 		transparent
 	);
+	// TODO(vars): spacing
 	--storemenu_button-gap: 7px;
 
 	// Pages
@@ -17,6 +18,5 @@
 	--profile_sidebar-gutter: 30px;
 
 	// Other
-	--avatar-border-radius: 4px;
 	--top-content-margin: 69px;
 }

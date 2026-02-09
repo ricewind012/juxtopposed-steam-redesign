@@ -14,7 +14,7 @@
 }
 
 .apphub_Content {
-	--avatar-size: 32px;
+	--avatar-size: var(--avatar--size-xs);
 
 	padding: 0;
 

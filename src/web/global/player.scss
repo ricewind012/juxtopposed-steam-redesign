@@ -32,7 +32,7 @@
 	}
 
 	.playerAvatar {
-		--size: 46px;
+		--size: var(--avatar--size-md);
 		margin-right: 9px;
 	}
 }

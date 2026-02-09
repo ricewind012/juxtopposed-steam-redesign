@@ -61,12 +61,12 @@
 
 	.playerAvatar {
 		--size: var(--avatar-size);
-		--border-size: 4px;
+		--avatar--border-size: 4px;
 		margin-right: var(--avatar-gap);
 	}
 
 	.playerAvatarAutoSizeInner {
-		inset: var(--avatar-border-radius);
+		display: contents;
 	}
 }
 
@@ -130,6 +130,6 @@
 .profile_summary {
 	font: var(--gpText-BodyLarge);
 
-	/* 4 lines tall */
+	/* TODO(vars): 4 lines tall */
 	height: 96px;
 }
