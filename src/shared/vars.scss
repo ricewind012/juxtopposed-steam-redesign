@@ -125,6 +125,18 @@
 	--dialog--window-control-size: 25px;
 	--dialog--window-control-spacing: 18px;
 
+	--toggle--swatch-bg: var(--bg-hover);
+	--toggle--swatch-bg-checked: var(--color-primary);
+	--toggle--swatch-pos: calc(
+		100% - var(--toggle--swatch-size) - var(--spacing-md)
+	);
+	--toggle--swatch-size: 20px;
+
+	--toggle--switch-bg: var(--bg-hl);
+	--toggle--switch-bg-checked: var(--bg-tertiary);
+	--toggle--switch-size: 63px;
+	--toggle--switch-spacing: var(--spacing-xs);
+
 	@media (prefers-reduced-motion) {
 		--transition: none;
 	}

@@ -188,37 +188,25 @@
 }
 
 @mixin toggle($checked-selector, $disabled-selector) {
-	--bg: var(--bg-hl);
-	--spacing-md: var(--spacing-xs);
-	--swatch-bg: var(--bg-hover);
-	--swatch-size: 20px;
-	--swatch-pos: calc(100% - var(--swatch-size) - var(--spacing-md));
+	--swatch-bg: var(--toggle--swatch-bg);
+	--swatch-pos: var(--toggle--switch-spacing) var(--toggle--swatch-pos);
+	--switch-bg: var(--toggle--switch-bg);
 
 	appearance: none;
-	background-color: var(--bg);
-	border-radius: var(--swatch-size);
+	background-color: var(--switch-bg);
+	border-radius: var(--toggle--swatch-size);
 
 	position: relative;
-	// TODO(vars): toggle size
-	width: 63px;
-	height: calc(var(--swatch-size) + var(--spacing-md) * 2);
-
-	&:not(#{$checked-selector}) {
-		--swatch-pos-start: var(--spacing-md);
-		--swatch-pos-end: var(--swatch-pos);
-	}
+	width: var(--toggle--switch-size);
+	height: calc(var(--toggle--swatch-size) + var(--toggle--switch-spacing) * 2);
 
 	&#{$checked-selector} {
-		--bg: var(--bg-tertiary);
-		--swatch-bg: var(--color-primary);
-		--swatch-pos-start: var(--swatch-pos);
-		--swatch-pos-end: var(--spacing-md);
+		--swatch-bg: var(--toggle--swatch-bg-checked);
+		--swatch-pos: var(--toggle--swatch-pos) var(--toggle--switch-spacing);
+		--switch-bg: var(--toggle--switch-bg-checked);
 	}
 
 	&#{$disabled-selector} {
-		--swatch-pos-start: var(--spacing-md);
-		--swatch-pos-end: var(--swatch-pos);
-
 		opacity: 0.5;
 	}
 
@@ -226,15 +214,14 @@
 		content: "";
 
 		position: absolute;
-		inset-block: var(--spacing-md);
-		inset-inline: var(--swatch-pos-start) var(--swatch-pos-end);
-		width: var(--swatch-size);
-		height: var(--swatch-size);
-
-		background-color: var(--swatch-bg);
-		border-radius: var(--swatch-size);
+		inset-block: var(--toggle--switch-spacing);
+		inset-inline: var(--swatch-pos);
+		width: var(--toggle--swatch-size);
+		height: var(--toggle--swatch-size);
 
 		transition: var(--transition);
+		background-color: var(--swatch-bg);
+		border-radius: var(--toggle--swatch-size);
 	}
 }
 
