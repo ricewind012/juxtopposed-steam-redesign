@@ -3,8 +3,9 @@
 	padding: 0;
 
 	.DialogButton {
-		// TODO(vars): dialog
-		margin-block-start: calc(30px - var(--spacing-sm));
+		margin-block-start: calc(
+			var(--dialog--spacing-content) - var(--spacing-sm)
+		);
 	}
 }
 

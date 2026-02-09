@@ -3,7 +3,7 @@
 
 @mixin -button($icon) {
 	--icon-name: var(--icon-#{$icon});
-	--icon-size: var(--dialog_window-control-size);
+	--icon-size: var(--dialog--window-control-size);
 
 	@include titlebarcontrols.button;
 }

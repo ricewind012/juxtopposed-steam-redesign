@@ -20,7 +20,7 @@
 }
 
 #TitleBar {
-	gap: var(--dialog_window-control-spacing);
+	gap: var(--dialog--window-control-spacing);
 
 	align-items: center;
 	justify-content: end;
@@ -50,8 +50,8 @@
 
 #WindowControls {
 	flex-basis: calc(
-		var(--dialog_window-control-size) * 3 +
-			var(--dialog_window-control-spacing) * 2
+		var(--dialog--window-control-size) * 3 +
+			var(--dialog--window-control-spacing) * 2
 	);
 	height: 32px;
 

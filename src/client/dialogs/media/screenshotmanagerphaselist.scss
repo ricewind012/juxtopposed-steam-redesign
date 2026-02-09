@@ -79,8 +79,10 @@
 
 #PhaseList {
 	gap: var(--spacing-xs);
-	padding: var(--spacing-lg);
-	margin-block-start: calc(var(--stickyHeaderHeight) + var(--spacing-lg));
+	padding: var(--dialog--spacing-container);
+	margin-block-start: calc(
+		var(--stickyHeaderHeight) + var(--dialog--spacing-container)
+	);
 }
 
 #PhaseMediaList {

@@ -1,7 +1,7 @@
 @use "shared/utils";
 
 #RootMenuBar {
-	gap: var(--dialog_window-control-spacing);
+	gap: var(--dialog--window-control-spacing);
 	padding: 0;
 	margin: 0;
 }

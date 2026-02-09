@@ -73,7 +73,7 @@
 
 #ScreenshotForm {
 	gap: var(--spacing-sm);
-	padding: var(--spacing-lg);
+	padding: var(--dialog--spacing-container);
 
 	#Link {
 		@include style.link;
@@ -92,7 +92,7 @@
 }
 
 #ScreenshotList {
-	padding: var(--spacing-lg);
+	padding: var(--dialog--spacing-container);
 }
 
 #ScreenshotListInner {
@@ -112,7 +112,7 @@
 		border: none;
 		box-shadow: none;
 		gap: var(--spacing-sm);
-		padding: var(--spacing-lg);
+		padding: var(--dialog--spacing-container);
 
 		width: 100%;
 

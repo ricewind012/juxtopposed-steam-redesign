@@ -36,7 +36,7 @@
 
 #Footer {
 	gap: var(--spacing-sm);
-	padding-block-start: 30px;
+	padding-block-start: var(--dialog--spacing-content);
 }
 
 #GameList {

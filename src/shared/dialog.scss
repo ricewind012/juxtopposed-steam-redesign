@@ -52,7 +52,7 @@
 :where(.DialogContent) {
 	background: var(--bg-main);
 	font: var(--gpText-BodyMedium);
-	padding: var(--spacing-lg);
+	padding: var(--dialog--spacing-container);
 }
 
 :where(.DialogDropDown) {
@@ -69,7 +69,7 @@
 
 :where(.DialogFooter) {
 	gap: var(--spacing-sm);
-	padding-block-start: 30px;
+	padding-block-start: var(--dialog--spacing-content);
 }
 
 :where(.DialogHeader) {
@@ -177,7 +177,7 @@
 }
 
 .ModalPosition_Dismiss {
-	--icon-size: var(--dialog_window-control-size);
+	--icon-size: var(--dialog--window-control-size);
 
 	inset-block-start: var(--spacing-md);
 	inset-inline-end: var(--spacing-md);
@@ -213,8 +213,8 @@
 
 .title-area {
 	// TODO(vars): dialog
-	--height: calc(var(--dialog_window-control-size) + var(--spacing) * 2);
-	--icon-size: var(--dialog_window-control-size);
+	--height: calc(var(--dialog--window-control-size) + var(--spacing) * 2);
+	--icon-size: var(--dialog--window-control-size);
 	--spacing: var(--spacing-md);
 
 	height: var(--height);
@@ -251,7 +251,7 @@
 
 .title-bar-actions {
 	color: var(--fg-dim);
-	gap: var(--dialog_window-control-spacing);
+	gap: var(--dialog--window-control-spacing);
 	margin-inline-end: calc(var(--spacing) / 2);
 
 	max-height: var(--height);

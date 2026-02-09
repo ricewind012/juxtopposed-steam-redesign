@@ -56,5 +56,5 @@
 
 #ModalButtonRow {
 	gap: var(--spacing-sm);
-	margin-block-start: 30px;
+	margin-block-start: var(--dialog--spacing-content);
 }

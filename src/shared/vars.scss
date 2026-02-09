@@ -120,6 +120,11 @@
 	--carousel-section-spacing: 30px;
 	--carousel-thumb-height: 8px;
 
+	--dialog--spacing-container: var(--spacing-lg);
+	--dialog--spacing-content: 30px;
+	--dialog--window-control-size: 25px;
+	--dialog--window-control-spacing: 18px;
+
 	@media (prefers-reduced-motion) {
 		--transition: none;
 	}

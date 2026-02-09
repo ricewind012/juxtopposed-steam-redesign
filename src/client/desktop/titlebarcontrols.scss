@@ -43,7 +43,7 @@
 
 #NotificationButtonContainer {
 	--icon-name: icon("notifications");
-	--icon-size: var(--dialog_window-control-size);
+	--icon-size: var(--dialog--window-control-size);
 	margin-right: var(--spacing-sm);
 }
 

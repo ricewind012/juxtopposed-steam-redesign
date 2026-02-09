@@ -29,7 +29,7 @@
 // TODO(controls): unify dropdown here with buttons so I can do $size: 'lg' ?
 #FilterOptionsCtr {
 	gap: var(--spacing-lg);
-	padding-block-end: 30px;
+	padding-block-end: var(--dialog--spacing-content);
 
 	align-items: start;
 

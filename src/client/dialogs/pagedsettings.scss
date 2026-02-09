@@ -21,8 +21,7 @@
 		var(--bg-hover) 1.6%,
 		var(--bg-hl) 89.87%
 	);
-	padding: 0;
-	padding-inline: 18px;
+	padding: 0 var(--dialog--spacing-container);
 
 	:where(& .DialogBody) {
 		--fade-direction: left;
@@ -63,7 +62,7 @@
 		visibility: hidden;
 		margin: 0;
 
-		height: calc(var(--dialog_window-control-size) + var(--spacing-md) * 2);
+		height: calc(var(--dialog--window-control-size) + var(--spacing-md) * 2);
 	}
 }
 

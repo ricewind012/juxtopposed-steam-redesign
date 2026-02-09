@@ -25,7 +25,7 @@
 
 #ChangeItemHoverArea {
 	--top-offset: calc(
-		var(--dialog_window-control-size) + var(--spacing-sm) * 2 +
+		var(--dialog--window-control-size) + var(--spacing-sm) * 2 +
 			var(--button--spacing-block-sm) * 2
 	);
 
@@ -120,7 +120,7 @@
 }
 
 #OpenedItemHeaderControls {
-	--icon-size: var(--dialog_window-control-size);
+	--icon-size: var(--dialog--window-control-size);
 
 	padding: var(--spacing-sm);
 
