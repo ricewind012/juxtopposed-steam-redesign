@@ -212,6 +212,7 @@
 }
 
 .title-area {
+	// TODO(vars): dialog
 	--height: calc(var(--dialog_window-control-size) + var(--spacing) * 2);
 	--icon-size: var(--dialog_window-control-size);
 	--spacing: var(--spacing-md);

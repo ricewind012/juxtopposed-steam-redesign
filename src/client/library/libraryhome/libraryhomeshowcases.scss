@@ -174,9 +174,9 @@
 
 	#PageButtons {
 		margin: 0;
-		// --spacing-xs = header dropdown vertical spacing
 		margin-block-start: calc(
-			var(--pageablecontainer_header-offset) + var(--spacing-xs) * 2
+			var(--pageablecontainer_header-offset) + var(--button--spacing-block-sm) *
+				2
 		);
 
 		justify-content: space-between;

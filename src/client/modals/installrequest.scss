@@ -87,6 +87,7 @@
 		--icon-name: icon("star");
 		@extend %-folder-icon;
 
+		// TODO(vars): radio
 		inset-inline-end: calc(
 			var(--spacing-md) + var(--spacing-sm) + var(--icon-size)
 		);

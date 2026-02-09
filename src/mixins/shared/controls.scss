@@ -1,48 +1,15 @@
 @use "shared/utils";
 
 @mixin button-vars($variant: "secondary", $size: "md") {
-	@if $variant == "primary" {
-		--bg: var(--color-secondary);
-		--bg2: var(--color-primary);
-		--fg: var(--fg-main);
-		--fg2: var(--bg-main);
-		--border: transparent;
-		--border2: transparent;
-	}
+	background: var(--button--#{$variant}-bg);
+	color: var(--button--#{$variant}-fg);
+	border: var(--button--border-size) solid var(--button--#{$variant}-border);
+	padding-block: var(--button--spacing-block-#{$size});
 
-	@if $variant == "secondary" {
-		--bg: var(--bg-hl);
-		--bg2: var(--bg-hover);
-		--fg: var(--fg-main);
-		--fg2: var(--fg-main);
-		--border: transparent;
-		--border2: transparent;
-	}
-
-	@if $variant == "tertiary" {
-		--bg: transparent;
-		--bg2: transparent;
-		--fg: var(--fg-dim);
-		--fg2: var(--fg-main);
-		--border: color-mix(in srgb, currentColor 20%, transparent);
-		--border2: color-mix(in srgb, currentColor 40%, transparent);
-	}
-
-	@if $variant == "red" or $variant == "green" or $variant == "yellow" {
-		--bg: var(--accent-#{$variant});
-		--bg2: color-mix(in srgb, var(--accent-#{$variant}) 90%, white);
-		--fg: var(--bg-main);
-		--fg2: var(--bg-main);
-		--border: transparent;
-		--border2: transparent;
-	}
-
-	@if $size == "sm" {
-		--spacing-block: var(--spacing-xs);
-	}
-
-	@if $size == "md" {
-		--spacing-block: var(--spacing-sm);
+	&:hover {
+		background: var(--button--#{$variant}-bg-hover);
+		color: var(--button--#{$variant}-fg-hover);
+		border-color: var(--button--#{$variant}-border-hover);
 	}
 }
 
@@ -59,25 +26,16 @@
 	@include button-vars($variant, $size);
 
 	transition: var(--transition);
-	background: var(--bg);
-	color: var(--fg);
 	font: var(--gpText-BodyLarge);
-	border: 1px solid var(--border);
 	border-radius: var(--border-radius);
 	gap: var(--spacing-xs);
-	padding: var(--spacing-block) var(--spacing-lg);
+	padding-inline: var(--button--spacing-inline);
 
 	display: flex;
 	align-items: center;
 	justify-content: center;
 
 	cursor: pointer;
-
-	&:hover {
-		background: var(--bg2);
-		color: var(--fg2);
-		border-color: var(--border2);
-	}
 }
 
 @mixin checkbox($checked-selector, $disabled-selector) {
@@ -241,6 +199,7 @@
 	border-radius: var(--swatch-size);
 
 	position: relative;
+	// TODO(vars): toggle size
 	width: 63px;
 	height: calc(var(--swatch-size) + var(--spacing-md) * 2);
 

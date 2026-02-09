@@ -24,10 +24,14 @@
 }
 
 #ChangeItemHoverArea {
-	--top-offset: calc(var(--dialog_window-control-size) + var(--spacing-md) * 2);
+	--top-offset: calc(
+		var(--dialog_window-control-size) + var(--spacing-sm) * 2 +
+			var(--button--spacing-block-sm) * 2
+	);
 
 	top: var(--top-offset);
 	width: unset;
+	// TODO(vars):
 	height: calc(100% - var(--top-offset) - 103px);
 
 	svg {

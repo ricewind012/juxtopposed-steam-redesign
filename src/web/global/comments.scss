@@ -1,6 +1,8 @@
 @use "shared/controls";
 @use "web/paging";
 
+// TODO: unify with commentthread in client
+
 .commentthread_allcommentslink {
 	font: var(--gpText-BodyMedium);
 }

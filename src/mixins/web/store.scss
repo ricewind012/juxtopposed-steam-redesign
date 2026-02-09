@@ -83,7 +83,7 @@
 ) {
 	--discount-pct-padding-block: 8px;
 	--gpText-lh: 1.4;
-	// gpText lh - (gpText lh - normal lh) / text lines
+	// TODO(vars): gpText lh - (gpText lh - normal lh) / text lines
 	--right-side-line-height: calc(var(--gpText-lh) - (var(--gpText-lh) - 1) / 2);
 
 	font: var(--gpText-HeadingSmall);

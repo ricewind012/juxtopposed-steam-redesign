@@ -44,6 +44,61 @@
 	--gpText-BodySmall: normal 400 12px/1.4 "Motiva Sans", Arial, Sans-serif;
 
 	// Controls
+	--button--border-size: 1px;
+	--button--spacing-block-sm: var(--spacing-xs);
+	--button--spacing-block-md: var(--spacing-sm);
+	--button--spacing-inline: var(--spacing-lg);
+
+	--button--primary-bg: var(--color-secondary);
+	--button--primary-bg-hover: var(--color-primary);
+	--button--primary-fg: var(--fg-main);
+	--button--primary-fg-hover: var(--bg-main);
+	--button--primary-border: transparent;
+	--button--primary-border-hover: transparent;
+
+	--button--secondary-bg: var(--bg-hl);
+	--button--secondary-bg-hover: var(--bg-hover);
+	--button--secondary-fg: var(--fg-main);
+	--button--secondary-fg-hover: var(--fg-main);
+	--button--secondary-border: transparent;
+	--button--secondary-border-hover: transparent;
+
+	--button--tertiary-bg: transparent;
+	--button--tertiary-bg-hover: transparent;
+	--button--tertiary-fg: var(--fg-dim);
+	--button--tertiary-fg-hover: var(--fg-main);
+	--button--tertiary-border: color-mix(in srgb, var(--fg-dim) 20%, transparent);
+	--button--tertiary-border-hover: color-mix(
+		in srgb,
+		var(--fg-main) 40%,
+		transparent
+	);
+
+	--button--green-bg: var(--accent-green);
+	--button--green-bg-hover: color-mix(in srgb, var(--accent-green) 90%, white);
+	--button--green-fg: var(--bg-main);
+	--button--green-fg-hover: var(--bg-main);
+	--button--green-border: transparent;
+	--button--green-border-hover: transparent;
+
+	--button--red-bg: var(--accent-red);
+	--button--red-bg-hover: color-mix(in srgb, var(--accent-red) 90%, white);
+	--button--red-fg: var(--bg-main);
+	--button--red-fg-hover: var(--bg-main);
+	--button--red-border: transparent;
+	--button--red-border-hover: transparent;
+
+	--button--yellow-bg: var(--accent-yellow);
+	--button--yellow-bg-hover: color-mix(
+		in srgb,
+		var(--accent-yellow) 90%,
+		white
+	);
+	--button--yellow-fg: var(--bg-main);
+	--button--yellow-fg-hover: var(--bg-main);
+	--button--yellow-border: transparent;
+	--button--yellow-border-hover: transparent;
+
 	--carousel-arrow-container-height: calc(
 		100% - var(--carousel-section-spacing) - var(--carousel-thumb-height)
 	);

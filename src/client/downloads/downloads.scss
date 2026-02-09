@@ -10,6 +10,7 @@
 
 #DownloadsPage {
 	background: none;
+	// TODO(vars): what is this
 	margin-top: calc(44px + 25px);
 
 	.DialogButton {
@@ -43,6 +44,7 @@
 }
 
 #ItemLists {
+	// TODO(vars):
 	margin-left: 25px;
 	// 16px = scrollbar for now
 	margin-right: calc(25px - 16px);
@@ -182,8 +184,9 @@
 
 	.DialogButton {
 		--icon-name: icon("settings");
-		--bg: color-mix(in srgb, var(--fg-dim) 10%, transparent);
-		--fg: var(--fg-dim);
+
+		background: color-mix(in srgb, var(--fg-dim) 10%, transparent);
+		color: var(--fg-dim);
 	}
 }
 

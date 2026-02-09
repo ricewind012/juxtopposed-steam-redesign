@@ -20,6 +20,7 @@
 	box-shadow: none;
 	gap: var(--spacing-sm);
 	padding: 0;
+	// TODO(vars): toggle size
 	margin-inline-start: calc(63px + var(--spacing-sm));
 
 	flex-direction: column;

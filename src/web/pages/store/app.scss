@@ -110,6 +110,7 @@ body.game_bg {
 	@include style.alert;
 
 	font: inherit;
+	// TODO(vars): spacing
 	margin-block-start: calc(7px * 2);
 
 	.anticheat_name {
@@ -448,7 +449,11 @@ body.game_bg {
 	color: var(--fg-dim);
 	font: var(--gpText-BodyMedium);
 
-	min-height: calc(44px + var(--game-area-spacing) * 2);
+	// TODO(vars): typography
+	min-height: calc(
+		var(--button--spacing-block-md) * 2 + 16px * 1.4 +
+			var(--game-area-spacing) * 2
+	);
 
 	&.demo_above_purchase {
 		box-shadow: none;
@@ -869,6 +874,7 @@ body.game_bg {
 			margin-inline-start: calc(var(--icon-size) + var(--spacing-xs));
 
 			&:not(:last-of-type) {
+				// TODO(vars): spacing
 				margin-block-end: calc(7px * 2);
 			}
 		}
@@ -971,10 +977,9 @@ body.game_bg {
 	}
 
 	.game_page_autocollapse_readmore {
-		@include controls.button;
+		--button--secondary-bg: var(--bg-main);
 
-		--bg: var(--bg-main);
-		--bg2: var(--bg-hover);
+		@include controls.button;
 	}
 }
 
