@@ -50,6 +50,8 @@
 }
 
 #Icon {
+	color: var(--color-fg-dim);
+
 	display: flex;
 	width: var(--icon--size-lg);
 	height: var(--icon--size-lg);

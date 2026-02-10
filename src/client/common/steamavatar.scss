@@ -1,6 +1,6 @@
 #avatar {
 	border: var(--avatar--border-size) solid;
-	border-radius: var(--rounding-md);
+	border-radius: var(--avatar--border-radius);
 	box-shadow: none;
 
 	width: 100%;
@@ -9,13 +9,14 @@
 
 #avatarHolder {
 	transform: none;
-	border-radius: var(--rounding-md);
+	border-radius: var(--avatar--border-radius);
 
 	position: relative;
 	width: var(--steamavatar_size);
 	height: var(--steamavatar_size);
 
 	&:where(.X-Small) {
+		--avatar--border-radius: var(--rounding-sm);
 		--steamavatar_size: var(--avatar--size-xs);
 	}
 
@@ -28,6 +29,7 @@
 	}
 
 	&:where(.X-Large) {
+		--avatar--border-radius: var(--rounding-lg);
 		--steamavatar_size: var(--avatar--size-xl);
 	}
 }

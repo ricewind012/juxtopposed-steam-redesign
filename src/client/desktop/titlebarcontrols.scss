@@ -6,21 +6,15 @@
 
 	font: var(--text--body-medium);
 	gap: 8px;
-	padding: 2px;
+	padding: 4px;
 	margin: 0;
 
 	max-height: unset;
 
-	&.online {
-		color: var(--color-primary);
-	}
-
-	&.ingame {
-		color: var(--color-accent-green);
-	}
-
-	.avatar {
-		border: none;
+	.avatarHolder {
+		--avatar--border-size: 0px;
+		// pmo
+		--avatar--size-xs: 31px;
 	}
 
 	#Chevron {
@@ -39,6 +33,8 @@
 
 #Button {
 	@include titlebarcontrols.button;
+
+	color: inherit;
 }
 
 #NotificationButtonContainer {
