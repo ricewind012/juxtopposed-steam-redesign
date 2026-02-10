@@ -15,8 +15,7 @@
 }
 
 #Strip {
-	--arrow-size: calc(var(--icon-size) + var(--spacing-sm) * 2);
-	--icon-size: 24px;
+	--arrow-size: calc(var(--icon--size-lg) + var(--spacing-sm) * 2);
 
 	position: relative;
 }
@@ -37,7 +36,7 @@
 	height: unset;
 
 	svg {
-		@include utils.icon("arrow", "path");
+		@include utils.icon("arrow", "path", "lg");
 
 		transform: rotate(var(--deg));
 	}

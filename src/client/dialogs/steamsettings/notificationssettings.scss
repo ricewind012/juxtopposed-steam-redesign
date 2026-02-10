@@ -30,13 +30,12 @@
 }
 
 #PrefDetailsToggle {
-	--icon-size: 24px;
-
 	@include controls.icon-button(
 		$w: 47px,
 		$h: 44px,
 		$child: "svg",
-		$name: "arrow"
+		$name: "arrow",
+		$size: "lg"
 	);
 
 	&#Selected svg {

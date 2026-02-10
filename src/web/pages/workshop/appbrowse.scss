@@ -248,7 +248,7 @@ body.apphub_blue.v6 {
 	margin: 0;
 
 	.general_btn.subscribe {
-		--size: calc(var(--icon-size) + var(--spacing-lg));
+		--size: calc(var(--icon--size-md) + var(--spacing-lg));
 
 		background-color: var(--color-bg-main-50);
 

@@ -73,7 +73,7 @@
 		@include utils.icon("name", "line");
 
 		color: var(--color-fg-dim);
-		margin: calc((var(--size) - var(--icon-size)) / 2);
+		margin: calc((var(--size) - var(--icon--size-md)) / 2);
 	}
 }
 

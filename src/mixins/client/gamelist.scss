@@ -2,7 +2,7 @@
 
 @mixin icon-button($icon-name, $active-selector) {
 	--percentage: 5%;
-	--icon-size: 30px;
+	--icon--size-lg: 30px;
 
 	background-color: color-mix(
 		in srgb,
@@ -25,7 +25,7 @@
 	}
 
 	svg {
-		@include utils.icon($name: $icon-name, $remove: true);
+		@include utils.icon($name: $icon-name, $remove: true, $size: "lg");
 	}
 }
 

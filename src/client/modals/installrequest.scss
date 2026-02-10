@@ -7,8 +7,8 @@
 	margin: 0;
 
 	position: absolute;
-	width: var(--icon-size);
-	height: var(--icon-size);
+	width: var(--icon--size-md);
+	height: var(--icon--size-md);
 
 	svg {
 		width: inherit;
@@ -89,7 +89,7 @@
 
 		// TODO(vars): radio
 		inset-inline-end: calc(
-			var(--spacing-md) + var(--spacing-sm) + var(--icon-size)
+			var(--spacing-md) + var(--spacing-sm) + var(--icon--size-md)
 		);
 	}
 

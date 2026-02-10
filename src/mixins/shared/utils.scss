@@ -1,11 +1,11 @@
-@mixin icon($name: "name", $remove: false) {
+@mixin icon($name: "name", $remove: false, $size: "md") {
 	background-color: currentColor;
 	mask: var(--icon-#{$name});
 	mask-position: center;
-	mask-size: var(--icon-size);
+	mask-size: var(--icon--size-#{$size});
 
-	width: var(--icon-size);
-	height: var(--icon-size);
+	width: var(--icon--size-#{$size});
+	height: var(--icon--size-#{$size});
 
 	@if $remove {
 		* {

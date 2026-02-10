@@ -62,8 +62,6 @@
 }
 
 #SortCaret {
-	--icon-size: 1em;
-
 	@include utils.icon("arrow", true);
 
 	vertical-align: text-bottom;

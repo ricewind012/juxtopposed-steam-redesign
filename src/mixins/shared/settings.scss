@@ -1,8 +1,7 @@
 @use "shared/utils";
 
 @mixin info {
-	--icon-size: 1lh;
-	--offset: calc(var(--icon-size) + var(--spacing-md));
+	--offset: calc(var(--icon--size-lg) + var(--spacing-md));
 
 	color: var(--color-fg-main);
 	font: var(--text--body-medium);
@@ -14,7 +13,7 @@
 	&::before {
 		content: "";
 
-		@include utils.icon("info");
+		@include utils.icon($name: "info", $size: "lg");
 
 		position: absolute;
 

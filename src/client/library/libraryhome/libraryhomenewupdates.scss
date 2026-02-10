@@ -23,13 +23,11 @@
 	align-items: center;
 
 	#GameIcon {
-		--icon-size: 24px;
-
 		border-radius: var(--rounding-md);
 		margin-inline-end: var(--spacing-xs);
 
-		width: var(--icon-size);
-		height: var(--icon-size);
+		width: var(--icon--size-lg);
+		height: var(--icon--size-lg);
 	}
 
 	#GameName {

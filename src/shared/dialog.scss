@@ -175,7 +175,7 @@
 }
 
 .ModalPosition_Dismiss {
-	--icon-size: var(--dialog--window-control-size);
+	--icon--size-lg: var(--dialog--window-control-size);
 
 	inset-block-start: var(--spacing-md);
 	inset-inline-end: var(--spacing-md);
@@ -184,7 +184,7 @@
 		all: unset;
 
 		svg {
-			@include utils.icon("name");
+			@include utils.icon($name: "name", $size: "lg");
 		}
 	}
 }
@@ -210,9 +210,8 @@
 }
 
 .title-area {
-	// TODO(vars): dialog
 	--height: calc(var(--dialog--window-control-size) + var(--spacing) * 2);
-	--icon-size: var(--dialog--window-control-size);
+	--icon--size-md: var(--dialog--window-control-size);
 	--spacing: var(--spacing-md);
 
 	height: var(--height);

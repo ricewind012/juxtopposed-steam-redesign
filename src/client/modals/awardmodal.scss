@@ -50,7 +50,7 @@
 	}
 
 	#PointsAmountIcon {
-		--icon-size: 1lh;
+		--icon-size: var(--icon--size-sm);
 		@extend %-points-icon;
 	}
 }

@@ -11,7 +11,7 @@
 	border-radius: var(--rounding-md);
 	gap: var(--spacing-lg);
 	padding: var(--spacing-md);
-	padding-left: calc(var(--spacing-md) + var(--icon-size) + 16px);
+	padding-left: calc(var(--spacing-md) + var(--icon--size-lg) + 16px);
 
 	position: relative;
 
@@ -23,7 +23,7 @@
 		top: calc(var(--spacing-md) + 8px - 0.25em);
 		left: var(--spacing-md);
 
-		@include utils.icon("achievements");
+		@include utils.icon($name: "achievements", $size: "lg");
 	}
 }
 
@@ -69,8 +69,8 @@
 #GameLinksButton {
 	padding: 2px;
 
-	width: var(--icon-size);
-	height: var(--icon-size);
+	width: var(--icon--size-md);
+	height: var(--icon--size-md);
 }
 
 #GameName {

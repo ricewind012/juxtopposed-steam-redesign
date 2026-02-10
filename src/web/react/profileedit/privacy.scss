@@ -34,9 +34,7 @@
 }
 
 .ProfilePrivacyDropDown_Arrow {
-	--icon-size: 24px;
-
-	@include utils.icon("arrow");
+	@include utils.icon($name: "arrow", $size: "lg");
 
 	vertical-align: sub;
 }

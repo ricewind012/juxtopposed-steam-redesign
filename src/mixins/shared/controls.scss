@@ -40,9 +40,8 @@
 
 @mixin checkbox($checked-selector, $disabled-selector) {
 	--icon-name: icon("checkbox");
-	--icon-size: 24px;
 
-	@include utils.icon("name");
+	@include utils.icon($name: "name", $size: "lg");
 
 	appearance: none;
 	color: var(--color-fg-dim);
@@ -79,7 +78,15 @@
 /// @param {String} $child - Child element for the icon.
 /// @param {String} $name [name] - Icon name found in `assets/icons`.
 /// @param {Boolean} $remove [true] - Remove every child from `$child`?
-@mixin icon-button($w, $h: $w, $child, $name: "name", $remove: true) {
+/// @param {"sm" | "md" | "lg"} $size ["md"] - Icon size.
+@mixin icon-button(
+	$w,
+	$h: $w,
+	$child,
+	$name: "name",
+	$remove: true,
+	$size: "md"
+) {
 	background-color: var(--color-bg-hl);
 	border-radius: var(--rounding-md);
 	padding: 0;
@@ -191,7 +198,9 @@
 @mixin text-field($variant: "normal") {
 	--placeholder-color: var(--text-field--#{$variant}-fg-placeholder);
 	@if $variant == "search" {
-		--icon-spacing: calc(var(--text-field--spacing-inline) + var(--icon-size));
+		--icon-spacing: calc(
+			var(--text-field--spacing-inline) + var(--icon--size-md)
+		);
 	}
 
 	background-color: var(--text-field--#{$variant}-bg);

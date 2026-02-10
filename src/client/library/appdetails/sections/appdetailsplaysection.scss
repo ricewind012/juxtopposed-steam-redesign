@@ -36,7 +36,7 @@
 }
 
 #GameStat {
-	--icon-size: 30px;
+	--icon--size-lg: 30px;
 
 	padding: 0;
 	margin: 0;
@@ -58,7 +58,7 @@
 	&::before {
 		content: "";
 
-		@include utils.icon("name");
+		@include utils.icon($size: "lg");
 
 		color: color-mix(in srgb, var(--color-fg-dim) 20%, transparent);
 	}
@@ -89,7 +89,7 @@
 
 #MenuButton {
 	--percentage: 10%;
-	--icon-size: 26px;
+	--icon--size-md: 26px;
 	--size: 40px;
 
 	background-color: color-mix(

@@ -11,6 +11,6 @@
 	}
 
 	svg {
-		@include utils.icon($remove: true);
+		@include utils.icon($remove: true, $size: "lg");
 	}
 }

@@ -3,7 +3,6 @@
 
 #ButtonChild {
 	--icon-name: icon("download");
-	--icon-size: 24px;
 
 	@include controls.button("primary");
 
@@ -29,7 +28,7 @@
 	}
 
 	svg {
-		@include utils.icon("name", true);
+		@include utils.icon("name", true, "lg");
 
 		color: inherit;
 	}

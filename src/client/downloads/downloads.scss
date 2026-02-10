@@ -62,11 +62,9 @@
 }
 
 #SectionItem {
-	--icon-size: 24px;
-
 	background-color: var(--color-bg-main);
 	padding: var(--spacing-sm);
-	padding-left: calc(var(--icon-size) + var(--spacing-sm) * 2);
+	padding-left: calc(var(--icon--size-lg) + var(--spacing-sm) * 2);
 	margin-bottom: var(--spacing-md);
 	border-radius: var(--radius-lg);
 

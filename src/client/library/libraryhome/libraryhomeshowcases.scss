@@ -8,7 +8,7 @@
 	}
 
 	50% {
-		--libraryhomeshowcases_drag-handle-pos-y: calc(var(--icon-size) / -2);
+		--libraryhomeshowcases_drag-handle-pos-y: calc(var(--icon--size-md) / -2);
 	}
 
 	100% {
@@ -86,7 +86,7 @@
 }
 
 #ShowcaseHeader {
-	--drag-handle-offset: calc(var(--icon-size) + var(--spacing-sm));
+	--drag-handle-offset: calc(var(--icon--size-md) + var(--spacing-sm));
 
 	font: var(--text--heading-small);
 	border: none;

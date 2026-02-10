@@ -14,8 +14,7 @@
 }
 
 #AddNonSteamGameDialog {
-	--icon-column-size: calc(var(--icon-size) + var(--spacing-sm) * 2);
-	--icon-size: 24px;
+	--icon-column-size: calc(var(--icon--size-lg) + var(--spacing-sm) * 2);
 	--table-border-color: color-mix(in srgb, currentColor 20%, transparent);
 
 	#AppName {
@@ -53,9 +52,10 @@
 
 	#IconContainer {
 		margin: 0;
+
 		img {
-			width: var(--icon-size);
-			height: var(--icon-size);
+			width: var(--icon--size-lg);
+			height: var(--icon--size-lg);
 		}
 	}
 }
@@ -85,8 +85,6 @@
 }
 
 #SortArrowContainer {
-	--icon-size: 1em;
-
 	padding-inline-start: var(--spacing-xs);
 
 	#Arrow {

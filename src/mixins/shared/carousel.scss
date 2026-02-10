@@ -2,8 +2,6 @@
 
 /// All args are selectors.
 @mixin arrow($left, $right, $child) {
-	--icon-size: 24px;
-
 	border-radius: var(--rounding-md);
 	padding: 0 var(--spacing-sm);
 
@@ -29,7 +27,7 @@
 	}
 
 	#{$child} {
-		@include utils.icon("arrow");
+		@include utils.icon($name: "arrow", $size: "lg");
 
 		transform: rotate(var(--deg));
 	}
@@ -54,7 +52,7 @@
 		@include utils.icon(#{$icon});
 
 		color: var(--color-fg-dim);
-		margin: calc((var(--size) - var(--icon-size)) / 2);
+		margin: calc((var(--size) - var(--icon--size-lg)) / 2);
 	}
 }
 

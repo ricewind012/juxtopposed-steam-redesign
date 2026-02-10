@@ -100,11 +100,7 @@
 	}
 
 	svg {
-		// Not half of that, since that makes it even smaller than that for
-		// whatever reason
-		--icon-size: 15px;
-
-		@include utils.icon($name: "close", $remove: true);
+		@include utils.icon($name: "close", $remove: true, $size: "sm");
 
 		opacity: 1;
 		margin-left: 6px;
@@ -139,7 +135,7 @@
 
 	color: var(--color-secondary);
 
-	top: calc(50% - var(--icon-size) / 2);
+	top: calc(50% - var(--icon--size-md) / 2);
 	right: var(--spacing-md);
 
 	&:hover {

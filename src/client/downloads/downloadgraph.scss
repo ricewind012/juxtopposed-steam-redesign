@@ -3,8 +3,6 @@
 }
 
 #DownloadGraphStatsWrapper {
-	--icon-size: 16px;
-
 	position: fixed;
 	top: var(--downloads_top-bar-height);
 	height: 44px;
@@ -20,8 +18,8 @@
 	#LegendBox {
 		margin-right: var(--spacing-xs);
 
-		width: var(--icon-size);
-		height: var(--icon-size);
+		width: var(--icon--size-sm);
+		height: var(--icon--size-sm);
 
 		&#Disk {
 			background-color: var(--color-accent-green);
@@ -33,8 +31,8 @@
 			svg {
 				color: var(--color-primary);
 
-				width: var(--icon-size);
-				height: var(--icon-size);
+				width: var(--icon--size-sm);
+				height: var(--icon--size-sm);
 			}
 		}
 	}
@@ -50,7 +48,7 @@
 	}
 
 	#Stat {
-		padding-left: calc(var(--icon-size) + var(--spacing-xs));
+		padding-left: calc(var(--icon--size-sm) + var(--spacing-xs));
 	}
 }
 

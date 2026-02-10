@@ -7,8 +7,6 @@
 	margin-block-start: var(--spacing-sm);
 
 	#EmoticonButton {
-		--icon-size: 1lh;
-
 		@include controls.button;
 
 		& > div {

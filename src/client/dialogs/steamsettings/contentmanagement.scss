@@ -72,10 +72,8 @@ $-bar-colors: (
 	}
 
 	#NoCheckboxSpacer {
-		--icon-size: 24px;
-
-		width: var(--icon-size);
-		height: var(--icon-size);
+		width: var(--icon--size-lg);
+		height: var(--icon--size-lg);
 	}
 }
 

@@ -1,7 +1,7 @@
 @use "shared/utils";
 
 %-icon-button {
-	@include utils.icon("name");
+	@include utils.icon($size: "lg");
 
 	background-image: none;
 
@@ -34,8 +34,6 @@
 }
 
 #bordered_title {
-	--icon-size: 1lh;
-
 	color: var(--color-fg-main);
 	font: var(--text--heading-small);
 	letter-spacing: 0;

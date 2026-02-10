@@ -2,13 +2,12 @@
 @use "web/store";
 
 #AddToWishlistButton {
-	--icon-size: 24px;
-
 	@include controls.icon-button(
 		$w: 47px,
 		$h: 44px,
 		$child: "svg",
-		$name: "favorite"
+		$name: "favorite",
+		$size: "lg"
 	);
 
 	box-shadow: none;

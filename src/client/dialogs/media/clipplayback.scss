@@ -1,22 +1,22 @@
 #AddMarkerIcon {
 	color: var(--color-fg-main);
 
-	width: var(--icon-size);
-	height: var(--icon-size);
+	width: var(--icon--size-md);
+	height: var(--icon--size-md);
 }
 
 #PlaybackButton {
 	color: var(--color-fg-dim);
 
-	width: var(--icon-size);
-	height: var(--icon-size);
+	width: var(--icon--size-md);
+	height: var(--icon--size-md);
 
 	&#Enabled {
 		color: var(--color-fg-main);
 	}
 
 	&#PlayButton {
-		--icon-size: 32px;
+		--icon--size-md: 32px;
 	}
 }
 

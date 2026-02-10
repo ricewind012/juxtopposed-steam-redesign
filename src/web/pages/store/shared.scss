@@ -193,9 +193,7 @@
 }
 
 .platform_img {
-	--icon-size: 25px;
-
-	@include utils.icon("name");
+	@include utils.icon($name: "name", $size: "lg");
 
 	// There are actually other icons, these are just the most common ones
 	&:where(.linux, .mac, .win) {

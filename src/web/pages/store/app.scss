@@ -375,7 +375,7 @@ body.game_bg {
 }
 
 .game_area_features_list_ctn {
-	--icon-size: 1lh;
+	--icon--size-md: 1lh;
 }
 
 #game_area_legal {
@@ -716,8 +716,6 @@ body.game_bg {
 }
 
 .game_language_options {
-	--icon-size: var(--game-area-spacing);
-
 	border: none;
 
 	td {
@@ -754,7 +752,7 @@ body.game_bg {
 		width: unset;
 
 		span {
-			@include utils.icon("check");
+			@include utils.icon($name: "check", $size: "lg");
 
 			color: var(--color-primary);
 			margin: auto;
@@ -871,7 +869,7 @@ body.game_bg {
 		}
 
 		> :not(.reason) {
-			margin-inline-start: calc(var(--icon-size) + var(--spacing-xs));
+			margin-inline-start: calc(var(--icon--size-md) + var(--spacing-xs));
 
 			&:not(:last-of-type) {
 				// TODO(vars): spacing
@@ -1146,7 +1144,7 @@ body.game_bg {
 .queue_btn_menu > .queue_menu_arrow.queue_menu_arrow {
 	color: var(--fg);
 
-	min-width: calc(var(--spacing-sm) * 2 + var(--icon-size));
+	min-width: calc(var(--spacing-sm) * 2 + var(--icon--size-md));
 
 	& > span {
 		@include utils.icon("arrow");

@@ -42,9 +42,7 @@
 	}
 
 	.namehistory_link {
-		--icon-size: 24px;
-
-		@include utils.icon("arrow");
+		@include utils.icon($name: "arrow", $size: "lg");
 
 		display: inline-block;
 		vertical-align: middle;

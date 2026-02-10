@@ -17,8 +17,7 @@
 	}
 
 	.appHubShortcut_Icon {
-		--icon-size: 16px;
-		--size: calc(var(--icon-size) * 2);
+		--size: calc(var(--icon--size-sm) * 2);
 
 		width: var(--size);
 		height: var(--size);

@@ -441,7 +441,7 @@ body.no_home_gutter.infinite_scrolling {
 				content: "";
 
 				position: absolute;
-				inset-block-start: calc(50% - var(--icon-size) / 2);
+				inset-block-start: calc(50% - var(--icon--size-md) / 2);
 
 				@include utils.icon("arrow");
 			}
@@ -845,8 +845,6 @@ body.no_home_gutter.infinite_scrolling {
 		}
 
 		.platform_img {
-			--icon-size: inherit;
-
 			opacity: 1;
 			margin-block-start: var(--spacing-xs);
 		}
