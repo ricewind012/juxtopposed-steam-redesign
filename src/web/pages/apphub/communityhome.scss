@@ -52,7 +52,7 @@
 
 .community_home_search_apps,
 .community_home_search_players {
-	@include controls.text-input;
+	@include controls.text-field;
 
 	box-shadow: none;
 	margin: 0;

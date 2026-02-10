@@ -187,6 +187,25 @@
 	}
 }
 
+/// @param {"normal" | "search" | "transparent"} $variant
+@mixin text-field($variant: "normal") {
+	--placeholder-color: var(--text-field--#{$variant}-fg-placeholder);
+	@if $variant == "search" {
+		--icon-spacing: calc(var(--text-field--spacing-inline) + var(--icon-size));
+	}
+
+	background-color: var(--text-field--#{$variant}-bg);
+	color: var(--fg-main);
+	font: var(--gpText-BodyLarge);
+	border: 1px solid var(--text-field--#{$variant}-border);
+	border-radius: var(--border-radius);
+	padding-block: var(--spacing-sm);
+	padding-inline-start: var(--text-field--spacing-inline);
+	padding-inline-end: calc(
+		var(--text-field--spacing-inline) + var(--icon-spacing, 0px)
+	);
+}
+
 @mixin toggle($checked-selector, $disabled-selector) {
 	--swatch-bg: var(--toggle--swatch-bg);
 	--swatch-pos: var(--toggle--switch-spacing) var(--toggle--swatch-pos);
@@ -223,21 +242,4 @@
 		background-color: var(--swatch-bg);
 		border-radius: var(--toggle--swatch-size);
 	}
-}
-
-@mixin search-input {
-	background-color: color-mix(in srgb, var(--bg-tertiary) 20%, transparent);
-	color: var(--fg-main);
-	font: var(--gpText-BodyMedium);
-	border: none;
-	border-radius: var(--border-radius);
-	padding: var(--spacing-sm) var(--spacing-md);
-	padding-right: calc(var(--spacing-md) * 2 + var(--icon-size));
-}
-
-@mixin text-input {
-	background-color: transparent;
-	border: 1px solid var(--bg-hover);
-	border-radius: var(--border-radius);
-	padding: 12px 15px;
 }

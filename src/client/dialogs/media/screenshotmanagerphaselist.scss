@@ -50,14 +50,12 @@
 	position: relative;
 
 	input {
-		@include controls.search-input;
+		@include controls.text-field($variant: "search");
 
 		transition: var(--transition);
-		font: var(--gpText-BodyLarge);
-		border: 1px solid transparent;
 
 		&:focus {
-			background-color: var(--bg-main-50);
+			background-color: color-mix(in srgb, var(--bg-tertiary) 50%, transparent);
 		}
 	}
 

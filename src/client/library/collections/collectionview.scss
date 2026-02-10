@@ -105,7 +105,7 @@
 
 	// lmao but at least it will be visible (I hope)
 	.DialogInput {
-		@include controls.search-input;
+		@include controls.text-field($variant: "search");
 	}
 }
 

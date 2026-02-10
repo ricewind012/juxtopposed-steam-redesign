@@ -61,9 +61,7 @@
 }
 
 #ReviewTextArea {
-	@include controls.text-input;
-
-	color: var(--fg-main);
+	@include controls.text-field;
 
 	width: 100%;
 }

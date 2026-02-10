@@ -24,10 +24,8 @@
 }
 
 #PostTextEntryArea {
-	@include controls.text-input;
+	@include controls.text-field;
 
-	color: var(--fg-main);
-	font: var(--gpText-BodyLarge);
 	box-shadow: none;
 
 	width: 100%;

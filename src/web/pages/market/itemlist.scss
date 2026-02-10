@@ -160,7 +160,7 @@
 }
 
 #findItemsSearchBox {
-	@include controls.search-input;
+	@include controls.text-field($variant: "search");
 }
 
 #findItemsSearchSubmit {

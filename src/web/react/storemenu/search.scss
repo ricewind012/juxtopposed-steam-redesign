@@ -56,16 +56,10 @@
 }
 
 #SearchInput {
-	@include controls.search-input;
-
-	color: var(--color-secondary);
+	@include controls.text-field($variant: "search");
 
 	&:focus-visible {
 		box-shadow: none;
-	}
-
-	&::placeholder {
-		color: inherit;
 	}
 }
 

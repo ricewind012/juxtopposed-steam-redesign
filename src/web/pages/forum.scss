@@ -136,14 +136,7 @@
 .discussionSearchText {
 	all: unset;
 
-	// TODO(controls): umm make it better? why did i have to do all of this
-	@include controls.search-input;
-
-	color: inherit;
-
-	&::placeholder {
-		color: inherit;
-	}
+	@include controls.text-field($variant: "search");
 }
 
 .discussionSearchTextContainer {

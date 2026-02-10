@@ -8,9 +8,8 @@
 }
 
 #InputBox {
-	@include controls.text-input;
+	@include controls.text-field;
 
-	color: var(--fg-main);
 	margin: 0;
 
 	width: 100%;

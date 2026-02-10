@@ -3,7 +3,7 @@
 // "Share on Steam" modal
 
 #CaptionField {
-	@include controls.text-input;
+	@include controls.text-field;
 }
 
 #CloudStorageImpact {

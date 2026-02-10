@@ -79,10 +79,8 @@
 }
 
 .DialogInput {
-	@include controls.text-input;
+	@include controls.text-field;
 
-	color: var(--fg-main);
-	font: inherit;
 	box-shadow: none;
 }
 

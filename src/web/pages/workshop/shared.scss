@@ -35,9 +35,8 @@
 }
 
 .workshop_browse_search {
-	@include controls.search-input;
+	@include controls.text-field($variant: "search");
 
-	color: var(--color-secondary);
 	margin-left: auto;
 
 	position: relative;

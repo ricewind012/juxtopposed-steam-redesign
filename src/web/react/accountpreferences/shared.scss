@@ -153,17 +153,7 @@ body:is(.account, .account_preferences) {
 
 	input[type="text"],
 	textarea {
-		background: transparent;
-		border: 1px solid var(--bg-hover);
-		border-radius: var(--border-radius);
-		padding: var(--spacing-sm) var(--spacing-md);
-
-		font: inherit;
-
-		&::placeholder {
-			color: var(--bg-hover);
-			font: var(--gpText-BodyMedium);
-		}
+		@include controls.text-field($variant: "transparent");
 	}
 
 	input[type="text"] {

@@ -3,12 +3,6 @@
 @use "shared/utils";
 @use "web/store";
 
-@mixin -search-input {
-	@include controls.search-input;
-
-	background: var(--bg-main-20);
-}
-
 #AdvancedSearchButton {
 	@include gamelist.icon-button("filter", "#ContainerHide");
 
@@ -46,6 +40,8 @@
 }
 
 #Container {
+	--text-field--search-bg: var(--bg-main-20);
+
 	@include gamelist.part-container;
 
 	border-radius: 0;
@@ -60,7 +56,7 @@
 	left: anchor(right);
 
 	.DialogInput {
-		@include -search-input;
+		@include controls.text-field($variant: "search");
 	}
 
 	// TODO(shared/dialog): Is this seen elsewhere ?
@@ -131,7 +127,7 @@
 	}
 
 	&:not(:empty) {
-		@include -search-input;
+		@include controls.text-field($variant: "search");
 
 		gap: 3px;
 		--spacing-sm: var(--spacing-xs);

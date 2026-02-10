@@ -81,15 +81,9 @@
 }
 
 .commentthread_entry_quotebox {
-	background-color: var(--bg-main);
-	border: none;
-	border-radius: var(--border-radius);
-	box-shadow: none;
-	padding: 12px 18px;
+	@include controls.text-field;
 
-	&:hover {
-		background-color: var(--bg-hover);
-	}
+	box-shadow: none;
 }
 
 .commentthread_footer {

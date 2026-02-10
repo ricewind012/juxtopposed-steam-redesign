@@ -125,6 +125,24 @@
 	--dialog--window-control-size: 25px;
 	--dialog--window-control-spacing: 18px;
 
+	--text-field--spacing-inline: 18px;
+
+	--text-field--normal-bg: var(--bg-main);
+	--text-field--normal-fg-placeholder: var(--fg-dim);
+	--text-field--normal-border: transparent;
+
+	--text-field--search-bg: color-mix(
+		in srgb,
+		var(--bg-tertiary) 20%,
+		transparent
+	);
+	--text-field--search-fg-placeholder: var(--color-secondary);
+	--text-field--search-border: transparent;
+
+	--text-field--transparent-bg: transparent;
+	--text-field--transparent-fg-placeholder: var(--bg-hover);
+	--text-field--transparent-border: var(--bg-hover);
+
 	--toggle--swatch-bg: var(--bg-hover);
 	--toggle--swatch-bg-checked: var(--color-primary);
 	--toggle--swatch-pos: calc(

@@ -8,7 +8,7 @@
 	height: unset;
 
 	input {
-		@include controls.search-input;
+		@include controls.text-field($variant: "search");
 	}
 }
 
