@@ -1,6 +1,6 @@
 #avatar {
 	border: var(--avatar--border-size) solid;
-	border-radius: var(--border-radius);
+	border-radius: var(--rounding-md);
 	box-shadow: none;
 
 	width: 100%;
@@ -9,7 +9,7 @@
 
 #avatarHolder {
 	transform: none;
-	border-radius: var(--border-radius);
+	border-radius: var(--rounding-md);
 
 	position: relative;
 	width: var(--steamavatar_size);

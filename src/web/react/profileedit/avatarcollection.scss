@@ -9,8 +9,8 @@
 }
 
 #AvatarCollectionName {
-	color: var(--fg-dim);
-	font: var(--gpText-HeadingMedium);
+	color: var(--color-fg-dim);
+	font: var(--text--heading-medium);
 }
 
 #CollectionGroup {
@@ -29,8 +29,8 @@
 
 	&:not(#Primary) {
 		#Title {
-			color: var(--fg-main);
-			font: var(--gpText-HeadingSmall);
+			color: var(--color-fg-main);
+			font: var(--text--heading-small);
 			margin-bottom: 0;
 		}
 	}

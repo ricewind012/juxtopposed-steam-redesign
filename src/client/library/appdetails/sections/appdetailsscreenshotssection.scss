@@ -1,7 +1,7 @@
 #InstructionText,
 #NoneTaken {
-	color: var(--fg-dim);
-	font: var(--gpText-BodyLarge);
+	color: var(--color-fg-dim);
+	font: var(--text--body-large);
 	margin-block-end: 7px;
 }
 
@@ -13,6 +13,6 @@
 	background-color: transparent;
 
 	img {
-		border-radius: var(--border-radius);
+		border-radius: var(--rounding-md);
 	}
 }

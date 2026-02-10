@@ -2,11 +2,11 @@
 @use "shared/controls";
 
 #Header {
-	margin-block-end: var(--carousel-section-spacing);
+	margin-block-end: var(--carousel--section-spacing);
 
 	#Title {
-		color: var(--fg-main);
-		font: var(--gpText-HeadingSmall);
+		color: var(--color-fg-main);
+		font: var(--text--heading-small);
 		letter-spacing: 0;
 		text-transform: none;
 	}

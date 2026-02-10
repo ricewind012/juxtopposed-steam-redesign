@@ -3,13 +3,13 @@
 @use "shared/utils";
 
 #BackgroundRecordingListScaler {
-	background-color: var(--bg-hl);
+	background-color: var(--color-bg-hl);
 
 	#BackgroundRecordingLabel {
-		background-color: var(--bg-main);
-		color: var(--fg-main);
-		font: var(--gpText-BodyMedium);
-		border-radius: 0 0 var(--border-radius) var(--border-radius);
+		background-color: var(--color-bg-main);
+		color: var(--color-fg-main);
+		font: var(--text--body-medium);
+		border-radius: 0 0 var(--rounding-md) var(--rounding-md);
 	}
 }
 
@@ -52,8 +52,8 @@
 #CheckboxContainer {
 	--icon-size: 25px;
 
-	background-color: var(--fg-main);
-	color: var(--bg-main);
+	background-color: var(--color-fg-main);
+	color: var(--color-bg-main);
 	border-radius: 0;
 
 	inset-inline-start: 0;
@@ -78,7 +78,7 @@
 	box-sizing: content-box;
 
 	&#Selected {
-		border-color: var(--fg-main);
+		border-color: var(--color-fg-main);
 	}
 
 	#CornerContent {
@@ -89,13 +89,13 @@
 	#DurationText {
 		color: var(--color-primary);
 		// TODO(vars): monospace typography
-		font: var(--gpText-BodySmall);
+		font: var(--text--body-small);
 		font-family: "Roboto-Mono", "Motiva Sans", sans-serif;
 		font-weight: bold;
 		gap: var(--spacing-xs);
 
 		&#DurationTextClip {
-			color: var(--accent-yellow);
+			color: var(--color-accent-yellow);
 		}
 	}
 }
@@ -108,8 +108,8 @@
 	inset: 0;
 
 	#AppName {
-		color: var(--fg-main);
-		font: var(--gpText-HeadingSmall);
+		color: var(--color-fg-main);
+		font: var(--text--heading-small);
 	}
 
 	#AppNameHeader {

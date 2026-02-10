@@ -16,12 +16,12 @@
 	}
 
 	&:hover {
-		background-color: var(--fg-main);
+		background-color: var(--color-fg-main);
 	}
 }
 
 #SuperNavMenu {
-	font: var(--gpText-HeadingSmall);
+	font: var(--text--heading-small);
 	padding: 0;
 	margin-right: 66px;
 
@@ -32,7 +32,7 @@
 		&::before {
 			content: "Profile";
 
-			font: var(--gpText-HeadingSmall);
+			font: var(--text--heading-small);
 		}
 	}
 

@@ -13,12 +13,12 @@
 }
 
 #EntryLabel {
-	font: var(--gpText-HeadingSmall);
+	font: var(--text--heading-small);
 }
 
 #EntryValue {
-	color: var(--fg-dim);
-	font: var(--gpText-BodySmall);
+	color: var(--color-fg-dim);
+	font: var(--text--body-small);
 
 	display: block;
 }

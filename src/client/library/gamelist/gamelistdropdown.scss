@@ -27,14 +27,14 @@
 		left: anchor(right);
 		width: 100%;
 
-		background-color: var(--bg-tertiary);
+		background-color: var(--color-bg-tertiary);
 	}
 }
 
 #CheckboxWithImage {
 	@include gamelist.icon-button("name", "#Active");
 
-	color: var(--fg-dim);
+	color: var(--color-fg-dim);
 	margin: 0;
 
 	width: unset;

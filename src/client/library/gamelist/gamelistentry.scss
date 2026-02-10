@@ -1,18 +1,18 @@
 #Container {
-	color: var(--fg-dim);
-	font: var(--gpText-BodyMedium);
+	color: var(--color-fg-dim);
+	font: var(--text--body-medium);
 	box-shadow: none;
 	border: none;
-	border-radius: var(--border-radius);
+	border-radius: var(--rounding-md);
 
 	&#Selected,
 	&:hover {
-		background-color: var(--bg-hl);
+		background-color: var(--color-bg-hl);
 	}
 
 	&#Installed,
 	&#Running {
-		color: var(--fg-main);
+		color: var(--color-fg-main);
 	}
 
 	&#Updating {
@@ -28,7 +28,7 @@
 #GameIcon {
 	--size: 21px;
 
-	border-radius: var(--border-radius);
+	border-radius: var(--rounding-md);
 	margin-inline-end: 12px;
 
 	width: var(--size);

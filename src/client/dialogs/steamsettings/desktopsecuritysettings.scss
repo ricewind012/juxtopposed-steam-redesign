@@ -1,21 +1,21 @@
 #EntryLabel {
-	font: var(--gpText-HeadingSmall);
+	font: var(--text--heading-small);
 }
 
 #EntryValue {
-	color: var(--fg-dim);
-	font: var(--gpText-BodySmall);
+	color: var(--color-fg-dim);
+	font: var(--text--body-small);
 
 	display: block;
 }
 
 #SteamGuardIcon {
-	color: var(--accent-red);
+	color: var(--color-accent-red);
 
 	width: var(--icon-size);
 	height: var(--icon-size);
 
 	&#EnabledTwoFactor {
-		color: var(--accent-green);
+		color: var(--color-accent-green);
 	}
 }

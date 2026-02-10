@@ -2,8 +2,8 @@
 	padding: 0;
 
 	&:hover {
-		background-color: var(--bg-main-20);
-		border-radius: var(--border-radius);
+		background-color: var(--color-bg-main-20);
+		border-radius: var(--rounding-md);
 	}
 
 	&:not(:last-child) {
@@ -15,8 +15,8 @@
 	}
 
 	#Title {
-		color: var(--fg-main);
-		font: var(--gpText-BodyMedium);
+		color: var(--color-fg-main);
+		font: var(--text--body-medium);
 		margin-inline-start: 7px;
 	}
 }
@@ -26,6 +26,6 @@
 
 	// #libraryassetimage_Image
 	& > img {
-		border-radius: var(--border-radius);
+		border-radius: var(--rounding-md);
 	}
 }

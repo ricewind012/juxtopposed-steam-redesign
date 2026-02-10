@@ -1,14 +1,14 @@
 .country_settings {
-	font: var(--gpText-HeadingSmall);
+	font: var(--text--heading-small);
 
 	[style="margin-top: 10px"] {
-		font: var(--gpText-BodyLarge);
+		font: var(--text--body-large);
 		margin-block: var(--spacing-sm);
 	}
 }
 
 .phone_header_description {
-	font: var(--gpText-HeadingSmall) img {
+	font: var(--text--heading-small) img {
 		display: none;
 	}
 }

@@ -18,9 +18,9 @@
 #Highlight {
 	background: color-mix(in srgb, currentColor 10%, transparent);
 	color: var(--color-primary);
-	font: var(--gpText-BodyMedium);
+	font: var(--text--body-medium);
 	box-shadow: none;
-	border-radius: var(--border-radius);
+	border-radius: var(--rounding-md);
 	padding: var(--spacing-md);
 	margin-block-end: var(--spacing-lg);
 }

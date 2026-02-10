@@ -34,9 +34,9 @@
 	// this design sucks... or I forgot my shit fucking code
 	--spacing-sm: 12px;
 
-	background-color: var(--bg-main-20);
+	background-color: var(--color-bg-main-20);
 	color: var(--color-secondary);
-	border-radius: var(--border-radius);
+	border-radius: var(--rounding-md);
 
 	position: relative;
 	height: unset;
@@ -64,8 +64,8 @@
 }
 
 #Suggestions {
-	background: var(--bg-tertiary);
-	border-radius: 0 0 var(--border-radius) var(--border-radius);
+	background: var(--color-bg-tertiary);
+	border-radius: 0 0 var(--rounding-md) var(--rounding-md);
 	box-shadow: none;
 	gap: var(--spacing-lg);
 	padding: var(--spacing-md);
@@ -75,8 +75,8 @@
 	}
 
 	#SectionTitle {
-		color: var(--fg-main);
-		font: var(--gpText-HeadingSmall);
+		color: var(--color-fg-main);
+		font: var(--text--heading-small);
 		margin-block-end: var(--spacing-xs);
 	}
 
@@ -85,7 +85,7 @@
 	}
 
 	#SuggestionTextList {
-		color: var(--fg-dim);
+		color: var(--color-fg-dim);
 	}
 }
 

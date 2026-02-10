@@ -1,16 +1,16 @@
 /// Made to look like a radio, since that's where it was first used.
 ///
-/// @param {String} $color ['yellow'] - Text color from --accent vars.
+/// @param {String} $color ['yellow'] - Text color from --color-accent vars.
 @mixin alert($color: "yellow") {
 	background: color-mix(in srgb, currentColor 20%, transparent);
-	color: var(--accent-#{$color});
-	font: var(--gpText-HeadingSmall);
-	border-radius: var(--border-radius-large);
+	color: var(--color-accent-#{$color});
+	font: var(--text--heading-small);
+	border-radius: var(--radius-lg);
 	padding: var(--spacing-md);
 }
 
 @mixin link {
-	color: var(--fg-main);
+	color: var(--color-fg-main);
 
 	&:hover {
 		color: var(--color-primary);

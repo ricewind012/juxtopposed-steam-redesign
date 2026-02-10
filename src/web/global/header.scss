@@ -2,7 +2,11 @@
 
 #global_header {
 	backdrop-filter: blur(9px);
-	background-color: color-mix(in srgb, var(--bg-tertiary) 50%, transparent);
+	background-color: color-mix(
+		in srgb,
+		var(--color-bg-tertiary) 50%,
+		transparent
+	);
 	padding: 8px;
 
 	position: sticky;
@@ -50,28 +54,28 @@
 }
 
 .supernav_content {
-	background-color: var(--bg-hl);
-	border-radius: var(--border-radius);
+	background-color: var(--color-bg-hl);
+	border-radius: var(--rounding-md);
 	box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.25);
 
 	overflow: hidden;
 	top: 48px;
 
 	.submenuitem {
-		color: var(--fg-main);
-		font: var(--gpText-BodyMedium);
+		color: var(--color-fg-main);
+		font: var(--text--body-medium);
 		padding: 16px 20px;
 
 		&:hover {
-			background-color: var(--bg-hover);
+			background-color: var(--color-bg-hover);
 			transition: var(--transition);
 		}
 	}
 }
 
 #global_actions {
-	color: var(--fg-main);
-	font: var(--gpText-BodyMedium);
+	color: var(--color-fg-main);
+	font: var(--text--body-medium);
 	gap: var(--spacing-md);
 
 	display: flex;
@@ -101,7 +105,7 @@
 	&::after {
 		content: "";
 
-		background-color: var(--fg-main);
+		background-color: var(--color-fg-main);
 		mask-image: icon("arrow");
 
 		width: 10px;
@@ -115,13 +119,13 @@
 }
 
 #header_wallet_balance {
-	color: var(--fg-dim);
+	color: var(--color-fg-dim);
 	gap: 8px;
 	padding: 0;
 
 	display: flex;
 
 	&:hover {
-		color: var(--fg-main);
+		color: var(--color-fg-main);
 	}
 }

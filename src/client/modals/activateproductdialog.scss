@@ -6,14 +6,14 @@
 	padding-block-end: var(--spacing-lg);
 
 	#InfoExample {
-		color: var(--fg-dim);
-		font: var(--gpText-BodySmall);
+		color: var(--color-fg-dim);
+		font: var(--text--body-small);
 		letter-spacing: 0;
 	}
 
 	#InfoExampleHeader {
-		color: var(--fg-main);
-		font: var(--gpText-HeadingSmall);
+		color: var(--color-fg-main);
+		font: var(--text--heading-small);
 		letter-spacing: 0;
 		text-transform: none;
 		margin-block-start: var(--spacing-lg);

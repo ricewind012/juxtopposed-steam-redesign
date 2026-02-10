@@ -4,8 +4,8 @@
 	--icon-size: 1lh;
 	--offset: calc(var(--icon-size) + var(--spacing-md));
 
-	color: var(--fg-main);
-	font: var(--gpText-BodyMedium);
+	color: var(--color-fg-main);
+	font: var(--text--body-medium);
 	margin-block-end: var(--spacing-sm);
 	margin-inline-start: var(--offset);
 
@@ -18,14 +18,14 @@
 
 		position: absolute;
 
-		color: var(--fg-dim);
+		color: var(--color-fg-dim);
 		margin-inline-start: calc(var(--offset) * -1);
 	}
 }
 
 @mixin header {
-	color: var(--fg-dim);
-	font: var(--gpText-HeadingMedium);
+	color: var(--color-fg-dim);
+	font: var(--text--heading-medium);
 	letter-spacing: 0;
 	text-transform: none;
 
@@ -33,8 +33,8 @@
 }
 
 @mixin section {
-	background-color: var(--bg-main);
-	border-radius: var(--border-radius-large);
+	background-color: var(--color-bg-main);
+	border-radius: var(--radius-lg);
 	padding: var(--spacing-lg);
 	margin-bottom: var(--spacing-lg);
 }

@@ -2,9 +2,9 @@
 @use "shared/settings";
 
 #HTMLErrorBox {
-	background: var(--accent-red);
-	color: var(--fg-main);
-	border-radius: var(--border-radius-large);
+	background: var(--color-accent-red);
+	color: var(--color-fg-main);
+	border-radius: var(--radius-lg);
 	padding: var(--spacing-sm);
 	margin-top: 0;
 	margin-bottom: var(--spacing-lg);
@@ -50,6 +50,6 @@
 
 #ProfileBoxTitle {
 	all: unset;
-	color: var(--fg-dim);
-	font: var(--gpText-HeadingMedium);
+	color: var(--color-fg-dim);
+	font: var(--text--heading-medium);
 }

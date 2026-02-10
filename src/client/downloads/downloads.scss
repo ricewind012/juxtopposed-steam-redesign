@@ -2,8 +2,8 @@
 @use "shared/utils";
 
 #DownloadItemName > #Name {
-	color: var(--fg-main);
-	font: var(--gpText-HeadingSmall);
+	color: var(--color-fg-main);
+	font: var(--text--heading-small);
 	padding-block: var(--spacing-sm) 0;
 	margin: 0;
 }
@@ -51,8 +51,8 @@
 }
 
 #Progress {
-	color: var(--fg-dim);
-	font: var(--gpText-BodyMedium);
+	color: var(--color-fg-dim);
+	font: var(--text--body-medium);
 	text-transform: uppercase;
 }
 
@@ -64,11 +64,11 @@
 #SectionItem {
 	--icon-size: 24px;
 
-	background-color: var(--bg-main);
+	background-color: var(--color-bg-main);
 	padding: var(--spacing-sm);
 	padding-left: calc(var(--icon-size) + var(--spacing-sm) * 2);
 	margin-bottom: var(--spacing-md);
-	border-radius: var(--border-radius-large);
+	border-radius: var(--radius-lg);
 
 	height: unset;
 
@@ -106,8 +106,8 @@
 
 	#ProgressDetails {
 		all: unset;
-		color: var(--fg-dim);
-		font: var(--gpText-BodySmall);
+		color: var(--color-fg-dim);
+		font: var(--text--body-small);
 
 		#Denominator {
 			color: inherit;
@@ -119,7 +119,7 @@
 		}
 
 		#InProgress {
-			color: var(--fg-main);
+			color: var(--color-fg-main);
 		}
 	}
 }
@@ -144,8 +144,8 @@
 
 #SectionItemStatus {
 	all: unset;
-	color: var(--fg-dim);
-	font: var(--gpText-BodyMedium);
+	color: var(--color-fg-dim);
+	font: var(--text--body-medium);
 
 	flex-grow: 1;
 
@@ -154,7 +154,7 @@
 	}
 
 	#InProgress {
-		color: var(--fg-main);
+		color: var(--color-fg-main);
 	}
 }
 
@@ -179,14 +179,14 @@
 	&::before {
 		content: "Downloads Manager";
 
-		font: var(--gpText-HeadingMedium);
+		font: var(--text--heading-medium);
 	}
 
 	.DialogButton {
 		--icon-name: icon("settings");
 
-		background: color-mix(in srgb, var(--fg-dim) 10%, transparent);
-		color: var(--fg-dim);
+		background: color-mix(in srgb, var(--color-fg-dim) 10%, transparent);
+		color: var(--color-fg-dim);
 	}
 }
 
@@ -210,12 +210,12 @@
 
 		#Throttle {
 			all: unset;
-			color: var(--fg-dim);
-			font: var(--gpText-BodyLarge);
+			color: var(--color-fg-dim);
+			font: var(--text--body-large);
 		}
 
 		#ThrottleValue {
-			color: var(--fg-main);
+			color: var(--color-fg-main);
 		}
 	}
 

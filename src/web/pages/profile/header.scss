@@ -10,17 +10,17 @@
 	padding: var(--spacing-sm) var(--spacing-md);
 
 	.name {
-		font: var(--gpText-BodyMedium);
+		font: var(--text--body-medium);
 	}
 
 	.xp {
-		font: var(--gpText-BodySmall);
-		color: var(--fg-dim);
+		font: var(--text--body-small);
+		color: var(--color-fg-dim);
 	}
 }
 
 .profile_content {
-	font: var(--gpText-BodyMedium);
+	font: var(--text--body-medium);
 	padding: 40px;
 	padding-top: 0;
 
@@ -55,8 +55,8 @@
 	}
 
 	.persona_name {
-		color: var(--fg-main);
-		font: var(--gpText-HeadingLarge);
+		color: var(--color-fg-main);
+		font: var(--text--heading-large);
 	}
 
 	.playerAvatar {
@@ -79,8 +79,8 @@
 }
 
 .profile_header_badge {
-	background-color: var(--bg-main-50);
-	border-radius: var(--border-radius-large);
+	background-color: var(--color-bg-main-50);
+	border-radius: var(--radius-lg);
 
 	height: unset;
 }
@@ -117,8 +117,8 @@
 }
 
 .profile_header_content {
-	color: var(--fg-main);
-	font: var(--gpText-BodyLarge);
+	color: var(--color-fg-main);
+	font: var(--text--body-large);
 	padding: 0;
 }
 
@@ -128,7 +128,7 @@
 }
 
 .profile_summary {
-	font: var(--gpText-BodyLarge);
+	font: var(--text--body-large);
 
 	/* TODO(vars): 4 lines tall */
 	height: 96px;

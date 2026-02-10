@@ -1,6 +1,6 @@
 #ActivityCommentThread {
-	background-color: var(--bg-main-20);
-	border-radius: var(--border-radius-large);
+	background-color: var(--color-bg-main-20);
+	border-radius: var(--radius-lg);
 	padding: var(--spacing-md);
 	margin-block-start: var(--spacing-sm);
 	margin-inline-start: calc(var(--steamavatar_size) + var(--spacing-sm));
@@ -32,14 +32,14 @@
 		}
 
 		#CommentTime {
-			color: var(--fg-dim);
-			font: var(--gpText-BodySmall);
+			color: var(--color-fg-dim);
+			font: var(--text--body-small);
 		}
 	}
 
 	#CommentText {
-		color: var(--fg-main);
-		font: var(--gpText-BodyMedium);
+		color: var(--color-fg-main);
+		font: var(--text--body-medium);
 	}
 
 	#HeaderandBody {

@@ -7,12 +7,12 @@
 }
 
 #RootMenuButton {
-	color: var(--fg-dim);
-	font: var(--gpText-BodyLarge);
+	color: var(--color-fg-dim);
+	font: var(--text--body-large);
 	padding: 0;
 
 	&:hover {
-		color: var(--fg-main);
+		color: var(--color-fg-main);
 	}
 
 	&:nth-child(3),

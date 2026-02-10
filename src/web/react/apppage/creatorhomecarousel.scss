@@ -25,7 +25,7 @@
 }
 
 #Header {
-	margin-block-end: var(--carousel-section-spacing);
+	margin-block-end: var(--carousel--section-spacing);
 
 	#AvatarBackground,
 	#ClanInfoRow > :first-child {
@@ -33,7 +33,7 @@
 	}
 
 	#ClanName {
-		font: var(--gpText-HeadingSmall);
+		font: var(--text--heading-small);
 		letter-spacing: 0;
 		text-transform: none;
 	}

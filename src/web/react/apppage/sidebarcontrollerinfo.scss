@@ -2,13 +2,13 @@
 @use "web/apppage";
 
 #ControllerSupportLevelString {
-	color: var(--fg-dim);
+	color: var(--color-fg-dim);
 	margin-block-end: 7px;
 }
 
 #ImgSection {
 	background-color: transparent;
-	color: var(--fg-main);
+	color: var(--color-fg-main);
 	padding: 0;
 }
 
@@ -28,7 +28,7 @@
 #NoticeContainer {
 	--icon-size: 26px;
 
-	font: var(--gpText-BodyMedium);
+	font: var(--text--body-medium);
 	margin-block: 7px 0;
 
 	#PurchaseNoticeContainer {

@@ -4,8 +4,8 @@
 	height: unset;
 
 	&:hover {
-		background-color: var(--bg-main-20);
-		border-radius: var(--border-radius);
+		background-color: var(--color-bg-main-20);
+		border-radius: var(--rounding-md);
 	}
 }
 
@@ -41,7 +41,7 @@
 }
 
 #SubsectionHeader {
-	color: var(--fg-dim);
-	font: var(--gpText-BodyMedium);
+	color: var(--color-fg-dim);
+	font: var(--text--body-medium);
 	padding-block-end: 7px;
 }

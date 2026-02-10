@@ -9,8 +9,8 @@
 #Container {
 	background: linear-gradient(
 		173.45deg,
-		var(--bg-hover) 1.6%,
-		var(--bg-hl) 89.87%
+		var(--color-bg-hover) 1.6%,
+		var(--color-bg-hl) 89.87%
 	);
 	margin-top: calc(var(--spacing-sm) * 2 + 1lh + 25px);
 }

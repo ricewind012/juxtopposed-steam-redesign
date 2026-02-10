@@ -5,11 +5,11 @@ body:is(.account, .account_preferences) {
 }
 
 .two_column {
-	font: var(--gpText-BodyLarge);
+	font: var(--text--body-large);
 
 	&.left {
-		background-color: var(--bg-main);
-		border-radius: var(--border-radius-large);
+		background-color: var(--color-bg-main);
+		border-radius: var(--radius-lg);
 		padding: var(--spacing-md);
 
 		min-width: var(--sidebar-width);
@@ -21,23 +21,23 @@ body:is(.account, .account_preferences) {
 }
 
 .accountData {
-	--fg-main: var(--color-primary);
-	font: var(--gpText-HeadingSmall);
+	--color-fg-main: var(--color-primary);
+	font: var(--text--heading-small);
 
 	position: unset;
 }
 
 .accountRow {
-	color: var(--fg-main);
-	font: var(--gpText-HeadingSmall);
+	color: var(--color-fg-main);
+	font: var(--text--heading-small);
 	margin: 0;
 
 	height: unset;
 }
 
 .account_data_field {
-	color: var(--fg-dim);
-	font: var(--gpText-BodyLarge);
+	color: var(--color-fg-dim);
+	font: var(--text--body-large);
 
 	&[href] {
 		color: var(--color-primary);
@@ -45,10 +45,10 @@ body:is(.account, .account_preferences) {
 }
 
 .account_header_line {
-	background-color: var(--bg-main);
-	color: var(--fg-dim);
-	font: var(--gpText-HeadingMedium);
-	border-radius: var(--border-radius-large) var(--border-radius-large) 0 0;
+	background-color: var(--color-bg-main);
+	color: var(--color-fg-dim);
+	font: var(--text--heading-medium);
+	border-radius: var(--radius-lg) var(--radius-lg) 0 0;
 	padding: var(--spacing-lg);
 	padding-bottom: 0;
 
@@ -65,7 +65,7 @@ body:is(.account, .account_preferences) {
 }
 
 .account_manage_label {
-	font: var(--gpText-HeadingSmall);
+	font: var(--text--heading-small);
 	padding: 0;
 }
 
@@ -83,13 +83,13 @@ body:is(.account, .account_preferences) {
 	margin: 0;
 
 	& > [style="float: left"] {
-		font: var(--gpText-HeadingSmall);
+		font: var(--text--heading-small);
 	}
 }
 
 .account_setting_block_short,
 .account_setting_block {
-	background-color: var(--bg-main);
+	background-color: var(--color-bg-main);
 	padding: var(--spacing-lg);
 	margin-bottom: var(--spacing-md);
 
@@ -100,7 +100,7 @@ body:is(.account, .account_preferences) {
 .account_settings_container {
 	@extend .account_setting_block;
 
-	font: var(--gpText-BodyLarge);
+	font: var(--text--body-large);
 
 	.h3_content {
 		margin: 0;
@@ -132,7 +132,7 @@ body:is(.account, .account_preferences) {
 
 .account_setting_sub_block_long,
 .account_setting_sub_block {
-	color: var(--fg-main);
+	color: var(--color-fg-main);
 	gap: var(--spacing-lg);
 	padding: 0;
 
@@ -162,11 +162,11 @@ body:is(.account, .account_preferences) {
 }
 
 .inner_rule {
-	border-top: 2px solid var(--bg-hl);
+	border-top: var(--border-md) solid var(--color-bg-hl);
 	margin-block: var(--spacing-lg);
 }
 
 .youraccount_steamid {
-	color: var(--fg-dim);
-	font: var(--gpText-BodyLarge);
+	color: var(--color-fg-dim);
+	font: var(--text--body-large);
 }

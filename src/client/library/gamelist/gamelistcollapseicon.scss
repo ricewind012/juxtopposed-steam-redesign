@@ -3,7 +3,7 @@
 #Container {
 	@include utils.icon("arrow", "svg");
 
-	color: var(--fg-main);
+	color: var(--color-fg-main);
 
 	transition: var(--transition);
 

@@ -1,7 +1,7 @@
 @use "shared/utils";
 
 #CommentsContainer {
-	font: var(--gpText-BodyMedium);
+	font: var(--text--body-medium);
 
 	svg {
 		@include utils.icon("name", true);
@@ -16,12 +16,12 @@
 	}
 
 	#CommentCount {
-		color: var(--fg-main);
+		color: var(--color-fg-main);
 		margin-inline-start: var(--spacing-xs);
 	}
 
 	#CommentsLabel {
-		color: var(--fg-main);
+		color: var(--color-fg-main);
 	}
 }
 
@@ -30,13 +30,13 @@
 }
 
 #PlayedForTime {
-	color: var(--fg-dim);
-	font: var(--gpText-BodyMedium);
+	color: var(--color-fg-dim);
+	font: var(--text--body-medium);
 	padding: 0;
 }
 
 #ReviewDescription {
-	color: var(--fg-main);
+	color: var(--color-fg-main);
 	gap: 7px;
 }
 
@@ -48,7 +48,7 @@
 }
 
 #ReviewTextContainer {
-	color: var(--fg-main);
-	font: var(--gpText-BodyMedium);
+	color: var(--color-fg-main);
+	font: var(--text--body-medium);
 	padding-block-end: var(--spacing-sm);
 }

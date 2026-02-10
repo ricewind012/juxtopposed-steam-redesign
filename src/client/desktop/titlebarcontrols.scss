@@ -4,7 +4,7 @@
 #AccountMenu {
 	@include titlebarcontrols.button;
 
-	font: var(--gpText-BodyMedium);
+	font: var(--text--body-medium);
 	gap: 8px;
 	padding: 2px;
 	margin: 0;
@@ -16,7 +16,7 @@
 	}
 
 	&.ingame {
-		color: var(--accent-green);
+		color: var(--color-accent-green);
 	}
 
 	.avatar {
@@ -26,14 +26,14 @@
 	#Chevron {
 		--icon-name: icon("arrow");
 
-		color: var(--fg-main);
+		color: var(--color-fg-main);
 		margin-right: var(--spacing-xs);
 
 		order: 1;
 	}
 
 	#WalletBalance {
-		color: var(--fg-dim);
+		color: var(--color-fg-dim);
 	}
 }
 
@@ -48,8 +48,6 @@
 }
 
 #NotificationsButton {
-	--count-size: 16px;
-
 	// TODO(js): App.GetCurrentUser().NotificationCounts.offline_messages +
 	// NotificationStore.m_nUnviewedNotifications
 	//
@@ -62,14 +60,14 @@
 		align-items: center;
 		justify-content: center;
 		position: absolute;
-		min-width: var(--count-size);
-		height: var(--count-size);
+		min-width: var(--icon--size-sm);
+		height: var(--icon--size-sm);
 		inset-block-start: -2px;
 		inset-inline-end: -3px;
 
 		background-color: var(--color-primary);
-		color: var(--bg-main);
-		font: var(--gpText-BodySmall);
+		color: var(--color-bg-main);
+		font: var(--text--body-small);
 		border-radius: 1337px;
 	}
 }

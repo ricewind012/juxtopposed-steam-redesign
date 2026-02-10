@@ -3,8 +3,8 @@
 @use "shared/utils";
 
 :where(.DialogBodyText) {
-	color: var(--fg-main);
-	font: var(--gpText-BodyMedium);
+	color: var(--color-fg-main);
+	font: var(--text--body-medium);
 	gap: var(--spacing-sm);
 	margin: 0;
 
@@ -45,13 +45,13 @@
 	align-items: center;
 
 	&:hover .DialogCheckbox {
-		color: var(--fg-main);
+		color: var(--color-fg-main);
 	}
 }
 
 :where(.DialogContent) {
-	background: var(--bg-main);
-	font: var(--gpText-BodyMedium);
+	background: var(--color-bg-main);
+	font: var(--text--body-medium);
 	padding: var(--dialog--spacing-container);
 }
 
@@ -73,8 +73,8 @@
 }
 
 :where(.DialogHeader) {
-	color: var(--fg-main);
-	font: var(--gpText-HeadingLarge);
+	color: var(--color-fg-main);
+	font: var(--text--heading-large);
 	margin-block-end: var(--spacing-sm);
 }
 
@@ -99,8 +99,8 @@
 }
 
 :where(.DialogLabel) {
-	color: var(--fg-dim);
-	font: var(--gpText-BodySmall);
+	color: var(--color-fg-dim);
+	font: var(--text--body-small);
 	text-transform: none;
 	margin-bottom: var(--spacing-xs);
 }
@@ -115,7 +115,7 @@
 }
 
 .DialogToggle_Description {
-	color: var(--fg-dim);
+	color: var(--color-fg-dim);
 	font: inherit;
 	padding-top: var(--spacing-sm);
 }
@@ -146,7 +146,7 @@
 		@include controls.toggle(".Active", ".hack");
 
 		.Disabled & {
-			background: var(--bg-hover);
+			background: var(--color-bg-hover);
 		}
 	}
 }
@@ -160,7 +160,7 @@
 }
 
 .ModalOverlayBackground {
-	background: var(--bg-main-50);
+	background: var(--color-bg-main-50);
 	backdrop-filter: blur(20px);
 
 	// For the top line
@@ -168,7 +168,7 @@
 }
 
 .ModalPosition_Content {
-	color: var(--fg-main);
+	color: var(--color-fg-main);
 	box-shadow:
 		0px 4px 19px 3px rgba(0, 0, 0, 0.3),
 		0px 8px 38px 5px rgba(0, 0, 0, 0.15);
@@ -201,7 +201,7 @@
 	color: var(--color-primary);
 
 	&.Destructive {
-		color: var(--accent-red);
+		color: var(--color-accent-red);
 	}
 }
 
@@ -222,7 +222,7 @@
 	@include utils.icon;
 
 	&:hover {
-		color: var(--fg-main);
+		color: var(--color-fg-main);
 	}
 
 	&.closeButton {
@@ -248,7 +248,7 @@
 }
 
 .title-bar-actions {
-	color: var(--fg-dim);
+	color: var(--color-fg-dim);
 	gap: var(--dialog--window-control-spacing);
 	margin-inline-end: calc(var(--spacing) / 2);
 

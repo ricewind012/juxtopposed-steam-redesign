@@ -9,9 +9,9 @@
 }
 
 #BackgroundSettingRow {
-	color: var(--fg-main);
-	font: var(--gpText-BodyLarge);
-	border-block-end: 1px solid var(--bg-hover);
+	color: var(--color-fg-main);
+	font: var(--text--body-large);
+	border-block-end: var(--border-sm) solid var(--color-bg-hover);
 	padding-block-end: var(--spacing-sm);
 	margin-block-start: var(--spacing-sm);
 

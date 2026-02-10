@@ -9,13 +9,13 @@
 
 #PlayersList {
 	border: none;
-	border-radius: var(--border-radius-large);
+	border-radius: var(--radius-lg);
 	box-shadow: none;
 	margin-block: var(--spacing-sm) 0;
 }
 
 #PlayersListBody {
-	background-color: var(--bg-hl);
+	background-color: var(--color-bg-hl);
 	padding-block-start: 6px;
 
 	.avatarHolder {
@@ -46,18 +46,19 @@
 	}
 
 	&:not(:last-of-type):hover {
-		background-color: var(--bg-hover);
+		background-color: var(--color-bg-hover);
 	}
 }
 
 #PlayersListHeaderCtr {
-	background-color: var(--bg-hl);
-	border-block-end: 1px solid color-mix(in srgb, currentColor 20%, transparent);
+	background-color: var(--color-bg-hl);
+	border-block-end: var(--border-sm) solid
+		color-mix(in srgb, currentColor 20%, transparent);
 	padding-block: 0;
 }
 
 #PlayersListWrapper {
-	font: var(--gpText-BodyMedium);
+	font: var(--text--body-medium);
 }
 
 #SortCaret {

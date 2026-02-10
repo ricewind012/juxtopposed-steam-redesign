@@ -77,9 +77,9 @@
 }
 
 #ServerList {
-	background-color: var(--bg-hl);
+	background-color: var(--color-bg-hl);
 	border: none;
-	border-radius: var(--border-radius-large);
+	border-radius: var(--radius-lg);
 	box-shadow: none;
 	margin-block: var(--spacing-sm) 0;
 
@@ -91,7 +91,7 @@
 		margin: 6px 3px;
 
 		&:not(:hover) {
-			color: var(--fg-dim);
+			color: var(--color-fg-dim);
 		}
 	}
 }
@@ -111,8 +111,9 @@
 }
 
 #ServerListHeaderCtr {
-	background-color: var(--bg-hl);
-	border-block-end: 1px solid color-mix(in srgb, currentColor 20%, transparent);
+	background-color: var(--color-bg-hl);
+	border-block-end: var(--border-sm) solid
+		color-mix(in srgb, currentColor 20%, transparent);
 	padding-block: 0;
 
 	#PasswordColumn,
@@ -136,7 +137,7 @@
 	}
 
 	&:not(:last-of-type):hover {
-		background-color: var(--bg-hover);
+		background-color: var(--color-bg-hover);
 	}
 }
 
@@ -144,12 +145,12 @@
 	gap: 9px;
 
 	&:hover {
-		background-color: var(--bg-hover);
+		background-color: var(--color-bg-hover);
 	}
 
 	&#SelectedRow {
 		background: var(--color-primary);
-		color: var(--bg-main);
+		color: var(--color-bg-main);
 	}
 }
 
@@ -188,25 +189,25 @@
 		all: unset;
 
 		transition: var(--transition);
-		background-color: var(--bg-hl);
-		font: var(--gpText-HeadingSmall);
+		background-color: var(--color-bg-hl);
+		font: var(--text--heading-small);
 		padding: var(--spacing-sm) var(--spacing-md);
 
 		&:nth-child(-n + 1 of &) {
-			border-radius: var(--border-radius-large) 0 0 var(--border-radius-large);
+			border-radius: var(--radius-lg) 0 0 var(--radius-lg);
 		}
 
 		&:nth-last-child(-n + 1 of &) {
-			border-radius: 0 var(--border-radius-large) var(--border-radius-large) 0;
+			border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
 		}
 
 		&:hover {
-			background-color: var(--bg-hover);
+			background-color: var(--color-bg-hover);
 		}
 
 		&#Selected {
 			background-color: var(--color-primary);
-			color: var(--bg-main);
+			color: var(--color-bg-main);
 		}
 
 		svg {

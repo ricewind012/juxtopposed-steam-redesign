@@ -15,11 +15,11 @@
 		margin-block: var(--spacing-xs);
 
 		&:nth-child(1) {
-			font: var(--gpText-HeadingLarge);
+			font: var(--text--heading-large);
 		}
 
 		&:nth-child(2) {
-			font: var(--gpText-BodyLarge);
+			font: var(--text--body-large);
 		}
 	}
 }
@@ -41,8 +41,8 @@
 }
 
 #SortingDropDownLabel {
-	color: var(--fg-dim);
-	font: var(--gpText-BodyMedium);
+	color: var(--color-fg-dim);
+	font: var(--text--body-medium);
 	letter-spacing: 0;
 	text-transform: none;
 	margin: 0;

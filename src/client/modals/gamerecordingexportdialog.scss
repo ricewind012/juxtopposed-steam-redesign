@@ -2,8 +2,8 @@
 @use "shared/utils";
 
 #Content {
-	color: var(--fg-main);
-	font: var(--gpText-BodyMedium);
+	color: var(--color-fg-main);
+	font: var(--text--body-medium);
 	padding: 0;
 
 	hr {
@@ -13,18 +13,18 @@
 }
 
 #DetailBlock {
-	font: var(--gpText-BodySmall);
+	font: var(--text--body-small);
 
 	#Header {
-		color: var(--fg-dim);
-		font: var(--gpText-BodyMedium);
+		color: var(--color-fg-dim);
+		font: var(--text--body-medium);
 		letter-spacing: 0;
 		text-transform: none;
 	}
 
 	#Primary {
 		color: var(--color-primary);
-		font: var(--gpText-HeadingSmall);
+		font: var(--text--heading-small);
 		margin-block-end: 7px;
 	}
 }
@@ -34,7 +34,7 @@
 	padding-block-start: var(--spacing-lg);
 
 	#Thumbnail {
-		border-radius: var(--border-radius);
+		border-radius: var(--rounding-md);
 	}
 }
 
@@ -52,32 +52,36 @@
 	}
 
 	#File {
-		color: var(--fg-main);
-		font: var(--gpText-HeadingSmall);
+		color: var(--color-fg-main);
+		font: var(--text--heading-small);
 	}
 
 	#Path {
-		color: var(--fg-dim);
-		font: var(--gpText-BodyMedium);
+		color: var(--color-fg-dim);
+		font: var(--text--body-medium);
 	}
 }
 
 #SettingRow {
-	color: var(--fg-main);
-	font: var(--gpText-HeadingSmall);
+	color: var(--color-fg-main);
+	font: var(--text--heading-small);
 }
 
 #Slider {
 	#ResolutionNotchLabel {
-		color: var(--fg-dim);
-		font: var(--gpText-BodySmall);
+		color: var(--color-fg-dim);
+		font: var(--text--body-small);
 		letter-spacing: 0;
 		padding-block-start: 7px;
 	}
 
 	#ResolutionNotchTick {
 		--pct: 20%;
-		background-color: color-mix(in srgb, var(--fg-dim) var(--pct), transparent);
+		background-color: color-mix(
+			in srgb,
+			var(--color-fg-dim) var(--pct),
+			transparent
+		);
 
 		&#TickActive {
 			--pct: 50%;
@@ -86,13 +90,13 @@
 }
 
 #SliderHeader {
-	color: var(--fg-main);
-	font: var(--gpText-HeadingSmall);
+	color: var(--color-fg-main);
+	font: var(--text--heading-small);
 	padding-block-end: var(--spacing-sm);
 }
 
 #TypeSwitcher {
 	@include controls.radio-container-horizontal;
 
-	background-color: var(--bg-hl);
+	background-color: var(--color-bg-hl);
 }

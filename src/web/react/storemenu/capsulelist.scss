@@ -3,8 +3,8 @@
 }
 
 #ItemCapsule {
-	background: var(--bg-main-20);
-	border-radius: var(--border-radius);
+	background: var(--color-bg-main-20);
+	border-radius: var(--rounding-md);
 	gap: 0;
 
 	// For border-radius
@@ -12,7 +12,7 @@
 	height: unset;
 
 	&:hover {
-		background: var(--bg-main-50);
+		background: var(--color-bg-main-50);
 	}
 
 	#Capsule {
@@ -24,13 +24,13 @@
 	}
 
 	#DiscountCtn {
-		color: var(--fg-dim);
-		font: var(--gpText-BodyLarge);
+		color: var(--color-fg-dim);
+		font: var(--text--body-large);
 	}
 
 	#Title {
-		color: var(--fg-main);
-		font: var(--gpText-HeadingSmall);
+		color: var(--color-fg-main);
+		font: var(--text--heading-small);
 		margin-block-end: var(--spacing-xs);
 	}
 }

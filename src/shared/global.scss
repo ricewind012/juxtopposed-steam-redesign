@@ -5,10 +5,10 @@
 }
 
 body {
-	background-color: var(--bg-main);
+	background-color: var(--color-bg-main);
 	background-attachment: fixed;
-	color: var(--fg-main);
-	font: var(--gpText-BodyMedium);
+	color: var(--color-fg-main);
+	font: var(--text--body-medium);
 }
 
 a {
@@ -16,11 +16,11 @@ a {
 }
 
 :where(.ingame) {
-	color: var(--accent-green);
+	color: var(--color-accent-green);
 }
 
 :where(.offline) {
-	color: var(--fg-dim);
+	color: var(--color-fg-dim);
 }
 
 :where(.online) {
@@ -28,12 +28,12 @@ a {
 }
 
 :where(.awayOrSnooze) {
-	color: var(--accent-yellow);
+	color: var(--color-accent-yellow);
 }
 
 ::placeholder {
 	color: var(--placeholder-color);
-	font: var(--gpText-BodyMedium);
+	font: var(--text--body-medium);
 }
 
 $svg-icons: (

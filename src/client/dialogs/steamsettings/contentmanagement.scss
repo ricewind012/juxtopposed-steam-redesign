@@ -15,8 +15,8 @@ $-bar-colors: (
 #AppActionBar {
 	@include settings.section;
 
-	background-color: var(--bg-main-50);
-	border-radius: 0 0 var(--border-radius) var(--border-radius);
+	background-color: var(--color-bg-main-50);
+	border-radius: 0 0 var(--rounding-md) var(--rounding-md);
 	margin: 0;
 
 	#ActionButton {
@@ -24,8 +24,8 @@ $-bar-colors: (
 	}
 
 	#AppActionSelected {
-		color: var(--fg-main);
-		font: var(--gpText-BodySmall);
+		color: var(--color-fg-main);
+		font: var(--text--body-small);
 		letter-spacing: 0;
 		text-transform: none;
 	}
@@ -36,12 +36,12 @@ $-bar-colors: (
 	padding-inline: var(--spacing-sm);
 
 	&:hover {
-		background-color: var(--bg-main);
-		border-radius: var(--border-radius);
+		background-color: var(--color-bg-main);
+		border-radius: var(--rounding-md);
 	}
 
 	#AppInfoItem {
-		font: var(--gpText-BodyMedium);
+		font: var(--text--body-medium);
 		letter-spacing: 0;
 		text-transform: none;
 
@@ -51,24 +51,24 @@ $-bar-colors: (
 	}
 
 	#AppName {
-		color: var(--fg-main);
-		font: var(--gpText-HeadingSmall);
+		color: var(--color-fg-main);
+		font: var(--text--heading-small);
 	}
 
 	#AppSize {
-		color: var(--fg-dim);
-		font: var(--gpText-BodySmall);
+		color: var(--color-fg-dim);
+		font: var(--text--body-small);
 		letter-spacing: 0;
 	}
 
 	#AppUsageText,
 	#SpecialSectionText {
-		color: var(--fg-main);
+		color: var(--color-fg-main);
 		margin: 0;
 	}
 
 	#AppUsageValue {
-		color: var(--fg-dim);
+		color: var(--color-fg-dim);
 	}
 
 	#NoCheckboxSpacer {
@@ -110,8 +110,8 @@ $-bar-colors: (
 #AppsGrid {
 	@include settings.section;
 
-	background-color: var(--bg-main-50);
-	border-radius: var(--border-radius) var(--border-radius) 0 0;
+	background-color: var(--color-bg-main-50);
+	border-radius: var(--rounding-md) var(--rounding-md) 0 0;
 	padding-block-end: 0;
 	margin-block: var(--spacing-lg) 0;
 
@@ -120,7 +120,7 @@ $-bar-colors: (
 
 		width: 100%;
 
-		border-block-end: 1px solid var(--bg-hl);
+		border-block-end: var(--border-sm) solid var(--color-bg-hl);
 	}
 }
 
@@ -134,8 +134,8 @@ $-bar-colors: (
 }
 
 #DriveName {
-	color: var(--fg-main);
-	font: var(--gpText-BodySmall);
+	color: var(--color-fg-main);
+	font: var(--text--body-small);
 	letter-spacing: 0;
 	text-transform: none;
 }
@@ -156,7 +156,7 @@ $-bar-colors: (
 	inset-inline-end: 12px;
 
 	&:not(:hover) {
-		background-color: var(--bg-main-50);
+		background-color: var(--color-bg-main-50);
 	}
 }
 
@@ -167,14 +167,14 @@ $-bar-colors: (
 }
 
 #DriveUsageDot {
-	font: var(--gpText-BodySmall);
+	font: var(--text--body-small);
 
 	width: 1em;
 	height: 1em;
 }
 
 #DriveUsageIndicator {
-	background: var(--bg-main);
+	background: var(--color-bg-main);
 
 	min-height: 4px;
 }
@@ -183,7 +183,7 @@ $-bar-colors: (
 	font: inherit;
 
 	& > svg {
-		color: var(--fg-main);
+		color: var(--color-fg-main);
 	}
 
 	svg {
@@ -199,13 +199,13 @@ $-bar-colors: (
 		text-decoration: none;
 
 		svg {
-			color: var(--accent-yellow);
+			color: var(--color-accent-yellow);
 		}
 	}
 
 	#DriveSize {
-		color: var(--fg-dim);
-		font: var(--gpText-BodySmall);
+		color: var(--color-fg-dim);
+		font: var(--text--body-small);
 		letter-spacing: 0;
 		text-transform: none;
 	}

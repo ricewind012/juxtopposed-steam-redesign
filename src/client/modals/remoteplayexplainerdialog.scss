@@ -5,7 +5,7 @@
 	margin-block-start: var(--spacing-lg);
 
 	:where(& > :first-child, #Right) > b {
-		font: var(--gpText-HeadingSmall);
+		font: var(--text--heading-small);
 	}
 }
 

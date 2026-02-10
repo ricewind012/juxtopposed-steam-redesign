@@ -2,7 +2,7 @@
 @use "shared/utils";
 
 #Backdrop {
-	background-color: var(--bg-main-50);
+	background-color: var(--color-bg-main-50);
 	backdrop-filter: blur(20px);
 
 	@media (prefers-reduced-motion: no-preference) {
@@ -49,14 +49,14 @@
 	}
 
 	#ItemCount {
-		color: var(--fg-dim);
+		color: var(--color-fg-dim);
 		font: inherit;
 		margin: 0;
 	}
 }
 
 #StoreMenu {
-	background: var(--bg-tertiary);
+	background: var(--color-bg-tertiary);
 	color: inherit;
 	font: inherit;
 	border: none;

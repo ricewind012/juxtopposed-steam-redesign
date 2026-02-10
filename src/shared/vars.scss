@@ -1,33 +1,39 @@
 :root {
-	// Background
-	--bg-main: #0e141b;
-	--bg-hl: #1e2329;
-	--bg-hover: #313843;
-	--bg-secondary: #14344b;
-	--bg-tertiary: #222b44;
+	// Colors
+	--color-accent-green: #a1cd44;
+	--color-accent-yellow: #c1b15f;
+	--color-accent-red: #cd5444;
 
-	--bg-main-20: color-mix(in srgb, var(--bg-main) 20%, transparent);
-	--bg-main-50: color-mix(in srgb, var(--bg-main) 50%, transparent);
+	--color-bg-main: #0e141b;
+	--color-bg-hl: #1e2329;
+	--color-bg-hover: #313843;
+	--color-bg-secondary: #14344b;
+	--color-bg-tertiary: #222b44;
 
-	// Text
-	--fg-main: #f3f3f3;
-	--fg-dim: #76808c;
+	--color-bg-main-20: color-mix(in srgb, var(--color-bg-main) 20%, transparent);
+	--color-bg-main-50: color-mix(in srgb, var(--color-bg-main) 50%, transparent);
 
-	// Other colors
+	--color-fg-main: #f3f3f3;
+	--color-fg-dim: #76808c;
+
 	--color-primary: #66c0f4;
 	--color-secondary: #4b619b;
 
-	--accent-green: #a1cd44;
-	--accent-yellow: #c1b15f;
-	--accent-red: #cd5444;
+	// Units
+	--border-sm: 1px;
+	--border-md: 2px;
+	--border-lg: 3px;
 
-	--border-radius: 3px;
-	--border-radius-large: 5px;
-	--icon-size: 20px;
-	--sidebar-width: 299px;
-	--transition: ease-in 100ms;
+	// TODO: remove this
+	--icon-size: var(--icon--size-md);
+	--icon--size-sm: 16px;
+	--icon--size-md: 20px;
+	--icon--size-lg: 24px;
 
-	// Spacing
+	--rounding-sm: 2px;
+	--rounding-md: 3px;
+	--rounding-lg: 5px;
+
 	--spacing-xs: 5px;
 	--spacing-sm: 10px;
 	--spacing-md: 15px;
@@ -35,125 +41,145 @@
 	--spacing-xl: 30px;
 
 	// Typography
-	--gpText-HeadingLarge: normal 700 26px/1.4 "Motiva Sans", Arial, Sans-serif;
-	--gpText-HeadingMedium: normal 700 22px/1.4 "Motiva Sans", Arial, Sans-serif;
-	--gpText-HeadingSmall: normal 700 18px/1.4 "Motiva Sans", Arial, Sans-serif;
+	--text--heading-large: normal 700 26px/1.4 "Motiva Sans", Arial, Sans-serif;
+	--text--heading-medium: normal 700 22px/1.4 "Motiva Sans", Arial, Sans-serif;
+	--text--heading-small: normal 700 18px/1.4 "Motiva Sans", Arial, Sans-serif;
 
-	--gpText-BodyLarge: normal 400 16px/1.4 "Motiva Sans", Arial, Sans-serif;
-	--gpText-BodyMedium: normal 400 14px/1.4 "Motiva Sans", Arial, Sans-serif;
-	--gpText-BodySmall: normal 400 12px/1.4 "Motiva Sans", Arial, Sans-serif;
+	--text--body-large: normal 400 16px/1.4 "Motiva Sans", Arial, Sans-serif;
+	--text--body-medium: normal 400 14px/1.4 "Motiva Sans", Arial, Sans-serif;
+	--text--body-small: normal 400 12px/1.4 "Motiva Sans", Arial, Sans-serif;
 
-	// Controls
+	// Avatar
 	--avatar--border-radius: 4px;
-	--avatar--border-size: 2px;
+	--avatar--border-size: var(--border-md);
 
-	--avatar--color-offline: var(--fg-dim);
+	--avatar--color-offline: var(--color-fg-dim);
 	--avatar--color-online: var(--color-primary);
-	--avatar--color-away: var(--accent-yellow);
-	--avatar--color-ingame: var(--accent-green);
+	--avatar--color-away: var(--color-accent-yellow);
+	--avatar--color-ingame: var(--color-accent-green);
 
 	--avatar--size-xs: 32px;
 	--avatar--size-sm: 40px;
 	--avatar--size-md: 48px;
 	--avatar--size-xl: 64px;
 
-	--button--border-size: 1px;
+	// Button
+	--button--border-size: var(--border-sm);
 	--button--spacing-block-sm: var(--spacing-xs);
 	--button--spacing-block-md: var(--spacing-sm);
 	--button--spacing-inline: var(--spacing-lg);
 
 	--button--primary-bg: var(--color-secondary);
 	--button--primary-bg-hover: var(--color-primary);
-	--button--primary-fg: var(--fg-main);
-	--button--primary-fg-hover: var(--bg-main);
+	--button--primary-fg: var(--color-fg-main);
+	--button--primary-fg-hover: var(--color-bg-main);
 	--button--primary-border: transparent;
 	--button--primary-border-hover: transparent;
 
-	--button--secondary-bg: var(--bg-hl);
-	--button--secondary-bg-hover: var(--bg-hover);
-	--button--secondary-fg: var(--fg-main);
-	--button--secondary-fg-hover: var(--fg-main);
+	--button--secondary-bg: var(--color-bg-hl);
+	--button--secondary-bg-hover: var(--color-bg-hover);
+	--button--secondary-fg: var(--color-fg-main);
+	--button--secondary-fg-hover: var(--color-fg-main);
 	--button--secondary-border: transparent;
 	--button--secondary-border-hover: transparent;
 
 	--button--tertiary-bg: transparent;
 	--button--tertiary-bg-hover: transparent;
-	--button--tertiary-fg: var(--fg-dim);
-	--button--tertiary-fg-hover: var(--fg-main);
-	--button--tertiary-border: color-mix(in srgb, var(--fg-dim) 20%, transparent);
+	--button--tertiary-fg: var(--color-fg-dim);
+	--button--tertiary-fg-hover: var(--color-fg-main);
+	--button--tertiary-border: color-mix(
+		in srgb,
+		var(--color-fg-dim) 20%,
+		transparent
+	);
 	--button--tertiary-border-hover: color-mix(
 		in srgb,
-		var(--fg-main) 40%,
+		var(--color-fg-main) 40%,
 		transparent
 	);
 
-	--button--green-bg: var(--accent-green);
-	--button--green-bg-hover: color-mix(in srgb, var(--accent-green) 90%, white);
-	--button--green-fg: var(--bg-main);
-	--button--green-fg-hover: var(--bg-main);
+	--button--green-bg: var(--color-accent-green);
+	--button--green-bg-hover: color-mix(
+		in srgb,
+		var(--color-accent-green) 90%,
+		white
+	);
+	--button--green-fg: var(--color-bg-main);
+	--button--green-fg-hover: var(--color-bg-main);
 	--button--green-border: transparent;
 	--button--green-border-hover: transparent;
 
-	--button--red-bg: var(--accent-red);
-	--button--red-bg-hover: color-mix(in srgb, var(--accent-red) 90%, white);
-	--button--red-fg: var(--bg-main);
-	--button--red-fg-hover: var(--bg-main);
+	--button--red-bg: var(--color-accent-red);
+	--button--red-bg-hover: color-mix(
+		in srgb,
+		var(--color-accent-red) 90%,
+		white
+	);
+	--button--red-fg: var(--color-bg-main);
+	--button--red-fg-hover: var(--color-bg-main);
 	--button--red-border: transparent;
 	--button--red-border-hover: transparent;
 
-	--button--yellow-bg: var(--accent-yellow);
+	--button--yellow-bg: var(--color-accent-yellow);
 	--button--yellow-bg-hover: color-mix(
 		in srgb,
-		var(--accent-yellow) 90%,
+		var(--color-accent-yellow) 90%,
 		white
 	);
-	--button--yellow-fg: var(--bg-main);
-	--button--yellow-fg-hover: var(--bg-main);
+	--button--yellow-fg: var(--color-bg-main);
+	--button--yellow-fg-hover: var(--color-bg-main);
 	--button--yellow-border: transparent;
 	--button--yellow-border-hover: transparent;
 
-	--carousel-arrow-container-height: calc(
-		100% - var(--carousel-section-spacing) - var(--carousel-thumb-height)
+	// Carousel
+	--carousel--arrow-container-height: calc(
+		100% - var(--carousel--section-spacing) - var(--carousel--thumb-height)
 	);
-	// 24px = icon size
-	--carousel-arrow-size: calc(24px + var(--spacing-sm) * 3);
-	--carousel-section-spacing: 30px;
-	--carousel-thumb-height: 8px;
+	--carousel--arrow-size: calc(var(--icon--size-lg) + var(--spacing-sm) * 3);
+	--carousel--section-spacing: 30px;
+	--carousel--thumb-height: 8px;
 
+	// Dialog
 	--dialog--spacing-container: var(--spacing-lg);
 	--dialog--spacing-content: 30px;
 	--dialog--window-control-size: 25px;
 	--dialog--window-control-spacing: 18px;
 
+	// Text field
 	--text-field--spacing-inline: 18px;
 
-	--text-field--normal-bg: var(--bg-main);
-	--text-field--normal-fg-placeholder: var(--fg-dim);
+	--text-field--normal-bg: var(--color-bg-main);
+	--text-field--normal-fg-placeholder: var(--color-fg-dim);
 	--text-field--normal-border: transparent;
 
 	--text-field--search-bg: color-mix(
 		in srgb,
-		var(--bg-tertiary) 20%,
+		var(--color-bg-tertiary) 20%,
 		transparent
 	);
 	--text-field--search-fg-placeholder: var(--color-secondary);
 	--text-field--search-border: transparent;
 
 	--text-field--transparent-bg: transparent;
-	--text-field--transparent-fg-placeholder: var(--bg-hover);
-	--text-field--transparent-border: var(--bg-hover);
+	--text-field--transparent-fg-placeholder: var(--color-bg-hover);
+	--text-field--transparent-border: var(--color-bg-hover);
 
-	--toggle--swatch-bg: var(--bg-hover);
+	// Toggle
+	--toggle--swatch-bg: var(--color-bg-hover);
 	--toggle--swatch-bg-checked: var(--color-primary);
 	--toggle--swatch-pos: calc(
 		100% - var(--toggle--swatch-size) - var(--spacing-md)
 	);
 	--toggle--swatch-size: 20px;
 
-	--toggle--switch-bg: var(--bg-hl);
-	--toggle--switch-bg-checked: var(--bg-tertiary);
+	--toggle--switch-bg: var(--color-bg-hl);
+	--toggle--switch-bg-checked: var(--color-bg-tertiary);
 	--toggle--switch-size: 63px;
 	--toggle--switch-spacing: var(--spacing-xs);
+
+	// Other
+	--sidebar-width: 299px;
+	--transition: ease-in 100ms;
 
 	@media (prefers-reduced-motion) {
 		--transition: none;

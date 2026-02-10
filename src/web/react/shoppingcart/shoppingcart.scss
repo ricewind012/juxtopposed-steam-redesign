@@ -4,22 +4,22 @@
 }
 
 #CartNoteText {
-	color: var(--fg-main);
+	color: var(--color-fg-main);
 }
 
 #CartRightColStickyCtn {
-	border-radius: var(--border-radius-large);
+	border-radius: var(--radius-lg);
 
 	max-width: var(--shoppingcart_right-col-size);
 }
 
 #CartSummaryCtn {
-	background-color: var(--bg-main-50);
+	background-color: var(--color-bg-main-50);
 	padding: var(--spacing-lg);
 }
 
 #LicenseContextCtn {
-	background: var(--bg-main-50);
+	background: var(--color-bg-main-50);
 	padding: var(--spacing-lg);
 
 	img {
@@ -28,13 +28,13 @@
 }
 
 #LicenseLink {
-	color: var(--fg-dim);
-	font: var(--gpText-BodySmall);
+	color: var(--color-fg-dim);
+	font: var(--text--body-small);
 }
 
 #LicenseTitle {
-	color: var(--fg-main);
-	font: var(--gpText-BodyLarge);
+	color: var(--color-fg-main);
+	font: var(--text--body-large);
 	margin-bottom: var(--spacing-sm);
 }
 
@@ -48,8 +48,8 @@
 }
 
 #ShoppingCartHeader {
-	color: var(--fg-main);
-	font: var(--gpText-HeadingLarge);
+	color: var(--color-fg-main);
+	font: var(--text--heading-large);
 	margin-block: var(--top-content-margin) 46px;
 }
 

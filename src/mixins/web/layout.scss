@@ -1,6 +1,6 @@
 @mixin sidebar-container {
-	background-color: var(--bg-main);
-	border-radius: var(--border-radius-large);
+	background-color: var(--color-bg-main);
+	border-radius: var(--radius-lg);
 	padding: var(--spacing-md);
 
 	min-width: var(--sidebar-width);
@@ -8,11 +8,11 @@
 
 @mixin sidebar-item($active-selector) {
 	background: transparent;
-	border-radius: var(--border-radius);
+	border-radius: var(--rounding-md);
 	padding: 8px 13px;
 	margin-bottom: var(--spacing-xs);
 
 	&:is(:hover, #{$active-selector}) {
-		background: var(--bg-hover);
+		background: var(--color-bg-hover);
 	}
 }

@@ -11,7 +11,7 @@
 
 	&:where(#Active) {
 		background-color: var(--color-primary);
-		color: var(--bg-main);
+		color: var(--color-bg-main);
 	}
 
 	&:where(#Combobox) {
@@ -50,7 +50,7 @@
 
 #FocusedScreenshotError {
 	background-color: #000;
-	color: var(--fg-main);
+	color: var(--color-fg-main);
 
 	#Caution {
 		--size: 80px;
@@ -63,7 +63,7 @@
 
 	#Message {
 		color: inherit;
-		font: var(--gpText-BodyLarge);
+		font: var(--text--body-large);
 	}
 }
 
@@ -82,7 +82,7 @@
 	}
 
 	#Metadata {
-		color: var(--fg-dim);
+		color: var(--color-fg-dim);
 		font: inherit;
 	}
 }
@@ -108,7 +108,7 @@
 
 	#StickyHeader {
 		backdrop-filter: blur(20px);
-		background: var(--bg-main-50);
+		background: var(--color-bg-main-50);
 		border: none;
 		box-shadow: none;
 		gap: var(--spacing-sm);
@@ -117,7 +117,7 @@
 		width: 100%;
 
 		#ButtonBox:not(:hover, #Active) {
-			--bg-hl: var(--bg-main-50);
+			--color-bg-hl: var(--color-bg-main-50);
 		}
 	}
 }
@@ -127,8 +127,8 @@
 }
 
 #TopListTitle {
-	color: var(--fg-main);
-	font: var(--gpText-HeadingLarge);
+	color: var(--color-fg-main);
+	font: var(--text--heading-large);
 	text-transform: none;
 	padding: 0;
 
@@ -170,7 +170,7 @@
 }
 
 #UploadedIcon {
-	color: var(--fg-main);
+	color: var(--color-fg-main);
 	margin-inline-end: var(--spacing-xs);
 
 	width: var(--icon-size);

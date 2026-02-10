@@ -1,8 +1,8 @@
 @use "shared/controls";
 
 .customization_controls {
-	background-color: var(--bg-main);
-	border-radius: var(--border-radius-large) var(--border-radius-large) 0 0;
+	background-color: var(--color-bg-main);
+	border-radius: var(--radius-lg) var(--radius-lg) 0 0;
 	padding: var(--spacing-lg);
 	margin: 0;
 
@@ -55,7 +55,7 @@
 	}
 
 	.profile_customization_block {
-		background-color: var(--bg-hl);
+		background-color: var(--color-bg-hl);
 	}
 
 	.showcase_content_bg {
@@ -70,11 +70,11 @@
 	// This looks much better
 	input[type="text"],
 	textarea {
-		background-color: var(--bg-main-20);
+		background-color: var(--color-bg-main-20);
 		border: none;
 
 		&:hover {
-			background-color: var(--bg-main-50);
+			background-color: var(--color-bg-main-50);
 		}
 	}
 }
@@ -85,15 +85,15 @@
 		var(--gradient-showcase-header-left) 0%,
 		var(--color-showcase-header) 90%
 	);
-	font: var(--gpText-BodyLarge);
-	color: var(--fg-main);
+	font: var(--text--body-large);
+	color: var(--color-fg-main);
 	padding: var(--spacing-sm);
 	margin: 0;
 }
 
 .profile_showcase_drag_and_drop_highlight {
-	border: 2px dashed var(--fg-main);
-	background-color: var(--fg-dim);
+	border: var(--border-md) dashed var(--color-fg-main);
+	background-color: var(--color-fg-dim);
 	margin-block: 0 var(--spacing-lg);
 }
 
@@ -132,8 +132,8 @@
 }
 
 .showcase_preview_ctn {
-	background-color: var(--bg-main);
-	border-radius: 0 0 var(--border-radius-large) var(--border-radius-large);
+	background-color: var(--color-bg-main);
+	border-radius: 0 0 var(--radius-lg) var(--radius-lg);
 	padding: var(--spacing-lg);
 	padding-top: 0;
 

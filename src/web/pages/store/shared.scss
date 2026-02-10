@@ -3,7 +3,7 @@
 @use "web/store";
 
 // Differences from the original mockup:
-// - The live broadcast icon uses --bg-main-50 instead of --bg-hl to make it
+// - The live broadcast icon uses --color-bg-main-50 instead of --color-bg-hl to make it
 //   consistent with the rest of in-capsule content
 
 .broadcast_live_stream_icon {
@@ -12,8 +12,8 @@
 
 	@include store.capsule-icon;
 
-	color: var(--accent-red);
-	font: var(--gpText-BodyMedium);
+	color: var(--color-accent-red);
+	font: var(--text--body-medium);
 	letter-spacing: 0;
 	box-shadow: none;
 	gap: var(--spacing-xs);
@@ -37,18 +37,20 @@
 }
 
 .carousel_container {
-	--carousel-item-count: 4;
-	--carousel-item-width: 100%;
+	--carousel--item-count: 4;
+	--carousel--item-width: 100%;
 
 	// calculations for image width
-	--item-count-x2f5: calc(var(--carousel-item-count) * 2.5);
+	--item-count-x2f5: calc(var(--carousel--item-count) * 2.5);
 	--container-width: calc(
-		var(--store-page-width) - var(--carousel-arrow-size) * 2
+		var(--store-page-width) - var(--carousel--arrow-size) * 2
 	);
 	--item-width: calc(
 		var(--container-width) - var(--spacing-md) * var(--item-count-x2f5)
 	);
-	--carousel-image-width: calc(var(--item-width) / var(--carousel-item-count));
+	--carousel--image-width: calc(
+		var(--item-width) / var(--carousel--item-count)
+	);
 
 	.arrow {
 		@include carousel.arrow(
@@ -66,7 +68,7 @@
 	}
 
 	.carousel_thumbs[style="visibility: hidden;"] ~ .arrow {
-		color: var(--fg-dim);
+		color: var(--color-fg-dim);
 
 		height: 100%;
 
@@ -84,20 +86,20 @@
 			transition: opacity var(--transition);
 
 			justify-content: space-between;
-			width: var(--carousel-item-width);
+			width: var(--carousel--item-width);
 		}
 
 		&:not(.no_paging) > :not(.focus) {
-			--carousel-item-width: calc(100% - var(--carousel-arrow-size) * 2);
+			--carousel--item-width: calc(100% - var(--carousel--arrow-size) * 2);
 
 			inset-block-start: var(--spacing-lg);
-			inset-inline: var(--carousel-arrow-size);
+			inset-inline: var(--carousel--arrow-size);
 		}
 	}
 
 	.carousel_thumbs {
 		gap: var(--spacing-sm);
-		padding-block: var(--carousel-section-spacing) 0;
+		padding-block: var(--carousel--section-spacing) 0;
 
 		display: flex;
 		justify-content: center;
@@ -161,10 +163,10 @@
 }
 
 .game_review_summary {
-	color: color-mix(in srgb, var(--accent-red) 50%, white);
+	color: color-mix(in srgb, var(--color-accent-red) 50%, white);
 
 	&.mixed {
-		color: var(--accent-yellow);
+		color: var(--color-accent-yellow);
 	}
 
 	&.positive {
@@ -173,7 +175,7 @@
 
 	&.no_reviews,
 	&.not_enough_reviews {
-		color: var(--fg-dim);
+		color: var(--color-fg-dim);
 	}
 }
 
@@ -186,7 +188,7 @@
 	inset-block-end: 0;
 
 	.discount_original_price {
-		color: var(--fg-dim);
+		color: var(--color-fg-dim);
 	}
 }
 

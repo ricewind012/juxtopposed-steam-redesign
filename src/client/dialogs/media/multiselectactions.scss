@@ -21,25 +21,25 @@
 		}
 
 		#CancelButton {
-			background-color: var(--bg-hl);
+			background-color: var(--color-bg-hl);
 		}
 	}
 
 	#ExplainerText {
-		color: var(--fg-main);
-		font: var(--gpText-BodyMedium);
+		color: var(--color-fg-main);
+		font: var(--text--body-medium);
 		margin-block: var(--dialog--spacing-content);
 	}
 
 	#Title {
-		color: var(--fg-main);
-		font: var(--gpText-HeadingSmall);
+		color: var(--color-fg-main);
+		font: var(--text--heading-small);
 		margin: 0;
 	}
 }
 
 #MultiSelectActionDialogContainer {
-	background-color: var(--bg-main);
-	border-radius: var(--border-radius);
+	background-color: var(--color-bg-main);
+	border-radius: var(--rounding-md);
 	box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.25);
 }

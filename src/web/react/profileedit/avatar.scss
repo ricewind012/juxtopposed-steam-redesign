@@ -5,8 +5,8 @@
 }
 
 #AvatarDialogUploadArea {
-	color: var(--fg-dim);
-	font: var(--gpText-BodyMedium);
+	color: var(--color-fg-dim);
+	font: var(--text--body-medium);
 	margin: 0;
 }
 
@@ -15,6 +15,6 @@
 
 	#size {
 		padding-top: var(--spacing-md);
-		font: var(--gpText-BodySmall);
+		font: var(--text--body-small);
 	}
 }

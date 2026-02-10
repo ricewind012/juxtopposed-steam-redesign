@@ -10,11 +10,11 @@
 }
 
 #Error {
-	color: var(--accent-red);
+	color: var(--color-accent-red);
 }
 
 #Title {
-	color: var(--fg-main);
-	font: var(--gpText-HeadingLarge);
+	color: var(--color-fg-main);
+	font: var(--text--heading-large);
 	margin-block-end: var(--spacing-sm);
 }

@@ -23,7 +23,7 @@
 	margin-block: var(--spacing-sm) 0;
 
 	&#Error {
-		color: var(--accent-red);
+		color: var(--color-accent-red);
 	}
 
 	&#Info {
@@ -31,6 +31,6 @@
 	}
 
 	&#Warning {
-		color: var(--accent-yellow);
+		color: var(--color-accent-yellow);
 	}
 }

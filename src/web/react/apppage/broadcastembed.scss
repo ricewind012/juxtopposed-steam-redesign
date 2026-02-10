@@ -6,13 +6,13 @@
 	background-image: none;
 
 	&:not(:hover) {
-		color: var(--fg-dim);
+		color: var(--color-fg-dim);
 	}
 }
 
 #bordered_container {
-	background: var(--bg-main-50);
-	border-radius: var(--border-radius-large);
+	background: var(--color-bg-main-50);
+	border-radius: var(--radius-lg);
 	// TODO: xxl
 	padding: 25px;
 	margin-block-start: var(--spacing-sm);
@@ -36,8 +36,8 @@
 #bordered_title {
 	--icon-size: 1lh;
 
-	color: var(--fg-main);
-	font: var(--gpText-HeadingSmall);
+	color: var(--color-fg-main);
+	font: var(--text--heading-small);
 	letter-spacing: 0;
 	text-transform: none;
 	gap: var(--spacing-sm);
@@ -62,7 +62,7 @@
 }
 
 #container {
-	border-radius: var(--border-radius);
+	border-radius: var(--rounding-md);
 	margin-block-start: var(--spacing-sm);
 }
 
@@ -72,5 +72,5 @@
 }
 
 #viewer_bar {
-	background: var(--bg-main-50);
+	background: var(--color-bg-main-50);
 }

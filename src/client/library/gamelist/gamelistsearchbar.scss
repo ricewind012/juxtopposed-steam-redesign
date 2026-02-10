@@ -6,7 +6,7 @@
 #AdvancedSearchButton {
 	@include gamelist.icon-button("filter", "#ContainerHide");
 
-	color: var(--fg-dim);
+	color: var(--color-fg-dim);
 
 	min-width: unset;
 
@@ -27,8 +27,8 @@
 }
 
 #AdvancedSearchPane {
-	background-color: var(--bg-main);
-	border-radius: var(--border-radius-large);
+	background-color: var(--color-bg-main);
+	border-radius: var(--radius-lg);
 	box-shadow: none;
 
 	top: 100%;
@@ -40,7 +40,7 @@
 }
 
 #Container {
-	--text-field--search-bg: var(--bg-main-20);
+	--text-field--search-bg: var(--color-bg-main-20);
 
 	@include gamelist.part-container;
 
@@ -110,14 +110,14 @@
 		margin-left: 6px;
 
 		&:hover {
-			color: var(--fg-main);
+			color: var(--color-fg-main);
 		}
 	}
 }
 
 #SearchByTypePrompt {
 	color: var(--color-secondary);
-	font: var(--gpText-BodyLarge);
+	font: var(--text--body-large);
 	padding: 4px 0;
 }
 

@@ -19,30 +19,30 @@ $-others: ":where(#StandaloneFieldSeparator, .DialogControlsSection)";
 
 	// TODO: remove .DialogBody ? where else is #Field used other than gameinfo?
 	.DialogBody > & {
-		background-color: var(--bg-main-50);
+		background-color: var(--color-bg-main-50);
 		padding-inline: var(--spacing-lg);
 	}
 
 	.DialogBody > &:nth-child(-n + 1 of &) {
-		border-radius: var(--border-radius-large) var(--border-radius-large) 0 0;
+		border-radius: var(--radius-lg) var(--radius-lg) 0 0;
 	}
 
 	.DialogBody > &:has(+ #{$-others}) {
-		border-radius: 0 0 var(--border-radius-large) var(--border-radius-large);
+		border-radius: 0 0 var(--radius-lg) var(--radius-lg);
 	}
 
 	.DialogBody > &:nth-last-child(-n + 1 of &) {
-		border-radius: 0 0 var(--border-radius-large) var(--border-radius-large);
+		border-radius: 0 0 var(--radius-lg) var(--radius-lg);
 	}
 
 	.DialogBody > #{$-others} + & {
-		border-radius: var(--border-radius-large) var(--border-radius-large) 0 0;
+		border-radius: var(--radius-lg) var(--radius-lg) 0 0;
 		margin-block-start: var(--spacing-lg);
 	}
 
 	&:only-child,
 	.DialogBody > #{$-others} + &:last-child {
-		border-radius: var(--border-radius-large);
+		border-radius: var(--radius-lg);
 	}
 
 	&#WithDescription {
@@ -68,8 +68,8 @@ $-others: ":where(#StandaloneFieldSeparator, .DialogControlsSection)";
 }
 
 #FieldDescription {
-	color: var(--fg-dim);
-	font: var(--gpText-BodyMedium);
+	color: var(--color-fg-dim);
+	font: var(--text--body-medium);
 	margin-block-start: var(--spacing-sm);
 }
 
@@ -79,10 +79,10 @@ $-others: ":where(#StandaloneFieldSeparator, .DialogControlsSection)";
 }
 
 #FieldLabel {
-	color: var(--fg-main);
+	color: var(--color-fg-main);
 	// Originally HeadingSmall, but it doesn't fit everywhere on the original
 	// settings dialog size.
-	font: var(--gpText-BodyLarge);
+	font: var(--text--body-large);
 
 	// For #accountsettings_EntryValue
 	overflow: hidden;
@@ -97,11 +97,11 @@ $-others: ":where(#StandaloneFieldSeparator, .DialogControlsSection)";
 }
 
 #LabelFieldValue {
-	color: var(--fg-dim);
+	color: var(--color-fg-dim);
 }
 
 #StandaloneFieldSeparator {
-	background-color: var(--bg-hover);
+	background-color: var(--color-bg-hover);
 
 	.DialogBody > & {
 		display: none;

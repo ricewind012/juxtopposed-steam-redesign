@@ -2,14 +2,14 @@
 @use "shared/utils";
 
 %-phase-grid-item {
-	background-color: var(--bg-hl);
-	color: var(--fg-dim);
+	background-color: var(--color-bg-hl);
+	color: var(--color-fg-dim);
 	font: inherit;
 	padding: var(--spacing-sm);
 
 	#Date {
-		color: var(--fg-main);
-		font: var(--gpText-HeadingSmall);
+		color: var(--color-fg-main);
+		font: var(--text--heading-small);
 	}
 }
 
@@ -21,8 +21,8 @@
 }
 
 #DateHeader {
-	color: var(--fg-dim);
-	font: var(--gpText-HeadingMedium);
+	color: var(--color-fg-dim);
+	font: var(--text--heading-medium);
 	margin-block-start: var(--spacing-lg);
 
 	&:first-child {
@@ -31,20 +31,20 @@
 }
 
 #GameHeader {
-	color: var(--fg-dim);
-	font: var(--gpText-BodyMedium);
+	color: var(--color-fg-dim);
+	font: var(--text--body-medium);
 	gap: var(--spacing-xs);
 	margin-block-start: var(--spacing-md);
 
 	#Icon {
-		border-radius: var(--border-radius);
+		border-radius: var(--rounding-md);
 	}
 }
 
 #InputFilter {
 	all: unset;
 
-	--bg-tertiary: var(--bg-main);
+	--color-bg-tertiary: var(--color-bg-main);
 	--spacing-sm: var(--spacing-xs);
 
 	position: relative;
@@ -55,14 +55,18 @@
 		transition: var(--transition);
 
 		&:focus {
-			background-color: color-mix(in srgb, var(--bg-tertiary) 50%, transparent);
+			background-color: color-mix(
+				in srgb,
+				var(--color-bg-tertiary) 50%,
+				transparent
+			);
 		}
 	}
 
 	svg {
 		@include utils.icon("search", true);
 
-		color: var(--fg-dim);
+		color: var(--color-fg-dim);
 
 		position: absolute;
 		inset-inline-end: var(--spacing-md);
@@ -95,7 +99,7 @@
 	#DurationText {
 		color: var(--color);
 		// TODO(vars): monospace typography
-		font: var(--gpText-BodySmall);
+		font: var(--text--body-small);
 		font-family: "Roboto-Mono", "Motiva Sans", sans-serif;
 		font-weight: bold;
 	}
@@ -108,13 +112,13 @@
 		}
 
 		&:has(> [style*="color: rgb(228, 190, 82)"]) {
-			--color: var(--accent-yellow);
+			--color: var(--color-accent-yellow);
 		}
 	}
 
 	#OverflowItem {
-		background-color: var(--bg-main);
-		color: var(--fg-main);
-		font: var(--gpText-BodyMedium);
+		background-color: var(--color-bg-main);
+		color: var(--color-fg-main);
+		font: var(--text--body-medium);
 	}
 }

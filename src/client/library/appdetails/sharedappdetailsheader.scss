@@ -15,7 +15,7 @@
 			180deg,
 			#272e38 0%,
 			color-mix(in srgb, #262d37 9%, transparent) 50%,
-			var(--bg-main) 100%
+			var(--color-bg-main) 100%
 		);
 		mix-blend-mode: color-dodge;
 	}

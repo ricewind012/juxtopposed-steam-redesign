@@ -23,10 +23,10 @@
 }
 
 .ProfilePrivacyDropDown {
-	color: var(--fg-dim);
+	color: var(--color-fg-dim);
 
 	&:not(.readonly):hover {
-		color: var(--fg-main);
+		color: var(--color-fg-main);
 	}
 
 	&.readonly {
@@ -45,7 +45,7 @@
 	@include settings.section;
 
 	color: var(--color-primary);
-	font: var(--gpText-HeadingMedium);
+	font: var(--text--heading-medium);
 	padding-bottom: 0;
 	margin: 0;
 
@@ -58,8 +58,8 @@
 }
 
 .ProfilePrivacyRoot {
-	color: var(--fg-main);
-	font: var(--gpText-BodyLarge);
+	color: var(--color-fg-main);
+	font: var(--text--body-large);
 }
 
 .ProfilePrivacyRoot_Indent {
@@ -68,5 +68,5 @@
 
 .PrivacySaveNotice {
 	color: inherit;
-	font: var(--gpText-BodyLarge);
+	font: var(--text--body-large);
 }

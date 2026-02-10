@@ -7,7 +7,7 @@
 }
 
 #EventSummaryContainer {
-	border-radius: var(--border-radius-large);
+	border-radius: var(--radius-lg);
 
 	inset: var(--spacing-md);
 	width: unset;
@@ -27,7 +27,7 @@
 }
 
 #OtherEvents_MainImageCtn {
-	border-radius: var(--border-radius-large);
+	border-radius: var(--radius-lg);
 
 	@include -horizontal {
 		box-shadow: none;
@@ -40,8 +40,8 @@
 }
 
 #OtherEvents_TextCtn {
-	color: var(--fg-dim);
-	font: var(--gpText-BodyMedium);
+	color: var(--color-fg-dim);
+	font: var(--text--body-medium);
 	padding: 0;
 	margin-block-start: var(--spacing-sm);
 
@@ -58,7 +58,7 @@
 
 #HorizontalTitle,
 #OtherEvents_TextTitle {
-	color: var(--fg-main);
-	font: var(--gpText-HeadingSmall);
+	color: var(--color-fg-main);
+	font: var(--text--heading-small);
 	margin-block-end: var(--spacing-xs);
 }

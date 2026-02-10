@@ -1,8 +1,8 @@
 @use "shared/controls";
 
 %-box {
-	background-color: var(--bg-main-50);
-	border-radius: var(--border-radius);
+	background-color: var(--color-bg-main-50);
+	border-radius: var(--rounding-md);
 
 	min-height: 200px;
 }
@@ -25,19 +25,19 @@
 	}
 
 	.appHubShortcut_Title {
-		font: var(--gpText-BodyMedium);
+		font: var(--text--body-medium);
 	}
 
 	.new_items_num,
 	.new_items_text {
-		color: var(--fg-dim);
-		font: var(--gpText-BodySmall);
+		color: var(--color-fg-dim);
+		font: var(--text--body-small);
 	}
 }
 
 .community_home_app_shortcuts_list_header {
-	color: var(--fg-main);
-	font: var(--gpText-HeadingSmall);
+	color: var(--color-fg-main);
+	font: var(--text--heading-small);
 	text-transform: none;
 }
 
@@ -68,7 +68,7 @@
 		all: unset;
 
 		&::placeholder {
-			color: var(--fg-dim);
+			color: var(--color-fg-dim);
 		}
 	}
 
@@ -93,8 +93,8 @@
 }
 
 .community_home_search_title {
-	color: var(--fg-main);
-	font: var(--gpText-BodyMedium);
+	color: var(--color-fg-main);
+	font: var(--text--body-medium);
 	text-transform: none;
 	padding-bottom: var(--spacing-xs);
 }
@@ -106,7 +106,7 @@
 .community_home_sort_buttons {
 	@include controls.tabs-container;
 
-	color: var(--fg-dim);
+	color: var(--color-fg-dim);
 
 	align-items: center;
 
@@ -120,8 +120,8 @@
 }
 
 .community_home_subtitle {
-	color: var(--fg-dim);
-	font: var(--gpText-BodyLarge);
+	color: var(--color-fg-dim);
+	font: var(--text--body-large);
 	padding: 0;
 }
 
@@ -132,6 +132,6 @@
 }
 
 .community_home_title {
-	color: var(--fg-main);
-	font: var(--gpText-HeadingLarge);
+	color: var(--color-fg-main);
+	font: var(--text--heading-large);
 }

@@ -9,12 +9,12 @@
 #LeftContainer {
 	#Playtime {
 		color: var(--color-primary);
-		font: var(--gpText-HeadingSmall);
+		font: var(--text--heading-small);
 	}
 
 	#RecommendGame {
-		color: var(--fg-dim);
-		font: var(--gpText-BodyLarge);
+		color: var(--color-fg-dim);
+		font: var(--text--body-large);
 	}
 }
 

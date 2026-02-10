@@ -5,7 +5,11 @@
 @use "web/paging";
 
 body.apphub_blue.v6 {
-	background-image: linear-gradient(180deg, var(--bg-hl), var(--bg-tertiary));
+	background-image: linear-gradient(
+		180deg,
+		var(--color-bg-hl),
+		var(--color-bg-tertiary)
+	);
 }
 
 .browseOption {
@@ -14,7 +18,7 @@ body.apphub_blue.v6 {
 	margin-inline: 0;
 
 	.browseOptionImage ~ & {
-		background-color: var(--bg-hover);
+		background-color: var(--color-bg-hover);
 	}
 
 	a {
@@ -39,7 +43,7 @@ body.apphub_blue.v6 {
 		all: unset;
 
 		gap: var(--spacing-xs);
-		font: var(--gpText-BodyLarge);
+		font: var(--text--body-large);
 
 		display: flex;
 		align-items: center;
@@ -47,8 +51,8 @@ body.apphub_blue.v6 {
 }
 
 .flags_incompatible_desc {
-	color: var(--fg-dim);
-	font: var(--gpText-BodyMedium);
+	color: var(--color-fg-dim);
+	font: var(--text--body-medium);
 	margin: 0;
 }
 
@@ -119,8 +123,8 @@ body.apphub_blue.v6 {
 }
 
 .rightSectionMinorText {
-	color: var(--fg-dim);
-	font: var(--gpText-BodySmall);
+	color: var(--color-fg-dim);
+	font: var(--text--body-small);
 	margin-bottom: var(--spacing-sm);
 }
 
@@ -129,8 +133,8 @@ body.apphub_blue.v6 {
 }
 
 .rightSectionTopTitle {
-	color: var(--fg-main);
-	font: var(--gpText-BodyLarge);
+	color: var(--color-fg-main);
+	font: var(--text--body-large);
 	text-transform: none;
 	padding: 0;
 	margin-bottom: var(--spacing-sm);
@@ -140,8 +144,8 @@ body.apphub_blue.v6 {
 	margin: 0;
 
 	.workshop_browsing {
-		color: var(--fg-main);
-		font: var(--gpText-HeadingLarge);
+		color: var(--color-fg-main);
+		font: var(--text--heading-large);
 	}
 
 	.workshop_browsing_section {
@@ -150,10 +154,10 @@ body.apphub_blue.v6 {
 }
 
 .tag_category_desc {
-	color: var(--fg-main);
-	font: var(--gpText-BodyLarge);
+	color: var(--color-fg-main);
+	font: var(--text--body-large);
 	text-transform: none;
-	border-block-start: 1px solid var(--bg-hl);
+	border-block-start: var(--border-sm) solid var(--color-bg-hl);
 	padding-block-start: var(--spacing-md);
 	margin-block: var(--spacing-md) var(--spacing-sm);
 }
@@ -165,7 +169,7 @@ body.apphub_blue.v6 {
 	margin-left: auto;
 
 	&:not(:hover) {
-		color: var(--fg-dim);
+		color: var(--color-fg-dim);
 	}
 }
 
@@ -182,14 +186,14 @@ body.apphub_blue.v6 {
 }
 
 .workshopBrowsePaging {
-	font: var(--gpText-BodyLarge);
+	font: var(--text--body-large);
 	padding: 0;
 
 	align-items: center;
 	justify-content: space-between;
 
 	& > :first-child > a:not(:hover) {
-		color: var(--fg-dim);
+		color: var(--color-fg-dim);
 	}
 
 	.pagination_space {
@@ -216,8 +220,8 @@ body.apphub_blue.v6 {
 
 .workshopBrowsePagingWithBG {
 	background-color: transparent;
-	color: var(--fg-dim);
-	font: var(--gpText-BodyLarge);
+	color: var(--color-fg-dim);
+	font: var(--text--body-large);
 	padding: 0;
 	margin-block: 0 var(--spacing-sm);
 
@@ -238,15 +242,15 @@ body.apphub_blue.v6 {
 }
 
 .workshopItem {
-	background-color: var(--bg-main-50);
-	border-radius: var(--border-radius-large);
+	background-color: var(--color-bg-main-50);
+	border-radius: var(--radius-lg);
 	padding: var(--spacing-md);
 	margin: 0;
 
 	.general_btn.subscribe {
 		--size: calc(var(--icon-size) + var(--spacing-lg));
 
-		background-color: var(--bg-main-50);
+		background-color: var(--color-bg-main-50);
 
 		min-width: var(--size);
 		min-height: var(--size);
@@ -264,13 +268,13 @@ body.apphub_blue.v6 {
 }
 
 .workshopItemAuthorName {
-	color: var(--fg-dim);
-	font: var(--gpText-BodySmall);
+	color: var(--color-fg-dim);
+	font: var(--text--body-small);
 	margin-top: var(--spacing-xs);
 }
 
 .workshopItemPreviewHolder {
-	border-radius: var(--border-radius);
+	border-radius: var(--rounding-md);
 	box-shadow: none;
 }
 
@@ -280,7 +284,7 @@ body.apphub_blue.v6 {
 }
 
 .workshopItemTitle {
-	color: var(--fg-main);
-	font: var(--gpText-HeadingSmall);
+	color: var(--color-fg-main);
+	font: var(--text--heading-small);
 	margin: 0;
 }

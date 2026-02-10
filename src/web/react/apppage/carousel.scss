@@ -9,7 +9,7 @@
 }
 
 #carouselBody {
-	--carousel-arrow-container-height: 100%;
+	--carousel--arrow-container-height: 100%;
 
 	@include carousel.container;
 
@@ -27,7 +27,7 @@
 
 	svg {
 		opacity: 1;
-		color: var(--fg-main);
+		color: var(--color-fg-main);
 
 		* {
 			display: none;
@@ -37,14 +37,14 @@
 
 #pipScrollerContainer {
 	margin: 0;
-	margin-block-start: var(--carousel-section-spacing);
+	margin-block-start: var(--carousel--section-spacing);
 
-	height: var(--carousel-thumb-height);
+	height: var(--carousel--thumb-height);
 
 	#scrollBackground {
 		@extend %-thumb-base;
 
-		background-color: var(--bg-main);
+		background-color: var(--color-bg-main);
 	}
 
 	#scrollForeground {

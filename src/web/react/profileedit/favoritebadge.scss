@@ -1,10 +1,10 @@
 #BadgeDetails {
-	color: var(--fg-main);
-	font: var(--gpText-HeadingSmall);
+	color: var(--color-fg-main);
+	font: var(--text--heading-small);
 
 	#GameName {
-		color: var(--fg-dim);
-		font: var(--gpText-BodyLarge);
+		color: var(--color-fg-dim);
+		font: var(--text--body-large);
 	}
 }
 

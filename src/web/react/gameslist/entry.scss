@@ -6,9 +6,9 @@
 // design.
 
 #AchievementContainer {
-	background-color: var(--bg-main);
-	color: var(--fg-dim);
-	border-radius: var(--border-radius);
+	background-color: var(--color-bg-main);
+	color: var(--color-fg-dim);
+	border-radius: var(--rounding-md);
 	gap: var(--spacing-lg);
 	padding: var(--spacing-md);
 	padding-left: calc(var(--spacing-md) + var(--icon-size) + 16px);
@@ -28,7 +28,7 @@
 }
 
 #AchievementsFraction {
-	font: var(--gpText-BodySmall);
+	font: var(--text--body-small);
 	margin-top: 0.125em;
 
 	min-width: 3rem;
@@ -56,14 +56,14 @@
 
 		@include utils.icon("clock");
 
-		color: color-mix(in srgb, var(--fg-dim) 50%, transparent);
+		color: color-mix(in srgb, var(--color-fg-dim) 50%, transparent);
 
 		display: block;
 	}
 }
 
 #GameItemPortrait img {
-	border-radius: var(--border-radius);
+	border-radius: var(--rounding-md);
 }
 
 #GameLinksButton {
@@ -74,7 +74,7 @@
 }
 
 #GameName {
-	font: var(--gpText-BodyLarge);
+	font: var(--text--body-large);
 	padding: 0;
 }
 
@@ -88,7 +88,7 @@
 	--spacing-lg: calc(var(--padding) * 1.5);
 	--spacing-xl: calc(var(--padding) * 2);
 
-	background-color: var(--bg-main-50);
+	background-color: var(--color-bg-main-50);
 	row-gap: 8px;
 }
 
@@ -97,8 +97,8 @@
 #LastPlayed {
 	--offset: calc(var(--spacing-md) * 4 + var(--spacing-xl));
 
-	color: var(--fg-main);
-	font: var(--gpText-BodySmall);
+	color: var(--color-fg-main);
+	font: var(--text--body-small);
 	gap: var(--spacing-sm);
 
 	position: absolute;

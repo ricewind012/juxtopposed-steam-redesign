@@ -6,10 +6,10 @@
 
 	background-color: color-mix(
 		in srgb,
-		var(--fg-dim) var(--percentage),
+		var(--color-fg-dim) var(--percentage),
 		transparent
 	);
-	border-radius: var(--border-radius);
+	border-radius: var(--rounding-md);
 	padding: var(--spacing-xs);
 
 	&:hover {
@@ -21,7 +21,7 @@
 	}
 
 	&#{$active-selector} {
-		--fg-dim: var(--color-primary);
+		--color-fg-dim: var(--color-primary);
 	}
 
 	svg {
@@ -30,7 +30,7 @@
 }
 
 @mixin part-container {
-	background-color: var(--bg-tertiary);
+	background-color: var(--color-bg-tertiary);
 	gap: 7px;
 	padding: var(--spacing-sm);
 }

@@ -1,22 +1,22 @@
 #DescriptionValue {
-	color: var(--fg-dim);
+	color: var(--color-fg-dim);
 
 	display: inline-flex;
 }
 
 #LabelText {
-	font: var(--gpText-HeadingSmall);
+	font: var(--text--heading-small);
 
 	display: inline-flex;
 	width: calc(100% - 3ch);
 }
 
 #SliderHandle {
-	background-color: var(--fg-main);
-	box-shadow: 0 0 6px var(--bg-main);
+	background-color: var(--color-fg-main);
+	box-shadow: 0 0 6px var(--color-bg-main);
 }
 
 #SliderTrack {
 	--left-track-color: var(--color-primary);
-	background-color: var(--bg-hl);
+	background-color: var(--color-bg-hl);
 }

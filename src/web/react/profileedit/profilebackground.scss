@@ -3,7 +3,7 @@
 
 	#BackgroundOption#Active & {
 		#App {
-			color: color-mix(in srgb, var(--color-primary) 25%, var(--fg-dim));
+			color: color-mix(in srgb, var(--color-primary) 25%, var(--color-fg-dim));
 		}
 
 		#Title {
@@ -12,12 +12,12 @@
 	}
 
 	#App {
-		color: var(--fg-dim);
-		font: var(--gpText-BodyMedium);
+		color: var(--color-fg-dim);
+		font: var(--text--body-medium);
 	}
 
 	#Title {
-		font: var(--gpText-HeadingSmall);
+		font: var(--text--heading-small);
 
 		// AMAZING
 		overflow: hidden;

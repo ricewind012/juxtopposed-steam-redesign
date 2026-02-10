@@ -4,14 +4,14 @@
 
 #DiscoveryQueue {
 	--badge-offset: var(--spacing-md);
-	--overlay-bg: var(--bg-main);
+	--overlay-bg: var(--color-bg-main);
 
-	border-radius: var(--border-radius);
+	border-radius: var(--rounding-md);
 	padding: var(--spacing-md);
 	margin: 0;
 
 	&:hover {
-		--overlay-bg: var(--bg-hover);
+		--overlay-bg: var(--color-bg-hover);
 	}
 
 	#BackgroundOverlay {
@@ -33,8 +33,8 @@
 	#New {
 		@include store.capsule-icon;
 
-		color: var(--accent-green);
-		font: var(--gpText-BodyMedium);
+		color: var(--color-accent-green);
+		font: var(--text--body-medium);
 		letter-spacing: 0;
 		padding: var(--spacing-xs);
 
@@ -63,13 +63,13 @@
 		}
 
 		#Description {
-			color: var(--fg-dim);
-			font: var(--gpText-BodyMedium);
+			color: var(--color-fg-dim);
+			font: var(--text--body-medium);
 		}
 
 		#Title {
 			color: inherit;
-			font: var(--gpText-HeadingSmall);
+			font: var(--text--heading-small);
 		}
 	}
 }

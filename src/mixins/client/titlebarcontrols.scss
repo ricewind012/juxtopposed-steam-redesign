@@ -1,13 +1,13 @@
 @use "shared/utils";
 
 @mixin button {
-	background-color: var(--bg-hl);
-	color: var(--fg-dim);
-	border-radius: var(--border-radius);
+	background-color: var(--color-bg-hl);
+	color: var(--color-fg-dim);
+	border-radius: var(--rounding-md);
 	padding: 6px 15px;
 
 	&:hover {
-		background-color: var(--bg-hover);
+		background-color: var(--color-bg-hover);
 	}
 
 	svg {

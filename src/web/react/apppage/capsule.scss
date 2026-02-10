@@ -18,7 +18,7 @@
 	@include store.capsule-icon;
 
 	color: var(--color-primary);
-	font: var(--gpText-BodyMedium);
+	font: var(--text--body-medium);
 	text-transform: none;
 	box-shadow: none;
 	padding: var(--spacing-xs);
@@ -43,7 +43,7 @@
 }
 
 #HeaderCapsuleImageContainer img {
-	border-radius: var(--border-radius-large);
+	border-radius: var(--radius-lg);
 }
 
 #StoreSalePriceWidgetContainer {
@@ -76,7 +76,7 @@
 #TagBox {
 	--tag-height: calc(1lh + 6.5px * 2);
 
-	font: var(--gpText-BodySmall);
+	font: var(--text--body-small);
 
 	max-height: calc(var(--tag-height) * 2 + 4px);
 }

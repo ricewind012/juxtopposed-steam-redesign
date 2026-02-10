@@ -26,13 +26,13 @@
 }
 
 .market_title_text {
-	color: var(--fg-main);
-	font: var(--gpText-HeadingLarge);
+	color: var(--color-fg-main);
+	font: var(--text--heading-large);
 }
 
 .market_subtitle_text {
-	color: var(--fg-dim);
-	font: var(--gpText-HeadingMedium);
+	color: var(--color-fg-dim);
+	font: var(--text--heading-medium);
 }
 
 #BG_top {
@@ -66,7 +66,7 @@
 	}
 
 	.user_info_text {
-		font: var(--gpText-BodyLarge);
+		font: var(--text--body-large);
 		margin: 0;
 
 		display: flex;

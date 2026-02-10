@@ -8,9 +8,9 @@
 	width: var(--sidebar-width);
 
 	& > * {
-		background-color: var(--bg-main-50);
+		background-color: var(--color-bg-main-50);
 		backdrop-filter: blur(20px);
-		border-radius: var(--border-radius-large);
+		border-radius: var(--radius-lg);
 		padding: var(--spacing-md);
 		margin-bottom: var(--spacing-lg);
 	}
@@ -35,27 +35,27 @@
 }
 
 .profile_in_game_header {
-	font: var(--gpText-HeadingMedium);
+	font: var(--text--heading-medium);
 }
 
 .profile_in_game_name {
-	font: var(--gpText-BodyMedium);
+	font: var(--text--body-medium);
 	margin: 0;
 
 	.persona.offline & {
-		color: var(--fg-dim);
+		color: var(--color-fg-dim);
 	}
 }
 
 .profile_ban_status {
-	color: var(--accent-red);
-	font: var(--gpText-BodyMedium);
+	color: var(--color-accent-red);
+	font: var(--text--body-medium);
 	margin-top: var(--spacing-sm);
 	margin-bottom: 0;
 }
 
 .profile_ban_info {
-	color: var(--fg-dim);
+	color: var(--color-fg-dim);
 }
 
 .profile_badges,
@@ -72,8 +72,8 @@
 }
 
 .profile_count_link {
-	background-color: var(--bg-main);
-	border-radius: var(--border-radius);
+	background-color: var(--color-bg-main);
+	border-radius: var(--rounding-md);
 	margin-bottom: 0;
 
 	a {
@@ -82,13 +82,13 @@
 		display: flex;
 
 		&:hover {
-			background-color: var(--bg-hover);
+			background-color: var(--color-bg-hover);
 			color: inherit;
 		}
 	}
 
 	span {
-		font: var(--gpText-BodyLarge);
+		font: var(--text--body-large);
 	}
 
 	.count_link_label {
@@ -98,13 +98,13 @@
 	}
 
 	.profile_count_link_total {
-		color: var(--fg-dim);
+		color: var(--color-fg-dim);
 	}
 }
 
 .profile_count_link_preview_ctn {
-	background-color: var(--bg-main);
-	border-radius: var(--border-radius);
+	background-color: var(--color-bg-main);
+	border-radius: var(--rounding-md);
 
 	.profile_count_link {
 		padding: var(--spacing-sm);
@@ -136,7 +136,7 @@
 
 .profile_group_links,
 .profile_friend_links {
-	background-color: var(--bg-main-50);
+	background-color: var(--color-bg-main-50);
 
 	.profile_count_link {
 		background-color: transparent;
@@ -174,7 +174,7 @@
 }
 
 .profile_group_membercount {
-	color: var(--fg-dim);
+	color: var(--color-fg-dim);
 }
 
 .profile_group {
@@ -193,10 +193,10 @@
 	}
 
 	.whiteLink {
-		font: var(--gpText-BodyLarge);
+		font: var(--text--body-large);
 	}
 }
 
 .profile_in_common {
-	color: var(--fg-dim);
+	color: var(--color-fg-dim);
 }

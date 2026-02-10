@@ -1,20 +1,20 @@
 @use "shared/controls";
 
 @mixin blur {
-	background-color: color-mix(in srgb, var(--bg-hl) 2%, transparent);
+	background-color: color-mix(in srgb, var(--color-bg-hl) 2%, transparent);
 	backdrop-filter: blur(20px);
 }
 
 @mixin button {
 	@include controls.button;
 
-	background: var(--bg-main-20);
+	background: var(--color-bg-main-20);
 	margin: 0;
 }
 
 @mixin section {
 	background: rgba(49, 56, 67, 0.5);
-	border-radius: var(--border-radius-large);
+	border-radius: var(--radius-lg);
 	padding: 25px;
 	margin-block-end: 16px;
 }

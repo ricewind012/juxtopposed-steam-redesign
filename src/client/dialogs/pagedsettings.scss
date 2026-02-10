@@ -6,20 +6,20 @@
 }
 
 #PageListSeparator {
-	background-color: var(--bg-hover);
+	background-color: var(--color-bg-hover);
 	margin-block: var(--spacing-sm);
 	margin-inline: 0;
 }
 
 #PagedSettingsDialog {
-	background-color: var(--bg-main);
+	background-color: var(--color-bg-main);
 }
 
 #PagedSettingsDialog_PageContent {
 	background: linear-gradient(
 		173.45deg,
-		var(--bg-hover) 1.6%,
-		var(--bg-hl) 89.87%
+		var(--color-bg-hover) 1.6%,
+		var(--color-bg-hl) 89.87%
 	);
 	padding: 0 var(--dialog--spacing-container);
 
@@ -43,14 +43,14 @@
 
 	:where(& .DialogButton, & .DialogDropDown) {
 		&:not(:hover) {
-			background-color: var(--bg-main-50);
+			background-color: var(--color-bg-main-50);
 		}
 	}
 
 	:where(& .DialogControlsSection) {
 		@include settings.section;
 
-		background-color: var(--bg-main-50);
+		background-color: var(--color-bg-main-50);
 		margin-block: var(--spacing-lg) 0;
 	}
 
@@ -71,7 +71,7 @@
 }
 
 #PagedSettingsDialog_PageListColumn {
-	background-color: var(--bg-hl);
+	background-color: var(--color-bg-hl);
 	border-radius: 0;
 	padding: 0;
 
@@ -81,13 +81,13 @@
 #PagedSettingsDialog_PageListItem {
 	@include layout.sidebar-item("#Active");
 
-	color: var(--fg-main);
-	font: var(--gpText-BodyLarge);
+	color: var(--color-fg-main);
+	font: var(--text--body-large);
 }
 
 #PagedSettingsDialog_Title {
-	color: var(--fg-main);
-	font: var(--gpText-HeadingLarge);
+	color: var(--color-fg-main);
+	font: var(--text--heading-large);
 	text-transform: none;
 	padding: 0;
 	margin: var(--spacing-md);

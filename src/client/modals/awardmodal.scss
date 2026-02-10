@@ -22,15 +22,15 @@
 	#Button {
 		transition: var(--transition);
 		border: none;
-		border-radius: var(--border-radius-large);
+		border-radius: var(--radius-lg);
 
 		&:hover {
-			background-color: var(--bg-hover);
+			background-color: var(--color-bg-hover);
 		}
 
 		&#Selected {
 			background-color: var(--color-primary);
-			color: var(--bg-main);
+			color: var(--color-bg-main);
 
 			#Label {
 				color: inherit;
@@ -40,12 +40,12 @@
 
 	#Label {
 		color: var(--color-primary);
-		font: var(--gpText-HeadingSmall);
+		font: var(--text--heading-small);
 		letter-spacing: 0;
 	}
 
 	#Points {
-		font: var(--gpText-BodyMedium);
+		font: var(--text--body-medium);
 		letter-spacing: 0;
 	}
 
@@ -56,7 +56,7 @@
 }
 
 #Description {
-	color: var(--fg-dim);
+	color: var(--color-fg-dim);
 	font: inherit;
 }
 
@@ -74,7 +74,7 @@
 
 	#BalanceAmount {
 		color: var(--color-primary);
-		font: var(--gpText-HeadingSmall);
+		font: var(--text--heading-small);
 		letter-spacing: 0;
 	}
 
@@ -95,7 +95,7 @@
 }
 
 #GrantAwardModal {
-	color: var(--fg-main);
+	color: var(--color-fg-main);
 
 	.DialogContent_InnerWidth {
 		gap: var(--spacing-sm);
@@ -103,7 +103,7 @@
 }
 
 #Title {
-	font: var(--gpText-HeadingLarge);
+	font: var(--text--heading-large);
 	letter-spacing: 0;
 	text-transform: none;
 }

@@ -5,19 +5,19 @@
 	align-items: start;
 
 	#FeaturedItemDesc {
-		color: var(--fg-dim);
-		font: var(--gpText-BodySmall);
+		color: var(--color-fg-dim);
+		font: var(--text--body-small);
 		margin-block-end: 7px;
 	}
 
 	#FeaturedItemHeader {
-		color: var(--fg-dim);
-		font: var(--gpText-BodyMedium);
+		color: var(--color-fg-dim);
+		font: var(--text--body-medium);
 		margin-block-end: 7px;
 	}
 
 	#FeaturedItemHideButton {
-		color: var(--fg-dim);
+		color: var(--color-fg-dim);
 		padding: 0;
 
 		inset-block-start: 0;
@@ -26,7 +26,7 @@
 		height: var(--icon-size);
 
 		&:hover {
-			color: var(--fg-main);
+			color: var(--color-fg-main);
 		}
 
 		svg {
@@ -37,7 +37,7 @@
 	#FeaturedItemImage {
 		--size: 160px;
 
-		border-radius: var(--border-radius);
+		border-radius: var(--rounding-md);
 		margin-inline-end: var(--spacing-md);
 
 		width: var(--size);
@@ -47,13 +47,13 @@
 	#FeaturedItemLink {
 		@include style.link;
 
-		font: var(--gpText-BodyLarge);
+		font: var(--text--body-large);
 		padding-block: 7px;
 	}
 
 	#FeaturedItemName {
-		color: var(--fg-main);
-		font: var(--gpText-BodyLarge);
+		color: var(--color-fg-main);
+		font: var(--text--body-large);
 		margin-block-end: 7px;
 	}
 }

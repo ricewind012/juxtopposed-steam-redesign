@@ -36,19 +36,19 @@
 	height: var(--size);
 
 	&.plus_more {
-		background-color: var(--bg-hl);
-		color: var(--fg-main);
+		background-color: var(--color-bg-hl);
+		color: var(--color-fg-main);
 		border: none;
-		border-radius: var(--border-radius);
+		border-radius: var(--rounding-md);
 		box-shadow: none;
 
 		&:hover {
-			background-color: var(--bg-hover);
+			background-color: var(--color-bg-hover);
 		}
 	}
 
 	img {
-		border-radius: var(--border-radius);
+		border-radius: var(--rounding-md);
 
 		width: var(--size);
 		height: var(--size);
@@ -103,7 +103,7 @@
 
 		@include utils.icon;
 
-		color: color-mix(in srgb, var(--fg-dim) 50%, transparent);
+		color: color-mix(in srgb, var(--color-fg-dim) 50%, transparent);
 
 		display: block;
 		position: absolute;
@@ -122,13 +122,13 @@
 }
 
 .game_info_stats {
-	background-color: var(--bg-main-50);
+	background-color: var(--color-bg-main-50);
 	padding: var(--spacing-md);
 	margin-top: var(--spacing-sm);
 }
 
 .game_name {
-	font: var(--gpText-BodyLarge);
+	font: var(--text--body-large);
 	padding: 0;
 
 	display: flex;
@@ -137,7 +137,7 @@
 }
 
 .recent_game {
-	background-color: var(--bg-main-50);
+	background-color: var(--color-bg-main-50);
 	border-radius: 0;
 	margin-bottom: 11px;
 }

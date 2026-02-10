@@ -31,7 +31,7 @@
 }
 
 #FullCategoryList {
-	border-block-start: 1px solid;
+	border-block-start: var(--border-sm) solid;
 	border-image: var(--storemenu_border-gradient) 1;
 	gap: var(--spacing-sm);
 	padding-block-start: var(--spacing-xs);

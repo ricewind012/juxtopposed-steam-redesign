@@ -9,7 +9,7 @@
 #GRModalOptions {
 	@include controls.radio-container;
 
-	background-color: var(--bg-hl);
+	background-color: var(--color-bg-hl);
 	gap: 0;
 
 	flex-basis: unset;

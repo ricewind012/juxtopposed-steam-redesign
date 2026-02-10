@@ -4,7 +4,7 @@
 // TODO: unify with commentthread in client
 
 .commentthread_allcommentslink {
-	font: var(--gpText-BodyMedium);
+	font: var(--text--body-medium);
 }
 
 .commentthread_area {
@@ -29,7 +29,7 @@
 
 .commentthread_comment_author {
 	/* HeadingSmall is too large */
-	font: var(--gpText-BodyLarge);
+	font: var(--text--body-large);
 	font-weight: bold;
 
 	a {
@@ -56,13 +56,13 @@
 }
 
 .commentthread_comment_text {
-	font: var(--gpText-BodyMedium);
-	color: var(--fg-main);
+	font: var(--text--body-medium);
+	color: var(--color-fg-main);
 }
 
 .commentthread_comment_timestamp {
 	font: inherit;
-	color: var(--fg-dim);
+	color: var(--color-fg-dim);
 }
 
 .commentthread_entry {
@@ -75,7 +75,7 @@
 }
 
 .commentthread_entry_error {
-	color: var(--accent-red);
+	color: var(--color-accent-red);
 	/* + 6px from top */
 	padding-bottom: 18px;
 }
@@ -146,8 +146,8 @@
 }
 
 .commentthread_textarea {
-	font: var(--gpText-BodyMedium);
-	color: var(--fg-main);
+	font: var(--text--body-medium);
+	color: var(--color-fg-main);
 	padding: 0;
 	margin: 0;
 }

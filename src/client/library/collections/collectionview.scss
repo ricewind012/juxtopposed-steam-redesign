@@ -31,17 +31,17 @@
 }
 
 #EditButton {
-	--bg: var(--fg-dim);
-	--bg-percentage: 5%;
+	--bg: var(--color-fg-dim);
+	--color-bg-percentage: 5%;
 	--icon-name: icon("settings");
 	--size: 26px;
 
 	background-color: color-mix(
 		in srgb,
-		var(--bg) var(--bg-percentage),
+		var(--bg) var(--color-bg-percentage),
 		transparent
 	);
-	border-radius: var(--border-radius);
+	border-radius: var(--rounding-md);
 	margin: 0;
 
 	order: 1;
@@ -62,7 +62,7 @@
 	}
 
 	&:hover {
-		--bg-percentage: 10%;
+		--color-bg-percentage: 10%;
 	}
 
 	&#Close {
@@ -72,14 +72,14 @@
 	svg {
 		@include utils.icon("name", "line");
 
-		color: var(--fg-dim);
+		color: var(--color-fg-dim);
 		margin: calc((var(--size) - var(--icon-size)) / 2);
 	}
 }
 
 #Header {
-	color: var(--fg-main);
-	font: var(--gpText-HeadingSmall);
+	color: var(--color-fg-main);
+	font: var(--text--heading-small);
 	gap: 9px;
 
 	height: unset;

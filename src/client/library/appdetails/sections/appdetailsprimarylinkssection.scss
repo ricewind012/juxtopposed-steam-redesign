@@ -1,18 +1,18 @@
 #Link {
-	border-radius: var(--border-radius);
+	border-radius: var(--rounding-md);
 	padding: var(--spacing-sm) var(--spacing-lg);
 
 	&:hover {
-		background-color: var(--bg-hl);
+		background-color: var(--color-bg-hl);
 	}
 
 	&:active {
-		background-color: var(--bg-hover);
+		background-color: var(--color-bg-hover);
 	}
 
 	#Text {
-		color: var(--fg-dim);
-		font: var(--gpText-BodyMedium);
+		color: var(--color-fg-dim);
+		font: var(--text--body-medium);
 	}
 }
 

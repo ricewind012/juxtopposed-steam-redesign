@@ -13,8 +13,8 @@
 
 	#Figure {
 		all: initial;
-		color: var(--fg-main);
-		font: var(--gpText-BodyMedium);
+		color: var(--color-fg-main);
+		font: var(--text--body-medium);
 	}
 
 	#LegendBox {
@@ -24,7 +24,7 @@
 		height: var(--icon-size);
 
 		&#Disk {
-			background-color: var(--accent-green);
+			background-color: var(--color-accent-green);
 
 			height: 4px;
 		}
@@ -45,8 +45,8 @@
 
 	#LegendText {
 		all: unset;
-		color: var(--fg-main);
-		font: var(--gpText-HeadingSmall);
+		color: var(--color-fg-main);
+		font: var(--text--heading-small);
 	}
 
 	#Stat {
@@ -63,7 +63,7 @@
 }
 
 #GraphLine {
-	stroke: var(--accent-green);
+	stroke: var(--color-accent-green);
 
 	display: initial;
 }

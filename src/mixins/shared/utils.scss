@@ -17,9 +17,9 @@
 @mixin tooltip-icon {
 	@include icon("info");
 
-	color: var(--fg-dim);
+	color: var(--color-fg-dim);
 
 	&:hover {
-		background-color: var(--fg-main);
+		background-color: var(--color-fg-main);
 	}
 }

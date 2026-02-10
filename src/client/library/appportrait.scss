@@ -7,9 +7,9 @@
 #LibraryItemActionButton {
 	--icon-size: 24px;
 
-	background: color-mix(in srgb, var(--fg-dim) 20%, transparent);
+	background: color-mix(in srgb, var(--color-fg-dim) 20%, transparent);
 	border: none;
-	border-radius: var(--border-radius);
+	border-radius: var(--rounding-md);
 	box-shadow: none;
 	padding: var(--spacing-xs);
 
@@ -35,14 +35,14 @@
 
 	&#InCollection,
 	&#InRecentGames {
-		border-radius: var(--border-radius-large);
+		border-radius: var(--radius-lg);
 
 		// width: var(--appportrait_portrait-width);
 		// height: var(--appportrait_portrait-height);
 	}
 
 	&#InDownloads {
-		border-radius: var(--border-radius);
+		border-radius: var(--rounding-md);
 
 		width: var(--appportrait_landscape-width);
 		height: var(--appportrait_landscape-height);
@@ -55,15 +55,15 @@
 	&#InRecentGames#FeaturedCapsule {
 		background: linear-gradient(
 			190.47deg,
-			color-mix(in srgb, var(--bg-main) 95%, transparent) 13.71%,
+			color-mix(in srgb, var(--color-bg-main) 95%, transparent) 13.71%,
 			color-mix(in srgb, var(--color-secondary) 41.8%, transparent) 91.45%
 		);
 	}
 }
 
 #PlaytimeDetails {
-	color: var(--fg-main);
-	font: var(--gpText-BodySmall);
+	color: var(--color-fg-main);
+	font: var(--text--body-small);
 	gap: 6px;
 	padding: 0;
 
@@ -99,7 +99,7 @@
 }
 
 #RecentGameFooter {
-	background-color: color-mix(in srgb, var(--bg-hl) 2%, transparent);
+	background-color: color-mix(in srgb, var(--color-bg-hl) 2%, transparent);
 
 	height: 74px;
 }

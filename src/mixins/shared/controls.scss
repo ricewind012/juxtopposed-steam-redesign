@@ -26,8 +26,8 @@
 	@include button-vars($variant, $size);
 
 	transition: var(--transition);
-	font: var(--gpText-BodyLarge);
-	border-radius: var(--border-radius);
+	font: var(--text--body-large);
+	border-radius: var(--rounding-md);
 	gap: var(--spacing-xs);
 	padding-inline: var(--button--spacing-inline);
 
@@ -45,10 +45,10 @@
 	@include utils.icon("name");
 
 	appearance: none;
-	color: var(--fg-dim);
+	color: var(--color-fg-dim);
 
 	&:hover {
-		background: var(--fg-main);
+		background: var(--color-fg-main);
 	}
 
 	&#{$checked-selector} {
@@ -56,7 +56,7 @@
 	}
 
 	&#{$disabled-selector} {
-		background: var(--bg-hover);
+		background: var(--color-bg-hover);
 	}
 }
 
@@ -80,15 +80,15 @@
 /// @param {String} $name [name] - Icon name found in `assets/icons`.
 /// @param {Boolean} $remove [true] - Remove every child from `$child`?
 @mixin icon-button($w, $h: $w, $child, $name: "name", $remove: true) {
-	background-color: var(--bg-hl);
-	border-radius: var(--border-radius);
+	background-color: var(--color-bg-hl);
+	border-radius: var(--rounding-md);
 	padding: 0;
 
 	width: #{$w};
 	height: #{$h};
 
 	&:hover {
-		background-color: var(--bg-hover);
+		background-color: var(--color-bg-hover);
 	}
 
 	#{$child} {
@@ -97,7 +97,7 @@
 }
 
 @mixin progress-bar($inner) {
-	background-color: var(--bg-hl);
+	background-color: var(--color-bg-hl);
 	border-radius: 10px;
 	padding: 2px;
 
@@ -111,25 +111,25 @@
 
 @mixin radio($active) {
 	transition: var(--transition);
-	background-color: var(--bg-main-50);
-	font: var(--gpText-HeadingSmall);
+	background-color: var(--color-bg-main-50);
+	font: var(--text--heading-small);
 	padding: var(--spacing-md);
 
 	&:hover {
-		background-color: var(--bg-hover);
+		background-color: var(--color-bg-hover);
 	}
 
 	&:first-child {
-		border-radius: var(--border-radius-large) var(--border-radius-large) 0 0;
+		border-radius: var(--radius-lg) var(--radius-lg) 0 0;
 	}
 
 	&:last-child {
-		border-radius: 0 0 var(--border-radius-large) var(--border-radius-large);
+		border-radius: 0 0 var(--radius-lg) var(--radius-lg);
 	}
 
 	#{$active} {
 		background-color: var(--color-primary);
-		color: var(--bg-main);
+		color: var(--color-bg-main);
 	}
 }
 
@@ -148,23 +148,23 @@
 	}
 
 	& > :first-child {
-		border-radius: var(--border-radius-large) 0 0 var(--border-radius-large);
+		border-radius: var(--radius-lg) 0 0 var(--radius-lg);
 	}
 
 	& > :last-child {
-		border-radius: 0 var(--border-radius-large) var(--border-radius-large) 0;
+		border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
 	}
 }
 
 @mixin radio-description {
 	opacity: 0.5;
-	font: var(--gpText-BodyMedium);
+	font: var(--text--body-medium);
 	margin-block-start: var(--spacing-xs);
 }
 
 @mixin tabs-container {
-	background-color: var(--bg-main);
-	border-radius: var(--border-radius-large);
+	background-color: var(--color-bg-main);
+	border-radius: var(--radius-lg);
 	gap: 5px;
 	padding: 8px;
 
@@ -172,18 +172,18 @@
 }
 
 @mixin tab($active-selector) {
-	color: var(--fg-dim);
-	font: var(--gpText-BodyLarge);
-	border-radius: var(--border-radius);
+	color: var(--color-fg-dim);
+	font: var(--text--body-large);
+	border-radius: var(--rounding-md);
 	padding: 7px 20px;
 
 	&:hover {
-		background-color: var(--bg-hover);
+		background-color: var(--color-bg-hover);
 	}
 
 	&#{$active-selector} {
-		background-color: var(--bg-hl);
-		color: var(--fg-main);
+		background-color: var(--color-bg-hl);
+		color: var(--color-fg-main);
 	}
 }
 
@@ -195,10 +195,10 @@
 	}
 
 	background-color: var(--text-field--#{$variant}-bg);
-	color: var(--fg-main);
-	font: var(--gpText-BodyLarge);
-	border: 1px solid var(--text-field--#{$variant}-border);
-	border-radius: var(--border-radius);
+	color: var(--color-fg-main);
+	font: var(--text--body-large);
+	border: var(--border-sm) solid var(--text-field--#{$variant}-border);
+	border-radius: var(--rounding-md);
 	padding-block: var(--spacing-sm);
 	padding-inline-start: var(--text-field--spacing-inline);
 	padding-inline-end: calc(

@@ -1,16 +1,15 @@
 #Collection {
 	--bg-opacity: 0;
-	--border-width: 2px;
 
 	background-color: transparent;
-	border: var(--border-width) solid transparent;
-	border-radius: var(--border-radius-large);
+	border: var(--border-md) solid transparent;
+	border-radius: var(--radius-lg);
 	box-shadow: none;
 
 	transition: var(--transition);
 
 	&:not(#NewCollection) {
-		background-color: var(--bg-hl);
+		background-color: var(--color-bg-hl);
 
 		&::before {
 			content: "";
@@ -21,10 +20,10 @@
 			opacity: var(--bg-opacity);
 			background-image: radial-gradient(
 				farthest-corner at -40px -40px,
-				color-mix(in srgb, var(--color-primary) 50%, var(--bg-hl)),
+				color-mix(in srgb, var(--color-primary) 50%, var(--color-bg-hl)),
 				transparent
 			);
-			border-radius: var(--border-radius);
+			border-radius: var(--rounding-md);
 
 			transition: var(--transition);
 		}
@@ -40,24 +39,24 @@
 
 	&#NewCollection {
 		background-image: none;
-		border: var(--border-width) dotted var(--fg-dim);
+		border: var(--border-md) dotted var(--color-fg-dim);
 
 		&:hover {
-			--fg-dim: var(--fg-main);
+			--color-fg-dim: var(--color-fg-main);
 		}
 	}
 }
 
 #CollectionLabel {
-	color: var(--fg-main);
-	font: var(--gpText-BodyMedium);
+	color: var(--color-fg-main);
+	font: var(--text--body-medium);
 	text-shadow: none;
 	letter-spacing: 0;
 }
 
 #CollectionLabelCount {
-	color: var(--fg-dim);
-	font: var(--gpText-BodyMedium);
+	color: var(--color-fg-dim);
+	font: var(--text--body-medium);
 }
 
 #Grid {
@@ -65,8 +64,8 @@
 }
 
 #Header {
-	color: var(--fg-main);
-	font: var(--gpText-HeadingSmall);
+	color: var(--color-fg-main);
+	font: var(--text--heading-small);
 	gap: 9px;
 
 	height: unset;

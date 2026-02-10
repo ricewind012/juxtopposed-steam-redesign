@@ -3,8 +3,7 @@
 // ??? you guys maybe wanna unify this into one component ?
 #BrowseLinkButton {
 	// lmfao, the gradient is replaced by a border of itself, leaving it as is
-	--border-size: 1px;
-	--label-size: calc(100% - var(--border-size) * 2);
+	--label-size: calc(100% - var(--border-sm) * 2);
 
 	@include store.category($gradient: "&", $label: "#Label");
 
@@ -26,7 +25,7 @@
 		text-transform: none;
 		box-shadow: none;
 
-		inset: var(--border-size);
+		inset: var(--border-sm);
 		width: var(--label-size);
 		height: var(--label-size);
 	}
@@ -41,8 +40,8 @@
 }
 
 #BrowseTopDestContainer {
-	background: var(--bg-main-20);
-	border-radius: var(--border-radius-large);
+	background: var(--color-bg-main-20);
+	border-radius: var(--radius-lg);
 	gap: 0;
 	padding: 0;
 
@@ -51,17 +50,21 @@
 }
 
 #StoreLinkWithPadding {
-	color: var(--fg-main);
-	font: var(--gpText-BodyMedium);
+	color: var(--color-fg-main);
+	font: var(--text--body-medium);
 	border: none;
 	padding: var(--spacing-md);
 
 	&:hover {
-		background-image: linear-gradient(90deg, var(--bg-main-50), transparent);
+		background-image: linear-gradient(
+			90deg,
+			var(--color-bg-main-50),
+			transparent
+		);
 	}
 
 	#ButtonDescription {
-		color: var(--fg-dim);
-		font: var(--gpText-BodySmall);
+		color: var(--color-fg-dim);
+		font: var(--text--body-small);
 	}
 }

@@ -23,18 +23,18 @@
 	height: 58px;
 
 	img {
-		border-radius: var(--border-radius);
+		border-radius: var(--rounding-md);
 	}
 }
 
 #AppName {
-	color: var(--fg-main);
-	font: var(--gpText-HeadingSmall);
+	color: var(--color-fg-main);
+	font: var(--text--heading-small);
 }
 
 #AppSizeRequired {
-	color: var(--fg-dim);
-	font: var(--gpText-BodyMedium);
+	color: var(--color-fg-dim);
+	font: var(--text--body-medium);
 }
 
 #AppToInstall {
@@ -59,8 +59,8 @@
 #FolderOption {
 	@include controls.radio("&#Active");
 
-	background-color: var(--bg-hl);
-	color: var(--fg-main);
+	background-color: var(--color-bg-hl);
+	color: var(--color-fg-main);
 	gap: 0;
 	margin: 0;
 
@@ -108,8 +108,8 @@
 	padding: 0;
 
 	#Header {
-		color: var(--fg-main);
-		font: var(--gpText-BodyLarge);
+		color: var(--color-fg-main);
+		font: var(--text--body-large);
 		letter-spacing: 0;
 		text-transform: none;
 

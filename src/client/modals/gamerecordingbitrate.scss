@@ -1,29 +1,29 @@
 #AutoExplainer {
-	color: var(--fg-main);
+	color: var(--color-fg-main);
 	font: inherit;
 	margin-block-end: var(--spacing-sm);
 }
 
 #BitrateOption {
-	color: var(--fg-dim);
+	color: var(--color-fg-dim);
 	font: inherit;
 
 	#Emphasis {
-		color: var(--fg-main);
+		color: var(--color-fg-main);
 		font: inherit;
 	}
 }
 
 #BitRateTable {
 	background-color: transparent;
-	color: var(--fg-dim);
+	color: var(--color-fg-dim);
 	font: inherit;
 	border-spacing: 0;
 	padding: 0;
 	margin: 0;
 
 	th {
-		font: var(--gpText-HeadingSmall);
+		font: var(--text--heading-small);
 	}
 }
 

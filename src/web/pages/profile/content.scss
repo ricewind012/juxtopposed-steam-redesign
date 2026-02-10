@@ -1,7 +1,15 @@
 body.profile_page {
-	--btn-background: color-mix(in srgb, var(--bg-hl) 50%, transparent);
-	--btn-background-hover: color-mix(in srgb, var(--bg-hover) 50%, transparent);
-	--gradient-background: color-mix(in srgb, var(--bg-hover) 35%, transparent);
+	--btn-background: color-mix(in srgb, var(--color-bg-hl) 50%, transparent);
+	--btn-background-hover: color-mix(
+		in srgb,
+		var(--color-bg-hover) 50%,
+		transparent
+	);
+	--gradient-background: color-mix(
+		in srgb,
+		var(--color-bg-hover) 35%,
+		transparent
+	);
 }
 
 .customization_edit_instructions {
@@ -10,8 +18,8 @@ body.profile_page {
 	.profile_customization_header {
 		--spacing: 0.25em;
 
-		font: var(--gpText-HeadingMedium);
-		color: var(--fg-main);
+		font: var(--text--heading-medium);
+		color: var(--color-fg-main);
 		padding: 0;
 		margin-top: calc(var(--spacing) * -1);
 		margin-bottom: var(--spacing);
@@ -19,7 +27,7 @@ body.profile_page {
 }
 
 .customization_edit_instructions_text {
-	font: var(--gpText-BodyLarge);
+	font: var(--text--body-large);
 	padding: 0;
 }
 
@@ -32,9 +40,9 @@ body.profile_page {
 
 .profile_comment_area,
 .profile_customization {
-	background-color: var(--bg-main-20);
-	font: var(--gpText-BodyMedium);
-	border-radius: var(--border-radius);
+	background-color: var(--color-bg-main-20);
+	font: var(--text--body-medium);
+	border-radius: var(--rounding-md);
 	padding: 0;
 	margin-bottom: 23px;
 }
@@ -44,13 +52,13 @@ body.profile_page {
 }
 
 .profile_customization_block {
-	font: var(--gpText-BodyMedium);
+	font: var(--text--body-medium);
 	border-radius: 0;
 	padding: var(--spacing-sm);
 }
 
 .profile_customization_editlink {
-	font: var(--gpText-BodyLarge);
+	font: var(--text--body-large);
 	line-height: inherit;
 	padding: var(--spacing-sm);
 
@@ -70,8 +78,8 @@ body.profile_page {
  * but primary is better for contrast. */
 .commentthread_header,
 .profile_customization_header {
-	font: var(--gpText-BodyLarge);
-	color: var(--fg-main);
+	font: var(--text--body-large);
+	color: var(--color-fg-main);
 	padding: var(--spacing-sm);
 	margin: 0;
 }

@@ -2,10 +2,10 @@
 @use "shared/utils";
 
 %-content-type {
-	background: var(--bg-main-50);
-	color: var(--fg-main);
+	background: var(--color-bg-main-50);
+	color: var(--color-fg-main);
 	font: inherit;
-	border-radius: 0 0 var(--border-radius-large) var(--border-radius-large);
+	border-radius: 0 0 var(--radius-lg) var(--radius-lg);
 	padding: var(--spacing-sm);
 }
 
@@ -30,9 +30,9 @@
 }
 
 .apphub_Card {
-	background: var(--bg-main-50);
+	background: var(--color-bg-main-50);
 	border: none;
-	border-radius: var(--border-radius-large);
+	border-radius: var(--radius-lg);
 	gap: var(--spacing-sm);
 	padding: var(--spacing-md);
 	padding-bottom: calc(var(--spacing-md) + var(--spacing-sm) * 2 + 1lh);
@@ -46,7 +46,7 @@
 
 	.review_award_aggregated {
 		color: var(--color-primary);
-		font: var(--gpText-BodyLarge);
+		font: var(--text--body-large);
 		gap: var(--spacing-xs);
 
 		display: inline-flex;
@@ -99,7 +99,7 @@
 
 		@include utils.icon("chat-bubble");
 
-		color: var(--fg-dim);
+		color: var(--color-fg-dim);
 		margin-right: var(--spacing-xs);
 	}
 }
@@ -122,11 +122,11 @@
 	}
 
 	.apphub_CardContentMoreLink {
-		font: var(--gpText-BodyMedium);
+		font: var(--text--body-medium);
 		padding: 0;
 
 		& > a:not(:hover) {
-			color: var(--fg-dim);
+			color: var(--color-fg-dim);
 		}
 	}
 
@@ -152,7 +152,7 @@
 }
 
 .apphub_CardContentAuthorName {
-	font: var(--gpText-BodyMedium);
+	font: var(--text--body-medium);
 }
 
 .apphub_CardContentDiscussionAuthorBlock {
@@ -163,21 +163,21 @@
 }
 
 .apphub_CardContentDiscussionDate {
-	color: var(--fg-dim);
-	font: var(--gpText-BodySmall);
+	color: var(--color-fg-dim);
+	font: var(--text--body-small);
 	padding-left: 45px;
 }
 
 .apphub_CardContentDiscussionText {
-	background-color: var(--bg-main-50);
+	background-color: var(--color-bg-main-50);
 	border: none;
-	border-radius: var(--border-radius-large);
+	border-radius: var(--radius-lg);
 	padding: var(--spacing-sm);
 }
 
 .apphub_CardContentDiscussionTitle {
-	color: var(--fg-main);
-	font: var(--gpText-HeadingSmall);
+	color: var(--color-fg-main);
+	font: var(--text--heading-small);
 	padding: 0;
 	margin-bottom: var(--spacing-sm);
 }
@@ -191,8 +191,8 @@
 }
 
 .apphub_CardContentGuideDesc {
-	color: var(--fg-main);
-	font: var(--gpText-BodyLarge);
+	color: var(--color-fg-main);
+	font: var(--text--body-large);
 	padding: 0;
 	margin-top: var(--spacing-sm);
 
@@ -201,8 +201,8 @@
 
 .apphub_CardContentGuideTitle {
 	background-color: transparent;
-	color: var(--fg-main);
-	font: var(--gpText-HeadingSmall);
+	color: var(--color-fg-main);
+	font: var(--text--heading-small);
 	border: none;
 	padding: 0;
 	margin: 0;
@@ -219,15 +219,15 @@
 }
 
 .apphub_CardContentNewsDate {
-	color: var(--fg-dim);
-	font: var(--gpText-BodySmall);
+	color: var(--color-fg-dim);
+	font: var(--text--body-small);
 	padding: 0;
 }
 
 .apphub_CardContentNewsDesc {
 	--speech-bubble-size: 1.25em;
 
-	color: var(--fg-main);
+	color: var(--color-fg-main);
 	padding: 0;
 	margin-bottom: var(--speech-bubble-size);
 
@@ -241,7 +241,7 @@
 		left: calc(var(--avatar-size) / 2 + var(--spacing-xs));
 
 		border: var(--speech-bubble-size) solid transparent;
-		border-top-color: var(--bg-main-50);
+		border-top-color: var(--color-bg-main-50);
 		border-bottom: none;
 		border-left: none;
 		margin-bottom: calc(var(--speech-bubble-size) * -1);
@@ -261,8 +261,8 @@
 }
 
 .apphub_CardContentNewsTitle {
-	color: var(--fg-main);
-	font: var(--gpText-HeadingSmall);
+	color: var(--color-fg-main);
+	font: var(--text--heading-small);
 	padding: 0;
 
 	max-width: unset;
@@ -282,8 +282,8 @@
 }
 
 .apphub_CardContentTitle {
-	color: var(--fg-main);
-	font: var(--gpText-HeadingSmall);
+	color: var(--color-fg-main);
+	font: var(--text--heading-small);
 	padding: 0;
 }
 
@@ -335,8 +335,8 @@
 }
 
 .apphub_HeaderBottom {
-	background-color: var(--bg-main);
-	border-radius: var(--border-radius-large);
+	background-color: var(--color-bg-main);
+	border-radius: var(--radius-lg);
 	padding: var(--spacing-sm);
 
 	display: flex;
@@ -370,7 +370,7 @@
 }
 
 .apphub_NumInApp {
-	color: var(--accent-green);
+	color: var(--color-accent-green);
 }
 
 .apphub_recentFriendsArea {
@@ -418,8 +418,8 @@
 }
 
 .apphub_StoreInfoHeader {
-	background-color: var(--bg-main);
-	border-radius: var(--border-radius-large);
+	background-color: var(--color-bg-main);
+	border-radius: var(--radius-lg);
 	padding: var(--spacing-sm);
 	// XXX(units): keep in sync with .apphub_sectionTabs
 	margin-block: 24px 48px;
@@ -433,23 +433,23 @@
 
 	// TODO: is this shared ?
 	.hours {
-		color: var(--fg-dim);
-		font: var(--gpText-BodyMedium);
+		color: var(--color-fg-dim);
+		font: var(--text--body-medium);
 	}
 
 	.reviewInfo {
-		background-color: var(--bg-main);
-		border-radius: var(--border-radius);
+		background-color: var(--color-bg-main);
+		border-radius: var(--rounding-md);
 		padding: var(--spacing-xs);
 	}
 
 	.thumb img {
-		border-radius: var(--border-radius);
+		border-radius: var(--rounding-md);
 	}
 
 	.title {
-		color: var(--fg-main);
-		font: var(--gpText-BodyMedium);
+		color: var(--color-fg-main);
+		font: var(--text--body-medium);
 		padding: 0;
 	}
 }

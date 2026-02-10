@@ -19,14 +19,14 @@
 	--table-border-color: color-mix(in srgb, currentColor 20%, transparent);
 
 	#AppName {
-		color: var(--fg-main);
-		font: var(--gpText-BodyLarge);
+		color: var(--color-fg-main);
+		font: var(--text--body-large);
 	}
 
 	#ExePath {
 		opacity: 1;
-		color: var(--fg-dim);
-		font: var(--gpText-BodyLarge);
+		color: var(--color-fg-dim);
+		font: var(--text--body-large);
 	}
 }
 
@@ -40,10 +40,10 @@
 }
 
 #GameList {
-	background-color: var(--bg-hl);
+	background-color: var(--color-bg-hl);
 	box-shadow: none;
 	border: none;
-	border-radius: 0 0 var(--border-radius-large) var(--border-radius-large);
+	border-radius: 0 0 var(--radius-lg) var(--radius-lg);
 }
 
 #GameRow {
@@ -63,10 +63,10 @@
 #Header {
 	@extend %-row;
 
-	background-color: var(--bg-hl);
+	background-color: var(--color-bg-hl);
 	border: none;
-	border-block-end: 1px solid var(--table-border-color);
-	border-radius: var(--border-radius-large) var(--border-radius-large) 0 0;
+	border-block-end: var(--border-sm) solid var(--table-border-color);
+	border-radius: var(--radius-lg) var(--radius-lg) 0 0;
 	// For scrollbar
 	padding-inline-end: 14px;
 	margin-block-start: var(--spacing-sm);
@@ -75,11 +75,11 @@
 		text-transform: none;
 
 		&:not(:last-child) {
-			border-inline-end: 1px solid var(--table-border-color);
+			border-inline-end: var(--border-sm) solid var(--table-border-color);
 		}
 
 		&:hover {
-			background-color: var(--bg-hover);
+			background-color: var(--color-bg-hover);
 		}
 	}
 }

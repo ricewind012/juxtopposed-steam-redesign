@@ -60,8 +60,8 @@
 		}
 
 		.current_player_workshop_title a {
-			color: var(--fg-main);
-			font: var(--gpText-HeadingSmall);
+			color: var(--color-fg-main);
+			font: var(--text--heading-small);
 			padding: 0;
 		}
 
@@ -83,7 +83,7 @@
 			margin-inline: 0;
 
 			.tag_count {
-				color: var(--fg-dim);
+				color: var(--color-fg-dim);
 			}
 
 			.tag_label {
@@ -95,10 +95,10 @@
 		}
 
 		.title {
-			color: var(--fg-main);
-			font: var(--gpText-BodyLarge);
+			color: var(--color-fg-main);
+			font: var(--text--body-large);
 			text-transform: none;
-			border-block-start: 1px solid var(--bg-hl);
+			border-block-start: var(--border-sm) solid var(--color-bg-hl);
 			padding-block-start: var(--spacing-md);
 			margin-block: var(--spacing-md) var(--spacing-sm);
 		}
@@ -109,8 +109,8 @@
 		margin-bottom: var(--spacing-sm);
 
 		&:not(.tabbed) {
-			background: var(--bg-main);
-			border-radius: var(--border-radius);
+			background: var(--color-bg-main);
+			border-radius: var(--rounding-md);
 			padding: var(--spacing-lg);
 		}
 	}
@@ -120,8 +120,8 @@
 	}
 
 	.section_title {
-		color: var(--fg-main);
-		font: var(--gpText-HeadingMedium);
+		color: var(--color-fg-main);
+		font: var(--text--heading-medium);
 
 		a {
 			color: inherit;
@@ -134,35 +134,35 @@
 		margin-bottom: var(--spacing-lg);
 
 		.section_subtitle {
-			color: var(--fg-dim);
-			font: var(--gpText-HeadingMedium);
+			color: var(--color-fg-dim);
+			font: var(--text--heading-medium);
 		}
 	}
 }
 
 .workshop_item_row {
-	background: var(--bg-main);
+	background: var(--color-bg-main);
 	border: none;
-	border-radius: var(--border-radius);
+	border-radius: var(--rounding-md);
 	padding: var(--spacing-md);
 	margin-bottom: var(--spacing-sm);
 
 	&:hover {
-		background-color: var(--bg-hover);
+		background-color: var(--color-bg-hover);
 	}
 
 	.preview_image {
-		border-radius: var(--border-radius);
+		border-radius: var(--rounding-md);
 		margin-right: var(--spacing-md);
 	}
 }
 
 .workshop_item_tags {
-	color: var(--fg-dim);
+	color: var(--color-fg-dim);
 }
 
 .workshop_item_title {
-	color: var(--fg-main);
-	font: var(--gpText-HeadingMedium);
+	color: var(--color-fg-main);
+	font: var(--text--heading-medium);
 	padding: 0;
 }

@@ -49,7 +49,7 @@
 	--header-height: 32px;
 
 	#Message {
-		font: var(--gpText-BodyLarge);
+		font: var(--text--body-large);
 		margin-block-start: calc(var(--header-height) / 2);
 
 		inset-inline-start: 100px;
@@ -61,7 +61,7 @@
 
 		line,
 		path {
-			stroke: var(--fg-dim);
+			stroke: var(--color-fg-dim);
 		}
 	}
 }
@@ -88,18 +88,18 @@
 #ShowcaseHeader {
 	--drag-handle-offset: calc(var(--icon-size) + var(--spacing-sm));
 
-	font: var(--gpText-HeadingSmall);
+	font: var(--text--heading-small);
 	border: none;
 	gap: var(--spacing-sm);
 	padding: 0;
 	padding-inline-end: var(--drag-handle-offset);
-	margin-block-end: var(--carousel-section-spacing);
+	margin-block-end: var(--carousel--section-spacing);
 
 	position: unset;
 
 	#ShowcaseOuter#DragElement & {
-		background-color: var(--bg-main);
-		border-radius: var(--border-radius);
+		background-color: var(--color-bg-main);
+		border-radius: var(--rounding-md);
 		box-shadow: none;
 		padding-inline-start: var(--spacing-md);
 		padding-inline-end: calc(var(--drag-handle-offset) + var(--spacing-md));
@@ -156,7 +156,7 @@
 	}
 
 	#CountDisplay {
-		color: var(--fg-dim);
+		color: var(--color-fg-dim);
 		font: inherit;
 		margin-inline-start: var(--spacing-xs);
 	}
@@ -187,7 +187,7 @@
 		pointer-events: none;
 
 		& > div {
-			--carousel-arrow-container-height: 100%;
+			--carousel--arrow-container-height: 100%;
 
 			@include carousel.arrow(
 				$left: "&#PageLeft",

@@ -18,7 +18,7 @@
 		@include appdetails.blur;
 
 		// Otherwise, if there is a light image, you won't be able to see shit
-		background-color: color-mix(in srgb, var(--bg-hl) 75%, transparent);
+		background-color: color-mix(in srgb, var(--color-bg-hl) 75%, transparent);
 		padding: 0;
 	}
 
@@ -60,7 +60,7 @@
 
 		@include utils.icon("name");
 
-		color: color-mix(in srgb, var(--fg-dim) 20%, transparent);
+		color: color-mix(in srgb, var(--color-fg-dim) 20%, transparent);
 	}
 
 	#GameStatRight {
@@ -97,7 +97,7 @@
 		currentColor var(--percentage),
 		transparent
 	);
-	border-radius: var(--border-radius);
+	border-radius: var(--rounding-md);
 	margin-inline: 11px 0;
 
 	width: var(--size);
@@ -132,13 +132,13 @@
 }
 
 #PlayBarDetailLabel {
-	color: var(--fg-main);
-	font: var(--gpText-BodyMedium);
+	color: var(--color-fg-main);
+	font: var(--text--body-medium);
 }
 
 #PlayBarLabel {
-	color: var(--fg-dim);
-	font: var(--gpText-BodyMedium);
+	color: var(--color-fg-dim);
+	font: var(--text--body-medium);
 	letter-spacing: 0;
 	text-transform: none;
 	margin-block-end: var(--spacing-xs);

@@ -10,10 +10,10 @@
 }
 
 %-event-image {
-	border-radius: var(--border-radius-large);
+	border-radius: var(--radius-lg);
 
 	&:hover {
-		background-color: var(--bg-main-20);
+		background-color: var(--color-bg-main-20);
 	}
 }
 
@@ -24,16 +24,16 @@
 	}
 
 	&_Title {
-		color: var(--fg-main);
-		font: var(--gpText-BodyLarge);
+		color: var(--color-fg-main);
+		font: var(--text--body-large);
 	}
 }
 
 #AppActivityDate {
 	color: var(--color-primary);
-	font: var(--gpText-BodyLarge);
+	font: var(--text--body-large);
 	letter-spacing: 0;
-	border-block-end: 2px solid var(--color-secondary);
+	border-block-end: var(--border-md) solid var(--color-secondary);
 	text-transform: none;
 	padding-block-end: 4px;
 	margin-block-end: var(--spacing-sm);
@@ -63,8 +63,8 @@
 	}
 
 	#EventHeadline {
-		color: var(--fg-main);
-		font: var(--gpText-BodyMedium);
+		color: var(--color-fg-main);
+		font: var(--text--body-medium);
 		padding: 0;
 		margin-block-end: var(--spacing-sm);
 
@@ -77,8 +77,8 @@
 #EventBody {
 	@extend %-event;
 
-	background-color: var(--bg-main-20);
-	border-radius: var(--border-radius-large);
+	background-color: var(--color-bg-main-20);
+	border-radius: var(--radius-lg);
 	margin-inline-start: calc(var(--steamavatar_size) + var(--spacing-sm));
 
 	#ActiveScreenshot {
@@ -90,8 +90,8 @@
 			opacity: 1;
 			transform: none;
 			background-color: transparent;
-			border: 2px solid transparent;
-			border-radius: var(--border-radius-large);
+			border: var(--border-md) solid transparent;
+			border-radius: var(--radius-lg);
 			margin-block-end: var(--spacing-xs);
 			margin-inline-end: var(--spacing-xs);
 
@@ -105,20 +105,20 @@
 		}
 
 		#ImageWrapper {
-			border-radius: var(--border-radius-large);
+			border-radius: var(--radius-lg);
 		}
 
 		#ScreenshotCaption#HasCaption {
-			background: var(--bg-main-50);
+			background: var(--color-bg-main-50);
 			backdrop-filter: blur(20px);
 			border-radius: 0;
-			border-end-start-radius: var(--border-radius-large);
+			border-end-start-radius: var(--radius-lg);
 			margin-block-end: 24px;
 		}
 
 		#TimeStamp {
-			color: var(--fg-dim);
-			font: var(--gpText-BodySmall);
+			color: var(--color-fg-dim);
+			font: var(--text--body-small);
 			margin-block-start: 7px;
 			margin-inline: 0;
 		}
@@ -142,7 +142,7 @@
 
 #PartnerEventFeaturedHeader {
 	background: none;
-	font: var(--gpText-BodyLarge);
+	font: var(--text--body-large);
 	letter-spacing: 0;
 	text-transform: none;
 	padding: 0;
@@ -178,12 +178,12 @@
 	}
 
 	&_Image {
-		border-radius: var(--border-radius-large);
+		border-radius: var(--radius-lg);
 	}
 
 	&_Summary {
-		color: var(--fg-dim);
-		font: var(--gpText-BodyMedium);
+		color: var(--color-fg-dim);
+		font: var(--text--body-medium);
 		text-shadow: none;
 		padding: 0;
 	}
@@ -223,12 +223,12 @@
 	@extend %-event;
 	@include -event-contents;
 
-	background-color: var(--bg-hl);
-	border-radius: var(--border-radius-large);
-	border-inline-start: var(--border-radius-large) solid var(--color-secondary);
+	background-color: var(--color-bg-hl);
+	border-radius: var(--radius-lg);
+	border-inline-start: var(--radius-lg) solid var(--color-secondary);
 
 	&:hover {
-		background-color: var(--bg-hover);
+		background-color: var(--color-bg-hover);
 	}
 
 	&_Container {
@@ -251,8 +251,8 @@
 }
 
 #PartnerEventType {
-	color: var(--fg-dim);
-	font: var(--gpText-BodyMedium);
+	color: var(--color-fg-dim);
+	font: var(--text--body-medium);
 	text-transform: none;
 
 	#DayPosted {

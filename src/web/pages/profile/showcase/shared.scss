@@ -1,5 +1,5 @@
 .game_capsule {
-	border-radius: var(--border-radius);
+	border-radius: var(--rounding-md);
 }
 
 .item_count_stat,
@@ -7,25 +7,25 @@
 	margin-left: var(--spacing-lg);
 
 	.value {
-		font: var(--gpText-HeadingLarge);
+		font: var(--text--heading-large);
 		padding: 0;
 	}
 
 	.label {
-		font: var(--gpText-BodyLarge);
-		color: var(--fg-dim);
+		font: var(--text--body-large);
+		color: var(--color-fg-dim);
 		padding: 0;
 	}
 }
 
 .showcase_content_bg {
-	background-color: var(--bg-main-50);
+	background-color: var(--color-bg-main-50);
 	border-radius: 0;
 	padding: var(--spacing-md);
 }
 
 .showcase_item_detail_title {
-	font: var(--gpText-HeadingLarge);
+	font: var(--text--heading-large);
 	padding-top: 0;
 
 	max-height: 69px;

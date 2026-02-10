@@ -33,15 +33,15 @@
 	@include -button("download");
 
 	#Icon {
-		border-radius: var(--border-radius);
+		border-radius: var(--rounding-md);
 		box-shadow: none;
 
 		overflow: hidden;
 	}
 
 	#Status {
-		color: var(--fg-main);
-		font: var(--gpText-BodyLarge);
+		color: var(--color-fg-main);
+		font: var(--text--body-large);
 	}
 }
 

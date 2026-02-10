@@ -13,13 +13,13 @@
 }
 
 #Description {
-	color: var(--fg-dim);
+	color: var(--color-fg-dim);
 	font: inherit;
 }
 
 #DescriptionSmall {
-	color: var(--fg-dim);
-	font: var(--gpText-BodySmall);
+	color: var(--color-fg-dim);
+	font: var(--text--body-small);
 	padding: 0;
 
 	#MobileLink {
@@ -30,7 +30,7 @@
 }
 
 #DescriptionWarning {
-	color: var(--accent-yellow);
+	color: var(--color-accent-yellow);
 	font: inherit;
 }
 
@@ -41,16 +41,16 @@
 	align-items: center;
 
 	&#Error {
-		color: var(--accent-red);
+		color: var(--color-accent-red);
 	}
 
 	&#Success {
-		color: var(--accent-green);
+		color: var(--color-accent-green);
 	}
 }
 
 #Error {
-	color: var(--accent-red);
+	color: var(--color-accent-red);
 	font: inherit;
 }
 

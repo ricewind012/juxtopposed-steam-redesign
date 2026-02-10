@@ -4,16 +4,16 @@
 @use "web/paging";
 
 %-forum-post {
-	background: var(--bg-main-50);
+	background: var(--color-bg-main-50);
 	border: none;
-	border-radius: var(--border-radius-large);
+	border-radius: var(--radius-lg);
 	box-shadow: none;
 	margin-bottom: var(--spacing-md);
 }
 
 %-right-side-text {
 	color: var(--color-primary);
-	font: var(--gpText-BodyLarge);
+	font: var(--text--body-large);
 	// Can't center it, don't care
 	line-height: 48px;
 }
@@ -77,8 +77,8 @@
 		}
 
 		.rightbox_content_header {
-			color: var(--fg-dim);
-			font: var(--gpText-BodyMedium);
+			color: var(--color-fg-dim);
+			font: var(--text--body-medium);
 			padding: 0;
 		}
 
@@ -88,21 +88,21 @@
 		}
 
 		.rightbox_list_header {
-			color: var(--fg-dim);
-			font: var(--gpText-BodyMedium);
+			color: var(--color-fg-dim);
+			font: var(--text--body-medium);
 			margin-bottom: var(--spacing-sm);
 		}
 
 		.rightbox_list_option {
 			@include layout.sidebar-item(".selected");
 
-			font: var(--gpText-BodyLarge);
+			font: var(--text--body-large);
 
 			height: unset;
 
 			.forum_list_postcount {
-				color: var(--fg-dim);
-				font: var(--gpText-BodyMedium);
+				color: var(--color-fg-dim);
+				font: var(--text--body-medium);
 			}
 		}
 
@@ -111,8 +111,8 @@
 		}
 
 		.rightcol {
-			background: var(--bg-main);
-			border-radius: var(--border-radius-large);
+			background: var(--color-bg-main);
+			border-radius: var(--radius-lg);
 			gap: var(--spacing-sm);
 			padding: var(--spacing-md);
 			margin: 0;
@@ -123,8 +123,8 @@
 		}
 
 		.rightcol_minor_text {
-			color: var(--fg-dim);
-			font: var(--gpText-BodySmall);
+			color: var(--color-fg-dim);
+			font: var(--text--body-small);
 			margin-bottom: var(--spacing-sm);
 		}
 	}
@@ -163,15 +163,15 @@
 }
 
 .forum_area {
-	color: var(--fg-main);
+	color: var(--color-fg-main);
 
 	display: flex;
 	flex-direction: column;
 }
 
 .forum_audit {
-	color: var(--fg-dim);
-	font: var(--gpText-BodySmall);
+	color: var(--color-fg-dim);
+	font: var(--text--body-small);
 	margin-top: 20px;
 
 	position: unset;
@@ -188,8 +188,8 @@
 	bottom: var(--spacing-xs);
 
 	a {
-		color: var(--fg-dim);
-		font: var(--gpText-BodySmall);
+		color: var(--color-fg-dim);
+		font: var(--text--body-small);
 	}
 }
 
@@ -209,7 +209,7 @@
 
 .forum_pagesize_options {
 	all: unset;
-	color: var(--fg-dim);
+	color: var(--color-fg-dim);
 	margin-top: var(--spacing-sm);
 
 	// selected
@@ -222,8 +222,8 @@
 .forum_paging {
 	all: unset;
 
-	color: var(--fg-dim);
-	font: var(--gpText-BodyLarge);
+	color: var(--color-fg-dim);
+	font: var(--text--body-large);
 	margin-bottom: var(--spacing-md);
 
 	display: flex;
@@ -259,18 +259,18 @@
 	}
 
 	.content {
-		color: var(--fg-main);
-		font: var(--gpText-BodyLarge);
+		color: var(--color-fg-main);
+		font: var(--text--body-large);
 	}
 
 	.date {
-		color: var(--fg-dim);
-		font: var(--gpText-BodySmall);
+		color: var(--color-fg-dim);
+		font: var(--text--body-small);
 	}
 
 	.topic {
-		color: var(--fg-main);
-		font: var(--gpText-HeadingLarge);
+		color: var(--color-fg-main);
+		font: var(--text--heading-large);
 		margin-block: 20px;
 	}
 
@@ -281,7 +281,7 @@
 
 .forum_op_author {
 	color: var(--color-primary);
-	font: var(--gpText-BodyLarge);
+	font: var(--text--body-large);
 }
 
 .forum_op_avatar {
@@ -289,15 +289,15 @@
 }
 
 .forum_topic {
-	background: var(--bg-main-50);
-	border-radius: var(--border-radius-large);
+	background: var(--color-bg-main-50);
+	border-radius: var(--radius-lg);
 	padding: 20px;
 	margin-bottom: 20px;
 
 	height: unset;
 
 	&:hover {
-		background: var(--bg-main);
+		background: var(--color-bg-main);
 	}
 }
 
@@ -312,13 +312,13 @@
 }
 
 .forum_topic_name {
-	color: var(--fg-main);
-	font: var(--gpText-HeadingSmall);
+	color: var(--color-fg-main);
+	font: var(--text--heading-small);
 }
 
 .forum_topic_op {
 	color: var(--color-primary);
-	font: var(--gpText-BodyMedium);
+	font: var(--text--body-medium);
 }
 
 .forum_topic_reply_count {
@@ -336,7 +336,7 @@
 
 		@include utils.icon("chat-bubble");
 
-		color: var(--fg-main);
+		color: var(--color-fg-main);
 	}
 
 	img {
@@ -375,7 +375,7 @@
 	}
 
 	.commentthread_comment_text {
-		font: var(--gpText-BodyLarge);
+		font: var(--text--body-large);
 	}
 
 	// #region TODO: move to commentthread ?

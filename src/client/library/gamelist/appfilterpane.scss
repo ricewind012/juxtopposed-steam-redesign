@@ -5,11 +5,11 @@
 }
 
 #Checkbox {
-	border-radius: var(--border-radius);
+	border-radius: var(--rounding-md);
 	padding: 6.5px 13px;
 
 	&:hover {
-		background-color: var(--bg-hl);
+		background-color: var(--color-bg-hl);
 	}
 
 	&:has(> .DialogCheckbox.Active) {
@@ -30,7 +30,11 @@
 
 	.DialogInput {
 		// TODO: reduce selector specificity
-		--bg-main-20: color-mix(in srgb, var(--bg-tertiary) 20%, transparent);
+		--color-bg-main-20: color-mix(
+			in srgb,
+			var(--color-bg-tertiary) 20%,
+			transparent
+		);
 	}
 
 	.DialogInput_Wrapper {
@@ -44,7 +48,7 @@
 
 #FilterBucket {
 	&:not(#Player, #PlayState, #Genre) {
-		border-top: 1px solid var(--bg-hl);
+		border-top: var(--border-sm) solid var(--color-bg-hl);
 		padding-top: var(--spacing-sm);
 	}
 }
@@ -54,8 +58,8 @@
 }
 
 #FilterBucketLabel {
-	color: var(--fg-main);
-	font: var(--gpText-BodyLarge);
+	color: var(--color-fg-main);
+	font: var(--text--body-large);
 	text-transform: unset;
 	margin-bottom: var(--spacing-sm);
 }

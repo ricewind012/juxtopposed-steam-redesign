@@ -24,13 +24,21 @@
 
 // #profilethemecolors_DefaultTheme (and others... that's why it's here)
 #PageContent > div {
-	--btn-background: color-mix(in srgb, var(--bg-hl) 50%, transparent);
-	--btn-background-hover: color-mix(in srgb, var(--bg-hover) 50%, transparent);
-	--gradient-background: color-mix(in srgb, var(--bg-hover) 35%, transparent);
+	--btn-background: color-mix(in srgb, var(--color-bg-hl) 50%, transparent);
+	--btn-background-hover: color-mix(
+		in srgb,
+		var(--color-bg-hover) 50%,
+		transparent
+	);
+	--gradient-background: color-mix(
+		in srgb,
+		var(--color-bg-hover) 35%,
+		transparent
+	);
 }
 
 #Shell {
-	font: var(--gpText-BodyLarge);
+	font: var(--text--body-large);
 
 	margin: 0;
 
@@ -45,8 +53,8 @@
 
 	.DialogLabel {
 		all: unset;
-		color: var(--fg-main);
-		font: var(--gpText-HeadingSmall);
+		color: var(--color-fg-main);
+		font: var(--text--heading-small);
 		width: 265px;
 
 		svg {

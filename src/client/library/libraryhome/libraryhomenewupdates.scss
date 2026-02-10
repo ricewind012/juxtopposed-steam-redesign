@@ -8,8 +8,8 @@
 }
 
 #EventTime {
-	color: var(--fg-dim);
-	font: var(--gpText-BodySmall);
+	color: var(--color-fg-dim);
+	font: var(--text--body-small);
 	padding-block-end: 8px;
 }
 
@@ -17,7 +17,7 @@
 	@include style.link;
 
 	background-color: transparent;
-	font: var(--gpText-BodyMedium);
+	font: var(--text--body-medium);
 	margin-block-start: var(--spacing-xs);
 
 	align-items: center;
@@ -25,7 +25,7 @@
 	#GameIcon {
 		--icon-size: 24px;
 
-		border-radius: var(--border-radius);
+		border-radius: var(--rounding-md);
 		margin-inline-end: var(--spacing-xs);
 
 		width: var(--icon-size);
@@ -46,8 +46,8 @@
 }
 
 #PartnerEventRowCapsule_MainImageContainer {
-	background-color: var(--bg-main);
-	border-radius: var(--border-radius);
+	background-color: var(--color-bg-main);
+	border-radius: var(--rounding-md);
 }
 
 #PartnerEventRowCapsule_TextCtn {
@@ -60,8 +60,8 @@
 #PartnerEventRowCapsule_TextTitle {
 	--height: 2lh;
 
-	color: var(--fg-main);
-	font: var(--gpText-BodyLarge);
+	color: var(--color-fg-main);
+	font: var(--text--body-large);
 
 	max-height: var(--height);
 	min-height: var(--height);
@@ -73,6 +73,6 @@
 	margin: 0;
 
 	position: absolute;
-	inset-block-start: calc(-1lh - var(--carousel-section-spacing));
+	inset-block-start: calc(-1lh - var(--carousel--section-spacing));
 	inset-inline-end: 0;
 }
