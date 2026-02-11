@@ -12,7 +12,7 @@
 		var(--color-bg-hover) 1.6%,
 		var(--color-bg-hl) 89.87%
 	);
-	margin-top: calc(var(--spacing-sm) * 2 + 1lh + var(--spacing-xl));
+	margin-top: calc(var(--library_gamelist-bar-spacing-block) * 2 + 1lh + 24px);
 }
 
 #LeftListSizableContainer {

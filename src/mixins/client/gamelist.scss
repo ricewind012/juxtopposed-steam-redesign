@@ -6,11 +6,12 @@
 
 	background-color: color-mix(
 		in srgb,
-		var(--color-fg-dim) var(--percentage),
+		currentColor var(--percentage),
 		transparent
 	);
+	color: var(--color-fg-dim);
 	border-radius: var(--rounding-md);
-	padding: var(--spacing-xxs);
+	padding: var(--spacing-xs);
 
 	&:hover {
 		--percentage: 10%;
@@ -20,8 +21,8 @@
 		--percentage: 20%;
 	}
 
-	&#{$active-selector} {
-		--color-fg-dim: var(--color-primary);
+	#{$active-selector} {
+		color: var(--color-fg-main);
 	}
 
 	svg {
@@ -32,5 +33,6 @@
 @mixin part-container {
 	background-color: var(--color-bg-tertiary);
 	gap: var(--spacing-xs);
-	padding: var(--spacing-sm);
+	padding-block: var(--library_gamelist-bar-spacing-block);
+	padding-inline: var(--library_gamelist-bar-gap) var(--spacing-sm);
 }

@@ -1,16 +1,23 @@
 @use "shared/controls";
 
+%-menu-item {
+	font: var(--text--body-small);
+	border-radius: var(--rounding-md);
+	padding: 6.5px 13px;
+
+	width: 100%;
+
+	&:hover {
+		background-color: var(--color-bg-hl);
+	}
+}
+
 #Buttons {
 	margin: 0;
 }
 
 #Checkbox {
-	border-radius: var(--rounding-md);
-	padding: 6.5px 13px;
-
-	&:hover {
-		background-color: var(--color-bg-hl);
-	}
+	@extend %-menu-item;
 
 	&:has(> .DialogCheckbox.Active) {
 		color: var(--color-primary);
@@ -22,20 +29,34 @@
 }
 
 #CompatDropDown {
-	padding-block: var(--spacing-xs) 0;
+	margin-block: 0 var(--spacing-xs);
+
+	&#ValueSelected {
+		--button--secondary-fg: var(--color-primary);
+	}
+
+	.DialogDropDown {
+		@extend %-menu-item;
+
+		background-color: transparent;
+		font: inherit;
+		border: none;
+
+		max-width: unset;
+	}
+}
+
+#CompatDropDownOption {
+	align-items: center;
+
+	svg {
+		width: var(--icon--size-md);
+		height: var(--icon--size-md);
+	}
 }
 
 #Container {
 	padding: var(--spacing-lg);
-
-	.DialogInput {
-		// TODO: reduce selector specificity
-		--color-bg-main-20: color-mix(
-			in srgb,
-			var(--color-bg-tertiary) 20%,
-			transparent
-		);
-	}
 
 	.DialogInput_Wrapper {
 		margin: 0;
@@ -43,11 +64,18 @@
 }
 
 #FilterArea {
-	gap: var(--spacing-md);
+	gap: var(--spacing-lg);
+
+	flex-grow: 1;
 }
 
 #FilterBucket {
-	&:not(#Player, #PlayState, #Genre) {
+	&:not(
+		#Player,
+		#PlayState,
+		#LanguageAndGenre,
+		#LanguageAndGenre > &:not(#Genre)
+	) {
 		border-top: var(--border-sm) solid var(--color-bg-hl);
 		padding-top: var(--spacing-sm);
 	}
@@ -62,6 +90,14 @@
 	font: var(--text--body-large);
 	text-transform: unset;
 	margin-bottom: var(--spacing-sm);
+}
+
+#Filters {
+	gap: var(--spacing-lg);
+}
+
+#Header {
+	display: none;
 }
 
 #Row {

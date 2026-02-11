@@ -13,6 +13,7 @@
 	@include gamelist.part-container;
 
 	box-shadow: none;
+	padding-inline-start: var(--spacing-sm);
 
 	position: absolute;
 	anchor-name: --gamelisthomeandsearch;

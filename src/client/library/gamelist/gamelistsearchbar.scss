@@ -4,11 +4,10 @@
 @use "web/store";
 
 #AdvancedSearchButton {
-	@include gamelist.icon-button("filter", "#ContainerHide");
-
-	color: var(--color-fg-dim);
-
-	min-width: unset;
+	@include gamelist.icon-button(
+		"filter",
+		"#AdvancedSearchContainer#Extended &"
+	);
 
 	// Fix some bullshit CSS behavior
 	& > div {
@@ -17,9 +16,7 @@
 }
 
 #AdvancedSearchContainer {
-	background-color: transparent;
-
-	height: unset;
+	all: unset;
 
 	svg {
 		margin: 0;
@@ -33,20 +30,20 @@
 
 	top: 100%;
 	left: 0;
+}
 
+#AdvancedSearchPaneContainer {
 	&::before {
 		display: none;
 	}
 }
 
 #Container {
-	--text-field--search-bg: var(--color-bg-main-20);
+	--text-field--width: 374px;
 
 	@include gamelist.part-container;
 
 	border-radius: 0;
-	padding-block: calc(var(--spacing-sm) + 2px);
-	padding-left: var(--library_gamelist-bar-spacing);
 	margin: 0;
 
 	position: absolute;
@@ -57,6 +54,10 @@
 
 	.DialogInput {
 		@include controls.text-field($variant: "search");
+
+		background-image: none;
+
+		height: unset;
 	}
 
 	// TODO(shared/dialog): Is this seen elsewhere ?
@@ -66,6 +67,7 @@
 
 	.DialogInput_Wrapper {
 		position: relative;
+		width: var(--text-field--width);
 
 		&:has(> .DialogInput_ClearAction)::after {
 			display: none;
@@ -87,8 +89,7 @@
 #FilterTag {
 	@include store.tag;
 
-	padding-block: 0;
-	margin: 0;
+	margin: -6.5px 0;
 
 	align-items: center;
 	height: unset;
@@ -103,7 +104,7 @@
 		@include utils.icon($name: "close", $remove: true, $size: "sm");
 
 		opacity: 1;
-		margin-left: 6px;
+		margin-left: var(--spacing-xxs);
 
 		&:hover {
 			color: var(--color-fg-main);
@@ -113,20 +114,21 @@
 
 #SearchByTypePrompt {
 	color: var(--color-secondary);
-	font: var(--text--body-large);
-	padding: 4px 0;
+	font: var(--text--body-medium);
+	padding: 0;
 }
 
 #SearchFilterInput {
+	@include controls.text-field($variant: "search");
+
+	gap: var(--spacing-xxs);
+
+	align-items: center;
+	width: var(--text-field--width);
+
+	// In appfilterpane
 	&:empty {
 		display: none;
-	}
-
-	&:not(:empty) {
-		@include controls.text-field($variant: "search");
-
-		gap: 3px;
-		--spacing-sm: var(--spacing-xs);
 	}
 }
 
@@ -141,4 +143,8 @@
 	&:hover {
 		color: var(--color-primary);
 	}
+}
+
+#SearchInput {
+	--text-field--search-bg: var(--library_gamelist-bar-button-bg);
 }

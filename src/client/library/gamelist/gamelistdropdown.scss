@@ -9,8 +9,6 @@
 	@include gamelist.part-container;
 
 	anchor-name: --gamelistdropdown;
-	padding-block: calc(var(--spacing-sm) + 2px);
-	padding-left: var(--library_gamelist-bar-spacing);
 
 	position: fixed;
 	position-anchor: --gamelistsearchbar;
@@ -32,25 +30,12 @@
 }
 
 #CheckboxWithImage {
-	@include gamelist.icon-button("name", "#Active");
+	@include gamelist.icon-button("name", "&#Active");
 
-	color: var(--color-fg-dim);
 	margin: 0;
 
 	width: unset;
 	height: unset;
-
-	.SVGIcon_LinuxLogo {
-		--icon-name: icon("steam-circled");
-	}
-
-	.SVGIcon_SortBy {
-		--icon-name: icon("clock");
-	}
-
-	.SVGIcon_ReadyToPlay {
-		--icon-name: icon("play-circle");
-	}
 }
 
 #Filters {
@@ -60,8 +45,15 @@
 #MenuHeader {
 	@include controls.dropdown;
 
+	background-color: var(--library_gamelist-bar-button-bg);
+	font: var(--text--body-medium);
+
 	width: unset;
 	height: unset;
+}
+
+#ScrollToTop {
+	display: none;
 }
 
 #ViewFiltersBar {
