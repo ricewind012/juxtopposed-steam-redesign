@@ -110,7 +110,7 @@
 
 		#ScreenshotCaption#HasCaption {
 			background: var(--color-bg-main-50);
-			backdrop-filter: blur(20px);
+			backdrop-filter: var(--blur);
 			border-radius: 0;
 			border-end-start-radius: var(--rounding-lg);
 			margin-block-end: 24px;

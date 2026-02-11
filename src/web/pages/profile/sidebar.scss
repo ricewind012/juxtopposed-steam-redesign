@@ -9,7 +9,7 @@
 
 	& > * {
 		background-color: var(--color-bg-main-50);
-		backdrop-filter: blur(20px);
+		backdrop-filter: var(--blur);
 		border-radius: var(--rounding-lg);
 		padding: var(--spacing-md);
 		margin-bottom: var(--spacing-lg);

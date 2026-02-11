@@ -107,7 +107,7 @@
 	}
 
 	#StickyHeader {
-		backdrop-filter: blur(20px);
+		backdrop-filter: var(--blur);
 		background: var(--color-bg-main-50);
 		border: none;
 		box-shadow: none;
@@ -137,7 +137,7 @@
 
 #UGCCount {
 	font: inherit;
-	gap: var(--spacing-xs);
+	gap: var(--spacing-xxs);
 
 	align-items: center;
 
@@ -157,7 +157,7 @@
 #UGCCountIcon {
 	@include utils.icon("name", true);
 
-	opacity: 0.5;
+	opacity: var(--dim-opacity);
 	color: inherit;
 }
 
@@ -171,7 +171,7 @@
 
 #UploadedIcon {
 	color: var(--color-fg-main);
-	margin-inline-end: var(--spacing-xs);
+	margin-inline-end: var(--spacing-xxs);
 
 	width: var(--icon--size-md);
 	height: var(--icon--size-md);

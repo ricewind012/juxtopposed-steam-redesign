@@ -1,7 +1,7 @@
 @use "shared/controls";
 
 #global_header {
-	backdrop-filter: blur(9px);
+	backdrop-filter: var(--blur);
 	background-color: color-mix(
 		in srgb,
 		var(--color-bg-tertiary) 50%,

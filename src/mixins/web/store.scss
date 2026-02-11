@@ -6,7 +6,7 @@
 
 @mixin capsule-icon {
 	background-color: var(--color-bg-main-50);
-	backdrop-filter: blur(20px);
+	backdrop-filter: var(--blur);
 	border-radius: var(--rounding-md);
 }
 
@@ -38,7 +38,7 @@
 		}
 
 		#{$gradient} {
-			opacity: 0.5;
+			opacity: var(--dim-opacity);
 		}
 	}
 

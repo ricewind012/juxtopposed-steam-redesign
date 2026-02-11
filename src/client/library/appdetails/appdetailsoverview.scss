@@ -9,7 +9,7 @@
 
 #Container {
 	background-color: color-mix(in srgb, var(--color-bg-hl) 2%, transparent);
-	backdrop-filter: blur(20px);
+	backdrop-filter: var(--blur);
 }
 
 #Spotlights {

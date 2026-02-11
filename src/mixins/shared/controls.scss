@@ -164,7 +164,7 @@
 }
 
 @mixin radio-description {
-	opacity: 0.5;
+	opacity: var(--dim-opacity);
 	font: var(--text--body-medium);
 	margin-block-start: var(--spacing-xxs);
 }
@@ -235,7 +235,7 @@
 	}
 
 	&#{$disabled-selector} {
-		opacity: 0.5;
+		opacity: var(--dim-opacity);
 	}
 
 	&::before {

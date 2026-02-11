@@ -158,7 +158,7 @@
 	#CountDisplay {
 		color: var(--color-fg-dim);
 		font: inherit;
-		margin-inline-start: var(--spacing-xs);
+		margin-inline-start: var(--spacing-xxs);
 	}
 
 	// Seen when reordering
@@ -201,7 +201,7 @@
 			pointer-events: all;
 
 			&#Disabled {
-				opacity: 0.5;
+				opacity: var(--dim-opacity);
 
 				pointer-events: none;
 			}

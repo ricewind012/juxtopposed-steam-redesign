@@ -29,7 +29,7 @@
 		}
 
 		&:hover {
-			--bg-opacity: 0.5;
+			--bg-opacity: var(--dim-opacity);
 		}
 
 		&:active {

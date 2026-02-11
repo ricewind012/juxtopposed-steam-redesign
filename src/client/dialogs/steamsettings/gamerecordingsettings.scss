@@ -40,7 +40,7 @@
 	}
 
 	#Value {
-		opacity: 0.5;
+		opacity: var(--dim-opacity);
 		color: inherit;
 	}
 }

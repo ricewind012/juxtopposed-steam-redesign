@@ -3,7 +3,7 @@
 
 #Backdrop {
 	background-color: var(--color-bg-main-50);
-	backdrop-filter: blur(20px);
+	backdrop-filter: var(--blur);
 
 	@media (prefers-reduced-motion: no-preference) {
 		transition-duration: 250ms;
