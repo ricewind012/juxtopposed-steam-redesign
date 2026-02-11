@@ -43,8 +43,7 @@
 }
 
 #ShoppingCartCtn {
-	// TODO: xxl
-	gap: 25px;
+	gap: var(--spacing-xl);
 }
 
 #ShoppingCartHeader {
@@ -63,7 +62,7 @@
 	padding: 0;
 
 	max-width: calc(
-		var(--shoppingcart_right-col-size) + 25px +
+		var(--shoppingcart_right-col-size) + var(--spacing-xl) +
 			var(--shoppingcart_left-col-size)
 	);
 }

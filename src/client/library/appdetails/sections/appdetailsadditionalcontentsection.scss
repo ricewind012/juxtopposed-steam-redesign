@@ -7,7 +7,7 @@
 	}
 
 	&:not(:last-child) {
-		margin-block-end: 7px;
+		margin-block-end: var(--spacing-xs);
 	}
 
 	#Image {
@@ -17,7 +17,7 @@
 	#Title {
 		color: var(--color-fg-main);
 		font: var(--text--body-medium);
-		margin-inline-start: 7px;
+		margin-inline-start: var(--spacing-xs);
 	}
 }
 

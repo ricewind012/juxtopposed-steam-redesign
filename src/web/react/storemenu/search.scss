@@ -25,7 +25,7 @@
 }
 
 #SearchBar {
-	margin-inline: calc(var(--storemenu_button-gap) + 5%);
+	margin-inline: calc(var(--spacing-xs) + 5%);
 
 	justify-content: center;
 }
@@ -77,7 +77,7 @@
 	#SectionTitle {
 		color: var(--color-fg-main);
 		font: var(--text--heading-small);
-		margin-block-end: var(--spacing-xs);
+		margin-block-end: var(--spacing-xxs);
 	}
 
 	#SuggestionList {

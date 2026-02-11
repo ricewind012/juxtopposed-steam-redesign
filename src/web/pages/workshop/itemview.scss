@@ -15,13 +15,13 @@
 @mixin -section {
 	background: var(--color-bg-main-50);
 	border-radius: var(--radius-lg);
-	padding: 25px;
+	padding: var(--spacing-xl);
 }
 
 @mixin -section-header {
 	color: var(--color-fg-dim);
 	font: var(--text--heading-small);
-	margin-block-end: 30px;
+	margin-block-end: var(--spacing-xxl);
 }
 
 #sharedfiles_content_ctn {
@@ -30,9 +30,9 @@
 
 		// TODO: move to comments.scss if I see this again
 		background-color: transparent;
-		padding: 25px;
-		margin: -25px;
-		margin-block-end: 30px;
+		padding: var(--spacing-xl);
+		margin: -var(--spacing-xl);
+		margin-block-end: var(--spacing-xxl);
 	}
 
 	#rightContents {
@@ -246,7 +246,7 @@
 	}
 
 	.ratingSection {
-		gap: var(--spacing-xs);
+		gap: var(--spacing-xxs);
 
 		display: flex;
 		align-items: center;
@@ -256,7 +256,7 @@
 .workshop_item_header {
 	@include -section;
 
-	gap: 25px;
+	gap: var(--spacing-xl);
 	box-shadow: none;
 
 	.col_right {

@@ -80,8 +80,8 @@
 	}
 
 	#CornerContent {
-		inset-block-end: var(--spacing-xs);
-		inset-inline-start: var(--spacing-xs);
+		inset-block-end: var(--spacing-xxs);
+		inset-inline-start: var(--spacing-xxs);
 	}
 
 	#DurationText {
@@ -90,7 +90,7 @@
 		font: var(--text--body-small);
 		font-family: "Roboto-Mono", "Motiva Sans", sans-serif;
 		font-weight: bold;
-		gap: var(--spacing-xs);
+		gap: var(--spacing-xxs);
 
 		&#DurationTextClip {
 			color: var(--color-accent-yellow);
@@ -113,7 +113,7 @@
 	#AppNameHeader {
 		gap: var(--spacing-sm);
 		padding-block: var(--spacing-sm);
-		margin-block: var(--spacing-xs);
+		margin-block: var(--spacing-xxs);
 	}
 }
 

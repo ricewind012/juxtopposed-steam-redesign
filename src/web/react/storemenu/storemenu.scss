@@ -11,7 +11,7 @@
 }
 
 #DynamicMenuButtons {
-	gap: var(--storemenu_button-gap);
+	gap: var(--spacing-xs);
 }
 
 #MenuButton {
@@ -40,7 +40,7 @@
 }
 
 #RightButtons {
-	gap: var(--storemenu_button-gap);
+	gap: var(--spacing-xs);
 	padding: 0;
 	margin: 0;
 

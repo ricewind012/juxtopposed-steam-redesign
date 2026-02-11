@@ -7,13 +7,13 @@
 	#FeaturedItemDesc {
 		color: var(--color-fg-dim);
 		font: var(--text--body-small);
-		margin-block-end: 7px;
+		margin-block-end: var(--spacing-xs);
 	}
 
 	#FeaturedItemHeader {
 		color: var(--color-fg-dim);
 		font: var(--text--body-medium);
-		margin-block-end: 7px;
+		margin-block-end: var(--spacing-xs);
 	}
 
 	#FeaturedItemHideButton {
@@ -48,13 +48,13 @@
 		@include style.link;
 
 		font: var(--text--body-large);
-		padding-block: 7px;
+		padding-block: var(--spacing-xs);
 	}
 
 	#FeaturedItemName {
 		color: var(--color-fg-main);
 		font: var(--text--body-large);
-		margin-block-end: 7px;
+		margin-block-end: var(--spacing-xs);
 	}
 }
 

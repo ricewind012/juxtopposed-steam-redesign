@@ -4,7 +4,9 @@
 	--appportrait_landscape-height: 106px;
 	// --appportrait_portrait-width: 191px;
 	// --appportrait_portrait-height: 262px;
-	--downloads_top-bar-height: calc(var(--spacing-sm) * 2 + 37px + 25px);
+	--downloads_top-bar-height: calc(
+		var(--spacing-sm) * 2 + 37px + var(--spacing-xl)
+	);
 	--gamepaddialog_field-spacing-block: var(--spacing-sm);
 	--library_gamelist-bar-spacing: 34px;
 	// TODO(vars): 18px * 1.4 = --text--heading-small, like in store home page

@@ -11,7 +11,7 @@
 
 #Friends,
 #FriendsOverflow > div {
-	gap: var(--spacing-xs);
+	gap: var(--spacing-xxs);
 }
 
 #LabelHolder {
@@ -43,5 +43,5 @@
 #SubsectionHeader {
 	color: var(--color-fg-dim);
 	font: var(--text--body-medium);
-	padding-block-end: 7px;
+	padding-block-end: var(--spacing-xs);
 }

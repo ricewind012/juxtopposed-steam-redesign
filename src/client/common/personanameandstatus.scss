@@ -6,7 +6,7 @@
 #richPresenceLabel {
 	color: inherit;
 	font: var(--text--body-small);
-	margin-block-start: 7px;
+	margin-block-start: var(--spacing-xs);
 }
 
 #statusAndName {

@@ -32,11 +32,13 @@
 	--rounding-md: 3px;
 	--rounding-lg: 5px;
 
-	--spacing-xs: 5px;
+	--spacing-xxs: 5px;
+	--spacing-xs: 7px;
 	--spacing-sm: 10px;
 	--spacing-md: 15px;
 	--spacing-lg: 20px;
-	--spacing-xl: 30px;
+	--spacing-xl: var(--spacing-xl);
+	--spacing-xxl: 30px;
 
 	// Typography
 	--text--heading-large: normal 700 26px/1.4 "Motiva Sans", Arial, Sans-serif;
@@ -63,7 +65,7 @@
 
 	// Button
 	--button--border-size: var(--border-sm);
-	--button--spacing-block-sm: var(--spacing-xs);
+	--button--spacing-block-sm: var(--spacing-xxs);
 	--button--spacing-block-md: var(--spacing-sm);
 	--button--spacing-inline: var(--spacing-lg);
 
@@ -134,13 +136,13 @@
 		100% - var(--carousel--section-spacing) - var(--carousel--thumb-height)
 	);
 	--carousel--arrow-size: calc(var(--icon--size-lg) + var(--spacing-sm) * 3);
-	--carousel--section-spacing: 30px;
+	--carousel--section-spacing: var(--spacing-xxl);
 	--carousel--thumb-height: 8px;
 
 	// Dialog
 	--dialog--spacing-container: var(--spacing-lg);
-	--dialog--spacing-content: 30px;
-	--dialog--window-control-size: 25px;
+	--dialog--spacing-content: var(--spacing-xxl);
+	--dialog--window-control-size: var(--spacing-xl);
 	--dialog--window-control-spacing: 18px;
 
 	// Text field
@@ -173,7 +175,7 @@
 	--toggle--switch-bg: var(--color-bg-hl);
 	--toggle--switch-bg-checked: var(--color-bg-tertiary);
 	--toggle--switch-size: 63px;
-	--toggle--switch-spacing: var(--spacing-xs);
+	--toggle--switch-spacing: var(--spacing-xxs);
 
 	// Other
 	--sidebar-width: 299px;

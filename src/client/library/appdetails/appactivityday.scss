@@ -20,7 +20,7 @@
 /// For whatever reason an extend doesn't work here...
 @mixin -event-contents {
 	&_TextColumn {
-		gap: 7px;
+		gap: var(--spacing-xs);
 	}
 
 	&_Title {
@@ -92,8 +92,8 @@
 			background-color: transparent;
 			border: var(--border-md) solid transparent;
 			border-radius: var(--radius-lg);
-			margin-block-end: var(--spacing-xs);
-			margin-inline-end: var(--spacing-xs);
+			margin-block-end: var(--spacing-xxs);
+			margin-inline-end: var(--spacing-xxs);
 
 			&#Active {
 				border-color: var(--color-secondary);
@@ -119,7 +119,7 @@
 		#TimeStamp {
 			color: var(--color-fg-dim);
 			font: var(--text--body-small);
-			margin-block-start: 7px;
+			margin-block-start: var(--spacing-xs);
 			margin-inline: 0;
 		}
 	}
@@ -148,7 +148,7 @@
 	padding: 0;
 	margin-block-end: var(--spacing-sm);
 
-	height: 30px;
+	height: var(--spacing-xxl);
 }
 
 #PartnerEventLargeUpdate {
@@ -232,7 +232,7 @@
 	}
 
 	&_Container {
-		gap: 7px;
+		gap: var(--spacing-xs);
 		padding: var(--spacing-sm);
 	}
 

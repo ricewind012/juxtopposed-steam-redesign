@@ -57,7 +57,7 @@ h3 {
 	.bb_quoteauthor {
 		color: var(--color-fg-dim);
 		font: inherit;
-		margin-bottom: var(--spacing-xs);
+		margin-bottom: var(--spacing-xxs);
 	}
 }
 
@@ -115,7 +115,7 @@ input[type="checkbox"] {
 	background: none;
 	padding: 0;
 	margin-top: var(--top-content-margin);
-	margin-bottom: 30px;
+	margin-bottom: var(--spacing-xxl);
 
 	.page_content {
 		flex-direction: column;
@@ -149,7 +149,7 @@ input[type="checkbox"] {
 	background: var(--color-bg-main);
 	line-height: inherit;
 	border-radius: var(--rounding-md);
-	padding: calc(var(--spacing-xs) / 2) var(--spacing-sm);
+	padding: calc(var(--spacing-xxs) / 2) var(--spacing-sm);
 	margin: 0;
 
 	height: unset;
@@ -166,7 +166,7 @@ input[type="checkbox"] {
 }
 
 .review_award_icon {
-	--size: 25px;
+	--size: var(--spacing-xl);
 
 	width: var(--size);
 	height: var(--size);

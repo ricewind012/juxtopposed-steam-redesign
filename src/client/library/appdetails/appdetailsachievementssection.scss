@@ -3,7 +3,7 @@
 #AchievementProgressContainer {
 	@include controls.progress-bar("#AchievementProgress");
 
-	margin-block: 7px 0;
+	margin-block: var(--spacing-xs) 0;
 
 	height: unset;
 }
@@ -27,7 +27,7 @@
 	}
 
 	#Icon {
-		margin-inline-end: 7px;
+		margin-inline-end: var(--spacing-xs);
 	}
 
 	#Name {
@@ -62,7 +62,7 @@
 	#Label {
 		color: var(--color-fg-dim);
 		font: var(--text--body-medium);
-		margin-block-end: 7px;
+		margin-block-end: var(--spacing-xs);
 	}
 }
 

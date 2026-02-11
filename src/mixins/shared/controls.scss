@@ -28,7 +28,7 @@
 	transition: var(--transition);
 	font: var(--text--body-large);
 	border-radius: var(--rounding-md);
-	gap: var(--spacing-xs);
+	gap: var(--spacing-xxs);
 	padding-inline: var(--button--spacing-inline);
 
 	display: flex;
@@ -166,7 +166,7 @@
 @mixin radio-description {
 	opacity: 0.5;
 	font: var(--text--body-medium);
-	margin-block-start: var(--spacing-xs);
+	margin-block-start: var(--spacing-xxs);
 }
 
 @mixin tabs-container {
@@ -182,7 +182,7 @@
 	color: var(--color-fg-dim);
 	font: var(--text--body-large);
 	border-radius: var(--rounding-md);
-	padding: 7px 20px;
+	padding: var(--spacing-xs) 20px;
 
 	&:hover {
 		background-color: var(--color-bg-hover);

@@ -3,7 +3,7 @@
 @use "client/appdetails";
 
 #ActionSection {
-	margin-inline-end: 30px;
+	margin-inline-end: var(--spacing-xxl);
 
 	height: unset;
 }
@@ -30,7 +30,7 @@
 #DetailsProgressContainer {
 	@include controls.progress-bar("#DetailsProgressBar");
 
-	margin-block-start: var(--spacing-xs);
+	margin-block-start: var(--spacing-xxs);
 
 	height: unset;
 }
@@ -69,7 +69,7 @@
 }
 
 #GameStatsSection {
-	gap: 25px;
+	gap: var(--spacing-xl);
 
 	align-self: unset;
 }
@@ -80,7 +80,7 @@
 
 #InnerContainer {
 	padding-block: 18px 0;
-	padding-inline: 16px 30px;
+	padding-inline: 16px var(--spacing-xxl);
 
 	#Container#StickyHeader & {
 		padding-block-end: 18px;
@@ -141,7 +141,7 @@
 	font: var(--text--body-medium);
 	letter-spacing: 0;
 	text-transform: none;
-	margin-block-end: var(--spacing-xs);
+	margin-block-end: var(--spacing-xxs);
 }
 
 #StatusAndStats {

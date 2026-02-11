@@ -7,15 +7,13 @@
 		var(--color-fg-dim),
 		transparent
 	);
-	// TODO(vars): spacing
-	--storemenu_button-gap: 7px;
 
 	// Pages
 	--apphub_content-width: 1564px;
 	--market_row-spacing-outer: 18px;
 	--market_row-spacing-inner: 20px;
 	--profile_width: 1241px;
-	--profile_sidebar-gutter: 30px;
+	--profile_sidebar-gutter: var(--spacing-xxl);
 
 	// Other
 	--top-content-margin: 69px;

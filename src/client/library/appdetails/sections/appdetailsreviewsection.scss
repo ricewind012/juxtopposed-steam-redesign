@@ -17,7 +17,7 @@
 
 	#CommentCount {
 		color: var(--color-fg-main);
-		margin-inline-start: var(--spacing-xs);
+		margin-inline-start: var(--spacing-xxs);
 	}
 
 	#CommentsLabel {
@@ -26,7 +26,7 @@
 }
 
 #CommentsGroup {
-	gap: var(--spacing-xs);
+	gap: var(--spacing-xxs);
 }
 
 #PlayedForTime {
@@ -37,7 +37,7 @@
 
 #ReviewDescription {
 	color: var(--color-fg-main);
-	gap: 7px;
+	gap: var(--spacing-xs);
 }
 
 #ReviewIcon {

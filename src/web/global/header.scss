@@ -47,7 +47,7 @@
 }
 
 .supernav_container {
-	gap: 7px;
+	gap: var(--spacing-xs);
 
 	display: flex;
 	position: initial;

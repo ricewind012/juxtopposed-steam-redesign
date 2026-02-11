@@ -14,10 +14,11 @@
 #ScreenshotShareDialog {
 	gap: var(--spacing-sm);
 
-	// TODO(vars): dialog
 	#Buttons {
 		gap: var(--spacing-sm);
-		margin-block-start: calc(30px - var(--spacing-sm));
+		margin-block-start: calc(
+			var(--dialog--spacing-content) - var(--spacing-sm)
+		);
 	}
 }
 
@@ -30,7 +31,7 @@
 
 #SpoilerField,
 #VisibilityField {
-	gap: var(--spacing-xs);
+	gap: var(--spacing-xxs);
 
 	#Label {
 		color: var(--color-fg-dim);

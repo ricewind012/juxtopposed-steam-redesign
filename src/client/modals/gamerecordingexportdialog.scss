@@ -25,7 +25,7 @@
 	#Primary {
 		color: var(--color-primary);
 		font: var(--text--heading-small);
-		margin-block-end: 7px;
+		margin-block-end: var(--spacing-xs);
 	}
 }
 
@@ -72,7 +72,7 @@
 		color: var(--color-fg-dim);
 		font: var(--text--body-small);
 		letter-spacing: 0;
-		padding-block-start: 7px;
+		padding-block-start: var(--spacing-xs);
 	}
 
 	#ResolutionNotchTick {

@@ -107,7 +107,7 @@
 
 		display: block;
 		position: absolute;
-		left: calc(var(--icon--size-md) * -1 - var(--spacing-xs));
+		left: calc(var(--icon--size-md) * -1 - var(--spacing-xxs));
 	}
 
 	&::before {

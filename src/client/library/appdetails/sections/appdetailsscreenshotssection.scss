@@ -2,11 +2,11 @@
 #NoneTaken {
 	color: var(--color-fg-dim);
 	font: var(--text--body-large);
-	margin-block-end: 7px;
+	margin-block-end: var(--spacing-xs);
 }
 
 #Screenshots {
-	gap: 7px;
+	gap: var(--spacing-xs);
 }
 
 #Thumbnail {

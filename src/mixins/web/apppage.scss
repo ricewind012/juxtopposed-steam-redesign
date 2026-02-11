@@ -4,7 +4,7 @@
 	border-radius: var(--rounding-md);
 	gap: var(--spacing-sm);
 	padding: 4px 13px;
-	margin-block-end: 7px;
+	margin-block-end: var(--spacing-xs);
 
 	&:hover {
 		background: var(--color-bg-hover);

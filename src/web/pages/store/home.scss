@@ -76,7 +76,7 @@ body.no_home_gutter.infinite_scrolling {
 			}
 
 			.avatar {
-				margin-inline-end: var(--spacing-xs);
+				margin-inline-end: var(--spacing-xxs);
 			}
 
 			.content {
@@ -243,7 +243,7 @@ body.no_home_gutter.infinite_scrolling {
 			letter-spacing: 0;
 			text-transform: none;
 			padding: 0;
-			margin-block: 0 var(--spacing-xs);
+			margin-block: 0 var(--spacing-xxs);
 		}
 
 		.store_capsule {
@@ -260,7 +260,7 @@ body.no_home_gutter.infinite_scrolling {
 .deep_dive_key_tags {
 	color: var(--color-fg-dim);
 	border: none;
-	gap: var(--spacing-xs);
+	gap: var(--spacing-xxs);
 	padding: 0;
 	margin-block-start: auto;
 
@@ -309,7 +309,7 @@ body.no_home_gutter.infinite_scrolling {
 		display: flex;
 
 		& > a {
-			margin-inline-end: var(--spacing-xs);
+			margin-inline-end: var(--spacing-xxs);
 
 			display: flex;
 		}
@@ -365,8 +365,7 @@ body.no_home_gutter.infinite_scrolling {
 		}
 
 		.screenshots {
-			// TODO(vars): spacing
-			--screenshots-gap: 7px;
+			--screenshots-gap: var(--spacing-xs);
 
 			// 17px = capsule height - screenshot height
 			margin-block: calc(17px / 2);
@@ -673,7 +672,7 @@ body.no_home_gutter.infinite_scrolling {
 	.platforms {
 		opacity: 1;
 		color: var(--color-fg-dim);
-		gap: var(--spacing-xs);
+		gap: var(--spacing-xxs);
 
 		// Fix some bullshit CSS behavior
 		display: flex;
@@ -732,7 +731,7 @@ body.no_home_gutter.infinite_scrolling {
 	}
 
 	.screenshots {
-		gap: 7px;
+		gap: var(--spacing-xs);
 		margin: 0;
 
 		display: grid;
@@ -785,7 +784,7 @@ body.no_home_gutter.infinite_scrolling {
 		margin-inline-end: var(--spacing-lg);
 
 		& > label {
-			gap: var(--spacing-xs);
+			gap: var(--spacing-xxs);
 
 			display: flex;
 			align-items: center;
@@ -846,7 +845,7 @@ body.no_home_gutter.infinite_scrolling {
 
 		.platform_img {
 			opacity: 1;
-			margin-block-start: var(--spacing-xs);
+			margin-block-start: var(--spacing-xxs);
 		}
 
 		.release_date {
@@ -892,7 +891,7 @@ body.no_home_gutter.infinite_scrolling {
 	.tab_item_top_tags {
 		color: var(--color-fg-dim);
 		font: var(--text--body-small);
-		margin-block-start: var(--spacing-xs);
+		margin-block-start: var(--spacing-xxs);
 
 		height: unset;
 	}
@@ -907,7 +906,7 @@ body.no_home_gutter.infinite_scrolling {
 
 		.screenshot {
 			border-radius: var(--radius-lg);
-			margin-block-start: var(--spacing-xs);
+			margin-block-start: var(--spacing-xxs);
 
 			height: 205px;
 		}
@@ -929,7 +928,7 @@ body.no_home_gutter.infinite_scrolling {
 		}
 
 		.tags {
-			gap: var(--spacing-xs);
+			gap: var(--spacing-xxs);
 			margin-block: var(--spacing-sm);
 
 			display: flex;

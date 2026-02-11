@@ -10,7 +10,7 @@
 		transparent
 	);
 	border-radius: var(--rounding-md);
-	padding: var(--spacing-xs);
+	padding: var(--spacing-xxs);
 
 	&:hover {
 		--percentage: 10%;
@@ -31,6 +31,6 @@
 
 @mixin part-container {
 	background-color: var(--color-bg-tertiary);
-	gap: 7px;
+	gap: var(--spacing-xs);
 	padding: var(--spacing-sm);
 }

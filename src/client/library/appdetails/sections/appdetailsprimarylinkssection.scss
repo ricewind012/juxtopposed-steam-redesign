@@ -29,12 +29,12 @@
 }
 
 #LinksSection {
-	padding: var(--spacing-xs) var(--spacing-sm);
-	margin-inline: 16px 30px;
+	padding: var(--spacing-xxs) var(--spacing-sm);
+	margin-inline: 16px var(--spacing-xxl);
 	margin-block: 27px;
 
 	// ?
-	width: calc(100% - 16px - 30px);
+	width: calc(100% - 16px - var(--spacing-xxl));
 
 	& > div {
 		background: none;

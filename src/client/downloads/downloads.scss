@@ -11,7 +11,7 @@
 #DownloadsPage {
 	background: none;
 	// TODO(vars): what is this
-	margin-top: calc(44px + 25px);
+	margin-top: calc(44px + var(--spacing-xl));
 
 	.DialogButton {
 		// Assume download as this doesn't have a distinguishing class name lol
@@ -45,9 +45,9 @@
 
 #ItemLists {
 	// TODO(vars):
-	margin-left: 25px;
+	margin-left: var(--spacing-xl);
 	// 16px = scrollbar for now
-	margin-right: calc(25px - 16px);
+	margin-right: calc(var(--spacing-xl) - 16px);
 }
 
 #Progress {
@@ -170,8 +170,8 @@
 
 	display: flex;
 	align-items: center;
-	top: 25px;
-	left: 25px;
+	top: var(--spacing-xl);
+	left: var(--spacing-xl);
 
 	// TODO(localization):
 	&::before {
@@ -188,9 +188,8 @@
 	}
 }
 
-// TODO: xxl
 #TopSection {
-	margin: 25px;
+	margin: var(--spacing-xl);
 	margin-bottom: 0;
 
 	height: unset;
@@ -202,7 +201,7 @@
 	#DetailsAndType {
 		position: fixed;
 		top: var(--downloads_top-bar-height);
-		right: 25px;
+		right: var(--spacing-xl);
 
 		height: 44px;
 

@@ -27,7 +27,7 @@
 #AddRemoveLinks {
 	font-size: 0;
 	// There is a separator in a text form, so divide by 2
-	gap: var(--spacing-xs);
+	gap: var(--spacing-xxs);
 
 	#AddLineItem {
 		@include -icon-button("plus");
@@ -43,8 +43,7 @@
 }
 
 #InnerLineItemCtn {
-	// TODO: xxl
-	gap: 25px;
+	gap: var(--spacing-xl);
 }
 
 #LineItemsCtn {

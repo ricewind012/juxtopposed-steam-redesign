@@ -22,7 +22,7 @@
 #GroupLabel {
 	color: var(--color-fg-dim);
 	font: var(--text--body-small);
-	margin-block: calc(7px * 2) 7px;
+	margin-block: calc(var(--spacing-xs) * 2) var(--spacing-xs);
 }
 
 #InfoLink {

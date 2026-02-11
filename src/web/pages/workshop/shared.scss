@@ -82,7 +82,7 @@
 		vertical-align: middle;
 
 		&.drop {
-			padding: 7px 20px;
+			padding: var(--spacing-xs) 20px;
 			margin: -7px -20px;
 		}
 	}

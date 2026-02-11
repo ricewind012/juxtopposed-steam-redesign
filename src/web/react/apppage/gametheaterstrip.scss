@@ -21,7 +21,7 @@
 }
 
 #StripItems {
-	gap: 7px;
+	gap: var(--spacing-xs);
 	padding-block: var(--border-lg);
 	margin-block-start: var(--spacing-lg);
 	margin-inline: calc(var(--arrow-size) + var(--spacing-md));

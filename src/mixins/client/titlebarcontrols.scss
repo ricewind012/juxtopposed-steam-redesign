@@ -3,7 +3,7 @@
 @mixin button {
 	background-color: var(--color-bg-hl);
 	border-radius: var(--rounding-md);
-	padding: 7px 15px;
+	padding: var(--spacing-xs) 15px;
 
 	&:hover {
 		background-color: var(--color-bg-hover);

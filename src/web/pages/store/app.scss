@@ -7,16 +7,13 @@
 %-section {
 	background-color: var(--color-bg-main-50);
 	border-radius: var(--radius-lg);
-	// TODO: xxl
-	padding: var(--game-area-spacing);
+	padding: var(--spacing-xl);
 	margin-block-start: 12px;
 }
 
 body.game_bg {
 	// XD
 	--apphub_content-width: var(--store-page-width);
-	// TODO: xxl
-	--game-area-spacing: 25px;
 	--store-page-width: 1567px;
 	--top-content-margin: 44px;
 
@@ -31,8 +28,7 @@ body.game_bg {
 		background: var(--color-bg-main);
 		border-radius: var(--radius-lg);
 		padding: var(--spacing-md);
-		// TODO: xxl
-		padding-inline-start: var(--game-area-spacing);
+		padding-inline-start: var(--spacing-xl);
 	}
 
 	// Not really useful anyway
@@ -93,7 +89,7 @@ body.game_bg {
 .bundle_label {
 	color: var(--color-primary);
 	font: inherit;
-	gap: var(--spacing-xs);
+	gap: var(--spacing-xxs);
 
 	display: inline-flex;
 	align-items: center;
@@ -110,8 +106,7 @@ body.game_bg {
 	@include style.alert;
 
 	font: inherit;
-	// TODO(vars): spacing
-	margin-block-start: calc(7px * 2);
+	margin-block-start: calc(var(--spacing-xs) * 2);
 
 	.anticheat_name {
 		color: var(--color-fg-main);
@@ -293,7 +288,7 @@ body.game_bg {
 		font: var(--text--body-small);
 		text-transform: none;
 		gap: var(--spacing-sm);
-		margin-block-start: 7px;
+		margin-block-start: var(--spacing-xs);
 
 		display: flex;
 		align-items: center;
@@ -315,7 +310,7 @@ body.game_bg {
 	}
 
 	.game_purchase_action {
-		margin-block-start: 7px;
+		margin-block-start: var(--spacing-xs);
 
 		float: unset;
 		justify-content: end;
@@ -423,8 +418,8 @@ body.game_bg {
 .game_area_purchase_game_dropdown_right_panel {
 	height: unset;
 	inset: auto;
-	inset-block-start: calc(var(--game-area-spacing) + var(--center-offset, 0px));
-	inset-inline-end: var(--game-area-spacing);
+	inset-block-start: calc(var(--spacing-xl) + var(--center-offset, 0px));
+	inset-inline-end: var(--spacing-xl);
 }
 
 .game_area_purchase_game_dropdown_description {
@@ -451,8 +446,7 @@ body.game_bg {
 
 	// TODO(vars): typography
 	min-height: calc(
-		var(--button--spacing-block-md) * 2 + 16px * 1.4 +
-			var(--game-area-spacing) * 2
+		var(--button--spacing-block-md) * 2 + 16px * 1.4 + var(--spacing-xl) * 2
 	);
 
 	&.demo_above_purchase {
@@ -589,14 +583,14 @@ body.game_bg {
 
 		ul {
 			font: inherit;
-			gap: var(--spacing-xs);
+			gap: var(--spacing-xxs);
 
 			display: flex;
 			flex-direction: column;
 		}
 
 		ul > strong {
-			margin-block-end: 7px;
+			margin-block-end: var(--spacing-xs);
 		}
 	}
 
@@ -618,8 +612,8 @@ body.game_bg {
 		margin: 0;
 
 		position: absolute;
-		inset-block-start: var(--game-area-spacing);
-		inset-inline-end: var(--game-area-spacing);
+		inset-block-start: var(--spacing-xl);
+		inset-inline-end: var(--spacing-xl);
 	}
 }
 
@@ -643,8 +637,7 @@ body.game_bg {
 	background: var(--color-bg-main-50);
 	backdrop-filter: none;
 	border-radius: var(--radius-lg);
-	// TODO: xxl
-	padding: var(--game-area-spacing);
+	padding: var(--spacing-xl);
 	margin-block-start: var(--spacing-sm);
 
 	justify-content: space-between;
@@ -686,7 +679,7 @@ body.game_bg {
 	}
 
 	.glance_tags {
-		gap: var(--spacing-xs);
+		gap: var(--spacing-xxs);
 
 		display: flex;
 		flex-wrap: wrap;
@@ -773,8 +766,7 @@ body.game_bg {
 		color: var(--color-fg-main);
 		font: var(--text--body-large);
 		border-radius: var(--radius-lg);
-		// TODO: xxl
-		padding: var(--game-area-spacing);
+		padding: var(--spacing-xl);
 		margin-block-end: var(--spacing-sm);
 
 		&#shareEmbedRow {
@@ -799,7 +791,7 @@ body.game_bg {
 		.all_languages {
 			color: var(--color-secondary);
 			font: var(--text--body-medium);
-			margin-block-start: 7px;
+			margin-block-start: var(--spacing-xs);
 
 			&:hover {
 				color: var(--color-primary);
@@ -843,7 +835,7 @@ body.game_bg {
 
 	.block.heading + .block {
 		border-radius: 0 0 var(--radius-lg) var(--radius-lg);
-		padding-block-start: 7px;
+		padding-block-start: var(--spacing-xs);
 	}
 
 	.block_content_inner {
@@ -856,7 +848,7 @@ body.game_bg {
 	.block_title {
 		color: var(--color-fg-dim);
 		font: var(--text--body-large);
-		margin-block-end: 7px;
+		margin-block-end: var(--spacing-xs);
 	}
 
 	.block.recommendation_reasons {
@@ -869,19 +861,18 @@ body.game_bg {
 		}
 
 		> :not(.reason) {
-			margin-inline-start: calc(var(--icon--size-md) + var(--spacing-xs));
+			margin-inline-start: calc(var(--icon--size-md) + var(--spacing-xxs));
 
 			&:not(:last-of-type) {
-				// TODO(vars): spacing
-				margin-block-end: calc(7px * 2);
+				margin-block-end: calc(var(--spacing-xs) * 2);
 			}
 		}
 
 		.reason {
 			color: var(--color-fg-main);
 			font: var(--text--body-large);
-			gap: var(--spacing-xs);
-			margin-block-end: 7px;
+			gap: var(--spacing-xxs);
+			margin-block-end: var(--spacing-xs);
 
 			display: flex;
 			align-items: center;
@@ -912,7 +903,7 @@ body.game_bg {
 		}
 
 		.similar_recent_apps_container {
-			gap: var(--spacing-xs);
+			gap: var(--spacing-xxs);
 			margin-block-start: 0;
 
 			& > a {
@@ -1000,8 +991,8 @@ body.game_bg {
 
 	display: flex;
 	inset: auto;
-	inset-block-start: calc(var(--game-area-spacing) + var(--center-offset, 0px));
-	inset-inline-end: var(--game-area-spacing);
+	inset-block-start: calc(var(--spacing-xl) + var(--center-offset, 0px));
+	inset-inline-end: var(--spacing-xl);
 
 	.game_purchase_discount_countdown + & {
 		--center-offset: 4px;
@@ -1156,8 +1147,8 @@ body.game_bg {
 
 	position: absolute;
 	inset-block-start: calc(var(--store-menu-height) + var(--top-content-margin));
-	// TODO: what is 7px
-	inset-inline: calc((100vw - var(--store-page-width)) / 2 - 7px);
+	// TODO: what is var(--spacing-xs)
+	inset-inline: calc((100vw - var(--store-page-width)) / 2 - var(--spacing-xs));
 	max-width: var(--store-page-width);
 
 	#{controls.button-web-selector(".btnv6_blue_hoverfade")} {

@@ -31,8 +31,8 @@
 	margin: 0;
 
 	position: absolute;
-	inset-block-start: 25px;
-	inset-inline-end: 25px;
+	inset-block-start: var(--spacing-xl);
+	inset-inline-end: var(--spacing-xl);
 
 	anchor-name: --top-button;
 }
