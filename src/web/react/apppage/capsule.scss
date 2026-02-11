@@ -20,7 +20,7 @@
 	font: var(--text--body-medium);
 	text-transform: none;
 	box-shadow: none;
-	padding: var(--spacing-xs);
+	padding: var(--spacing-xxs);
 
 	height: unset;
 
@@ -42,7 +42,7 @@
 }
 
 #HeaderCapsuleImageContainer img {
-	border-radius: var(--radius-lg);
+	border-radius: var(--rounding-lg);
 }
 
 #StoreSalePriceWidgetContainer {

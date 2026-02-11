@@ -6,7 +6,7 @@
 
 %-section {
 	background-color: var(--color-bg-main-50);
-	border-radius: var(--radius-lg);
+	border-radius: var(--rounding-lg);
 	padding: var(--spacing-xl);
 	margin-block-start: 12px;
 }
@@ -26,7 +26,7 @@ body.game_bg {
 
 	.apphub_HeaderStandardTop {
 		background: var(--color-bg-main);
-		border-radius: var(--radius-lg);
+		border-radius: var(--rounding-lg);
 		padding: var(--spacing-md);
 		padding-inline-start: var(--spacing-xl);
 	}
@@ -168,7 +168,7 @@ body.game_bg {
 
 .franchise_notice {
 	font: var(--text--body-large);
-	border-radius: var(--radius-lg);
+	border-radius: var(--rounding-lg);
 }
 
 .game_area_bubble {
@@ -323,7 +323,7 @@ body.game_bg {
 	background-image: none;
 
 	.capsule {
-		border-radius: var(--radius-lg);
+		border-radius: var(--rounding-lg);
 	}
 
 	.capsule_container {
@@ -636,7 +636,7 @@ body.game_bg {
 #game_highlights {
 	background: var(--color-bg-main-50);
 	backdrop-filter: none;
-	border-radius: var(--radius-lg);
+	border-radius: var(--rounding-lg);
 	padding: var(--spacing-xl);
 	margin-block-start: var(--spacing-sm);
 
@@ -765,7 +765,7 @@ body.game_bg {
 		background: var(--color-bg-main);
 		color: var(--color-fg-main);
 		font: var(--text--body-large);
-		border-radius: var(--radius-lg);
+		border-radius: var(--rounding-lg);
 		padding: var(--spacing-xl);
 		margin-block-end: var(--spacing-sm);
 
@@ -828,13 +828,13 @@ body.game_bg {
 
 	.block.heading {
 		color: var(--color-fg-dim);
-		border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+		border-radius: var(--rounding-lg) var(--rounding-lg) 0 0;
 		padding-block-end: 0;
 		margin: 0;
 	}
 
 	.block.heading + .block {
-		border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+		border-radius: 0 0 var(--rounding-lg) var(--rounding-lg);
 		padding-block-start: var(--spacing-xs);
 	}
 

@@ -30,7 +30,7 @@
 }
 
 #BetaAccessCodeRow {
-	margin-block-start: var(--spacing-xs);
+	margin-block-start: var(--spacing-xxs);
 }
 
 #BetaHeaderRow {
@@ -98,7 +98,7 @@
 	background-color: var(--color-bg-main-50);
 	color: inherit;
 	font: inherit;
-	gap: var(--spacing-xs);
+	gap: var(--spacing-xxs);
 	margin-block-start: var(--spacing-lg);
 
 	display: flex;
@@ -151,7 +151,7 @@
 // this is awful
 #WorkshopItemRowsScroll {
 	background-color: var(--color-bg-main-50);
-	border-radius: var(--radius-lg);
+	border-radius: var(--rounding-lg);
 	border: none;
 	box-shadow: none;
 

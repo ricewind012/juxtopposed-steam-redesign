@@ -24,25 +24,25 @@ $-others: ":where(#StandaloneFieldSeparator, .DialogControlsSection)";
 	}
 
 	.DialogBody > &:nth-child(-n + 1 of &) {
-		border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+		border-radius: var(--rounding-lg) var(--rounding-lg) 0 0;
 	}
 
 	.DialogBody > &:has(+ #{$-others}) {
-		border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+		border-radius: 0 0 var(--rounding-lg) var(--rounding-lg);
 	}
 
 	.DialogBody > &:nth-last-child(-n + 1 of &) {
-		border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+		border-radius: 0 0 var(--rounding-lg) var(--rounding-lg);
 	}
 
 	.DialogBody > #{$-others} + & {
-		border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+		border-radius: var(--rounding-lg) var(--rounding-lg) 0 0;
 		margin-block-start: var(--spacing-lg);
 	}
 
 	&:only-child,
 	.DialogBody > #{$-others} + &:last-child {
-		border-radius: var(--radius-lg);
+		border-radius: var(--rounding-lg);
 	}
 
 	&#WithDescription {

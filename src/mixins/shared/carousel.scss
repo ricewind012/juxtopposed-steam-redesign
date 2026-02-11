@@ -59,7 +59,7 @@
 @mixin container {
 	background-color: var(--color-bg-main-20);
 	font: var(--text--heading-small);
-	border-radius: var(--radius-lg);
+	border-radius: var(--rounding-lg);
 	padding-block: var(--spacing-lg);
 	padding-inline: var(--carousel--arrow-size);
 }

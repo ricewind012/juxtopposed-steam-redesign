@@ -1,19 +1,19 @@
 #GameInfoDialogContents {
-	--gamepaddialog_field-spacing-block: var(--spacing-xs);
+	--gamepaddialog_field-spacing-block: var(--spacing-xxs);
 
 	gap: 0;
 }
 
 #PlayersList {
 	background-color: var(--color-bg-hl);
-	border-radius: var(--radius-lg);
+	border-radius: var(--rounding-lg);
 	margin-block: 0 var(--spacing-sm);
 
 	order: -1;
 
 	#Details {
 		border: none;
-		padding: var(--spacing-xs) var(--spacing-sm);
+		padding: var(--spacing-xxs) var(--spacing-sm);
 	}
 
 	#Header {
@@ -25,7 +25,7 @@
 		letter-spacing: 0;
 		text-transform: none;
 		border-block-end: var(--border-sm) solid var(--table-border-color);
-		padding: var(--spacing-xs) var(--spacing-sm);
+		padding: var(--spacing-xxs) var(--spacing-sm);
 
 		&:not(:nth-last-child(-n + 1 of &)) {
 			border-inline-end: var(--border-sm) solid var(--table-border-color);

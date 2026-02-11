@@ -26,7 +26,7 @@
 	background-color: var(--color-bg-main-20);
 	font: var(--text--body-large);
 	border: none;
-	border-radius: var(--radius-lg);
+	border-radius: var(--rounding-lg);
 	padding: 8.5px var(--market_row-spacing-inner);
 	margin: 0;
 
@@ -58,7 +58,7 @@
 .market_listing_row {
 	background-color: var(--color-bg-main-50);
 	border: none;
-	border-radius: var(--radius-lg);
+	border-radius: var(--rounding-lg);
 	padding: var(--market_row-spacing-inner);
 	margin-top: var(--market_row-spacing-outer);
 
@@ -129,7 +129,7 @@
 
 .market_search_sidebar_contents {
 	background-color: var(--color-bg-main);
-	border-radius: var(--radius-lg);
+	border-radius: var(--rounding-lg);
 	padding: var(--spacing-md);
 
 	width: var(--gpNavWidth);
@@ -227,8 +227,8 @@
 
 .market_paging {
 	line-height: unset;
-	gap: var(--spacing-xs);
-	padding: var(--spacing-xs);
+	gap: var(--spacing-xxs);
+	padding: var(--spacing-xxs);
 	padding-right: 0;
 	margin: 0;
 	margin-top: var(--market_row-spacing-outer);

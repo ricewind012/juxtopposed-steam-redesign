@@ -6,7 +6,7 @@
 %-forum-post {
 	background: var(--color-bg-main-50);
 	border: none;
-	border-radius: var(--radius-lg);
+	border-radius: var(--rounding-lg);
 	box-shadow: none;
 	margin-bottom: var(--spacing-md);
 }
@@ -112,7 +112,7 @@
 
 		.rightcol {
 			background: var(--color-bg-main);
-			border-radius: var(--radius-lg);
+			border-radius: var(--rounding-lg);
 			gap: var(--spacing-sm);
 			padding: var(--spacing-md);
 			margin: 0;
@@ -184,8 +184,8 @@
 }
 
 .forum_comment_permlink {
-	right: var(--spacing-xs);
-	bottom: var(--spacing-xs);
+	right: var(--spacing-xxs);
+	bottom: var(--spacing-xxs);
 
 	a {
 		color: var(--color-fg-dim);
@@ -290,7 +290,7 @@
 
 .forum_topic {
 	background: var(--color-bg-main-50);
-	border-radius: var(--radius-lg);
+	border-radius: var(--rounding-lg);
 	padding: 20px;
 	margin-bottom: 20px;
 
@@ -324,7 +324,7 @@
 .forum_topic_reply_count {
 	@extend %-right-side-text;
 
-	gap: var(--spacing-xs);
+	gap: var(--spacing-xxs);
 
 	display: flex;
 	align-items: center;
@@ -380,7 +380,7 @@
 
 	// #region TODO: move to commentthread ?
 	.commentthread_entry_autosubscribe {
-		gap: var(--spacing-xs);
+		gap: var(--spacing-xxs);
 		padding: 0;
 		margin-right: auto;
 

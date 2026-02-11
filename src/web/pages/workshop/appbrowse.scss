@@ -33,7 +33,7 @@ body.apphub_blue.v6 {
 .filterOption {
 	@include layout.sidebar-item(".TODO");
 
-	gap: var(--spacing-xs);
+	gap: var(--spacing-xxs);
 	margin-inline: 0;
 
 	display: flex;
@@ -42,7 +42,7 @@ body.apphub_blue.v6 {
 	label {
 		all: unset;
 
-		gap: var(--spacing-xs);
+		gap: var(--spacing-xxs);
 		font: var(--text--body-large);
 
 		display: flex;
@@ -235,7 +235,7 @@ body.apphub_blue.v6 {
 }
 
 .workshopBrowseSortingControls {
-	gap: var(--spacing-xs);
+	gap: var(--spacing-xxs);
 
 	display: flex;
 	align-items: center;
@@ -243,7 +243,7 @@ body.apphub_blue.v6 {
 
 .workshopItem {
 	background-color: var(--color-bg-main-50);
-	border-radius: var(--radius-lg);
+	border-radius: var(--rounding-lg);
 	padding: var(--spacing-md);
 	margin: 0;
 
@@ -270,7 +270,7 @@ body.apphub_blue.v6 {
 .workshopItemAuthorName {
 	color: var(--color-fg-dim);
 	font: var(--text--body-small);
-	margin-top: var(--spacing-xs);
+	margin-top: var(--spacing-xxs);
 }
 
 .workshopItemPreviewHolder {

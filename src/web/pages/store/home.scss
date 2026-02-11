@@ -4,7 +4,7 @@
 @use "web/store";
 
 // Differences from the original mockup:
-// - capsules use --radius-lg instead of --border-radius to match with
+// - capsules use --rounding-lg instead of --border-radius to match with
 //   the buttons inside them
 
 %-capsule {
@@ -104,7 +104,7 @@ body.no_home_gutter.infinite_scrolling {
 
 		img,
 		video {
-			border-radius: var(--radius-lg);
+			border-radius: var(--rounding-lg);
 		}
 
 		.capsule {
@@ -144,7 +144,7 @@ body.no_home_gutter.infinite_scrolling {
 	img {
 		filter: none;
 		box-shadow: none;
-		border-radius: var(--radius-lg);
+		border-radius: var(--rounding-lg);
 
 		height: 100%;
 	}
@@ -215,7 +215,7 @@ body.no_home_gutter.infinite_scrolling {
 		}
 
 		.spotlight_img {
-			border-radius: var(--radius-lg);
+			border-radius: var(--rounding-lg);
 			margin-block-end: var(--spacing-sm);
 
 			width: var(--carousel--image-width);
@@ -300,7 +300,7 @@ body.no_home_gutter.infinite_scrolling {
 	}
 
 	.dq_item_cap {
-		border-radius: var(--radius-lg);
+		border-radius: var(--rounding-lg);
 	}
 }
 
@@ -334,12 +334,12 @@ body.no_home_gutter.infinite_scrolling {
 	padding: var(--spacing-md);
 
 	&.single {
-		border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+		border-radius: var(--rounding-lg) var(--rounding-lg) 0 0;
 		padding-block-end: var(--spacing-sm);
 		margin-block-start: var(--store-home-section-gap);
 
 		.capsule {
-			border-radius: var(--radius-lg);
+			border-radius: var(--rounding-lg);
 			box-shadow: none;
 			margin-block-end: var(--spacing-sm);
 		}
@@ -349,7 +349,7 @@ body.no_home_gutter.infinite_scrolling {
 		}
 
 		.screenshot {
-			border-radius: var(--radius-lg);
+			border-radius: var(--rounding-lg);
 			margin: 0;
 
 			display: flex;
@@ -378,7 +378,7 @@ body.no_home_gutter.infinite_scrolling {
 
 	&.single_buttonbar {
 		border: none;
-		border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+		border-radius: 0 0 var(--rounding-lg) var(--rounding-lg);
 		padding-block-start: 0;
 		margin: 0;
 
@@ -391,7 +391,7 @@ body.no_home_gutter.infinite_scrolling {
 	&:not(.single, .single_buttonbar) {
 		background-color: transparent;
 		padding: 0;
-		border-radius: var(--radius-lg);
+		border-radius: var(--rounding-lg);
 
 		& + & {
 			margin-block-start: var(--store-home-section-gap);
@@ -417,7 +417,7 @@ body.no_home_gutter.infinite_scrolling {
 			width: unset;
 
 			img {
-				border-radius: var(--radius-lg);
+				border-radius: var(--rounding-lg);
 
 				display: flex;
 			}
@@ -597,7 +597,7 @@ body.no_home_gutter.infinite_scrolling {
 	width: unset;
 
 	.capsule {
-		border-radius: var(--radius-lg);
+		border-radius: var(--rounding-lg);
 		// See below
 		padding: 0;
 
@@ -645,7 +645,7 @@ body.no_home_gutter.infinite_scrolling {
 	}
 
 	.capsule {
-		border-radius: var(--radius-lg);
+		border-radius: var(--rounding-lg);
 		box-shadow: none;
 		margin: 0;
 
@@ -748,7 +748,7 @@ body.no_home_gutter.infinite_scrolling {
 
 			& > div {
 				opacity: 1;
-				border-radius: var(--radius-lg);
+				border-radius: var(--rounding-lg);
 
 				width: 231px;
 				height: 111px;
@@ -759,7 +759,7 @@ body.no_home_gutter.infinite_scrolling {
 
 .tab_container {
 	--tab-container-spacing: 8px;
-	--tab-item-border-radius: var(--radius-lg);
+	--tab-item-border-radius: var(--rounding-lg);
 	--tab-item-focus-bg: var(--color-bg-main);
 	--tab-right-col-spacing: var(--spacing-md);
 
@@ -865,7 +865,7 @@ body.no_home_gutter.infinite_scrolling {
 	}
 
 	.tab_item_cap_img {
-		border-radius: var(--radius-lg);
+		border-radius: var(--rounding-lg);
 	}
 
 	.tab_item_content {
@@ -905,7 +905,7 @@ body.no_home_gutter.infinite_scrolling {
 		inset: 0;
 
 		.screenshot {
-			border-radius: var(--radius-lg);
+			border-radius: var(--rounding-lg);
 			margin-block-start: var(--spacing-xxs);
 
 			height: 205px;

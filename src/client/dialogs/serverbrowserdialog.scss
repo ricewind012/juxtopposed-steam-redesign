@@ -46,7 +46,7 @@
 		flex-direction: column;
 
 		& > span {
-			gap: var(--spacing-xs);
+			gap: var(--spacing-xxs);
 
 			display: flex;
 			flex-direction: column;
@@ -79,7 +79,7 @@
 #ServerList {
 	background-color: var(--color-bg-hl);
 	border: none;
-	border-radius: var(--radius-lg);
+	border-radius: var(--rounding-lg);
 	box-shadow: none;
 	margin-block: var(--spacing-sm) 0;
 
@@ -192,11 +192,11 @@
 		padding: var(--spacing-sm) var(--spacing-md);
 
 		&:nth-child(-n + 1 of &) {
-			border-radius: var(--radius-lg) 0 0 var(--radius-lg);
+			border-radius: var(--rounding-lg) 0 0 var(--rounding-lg);
 		}
 
 		&:nth-last-child(-n + 1 of &) {
-			border-radius: 0 var(--radius-lg) var(--radius-lg) 0;
+			border-radius: 0 var(--rounding-lg) var(--rounding-lg) 0;
 		}
 
 		&:hover {

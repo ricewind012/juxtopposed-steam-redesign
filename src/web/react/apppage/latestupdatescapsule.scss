@@ -7,7 +7,7 @@
 }
 
 #EventSummaryContainer {
-	border-radius: var(--radius-lg);
+	border-radius: var(--rounding-lg);
 
 	inset: var(--spacing-md);
 	width: unset;
@@ -27,7 +27,7 @@
 }
 
 #OtherEvents_MainImageCtn {
-	border-radius: var(--radius-lg);
+	border-radius: var(--rounding-lg);
 
 	@include -horizontal {
 		box-shadow: none;
@@ -60,5 +60,5 @@
 #OtherEvents_TextTitle {
 	color: var(--color-fg-main);
 	font: var(--text--heading-small);
-	margin-block-end: var(--spacing-xs);
+	margin-block-end: var(--spacing-xxs);
 }

@@ -7,7 +7,7 @@
 	grid-template-columns: repeat(2, var(--icon-column-size)) repeat(2, 1fr);
 
 	& > * {
-		padding: var(--spacing-xs) var(--spacing-sm);
+		padding: var(--spacing-xxs) var(--spacing-sm);
 
 		width: unset;
 	}
@@ -30,7 +30,7 @@
 }
 
 #DialogBodyText {
-	margin-block-end: var(--spacing-xs);
+	margin-block-end: var(--spacing-xxs);
 }
 
 #Footer {
@@ -42,7 +42,7 @@
 	background-color: var(--color-bg-hl);
 	box-shadow: none;
 	border: none;
-	border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+	border-radius: 0 0 var(--rounding-lg) var(--rounding-lg);
 }
 
 #GameRow {
@@ -66,7 +66,7 @@
 	background-color: var(--color-bg-hl);
 	border: none;
 	border-block-end: var(--border-sm) solid var(--table-border-color);
-	border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+	border-radius: var(--rounding-lg) var(--rounding-lg) 0 0;
 	// For scrollbar
 	padding-inline-end: 14px;
 	margin-block-start: var(--spacing-sm);
@@ -85,7 +85,7 @@
 }
 
 #SortArrowContainer {
-	padding-inline-start: var(--spacing-xs);
+	padding-inline-start: var(--spacing-xxs);
 
 	#Arrow {
 		@include utils.icon("arrow", true);

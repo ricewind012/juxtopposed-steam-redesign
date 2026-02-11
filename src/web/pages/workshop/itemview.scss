@@ -14,7 +14,7 @@
 
 @mixin -section {
 	background: var(--color-bg-main-50);
-	border-radius: var(--radius-lg);
+	border-radius: var(--rounding-lg);
 	padding: var(--spacing-xl);
 }
 
@@ -42,7 +42,7 @@
 
 		.panel {
 			background-color: var(--color-bg-main);
-			border-radius: var(--radius-lg);
+			border-radius: var(--rounding-lg);
 			padding: var(--spacing-md);
 			margin-bottom: var(--spacing-sm);
 
@@ -169,7 +169,7 @@
 
 .requiredItem {
 	background-color: var(--color-bg-hl);
-	border-radius: var(--radius-lg);
+	border-radius: var(--rounding-lg);
 	padding: var(--spacing-sm);
 	margin-bottom: var(--spacing-sm);
 }

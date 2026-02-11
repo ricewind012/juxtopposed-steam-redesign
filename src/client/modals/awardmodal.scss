@@ -22,7 +22,7 @@
 	#Button {
 		transition: var(--transition);
 		border: none;
-		border-radius: var(--radius-lg);
+		border-radius: var(--rounding-lg);
 
 		&:hover {
 			background-color: var(--color-bg-hover);

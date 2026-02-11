@@ -14,7 +14,7 @@
 
 @mixin section {
 	background: rgba(49, 56, 67, 0.5);
-	border-radius: var(--radius-lg);
+	border-radius: var(--rounding-lg);
 	padding: var(--spacing-xl);
 	margin-block-end: 16px;
 }

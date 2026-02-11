@@ -5,7 +5,7 @@
 	background: var(--color-bg-main-50);
 	color: var(--color-fg-main);
 	font: inherit;
-	border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+	border-radius: 0 0 var(--rounding-lg) var(--rounding-lg);
 	padding: var(--spacing-sm);
 }
 
@@ -32,7 +32,7 @@
 .apphub_Card {
 	background: var(--color-bg-main-50);
 	border: none;
-	border-radius: var(--radius-lg);
+	border-radius: var(--rounding-lg);
 	gap: var(--spacing-sm);
 	padding: var(--spacing-md);
 	padding-bottom: calc(var(--spacing-md) + var(--spacing-sm) * 2 + 1lh);
@@ -47,7 +47,7 @@
 	.review_award_aggregated {
 		color: var(--color-primary);
 		font: var(--text--body-large);
-		gap: var(--spacing-xs);
+		gap: var(--spacing-xxs);
 
 		display: inline-flex;
 
@@ -100,7 +100,7 @@
 		@include utils.icon("chat-bubble");
 
 		color: var(--color-fg-dim);
-		margin-right: var(--spacing-xs);
+		margin-right: var(--spacing-xxs);
 	}
 }
 
@@ -171,7 +171,7 @@
 .apphub_CardContentDiscussionText {
 	background-color: var(--color-bg-main-50);
 	border: none;
-	border-radius: var(--radius-lg);
+	border-radius: var(--rounding-lg);
 	padding: var(--spacing-sm);
 }
 
@@ -238,7 +238,7 @@
 
 		position: absolute;
 		bottom: 0;
-		left: calc(var(--avatar-size) / 2 + var(--spacing-xs));
+		left: calc(var(--avatar-size) / 2 + var(--spacing-xxs));
 
 		border: var(--speech-bubble-size) solid transparent;
 		border-top-color: var(--color-bg-main-50);
@@ -336,7 +336,7 @@
 
 .apphub_HeaderBottom {
 	background-color: var(--color-bg-main);
-	border-radius: var(--radius-lg);
+	border-radius: var(--rounding-lg);
 	padding: var(--spacing-sm);
 
 	display: flex;
@@ -419,7 +419,7 @@
 
 .apphub_StoreInfoHeader {
 	background-color: var(--color-bg-main);
-	border-radius: var(--radius-lg);
+	border-radius: var(--rounding-lg);
 	padding: var(--spacing-sm);
 	// XXX(units): keep in sync with .apphub_sectionTabs
 	margin-block: 24px 48px;
@@ -440,7 +440,7 @@
 	.reviewInfo {
 		background-color: var(--color-bg-main);
 		border-radius: var(--rounding-md);
-		padding: var(--spacing-xs);
+		padding: var(--spacing-xxs);
 	}
 
 	.thumb img {

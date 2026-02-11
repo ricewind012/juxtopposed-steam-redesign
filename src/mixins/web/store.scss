@@ -1,6 +1,6 @@
 @mixin capsule {
 	background-color: var(--color-bg-main);
-	border-radius: var(--radius-lg);
+	border-radius: var(--rounding-lg);
 	padding: var(--spacing-md);
 }
 
@@ -13,7 +13,7 @@
 /// All args are selectors.
 @mixin category($gradient, $label) {
 	background: rgba(217, 217, 217, 0.01);
-	border-radius: var(--radius-lg);
+	border-radius: var(--rounding-lg);
 	margin: 0;
 
 	$-colors: (

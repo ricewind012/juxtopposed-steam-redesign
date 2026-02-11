@@ -10,7 +10,7 @@
 }
 
 %-event-image {
-	border-radius: var(--radius-lg);
+	border-radius: var(--rounding-lg);
 
 	&:hover {
 		background-color: var(--color-bg-main-20);
@@ -78,7 +78,7 @@
 	@extend %-event;
 
 	background-color: var(--color-bg-main-20);
-	border-radius: var(--radius-lg);
+	border-radius: var(--rounding-lg);
 	margin-inline-start: calc(var(--steamavatar_size) + var(--spacing-sm));
 
 	#ActiveScreenshot {
@@ -91,7 +91,7 @@
 			transform: none;
 			background-color: transparent;
 			border: var(--border-md) solid transparent;
-			border-radius: var(--radius-lg);
+			border-radius: var(--rounding-lg);
 			margin-block-end: var(--spacing-xxs);
 			margin-inline-end: var(--spacing-xxs);
 
@@ -105,14 +105,14 @@
 		}
 
 		#ImageWrapper {
-			border-radius: var(--radius-lg);
+			border-radius: var(--rounding-lg);
 		}
 
 		#ScreenshotCaption#HasCaption {
 			background: var(--color-bg-main-50);
 			backdrop-filter: blur(20px);
 			border-radius: 0;
-			border-end-start-radius: var(--radius-lg);
+			border-end-start-radius: var(--rounding-lg);
 			margin-block-end: 24px;
 		}
 
@@ -178,7 +178,7 @@
 	}
 
 	&_Image {
-		border-radius: var(--radius-lg);
+		border-radius: var(--rounding-lg);
 	}
 
 	&_Summary {
@@ -224,8 +224,8 @@
 	@include -event-contents;
 
 	background-color: var(--color-bg-hl);
-	border-radius: var(--radius-lg);
-	border-inline-start: var(--radius-lg) solid var(--color-secondary);
+	border-radius: var(--rounding-lg);
+	border-inline-start: var(--rounding-lg) solid var(--color-secondary);
 
 	&:hover {
 		background-color: var(--color-bg-hover);
