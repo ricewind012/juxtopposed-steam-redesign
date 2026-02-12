@@ -16,7 +16,7 @@
 	}
 
 	#LegendBox {
-		margin-right: var(--spacing-xs);
+		margin-right: var(--spacing-xxs);
 
 		width: var(--icon--size-sm);
 		height: var(--icon--size-sm);
@@ -48,7 +48,7 @@
 	}
 
 	#Stat {
-		padding-left: calc(var(--icon--size-sm) + var(--spacing-xs));
+		padding-left: calc(var(--icon--size-sm) + var(--spacing-xxs));
 	}
 }
 

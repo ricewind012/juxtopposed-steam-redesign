@@ -36,14 +36,14 @@
 		color: var(--color-accent-green);
 		font: var(--text--body-medium);
 		letter-spacing: 0;
-		padding: var(--spacing-xs);
+		padding: var(--spacing-xxs);
 
 		inset-block-start: var(--badge-offset);
 		inset-inline-end: var(--badge-offset);
 	}
 
 	#RightColumn {
-		gap: var(--spacing-xs);
+		gap: var(--spacing-xxs);
 
 		#ActionButton {
 			@include controls.button($variant: "primary");

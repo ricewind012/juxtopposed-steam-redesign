@@ -3,7 +3,7 @@
 
 #DescribeGame {
 	color: var(--color-fg-dim);
-	margin-block: 0 var(--spacing-xs);
+	margin-block: 0 var(--spacing-xxs);
 }
 
 #Header {
@@ -40,7 +40,7 @@
 }
 
 #ReviewSettingsChecks {
-	gap: var(--spacing-xs);
+	gap: var(--spacing-xxs);
 	margin: 0;
 
 	// #partnereventshared_HelperTooltip
@@ -48,7 +48,7 @@
 		@include utils.tooltip-icon;
 
 		// TODO: gap in .DialogCheckbox_Container instead ?
-		margin-inline-start: var(--spacing-xs);
+		margin-inline-start: var(--spacing-xxs);
 	}
 }
 
@@ -56,7 +56,7 @@
 	display: block;
 
 	& > span {
-		line-height: calc(1lh + var(--spacing-xs));
+		line-height: calc(1lh + var(--spacing-xxs));
 	}
 }
 

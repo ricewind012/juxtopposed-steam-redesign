@@ -11,7 +11,7 @@
 	@extend %-box;
 
 	.appHubShortcut {
-		margin-bottom: var(--spacing-xs);
+		margin-bottom: var(--spacing-xxs);
 
 		height: unset;
 	}
@@ -95,7 +95,7 @@
 	color: var(--color-fg-main);
 	font: var(--text--body-medium);
 	text-transform: none;
-	padding-bottom: var(--spacing-xs);
+	padding-bottom: var(--spacing-xxs);
 }
 
 .community_home_shortcut_content {

@@ -1,5 +1,5 @@
 #CapsuleList {
-	gap: var(--spacing-xs);
+	gap: var(--spacing-xxs);
 }
 
 #ItemCapsule {
@@ -31,6 +31,6 @@
 	#Title {
 		color: var(--color-fg-main);
 		font: var(--text--heading-small);
-		margin-block-end: var(--spacing-xs);
+		margin-block-end: var(--spacing-xxs);
 	}
 }

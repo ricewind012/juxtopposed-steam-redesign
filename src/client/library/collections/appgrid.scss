@@ -12,7 +12,7 @@
 
 	#EmptyGridMessageLine {
 		color: inherit;
-		margin-block: var(--spacing-xs);
+		margin-block: var(--spacing-xxs);
 
 		&:nth-child(1) {
 			font: var(--text--heading-large);
@@ -32,7 +32,7 @@
 	align-items: center;
 
 	.DialogDropDown {
-		margin-inline: var(--spacing-xs) 0;
+		margin-inline: var(--spacing-xxs) 0;
 	}
 
 	.DialogDropDown_CurrentDisplay {

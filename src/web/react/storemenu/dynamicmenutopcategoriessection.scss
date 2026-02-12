@@ -34,8 +34,8 @@
 	border-block-start: var(--border-sm) solid;
 	border-image: var(--storemenu_border-gradient) 1;
 	gap: var(--spacing-sm);
-	padding-block-start: var(--spacing-xs);
-	margin-block-start: var(--spacing-xs);
+	padding-block-start: var(--spacing-xxs);
+	margin-block-start: var(--spacing-xxs);
 }
 
 #TagLink {
@@ -45,7 +45,7 @@
 }
 
 #TagLinks {
-	gap: var(--spacing-xs);
+	gap: var(--spacing-xxs);
 
 	height: unset;
 }

@@ -4,7 +4,7 @@
 #HorizontalRule {
 	opacity: 1;
 	background-image: var(--storemenu_border-gradient);
-	margin-block: var(--spacing-xs);
+	margin-block: var(--spacing-xxs);
 }
 
 #Link {
@@ -13,7 +13,7 @@
 }
 
 :where(#LinkColumn) {
-	gap: var(--spacing-xs);
+	gap: var(--spacing-xxs);
 	margin: 0;
 }
 
@@ -29,7 +29,7 @@
 	@include style.link;
 
 	font: inherit;
-	gap: var(--spacing-xs);
+	gap: var(--spacing-xxs);
 	margin: 0;
 
 	display: flex;
