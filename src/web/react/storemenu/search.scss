@@ -1,5 +1,4 @@
 @use "shared/controls";
-@use "shared/utils";
 @use "web/store";
 
 // ??? you guys maybe wanna unify this into one component ?
@@ -44,15 +43,7 @@
 }
 
 #SearchIcon {
-	all: unset;
-
-	position: absolute;
-	inset-block-start: var(--spacing-sm);
-	inset-inline-end: var(--spacing-md);
-
-	svg {
-		@include utils.icon("search", "path");
-	}
+	@include controls.text-field-icon($name: "search");
 }
 
 #SearchInput {

@@ -149,12 +149,7 @@
 	&:after {
 		content: "";
 
-		display: block;
-		position: absolute;
-		top: 0;
-		right: var(--spacing-md);
-
-		@include utils.icon("search");
+		@include controls.text-field-icon($name: "search");
 	}
 }
 

@@ -1,5 +1,4 @@
 @use "shared/controls";
-@use "shared/utils";
 
 %-phase-grid-item {
 	background-color: var(--color-bg-hl);
@@ -64,14 +63,7 @@
 	}
 
 	svg {
-		@include utils.icon("search", true);
-
-		color: var(--color-fg-dim);
-
-		position: absolute;
-		inset-inline-end: var(--spacing-md);
-		// TODO: wtf
-		inset-block-start: calc(var(--spacing-sm) + 3px);
+		@include controls.text-field-icon($name: "search");
 	}
 }
 

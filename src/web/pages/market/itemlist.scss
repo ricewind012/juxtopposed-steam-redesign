@@ -1,5 +1,4 @@
 @use "shared/controls";
-@use "shared/utils";
 @use "web/layout";
 @use "web/paging";
 
@@ -164,10 +163,7 @@
 }
 
 #findItemsSearchSubmit {
-	@include utils.icon("search");
-
-	top: 0;
-	right: var(--spacing-md);
+	@include controls.text-field-icon($name: "search");
 }
 
 .game_button,

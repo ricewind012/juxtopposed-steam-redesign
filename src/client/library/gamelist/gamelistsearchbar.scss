@@ -76,12 +76,7 @@
 		&::after {
 			content: "";
 
-			@include utils.icon("search");
-
-			position: absolute;
-			right: var(--spacing-md);
-
-			color: var(--color-secondary);
+			@include controls.text-field-icon($name: "search");
 		}
 	}
 }
@@ -133,16 +128,7 @@
 }
 
 #SearchFilterInputClear {
-	@include utils.icon($name: "close", $remove: true);
-
-	color: var(--color-secondary);
-
-	top: calc(50% - var(--icon--size-md) / 2);
-	right: var(--spacing-md);
-
-	&:hover {
-		color: var(--color-primary);
-	}
+	@include controls.text-field-icon($name: "close");
 }
 
 #SearchInput {

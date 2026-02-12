@@ -198,9 +198,7 @@
 @mixin text-field($variant: "normal") {
 	--placeholder-color: var(--text-field--#{$variant}-fg-placeholder);
 	@if $variant == "search" {
-		--icon-spacing: calc(
-			var(--text-field--spacing-inline) + var(--icon--size-md)
-		);
+		--icon-spacing: var(--icon--size-md);
 	}
 
 	background-color: var(--text-field--#{$variant}-bg);
@@ -213,6 +211,17 @@
 	padding-inline-end: calc(
 		var(--text-field--spacing-inline) + var(--icon-spacing, 0px)
 	);
+}
+
+/// @param {"close" | "search"} $name - Icon name.
+@mixin text-field-icon($name) {
+	@include utils.icon($name, $remove: true);
+
+	color: var(--color-secondary);
+
+	position: absolute;
+	inset-block-start: calc(50% - var(--icon--size-md) / 2);
+	inset-inline-end: calc(var(--text-field--spacing-inline) / 2);
 }
 
 @mixin toggle($checked-selector, $disabled-selector) {

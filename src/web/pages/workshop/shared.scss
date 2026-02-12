@@ -1,6 +1,5 @@
 @use "shared/controls";
 @use "shared/style";
-@use "shared/utils";
 @use "web/layout";
 
 .home_tab {
@@ -47,12 +46,7 @@
 	&::after {
 		content: "";
 
-		position: absolute;
-		top: var(--spacing-sm);
-		right: var(--spacing-md);
-		display: block;
-
-		@include utils.icon("search");
+		@include controls.text-field-icon($name: "search");
 	}
 
 	.search_text {
