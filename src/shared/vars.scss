@@ -140,8 +140,16 @@
 	--carousel--thumb-height: 8px;
 
 	// Dialog
+	--dialog--shadow:
+		0px 4px 19px 3px rgba(0, 0, 0, 0.3), 0px 8px 38px 5px rgba(0, 0, 0, 0.15);
 	--dialog--spacing-container: var(--spacing-lg);
 	--dialog--spacing-content: var(--spacing-xxl);
+	--dialog--top-bar: linear-gradient(
+		90deg,
+		transparent,
+		var(--color-primary),
+		transparent
+	);
 	--dialog--window-control-size: var(--spacing-xl);
 	--dialog--window-control-spacing: 18px;
 

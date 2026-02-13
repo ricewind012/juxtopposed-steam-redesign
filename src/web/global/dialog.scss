@@ -1,0 +1,76 @@
+@use "shared/utils";
+
+.newmodal {
+	background: var(--color-bg-main);
+	box-shadow: var(--dialog--shadow);
+
+	.modal_top_bar {
+		background-image: var(--dialog--top-bar);
+
+		height: var(--border-sm);
+	}
+}
+
+.newmodal_background {
+	opacity: 1;
+	background: var(--color-bg-main-50);
+	backdrop-filter: var(--blur);
+}
+
+.newmodal_buttons {
+	gap: var(--spacing-sm);
+
+	display: flex;
+	justify-content: end;
+}
+
+.newmodal_close {
+	all: unset;
+
+	--icon--size-lg: var(--dialog--window-control-size);
+
+	position: absolute;
+	inset-block-start: var(--spacing-md);
+	inset-inline-end: var(--spacing-md);
+
+	@include utils.icon($name: "close", $size: "lg");
+
+	&:hover {
+		color: var(--color-fg-main);
+	}
+}
+
+.newmodal_content {
+	color: var(--color-fg-main);
+	font: var(--text--body-medium);
+	gap: var(--dialog--spacing-content);
+	padding: var(--dialog--spacing-container);
+	padding-block-start: 0;
+
+	display: flex;
+	flex-direction: column;
+}
+
+.newmodal_content_border {
+	padding: 0;
+}
+
+.newmodal_content_innerbg {
+	all: unset;
+}
+
+.newmodal_header {
+	color: var(--color-fg-dim);
+	font: var(--text--heading-large);
+
+	.title_text {
+		color: var(--color-fg-main);
+		padding: var(--dialog--spacing-container);
+		padding-block-end: var(--spacing-sm);
+	}
+}
+
+.newmodal_prompt_description {
+	font: inherit;
+	margin-block-end: var(--spacing-xxs);
+}
