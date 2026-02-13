@@ -1,9 +1,9 @@
 @mixin container {
 	background-color: var(--color-bg-hl);
-	box-shadow: var(--menu--container-shadow);
+	box-shadow: var(--popup--container-shadow);
 	border-radius: var(--rounding-md);
 
-	// For rounding on some menus (gamelistdropdown is one)
+	// For rounding
 	overflow: hidden;
 }
 
@@ -16,8 +16,8 @@
 @mixin item {
 	color: var(--color-fg-main);
 	font: var(--text--body-medium);
-	padding-block: var(--spacing-sm);
-	padding-inline: var(--spacing-lg);
+	padding-block: var(--popup--spacing-block);
+	padding-inline: var(--popup--spacing-inline);
 
 	&:hover {
 		@include item--active;

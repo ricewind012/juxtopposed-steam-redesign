@@ -1,0 +1,8 @@
+@use "shared/controls";
+
+#TextToolTip,
+#ToolTipCustom {
+	@include controls.tooltip;
+
+	text-shadow: none;
+}

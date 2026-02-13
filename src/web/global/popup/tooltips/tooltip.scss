@@ -1,0 +1,6 @@
+@use "shared/controls";
+
+.community_tooltip,
+.store_tooltip {
+	@include controls.tooltip;
+}

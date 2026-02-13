@@ -1,0 +1,31 @@
+#Hover {
+	#TextSection {
+		padding: 0;
+
+		#Name {
+			margin: 0;
+		}
+	}
+}
+
+#TopSection {
+	align-items: center;
+}
+
+#Unlocked {
+	// TODO(vars)
+	--border-color: color-mix(in srgb, var(--color-fg-dim) 40%, transparent);
+
+	background: none;
+	color: inherit;
+	font: inherit;
+	border-block-start: var(--border-sm) solid;
+	border-image: linear-gradient(90deg, var(--border-color), transparent) 1;
+	padding: 0;
+	padding-block-start: var(--spacing-sm);
+	margin-block-start: var(--spacing-sm);
+
+	#RareLabel {
+		color: var(--color-accent-yellow);
+	}
+}

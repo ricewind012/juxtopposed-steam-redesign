@@ -1,0 +1,24 @@
+@use "shared/controls";
+
+#ListItemTooltipBase {
+	@include controls.tooltip;
+}
+
+#ListItemTooltipDetail {
+	color: inherit;
+	font: inherit;
+
+	&#Weak {
+		color: var(--color-fg-dim);
+	}
+}
+
+#Title {
+	color: inherit;
+	font: var(--text--heaing-small);
+}
+
+#TitleRow {
+	gap: var(--spacing-xxs);
+	margin-block-end: var(--spacing-sm);
+}

@@ -20,24 +20,11 @@
 	& > div:first-child {
 		height: unset;
 	}
+}
 
-	#Desc {
-		color: var(--color-fg-dim);
-		font: var(--text--body-small);
-	}
-
-	#Icon {
-		margin-inline-end: var(--spacing-xs);
-	}
-
-	#Name {
-		color: var(--color-fg-main);
-		font: var(--text--heading-small);
-	}
-
-	#TextSection {
-		margin: 0;
-	}
+#Icon {
+	margin: 0;
+	margin-inline-end: var(--spacing-sm);
 }
 
 #Remainder {
@@ -54,6 +41,20 @@
 	line-height: var(--achievementiconbase_size);
 	letter-spacing: 0;
 	text-shadow: none;
+}
+
+#TextSection {
+	margin: 0;
+
+	#Desc {
+		color: var(--color-fg-dim);
+		font: var(--text--body-small);
+	}
+
+	#Name {
+		color: var(--color-fg-main);
+		font: var(--text--heading-small);
+	}
 }
 
 #UnachievedSection {

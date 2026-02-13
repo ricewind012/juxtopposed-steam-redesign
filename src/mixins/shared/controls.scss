@@ -261,3 +261,17 @@
 		border-radius: var(--toggle--swatch-size);
 	}
 }
+
+@mixin tooltip {
+	backdrop-filter: var(--blur);
+	background: var(--color-bg-main-50);
+	color: var(--color-fg-main);
+	font: var(--text--body-medium);
+	border-radius: var(--rounding-md);
+	box-shadow: var(--popup--container-shadow);
+	padding-block: var(--popup--spacing-block);
+	padding-inline: var(--popup--spacing-inline);
+
+	// For rounding
+	overflow: hidden;
+}

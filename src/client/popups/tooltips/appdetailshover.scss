@@ -1,0 +1,9 @@
+@use "shared/controls";
+
+#AppDetailsHover {
+	@include controls.tooltip;
+}
+
+#Background {
+	display: none;
+}

@@ -145,8 +145,10 @@
 	--dialog--window-control-size: var(--spacing-xl);
 	--dialog--window-control-spacing: 18px;
 
-	// Menu
-	--menu--container-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.25);
+	// Popup
+	--popup--container-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.25);
+	--popup--spacing-block: var(--spacing-sm);
+	--popup--spacing-inline: var(--spacing-lg);
 
 	// Text field
 	--text-field--spacing-inline: 18px;
