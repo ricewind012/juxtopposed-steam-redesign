@@ -1,0 +1,45 @@
+@use "shared/controls";
+@use "shared/menu";
+
+#AllChatsMenu {
+	input {
+		@include controls.text-field($variant: "search");
+
+		margin: var(--spacing-sm);
+	}
+}
+
+:where(#AllChats, #Chat) {
+	all: unset;
+
+	// Avatar
+	& > :first-child {
+		display: none;
+	}
+
+	#Name {
+		all: unset;
+	}
+}
+
+#ChatDivider {
+	@include menu.separator;
+}
+
+#ChatLabel {
+	display: none;
+}
+
+#ChatRow {
+	margin: 0;
+
+	flex-direction: column;
+}
+
+#SectionTitle {
+	display: none;
+}
+
+#ShareSheet {
+	padding: 0;
+}

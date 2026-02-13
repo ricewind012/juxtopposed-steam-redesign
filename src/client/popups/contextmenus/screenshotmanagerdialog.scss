@@ -1,0 +1,30 @@
+@use "shared/controls";
+@use "shared/menu";
+
+#ComboboxSelector {
+	padding: 0;
+}
+
+#ComboboxSelectorContextMenu {
+	@include menu.container;
+}
+
+#Option {
+	border-radius: 0;
+}
+
+#SearchBar {
+	all: unset;
+
+	margin: var(--spacing-sm);
+
+	.DialogInput_Wrapper {
+		&::before {
+			@include controls.text-field-icon($name: "search");
+		}
+	}
+
+	#Input {
+		@include controls.text-field($variant: "search");
+	}
+}

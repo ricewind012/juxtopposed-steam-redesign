@@ -1,0 +1,21 @@
+@use "shared/menu";
+
+// Some guy really thought putting !important would be funny af
+body:not([id="hack"]) .visible.visible #DialogDropDownMenu {
+	@include menu.container;
+
+	padding: 0;
+	margin-block: var(--spacing-xxs);
+}
+
+#DialogDropDownMenu_Item {
+	@include menu.item;
+
+	&:focus {
+		@include menu.item--active;
+	}
+}
+
+#DialogDropDownMenu_Separator {
+	@include menu.separator;
+}

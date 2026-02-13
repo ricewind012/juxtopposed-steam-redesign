@@ -1,0 +1,54 @@
+@use "shared/menu";
+@use "shared/utils";
+
+#Arrow {
+	@include utils.icon($name: "arrow", $remove: true);
+
+	transform: rotate(-90deg);
+	margin-inline-start: var(--spacing-xxs);
+}
+
+#contextMenu {
+	@include menu.container;
+
+	background-image: none;
+	padding: 0;
+}
+
+#contextMenuContents {
+	#ContextMenuPopup & {
+		background-color: transparent;
+		padding: 0;
+	}
+}
+
+#contextMenuItem {
+	@include menu.item;
+
+	border: none;
+
+	&:has(> .SVGIcon_Button) {
+		@include menu.item--primary;
+	}
+
+	&#active {
+		@include menu.item--active;
+	}
+
+	&.disabled {
+		@include menu.item--disabled;
+	}
+
+	svg {
+		display: none;
+	}
+}
+
+#ContextMenuPosition {
+	margin: 0;
+}
+
+#ContextMenuHRSeparator,
+#ContextMenuSeparator {
+	@include menu.separator;
+}

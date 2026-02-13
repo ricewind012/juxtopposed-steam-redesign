@@ -1,0 +1,46 @@
+@mixin container {
+	background-color: var(--color-bg-hl);
+	box-shadow: var(--menu--container-shadow);
+	border-radius: var(--rounding-md);
+
+	// For rounding on some menus (gamelistdropdown is one)
+	overflow: hidden;
+}
+
+@mixin description {
+	color: var(--color-fg-dim);
+	font: var(--text--body-small);
+	margin-block-start: var(--spacing-xxs);
+}
+
+@mixin item {
+	color: var(--color-fg-main);
+	font: var(--text--body-medium);
+	padding-block: var(--spacing-sm);
+	padding-inline: var(--spacing-lg);
+
+	&:hover {
+		@include item--active;
+	}
+}
+
+@mixin item--active {
+	background-color: var(--color-bg-hover);
+}
+
+@mixin item--disabled {
+	opacity: var(--dim-opacity);
+}
+
+@mixin item--primary {
+	color: var(--color-primary);
+}
+
+@mixin separator {
+	all: unset;
+
+	background-color: var(--color-bg-hover);
+
+	display: block;
+	height: var(--border-sm);
+}

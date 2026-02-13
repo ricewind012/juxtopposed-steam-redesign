@@ -127,13 +127,17 @@ $-bar-colors: (
 }
 
 #DriveDropdownControl {
+	--item--fg-dim: var(--color-fg-dim);
+	--item--fg-main: var(--color-fg-main);
+	--item--svg-display: flex;
+
 	margin: 0;
 	margin-inline-end: calc(var(--spacing-sm) + 47px);
 }
 
 #DriveName {
-	color: var(--color-fg-main);
-	font: var(--text--body-small);
+	color: var(--item--fg-main);
+	font: inherit;
 	letter-spacing: 0;
 	text-transform: none;
 }
@@ -178,31 +182,32 @@ $-bar-colors: (
 }
 
 #InstallDropdownOption {
+	color: var(--color-fg-main);
 	font: inherit;
 
+	&#IsSelectedDropdownOption {
+		color: var(--color-primary);
+	}
+
 	& > svg {
-		color: var(--color-fg-main);
+		display: none;
 	}
 
 	svg {
 		margin-inline-end: var(--spacing-sm);
 
+		display: var(--svg-display, none);
 		flex-shrink: 0;
 		width: 1em;
 		height: 1em;
 	}
 
 	#DriveName {
-		font: inherit;
 		text-decoration: none;
-
-		svg {
-			color: var(--color-accent-yellow);
-		}
 	}
 
 	#DriveSize {
-		color: var(--color-fg-dim);
+		color: var(--item--fg-dim);
 		font: var(--text--body-small);
 		letter-spacing: 0;
 		text-transform: none;

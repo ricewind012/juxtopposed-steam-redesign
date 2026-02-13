@@ -1,0 +1,55 @@
+@use "shared/menu";
+
+.contextMenuBroadcast {
+	background-color: transparent;
+}
+
+.contextMenuGameOptions {
+	background-color: transparent;
+
+	&:first-child {
+		border-block-start: var(--border-sm) solid var(--color-bg-hover);
+	}
+}
+
+.contextMenuSectionContent {
+	& > .menuChecked {
+		@include menu.item--primary;
+	}
+}
+
+.contextMenuGameTitle {
+	display: none;
+}
+
+.currentUserContextMenu {
+	& > .contextMenuSectionContent {
+		border-block-end: var(--border-sm) solid var(--color-bg-hover);
+	}
+
+	& > .personaContextMenuItem {
+		border-block-end: var(--border-sm) solid var(--color-bg-hover);
+
+		&:has(> [aria-checked="true"]) {
+			@include menu.item--primary;
+		}
+
+		.DialogCheckbox {
+			display: none;
+		}
+	}
+}
+
+.persona_menu_descriptor,
+.persona_menu_dnd_descriptor {
+	@include menu.description;
+
+	padding: 0;
+}
+
+.recentName {
+	@include menu.item;
+	@include menu.item--disabled;
+
+	margin: 0;
+}

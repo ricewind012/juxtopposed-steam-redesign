@@ -1,0 +1,17 @@
+@use "shared/menu";
+
+#CheckContainer {
+	display: none;
+
+	#StreamingContextMenuItem:has(> &:not(:empty)) {
+		@include menu.item--primary;
+	}
+}
+
+#RemotePlayAnywhereDescription {
+	@include menu.description;
+}
+
+#StreamingTargetLabel {
+	margin: 0;
+}

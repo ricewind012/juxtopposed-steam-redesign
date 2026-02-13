@@ -1,0 +1,25 @@
+@use "shared/menu";
+
+#AppCount {
+	opacity: 1;
+	padding-inline-start: var(--spacing-xxs);
+}
+
+#Row {
+	@include menu.item;
+
+	// TODO: .tool-tip-source display contents ?
+	width: 100%;
+
+	&[aria-checked="true"] {
+		@include menu.item--primary;
+	}
+
+	.DialogCheckbox {
+		display: none;
+	}
+}
+
+#Rule {
+	@include menu.separator;
+}

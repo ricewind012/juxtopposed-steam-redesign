@@ -1,0 +1,85 @@
+@use "shared/menu";
+
+.popup_block_new {
+	box-shadow: none;
+
+	.popup_body {
+		border: none;
+	}
+}
+
+.popup_menu {
+	@include menu.container;
+}
+
+.popup_menu_item {
+	@include menu.item;
+
+	&:where(a):hover {
+		color: var(--color-fg-main);
+	}
+}
+
+.shadow_ul,
+.shadow_top,
+.shadow_ur,
+.shadow_left,
+.shadow_right,
+.shadow_bl,
+.shadow_bottom,
+.shadow_br {
+	display: none;
+}
+
+// Not really worth putting everything else in dedicated files
+
+// Profile
+#NamePopup .popup_body {
+	padding: 0;
+
+	& > :first-child {
+		@include menu.item;
+		@include menu.item--disabled;
+	}
+}
+
+#NamePopupAliases {
+	padding: 0;
+
+	p {
+		@include menu.item;
+
+		margin: 0;
+	}
+}
+
+#profile_action_dropdown .popup_menu_item img {
+	display: none;
+}
+
+// Store
+.ds_options_tooltip {
+	@include menu.container;
+
+	padding: 0;
+
+	.option {
+		@include menu.item;
+
+		border-radius: 0;
+		margin: 0;
+	}
+}
+
+// Workshop
+div.navContent {
+	@include menu.container;
+
+	padding: 0;
+
+	a {
+		@include menu.item;
+
+		margin: 0;
+	}
+}
