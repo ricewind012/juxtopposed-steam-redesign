@@ -1,0 +1,43 @@
+.MillenniumItem_Version {
+	font: inherit;
+	margin: 0;
+}
+
+.MillenniumLogs_TextContainer {
+	margin: 0;
+}
+
+.MillenniumPlugins_PluginLabel {
+	display: inline-flex;
+}
+
+.MillenniumSettings {
+	border: none;
+
+	.DialogBody {
+		mask: none;
+		padding-block: var(--dialog--spacing-container);
+	}
+
+	.DialogHeader {
+		display: none;
+	}
+}
+
+.MillenniumThemes_ThemeItem {
+	&:not([data-theme-name="Juxtopposed Steam Redesign"]) > div {
+		margin-inline-start: calc(var(--icon--size-md) + var(--spacing-sm));
+	}
+
+	.MillenniumButton:not(.MillenniumIconButton) {
+		min-width: 100px;
+	}
+
+	.MillenniumIconButton {
+		--icon-name: icon("favorite");
+	}
+}
+
+.MillenniumThemes_ThemeLabel {
+	display: inline-flex;
+}

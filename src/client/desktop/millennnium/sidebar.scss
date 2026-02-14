@@ -1,0 +1,65 @@
+@use "shared/controls";
+@use "web/apppage";
+
+.MillenniumDesktopSidebar {
+	--sidebar-bg: var(--color-bg-main);
+	--sidebar-content-spacing-inline: 0px;
+	--sidebar-width: 400px;
+
+	transition: none;
+	box-shadow: var(--dialog--shadow);
+
+	// For the top line
+	top: var(--border-sm);
+}
+
+.MillenniumDesktopSidebar_Content {
+	padding: var(--dialog--spacing-container);
+}
+
+.MillenniumDesktopSidebar_EditorContent {
+	padding: 0;
+
+	.DialogBody {
+		// Hardcoded for the default "settings component value
+		padding-block-start: 25px;
+	}
+}
+
+.MillenniumDesktopSidebar_EditorHeader {
+	box-shadow: none;
+	margin: 0;
+	margin-block-end: var(--spacing-sm);
+}
+
+button.MillenniumDesktopSidebar_LibraryItemButton {
+	@include apppage.sidebar-list-item;
+
+	&.Disabled {
+		opacity: var(--dim-opacity);
+	}
+}
+
+.MillenniumDesktopSidebar_Overlay {
+	transition: none;
+	backdrop-filter: var(--blur);
+	background-color: var(--color-bg-main-50);
+
+	// For the top line
+	top: var(--border-sm);
+}
+
+.MillenniumDesktopSidebar_Title {
+	color: var(--color-fg-main);
+	font: var(--text--heading-large);
+	box-shadow: none;
+	padding-block: var(--spacing-sm);
+	padding-block-start: calc(
+		var(--dialog--window-control-size) + var(--spacing-md) * 2 +
+			var(--spacing-sm)
+	);
+	padding-inline: var(--dialog--spacing-container);
+
+	flex-direction: row;
+	justify-content: space-between;
+}

@@ -1,0 +1,16 @@
+#PanelSection {
+	padding: 0;
+	margin-block-end: var(--dialog--spacing-content);
+}
+
+#PanelSectionRow {
+	width: 100%;
+}
+
+#PanelSectionTitle {
+	color: var(--color-fg-main);
+	font: var(--text--heading-small);
+	letter-spacing: 0;
+	text-transform: none;
+	padding-block-end: var(--spacing-sm);
+}

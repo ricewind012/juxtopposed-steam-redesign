@@ -1,0 +1,57 @@
+@use "shared/controls";
+
+:root[data-millennium-plugin~="core"] {
+	--MillenniumText-HeadingLarge: var(--text--heading-large);
+	--MillenniumText-HeadingMedium: var(--text--heading-medium);
+	--MillenniumText-HeadingSmall: var(--text--heading-small);
+	--MillenniumText-BodyLarge: var(--text--body-large);
+	--MillenniumText-BodyMedium: var(--text--body-medium);
+	--MillenniumText-BodySmall: var(--text--body-small);
+
+	--MillenniumTextColor-Normal: var(--color-fg-main);
+	--MillenniumTextColor-Muted: var(--color-fg-dim);
+	--MillenniumTextColor-Success: var(--color-accent-green);
+	--MillenniumTextColor-Error: var(--color-accent-red);
+	--MillenniumTextColor-Warning: var(--color-accent-yellow);
+
+	--MillenniumSpacing-Small: var(--spacing-xs);
+	--MillenniumSpacing-Normal: var(--spacing-md);
+	--MillenniumSpacing-Large: var(--spacing-lg);
+
+	--MillenniumControls-BorderRadius: var(--rounding-md);
+	--MillenniumControls-IconSize: var(--icon--size-md);
+}
+
+button.MillenniumIconButton {
+	@include controls.icon-button($w: 44px, $child: "svg");
+
+	$-icons: (
+		Add: "plus",
+		Copy: "carousel",
+		Download: "download",
+		KaratUp: "arrow",
+		KaratRight: "arrow",
+		KaratDown: "arrow",
+		KaratLeft: "arrow",
+		Minus: "minus",
+		Settings: "settings",
+		ShoppingCart: "favorite",
+	);
+
+	@each $icon, $file in $-icons {
+		&[data-icon-name="#{$icon}"] {
+			--icon-name: icon(#{$file});
+		}
+	}
+
+	// TODO
+	&[data-icon-name="KaratUp"] {
+		transform: rotate(180deg);
+	}
+	&[data-icon-name="KaratRight"] {
+		transform: rotate(-90deg);
+	}
+	&[data-icon-name="KaratLeft"] {
+		transform: rotate(90deg);
+	}
+}
