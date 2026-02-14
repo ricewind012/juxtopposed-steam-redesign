@@ -15,6 +15,20 @@
 	);
 }
 
+#account_dropdown {
+	@extend %-dropdown-menu;
+
+	.account_name {
+		color: var(--color-primary);
+	}
+}
+
+#account_pulldown {
+	padding-inline-start: calc(
+		var(--button--spacing-inline) + var(--avatar--size-xs) + var(--spacing-xxs)
+	);
+}
+
 #global_header {
 	@include style.header;
 
@@ -57,50 +71,6 @@
 	}
 }
 
-#green_envelope_menu_root {
-	@include controls.button;
-
-	position: unset;
-	width: unset;
-	height: unset;
-
-	// TODO: use greenenvelope webpack module instead
-	.responsive_page_content:has(
-			> #application_config:not(
-					[data-steam_notifications^='{"pending_gift_count":0,"pending_friend_count":0,"unread_count":0,']
-				)
-		)
-		> #global_header
-		&::before {
-		content: "";
-
-		@include style.notification-dot;
-	}
-
-	svg {
-		@include utils.icon($name: "notifications");
-
-		// Align with the account dropdown
-		margin-block: 1px;
-	}
-}
-
-.supernav_container {
-	gap: var(--header--button-spacing);
-
-	display: flex;
-	position: initial;
-}
-
-.supernav_content {
-	@include menu.container;
-	@extend %-dropdown-menu;
-
-	.submenuitem {
-		@include menu.item;
-	}
-}
-
 #global_action_menu {
 	// Remove signed out separator
 	font-size: 0;
@@ -137,6 +107,34 @@
 	}
 }
 
+#green_envelope_menu_root {
+	@include controls.button;
+
+	position: unset;
+	width: unset;
+	height: unset;
+
+	// TODO: use greenenvelope webpack module instead
+	.responsive_page_content:has(
+			> #application_config:not(
+					[data-steam_notifications^='{"pending_gift_count":0,"pending_friend_count":0,"unread_count":0,']
+				)
+		)
+		> #global_header
+		&::before {
+		content: "";
+
+		@include style.notification-dot;
+	}
+
+	svg {
+		@include utils.icon($name: "notifications");
+
+		// Align with the account dropdown
+		margin-block: 1px;
+	}
+}
+
 // The wallet balance is in the account dropdown anyway
 .header_installsteam_btn,
 #header_notification_link,
@@ -144,20 +142,22 @@
 	display: none;
 }
 
-#account_dropdown {
-	@extend %-dropdown-menu;
-
-	.account_name {
-		color: var(--color-primary);
-	}
-}
-
-#account_pulldown {
-	padding-inline-start: calc(
-		var(--button--spacing-inline) + var(--avatar--size-xs) + var(--spacing-xxs)
-	);
-}
-
 #header_notification_area {
 	order: 1;
+}
+
+.supernav_container {
+	gap: var(--header--button-spacing);
+
+	display: flex;
+	position: initial;
+}
+
+.supernav_content {
+	@include menu.container;
+	@extend %-dropdown-menu;
+
+	.submenuitem {
+		@include menu.item;
+	}
 }
