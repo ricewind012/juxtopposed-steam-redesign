@@ -6,14 +6,6 @@
 
 	@include controls.button("primary");
 
-	&#PlayButton {
-		padding: 14px;
-
-		svg {
-			margin-inline-end: var(--spacing-sm);
-		}
-	}
-
 	&#StreamingSelector {
 		margin-inline-start: var(--spacing-xxs);
 
@@ -31,6 +23,7 @@
 		@include utils.icon("name", true, "lg");
 
 		color: inherit;
+		margin: 0;
 	}
 }
 

@@ -68,7 +68,7 @@
 
 #HeroAndLogo {
 	position: unset;
-	width: var(--appportrait_width);
+	width: var(--appportrait_landscape-width);
 }
 
 #HeroContainer {
@@ -80,7 +80,7 @@
 	margin: 0;
 
 	left: 0;
-	width: var(--appportrait_width);
+	width: var(--appportrait_landscape-width);
 	height: 100%;
 }
 

@@ -10,29 +10,22 @@
 
 #DownloadsPage {
 	background: none;
-	// TODO(vars): what is this
+	// TODO(vars): button height
 	margin-top: calc(44px + var(--spacing-xl));
 
 	.DialogButton {
 		// Assume download as this doesn't have a distinguishing class name lol
 		--icon-name: icon("download");
 
-		@include controls.button;
-
-		opacity: 1;
+		@include controls.icon-button($w: 44px, $child: "svg");
 
 		// Match appactionbutton
 		min-width: 44px;
 
-		svg {
-			@include utils.icon;
-
-			width: unset;
-			height: unset;
-		}
-
 		&#RemoveFromQueue {
 			--icon-name: icon("delete");
+
+			opacity: 1;
 		}
 	}
 }
@@ -41,6 +34,10 @@
 	gap: var(--spacing-lg);
 
 	position: unset;
+
+	.DialogButton {
+		--icon-name: icon("pause");
+	}
 }
 
 #ItemLists {
@@ -59,6 +56,10 @@
 #Section {
 	padding: 0;
 	margin: 0;
+
+	&#EmptyQueue {
+		display: none;
+	}
 }
 
 #SectionItem {
@@ -90,6 +91,10 @@
 	}
 
 	#DetailsAndType {
+		margin-block-start: var(--spacing-sm);
+
+		flex-direction: column;
+		align-items: start;
 		height: unset;
 	}
 
@@ -194,15 +199,12 @@
 
 	height: unset;
 
-	.DialogButton {
-		--icon-name: icon("pause");
-	}
-
 	#DetailsAndType {
+		margin: 0;
+
 		position: fixed;
 		top: var(--downloads_top-bar-height);
 		right: var(--spacing-xl);
-
 		height: 44px;
 
 		#Throttle {
@@ -214,6 +216,11 @@
 		#ThrottleValue {
 			color: var(--color-fg-main);
 		}
+	}
+
+	#DownloadTimeRemaining {
+		color: var(--color-fg-main);
+		font: var(--text--body-medium);
 	}
 
 	#SectionItemColumn {
