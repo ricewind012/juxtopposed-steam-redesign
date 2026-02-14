@@ -1,4 +1,5 @@
 @use "shared/controls";
+@use "shared/style";
 @use "shared/utils";
 
 #Backdrop {
@@ -11,13 +12,12 @@
 }
 
 #DynamicMenuButtons {
-	gap: var(--spacing-xs);
+	gap: var(--header--button-spacing);
 }
 
 #MenuButton {
 	@include controls.dropdown;
 
-	background-color: transparent;
 	text-shadow: none;
 
 	&:not(#FlyoutButton) {
@@ -40,12 +40,16 @@
 }
 
 #RightButtons {
-	gap: var(--spacing-xs);
+	gap: var(--header--button-spacing);
 	padding: 0;
 	margin: 0;
 
 	#CartButton {
 		margin: 0;
+
+		&:hover {
+			box-shadow: none;
+		}
 	}
 
 	#ItemCount {
@@ -56,19 +60,22 @@
 }
 
 #StoreMenu {
-	background: var(--color-bg-tertiary);
-	color: inherit;
-	font: inherit;
-	border: none;
-	box-shadow: none;
-	padding: 8px 10px;
+	@include style.header;
 
-	&#Hidden {
-		height: unset;
-	}
+	// When hidden
+	animation: none;
+	background-image: none;
+	box-shadow: none;
+
+	// When hidden
+	height: unset;
 
 	#Content {
 		width: unset;
 		height: unset;
 	}
+}
+
+#StoreMenuContainer {
+	top: var(--global-header-height);
 }

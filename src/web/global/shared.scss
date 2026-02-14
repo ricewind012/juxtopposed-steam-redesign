@@ -135,14 +135,18 @@ input[type="checkbox"] {
 }
 */
 
-.responsive_page_template_content {
-	// TODO: store menu vertical spacing is 8px
-	--store-menu-height: calc(1lh + var(--spacing-sm) * 2 + 9px * 2);
-	// steam vars
-	--store-menu-overlap-height: var(--store-menu-height);
-	--store-menu-floating-height: var(--store-menu-height);
+.responsive_page_frame.with_header {
+	// TODO: 2px
+	--header-height: calc(var(--header--height) + 2px);
+	--global-header-height: var(--header-height);
 
+	// For store menu height calculation
 	font: var(--text--body-large);
+}
+
+.responsive_page_template_content {
+	--store-menu-overlap-height: var(--header-height);
+	--store-menu-floating-height: var(--header-height);
 }
 
 .review_award {

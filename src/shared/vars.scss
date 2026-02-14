@@ -153,6 +153,19 @@
 	--dialog--window-control-size: var(--spacing-xl);
 	--dialog--window-control-spacing: 18px;
 
+	// Header
+	--header--bg: var(--color-bg-tertiary);
+	--header--button-bg: transparent;
+	--header--button-spacing: var(--spacing-xs);
+	// TODO(vars): typography (body large)
+	--header--height: calc(
+		16px * 1.4 + var(--button--spacing-block-md) * 2 +
+			var(--header--spacing-block) * 2
+	);
+	--header--spacing-block: 6px;
+	--header--spacing-inline: var(--spacing-sm);
+	--header--text-field-bg: var(--color-bg-main-20);
+
 	// Popup
 	--popup--container-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.25);
 	--popup--spacing-block: var(--spacing-sm);

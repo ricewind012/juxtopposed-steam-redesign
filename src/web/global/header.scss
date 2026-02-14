@@ -1,13 +1,22 @@
 @use "shared/controls";
+@use "shared/menu";
+@use "shared/style";
+@use "shared/utils";
+
+%-dropdown-menu {
+	// For "top" property calculation
+	font: var(--text--body-large);
+
+	position: absolute;
+	// TODO: 4px
+	top: calc(
+		var(--header--spacing-block) + var(--button--spacing-block-md) * 2 + 1lh -
+			4px
+	);
+}
 
 #global_header {
-	backdrop-filter: var(--blur);
-	background-color: color-mix(
-		in srgb,
-		var(--color-bg-tertiary) 50%,
-		transparent
-	);
-	padding: 8px;
+	@include style.header;
 
 	position: sticky;
 	top: 0;
@@ -18,6 +27,7 @@
 
 		display: flex;
 		justify-content: space-between;
+		max-width: unset;
 		height: unset;
 	}
 
@@ -28,104 +38,126 @@
 	.menuitem {
 		@include controls.button;
 
+		text-transform: lowercase;
+
+		// For ::first-letter
+		display: block;
+
 		&.supernav_active {
 			@include controls.button-vars("primary");
 		}
 
-		&:not(.username) {
-			text-transform: lowercase;
+		&:not(.username)::first-letter {
+			text-transform: uppercase;
 		}
 
 		&::after {
 			display: none;
 		}
+	}
+}
 
-		&::first-letter {
-			text-transform: uppercase;
-		}
+#green_envelope_menu_root {
+	@include controls.button;
+
+	position: unset;
+	width: unset;
+	height: unset;
+
+	// TODO: use greenenvelope webpack module instead
+	.responsive_page_content:has(
+			> #application_config:not(
+					[data-steam_notifications^='{"pending_gift_count":0,"pending_friend_count":0,"unread_count":0,']
+				)
+		)
+		> #global_header
+		&::before {
+		content: "";
+
+		@include style.notification-dot;
+	}
+
+	svg {
+		@include utils.icon($name: "notifications");
+
+		// Align with the account dropdown
+		margin-block: 1px;
 	}
 }
 
 .supernav_container {
-	gap: var(--spacing-xs);
+	gap: var(--header--button-spacing);
 
 	display: flex;
 	position: initial;
 }
 
 .supernav_content {
-	background-color: var(--color-bg-hl);
-	border-radius: var(--rounding-md);
-	box-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.25);
-
-	overflow: hidden;
-	top: 48px;
+	@include menu.container;
+	@extend %-dropdown-menu;
 
 	.submenuitem {
-		color: var(--color-fg-main);
-		font: var(--text--body-medium);
-		padding: 16px 20px;
-
-		&:hover {
-			background-color: var(--color-bg-hover);
-			transition: var(--transition);
-		}
+		@include menu.item;
 	}
+}
+
+#global_action_menu {
+	// Remove signed out separator
+	font-size: 0;
+	gap: var(--header--button-spacing);
+
+	display: flex;
 }
 
 #global_actions {
-	color: var(--color-fg-main);
-	font: var(--text--body-medium);
-	gap: var(--spacing-md);
+	gap: var(--spacing-sm);
 
 	display: flex;
 	flex-direction: row-reverse;
-	position: unset;
+	align-items: center;
+	position: relative;
+	inset: 0;
 	height: unset;
 
+	:where(& .global_action_link:not(.pulldown)) {
+		@include controls.button;
+	}
+
+	:where(& .pulldown) {
+		@include controls.dropdown;
+	}
+
 	.user_avatar {
-		--size: 46px;
+		--size: var(--avatar--size-xs);
+
 		margin: 0;
+
+		position: absolute;
+		inset-inline-start: var(--button--spacing-inline);
 	}
 }
 
-.header_installsteam_btn {
+// The wallet balance is in the account dropdown anyway
+.header_installsteam_btn,
+#header_notification_link,
+#header_wallet_ctn {
 	display: none;
 }
 
+#account_dropdown {
+	@extend %-dropdown-menu;
+
+	.account_name {
+		color: var(--color-primary);
+	}
+}
+
 #account_pulldown {
-	background-image: none;
-	line-height: 24px;
-	padding: 0;
-	margin-left: 4px;
-
-	display: inline-flex;
-	align-items: center;
-
-	&::after {
-		content: "";
-
-		background-color: var(--color-fg-main);
-		mask-image: icon("arrow");
-
-		width: 10px;
-		height: 6px;
-	}
+	padding-inline-start: calc(
+		var(--button--spacing-inline) + var(--avatar--size-xs) + var(--spacing-xxs)
+	);
 }
 
-#header_wallet_ctn {
-	padding: 0;
-	padding-top: 4px;
-}
-
-#header_wallet_balance {
-	color: var(--color-fg-dim);
-	gap: 8px;
-	padding: 0;
-
-	display: flex;
-
-	&:hover {
-		color: var(--color-fg-main);
-	}
+#header_notification_area {
+	order: 1;
 }

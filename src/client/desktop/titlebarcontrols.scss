@@ -1,3 +1,4 @@
+@use "shared/style";
 @use "shared/utils";
 @use "client/titlebarcontrols";
 
@@ -47,25 +48,10 @@
 #NotificationsButton {
 	// TODO(js): App.GetCurrentUser().NotificationCounts.offline_messages +
 	// NotificationStore.m_nUnviewedNotifications
-	//
-	// also maybe use "container-type: inline-size" then "@container (min-width: 500px)"
-	// to apply padding
 	&#HasNew::before {
 		content: "";
 
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		position: absolute;
-		min-width: var(--icon--size-sm);
-		height: var(--icon--size-sm);
-		inset-block-start: -2px;
-		inset-inline-end: -3px;
-
-		background-color: var(--color-primary);
-		color: var(--color-bg-main);
-		font: var(--text--body-small);
-		border-radius: 1337px;
+		@include style.notification-dot;
 	}
 }
 

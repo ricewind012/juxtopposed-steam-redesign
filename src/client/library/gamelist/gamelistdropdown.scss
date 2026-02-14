@@ -45,7 +45,7 @@
 #MenuHeader {
 	@include controls.dropdown;
 
-	background-color: var(--library_gamelist-bar-button-bg);
+	background-color: var(--header--button-bg);
 	font: var(--text--body-medium);
 
 	width: unset;

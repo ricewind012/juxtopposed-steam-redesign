@@ -9,7 +9,7 @@
 
 #Link {
 	color: inherit;
-	font: inherit;
+	font: var(--text--body-medium);
 }
 
 :where(#LinkColumn) {
@@ -28,7 +28,7 @@
 #ViewAllLink {
 	@include style.link;
 
-	font: inherit;
+	font: var(--text--body-medium);
 	gap: var(--spacing-xxs);
 	margin: 0;
 

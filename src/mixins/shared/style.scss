@@ -9,12 +9,38 @@
 	padding: var(--spacing-md);
 }
 
+@mixin header {
+	--button--secondary-bg: var(--header--button-bg);
+	--text-field--search-bg: var(--header--text-field-bg);
+
+	background-color: var(--header--bg);
+	padding: var(--header--spacing-block) var(--header--spacing-inline);
+}
+
 @mixin link {
 	color: var(--color-fg-main);
 
 	&:hover {
 		color: var(--color-primary);
 	}
+}
+
+// TODO: maybe use "container-type: inline-size" then "@container (min-width: 500px)"
+// to apply padding
+@mixin notification-dot {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	min-width: var(--icon--size-sm);
+	height: var(--icon--size-sm);
+	inset-block-start: -2px;
+	inset-inline-end: -3px;
+
+	background-color: var(--color-primary);
+	color: var(--color-bg-main);
+	font: var(--text--body-small);
+	border-radius: 1337px;
 }
 
 // cheap imitation, whatever

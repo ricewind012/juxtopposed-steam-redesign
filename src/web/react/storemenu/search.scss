@@ -20,7 +20,7 @@
 }
 
 #InnerPosition {
-	inset-block-start: 8px;
+	inset-block-start: var(--header--spacing-block);
 }
 
 #SearchBar {
@@ -30,12 +30,7 @@
 }
 
 #SearchForm {
-	// this design sucks... or I forgot my shit fucking code
-	--spacing-sm: 12px;
-
-	background-color: var(--color-bg-main-20);
-	color: var(--color-secondary);
-	border-radius: var(--rounding-md);
+	background-color: transparent;
 
 	position: relative;
 	height: unset;
