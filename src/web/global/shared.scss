@@ -76,6 +76,7 @@ h3 {
 	@include -button($variant: "primary");
 }
 
+#{controls.button-web-selector(".btnv6_blue_hoverfade")},
 #{controls.button-web-selector(".btnv6_white_transparent")} {
 	@include -button($variant: "tertiary", $size: "sm");
 }

@@ -140,10 +140,12 @@
 .ds_options {
 	--offset: var(--spacing-md);
 
+	// TODO: wtf is this dogshit
 	@include carousel.button($child: "& > div", $icon: "settings");
 	@include store.capsule-icon;
 
 	opacity: 1;
+	font: var(--text--heading-large);
 	padding: 0;
 
 	display: none;

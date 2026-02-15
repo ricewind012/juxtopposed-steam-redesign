@@ -49,7 +49,7 @@
 	}
 
 	#{$child} {
-		@include utils.icon(#{$icon});
+		@include utils.icon($name: #{$icon}, $size: "lg");
 
 		color: var(--color-fg-dim);
 		margin: calc((var(--size) - var(--icon--size-lg)) / 2);

@@ -4,7 +4,7 @@
 @use "web/store";
 
 // Differences from the original mockup:
-// - capsules use --rounding-lg instead of --border-radius to match with
+// - capsules use --rounding-lg instead of --rounding-md to match with
 //   the buttons inside them
 
 %-capsule {
@@ -20,7 +20,11 @@ body.no_home_gutter.infinite_scrolling {
 	// steam var
 	--store-page-width: 1388px;
 
-	background: linear-gradient(180deg, #040011 13.77%, var(--store-home-bg));
+	background-image: linear-gradient(
+		180deg,
+		#040011 13.77%,
+		var(--store-home-bg)
+	);
 	// BrowserView has a bug where a transparent background renders like shit(?)
 	background-color: var(--store-home-bg);
 	background-repeat: no-repeat;
@@ -135,26 +139,36 @@ body.no_home_gutter.infinite_scrolling {
 	}
 }
 
-.content_hub_capsule_ctn {
-	@include store.category($gradient: ".gradient", $label: ".label_ctn");
+.content_hub_carousel_ctn {
+	.content_hub_capsule_ctn {
+		@include store.category($gradient: ".gradient", $label: ".label_ctn");
 
-	width: var(--carousel--image-width);
-	height: var(--carousel--image-width);
+		width: var(--carousel--image-width);
+		height: var(--carousel--image-width);
 
-	img {
-		filter: none;
-		box-shadow: none;
-		border-radius: var(--rounding-lg);
+		img {
+			filter: none;
+			box-shadow: none;
+			border-radius: var(--rounding-lg);
 
-		height: 100%;
+			height: 100%;
+		}
+
+		.label {
+			all: unset;
+		}
+
+		.label_ctn {
+			width: 100%;
+		}
 	}
 
-	.label {
-		all: unset;
-	}
-
-	.label_ctn {
-		width: 100%;
+	.title {
+		color: var(--color-fg-main);
+		font: var(--text--heading-medium);
+		letter-spacing: 0;
+		text-transform: none;
+		margin-block-end: var(--carousel--section-spacing);
 	}
 }
 
@@ -277,30 +291,6 @@ body.no_home_gutter.infinite_scrolling {
 		all: unset;
 
 		@include store.tag;
-	}
-}
-
-// I can't be removing this, but looks good enough, I guess
-.discovery_queue_static {
-	padding: 0;
-
-	.begin_exploring {
-		font: var(--text--body-large);
-		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
-		padding-block: var(--spacing-md);
-		margin-inline: 10%;
-
-		&::after {
-			height: 38px;
-		}
-	}
-
-	.dq_item {
-		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
-	}
-
-	.dq_item_cap {
-		border-radius: var(--rounding-lg);
 	}
 }
 
@@ -479,7 +469,7 @@ body.no_home_gutter.infinite_scrolling {
 	text-transform: uppercase;
 }
 
-.home_page_body_ctn {
+.home_page_body_ctn:not(.has_takeover) {
 	margin-block-start: 104px;
 }
 
@@ -525,6 +515,10 @@ body.no_home_gutter.infinite_scrolling {
 	&:hover {
 		box-shadow: 0 4px 16px var(--shadow-color);
 	}
+}
+
+#module_discovery_queue {
+	display: none;
 }
 
 // TODO: this is in store.css, maybe move to store/shared.scss one day ?
@@ -578,6 +572,9 @@ body.no_home_gutter.infinite_scrolling {
 		img {
 			border-radius: var(--rounding-md);
 			box-shadow: none;
+
+			width: inherit;
+			height: inherit;
 		}
 	}
 
