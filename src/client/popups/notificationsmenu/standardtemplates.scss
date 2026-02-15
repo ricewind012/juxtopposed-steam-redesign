@@ -1,0 +1,58 @@
+@use "shared/menu";
+
+%-item {
+	@include menu.item;
+
+	background-color: transparent;
+	border-radius: 0;
+
+	height: unset;
+}
+
+#Content {
+	margin: 0;
+
+	#Title {
+		color: var(--color-fg-dim);
+		font: var(--text--body-small);
+		text-transform: uppercase;
+	}
+}
+
+#Icon {
+	display: none;
+}
+
+#PinnedTemplateDesktop {
+	@extend %-item;
+
+	margin: 0;
+
+	#PinnedBody {
+		all: unset;
+	}
+}
+
+#ShortLogoDimensions,
+#StandardLogoDimensions {
+	border-radius: var(--rounding-md);
+	margin-inline-start: var(--spacing-sm);
+
+	order: 1;
+	width: var(--avatar--size-md);
+	height: var(--avatar--size-md);
+}
+
+#StandardTemplateDesktop {
+	@extend %-item;
+
+	#StandardNotificationDescription {
+		color: var(--color-fg-main);
+		font: var(--text--body-small);
+	}
+
+	#StandardNotificationSubText {
+		color: var(--color-fg-dim);
+		font: var(--text--body-small);
+	}
+}

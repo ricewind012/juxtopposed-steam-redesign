@@ -1,0 +1,18 @@
+@use "shared/utils";
+
+#FriendIndicator {
+	@include utils.icon($name: "user", $remove: true);
+
+	color: inherit;
+
+	inset-inline-start: calc(var(--avatar--size-md) - var(--icon--size-md) / 2);
+	inset-block-start: calc(var(--avatar--size-md) - var(--icon--size-md) / 1.5);
+}
+
+#ShortLogoDimensions,
+#StandardLogoDimensions {
+	border-radius: var(--rounding-md);
+
+	width: var(--avatar--size-md);
+	height: var(--avatar--size-md);
+}
