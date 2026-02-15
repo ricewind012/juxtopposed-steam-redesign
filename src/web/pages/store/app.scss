@@ -1,4 +1,5 @@
 @use "shared/controls";
+@use "shared/menu";
 @use "shared/style";
 @use "shared/utils";
 @use "web/apppage";
@@ -499,6 +500,7 @@ body.game_bg {
 .game_description_column {
 	color: var(--color-fg-dim);
 	font: var(--text--body-large);
+	margin-block-start: var(--spacing-sm);
 
 	// #region shared
 	h2 {
@@ -897,6 +899,7 @@ body.game_bg {
 
 				position: unset;
 
+				background-image: none;
 				color: var(--icon-color);
 				margin: 0;
 			}
@@ -1058,6 +1061,26 @@ body.game_bg {
 	}
 }
 
+.game_purchase_options_editions_header {
+	@extend %-section;
+
+	background-image: none;
+	margin-block: 0 12px;
+
+	align-items: center;
+}
+
+.game_purchase_options_editions_header_compare_button {
+	@include controls.button($variant: "tertiary", $size: "sm");
+}
+
+.game_purchase_options_editions_header_title {
+	color: var(--color-fg-main);
+	font: var(--text--heading-medium);
+	letter-spacing: 0;
+	text-transform: none;
+}
+
 .game_purchase_price {
 	background-color: transparent;
 	color: var(--color-fg-main);
@@ -1111,14 +1134,6 @@ body.game_bg {
 		display: none;
 	}
 
-	#add_to_wishlist_area,
-	#add_to_wishlist_area_success,
-	#add_to_wishlist_area_fail {
-		&:not([style*="display: none"]) {
-			display: block;
-		}
-	}
-
 	#ignoreBtn {
 		gap: var(--spacing-sm);
 	}
@@ -1128,17 +1143,26 @@ body.game_bg {
 	position: unset;
 }
 
-.queue_btn_active.queue_btn_active {
+#{controls.button-web-selector(".queue_btn_active")} {
 	@include controls.button-vars("primary");
+
+	&[style="display: none;"] {
+		display: none;
+	}
 }
 
-.queue_btn_menu > .queue_menu_arrow.queue_menu_arrow {
-	color: var(--fg);
+.queue_btn_menu > #{controls.button-web-selector(".queue_menu_arrow")} {
+	@include controls.button-vars($variant: "tertiary", $size: "sm");
+
+	padding-inline: 0;
 
 	min-width: calc(var(--spacing-sm) * 2 + var(--icon--size-md));
 
 	& > span {
 		@include utils.icon("arrow");
+
+		// Align with text
+		margin-block: 1px;
 	}
 }
 
@@ -1146,8 +1170,7 @@ body.game_bg {
 	background-color: transparent;
 
 	position: absolute;
-	inset-block-start: calc(var(--store-menu-height) + var(--top-content-margin));
-	// TODO: what is var(--spacing-xs)
+	inset-block-start: calc(var(--header-height) + var(--top-content-margin));
 	inset-inline: calc((100vw - var(--store-page-width)) / 2 - var(--spacing-xs));
 	max-width: var(--store-page-width);
 
@@ -1155,6 +1178,36 @@ body.game_bg {
 		img {
 			display: none;
 		}
+	}
+}
+
+.queue_menu_flyout {
+	@include menu.container;
+
+	background-image: none;
+	margin: 0;
+
+	z-index: 999;
+}
+
+.queue_menu_option {
+	@include menu.item;
+
+	.queue_btn_menu.not_interested &#queue_ignore_menu_option_not_interested,
+	.queue_btn_menu.owned_elsewhere #queue_ignore_menu_option_owned_elsewhere {
+		@include menu.item--primary;
+	}
+}
+
+.queue_menu_option_label {
+	margin: 0;
+
+	.option_title {
+		all: unset;
+	}
+
+	.option_subtitle {
+		@include menu.description;
 	}
 }
 
