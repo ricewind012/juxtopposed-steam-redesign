@@ -4,6 +4,8 @@
 @mixin -button($variant: "secondary", $size: "md") {
 	all: unset;
 
+	box-sizing: border-box;
+
 	@include controls.button($variant, $size);
 
 	& > span {
@@ -66,6 +68,7 @@ h3 {
 	display: none;
 }
 
+#{controls.button-web-selector(".btn_grey_black")},
 #{controls.button-web-selector(".btn_medium")},
 #{controls.button-web-selector(".btn_small")} {
 	@include -button;

@@ -34,6 +34,13 @@
 // Not really worth putting everything else in dedicated files
 
 // Profile
+.group_invite_menu_option_disabled {
+	@include menu.item--disabled;
+
+	// Because it's a <span>
+	display: block;
+}
+
 #NamePopup .popup_body {
 	padding: 0;
 

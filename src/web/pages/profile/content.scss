@@ -10,25 +10,29 @@ body.profile_page {
 		var(--color-bg-hover) 35%,
 		transparent
 	);
+
+	.ico16 {
+		display: none;
+	}
 }
 
 .customization_edit_instructions {
-	padding: var(--spacing-sm);
+	padding: var(--spacing-lg);
 
 	.profile_customization_header {
-		--spacing: 0.25em;
-
-		font: var(--text--heading-medium);
+		font: var(--text--heading-small);
 		color: var(--color-fg-main);
 		padding: 0;
-		margin-top: calc(var(--spacing) * -1);
-		margin-bottom: var(--spacing);
 	}
 }
 
 .customization_edit_instructions_text {
 	font: var(--text--body-large);
 	padding: 0;
+}
+
+.profile_animated_background {
+	position: fixed;
 }
 
 .profile_content_inner {
@@ -51,10 +55,30 @@ body.profile_page {
 	margin-top: 0;
 }
 
+.profile_customization {
+	&.customization_edit.none_selected {
+		border: none;
+
+		&:hover {
+			background-color: var(--color-bg-main-50);
+		}
+	}
+}
+
 .profile_customization_block {
 	font: var(--text--body-medium);
 	border-radius: 0;
 	padding: var(--spacing-sm);
+
+	& > .badge_showcase {
+		display: flex;
+		flex-direction: column;
+	}
+
+	& > div > .recentgame_quicklinks {
+		color: var(--color-fg-dim);
+		gap: var(--spacing-xs);
+	}
 }
 
 .profile_customization_editlink {
@@ -89,5 +113,7 @@ body.profile_page {
 }
 
 div.profile_page {
+	background-attachment: fixed;
+	background-position-y: var(--header-height);
 	padding-bottom: 187px;
 }

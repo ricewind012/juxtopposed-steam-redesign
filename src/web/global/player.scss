@@ -1,3 +1,5 @@
+@use "shared/utils";
+
 .friendBlock {
 	background-color: var(--color-bg-main);
 	border-radius: var(--rounding-md);
@@ -22,7 +24,7 @@
 		margin: 0;
 		margin-left: 9px;
 
-		order: 1;
+		order: 2;
 		display: flex;
 		justify-content: center;
 	}
@@ -35,6 +37,21 @@
 		--size: var(--avatar--size-md);
 		margin-right: 9px;
 	}
+}
+
+.friendBlockStatusIcon {
+	@include utils.icon($name: "user", $remove: true);
+
+	order: 1;
+}
+
+.friendPlayerLevel {
+	font: var(--text--body-large);
+	margin: 0;
+
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .friendPlayerLevelNum {

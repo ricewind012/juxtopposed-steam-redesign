@@ -32,14 +32,15 @@
 
 	margin: 0;
 
-	width: var(--size);
+	min-width: var(--size);
+	width: unset;
 	height: var(--size);
 
 	&.plus_more {
 		background-color: var(--color-bg-hl);
 		color: var(--color-fg-main);
 		border: none;
-		border-radius: var(--rounding-md);
+		border-radius: var(--rounding-sm);
 		box-shadow: none;
 
 		&:hover {
@@ -48,7 +49,7 @@
 	}
 
 	img {
-		border-radius: var(--rounding-md);
+		border-radius: var(--rounding-sm);
 
 		width: var(--size);
 		height: var(--size);
@@ -73,7 +74,19 @@
 }
 
 .game_info_achievement_summary {
+	gap: var(--spacing-xxs);
 	margin: 0;
+
+	display: flex;
+	align-items: center;
+
+	.whiteLink {
+		@include utils.icon($name: "achievements");
+
+		font-size: 0;
+
+		display: inline-block;
+	}
 }
 
 .game_info_achievements_summary_area {
@@ -122,9 +135,34 @@
 }
 
 .game_info_stats {
-	background-color: var(--color-bg-main-50);
+	background-color: var(--color-bg-main);
+	border-radius: var(--rounding-md);
 	padding: var(--spacing-md);
 	margin-top: var(--spacing-sm);
+}
+
+.game_info_stats_publishedfilecounts {
+	.published_file_icon {
+		display: none;
+	}
+
+	.published_file_link {
+		font: inherit;
+		margin-inline-end: var(--spacing-lg);
+	}
+}
+
+.game_info_stats_rule {
+	// TODO(vars): border
+	background-color: var(--color-bg-hover);
+	border: none;
+	margin-block: var(--spacing-sm);
+
+	height: var(--border-sm);
+
+	.game_info_badge_only_ctn + & {
+		display: none;
+	}
 }
 
 .game_name {
@@ -138,8 +176,13 @@
 
 .recent_game {
 	background-color: var(--color-bg-main-50);
-	border-radius: 0;
+	border-radius: var(--rounding-md);
 	margin-bottom: 11px;
+
+	.game_capsule {
+		// Restrict height in case the image fails to load and goes OOB
+		height: 81px;
+	}
 }
 
 .recent_game_content {

@@ -4,13 +4,19 @@
 	align-self: center;
 }
 
+.item_showcase {
+	.showcase_slot_row {
+		margin: 0;
+	}
+}
+
 .item_showcase_item {
 	margin: 0;
 }
 
 .showcase_slot_row {
 	gap: var(--spacing-sm);
-	margin: 0;
+	margin-block-end: var(--spacing-sm);
 
 	display: flex;
 	flex-wrap: wrap;

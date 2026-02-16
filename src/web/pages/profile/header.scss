@@ -1,21 +1,20 @@
 @use "shared/controls";
 @use "shared/utils";
 
-.btn_profile_action {
-	@include controls.button;
-}
-
-.favorite_badge {
+%-badge-info {
 	gap: var(--spacing-md);
 	padding: var(--spacing-sm) var(--spacing-md);
 
-	.name {
-		font: var(--text--body-medium);
+	&:hover {
+		background-color: var(--color-bg-main-20);
 	}
+}
 
-	.xp {
-		font: var(--text--body-small);
-		color: var(--color-fg-dim);
+#{controls.button-web-selector("#profile_action_dropdown_link")} {
+	@include controls.dropdown;
+
+	img {
+		display: none;
 	}
 }
 
@@ -52,15 +51,9 @@
 		}
 	}
 
-	.persona_name {
-		color: var(--color-fg-main);
-		font: var(--text--heading-large);
-	}
-
 	.playerAvatar {
 		--size: var(--avatar-size);
 		--avatar--border-size: 4px;
-		margin-right: var(--avatar-gap);
 	}
 
 	.playerAvatarAutoSizeInner {
@@ -73,28 +66,73 @@
 
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: end;
 }
 
 .profile_header_badge {
-	background-color: var(--color-bg-main-50);
-	border-radius: var(--rounding-lg);
+	background-color: transparent;
+	border-radius: 0;
+	padding: 0;
+	margin: 0;
 
 	height: unset;
 }
 
 .profile_header_badge_instructions {
+	color: var(--color-fg-dim);
 	padding: var(--spacing-sm) var(--spacing-md);
 }
 
 .profile_header_badgeinfo {
 	display: flex;
 	flex-direction: column;
+	justify-content: space-between;
 }
 
-.profile_header_actions,
 .profile_header_badgeinfo_badge_area {
-	width: var(--sidebar-width);
+	// Originally 55px, but levels are 32px
+	--badge-size: 32px;
+
+	background-color: var(--color-bg-main-20);
+	border-radius: var(--rounding-lg);
+
+	// For rounding
+	overflow: hidden;
+
+	.favorite_badge {
+		@extend %-badge-info;
+
+		img {
+			width: var(--badge-size);
+			height: var(--badge-size);
+		}
+
+		.name {
+			font: var(--text--body-medium);
+		}
+
+		.xp {
+			font: var(--text--body-small);
+			color: var(--color-fg-dim);
+		}
+	}
+
+	.persona_level {
+		@extend %-badge-info;
+
+		color: var(--color-fg-main);
+		font: var(--text--body-large);
+		margin: 0;
+
+		display: flex;
+		flex-direction: row-reverse;
+		align-items: center;
+		justify-content: start;
+
+		.friendPlayerLevel {
+			width: var(--badge-size);
+			height: var(--badge-size);
+		}
+	}
 }
 
 .profile_header_bg {
@@ -107,27 +145,37 @@
 	max-width: var(--profile_width);
 }
 
-.profile_header_centered_persona {
-	padding: 0;
+.profile_header_centered_col {
+	padding-inline: var(--avatar-gap) var(--profile_sidebar-gutter);
 
-	left: calc(var(--avatar-size) + var(--avatar-gap));
-	right: calc(var(--sidebar-width) + var(--profile_sidebar-gutter));
+	display: flex;
+	flex-direction: column;
+
+	.persona_name {
+		color: var(--color-fg-main);
+		font: var(--text--heading-large);
+	}
+}
+
+.profile_header_centered_persona {
+	padding-block-end: 39px;
 }
 
 .profile_header_content {
 	color: var(--color-fg-main);
 	font: var(--text--body-large);
 	padding: 0;
-}
 
-.profile_header_summary {
-	padding-left: 0;
-	padding-right: var(--profile_sidebar-gutter);
+	grid-template-columns: auto 1fr var(--sidebar-width);
 }
 
 .profile_summary {
 	font: var(--text--body-large);
 
-	/* TODO(vars): 4 lines tall */
-	height: 96px;
+	height: 4lh;
+}
+
+.profile_summary_footer {
+	font: var(--text--body-medium);
+	margin-top: 13px;
 }

@@ -1,3 +1,5 @@
+@use "shared/controls";
+
 /* sidebar, global first 2 */
 .profile_rightcol {
 	background-color: transparent;
@@ -17,7 +19,8 @@
 }
 
 .profile_count_link_preview {
-	padding: var(--spacing);
+	padding: var(--spacing-sm);
+	padding-block-start: 0;
 	gap: 6px;
 
 	display: flex;
@@ -38,8 +41,16 @@
 	font: var(--text--heading-medium);
 }
 
+.profile_in_game_joingame {
+	margin-block-start: var(--spacing-sm);
+
+	& > #{controls.button-web-selector(".btn_green_white_innerfade")} {
+		width: 100%;
+	}
+}
+
 .profile_in_game_name {
-	font: var(--text--body-medium);
+	font: var(--text--body-large);
 	margin: 0;
 
 	.persona.offline & {
@@ -80,11 +91,6 @@
 		padding: var(--spacing-sm);
 
 		display: flex;
-
-		&:hover {
-			background-color: var(--color-bg-hover);
-			color: inherit;
-		}
 	}
 
 	span {
@@ -104,7 +110,7 @@
 
 .profile_count_link_preview_ctn {
 	background-color: var(--color-bg-main);
-	border-radius: var(--rounding-md);
+	border-radius: var(--rounding-md) var(--rounding-md) 0 0;
 
 	.profile_count_link {
 		padding: var(--spacing-sm);
@@ -147,8 +153,6 @@
 
 		a {
 			padding: var(--spacing-md);
-
-			display: block;
 		}
 	}
 
@@ -158,29 +162,30 @@
 
 	.profile_count_link_total {
 		display: inline-flex;
-
-		&::before {
-			content: "(";
-		}
-
-		&::after {
-			content: ")";
-		}
 	}
 }
 
 .profile_group_avatar {
 	box-shadow: none;
+
+	img {
+		border-radius: var(--rounding-md);
+	}
 }
 
 .profile_group_membercount {
 	color: var(--color-fg-dim);
+	font: var(--text--body-small);
 }
 
 .profile_group {
+	font: var(--text--body-large);
+
 	height: unset;
 
 	&.profile_primary_group {
+		// Align with 64px image
+		padding-block: 11px;
 		margin: 0;
 	}
 
@@ -191,12 +196,9 @@
 			top: 6px;
 		}
 	}
-
-	.whiteLink {
-		font: var(--text--body-large);
-	}
 }
 
 .profile_in_common {
 	color: var(--color-fg-dim);
+	margin-block-end: var(--spacing-sm);
 }

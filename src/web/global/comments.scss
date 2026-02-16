@@ -1,4 +1,5 @@
 @use "shared/controls";
+@use "shared/utils";
 @use "web/paging";
 
 // TODO: unify with commentthread in client
@@ -10,7 +11,6 @@
 .commentthread_area {
 	--avatar-gutter: 12px;
 	--avatar-size: var(--avatar--size-md);
-	--spacing: 8px;
 
 	.playerAvatar {
 		--size: var(--avatar-size);
@@ -18,13 +18,31 @@
 }
 
 .commentthread_comment {
-	padding: var(--spacing);
+	padding: var(--spacing-sm);
 	padding-left: calc(
-		var(--avatar-size) + var(--avatar-gutter) + var(--spacing)
+		var(--avatar-size) + var(--avatar-gutter) + var(--spacing-sm)
 	);
-	margin-bottom: var(--spacing);
+	margin-bottom: var(--spacing-sm);
 
 	display: flex;
+}
+
+.commentthread_comment_actions {
+	margin: 0;
+
+	img {
+		display: none;
+	}
+
+	.actionlink {
+		@include utils.icon;
+
+		margin-inline-start: var(--spacing-sm);
+
+		&[href*="DeleteComment"] {
+			--icon-name: icon("delete");
+		}
+	}
 }
 
 .commentthread_comment_author {
@@ -38,7 +56,7 @@
 }
 
 .commentthread_comment_avatar {
-	left: var(--spacing);
+	left: var(--spacing-sm);
 }
 
 .commentthread_comment_container {
@@ -51,8 +69,12 @@
 }
 
 .commentthread_comment_friendindicator {
-	top: 39px;
-	left: var(--avatar-size);
+	@include utils.icon($name: "user", $remove: true);
+
+	background-image: none;
+
+	inset-inline-start: calc(var(--avatar-size) - var(--icon--size-md) / 3);
+	inset-block-start: calc(var(--avatar-size) - var(--icon--size-md) / 3);
 }
 
 .commentthread_comment_text {
@@ -68,7 +90,7 @@
 .commentthread_entry {
 	background-color: transparent;
 	padding: 0;
-	margin: var(--spacing);
+	margin: var(--spacing-sm);
 	margin-bottom: 0;
 
 	min-height: unset;
@@ -86,9 +108,34 @@
 	box-shadow: none;
 }
 
+.commentthread_entry_submitlink {
+	padding-block-start: var(--spacing-sm);
+
+	.emoticon_button {
+		@include controls.icon-button(
+			$w: 44px,
+			$name: "emoticon",
+			$child: "&::before"
+		);
+
+		background-image: none;
+
+		vertical-align: center;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+
+		&::before {
+			content: "";
+
+			display: block;
+		}
+	}
+}
+
 .commentthread_footer {
 	border: none;
-	padding: calc(var(--spacing) * 2) 0;
+	padding: var(--spacing-lg) 0;
 	margin: 0;
 }
 
@@ -104,6 +151,7 @@
 .commentthread_paging {
 	@include paging.container;
 
+	&[style="display: none;"],
 	&.has_view_all_link {
 		display: none;
 	}
@@ -129,8 +177,15 @@
 	border: none;
 }
 
+.commentthread_subscribe_checkbox_ctn {
+	gap: var(--spacing-xs);
+
+	align-items: center;
+}
+
 .commentthread_subscribe_ctn {
-	font: inherit;
+	font: var(--text--body-medium);
+	gap: var(--spacing-xs);
 
 	&.checked .commentthread_subscribe_checkbox {
 		--icon-name: icon("checkbox-checked");
@@ -138,11 +193,9 @@
 }
 
 .commentthread_subscribe_hint {
-	font: inherit;
-}
+	@include utils.tooltip-icon;
 
-.commentthread_subscribe_hint_q {
-	color: var(--color-primary);
+	font-size: 0;
 }
 
 .commentthread_textarea {
@@ -153,5 +206,7 @@
 }
 
 .commentthread_user_avatar {
+	// Align with text field
+	margin-block-start: calc(var(--avatar--border-size) * -1);
 	margin-right: var(--avatar-gutter);
 }
