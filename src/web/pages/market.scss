@@ -14,7 +14,7 @@
 #BG_bottom {
 	display: flex;
 	flex-direction: column;
-	width: var(--apphub_content-width);
+	width: var(--content--width-lg);
 }
 
 #BG_top {
@@ -23,7 +23,7 @@
 
 	display: flex;
 	justify-content: space-between;
-	width: var(--apphub_content-width);
+	width: var(--content--width-lg);
 	height: unset;
 
 	.user_info {
@@ -121,7 +121,7 @@
 .market_header_bg {
 	background-color: transparent;
 
-	margin-block: var(--top-content-margin);
+	margin-block: var(--content--spacing-block-start);
 }
 
 .market_header_logo {
@@ -318,7 +318,7 @@
 .market_page_left {
 	padding: 0;
 	margin-inline-start: calc(
-		var(--sidebar-width) + var(--market_row-spacing-outer)
+		var(--content--sidebar-width) + var(--market_row-spacing-outer)
 	);
 
 	max-width: unset;
@@ -441,7 +441,7 @@
 	border-radius: var(--rounding-lg);
 	padding: var(--spacing-md);
 
-	width: var(--sidebar-width);
+	width: var(--content--sidebar-width);
 }
 
 .market_search_sidebar_section_tip_small {

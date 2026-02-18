@@ -1,7 +1,5 @@
 :root {
 	// React partials
-	--shoppingcart_left-col-size: 1090px;
-	--shoppingcart_right-col-size: 445px;
 	--storemenu_border-gradient: linear-gradient(
 		90deg,
 		var(--color-fg-dim),
@@ -9,12 +7,14 @@
 	);
 
 	// Pages
-	--apphub_content-width: 1564px;
 	--market_column-width: 150px;
 	--market_row-spacing-outer: 17px;
-	--profile_width: 1241px;
-	--profile_sidebar-gutter: var(--spacing-xxl);
 
-	// Other
-	--top-content-margin: 69px;
+	// Content
+	--content--sidebar-width: 299px;
+	--content--spacing-block-start: 69px;
+
+	--content--width-sm: 1247px;
+	--content--width-md: 1388px;
+	--content--width-lg: 1564px;
 }

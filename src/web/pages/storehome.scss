@@ -18,7 +18,7 @@ body.no_home_gutter.infinite_scrolling {
 	--store-home-bg: #202b3c;
 	--store-home-section-gap: 70px;
 	// steam var
-	--store-page-width: 1388px;
+	--store-page-width: var(--content--width-md);
 
 	background-image: linear-gradient(
 		180deg,

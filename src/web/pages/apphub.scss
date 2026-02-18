@@ -28,7 +28,7 @@
 	padding: 0;
 
 	// TODO: I don't wanna deal with this shit
-	max-width: var(--apphub_content-width);
+	max-width: var(--content--width-lg);
 }
 
 .apphub_CardRow {
@@ -367,14 +367,14 @@
 .apphub_HomeHeader {
 	margin-bottom: calc(13px + var(--spacing-lg));
 
-	max-width: var(--apphub_content-width);
+	max-width: var(--content--width-lg);
 }
 
 .apphub_HomeHeaderContent {
-	padding-top: var(--top-content-margin);
+	padding-top: var(--content--spacing-block-start);
 
 	width: 100%;
-	max-width: var(--apphub_content-width);
+	max-width: var(--content--width-lg);
 
 	.apphub_HeaderStandardTop {
 		display: flex;

@@ -63,12 +63,13 @@ h3 {
 	gap: var(--spacing-md);
 	margin-top: var(--spacing-lg);
 
-	max-width: var(--apphub_content-width);
+	max-width: var(--content--width-lg);
 }
 
 .page_content {
-	// TODO(vars): content width
-	width: calc(var(--sidebar-width) + var(--spacing-md) + 1247px);
+	width: calc(
+		var(--content--sidebar-width) + var(--spacing-md) + var(--content--width-sm)
+	);
 	max-width: unset;
 }
 
@@ -84,7 +85,7 @@ h3 {
 .page_header_ctn {
 	background: none;
 	padding: 0;
-	margin-top: var(--top-content-margin);
+	margin-top: var(--content--spacing-block-start);
 	margin-bottom: var(--spacing-xxl);
 
 	.page_content {

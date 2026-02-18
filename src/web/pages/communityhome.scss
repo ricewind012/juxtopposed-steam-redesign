@@ -46,7 +46,7 @@
 	padding-block: 24px 48px;
 	margin: 0 auto;
 
-	max-width: var(--apphub_content-width);
+	max-width: var(--content--width-lg);
 }
 
 .community_home_search_apps,
@@ -127,7 +127,7 @@
 .community_home_tabs {
 	padding: 0;
 
-	max-width: var(--apphub_content-width);
+	max-width: var(--content--width-lg);
 }
 
 .community_home_title {

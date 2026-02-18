@@ -10,7 +10,7 @@
 #CartRightColStickyCtn {
 	border-radius: var(--rounding-lg);
 
-	max-width: var(--shoppingcart_right-col-size);
+	max-width: 445px;
 }
 
 #CartSummaryCtn {
@@ -49,20 +49,17 @@
 #ShoppingCartHeader {
 	color: var(--color-fg-main);
 	font: var(--text--heading-large);
-	margin-block: var(--top-content-margin) 46px;
+	margin-block: var(--content--spacing-block-start) 46px;
 }
 
 #ShoppingCartLeftCol {
 	gap: var(--spacing-sm);
 
-	max-width: var(--shoppingcart_left-col-size);
+	max-width: 1090px;
 }
 
 #ShoppingCartPage {
 	padding: 0;
 
-	max-width: calc(
-		var(--shoppingcart_right-col-size) + var(--spacing-xl) +
-			var(--shoppingcart_left-col-size)
-	);
+	max-width: var(--content--width-lg);
 }

@@ -154,7 +154,7 @@ body.apphub_blue.v6 {
 }
 
 #ig_bottom {
-	max-width: var(--apphub_content-width);
+	max-width: var(--content--width-lg);
 
 	&:not(.smallheader) #mainContents {
 		display: flex;
@@ -254,7 +254,7 @@ body.apphub_blue.v6 {
 
 	margin: 0;
 
-	width: var(--sidebar-width);
+	width: var(--content--sidebar-width);
 
 	.panel {
 		all: unset;
@@ -441,7 +441,7 @@ body.apphub_blue.v6 {
 .workshop_header {
 	box-shadow: none;
 
-	max-width: var(--apphub_content-width);
+	max-width: var(--content--width-lg);
 
 	&::before {
 		@include style.workshop-bg;
@@ -454,7 +454,7 @@ body.apphub_blue.v6 {
 }
 
 .workshop_home_content {
-	width: var(--apphub_content-width);
+	width: var(--content--width-lg);
 
 	& > div {
 		gap: var(--spacing-md);

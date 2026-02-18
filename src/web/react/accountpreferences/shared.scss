@@ -12,7 +12,7 @@ body:is(.account, .account_preferences) {
 		border-radius: var(--rounding-lg);
 		padding: var(--spacing-md);
 
-		min-width: var(--sidebar-width);
+		min-width: var(--content--sidebar-width);
 	}
 
 	&.right {

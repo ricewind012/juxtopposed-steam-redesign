@@ -299,11 +299,11 @@
 	padding: 40px;
 	padding-top: 0;
 
-	width: var(--profile_width);
+	width: var(--content--width-sm);
 }
 
 .profile_content_inner {
-	gap: var(--profile_sidebar-gutter);
+	gap: var(--spacing-xxl);
 
 	display: flex;
 	flex-direction: row-reverse;
@@ -601,15 +601,15 @@
 .profile_header_bg {
 	padding-top: 51px;
 
-	max-width: var(--profile_width);
+	max-width: var(--content--width-sm);
 }
 
 .profile_header_bg_texture {
-	max-width: var(--profile_width);
+	max-width: var(--content--width-sm);
 }
 
 .profile_header_centered_col {
-	padding-inline: var(--avatar-gap) var(--profile_sidebar-gutter);
+	padding-inline: var(--avatar-gap) var(--spacing-xxl);
 
 	display: flex;
 	flex-direction: column;
@@ -629,7 +629,7 @@
 	font: var(--text--body-large);
 	padding: 0;
 
-	grid-template-columns: auto 1fr var(--sidebar-width);
+	grid-template-columns: auto 1fr var(--content--sidebar-width);
 }
 
 .profile_in_common {
@@ -705,7 +705,7 @@
 	padding: 0;
 
 	flex-shrink: 0;
-	width: var(--sidebar-width);
+	width: var(--content--sidebar-width);
 
 	& > * {
 		background-color: var(--color-bg-main-50);

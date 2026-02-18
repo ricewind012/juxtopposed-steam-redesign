@@ -13,9 +13,9 @@
 }
 
 #Gameslistapp {
-	margin-top: var(--top-content-margin);
+	margin-top: var(--content--spacing-block-start);
 
-	max-width: 1241px;
+	max-width: var(--content--width-sm);
 }
 
 .migrated_profile_page {

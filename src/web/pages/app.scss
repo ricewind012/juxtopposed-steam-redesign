@@ -13,10 +13,8 @@
 }
 
 body.game_bg {
-	// XD
-	--apphub_content-width: var(--store-page-width);
-	--store-page-width: 1567px;
-	--top-content-margin: 44px;
+	--store-page-width: var(--content--width-lg);
+	--content--spacing-block-start: 44px;
 
 	// TODO: unify?
 	background-image: linear-gradient(
@@ -1170,7 +1168,9 @@ body.game_bg {
 	background-color: transparent;
 
 	position: absolute;
-	inset-block-start: calc(var(--header-height) + var(--top-content-margin));
+	inset-block-start: calc(
+		var(--header-height) + var(--content--spacing-block-start)
+	);
 	inset-inline: calc((100vw - var(--store-page-width)) / 2 - var(--spacing-xs));
 	max-width: var(--store-page-width);
 
