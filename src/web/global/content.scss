@@ -1,18 +1,3 @@
-@use "shared/controls";
-@use "web/paging";
-
-@mixin -button($variant: "secondary", $size: "md") {
-	all: unset;
-
-	box-sizing: border-box;
-
-	@include controls.button($variant, $size);
-
-	& > span {
-		all: unset;
-	}
-}
-
 [style^="clear"] {
 	display: none;
 }
@@ -68,36 +53,17 @@ h3 {
 	display: none;
 }
 
-#{controls.button-web-selector(".btn_grey_black")},
-#{controls.button-web-selector(".btn_medium")},
-#{controls.button-web-selector(".btn_small")} {
-	@include -button;
+// Ugly bitch
+#footer,
+#footer_spacer {
+	display: none;
 }
 
-#{controls.button-web-selector(".btn_green_steamui")},
-#{controls.button-web-selector(".btn_green_white_innerfade")} {
-	@include -button($variant: "primary");
-}
+#mainContents {
+	gap: var(--spacing-md);
+	margin-top: var(--spacing-lg);
 
-#{controls.button-web-selector(".btnv6_blue_hoverfade")},
-#{controls.button-web-selector(".btnv6_white_transparent")} {
-	@include -button($variant: "tertiary", $size: "sm");
-}
-
-input[type="checkbox"] {
-	@include controls.checkbox(":checked", ":disabled");
-}
-
-.dselect_container {
-	background-color: transparent;
-
-	.trigger {
-		@include controls.dropdown;
-	}
-}
-
-.pagebtn {
-	@include paging.arrow($disabled: "&.disabled");
+	max-width: var(--apphub_content-width);
 }
 
 .page_content {
@@ -125,19 +91,6 @@ input[type="checkbox"] {
 		flex-direction: column;
 	}
 }
-
-/* TODO: restrict to account preferences
-.tooltip {
-	@include utils.tooltip-icon;
-
-	display: inline-block;
-	vertical-align: sub;
-
-	img {
-		display: none;
-	}
-}
-*/
 
 .responsive_page_frame.with_header {
 	// TODO: 2px

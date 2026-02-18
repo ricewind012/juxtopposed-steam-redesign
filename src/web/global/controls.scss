@@ -1,0 +1,94 @@
+@use "shared/controls";
+@use "web/paging";
+
+@mixin -button($variant: "secondary", $size: "md") {
+	all: unset;
+
+	box-sizing: border-box;
+
+	@include controls.button($variant, $size);
+
+	& > span {
+		all: unset;
+	}
+}
+
+#{controls.button-web-selector(".btn_grey_black")},
+#{controls.button-web-selector(".btn_medium")},
+#{controls.button-web-selector(".btn_small")} {
+	@include -button;
+}
+
+#{controls.button-web-selector(".btn_green_steamui")},
+#{controls.button-web-selector(".btn_green_white_innerfade")} {
+	@include -button($variant: "primary");
+}
+
+#{controls.button-web-selector(".btnv6_blue_hoverfade")},
+#{controls.button-web-selector(".btnv6_white_transparent")} {
+	@include -button($variant: "tertiary", $size: "sm");
+}
+
+input[type="checkbox"] {
+	@include controls.checkbox(":checked", ":disabled");
+}
+
+.dselect_container {
+	background-color: transparent;
+
+	.trigger {
+		@include controls.dropdown;
+	}
+}
+
+.pagebtn {
+	@include paging.arrow($disabled: "&.disabled");
+}
+
+/* TODO: restrict to account preferences
+.tooltip {
+	@include utils.tooltip-icon;
+
+	display: inline-block;
+	vertical-align: sub;
+
+	img {
+		display: none;
+	}
+}
+*/
+
+.responsive_tab_baseline {
+	display: none;
+}
+
+.sectionTab {
+	all: unset;
+
+	@include controls.tab(".active");
+
+	& > span {
+		all: unset;
+	}
+}
+
+.sectionTabs {
+	@include controls.tabs-container;
+
+	margin-bottom: var(--spacing-sm);
+}
+
+.tabCount {
+	background-color: transparent;
+	color: var(--color-fg-dim);
+	font: inherit;
+	padding: 0;
+
+	&::before {
+		content: "(";
+	}
+
+	&::after {
+		content: ")";
+	}
+}

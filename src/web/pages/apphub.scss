@@ -1,6 +1,10 @@
 @use "shared/controls";
 @use "shared/utils";
 
+// TODO:
+// https://store.fastly.steamstatic.com/images/storepagebackground/app/2052410?t=1753952335
+// https://shared.steamstatic.com/store_item_assets/steam/apps/2052410/page_bg_raw.jpg?t=1753952335
+
 %-content-type {
 	background: var(--color-bg-main-50);
 	color: var(--color-fg-main);
@@ -11,6 +15,11 @@
 
 .apphub_AllContentText {
 	display: none;
+}
+
+.apphub_AppName {
+	color: var(--color-fg-main);
+	font: var(--text--heading-large);
 }
 
 .apphub_Content {
@@ -346,6 +355,36 @@
 	min-height: unset;
 }
 
+.apphub_HeaderBottomBG_ctn {
+	display: none;
+}
+
+.apphub_HeaderTop {
+	background-image: none;
+	padding: 0;
+}
+
+.apphub_HomeHeader {
+	margin-bottom: calc(13px + var(--spacing-lg));
+
+	max-width: var(--apphub_content-width);
+}
+
+.apphub_HomeHeaderContent {
+	padding-top: var(--top-content-margin);
+
+	width: 100%;
+	max-width: var(--apphub_content-width);
+
+	.apphub_HeaderStandardTop {
+		display: flex;
+		align-items: center;
+		flex-direction: row-reverse;
+		justify-content: space-between;
+		min-height: unset;
+	}
+}
+
 .apphub_HubDivider {
 	display: none;
 }
@@ -379,6 +418,30 @@
 	#{controls.button-web-selector(".btnv6_blue_hoverfade")} {
 		display: none;
 	}
+}
+
+.apphub_sectionTab {
+	@include controls.tab(".active");
+
+	background-image: none;
+	margin: 0;
+
+	height: unset;
+
+	span {
+		all: unset;
+	}
+}
+
+.apphub_sectionTabs {
+	@include controls.tabs-container;
+
+	margin: 0;
+	margin-block: 24px 48px;
+}
+
+.apphub_sectionTabsHR {
+	display: none;
 }
 
 .apphub_Stats {
@@ -452,6 +515,10 @@
 		font: var(--text--body-medium);
 		padding: 0;
 	}
+}
+
+.apphub_WorkshopPistonHolder {
+	display: none;
 }
 
 .UserReviewCardContent_Footer {
