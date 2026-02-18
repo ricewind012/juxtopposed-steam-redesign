@@ -1,28 +1,27 @@
 @use "shared/controls";
+@use "shared/utils";
+@use "web/store";
 
 .market_header_bg {
 	background-color: transparent;
 
-	margin-top: var(--top-content-margin);
+	margin-block: var(--top-content-margin);
 }
 
 .market_header_logo {
 	background-image: none;
 
 	width: unset;
+	height: unset;
 }
 
 .market_header_text {
-	gap: 24px;
+	gap: 12px;
 	padding: 0;
 
 	display: flex;
 	flex-direction: column;
 	width: unset;
-
-	br {
-		display: none;
-	}
 }
 
 .market_title_text {
@@ -30,9 +29,52 @@
 	font: var(--text--heading-large);
 }
 
+.market_search_results_header {
+	font: inherit;
+	gap: var(--spacing-xs);
+	padding: 0;
+
+	min-height: unset;
+
+	& > div {
+		margin: 0;
+	}
+
+	.market_searchedForTerm {
+		@include store.tag;
+
+		border: none;
+
+		img {
+			margin: 0;
+
+			width: var(--icon--size-md);
+			height: var(--icon--size-md);
+		}
+
+		.removeIcon {
+			@include utils.icon($name: "close", $size: "sm");
+
+			&:hover {
+				filter: none;
+			}
+		}
+	}
+}
+
+.market_search_results_title {
+	font: inherit;
+}
+
 .market_subtitle_text {
 	color: var(--color-fg-dim);
 	font: var(--text--heading-medium);
+}
+
+#BG_bottom {
+	display: flex;
+	flex-direction: column;
+	width: var(--apphub_content-width);
 }
 
 #BG_top {
@@ -41,6 +83,8 @@
 
 	display: flex;
 	justify-content: space-between;
+	width: var(--apphub_content-width);
+	height: unset;
 
 	.user_info {
 		background-color: transparent;
@@ -53,8 +97,7 @@
 		height: unset;
 
 		br,
-		& > span:nth-child(2),
-		#marketWalletBalance {
+		& > span:nth-child(2) {
 			display: none;
 		}
 
@@ -67,19 +110,21 @@
 
 	.user_info_text {
 		font: var(--text--body-large);
+		gap: var(--spacing-sm);
 		margin: 0;
 
 		display: flex;
+		flex-direction: column;
 	}
 }
 
 .pick_and_sell_button {
-	right: 0;
-	bottom: 100px;
+	inset: 9px;
+	inset-inline-start: unset;
 }
 
 .item_market_action_button_contents {
-	@include controls.button("primary");
+	@include controls.button($variant: "primary", $size: "sm");
 
 	float: unset;
 	height: unset;

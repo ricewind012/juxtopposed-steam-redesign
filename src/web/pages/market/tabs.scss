@@ -20,6 +20,7 @@
 	border: none;
 	// Divide by 2 for whitespace
 	gap: calc(var(--spacing-xxs) / 2);
+	margin-block-end: var(--market_row-spacing-outer);
 
 	display: flex;
 	position: unset;
@@ -27,6 +28,8 @@
 
 .market_tab_well_tab_contents {
 	@include controls.tab(".hack");
+
+	background-image: none;
 
 	min-width: unset;
 
@@ -37,6 +40,5 @@
 }
 
 #myListings {
-	margin-top: 18px;
 	margin-bottom: 89px;
 }

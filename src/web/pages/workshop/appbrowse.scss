@@ -77,7 +77,7 @@ body.apphub_blue.v6 {
 
 #mainContents {
 	gap: var(--spacing-md);
-	margin-top: calc(13px + var(--spacing-lg));
+	margin-top: var(--spacing-lg);
 
 	max-width: var(--apphub_content-width);
 

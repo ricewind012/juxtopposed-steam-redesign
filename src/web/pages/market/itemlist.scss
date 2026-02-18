@@ -2,39 +2,79 @@
 @use "web/layout";
 @use "web/paging";
 
+%-row {
+	border: none;
+	border-radius: var(--rounding-lg);
+	padding-block: var(--spacing-block);
+	padding-inline: var(--spacing-lg);
+}
+
 .market_content_block {
 	padding: 0;
 }
 
-.my_listing_section {
+.my_listing_section:not([style="display:none"]) {
 	margin: 0;
+	margin-block-end: var(--spacing-xxl);
 }
 
 .my_market_header {
+	margin-block-end: var(--spacing-sm);
+}
+
+.my_market_header_active {
 	font: var(--text--heading-small);
 	color: var(--color-fg-main);
 }
 
 .my_market_header_count {
-	font: var(--text--body-small);
+	font: inherit;
 	color: var(--color-fg-dim);
 }
 
-.market_listing_table_message,
+.market_listing_table_message {
+	--spacing-block: var(--spacing-lg);
+
+	@extend %-row;
+
+	background-color: var(--color-bg-main-20);
+	margin-block: 0 var(--spacing-lg);
+}
+
 .market_listing_table_header {
+	--spacing-block: 8.5px;
+
+	@extend %-row;
+
 	background-color: var(--color-bg-main-20);
 	font: var(--text--body-large);
-	border: none;
-	border-radius: var(--rounding-lg);
-	padding: 8.5px var(--market_row-spacing-inner);
 	margin: 0;
 
 	height: unset;
+
+	.market_sortable_column {
+		background-color: transparent;
+
+		overflow: visible;
+		position: relative;
+
+		&:hover::before {
+			content: "";
+
+			position: absolute;
+			inset: calc(var(--spacing-block) * -1) calc(var(--spacing-lg) * -1);
+			width: 100%;
+			z-index: -1;
+
+			background-color: var(--color-bg-main);
+		}
+	}
 }
 
 .market_listing_table_header {
 	color: var(--color-fg-dim);
-	margin: var(--market_row-spacing-outer) 0;
+	margin: 0;
+	margin-block-end: var(--market_row-spacing-outer);
 }
 
 .market_listing_left_cell,
@@ -43,23 +83,67 @@
 	line-height: unset;
 	border: none;
 
+	text-align: start;
 	height: unset;
 }
 
 .market_listing_header_namespacer {
-	width: 0;
+	width: 62px;
 }
 
 .market_listing_action_buttons {
-	height: 1px;
+	padding: 0;
+
+	width: var(--market_column-width);
+	height: unset;
+
+	&.market_listing_right_cell {
+		order: 1;
+	}
+}
+
+.market_listing_buy_button {
+	display: contents;
+
+	#{controls.button-web-selector(".item_market_action_button")} {
+		width: 100%;
+	}
+}
+
+.market_listing_edit_buttons {
+	&.actual_content {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 100%;
+	}
+
+	&.placeholder {
+		height: 50px;
+	}
+
+	.item_market_action_button,
+	.market_listing_cancel_button {
+		all: unset;
+	}
+
+	.item_market_action_button_edge,
+	.item_market_action_button_preload {
+		display: none;
+	}
 }
 
 .market_listing_row {
+	--spacing-block: var(--spacing-lg);
+
+	@extend %-row;
+
+	transition: var(--transition);
 	background-color: var(--color-bg-main-50);
-	border: none;
-	border-radius: var(--rounding-lg);
-	padding: var(--market_row-spacing-inner);
 	margin-top: var(--market_row-spacing-outer);
+
+	clear: unset;
+	width: 100%;
 
 	&:hover {
 		background-color: var(--color-bg-main);
@@ -69,19 +153,20 @@
 .market_listing_item_img {
 	margin: 0;
 
+	// TODO(js): size can be changed
 	width: 62px;
 	height: 62px;
 }
 
 .market_listing_item_name_block {
-	padding-left: var(--market_row-spacing-inner);
-	margin-top: var(--spacing-sm);
+	padding-inline-start: var(--spacing-lg);
+	margin-block: 8px;
 }
 
 .market_listing_item_name {
 	font: var(--text--heading-small);
 
-	&[style="color: #D2D2D2;"] {
+	&[style=""] {
 		color: var(--color-fg-main);
 	}
 }
@@ -91,20 +176,35 @@
 	font: var(--text--body-medium);
 }
 
+.market_listing_num_listings,
+.market_listing_their_price {
+	display: flex;
+	width: unset;
+	min-width: var(--market_column-width);
+}
+
+.market_listing_price_listings_block {
+	.market_listing_row & {
+		margin-block: 19px;
+	}
+}
+
 .market_listing_whoactedwith,
 .market_listing_row .market_listing_listed_date,
 .market_listing_price,
 .market_listing_num_listings_qty {
-	color: var(--color-fg-main);
+	color: inherit;
 	font: var(--text--body-large);
 }
 
-.market_listing_gainorloss,
-.market_listing_whoactedwith,
-.market_listing_row .market_listing_listed_date,
-.market_listing_num_listings > span,
-.market_listing_their_price > span {
-	margin: 20.5px 0;
+// In sell listings
+.market_listing_price span {
+	color: inherit;
+}
+
+.market_table_value {
+	font: inherit;
+	margin: 0;
 }
 
 .market_listing_row .market_listing_their_price {
@@ -117,12 +217,56 @@
 }
 
 #sideBar {
-	margin-top: calc(var(--spacing-md) * -1);
-
 	position: absolute;
+	height: 100%;
+	// For clickable "security requirements" link
+	z-index: 1;
 
 	& > div {
-		margin-top: var(--spacing-md);
+		margin: 0;
+		margin-inline-end: var(--market_row-spacing-outer);
+
+		position: sticky;
+		top: calc(var(--header-height) + var(--spacing-lg));
+		width: unset;
+	}
+}
+
+.market_search_advanced_button {
+	all: unset;
+
+	.btn_details_arrow {
+		display: none;
+	}
+}
+
+#market_search_advanced_show {
+	@include controls.button;
+
+	width: 100%;
+}
+
+.market_search_input_container {
+	// All React btw
+	input {
+		@include controls.text-field($variant: "search");
+	}
+
+	[style*="--width"] {
+		width: 100%;
+	}
+
+	[data-has-value],
+	[data-has-value] div {
+		all: unset;
+	}
+
+	[data-has-value] > :nth-child(2) {
+		@include controls.text-field-icon($name: "close");
+
+		& > svg {
+			display: none;
+		}
 	}
 }
 
@@ -131,14 +275,15 @@
 	border-radius: var(--rounding-lg);
 	padding: var(--spacing-md);
 
-	width: var(--gpNavWidth);
+	width: var(--sidebar-width);
 }
 
 .market_search_sidebar_section_tip_small {
 	color: var(--color-fg-main);
 	font: var(--text--body-medium);
+	text-transform: uppercase;
 
-	&::before {
+	&::after {
 		content: "";
 
 		display: block;
@@ -151,7 +296,12 @@
 }
 
 .escrow_description_link {
+	color: var(--color-fg-dim);
 	font: var(--text--body-small);
+
+	a {
+		text-decoration: none;
+	}
 }
 
 .market_search_box_container {
@@ -167,7 +317,6 @@
 }
 
 .game_button,
-#market_search_advanced_show,
 .market_show_more_games {
 	margin-top: 9px;
 
@@ -189,8 +338,7 @@
 }
 
 .market_show_more_games > a,
-.game_button_contents,
-.market_search_advanced_button {
+.game_button_contents {
 	@include layout.sidebar-item(".hack");
 
 	font: var(--text--body-small);
@@ -206,19 +354,13 @@
 	}
 }
 
-.market_search_advanced_button {
-	color: var(--color-fg-main);
-	font: var(--text--body-medium);
-	text-align: center;
-
-	& > .btn_details_arrow {
-		display: none;
-	}
-}
-
 .market_page_left {
 	padding: 0;
-	margin-left: var(--sidebar-width);
+	margin-inline-start: calc(
+		var(--sidebar-width) + var(--market_row-spacing-outer)
+	);
+
+	max-width: unset;
 }
 
 .market_paging {
@@ -248,4 +390,8 @@
 	@include paging.link($selected: "&.active");
 
 	margin: 0;
+}
+
+.market_paging_summary {
+	font: var(--text--body-small);
 }
