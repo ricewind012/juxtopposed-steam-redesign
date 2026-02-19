@@ -17,6 +17,7 @@
 	margin-bottom: 0;
 
 	&#Primary {
+		gap: var(--spacing-xxl);
 		margin-bottom: var(--spacing-xxl);
 
 		display: grid;
@@ -31,7 +32,7 @@
 		#Title {
 			color: var(--color-fg-main);
 			font: var(--text--heading-small);
-			margin-bottom: 0;
+			margin-bottom: var(--spacing-xxs);
 		}
 	}
 }

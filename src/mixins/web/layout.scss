@@ -10,7 +10,7 @@
 	background: transparent;
 	border-radius: var(--rounding-md);
 	padding: 8px 13px;
-	margin-bottom: var(--spacing-xxs);
+	margin-bottom: var(--spacing-sm);
 
 	&:is(:hover, #{$active-selector}) {
 		background: var(--color-bg-hover);

@@ -3,7 +3,8 @@
 @use "web/layout";
 
 #BackToProfileCtn {
-	margin-bottom: var(--spacing-lg);
+	padding: 0;
+	margin-bottom: var(--spacing-sm);
 
 	a {
 		@include controls.button;
@@ -37,24 +38,39 @@
 	);
 }
 
+#ProfileEditLine {
+	border-block-start: var(--border-md) solid var(--color-bg-hover);
+	margin-block: var(--spacing-sm);
+}
+
 #Shell {
+	color: var(--color-fg-main);
 	font: var(--text--body-large);
-
 	margin: 0;
-
-	.DialogButton {
-		margin-left: var(--spacing-md);
-	}
 
 	.DialogCheckbox_Container {
 		flex-direction: row-reverse;
 		justify-content: start;
 	}
 
+	.DialogInput {
+		@include controls.text-field($variant: "transparent");
+
+		width: 312px;
+	}
+
+	.DialogDropDown {
+		width: 312px;
+	}
+
 	.DialogLabel {
-		all: unset;
 		color: var(--color-fg-main);
 		font: var(--text--heading-small);
+		margin: 0;
+
+		flex-shrink: 0;
+		display: flex;
+		align-items: center;
 		width: 265px;
 
 		svg {
@@ -65,6 +81,13 @@
 			path {
 				display: none;
 			}
+		}
+
+		// wtf is this shit
+		.HelperTooltip {
+			margin-inline-start: var(--spacing-xxs);
+
+			height: var(--icon--size-md);
 		}
 	}
 

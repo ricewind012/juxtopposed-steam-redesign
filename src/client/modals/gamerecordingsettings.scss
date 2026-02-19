@@ -1,9 +1,13 @@
 @use "shared/controls";
 
 #GRModalOption {
-	margin: 0;
+	[role="radio"] > & {
+		padding: 0;
+	}
 
-	width: 100%;
+	&:not(.Active, :hover) {
+		background-color: transparent;
+	}
 }
 
 #GRModalOptions {
@@ -14,14 +18,8 @@
 
 	flex-basis: unset;
 
-	& > [role="radio"] {
+	:where(& > [role="radio"]) {
 		@include controls.radio("&[aria-checked='true']");
-
-		width: 100%;
-	}
-
-	& > .DialogRoundCheckboxField_Container {
-		@include controls.radio("&.Active");
 
 		width: 100%;
 	}
@@ -32,8 +30,6 @@
 	}
 
 	#DurationInput {
-		color: inherit;
-
 		max-width: 100px;
 	}
 

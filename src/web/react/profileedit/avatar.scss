@@ -13,8 +13,12 @@
 #AvatarRow {
 	padding: 0;
 
+	img {
+		border-radius: var(--rounding-md);
+	}
+
 	#size {
-		padding-top: var(--spacing-md);
+		padding-top: var(--spacing-sm);
 		font: var(--text--body-small);
 	}
 }

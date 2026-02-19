@@ -10,7 +10,10 @@
 }
 
 #summaryTextArea {
-	@include controls.text-field;
+	@include controls.text-field($variant: "transparent");
 
 	box-shadow: none;
+
+	width: 100%;
+	min-height: 150px;
 }

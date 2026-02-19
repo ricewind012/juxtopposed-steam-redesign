@@ -24,3 +24,30 @@
 		text-overflow: ellipsis;
 	}
 }
+
+#ProfileBackgroundEquipOption {
+	margin: 0;
+
+	&:first-child > .DialogRoundCheckboxField_Container {
+		border-radius: var(--rounding-lg) var(--rounding-lg) 0 0;
+	}
+
+	&:last-child > .DialogRoundCheckboxField_Container {
+		border-radius: 0 0 var(--rounding-lg) var(--rounding-lg);
+	}
+
+	.DialogRoundCheckboxField_Container {
+		&:not(.Active, :hover) {
+			background-color: var(--color-bg-hl);
+		}
+
+		// Bro what
+		&.Active.Disabled {
+			opacity: 1;
+		}
+	}
+}
+
+#ProfileBackgroundEquipOptions {
+	margin-block: var(--spacing-lg);
+}

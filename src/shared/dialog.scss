@@ -114,6 +114,14 @@
 	display: none;
 }
 
+:where(.DialogRoundCheckboxField_Container) {
+	@include controls.radio("&.Active");
+
+	margin: 0;
+
+	width: 100%;
+}
+
 .DialogToggle_Description {
 	color: var(--color-fg-dim);
 	font: inherit;

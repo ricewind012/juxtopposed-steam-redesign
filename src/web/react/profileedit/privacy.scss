@@ -17,26 +17,19 @@
 .ProfilePrivacyDesc {
 	@include settings.section;
 
-	a {
-		text-decoration: underline;
-	}
+	color: var(--color-fg-dim);
+	border-start-start-radius: 0;
+	border-start-end-radius: 0;
 }
 
 .ProfilePrivacyDropDown {
-	color: var(--color-fg-dim);
-
-	&:not(.readonly):hover {
-		color: var(--color-fg-main);
-	}
+	text-decoration: none;
+	margin-inline-start: var(--spacing-sm);
 
 	&.readonly {
+		color: var(--color-fg-dim);
+		padding: 0;
 	}
-}
-
-.ProfilePrivacyDropDown_Arrow {
-	@include utils.icon($name: "arrow", $size: "lg");
-
-	vertical-align: sub;
 }
 
 .ProfilePrivacyHeader {
@@ -44,6 +37,8 @@
 
 	color: var(--color-primary);
 	font: var(--text--heading-medium);
+	border-end-start-radius: 0;
+	border-end-end-radius: 0;
 	padding-bottom: 0;
 	margin: 0;
 

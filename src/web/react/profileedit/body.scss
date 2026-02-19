@@ -21,26 +21,6 @@
 
 #ProfileBox {
 	@include settings.section;
-
-	.DialogInput {
-		width: 312px;
-	}
-
-	// TODO: can't use ::after here... idk man
-	.react-select__control {
-		@include controls.dropdown;
-
-		width: 312px;
-	}
-
-	.react-select__indicator,
-	.react-select__indicator-separator {
-		display: none;
-	}
-
-	.react-select__value-container {
-		padding: 0;
-	}
 }
 
 #ProfileBoxContent {
@@ -50,6 +30,11 @@
 
 #ProfileBoxTitle {
 	all: unset;
+
 	color: var(--color-fg-dim);
 	font: var(--text--heading-medium);
+}
+
+#SaveCancelButtons {
+	gap: var(--spacing-sm);
 }
