@@ -89,4 +89,8 @@ div.navContent {
 
 		margin: 0;
 	}
+
+	hr {
+		@include menu.separator;
+	}
 }

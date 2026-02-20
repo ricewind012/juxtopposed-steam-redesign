@@ -48,6 +48,19 @@ h3 {
 	}
 }
 
+// Making the whole text use secondary text color is definitely not an option...
+.bb_link {
+	text-decoration: underline;
+}
+
+.bb_link_host {
+	color: var(--color-fg-dim);
+	font: var(--text--body-small);
+
+	position: relative;
+	inset-block-start: -1px;
+}
+
 // TODO: style in forums
 .breadcrumbs {
 	display: none;
@@ -60,6 +73,7 @@ h3 {
 }
 
 #mainContents {
+	color: var(--color-fg-main);
 	gap: var(--spacing-md);
 	margin-top: var(--spacing-lg);
 

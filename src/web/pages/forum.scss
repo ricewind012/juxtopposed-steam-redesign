@@ -294,6 +294,10 @@
 	&:hover {
 		background: var(--color-bg-main);
 	}
+
+	&:last-child {
+		margin: 0;
+	}
 }
 
 .forum_topic_icon {

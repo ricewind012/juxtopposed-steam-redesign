@@ -19,6 +19,7 @@
 	@include -button;
 }
 
+#{controls.button-web-selector(".btnv6_blue_blue_innerfade")},
 #{controls.button-web-selector(".btn_green_steamui")},
 #{controls.button-web-selector(".btn_green_white_innerfade")} {
 	@include -button($variant: "primary");

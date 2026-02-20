@@ -87,6 +87,14 @@
 	color: var(--color-fg-dim);
 }
 
+.commentthread_count {
+	padding: 0;
+}
+
+.commentthread_count_label {
+	margin-inline-end: var(--spacing-xl);
+}
+
 .commentthread_entry {
 	background-color: transparent;
 	padding: 0;
@@ -142,6 +150,8 @@
 .commentthread_header_and_count {
 	background-image: none;
 	padding: 0;
+
+	align-items: center;
 }
 
 .commentthread_pagelinks_ctn {
@@ -187,6 +197,9 @@
 	font: var(--text--body-medium);
 	gap: var(--spacing-xs);
 
+	display: flex;
+	align-items: center;
+
 	&.checked .commentthread_subscribe_checkbox {
 		--icon-name: icon("checkbox-checked");
 	}
@@ -209,4 +222,8 @@
 	// Align with text field
 	margin-block-start: calc(var(--avatar--border-size) * -1);
 	margin-right: var(--avatar-gutter);
+}
+
+.commentthread_workshop_authorbadge {
+	color: var(--color-accent-yellow);
 }

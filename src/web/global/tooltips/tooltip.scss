@@ -4,3 +4,22 @@
 .store_tooltip {
 	@include controls.tooltip;
 }
+
+// Workshop
+.hover_box {
+	@include controls.tooltip;
+
+	.content {
+		padding: 0;
+	}
+
+	.hoverWorkshopItemDesc {
+		font: inherit;
+	}
+
+	.hoverWorkshopItemTitle {
+		color: var(--color-fg-main);
+		font: var(--text--heading-small);
+		margin-block-end: var(--spacing-sm);
+	}
+}

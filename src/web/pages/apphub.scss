@@ -365,7 +365,7 @@
 }
 
 .apphub_HomeHeader {
-	margin-bottom: calc(13px + var(--spacing-lg));
+	margin-bottom: var(--spacing-lg);
 
 	max-width: var(--content--width-lg);
 }
@@ -375,6 +375,10 @@
 
 	width: 100%;
 	max-width: var(--content--width-lg);
+
+	&:has(> .workshop) {
+		max-width: var(--content--width-sm);
+	}
 
 	.apphub_HeaderStandardTop {
 		display: flex;
@@ -410,6 +414,10 @@
 
 .apphub_NumInApp {
 	color: var(--color-accent-green);
+}
+
+.apphub_OtherSiteInfo {
+	anchor-name: --apphub-top-right-buttons;
 }
 
 .apphub_recentFriendsArea {

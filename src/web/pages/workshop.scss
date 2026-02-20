@@ -1,6 +1,7 @@
 @use "shared/controls";
 @use "shared/style";
 @use "shared/utils";
+@use "web/apppage";
 @use "web/layout";
 @use "web/paging";
 @use "web/store";
@@ -19,12 +20,29 @@
 	background: var(--color-bg-main-50);
 	border-radius: var(--rounding-lg);
 	padding: var(--spacing-xl);
+	margin-block-end: var(--spacing-md);
 }
 
 @mixin -section-header {
 	color: var(--color-fg-dim);
 	font: var(--text--heading-small);
 	margin-block-end: var(--spacing-xxl);
+}
+
+@mixin -sidebar-header {
+	color: var(--color-fg-main);
+	font: var(--text--body-medium);
+	text-transform: uppercase;
+	margin-block-end: var(--spacing-sm);
+}
+
+@mixin -workshop-bg {
+	@include style.workshop-bg;
+
+	position: fixed;
+	inset: 0;
+	height: 100vh;
+	z-index: -999;
 }
 
 body.apphub_blue.v6 {
@@ -36,7 +54,7 @@ body.apphub_blue.v6 {
 }
 
 .browseOption {
-	@include layout.sidebar-item(".hack");
+	@include apppage.sidebar-list-item;
 
 	margin-inline: 0;
 
@@ -55,24 +73,67 @@ body.apphub_blue.v6 {
 
 .detailBox:not(.plain) {
 	@include -section;
+}
 
-	margin-bottom: var(--spacing-md);
+.fileRatingDetails,
+.parentCollectionRating,
+.workshop_item_rating {
+	background-color: var(--color-secondary);
+	mask-image: var(--img);
+	// prettier-ignore
+	mask-position:
+		0,
+		var(--icon--size-lg),
+		calc(var(--icon--size-lg) * 2),
+		calc(var(--icon--size-lg) * 3),
+		calc(var(--icon--size-lg) * 4);
+	mask-repeat: no-repeat;
+
+	width: calc(var(--icon--size-lg) * 5);
+	height: var(--icon--size-lg);
+
+	// prettier-ignore
+	$-stars: (
+		not-yet: 'icon("star"), icon("star"), icon("star"), icon("star"), icon("star")',
+		1-star: 'icon("star-filled"), icon("star"), icon("star"), icon("star"), icon("star")',
+		2-star: 'icon("star-filled"), icon("star-filled"), icon("star"), icon("star"), icon("star"),',
+		3-star: 'icon("star-filled"), icon("star-filled"), icon("star-filled"), icon("star"), icon("star")',
+		4-star: 'icon("star-filled"), icon("star-filled"), icon("star-filled"), icon("star-filled"), icon("star")',
+		5-star: 'icon("star-filled"), icon("star-filled"), icon("star-filled"), icon("star-filled"), icon("star-filled")',
+	);
+
+	@each $k, $v in $-stars {
+		&:has(> [src*="/#{$k}"]) {
+			--img: #{$v};
+		}
+	}
+
+	img {
+		display: none;
+	}
 }
 
 .filterOption {
-	@include layout.sidebar-item(".TODO");
+	@include apppage.sidebar-list-item;
 
-	gap: var(--spacing-xxs);
 	margin-inline: 0;
 
 	display: flex;
 	align-items: center;
 
+	&.checked {
+		background-image: none;
+		color: var(--color-primary);
+	}
+
+	input[type="checkbox"] {
+		margin: 0;
+	}
+
 	label {
 		all: unset;
 
 		gap: var(--spacing-xxs);
-		font: var(--text--body-large);
 
 		display: flex;
 		align-items: center;
@@ -82,7 +143,7 @@ body.apphub_blue.v6 {
 .flags_incompatible_desc {
 	color: var(--color-fg-dim);
 	font: var(--text--body-medium);
-	margin: 0;
+	margin: var(--spacing-xs) 0;
 }
 
 // TODO: move???
@@ -118,6 +179,8 @@ body.apphub_blue.v6 {
 
 	.subscribeOption.selected {
 		line-height: inherit;
+
+		text-align: center;
 	}
 }
 
@@ -129,6 +192,89 @@ body.apphub_blue.v6 {
 	@include controls.button("primary");
 
 	margin-right: 0;
+
+	width: unset;
+	height: unset;
+
+	.favoriteOption.selected {
+		line-height: inherit;
+	}
+}
+
+.highlight_ctn {
+	max-width: unset;
+}
+
+.highlight_overflow {
+	margin: 0;
+
+	max-width: unset;
+}
+
+#highlight_player_area {
+	max-width: unset;
+}
+
+.highlight_selector {
+	display: none;
+}
+
+#highlight_strip {
+	background-color: var(--color-bg-main-50);
+	border-radius: var(--rounding-md);
+	padding: var(--border-lg);
+
+	overflow: hidden;
+	inset: 0;
+	width: 100%;
+	height: calc(65px + var(--border-lg) * 4);
+}
+
+#highlight_strip_bg {
+	background-color: transparent;
+	padding: 0;
+	margin-block: var(--spacing-sm) var(--spacing-lg);
+
+	.slider {
+		background-color: var(--color-bg-main);
+		border-radius: 40px;
+		margin-block-start: var(--spacing-sm);
+
+		height: var(--carousel--thumb-height);
+
+		.handle {
+			background: var(--color-secondary);
+			border-radius: 40px;
+
+			width: 36px;
+			height: inherit;
+		}
+	}
+}
+
+.highlight_strip_item {
+	margin: var(--border-lg);
+
+	&.focus::before {
+		content: "";
+
+		position: absolute;
+		inset: calc(var(--border-lg) * -1);
+
+		border: var(--border-lg) solid var(--color-secondary);
+		border-radius: var(--rounding-md);
+	}
+
+	img {
+		border-radius: var(--rounding-md);
+	}
+}
+
+#highlight_strip_scroll {
+	padding-inline: var(--border-lg);
+
+	display: flex;
+	width: unset;
 }
 
 .home_tab {
@@ -154,19 +300,18 @@ body.apphub_blue.v6 {
 }
 
 #ig_bottom {
-	max-width: var(--content--width-lg);
+	max-width: var(--content--width-sm);
 
 	&:not(.smallheader) #mainContents {
 		display: flex;
 	}
 
-	&::before {
-		@include style.workshop-bg;
+	&.smallheader::before {
+		@include -workshop-bg;
+	}
 
-		position: fixed;
-		inset: 0;
-		height: 75vh;
-		z-index: -999;
+	.browsePagePadding {
+		display: none;
 	}
 }
 
@@ -181,7 +326,7 @@ body.apphub_blue.v6 {
 	background: color-mix(in srgb, var(--color-primary) 50%, transparent);
 	color: var(--color-fg-main);
 	font: var(--text--body-large);
-	margin-block: 0 var(--spacing-sm);
+	margin-block-start: 0;
 
 	.close_notification {
 		@include utils.icon($name: "close", $remove: true);
@@ -197,18 +342,23 @@ body.apphub_blue.v6 {
 }
 
 .parentCollection {
-	// just reuse it lol
 	@include -section;
 
-	margin-bottom: 20px;
+	display: flex;
+	align-items: center;
 
 	&:hover {
 		background-color: var(--color-bg-main);
 	}
+
+	&:last-child {
+		margin: 0;
+	}
 }
 
 .parentCollectionNumChildren {
-	font: var(--text--body-large);
+	font: var(--text--body-medium);
+	padding-inline: var(--spacing-sm) 0;
 }
 
 .parentCollectionsNumOthers {
@@ -219,7 +369,10 @@ body.apphub_blue.v6 {
 .parentCollectionTitle {
 	color: var(--color-fg-main);
 	font: var(--text--heading-small);
+	text-transform: none;
 	padding: 0;
+
+	flex-grow: 1;
 }
 
 .parentCollections {
@@ -231,11 +384,25 @@ body.apphub_blue.v6 {
 }
 
 #profileBlock {
-	padding: 0;
 	margin: 0;
 
 	flex-grow: 1;
 	max-width: unset;
+
+	#mainContents > & {
+		// XD
+		--button--secondary-bg: var(--color-bg-main);
+		--color-bg-hl: var(--color-bg-main);
+
+		@include -section;
+
+		margin: 0;
+
+		.dropdown,
+		#{controls.button-web-selector(".btn_medium")} {
+			@include controls.button-vars($size: "sm");
+		}
+	}
 }
 
 .requiredItem {
@@ -256,10 +423,7 @@ body.apphub_blue.v6 {
 
 	width: var(--content--sidebar-width);
 
-	.panel {
-		all: unset;
-	}
-
+	.panel,
 	.sidebar {
 		all: unset;
 	}
@@ -271,6 +435,10 @@ body.apphub_blue.v6 {
 
 .rightDetailsBlock {
 	padding: 0;
+
+	.workshop_item_header & {
+		display: flex;
+	}
 
 	hr {
 		display: none;
@@ -288,24 +456,22 @@ body.apphub_blue.v6 {
 }
 
 .rightSectionTopTitle {
-	color: var(--color-fg-main);
-	font: var(--text--body-large);
-	text-transform: none;
+	@include -sidebar-header;
+
 	padding: 0;
-	margin-bottom: var(--spacing-sm);
+}
+
+.searchedForTerm {
+	all: unset;
+
+	@include store.tag;
 }
 
 .searchedTermsContainer {
+	@include -section-header;
+
+	gap: var(--spacing-xxs);
 	margin: 0;
-
-	.workshop_browsing {
-		color: var(--color-fg-main);
-		font: var(--text--heading-large);
-	}
-
-	.workshop_browsing_section {
-		color: inherit;
-	}
 }
 
 #sharedfiles_content_ctn {
@@ -315,20 +481,20 @@ body.apphub_blue.v6 {
 		// TODO: move to comments.scss if I see this again
 		background-color: transparent;
 		padding: var(--spacing-xl);
-		margin: -var(--spacing-xl);
-		margin-block-end: var(--spacing-xxl);
+		margin: calc(var(--spacing-xl) * -1);
+		margin-block-end: 0;
 	}
 
 	#rightContents {
 		background-color: transparent;
 		padding: 0;
-		margin-left: var(--spacing-sm);
+		margin-left: var(--spacing-md);
 
 		.panel {
 			background-color: var(--color-bg-main);
 			border-radius: var(--rounding-lg);
 			padding: var(--spacing-md);
-			margin-bottom: var(--spacing-sm);
+			margin-bottom: var(--spacing-md);
 
 			display: block;
 
@@ -342,6 +508,94 @@ body.apphub_blue.v6 {
 				text-transform: none;
 				margin-top: 0;
 			}
+		}
+	}
+}
+
+.slider_container {
+	margin-block-start: var(--spacing-sm);
+
+	height: var(--carousel--thumb-height);
+
+	.handle {
+		background: var(--color-secondary);
+		border-radius: 40px;
+
+		width: 36px;
+		height: var(--carousel--thumb-height);
+	}
+
+	// TODO(mixins)
+	.slider {
+		background-color: var(--color-bg-main);
+
+		inset: 0;
+	}
+
+	.slider_left,
+	.slider_right {
+		display: none;
+	}
+}
+
+.slideshow_content {
+	--item-margin: var(--spacing-sm);
+	// Max image size
+	--item-size-lg: 512px;
+	--item-size-sm: 216.5px;
+	--slideshow-item-width: calc(
+		var(--item-size-lg) + var(--item-size-sm) + var(--item-margin)
+	);
+
+	max-width: var(--slideshow-item-width);
+
+	.slideshow_item {
+		width: var(--slideshow-item-width);
+	}
+
+	.workshop_item.square {
+		background-color: var(--color-bg-main-50);
+		border-radius: var(--rounding-md);
+
+		width: var(--image-size);
+		// 69px = footer height
+		height: calc(var(--image-size) + 69px);
+
+		&:hover {
+			background-color: var(--color-bg-main);
+		}
+
+		&.large {
+			--image-size: var(--item-size-lg);
+
+			margin-inline-end: var(--item-margin);
+		}
+
+		&.small {
+			--image-size: var(--item-size-sm);
+
+			&:nth-child(2n) {
+				margin-block-end: var(--item-margin);
+			}
+		}
+
+		.preview_image {
+			border: none;
+			border-radius: var(--rounding-md) var(--rounding-md) 0 0;
+
+			width: var(--image-size);
+			height: var(--image-size);
+		}
+
+		.workshop_item_info {
+			padding: var(--spacing-sm);
+
+			display: flex;
+			flex-direction: column-reverse;
+		}
+
+		.workshop_item_title {
+			font: var(--text--heading-small);
 		}
 	}
 }
@@ -364,13 +618,20 @@ body.apphub_blue.v6 {
 }
 
 .tag_filter_control_not {
-	@include utils.icon($name: "filter-off", $remove: true);
+	--icon-name: icon("filter");
 
+	@include utils.icon($remove: true);
+
+	color: var(--color-fg-dim);
 	margin: 0;
 	margin-left: auto;
 
-	&:not(:hover) {
-		color: var(--color-fg-dim);
+	&:hover {
+		color: var(--color-fg-main);
+	}
+
+	&.checked {
+		--icon-name: icon("filter-off");
 	}
 }
 
@@ -390,35 +651,42 @@ body.apphub_blue.v6 {
 }
 
 .workshop_browse_search {
-	@include controls.text-field($variant: "search");
+	all: unset;
 
-	margin-left: auto;
-
-	position: relative;
-	inset: 0;
-	width: 25%;
-	height: unset;
+	margin-inline-start: auto;
 
 	&::after {
 		content: "";
 
 		@include controls.text-field-icon($name: "search");
+
+		// TODO(vars): tabs
+		margin-inline-end: 8px;
 	}
 
 	.search_text {
 		all: unset;
 
-		padding: var(--spacing-sm) var(--spacing-md);
-		margin: calc(var(--spacing-sm) * -1) calc(var(--spacing-md) * -1);
+		@include controls.text-field($variant: "search");
 
-		width: 100%;
+		// TODO(vars): tabs
+		margin: -3px;
+
+		&.default_text {
+			color: var(--color-secondary);
+		}
 	}
 
 	.search_text_submit_img {
-		display: none;
+		@include controls.text-field($variant: "search");
+
+		visibility: hidden;
+		// TODO(vars): tabs
+		margin-inline-end: 8px;
 	}
 }
 
+// TODO: simplify after unifying mixin sel args
 .workshop_browse_tab {
 	@include controls.tab(".active");
 
@@ -427,34 +695,82 @@ body.apphub_blue.v6 {
 	}
 
 	a {
-		padding: 0;
+		background-color: transparent;
+		gap: var(--spacing-xxs);
+		padding: var(--spacing-xs) var(--spacing-lg);
+		margin: calc(var(--spacing-xs) * -1) calc(var(--spacing-lg) * -1);
 
 		vertical-align: middle;
+		display: flex;
+		align-items: center;
+	}
 
-		&.drop {
-			padding: var(--spacing-xs) 20px;
-			margin: -7px -20px;
+	.dropdown {
+		background-image: none;
+
+		&::after {
+			content: "";
+
+			display: block;
+
+			@include utils.icon($name: "arrow");
 		}
 	}
 }
 
-.workshop_header {
-	box-shadow: none;
+.workshop_browsing {
+	all: unset;
 
-	max-width: var(--content--width-lg);
+	margin-inline-end: var(--spacing-sm);
+}
+
+.workshop_browsing_section {
+	all: unset;
+}
+
+.workshop_header {
+	background-image: none;
+	box-shadow: none;
+	margin: auto;
+
+	max-width: var(--content--width-sm);
+	height: unset;
 
 	&::before {
-		@include style.workshop-bg;
+		@include -workshop-bg;
+	}
+
+	.browseAppDetails {
+		display: block;
+		height: 0;
+	}
+
+	#{controls.button-web-selector(".btnv6_blue_blue_innerfade")} {
+		@include controls.button-vars($variant: "primary", $size: "sm");
+
+		margin: 0;
+		margin-inline-end: var(--spacing-sm);
 
 		position: fixed;
-		inset: 0;
-		height: 75vh;
-		z-index: -999;
+		position-anchor: --apphub-top-right-buttons;
+		inset-block-start: anchor(top);
+		inset-inline-end: anchor(left);
+	}
+
+	.customBrowseText {
+		font: 0/0 sans;
+	}
+
+	.customBrowseLink,
+	.customBrowseTitle {
+		display: none;
 	}
 }
 
 .workshop_home_content {
-	width: var(--content--width-lg);
+	margin: auto;
+
+	width: var(--content--width-sm);
 
 	& > div {
 		gap: var(--spacing-md);
@@ -476,31 +792,21 @@ body.apphub_blue.v6 {
 	.primary_panel {
 		background: none;
 
-		.browse_option {
-			@include layout.sidebar-item(".hack");
+		.avatar_ctn,
+		.current_player_workshop_title {
+			display: none;
+		}
 
-			color: inherit;
-			font: inherit;
-			margin-inline: 0;
+		.browse_option {
+			all: unset;
 
 			a {
-				background: none;
-				padding: 0;
+				@include apppage.sidebar-list-item;
 			}
 		}
 
 		.current_player_files_ctn {
-			gap: var(--spacing-sm);
-
 			display: flex;
-
-			.avatar_workshop_overlay {
-				display: none;
-			}
-
-			.playerAvatar {
-				--size: var(--avatar--size-md);
-			}
 		}
 
 		.current_player_workshop_link {
@@ -525,70 +831,48 @@ body.apphub_blue.v6 {
 	.right_column {
 		@include layout.sidebar-container;
 
-		.browseTitle {
+		br {
 			display: none;
 		}
 
-		.filterOption {
-			@include layout.sidebar-item(".TODO");
-
-			margin-inline: 0;
-
-			.tag_count {
-				color: var(--color-fg-dim);
-			}
-
-			.tag_label {
-				all: unset;
-
-				display: flex;
-				justify-content: space-between;
-			}
-		}
-
+		.browseTitle,
 		.title {
-			color: var(--color-fg-main);
-			font: var(--text--body-large);
-			text-transform: none;
+			@include -sidebar-header;
+
 			border-block-start: var(--border-sm) solid var(--color-bg-hl);
 			padding-block-start: var(--spacing-md);
-			margin-block: var(--spacing-md) var(--spacing-sm);
+			margin-block-start: var(--spacing-md);
+		}
+
+		.tag_count {
+			color: var(--color-fg-dim);
+		}
+
+		.tag_label {
+			justify-content: space-between;
+			width: 100%;
 		}
 	}
 
 	.section {
-		padding: 0;
-		margin-bottom: var(--spacing-sm);
+		&.announcements_row h2 {
+			@include -section-header();
+		}
 
-		&:not(.tabbed) {
-			background: var(--color-bg-main);
-			border-radius: var(--rounding-md);
-			padding: var(--spacing-lg);
+		&.popular_items_row {
+			@include -section;
 		}
 	}
 
-	.section_bottom_bar {
+	.section_bottom_bar,
+	.section_subtitle,
+	.section_title,
+	.section_title a {
 		all: unset;
 	}
 
-	.section_title {
-		color: var(--color-fg-main);
-		font: var(--text--heading-medium);
-
-		a {
-			color: inherit;
-			font: inherit;
-		}
-	}
-
 	.section_title_ctn {
-		padding: 0;
-		margin-bottom: var(--spacing-lg);
-
-		.section_subtitle {
-			color: var(--color-fg-dim);
-			font: var(--text--heading-medium);
-		}
+		@include -section-header;
 	}
 }
 
@@ -599,31 +883,35 @@ body.apphub_blue.v6 {
 	box-shadow: none;
 
 	.col_right {
-		// TODO(js): original is 416px
-		//width: 416px;
+		flex-shrink: 0;
+		width: calc(var(--content--sidebar-width) - var(--spacing-xl));
 	}
 
-	.detailsStatLeft,
-	.detailsStatRight {
+	.detailsStatLeft {
 		color: var(--color-fg-dim);
+		padding-block-start: var(--spacing-sm);
+	}
+
+	.detailsStatRight {
+		color: var(--color-fg-main);
+		padding-block-start: var(--spacing-sm);
 	}
 
 	.detailsStatNumChangeNotes {
 		color: var(--color-fg-dim);
 		font: inherit;
+		padding-block-start: var(--spacing-sm);
+
+		position: absolute;
+		top: calc(3lh + var(--spacing-sm) * 3);
 
 		a {
 			font: inherit;
 		}
 	}
 
-	.highlight_ctn {
-		max-width: unset;
-	}
-
 	.hr {
-		background: var(--color-bg-hover);
-		margin-block: 8px;
+		display: none;
 	}
 
 	.rightDetailsBlock {
@@ -632,19 +920,29 @@ body.apphub_blue.v6 {
 }
 
 .workshop_item_row {
-	background: var(--color-bg-main);
+	--image-size: 100px;
+
+	background: var(--color-bg-main-50);
 	border: none;
-	border-radius: var(--rounding-md);
+	border-radius: var(--rounding-lg);
 	padding: var(--spacing-md);
 	margin-bottom: var(--spacing-sm);
 
 	&:hover {
-		background-color: var(--color-bg-hover);
+		background-color: var(--color-bg-main);
 	}
 
 	.preview_image {
 		border-radius: var(--rounding-md);
 		margin-right: var(--spacing-md);
+
+		width: var(--image-size);
+		height: var(--image-size);
+	}
+
+	.workshop_item_rating {
+		margin-block-start: var(--spacing-xxs);
+		margin-inline-start: calc(var(--image-size) + var(--spacing-md));
 	}
 }
 
@@ -661,19 +959,16 @@ body.apphub_blue.v6 {
 .workshopBrowseItems {
 	gap: var(--spacing-md);
 
-	grid-template-columns: repeat(5, 1fr);
+	grid-template-columns: repeat(4, 1fr);
 }
 
 .workshopBrowsePaging {
+	color: var(--color-fg-dim);
 	font: var(--text--body-large);
 	padding: 0;
 
 	align-items: center;
 	justify-content: space-between;
-
-	& > :first-child > a:not(:hover) {
-		color: var(--color-fg-dim);
-	}
 
 	.pagination_space {
 		display: none;
@@ -700,9 +995,9 @@ body.apphub_blue.v6 {
 .workshopBrowsePagingWithBG {
 	background-color: transparent;
 	color: var(--color-fg-dim);
-	font: var(--text--body-large);
+	font: var(--text--body-medium);
 	padding: 0;
-	margin-block: 0 var(--spacing-sm);
+	margin-block: var(--spacing-sm) var(--spacing-xxl);
 
 	align-items: center;
 
@@ -721,10 +1016,31 @@ body.apphub_blue.v6 {
 }
 
 .workshopItem {
+	--image-size: 179px;
+
 	background-color: var(--color-bg-main-50);
 	border-radius: var(--rounding-lg);
 	padding: var(--spacing-md);
 	margin: 0;
+
+	width: calc(var(--image-size) + var(--spacing-md) * 2);
+
+	&:has(> .workshop_checkmark:not([style="display: none;"]))::before {
+		content: "";
+
+		position: absolute;
+		inset-block-end: var(--spacing-md);
+		inset-inline-end: var(--spacing-md);
+
+		color: var(--color-accent-green);
+
+		@include utils.icon($name: "check", $size: "lg");
+	}
+
+	// BYE I'm too lazy for ts
+	.fileRating {
+		display: none;
+	}
 
 	.general_btn.subscribe {
 		--size: calc(var(--icon--size-md) + var(--spacing-lg));
@@ -742,7 +1058,11 @@ body.apphub_blue.v6 {
 	}
 
 	.ugc {
-		margin-bottom: var(--spacing-md);
+		margin-bottom: var(--spacing-sm);
+	}
+
+	.workshop_checkmark {
+		display: none;
 	}
 }
 
@@ -753,10 +1073,15 @@ body.apphub_blue.v6 {
 }
 
 .workshopItemControls {
+	padding: 0;
+	margin-block-start: var(--spacing-md);
+
 	.general_btn {
 		@include controls.button-vars("secondary");
 
 		margin-right: var(--spacing-sm);
+
+		height: unset;
 
 		&#ReportItemBtn {
 			@include -icon("flag");
@@ -764,6 +1089,10 @@ body.apphub_blue.v6 {
 
 		&#VoteDownBtn {
 			@include -icon("thumb-up");
+
+			&::before {
+				transform: rotate(180deg);
+			}
 		}
 
 		&#VoteUpBtn {
@@ -796,11 +1125,12 @@ body.apphub_blue.v6 {
 }
 
 .workshopItemDetailsHeader {
-	margin: 0;
+	margin-block-end: 12px;
 
 	display: flex;
-	flex-direction: column-reverse;
-	align-items: start;
+	flex-direction: row-reverse;
+	align-items: center;
+	justify-content: space-between;
 
 	#detailsHeaderRight {
 		padding: 0;
@@ -812,7 +1142,7 @@ body.apphub_blue.v6 {
 	}
 
 	.ratingSection {
-		gap: var(--spacing-xxs);
+		gap: var(--spacing-sm);
 
 		display: flex;
 		align-items: center;
@@ -823,16 +1153,36 @@ body.apphub_blue.v6 {
 	margin: 0;
 }
 
+.workshopItemPreviewImage {
+	width: inherit;
+	height: inherit;
+}
+
+// TODO(js): image size
+.workshopItemPreviewImageEnlargeableContainer {
+	background-color: var(--color-bg-main-50);
+	border-radius: var(--rounding-lg);
+}
+
 .workshopItemPreviewImageMain {
-	border-radius: var(--rounding-md);
+	border-radius: var(--rounding-lg);
 	padding: 0;
 	margin: 0;
-	margin-bottom: 8px;
+	margin-bottom: 12px;
+
+	width: inherit;
+
+	& > a {
+		width: inherit;
+	}
 }
 
 .workshopItemPreviewHolder {
 	border-radius: var(--rounding-md);
 	box-shadow: none;
+
+	width: var(--image-size);
+	height: var(--image-size);
 }
 
 .workshopItemRatings {
