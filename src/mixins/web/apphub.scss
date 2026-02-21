@@ -1,0 +1,32 @@
+@use "shared/utils";
+
+@mixin card-metadata-button {
+	background: var(--color--bg-main);
+	color: var(--color--primary);
+	font: var(--text--body-small);
+	border-radius: var(--rounding-md);
+	padding: 8px;
+
+	&:hover {
+		background: var(--color--bg-hover);
+	}
+}
+
+/// @param {String} $icon - Icon name found in `assets/icons`
+@mixin card-metadata($icon) {
+	@include card-metadata-button;
+
+	gap: var(--spacing-xxs);
+	margin: 0;
+
+	display: inline-flex;
+	align-items: center;
+
+	&::before {
+		content: "";
+
+		@include utils.icon($name: #{$icon}, $size: "sm");
+
+		color: var(--color--fg-dim);
+	}
+}

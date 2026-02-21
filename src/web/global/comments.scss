@@ -17,6 +17,10 @@
 	}
 }
 
+.commentthread_author_link {
+	font: inherit;
+}
+
 .commentthread_comment {
 	padding: var(--spacing-sm);
 	padding-left: calc(
@@ -49,10 +53,6 @@
 	/* HeadingSmall is too large */
 	font: var(--text--body-large);
 	font-weight: bold;
-
-	a {
-		font: inherit;
-	}
 }
 
 .commentthread_comment_avatar {
@@ -127,6 +127,7 @@
 		);
 
 		background-image: none;
+		margin: 0;
 
 		vertical-align: center;
 		display: inline-flex;
@@ -169,6 +170,9 @@
 
 .commentthread_pagelink {
 	@include paging.link($selected: "&.active");
+
+	// For forums
+	margin: 0;
 }
 
 .commentthread_pagelinks {

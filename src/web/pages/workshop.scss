@@ -30,7 +30,7 @@
 }
 
 @mixin -sidebar-header {
-	color: var(--color--fg-main);
+	color: var(--color--fg-dim);
 	font: var(--text--body-medium);
 	text-transform: uppercase;
 	margin-block-end: var(--spacing-sm);

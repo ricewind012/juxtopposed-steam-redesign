@@ -72,6 +72,10 @@ h3 {
 	display: none;
 }
 
+.maincontent {
+	width: var(--content--width-sm);
+}
+
 #mainContents {
 	color: var(--color--fg-main);
 	gap: var(--spacing-md);
@@ -85,6 +89,10 @@ h3 {
 		var(--content--sidebar-width) + var(--spacing-md) + var(--content--width-sm)
 	);
 	max-width: unset;
+}
+
+.pagecontent {
+	padding: 0;
 }
 
 .pageheader {

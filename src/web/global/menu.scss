@@ -46,6 +46,24 @@
 	}
 }
 
+// Forum
+.forum_comment_action_menu {
+	@include menu.container;
+
+	padding: 0;
+
+	.forum_comment_action {
+		@include menu.item;
+
+		background-color: transparent;
+		border-radius: 0;
+		margin: 0;
+
+		width: 100%;
+		height: unset;
+	}
+}
+
 // Profile
 .group_invite_menu_option_disabled {
 	@include menu.item--disabled;

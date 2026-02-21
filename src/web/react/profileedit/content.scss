@@ -5,12 +5,10 @@ body.profile_edit_page {
 	.DialogHeader {
 		display: none;
 	}
-}
 
-.maincontent {
-	margin-top: var(--content--spacing-block-start);
-
-	width: var(--content--width-sm);
+	.maincontent {
+		margin-top: var(--content--spacing-block-start);
+	}
 }
 
 .profile_small_header_bg {

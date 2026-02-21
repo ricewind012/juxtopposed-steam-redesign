@@ -1,5 +1,6 @@
 @use "shared/controls";
 @use "shared/utils";
+@use "web/apphub";
 @use "web/layout";
 @use "web/paging";
 
@@ -18,15 +19,34 @@
 	line-height: 48px;
 }
 
-.apphub_Content {
-	// Post
-	& > .maincontent {
+%-sidebar-button {
+	@include controls.button;
+
+	background-color: transparent;
+	margin-block-end: var(--spacing-sm);
+
+	box-sizing: border-box;
+	width: 100%;
+}
+
+// TODO: unify
+@mixin -sidebar-header {
+	color: var(--color--fg-dim);
+	font: var(--text--body-medium);
+	text-transform: uppercase;
+	border-block-start: var(--border-sm) solid var(--color--bg-hl);
+	padding-block-start: var(--spacing-sm);
+	margin-block: var(--spacing-sm);
+}
+
+.maincontent {
+	// Post/container
+	.apphub_Content > &,
+	.apphub_Discussion_Content > & {
 		gap: 20px;
-		margin: 0;
 
 		display: flex;
 		flex-direction: row-reverse;
-		width: unset;
 
 		br {
 			display: none;
@@ -36,6 +56,7 @@
 
 .apphub_Discussion_Content {
 	gap: 20px;
+	margin-block: 0;
 
 	display: flex;
 	flex-direction: row-reverse;
@@ -59,6 +80,10 @@
 			display: flex;
 			flex-direction: column;
 
+			#{controls.button-web-selector(".btn_medium")} {
+				width: 100%;
+			}
+
 			.content {
 				padding: 0;
 			}
@@ -76,10 +101,13 @@
 			}
 		}
 
-		.rightbox_content_header {
-			color: var(--color--fg-dim);
-			font: var(--text--body-medium);
-			padding: 0;
+		.rightbox_content_header,
+		.rightbox_list_header {
+			// TODO: unify
+			@include -sidebar-header;
+
+			padding-inline: 0;
+			padding-block-end: 0;
 		}
 
 		.rightbox_footer,
@@ -87,23 +115,16 @@
 			display: none;
 		}
 
-		.rightbox_list_header {
-			color: var(--color--fg-dim);
-			font: var(--text--body-medium);
-			margin-bottom: var(--spacing-sm);
-		}
-
 		.rightbox_list_option {
-			@include layout.sidebar-item(".selected");
-
-			font: var(--text--body-large);
-
-			height: unset;
+			@extend %-sidebar-button;
 
 			.forum_list_postcount {
 				color: var(--color--fg-dim);
-				font: var(--text--body-medium);
 			}
+		}
+
+		.rightbox_list_option_content {
+			width: 100%;
 		}
 
 		.rightbox_list_selection_background {
@@ -120,12 +141,23 @@
 			display: flex;
 			flex-direction: column;
 			width: var(--content--sidebar-width);
+
+			.topicstats {
+				font: var(--text--body-small);
+			}
+
+			.topicstats_label {
+				color: var(--color--fg-dim);
+			}
+
+			.topicstats_value {
+				color: var(--color--fg-main);
+			}
 		}
 
+		// Subscribe description, I think WE all know what that means
 		.rightcol_minor_text {
-			color: var(--color--fg-dim);
-			font: var(--text--body-small);
-			margin-bottom: var(--spacing-sm);
+			display: none;
 		}
 	}
 }
@@ -135,15 +167,20 @@
 
 .discussionSearchText {
 	all: unset;
+	box-sizing: border-box;
 
 	@include controls.text-field($variant: "search");
+
+	width: 100%;
 }
 
 .discussionSearchTextContainer {
 	all: unset;
+	box-sizing: border-box;
 
 	color: var(--color--secondary);
 
+	display: block;
 	position: relative;
 
 	&:after {
@@ -154,7 +191,10 @@
 }
 
 .discussionSearchTextSubmitImg {
-	display: none;
+	visibility: hidden;
+
+	inset-block-start: calc(50% - var(--icon--size-md) / 2);
+	inset-inline-end: calc(var(--text-field--spacing-inline) / 2);
 }
 
 .forum_area {
@@ -178,6 +218,52 @@
 	background-image: none;
 }
 
+.forum_comment_action_trigger {
+	@include apphub.card-metadata($icon: "arrow");
+
+	margin: 0;
+	margin-inline-start: var(--spacing-sm);
+
+	width: unset;
+	height: unset;
+}
+
+.forum_comment_action {
+	img,
+	span {
+		display: none;
+	}
+}
+
+.forum_comment_actions {
+	margin: 0;
+
+	.forum_comment_action {
+		@include apphub.card-metadata($icon: "name");
+
+		// Remove whitespace
+		gap: 0;
+		margin: 0;
+		margin-inline-start: var(--spacing-sm);
+
+		width: unset;
+		height: unset;
+
+		&[href^="javascript:Forum_ReplyToPost"] {
+			--icon-name: icon("chat-bubble");
+		}
+
+		&[href^="javascript:Forum_ShowAwardDialog"] {
+			--icon-name: icon("military-tech");
+		}
+	}
+}
+
+.forum_comment_author_banned {
+	color: var(--color--accent-red);
+	font: inherit;
+}
+
 .forum_comment_permlink {
 	right: var(--spacing-xxs);
 	bottom: var(--spacing-xxs);
@@ -196,6 +282,10 @@
 	@extend %-forum-post;
 
 	padding: 20px;
+
+	&:not(.forum_topic_pinned_notice) {
+		margin: 0;
+	}
 }
 
 .forum_newtopic_header {
@@ -219,7 +309,7 @@
 
 	color: var(--color--fg-dim);
 	font: var(--text--body-large);
-	margin-bottom: var(--spacing-md);
+	margin-bottom: var(--spacing-sm);
 
 	display: flex;
 	flex-direction: row-reverse;
@@ -283,6 +373,10 @@
 	position: unset;
 }
 
+.forum_subscribe_button {
+	margin: 0;
+}
+
 .forum_topic {
 	background: var(--color--bg-main-50);
 	border-radius: var(--rounding-lg);
@@ -298,6 +392,17 @@
 	&:last-child {
 		margin: 0;
 	}
+
+	&.forum_topic_mini {
+		@extend %-sidebar-button;
+
+		flex-direction: row-reverse;
+	}
+}
+
+.forum_topic_details {
+	font: var(--text--body-small);
+	margin: 0;
 }
 
 .forum_topic_icon {
@@ -313,6 +418,9 @@
 .forum_topic_name {
 	color: var(--color--fg-main);
 	font: var(--text--heading-small);
+	padding: 0;
+
+	flex-grow: 1;
 }
 
 .forum_topic_op {
@@ -324,9 +432,11 @@
 	@extend %-right-side-text;
 
 	gap: var(--spacing-xxs);
+	padding: 0;
 
 	display: flex;
 	align-items: center;
+	min-width: 75px;
 
 	&::before {
 		content: "";
@@ -335,7 +445,7 @@
 
 		@include utils.icon("chat-bubble");
 
-		color: var(--color--fg-main);
+		color: var(--color--fg-dim);
 	}
 
 	img {
@@ -344,17 +454,13 @@
 }
 
 .forum_topics_container {
-	margin-top: var(--spacing-lg);
+	margin-block-end: var(--spacing-md);
 }
 
 .forumtopic_comments {
-	&.commentthread_area {
-		--avatar-gutter: var(--spacing-sm);
-		--avatar-size: var(--avatar--size-sm);
-	}
-
 	.commentthread_comment {
-		--spacing: 20px;
+		--avatar-size: var(--avatar--size-sm);
+		--spacing-sm: 20px;
 
 		@extend %-forum-post;
 	}
@@ -405,14 +511,17 @@
 	}
 
 	.commentthread_pagination_ctn {
-		margin-bottom: var(--spacing-sm);
+		margin-bottom: var(--spacing-md);
 
-		// HEEEEEEEEEELP fucking floats
-		width: 100%;
+		float: unset;
 	}
 	// #endregion
 
 	img[src$="/iconGames.png"] {
 		display: none;
 	}
+}
+
+.forumtopic_reply_textarea {
+	min-height: calc(1lh + var(--spacing-sm) * 2);
 }

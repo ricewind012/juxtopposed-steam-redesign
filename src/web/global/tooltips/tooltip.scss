@@ -5,6 +5,27 @@
 	@include controls.tooltip;
 }
 
+// Forum
+.forum_topic_tooltip {
+	@include controls.tooltip;
+
+	border: none;
+
+	.topic_hover_data {
+		color: var(--color--fg-main);
+	}
+
+	.topic_hover_row {
+		color: var(--color--fg-dim);
+		font: var(--text--body-small);
+		margin-block-start: var(--spacing-xs);
+	}
+
+	.topic_hover_text {
+		color: inherit;
+	}
+}
+
 // Workshop
 .hover_box {
 	@include controls.tooltip;
