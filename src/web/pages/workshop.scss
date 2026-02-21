@@ -660,8 +660,7 @@ body.apphub_blue.v6 {
 
 		@include controls.text-field-icon($name: "search");
 
-		// TODO(vars): tabs
-		margin-inline-end: 8px;
+		margin-inline-end: var(--tab--container-spacing);
 	}
 
 	.search_text {
@@ -669,8 +668,7 @@ body.apphub_blue.v6 {
 
 		@include controls.text-field($variant: "search");
 
-		// TODO(vars): tabs
-		margin: -3px;
+		margin: calc(var(--tab-container-controls-offset) * -1);
 
 		&.default_text {
 			color: var(--color--secondary);
@@ -681,8 +679,7 @@ body.apphub_blue.v6 {
 		@include controls.text-field($variant: "search");
 
 		visibility: hidden;
-		// TODO(vars): tabs
-		margin-inline-end: 8px;
+		margin-inline-end: var(--tab--container-spacing);
 	}
 }
 

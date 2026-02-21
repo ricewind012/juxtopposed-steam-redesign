@@ -755,7 +755,6 @@ body.no_home_gutter.infinite_scrolling {
 }
 
 .tab_container {
-	--tab-container-spacing: 8px;
 	--tab-item-border-radius: var(--rounding-lg);
 	--tab-item-focus-bg: var(--color--bg-main);
 	--tab-right-col-spacing: var(--spacing-md);
@@ -791,7 +790,7 @@ body.no_home_gutter.infinite_scrolling {
 	%-tab-item {
 		background-color: var(--color--bg-main-20);
 		border-radius: var(--tab-item-border-radius);
-		padding: var(--tab-container-spacing);
+		padding: var(--tab--container-spacing);
 	}
 
 	.tab_controls {
@@ -836,8 +835,8 @@ body.no_home_gutter.infinite_scrolling {
 
 		.ds_options {
 			inset: unset;
-			inset-block-start: var(--tab-container-spacing);
-			inset-inline-start: var(--tab-container-spacing);
+			inset-block-start: var(--tab--container-spacing);
+			inset-inline-start: var(--tab--container-spacing);
 		}
 
 		.platform_img {
@@ -849,8 +848,8 @@ body.no_home_gutter.infinite_scrolling {
 			color: var(--color--fg-dim);
 			font: var(--text--body-small);
 
-			inset-block-end: var(--tab-container-spacing);
-			inset-inline-end: var(--tab-container-spacing);
+			inset-block-end: var(--tab--container-spacing);
+			inset-inline-end: var(--tab--container-spacing);
 		}
 	}
 

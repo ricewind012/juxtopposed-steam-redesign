@@ -109,8 +109,9 @@
 	@include controls.tabs-container;
 
 	color: var(--color--fg-dim);
-	// TODO(vars): tabs
-	padding-inline-start: calc(8px + 3px);
+	padding-inline-start: calc(
+		var(--tab--container-spacing) + var(--tab--container-controls-offset)
+	);
 
 	align-items: center;
 	width: 100%;

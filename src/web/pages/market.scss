@@ -108,7 +108,7 @@
 }
 
 .item_market_action_button_contents {
-	@include controls.button($variant: "primary", $size: "sm");
+	@include controls.button($variant: "primary");
 
 	float: unset;
 	height: unset;
@@ -545,7 +545,7 @@
 }
 
 .pick_and_sell_button {
-	inset: 9px;
+	inset: calc(var(--tab--container-controls-offset) + 1px);
 	inset-inline-start: unset;
 }
 
