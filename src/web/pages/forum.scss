@@ -17,6 +17,26 @@
 	font: var(--text--body-large);
 	// Can't center it, don't care
 	line-height: 48px;
+	gap: var(--spacing-xxs);
+	padding: 0;
+	padding-inline-start: var(--spacing-lg);
+
+	display: flex;
+	align-items: center;
+
+	&::before {
+		content: "";
+
+		display: block;
+
+		@include utils.icon;
+
+		color: var(--color--fg-dim);
+	}
+
+	img {
+		display: none;
+	}
 }
 
 %-sidebar-button {
@@ -27,31 +47,6 @@
 
 	box-sizing: border-box;
 	width: 100%;
-}
-
-// TODO: unify
-@mixin -sidebar-header {
-	color: var(--color--fg-dim);
-	font: var(--text--body-medium);
-	text-transform: uppercase;
-	border-block-start: var(--border-sm) solid var(--color--bg-hl);
-	padding-block-start: var(--spacing-sm);
-	margin-block: var(--spacing-sm);
-}
-
-.maincontent {
-	// Post/container
-	.apphub_Content > &,
-	.apphub_Discussion_Content > & {
-		gap: 20px;
-
-		display: flex;
-		flex-direction: row-reverse;
-
-		br {
-			display: none;
-		}
-	}
 }
 
 .apphub_Discussion_Content {
@@ -66,53 +61,10 @@
 		display: none;
 	}
 
-	:is(body.thread, &) {
+	:is(.grouppage_content_area, body.thread, &) {
 		.leftcol {
 			flex-grow: 1;
 			width: unset;
-		}
-
-		.rightbox {
-			background: none;
-			gap: var(--spacing-sm);
-			padding: 0;
-
-			display: flex;
-			flex-direction: column;
-
-			#{controls.button-web-selector(".btn_medium")} {
-				width: 100%;
-			}
-
-			.content {
-				padding: 0;
-			}
-
-			.rule {
-				display: none;
-			}
-
-			.weblink {
-				font: inherit;
-
-				img {
-					display: none;
-				}
-			}
-		}
-
-		.rightbox_content_header,
-		.rightbox_list_header {
-			// TODO: unify
-			@include -sidebar-header;
-
-			padding-inline: 0;
-			padding-block-end: 0;
-		}
-
-		.rightbox_footer,
-		.rightbox_header {
-			display: none;
 		}
 
 		.rightbox_list_option {
@@ -132,26 +84,8 @@
 		}
 
 		.rightcol {
-			background: var(--color--bg-main);
-			border-radius: var(--rounding-lg);
-			gap: var(--spacing-sm);
-			padding: var(--spacing-md);
-			margin: 0;
-
-			display: flex;
-			flex-direction: column;
-			width: var(--content--sidebar-width);
-
-			.topicstats {
-				font: var(--text--body-small);
-			}
-
-			.topicstats_label {
-				color: var(--color--fg-dim);
-			}
-
-			.topicstats_value {
-				color: var(--color--fg-main);
+			#{controls.button-web-selector(".btn_medium")} {
+				width: 100%;
 			}
 		}
 
@@ -397,22 +331,50 @@
 		@extend %-sidebar-button;
 
 		flex-direction: row-reverse;
+
+		.forum_topic_details {
+			grid-template-columns: 1fr;
+		}
+
+		.forum_topic_reply_count {
+			line-height: inherit;
+		}
 	}
+}
+
+.forum_topic_award_count {
+	--icon-name: icon("military-tech");
+
+	@extend %-right-side-text;
 }
 
 .forum_topic_details {
 	font: var(--text--body-small);
 	margin: 0;
+
+	float: right;
+	display: grid;
+	grid-template-columns: 215px repeat(2, 90px);
 }
 
 .forum_topic_icon {
 	display: none;
 }
 
+.forum_topic_label {
+	&.sticky_label {
+		color: var(--color--accent-green);
+	}
+}
+
 .forum_topic_lastpost {
 	@extend %-right-side-text;
 
-	padding-right: var(--spacing-lg);
+	order: -1;
+
+	&::before {
+		display: none;
+	}
 }
 
 .forum_topic_name {
@@ -429,28 +391,9 @@
 }
 
 .forum_topic_reply_count {
+	--icon-name: icon("chat-bubble");
+
 	@extend %-right-side-text;
-
-	gap: var(--spacing-xxs);
-	padding: 0;
-
-	display: flex;
-	align-items: center;
-	min-width: 75px;
-
-	&::before {
-		content: "";
-
-		display: block;
-
-		@include utils.icon("chat-bubble");
-
-		color: var(--color--fg-dim);
-	}
-
-	img {
-		display: none;
-	}
 }
 
 .forum_topics_container {
@@ -524,4 +467,16 @@
 
 .forumtopic_reply_textarea {
 	min-height: calc(1lh + var(--spacing-sm) * 2);
+}
+
+.topicstats {
+	font: var(--text--body-small);
+}
+
+.topicstats_label {
+	color: var(--color--fg-dim);
+}
+
+.topicstats_value {
+	color: var(--color--fg-main);
 }

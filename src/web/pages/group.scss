@@ -1,4 +1,413 @@
+@use "shared/controls";
+@use "web/apppage";
+
+@mixin -section {
+	background: var(--color--bg-main-50);
+	border-radius: var(--rounding-lg);
+	padding: var(--spacing-xl);
+	margin-block-end: var(--spacing-md);
+}
+
+@mixin -section-header {
+	color: var(--color--fg-dim);
+	font: var(--text--heading-small);
+	margin-block-end: var(--spacing-xxl);
+}
+
+// TODO: same in forums
+@mixin -section-item {
+	background: var(--color--bg-main-50);
+	border-radius: var(--rounding-lg);
+	padding: var(--spacing-lg);
+	margin-bottom: var(--spacing-lg);
+}
+
+.formatted_group_summary {
+	color: var(--color--fg-main);
+	margin: 0;
+}
+
+.group_associated_game {
+	@include apppage.sidebar-list-item;
+
+	display: flex;
+	align-items: center;
+	position: relative;
+	height: unset;
+
+	a::before {
+		content: "";
+
+		position: absolute;
+		inset: 0;
+	}
+}
+
+.group_associated_game_icon {
+	padding: 0;
+	margin: 0;
+}
+
+.group_content {
+	@include -section;
+
+	font: var(--text--body-medium);
+
+	max-width: unset;
+}
+
+.group_content_header {
+	@include -section-header;
+
+	padding: 0;
+}
+
+.group_content_rule {
+	display: none;
+}
+
+.group_curator_blurb {
+	color: var(--color--fg-main);
+	font: var(--text--heading-medium);
+	margin-block-end: var(--spacing-sm);
+}
+
+.group_curator_recommends,
+.group_curator_recommends_recent {
+	display: none;
+}
+
+.group_curator_recommends_block {
+	gap: var(--spacing-xxs);
+
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+
+	a {
+		padding: 0;
+	}
+
+	img {
+		border-radius: var(--rounding-md);
+
+		width: 184px;
+		height: 69px;
+	}
+}
+
+.group_curator_more_box {
+	@include controls.button;
+
+	width: 184px;
+	height: 69px;
+}
+
+.group_overview_announcement {
+	@include -section-item;
+
+	margin-inline: 0;
+
+	&:not(.first) {
+		margin: 0;
+	}
+
+	.large_title {
+		color: var(--color--fg-main);
+		font: var(--text--heading-small);
+		padding: 0;
+	}
+}
+
+.group_overview_announcement_content {
+	margin: 0;
+}
+
+.group_overview_announcement_footer {
+	color: var(--color--fg-dim);
+	font: var(--text--body-small);
+	padding-block: var(--spacing-xxs) var(--spacing-sm);
+}
+
+.group_overview_announcement_readmore {
+	display: none;
+}
+
+.group_tab {
+	all: unset;
+
+	@include controls.tab(".active");
+
+	& > span {
+		all: unset;
+	}
+}
+
+.group_tabs {
+	@include controls.tabs-container;
+
+	position: unset;
+}
+
+.group_tabs_scroll {
+	display: contents;
+}
+
 // For some reason this is used in the profile edit page
 .grouppage_content_area {
 	padding: 0;
+
+	&:where(#group_tab_content_overview) {
+		.rightbox:nth-child(2) > .content:first-child {
+			border-block-start: var(--border-sm) solid var(--color--bg-hover);
+			padding-block-start: var(--spacing-sm);
+
+			order: 1;
+		}
+	}
+
+	h1 {
+		color: var(--color--fg-main);
+		font: var(--text--heading-small);
+	}
+
+	// TODO(mixins): unify maybe?
+	.commentthread_header {
+		color: var(--color--fg-dim);
+		font: var(--text--heading-small);
+		padding: var(--spacing-xl);
+		margin: calc(var(--spacing-xl) * -1);
+		margin-block-end: 0;
+	}
+
+	.member_sectionheader {
+		color: var(--color--fg-main);
+		font: var(--text--body-medium);
+		margin-block: 0 var(--spacing-xxs);
+
+		&:not(:first-child) {
+			padding-block-start: var(--spacing-md);
+		}
+
+		img {
+			display: none;
+		}
+	}
+
+	.membergrid {
+		// "clear" hack
+		& > :last-child {
+			display: block;
+		}
+
+		.playerAvatar {
+			margin-block-end: var(--spacing-xxs);
+			margin-inline-end: var(--spacing-xxs);
+		}
+	}
+}
+
+.grouppage_content_area .rightcol {
+	font: var(--text--body-medium);
+
+	.count {
+		order: 1;
+	}
+
+	.groupstat {
+		color: var(--color--fg-main);
+		font: var(--text--body-medium);
+		padding: 0;
+		margin: 0;
+
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+
+		.label {
+			text-transform: uppercase;
+
+			position: unset;
+		}
+	}
+
+	.joinchat_bg {
+		all: unset;
+
+		gap: var(--spacing-sm);
+		border-block-start: var(--border-sm) solid var(--color--bg-hover);
+		padding-block-start: var(--spacing-sm);
+
+		display: flex;
+		flex-direction: column;
+	}
+
+	.joinchat_button {
+		@include controls.button($variant: "primary");
+
+		position: unset;
+		width: 100%;
+		height: unset;
+	}
+
+	.joinchat_membercount {
+		all: unset;
+
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+
+		.count {
+			font: inherit;
+		}
+	}
+
+	.leftcol {
+		width: unset;
+	}
+
+	.membercount {
+		float: unset;
+		text-align: start;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		width: 100%;
+
+		&.members {
+			color: var(--color--fg-main);
+		}
+
+		& > a {
+			display: contents;
+		}
+
+		br {
+			display: none;
+		}
+
+		.count,
+		.label {
+			font: var(--text--body-medium);
+		}
+	}
+
+	.membercounts {
+		margin-block-end: var(--spacing-sm);
+	}
+}
+
+.grouppage_friendsingroup {
+	background-color: transparent;
+	gap: var(--spacing-xxs);
+	padding: 0;
+
+	order: 1;
+	display: flex;
+	align-items: center;
+	position: unset;
+	height: unset;
+
+	.friendavatar {
+		border-radius: var(--rounding-md);
+
+		width: var(--avatar--size-md);
+		height: var(--avatar--size-md);
+	}
+}
+
+.grouppage_friendsingroup_title {
+	color: var(--color--fg-dim);
+	font: var(--text--body-medium);
+	padding: 0;
+	margin-inline-start: var(--spacing-sm);
+
+	text-align: start;
+}
+
+.grouppage_header {
+	border: none;
+	margin-block-end: var(--spacing-lg);
+
+	position: unset;
+	width: 100%;
+	height: unset;
+}
+
+.grouppage_header_abbrev {
+	color: var(--color--fg-dim);
+	font: var(--text--body-large);
+}
+
+.grouppage_header_label {
+	display: none;
+}
+
+.grouppage_header_name {
+	background-color: transparent;
+	color: var(--color--fg-main);
+	font: var(--text--heading-large);
+	padding: 0;
+
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+	position: unset;
+	max-width: unset;
+}
+
+.grouppage_header_top {
+	gap: var(--spacing-md);
+	margin-block: var(--content--spacing-block-start);
+
+	display: flex;
+	align-items: center;
+}
+
+.grouppage_join_area {
+	all: unset;
+}
+
+.grouppage_logo {
+	// Half of 184px
+	--logo-size: 92px;
+
+	background-image: none;
+	padding: 0;
+
+	position: unset;
+	width: var(--logo-size);
+	height: var(--logo-size);
+
+	img {
+		border-radius: var(--rounding-lg);
+
+		width: var(--logo-size);
+		height: var(--logo-size);
+	}
+}
+
+.grouppage_membertiles_overlay {
+	display: none;
+}
+
+.grouppage_member_tiles {
+	--tile-size: calc(20vw - 4px);
+
+	filter: var(--blur);
+	mask: linear-gradient(black, transparent);
+	opacity: var(--dim-opacity);
+	padding: 0;
+
+	position: absolute;
+	inset: 0;
+	inset-block-start: var(--header-height);
+	height: calc(var(--tile-size) * 6);
+	z-index: -1;
+
+	.member_tile {
+		width: var(--tile-size);
+		height: var(--tile-size);
+	}
+
+	.member_tile_row {
+		width: unset;
+	}
 }
