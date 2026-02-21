@@ -2,9 +2,18 @@
 
 %-box {
 	background-color: var(--color-bg-main-50);
-	border-radius: var(--rounding-md);
+	border: none;
+	border-radius: var(--rounding-lg);
+	margin-block-start: var(--content--spacing-block-start);
 
-	min-height: 200px;
+	min-height: 220px;
+}
+
+%-container {
+	padding-inline: 0;
+
+	width: var(--content--width-lg);
+	max-width: unset;
 }
 
 .community_home_app_shortcuts {
@@ -40,45 +49,39 @@
 	text-transform: none;
 }
 
-.community_home_header,
-.community_home_sort_options {
-	padding: 0;
-	padding-block: 24px 48px;
-	margin: 0 auto;
+.community_home_header {
+	@extend %-container;
 
-	max-width: var(--content--width-lg);
+	padding-block-start: var(--content--spacing-block-start);
 }
 
 .community_home_search_apps,
 .community_home_search_players {
-	@include controls.text-field;
+	all: unset;
 
-	box-shadow: none;
-	margin: 0;
+	position: relative;
 
-	height: unset;
+	// Fixes the OOB search icon
+	form {
+		display: contents;
+	}
 
 	.appHubSearchTextForm {
 		all: unset;
 	}
+}
 
-	.community_home_search_app_input,
-	.community_home_search_players_input {
-		all: unset;
+.community_home_search_apps_image,
+.community_home_search_players_image {
+	@include controls.text-field-icon($name: "search");
+}
 
-		&::placeholder {
-			color: var(--color-fg-dim);
-		}
-	}
+.community_home_search_app_input,
+.community_home_search_players_input {
+	@include controls.text-field;
 
-	.community_home_search_apps_image,
-	.community_home_search_players_image {
-		background-color: transparent;
-		content: icon("search");
-
-		inset: var(--spacing-md);
-		left: unset;
-	}
+	position: unset;
+	width: 100%;
 }
 
 .community_home_search_box {
@@ -106,8 +109,11 @@
 	@include controls.tabs-container;
 
 	color: var(--color-fg-dim);
+	// TODO(vars): tabs
+	padding-inline-start: calc(8px + 3px);
 
 	align-items: center;
+	width: 100%;
 
 	#{controls.button-web-selector(".btn_small")} {
 		all: unset;
@@ -118,6 +124,12 @@
 	}
 }
 
+.community_home_sort_options {
+	@extend %-container;
+
+	padding-block-end: var(--spacing-sm);
+}
+
 .community_home_subtitle {
 	color: var(--color-fg-dim);
 	font: var(--text--body-large);
@@ -125,9 +137,7 @@
 }
 
 .community_home_tabs {
-	padding: 0;
-
-	max-width: var(--content--width-lg);
+	@extend %-container;
 }
 
 .community_home_title {
