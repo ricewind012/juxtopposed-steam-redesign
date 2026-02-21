@@ -58,6 +58,7 @@
 	color: var(--color-fg-main);
 }
 
+:where(.appHubIconHolder),
 .playerAvatar {
 	--size: var(--avatar--size-sm);
 	--img-size: calc(var(--size) - var(--avatar--border-size) * 2);

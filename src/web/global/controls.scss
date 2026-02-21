@@ -14,6 +14,7 @@
 }
 
 #{controls.button-web-selector(".btn_grey_black")},
+#{controls.button-web-selector(".btn_grey_grey")},
 #{controls.button-web-selector(".btn_medium")},
 #{controls.button-web-selector(".btn_small")} {
 	@include -button;

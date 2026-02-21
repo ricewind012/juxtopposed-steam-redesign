@@ -1,9 +1,17 @@
 @use "shared/controls";
+@use "shared/style";
 @use "shared/utils";
 
 // TODO:
 // https://store.fastly.steamstatic.com/images/storepagebackground/app/2052410?t=1753952335
 // https://shared.steamstatic.com/store_item_assets/steam/apps/2052410/page_bg_raw.jpg?t=1753952335
+
+%-container {
+	padding-inline: 0;
+
+	width: var(--content--width-sm);
+	max-width: unset;
+}
 
 %-content-type {
 	background: var(--color-bg-main-50);
@@ -11,6 +19,36 @@
 	font: inherit;
 	border-radius: 0 0 var(--rounding-lg) var(--rounding-lg);
 	padding: var(--spacing-sm);
+}
+
+@mixin -card-metadata-button {
+	background: var(--color-bg-main);
+	color: var(--color-primary);
+	font: var(--text--body-small);
+	border-radius: var(--rounding-md);
+	padding: 8px;
+
+	&:hover {
+		background: var(--color-bg-hover);
+	}
+}
+
+@mixin -card-metadata($icon) {
+	@include -card-metadata-button;
+
+	gap: var(--spacing-xxs);
+	margin: 0;
+
+	display: inline-flex;
+	align-items: center;
+
+	&::before {
+		content: "";
+
+		@include utils.icon($name: #{$icon}, $size: "sm");
+
+		color: var(--color-fg-dim);
+	}
 }
 
 .apphub_AllContentText {
@@ -22,13 +60,13 @@
 	font: var(--text--heading-large);
 }
 
+.apphub_background {
+	display: flex;
+	flex-direction: column;
+}
+
 .apphub_Content {
-	--avatar-size: var(--avatar--size-xs);
-
-	padding: 0;
-
-	// TODO: I don't wanna deal with this shit
-	max-width: var(--content--width-lg);
+	@extend %-container;
 }
 
 .apphub_CardRow {
@@ -39,12 +77,16 @@
 }
 
 .apphub_Card {
+	--card-avatar-size: var(--avatar--size-xs);
+	--card-spacing: var(--spacing-md);
+	--card-footer-height: calc(var(--spacing-sm) * 2 + 1lh);
+
 	background: var(--color-bg-main-50);
 	border: none;
 	border-radius: var(--rounding-lg);
-	gap: var(--spacing-sm);
-	padding: var(--spacing-md);
-	padding-bottom: calc(var(--spacing-md) + var(--spacing-sm) * 2 + 1lh);
+	gap: var(--spacing-lg);
+	padding: var(--card-spacing);
+	padding-bottom: calc(var(--card-spacing) + var(--card-footer-height));
 	margin: 0;
 
 	display: flex;
@@ -54,19 +96,7 @@
 	max-height: 50vh;
 
 	.review_award_aggregated {
-		color: var(--color-primary);
-		font: var(--text--body-large);
-		gap: var(--spacing-xxs);
-
-		display: inline-flex;
-
-		&::before {
-			content: "";
-
-			@include utils.icon("military-tech");
-
-			display: block;
-		}
+		@include -card-metadata($icon: "military-tech");
 	}
 
 	.reward_btn_icon {
@@ -83,33 +113,26 @@
 	display: none;
 }
 
-.apphub_Cards > div {
-	gap: 20px;
+.apphub_Cards {
+	& > div {
+		gap: 20px;
 
-	display: flex;
-	flex-direction: column;
+		display: flex;
+		flex-direction: column;
+	}
+
+	& > form {
+		height: 20px;
+	}
 }
 
 .apphub_CardCommentCount {
-	background: none;
-	padding: 0;
-
-	display: flex;
-	align-items: center;
+	@include -card-metadata($icon: "chat-bubble");
 
 	&.alignDiscussion {
 		margin-top: var(--spacing-sm);
 
-		height: var(--avatar-size);
-	}
-
-	&::before {
-		content: "";
-
-		@include utils.icon("chat-bubble");
-
-		color: var(--color-fg-dim);
-		margin-right: var(--spacing-xxs);
+		height: var(--card-avatar-size);
 	}
 }
 
@@ -128,40 +151,40 @@
 
 	.apphub_CardContentAuthorName {
 		padding: 0;
-	}
 
-	.apphub_CardContentMoreLink {
-		font: var(--text--body-medium);
-		padding: 0;
-
-		& > a:not(:hover) {
-			color: var(--color-fg-dim);
+		a {
+			color: inherit;
 		}
 	}
 
-	.apphub_friend_block {
-		gap: var(--spacing-sm);
+	.apphub_CardContentMoreLink {
+		color: var(--color-fg-dim);
+		font: var(--text--body-medium);
+		padding-inline-start: var(--spacing-sm);
+	}
 
+	.apphub_friend_block {
 		display: flex;
 		align-items: center;
+		height: var(--card-avatar-size);
 	}
 
 	.apphub_friend_block_container {
 		max-width: unset;
+		height: unset;
 	}
+}
 
-	.appHubIconHolder,
-	.appHubNewsIconHolder {
-		position: unset;
-	}
-
-	.apphub_UserReviewCardStats {
-		padding: 0;
-	}
+.apphub_CardContentAppName {
+	all: unset;
 }
 
 .apphub_CardContentAuthorName {
 	font: var(--text--body-medium);
+
+	&.newsIcon {
+		@include style.link;
+	}
 }
 
 .apphub_CardContentDiscussionAuthorBlock {
@@ -174,7 +197,7 @@
 .apphub_CardContentDiscussionDate {
 	color: var(--color-fg-dim);
 	font: var(--text--body-small);
-	padding-left: 45px;
+	padding-left: calc(var(--card-avatar-size) + var(--spacing-sm));
 }
 
 .apphub_CardContentDiscussionText {
@@ -203,9 +226,14 @@
 	color: var(--color-fg-main);
 	font: var(--text--body-large);
 	padding: 0;
-	margin-top: var(--spacing-sm);
+	margin-top: var(--spacing-lg);
 
 	height: unset;
+}
+
+.apphub_CardContentGuideImage {
+	padding: 0;
+	margin-inline-end: var(--spacing-sm);
 }
 
 .apphub_CardContentGuideTitle {
@@ -247,7 +275,7 @@
 
 		position: absolute;
 		bottom: 0;
-		left: calc(var(--avatar-size) / 2 + var(--spacing-xxs));
+		left: calc(var(--card-avatar-size) / 2 + var(--spacing-xxs));
 
 		border: var(--speech-bubble-size) solid transparent;
 		border-top-color: var(--color-bg-main-50);
@@ -258,10 +286,6 @@
 
 	p {
 		clear: unset;
-	}
-
-	.apphub_NewsCardStats {
-		right: var(--spacing-md);
 	}
 }
 
@@ -278,8 +302,7 @@
 }
 
 .apphub_CardContentPreviewImage {
-	width: inherit;
-	height: inherit;
+	top: 0;
 }
 
 .apphub_CardContentPreviewImageBorder {
@@ -300,21 +323,21 @@
 	@extend %-content-type;
 
 	visibility: visible;
-	margin: 0 calc(var(--spacing-md) * -1);
+	margin: 0 calc(var(--card-spacing) * -1);
 }
 
 .apphub_CardContentTypeContainer {
-	width: calc(100% - var(--spacing-md) * 2);
+	width: calc(100% - var(--card-spacing) * 2);
 	bottom: 0;
 }
 
 .apphub_CardControls {
+	gap: var(--spacing-sm);
+
 	align-items: center;
 
 	.apphub_CardRating {
-		background-position-y: center;
-		color: inherit;
-		margin: 0;
+		@include -card-metadata($icon: "thumb-up");
 	}
 
 	.apphub_CardRightData {
@@ -329,18 +352,78 @@
 
 	display: flex;
 	flex-direction: column-reverse;
+
+	#{controls.button-web-selector(".btn_grey_grey")} {
+		@include -card-metadata-button;
+
+		// TODO(icons): rotate
+		&[id^="vote_down"] {
+			--icon-name: icon("thumb-up");
+			transform: rotate(180deg);
+		}
+
+		&[id^="vote_up"] {
+			--icon-name: icon("thumb-up");
+		}
+
+		&[onclick^="PublishedFileAward"] {
+			--icon-name: icon("military-tech");
+		}
+
+		&::before {
+			content: "";
+
+			@include utils.icon($size: "sm");
+		}
+
+		// TODO: unify .ico16
+		span {
+			display: none;
+		}
+	}
+}
+
+.apphub_CardPinnedIcon {
+	inset-block-start: var(--card-spacing);
+	inset-inline-end: var(--card-spacing);
 }
 
 .apphub_CardRatingButtons {
+	gap: var(--spacing-sm);
 	padding: 0;
 
+	display: flex;
 	height: unset;
+}
+
+.apphub_friend_block {
+	.apphub_CardContentAuthorName {
+		padding-inline-start: calc(var(--card-avatar-size) + var(--spacing-sm));
+	}
+
+	.appHubIconHolder {
+		position: absolute;
+		inset: 0;
+	}
 }
 
 .apphub_friend_block_row {
 	padding: 0;
 
 	display: flex;
+}
+
+.apphub_GetMoreContent {
+	all: unset;
+
+	margin: var(--spacing-lg) auto;
+
+	text-align: center;
+	width: var(--content--width-sm);
+
+	& > a {
+		@include controls.button($variant: "primary");
+	}
 }
 
 .apphub_HeaderBottom {
@@ -365,20 +448,15 @@
 }
 
 .apphub_HomeHeader {
-	margin-bottom: var(--spacing-lg);
+	@extend %-container;
 
-	max-width: var(--content--width-lg);
+	margin-bottom: var(--spacing-lg);
 }
 
 .apphub_HomeHeaderContent {
+	@extend %-container;
+
 	padding-top: var(--content--spacing-block-start);
-
-	width: 100%;
-	max-width: var(--content--width-lg);
-
-	&:has(> .workshop) {
-		max-width: var(--content--width-sm);
-	}
 
 	.apphub_HeaderStandardTop {
 		display: flex;
@@ -394,8 +472,17 @@
 }
 
 // avatar
-.appHubIconHolder.greyOverlay {
-	display: none;
+.appHubIconHolder,
+.appHubNewsIconHolder {
+	--size: var(--card-avatar-size);
+
+	margin: 0;
+
+	position: unset;
+
+	&.greyOverlay {
+		display: none;
+	}
 }
 
 .apphub_more_friends_who_play {
@@ -412,8 +499,14 @@
 	min-height: var(--size);
 }
 
+.apphub_NewsCardStats {
+	inset-block-end: var(--card-spacing);
+	inset-inline-end: var(--card-spacing);
+}
+
 .apphub_NumInApp {
 	color: var(--color-accent-green);
+	padding: 0;
 }
 
 .apphub_OtherSiteInfo {
@@ -453,13 +546,22 @@
 }
 
 .apphub_Stats {
-	color: inherit;
-	font: inherit;
-	gap: var(--spacing-sm);
+	font: var(--text--body-medium);
+	gap: var(--spacing-md);
 	padding: 0;
 
 	display: flex;
 	align-items: center;
+
+	.apphub_Chat {
+		color: var(--color-fg-dim);
+		font: inherit;
+		padding: 0;
+
+		a {
+			text-decoration: none;
+		}
+	}
 
 	.pipe_separator {
 		display: none;
@@ -501,6 +603,33 @@
 
 	display: flex;
 	flex-direction: column;
+	position: unset;
+
+	.apphub_CardTextContent {
+		color: var(--color-fg-main);
+		font: var(--text--body-large);
+	}
+
+	.date_posted {
+		color: var(--color-fg-dim);
+		font: var(--text--body-small);
+
+		display: flex;
+		align-items: center;
+		position: absolute;
+		inset-block-start: var(--card-spacing);
+		inset-inline-end: var(--card-spacing);
+		height: var(--card-avatar-size);
+	}
+
+	.found_helpful {
+		color: var(--color-fg-dim);
+		font: var(--text--body-medium);
+		margin: 0;
+
+		position: absolute;
+		inset-block-end: calc(var(--card-footer-height) + var(--card-spacing));
+	}
 
 	// TODO: is this shared ?
 	.hours {
@@ -523,6 +652,22 @@
 		font: var(--text--body-medium);
 		padding: 0;
 	}
+
+	.vote_header {
+		margin-block-end: var(--spacing-lg);
+
+		.thumb {
+			display: flex;
+		}
+	}
+}
+
+.apphub_UserReviewCardStats {
+	padding: 0;
+
+	position: absolute;
+	inset-block-end: calc(var(--card-footer-height) + var(--card-spacing));
+	inset-inline-end: var(--card-spacing);
 }
 
 .apphub_WorkshopPistonHolder {

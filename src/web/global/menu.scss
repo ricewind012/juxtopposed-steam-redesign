@@ -33,6 +33,19 @@
 
 // Not really worth putting everything else in dedicated files
 
+// App hub
+.statsselect_options {
+	@include menu.container;
+
+	border: none;
+
+	.option {
+		@include menu.item;
+
+		height: unset;
+	}
+}
+
 // Profile
 .group_invite_menu_option_disabled {
 	@include menu.item--disabled;
