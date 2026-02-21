@@ -6,7 +6,7 @@
 @use "web/store";
 
 %-section {
-	background-color: var(--color-bg-main-50);
+	background-color: var(--color--bg-main-50);
 	border-radius: var(--rounding-lg);
 	padding: var(--spacing-xl);
 	margin-block-start: 12px;
@@ -19,12 +19,12 @@ body.game_bg {
 	// TODO: unify?
 	background-image: linear-gradient(
 		180deg,
-		var(--color-bg-main) 7%,
-		var(--color-bg-tertiary) 39.65%
+		var(--color--bg-main) 7%,
+		var(--color--bg-tertiary) 39.65%
 	);
 
 	.apphub_HeaderStandardTop {
-		background: var(--color-bg-main);
+		background: var(--color--bg-main);
 		border-radius: var(--rounding-lg);
 		padding: var(--spacing-md);
 		padding-inline-start: var(--spacing-xl);
@@ -57,7 +57,7 @@ body.game_bg {
 }
 
 .package_contents {
-	color: var(--color-fg-dim);
+	color: var(--color--fg-dim);
 }
 
 .package_contents_capsule a {
@@ -79,14 +79,14 @@ body.game_bg {
 
 .bundle_contents_preview,
 .package_contents_capsules_ctn {
-	background-color: var(--color-bg-main-50);
+	background-color: var(--color--bg-main-50);
 	border-radius: var(--rounding-md);
 	margin: 0;
 	margin-block-start: var(--spacing-sm);
 }
 
 .bundle_label {
-	color: var(--color-primary);
+	color: var(--color--primary);
 	font: inherit;
 	gap: var(--spacing-xxs);
 
@@ -108,21 +108,21 @@ body.game_bg {
 	margin-block-start: calc(var(--spacing-xs) * 2);
 
 	.anticheat_name {
-		color: var(--color-fg-main);
+		color: var(--color--fg-main);
 		margin: 0;
 	}
 
 	.anticheat_uninstalls {
-		color: var(--color-fg-dim);
+		color: var(--color--fg-dim);
 	}
 }
 
 .anticheat_nonkernel_notice {
-	color: var(--color-primary);
+	color: var(--color--primary);
 }
 
 .DRM_notice.anticheat_section {
-	color: var(--color-accent-red);
+	color: var(--color--accent-red);
 }
 
 .early_access_announcements {
@@ -148,7 +148,7 @@ body.game_bg {
 	height: unset;
 
 	p {
-		color: var(--color-fg-main);
+		color: var(--color--fg-main);
 		font: inherit;
 
 		width: unset;
@@ -160,7 +160,7 @@ body.game_bg {
 
 	// Leave it as is, looks cool
 	.img {
-		background: linear-gradient(var(--color-bg-tertiary), transparent);
+		background: linear-gradient(var(--color--bg-tertiary), transparent);
 		mask: url(https://store.akamai.steamstatic.com/public/images/v5/earlyaccess_bug.png);
 	}
 }
@@ -174,11 +174,11 @@ body.game_bg {
 	@extend %-section;
 
 	background-image: none;
-	color: var(--color-fg-dim);
+	color: var(--color--fg-dim);
 	font: var(--text--body-medium);
 
 	h1 {
-		color: var(--color-fg-main);
+		color: var(--color--fg-main);
 		font: var(--text--heading-medium);
 	}
 
@@ -206,17 +206,17 @@ body.game_bg {
 }
 
 .game_area_description {
-	color: var(--color-fg-main);
+	color: var(--color--fg-main);
 	font: var(--text--body-large);
 	margin: 0;
 
 	h2:not(:first-child) {
-		color: var(--color-fg-main);
+		color: var(--color--fg-main);
 		margin-block: 1em;
 	}
 
 	p {
-		color: var(--color-fg-main);
+		color: var(--color--fg-main);
 		margin-block: var(--spacing-sm) 0;
 	}
 
@@ -229,7 +229,7 @@ body.game_bg {
 	@include apppage.sidebar-list-item;
 
 	&:where(a) {
-		color: var(--color-primary);
+		color: var(--color--primary);
 	}
 
 	.icon {
@@ -283,7 +283,7 @@ body.game_bg {
 	margin: 0;
 
 	#dlc_footer {
-		color: var(--color-fg-dim);
+		color: var(--color--fg-dim);
 		font: var(--text--body-small);
 		text-transform: none;
 		gap: var(--spacing-sm);
@@ -335,7 +335,7 @@ body.game_bg {
 	}
 
 	.game_area_dlc_name {
-		color: var(--color-fg-main);
+		color: var(--color--fg-main);
 		font: var(--text--body-large);
 		padding: 0;
 	}
@@ -373,7 +373,7 @@ body.game_bg {
 }
 
 #game_area_legal {
-	color: var(--color-fg-dim);
+	color: var(--color--fg-dim);
 	font: var(--text--body-medium);
 	margin: 0;
 }
@@ -383,20 +383,20 @@ body.game_bg {
 
 	.score {
 		background-color: color-mix(in srgb, currentColor 20%, transparent);
-		color: var(--color-fg-main);
+		color: var(--color--fg-main);
 		font: var(--text--heading-large);
 		line-height: 50px;
 
 		&.low {
-			color: var(--color-accent-red);
+			color: var(--color--accent-red);
 		}
 
 		&.medium {
-			color: var(--color-accent-yellow);
+			color: var(--color--accent-yellow);
 		}
 
 		&.high {
-			color: var(--color-accent-green);
+			color: var(--color--accent-green);
 		}
 	}
 }
@@ -431,7 +431,7 @@ body.game_bg {
 	height: unset;
 
 	&:not(:hover) {
-		background-color: var(--color-bg-main-50);
+		background-color: var(--color--bg-main-50);
 	}
 
 	img {
@@ -440,7 +440,7 @@ body.game_bg {
 }
 
 .game_area_purchase_game {
-	color: var(--color-fg-dim);
+	color: var(--color--fg-dim);
 	font: var(--text--body-medium);
 
 	// TODO(vars): typography
@@ -454,7 +454,7 @@ body.game_bg {
 	}
 
 	b {
-		color: var(--color-accent-green);
+		color: var(--color--accent-green);
 	}
 
 	p {
@@ -462,12 +462,12 @@ body.game_bg {
 	}
 
 	.game_purchase_discount_countdown {
-		color: var(--color-primary);
+		color: var(--color--primary);
 		margin: 0;
 	}
 
 	.title {
-		color: var(--color-fg-main);
+		color: var(--color--fg-main);
 		font: var(--text--heading-medium);
 		margin-block-end: 0;
 	}
@@ -496,14 +496,14 @@ body.game_bg {
 }
 
 .game_description_column {
-	color: var(--color-fg-dim);
+	color: var(--color--fg-dim);
 	font: var(--text--body-large);
 	margin-block-start: var(--spacing-sm);
 
 	// #region shared
 	h2 {
 		background: none;
-		color: var(--color-fg-dim);
+		color: var(--color--fg-dim);
 		font: var(--text--heading-small);
 		margin-block-end: var(--carousel--section-spacing);
 	}
@@ -529,7 +529,7 @@ body.game_bg {
 		margin-block: 100px 0;
 
 		h2 {
-			color: var(--color-fg-main);
+			color: var(--color--fg-main);
 		}
 
 		.no_curators_followed {
@@ -542,7 +542,7 @@ body.game_bg {
 	}
 
 	.sysreq_content {
-		color: var(--color-fg-main);
+		color: var(--color--fg-main);
 		font: var(--text--body-large);
 		gap: var(--spacing-lg);
 
@@ -575,7 +575,7 @@ body.game_bg {
 		}
 
 		strong {
-			color: var(--color-fg-dim);
+			color: var(--color--fg-dim);
 			font: var(--text--body-large);
 			text-transform: none;
 			margin: 0;
@@ -597,12 +597,12 @@ body.game_bg {
 	.sysreq_tab {
 		@include controls.tab(".active");
 
-		background-color: var(--color-bg-main-50);
+		background-color: var(--color--bg-main-50);
 		padding-block: var(--spacing-sm);
 		margin-inline: 18px 0;
 
 		&.active {
-			background-color: var(--color-bg-hl);
+			background-color: var(--color--bg-hl);
 		}
 	}
 
@@ -634,7 +634,7 @@ body.game_bg {
 }
 
 #game_highlights {
-	background: var(--color-bg-main-50);
+	background: var(--color--bg-main-50);
 	backdrop-filter: none;
 	border-radius: var(--rounding-lg);
 	padding: var(--spacing-xl);
@@ -649,7 +649,7 @@ body.game_bg {
 		padding: 0;
 
 		a {
-			color: var(--color-primary);
+			color: var(--color--primary);
 		}
 	}
 
@@ -666,7 +666,7 @@ body.game_bg {
 		}
 
 		.summary {
-			color: var(--color-fg-dim);
+			color: var(--color--fg-dim);
 		}
 	}
 
@@ -687,7 +687,7 @@ body.game_bg {
 	}
 
 	.glance_tags_label {
-		color: var(--color-fg-dim);
+		color: var(--color--fg-dim);
 		font: var(--text--body-medium);
 		margin-block-end: var(--spacing-md);
 	}
@@ -701,7 +701,7 @@ body.game_bg {
 	}
 
 	.subtitle {
-		color: var(--color-fg-dim);
+		color: var(--color--fg-dim);
 		font: var(--text--body-large);
 		text-transform: none;
 		padding-inline-end: var(--spacing-md);
@@ -718,7 +718,7 @@ body.game_bg {
 	}
 
 	th {
-		color: var(--color-fg-dim);
+		color: var(--color--fg-dim);
 		font: var(--text--body-medium);
 	}
 
@@ -737,7 +737,11 @@ body.game_bg {
 		}
 
 		&:hover {
-			background-color: color-mix(in srgb, var(--color-bg-hl) 39%, transparent);
+			background-color: color-mix(
+				in srgb,
+				var(--color--bg-hl) 39%,
+				transparent
+			);
 		}
 	}
 
@@ -747,7 +751,7 @@ body.game_bg {
 		span {
 			@include utils.icon($name: "check", $size: "lg");
 
-			color: var(--color-primary);
+			color: var(--color--primary);
 			margin: auto;
 
 			display: block;
@@ -762,8 +766,8 @@ body.game_bg {
 	width: 451px;
 
 	.block {
-		background: var(--color-bg-main);
-		color: var(--color-fg-main);
+		background: var(--color--bg-main);
+		color: var(--color--fg-main);
 		font: var(--text--body-large);
 		border-radius: var(--rounding-lg);
 		padding: var(--spacing-xl);
@@ -789,12 +793,12 @@ body.game_bg {
 		}
 
 		.all_languages {
-			color: var(--color-secondary);
+			color: var(--color--secondary);
 			font: var(--text--body-medium);
 			margin-block-start: var(--spacing-xs);
 
 			&:hover {
-				color: var(--color-primary);
+				color: var(--color--primary);
 			}
 		}
 
@@ -827,7 +831,7 @@ body.game_bg {
 	}
 
 	.block.heading {
-		color: var(--color-fg-dim);
+		color: var(--color--fg-dim);
 		border-radius: var(--rounding-lg) var(--rounding-lg) 0 0;
 		padding-block-end: 0;
 		margin: 0;
@@ -846,7 +850,7 @@ body.game_bg {
 	}
 
 	.block_title {
-		color: var(--color-fg-dim);
+		color: var(--color--fg-dim);
 		font: var(--text--body-large);
 		margin-block-end: var(--spacing-xs);
 	}
@@ -869,7 +873,7 @@ body.game_bg {
 		}
 
 		.reason {
-			color: var(--color-fg-main);
+			color: var(--color--fg-main);
 			font: var(--text--body-large);
 			gap: var(--spacing-xxs);
 			margin-block-end: var(--spacing-xs);
@@ -878,17 +882,17 @@ body.game_bg {
 			align-items: center;
 
 			&.against {
-				--icon-color: var(--color-accent-red);
+				--icon-color: var(--color--accent-red);
 				--icon-name: icon("close");
 			}
 
 			&.for {
-				--icon-color: var(--color-accent-green);
+				--icon-color: var(--color--accent-green);
 				--icon-name: icon("check");
 			}
 
 			&.info {
-				--icon-color: var(--color-accent-yellow);
+				--icon-color: var(--color--accent-yellow);
 				--icon-name: icon("info");
 			}
 
@@ -911,7 +915,7 @@ body.game_bg {
 				font: var(--text--body-small);
 
 				&:not(:hover) {
-					color: var(--color-fg-dim);
+					color: var(--color--fg-dim);
 				}
 			}
 		}
@@ -934,12 +938,12 @@ body.game_bg {
 	}
 
 	.communitylink_achivement_plusmore {
-		background-color: var(--color-bg-hl);
-		color: var(--color-fg-main);
+		background-color: var(--color--bg-hl);
+		color: var(--color--fg-main);
 		font: var(--text--body-large);
 
 		&:hover {
-			background: var(--color-bg-hover);
+			background: var(--color--bg-hover);
 		}
 	}
 
@@ -963,11 +967,11 @@ body.game_bg {
 		inset-inline: 0;
 		height: 100px;
 
-		background: linear-gradient(transparent, var(--color-bg-main));
+		background: linear-gradient(transparent, var(--color--bg-main));
 	}
 
 	.game_page_autocollapse_readmore {
-		--button--secondary-bg: var(--color-bg-main);
+		--button--secondary-bg: var(--color--bg-main);
 
 		@include controls.button;
 	}
@@ -1019,7 +1023,7 @@ body.game_bg {
 
 	#{controls.button-web-selector(".btn_medium")} {
 		&:not(.btn_green_steamui, :hover) {
-			background-color: var(--color-bg-main-50);
+			background-color: var(--color--bg-main-50);
 		}
 	}
 }
@@ -1035,7 +1039,7 @@ body.game_bg {
 	}
 
 	.bundle_base_discount {
-		color: var(--color-fg-dim);
+		color: var(--color--fg-dim);
 		font: inherit;
 		line-height: var(--right-side-line-height);
 		border: none;
@@ -1073,7 +1077,7 @@ body.game_bg {
 }
 
 .game_purchase_options_editions_header_title {
-	color: var(--color-fg-main);
+	color: var(--color--fg-main);
 	font: var(--text--heading-medium);
 	letter-spacing: 0;
 	text-transform: none;
@@ -1081,7 +1085,7 @@ body.game_bg {
 
 .game_purchase_price {
 	background-color: transparent;
-	color: var(--color-fg-main);
+	color: var(--color--fg-main);
 	font: var(--text--heading-small);
 	padding: 0;
 
@@ -1099,11 +1103,11 @@ body.game_bg {
 }
 
 .shared_game_rating {
-	color: var(--color-fg-main);
+	color: var(--color--fg-main);
 	font: var(--text--body-large);
 
 	.descriptorText.descriptorText {
-		color: var(--color-fg-main);
+		color: var(--color--fg-main);
 		font: var(--text--body-large);
 	}
 

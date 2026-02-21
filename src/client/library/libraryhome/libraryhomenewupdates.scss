@@ -8,7 +8,7 @@
 }
 
 #EventTime {
-	color: var(--color-fg-dim);
+	color: var(--color--fg-dim);
 	font: var(--text--body-small);
 	padding-block-end: 8px;
 }
@@ -44,7 +44,7 @@
 }
 
 #PartnerEventRowCapsule_MainImageContainer {
-	background-color: var(--color-bg-main);
+	background-color: var(--color--bg-main);
 	border-radius: var(--rounding-md);
 }
 
@@ -58,7 +58,7 @@
 #PartnerEventRowCapsule_TextTitle {
 	--height: 2lh;
 
-	color: var(--color-fg-main);
+	color: var(--color--fg-main);
 	font: var(--text--body-large);
 
 	max-height: var(--height);

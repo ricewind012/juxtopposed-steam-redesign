@@ -6,8 +6,8 @@
 // design.
 
 #AchievementContainer {
-	background-color: var(--color-bg-main);
-	color: var(--color-fg-dim);
+	background-color: var(--color--bg-main);
+	color: var(--color--fg-dim);
 	border-radius: var(--rounding-md);
 	gap: var(--spacing-lg);
 	padding: var(--spacing-md);
@@ -56,7 +56,7 @@
 
 		@include utils.icon("clock");
 
-		color: color-mix(in srgb, var(--color-fg-dim) 50%, transparent);
+		color: color-mix(in srgb, var(--color--fg-dim) 50%, transparent);
 
 		display: block;
 	}
@@ -88,7 +88,7 @@
 	--spacing-lg: calc(var(--padding) * 1.5);
 	--spacing-xl: calc(var(--padding) * 2);
 
-	background-color: var(--color-bg-main-50);
+	background-color: var(--color--bg-main-50);
 	row-gap: 8px;
 }
 
@@ -97,7 +97,7 @@
 #LastPlayed {
 	--offset: calc(var(--spacing-md) * 4 + var(--spacing-xl));
 
-	color: var(--color-fg-main);
+	color: var(--color--fg-main);
 	font: var(--text--body-small);
 	gap: var(--spacing-sm);
 

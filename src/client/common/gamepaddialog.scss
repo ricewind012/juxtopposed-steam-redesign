@@ -19,7 +19,7 @@ $-others: ":where(#StandaloneFieldSeparator, .DialogControlsSection)";
 
 	// TODO: remove .DialogBody ? where else is #Field used other than gameinfo?
 	.DialogBody > & {
-		background-color: var(--color-bg-main-50);
+		background-color: var(--color--bg-main-50);
 		padding-inline: var(--spacing-lg);
 	}
 
@@ -68,7 +68,7 @@ $-others: ":where(#StandaloneFieldSeparator, .DialogControlsSection)";
 }
 
 #FieldDescription {
-	color: var(--color-fg-dim);
+	color: var(--color--fg-dim);
 	font: var(--text--body-medium);
 	margin-block-start: var(--spacing-sm);
 }
@@ -79,7 +79,7 @@ $-others: ":where(#StandaloneFieldSeparator, .DialogControlsSection)";
 }
 
 #FieldLabel {
-	color: var(--color-fg-main);
+	color: var(--color--fg-main);
 	// Originally HeadingSmall, but it doesn't fit everywhere on the original
 	// settings dialog size.
 	font: var(--text--body-large);
@@ -97,11 +97,11 @@ $-others: ":where(#StandaloneFieldSeparator, .DialogControlsSection)";
 }
 
 #LabelFieldValue {
-	color: var(--color-fg-dim);
+	color: var(--color--fg-dim);
 }
 
 #StandaloneFieldSeparator {
-	background-color: var(--color-bg-hover);
+	background-color: var(--color--bg-hover);
 
 	.DialogBody > & {
 		display: none;

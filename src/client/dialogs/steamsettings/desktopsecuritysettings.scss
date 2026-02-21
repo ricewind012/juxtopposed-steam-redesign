@@ -3,19 +3,19 @@
 }
 
 #EntryValue {
-	color: var(--color-fg-dim);
+	color: var(--color--fg-dim);
 	font: var(--text--body-small);
 
 	display: block;
 }
 
 #SteamGuardIcon {
-	color: var(--color-accent-red);
+	color: var(--color--accent-red);
 
 	width: var(--icon--size-md);
 	height: var(--icon--size-md);
 
 	&#EnabledTwoFactor {
-		color: var(--color-accent-green);
+		color: var(--color--accent-green);
 	}
 }

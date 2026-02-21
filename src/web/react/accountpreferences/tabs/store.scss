@@ -36,7 +36,7 @@
 }
 
 .preference_row {
-	border-bottom: var(--border-md) solid var(--color-bg-hl);
+	border-bottom: var(--border-md) solid var(--color--bg-hl);
 
 	&:first-of-type {
 		margin-block: var(--spacing-lg);
@@ -44,7 +44,7 @@
 }
 
 .sub_text {
-	color: var(--color-fg-dim);
+	color: var(--color--fg-dim);
 	font: var(--text--body-small);
 	margin-top: var(--spacing-xxs);
 }

@@ -11,7 +11,7 @@
 
 	#Figure {
 		all: initial;
-		color: var(--color-fg-main);
+		color: var(--color--fg-main);
 		font: var(--text--body-medium);
 	}
 
@@ -22,14 +22,14 @@
 		height: var(--icon--size-sm);
 
 		&#Disk {
-			background-color: var(--color-accent-green);
+			background-color: var(--color--accent-green);
 
 			height: 4px;
 		}
 
 		&#Network {
 			svg {
-				color: var(--color-primary);
+				color: var(--color--primary);
 
 				width: var(--icon--size-sm);
 				height: var(--icon--size-sm);
@@ -43,7 +43,7 @@
 
 	#LegendText {
 		all: unset;
-		color: var(--color-fg-main);
+		color: var(--color--fg-main);
 		font: var(--text--heading-small);
 	}
 
@@ -57,11 +57,11 @@
 }
 
 #GraphBarDownload {
-	color: var(--color-primary);
+	color: var(--color--primary);
 }
 
 #GraphLine {
-	stroke: var(--color-accent-green);
+	stroke: var(--color--accent-green);
 
 	display: initial;
 }

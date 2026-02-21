@@ -31,7 +31,7 @@
 }
 
 #EditButton {
-	--bg: var(--color-fg-dim);
+	--bg: var(--color--fg-dim);
 	--color-bg-percentage: 5%;
 	--icon-name: icon("settings");
 	--size: 26px;
@@ -58,7 +58,7 @@
 
 	// oh my god bruh
 	#Header:has(+ div #FreezeButton) #DynamicCollectionLabelAndButton & {
-		--bg: var(--color-primary);
+		--bg: var(--color--primary);
 	}
 
 	&:hover {
@@ -72,13 +72,13 @@
 	svg {
 		@include utils.icon("name", "line");
 
-		color: var(--color-fg-dim);
+		color: var(--color--fg-dim);
 		margin: calc((var(--size) - var(--icon--size-md)) / 2);
 	}
 }
 
 #Header {
-	color: var(--color-fg-main);
+	color: var(--color--fg-main);
 	font: var(--text--heading-small);
 	gap: 9px;
 

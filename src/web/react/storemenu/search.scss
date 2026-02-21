@@ -50,7 +50,7 @@
 }
 
 #Suggestions {
-	background: var(--color-bg-tertiary);
+	background: var(--color--bg-tertiary);
 	border-radius: 0 0 var(--rounding-md) var(--rounding-md);
 	box-shadow: none;
 	gap: var(--spacing-lg);
@@ -61,7 +61,7 @@
 	}
 
 	#SectionTitle {
-		color: var(--color-fg-main);
+		color: var(--color--fg-main);
 		font: var(--text--heading-small);
 		margin-block-end: var(--spacing-xxs);
 	}
@@ -71,7 +71,7 @@
 	}
 
 	#SuggestionTextList {
-		color: var(--color-fg-dim);
+		color: var(--color--fg-dim);
 	}
 }
 

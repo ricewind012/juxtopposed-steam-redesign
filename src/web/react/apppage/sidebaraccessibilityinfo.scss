@@ -15,12 +15,12 @@
 #FeatureNameContainer {
 	// HOW does the cursor even touch it
 	background: none;
-	color: var(--color-primary);
+	color: var(--color--primary);
 	padding: 0;
 }
 
 #GroupLabel {
-	color: var(--color-fg-dim);
+	color: var(--color--fg-dim);
 	font: var(--text--body-small);
 	margin-block: calc(var(--spacing-xs) * 2) var(--spacing-xs);
 }

@@ -16,7 +16,7 @@
 #Banner {
 	@include store.capsule-icon;
 
-	color: var(--color-primary);
+	color: var(--color--primary);
 	font: var(--text--body-medium);
 	text-transform: none;
 	box-shadow: none;

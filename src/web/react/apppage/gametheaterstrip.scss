@@ -2,7 +2,7 @@
 
 #Item {
 	&#Active::after {
-		border: var(--border-lg) solid var(--color-secondary);
+		border: var(--border-lg) solid var(--color--secondary);
 		border-radius: var(--rounding-md);
 	}
 
@@ -28,7 +28,7 @@
 }
 
 #StripScrollbar {
-	color: var(--color-fg-main);
+	color: var(--color--fg-main);
 
 	justify-content: space-between;
 	position: absolute;
@@ -55,7 +55,7 @@
 		}
 
 		&:hover {
-			background: var(--color-bg-main-20);
+			background: var(--color--bg-main-20);
 		}
 	}
 

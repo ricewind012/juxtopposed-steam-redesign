@@ -3,7 +3,7 @@
 @use "web/store";
 
 // Differences from the original mockup:
-// - The live broadcast icon uses --color-bg-main-50 instead of --color-bg-hl to make it
+// - The live broadcast icon uses --color--bg-main-50 instead of --color--bg-hl to make it
 //   consistent with the rest of in-capsule content
 
 .broadcast_live_stream_icon {
@@ -12,7 +12,7 @@
 
 	@include store.capsule-icon;
 
-	color: var(--color-accent-red);
+	color: var(--color--accent-red);
 	font: var(--text--body-medium);
 	letter-spacing: 0;
 	box-shadow: none;
@@ -68,7 +68,7 @@
 	}
 
 	.carousel_thumbs[style="visibility: hidden;"] ~ .arrow {
-		color: var(--color-fg-dim);
+		color: var(--color--fg-dim);
 
 		height: 100%;
 
@@ -165,19 +165,19 @@
 }
 
 .game_review_summary {
-	color: color-mix(in srgb, var(--color-accent-red) 50%, white);
+	color: color-mix(in srgb, var(--color--accent-red) 50%, white);
 
 	&.mixed {
-		color: var(--color-accent-yellow);
+		color: var(--color--accent-yellow);
 	}
 
 	&.positive {
-		color: var(--color-primary);
+		color: var(--color--primary);
 	}
 
 	&.no_reviews,
 	&.not_enough_reviews {
-		color: var(--color-fg-dim);
+		color: var(--color--fg-dim);
 	}
 }
 
@@ -190,7 +190,7 @@
 	inset-block-end: 0;
 
 	.discount_original_price {
-		color: var(--color-fg-dim);
+		color: var(--color--fg-dim);
 	}
 }
 

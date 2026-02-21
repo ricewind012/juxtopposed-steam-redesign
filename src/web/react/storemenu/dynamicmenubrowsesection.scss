@@ -40,7 +40,7 @@
 }
 
 #BrowseTopDestContainer {
-	background: var(--color-bg-main-20);
+	background: var(--color--bg-main-20);
 	border-radius: var(--rounding-lg);
 	gap: 0;
 	padding: 0;
@@ -50,7 +50,7 @@
 }
 
 #StoreLinkWithPadding {
-	color: var(--color-fg-main);
+	color: var(--color--fg-main);
 	font: var(--text--body-medium);
 	border: none;
 	padding: var(--spacing-md);
@@ -58,13 +58,13 @@
 	&:hover {
 		background-image: linear-gradient(
 			90deg,
-			var(--color-bg-main-50),
+			var(--color--bg-main-50),
 			transparent
 		);
 	}
 
 	#ButtonDescription {
-		color: var(--color-fg-dim);
+		color: var(--color--fg-dim);
 		font: var(--text--body-small);
 	}
 }

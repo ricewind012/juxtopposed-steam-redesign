@@ -17,20 +17,20 @@
 }
 
 @mixin -section {
-	background: var(--color-bg-main-50);
+	background: var(--color--bg-main-50);
 	border-radius: var(--rounding-lg);
 	padding: var(--spacing-xl);
 	margin-block-end: var(--spacing-md);
 }
 
 @mixin -section-header {
-	color: var(--color-fg-dim);
+	color: var(--color--fg-dim);
 	font: var(--text--heading-small);
 	margin-block-end: var(--spacing-xxl);
 }
 
 @mixin -sidebar-header {
-	color: var(--color-fg-main);
+	color: var(--color--fg-main);
 	font: var(--text--body-medium);
 	text-transform: uppercase;
 	margin-block-end: var(--spacing-sm);
@@ -48,8 +48,8 @@
 body.apphub_blue.v6 {
 	background-image: linear-gradient(
 		180deg,
-		var(--color-bg-hl),
-		var(--color-bg-tertiary)
+		var(--color--bg-hl),
+		var(--color--bg-tertiary)
 	);
 }
 
@@ -59,7 +59,7 @@ body.apphub_blue.v6 {
 	margin-inline: 0;
 
 	.browseOptionImage ~ & {
-		background-color: var(--color-bg-hover);
+		background-color: var(--color--bg-hover);
 	}
 
 	a {
@@ -78,7 +78,7 @@ body.apphub_blue.v6 {
 .fileRatingDetails,
 .parentCollectionRating,
 .workshop_item_rating {
-	background-color: var(--color-secondary);
+	background-color: var(--color--secondary);
 	mask-image: var(--img);
 	// prettier-ignore
 	mask-position:
@@ -123,7 +123,7 @@ body.apphub_blue.v6 {
 
 	&.checked {
 		background-image: none;
-		color: var(--color-primary);
+		color: var(--color--primary);
 	}
 
 	input[type="checkbox"] {
@@ -141,7 +141,7 @@ body.apphub_blue.v6 {
 }
 
 .flags_incompatible_desc {
-	color: var(--color-fg-dim);
+	color: var(--color--fg-dim);
 	font: var(--text--body-medium);
 	margin: var(--spacing-xs) 0;
 }
@@ -160,7 +160,7 @@ body.apphub_blue.v6 {
 	}
 
 	& > h1 {
-		color: var(--color-fg-main);
+		color: var(--color--fg-main);
 		font: var(--text--heading-medium);
 
 		display: flex;
@@ -168,7 +168,7 @@ body.apphub_blue.v6 {
 		width: unset;
 
 		span {
-			color: var(--color-fg-dim);
+			color: var(--color--fg-dim);
 			font: var(--text--body-medium);
 		}
 	}
@@ -220,7 +220,7 @@ body.apphub_blue.v6 {
 }
 
 #highlight_strip {
-	background-color: var(--color-bg-main-50);
+	background-color: var(--color--bg-main-50);
 	border-radius: var(--rounding-md);
 	padding: var(--border-lg);
 
@@ -236,14 +236,14 @@ body.apphub_blue.v6 {
 	margin-block: var(--spacing-sm) var(--spacing-lg);
 
 	.slider {
-		background-color: var(--color-bg-main);
+		background-color: var(--color--bg-main);
 		border-radius: 40px;
 		margin-block-start: var(--spacing-sm);
 
 		height: var(--carousel--thumb-height);
 
 		.handle {
-			background: var(--color-secondary);
+			background: var(--color--secondary);
 			border-radius: 40px;
 
 			width: 36px;
@@ -261,7 +261,7 @@ body.apphub_blue.v6 {
 		position: absolute;
 		inset: calc(var(--border-lg) * -1);
 
-		border: var(--border-lg) solid var(--color-secondary);
+		border: var(--border-lg) solid var(--color--secondary);
 		border-radius: var(--rounding-md);
 	}
 
@@ -323,8 +323,8 @@ body.apphub_blue.v6 {
 .just_added_to_list {
 	@include -section;
 
-	background: color-mix(in srgb, var(--color-primary) 50%, transparent);
-	color: var(--color-fg-main);
+	background: color-mix(in srgb, var(--color--primary) 50%, transparent);
+	color: var(--color--fg-main);
 	font: var(--text--body-large);
 	margin-block-start: 0;
 
@@ -348,7 +348,7 @@ body.apphub_blue.v6 {
 	align-items: center;
 
 	&:hover {
-		background-color: var(--color-bg-main);
+		background-color: var(--color--bg-main);
 	}
 
 	&:last-child {
@@ -363,11 +363,11 @@ body.apphub_blue.v6 {
 
 .parentCollectionsNumOthers {
 	padding: 0;
-	color: var(--color-fg-dim);
+	color: var(--color--fg-dim);
 }
 
 .parentCollectionTitle {
-	color: var(--color-fg-main);
+	color: var(--color--fg-main);
 	font: var(--text--heading-small);
 	text-transform: none;
 	padding: 0;
@@ -391,8 +391,8 @@ body.apphub_blue.v6 {
 
 	#mainContents > & {
 		// XD
-		--button--secondary-bg: var(--color-bg-main);
-		--color-bg-hl: var(--color-bg-main);
+		--button--secondary-bg: var(--color--bg-main);
+		--color--bg-hl: var(--color--bg-main);
 
 		@include -section;
 
@@ -406,7 +406,7 @@ body.apphub_blue.v6 {
 }
 
 .requiredItem {
-	background-color: var(--color-bg-hl);
+	background-color: var(--color--bg-hl);
 	border-radius: var(--rounding-lg);
 	padding: var(--spacing-sm);
 	margin-bottom: var(--spacing-sm);
@@ -446,7 +446,7 @@ body.apphub_blue.v6 {
 }
 
 .rightSectionMinorText {
-	color: var(--color-fg-dim);
+	color: var(--color--fg-dim);
 	font: var(--text--body-small);
 	margin-bottom: var(--spacing-sm);
 }
@@ -491,7 +491,7 @@ body.apphub_blue.v6 {
 		margin-left: var(--spacing-md);
 
 		.panel {
-			background-color: var(--color-bg-main);
+			background-color: var(--color--bg-main);
 			border-radius: var(--rounding-lg);
 			padding: var(--spacing-md);
 			margin-bottom: var(--spacing-md);
@@ -503,7 +503,7 @@ body.apphub_blue.v6 {
 			}
 
 			.title {
-				color: var(--color-fg-main);
+				color: var(--color--fg-main);
 				font: var(--text--body-large);
 				text-transform: none;
 				margin-top: 0;
@@ -518,7 +518,7 @@ body.apphub_blue.v6 {
 	height: var(--carousel--thumb-height);
 
 	.handle {
-		background: var(--color-secondary);
+		background: var(--color--secondary);
 		border-radius: 40px;
 
 		width: 36px;
@@ -527,7 +527,7 @@ body.apphub_blue.v6 {
 
 	// TODO(mixins)
 	.slider {
-		background-color: var(--color-bg-main);
+		background-color: var(--color--bg-main);
 
 		inset: 0;
 	}
@@ -554,7 +554,7 @@ body.apphub_blue.v6 {
 	}
 
 	.workshop_item.square {
-		background-color: var(--color-bg-main-50);
+		background-color: var(--color--bg-main-50);
 		border-radius: var(--rounding-md);
 
 		width: var(--image-size);
@@ -562,7 +562,7 @@ body.apphub_blue.v6 {
 		height: calc(var(--image-size) + 69px);
 
 		&:hover {
-			background-color: var(--color-bg-main);
+			background-color: var(--color--bg-main);
 		}
 
 		&.large {
@@ -601,18 +601,18 @@ body.apphub_blue.v6 {
 }
 
 .stats_table {
-	color: var(--color-fg-dim);
+	color: var(--color--fg-dim);
 
 	tr > td:first-child {
-		color: var(--color-primary);
+		color: var(--color--primary);
 	}
 }
 
 .tag_category_desc {
-	color: var(--color-fg-main);
+	color: var(--color--fg-main);
 	font: var(--text--body-large);
 	text-transform: none;
-	border-block-start: var(--border-sm) solid var(--color-bg-hl);
+	border-block-start: var(--border-sm) solid var(--color--bg-hl);
 	padding-block-start: var(--spacing-md);
 	margin-block: var(--spacing-md) var(--spacing-sm);
 }
@@ -622,12 +622,12 @@ body.apphub_blue.v6 {
 
 	@include utils.icon($remove: true);
 
-	color: var(--color-fg-dim);
+	color: var(--color--fg-dim);
 	margin: 0;
 	margin-left: auto;
 
 	&:hover {
-		color: var(--color-fg-main);
+		color: var(--color--fg-main);
 	}
 
 	&.checked {
@@ -673,7 +673,7 @@ body.apphub_blue.v6 {
 		margin: -3px;
 
 		&.default_text {
-			color: var(--color-secondary);
+			color: var(--color--secondary);
 		}
 	}
 
@@ -818,7 +818,7 @@ body.apphub_blue.v6 {
 		}
 
 		.current_player_workshop_title a {
-			color: var(--color-fg-main);
+			color: var(--color--fg-main);
 			font: var(--text--heading-small);
 			padding: 0;
 		}
@@ -839,13 +839,13 @@ body.apphub_blue.v6 {
 		.title {
 			@include -sidebar-header;
 
-			border-block-start: var(--border-sm) solid var(--color-bg-hl);
+			border-block-start: var(--border-sm) solid var(--color--bg-hl);
 			padding-block-start: var(--spacing-md);
 			margin-block-start: var(--spacing-md);
 		}
 
 		.tag_count {
-			color: var(--color-fg-dim);
+			color: var(--color--fg-dim);
 		}
 
 		.tag_label {
@@ -888,17 +888,17 @@ body.apphub_blue.v6 {
 	}
 
 	.detailsStatLeft {
-		color: var(--color-fg-dim);
+		color: var(--color--fg-dim);
 		padding-block-start: var(--spacing-sm);
 	}
 
 	.detailsStatRight {
-		color: var(--color-fg-main);
+		color: var(--color--fg-main);
 		padding-block-start: var(--spacing-sm);
 	}
 
 	.detailsStatNumChangeNotes {
-		color: var(--color-fg-dim);
+		color: var(--color--fg-dim);
 		font: inherit;
 		padding-block-start: var(--spacing-sm);
 
@@ -922,14 +922,14 @@ body.apphub_blue.v6 {
 .workshop_item_row {
 	--image-size: 100px;
 
-	background: var(--color-bg-main-50);
+	background: var(--color--bg-main-50);
 	border: none;
 	border-radius: var(--rounding-lg);
 	padding: var(--spacing-md);
 	margin-bottom: var(--spacing-sm);
 
 	&:hover {
-		background-color: var(--color-bg-main);
+		background-color: var(--color--bg-main);
 	}
 
 	.preview_image {
@@ -947,11 +947,11 @@ body.apphub_blue.v6 {
 }
 
 .workshop_item_tags {
-	color: var(--color-fg-dim);
+	color: var(--color--fg-dim);
 }
 
 .workshop_item_title {
-	color: var(--color-fg-main);
+	color: var(--color--fg-main);
 	font: var(--text--heading-medium);
 	padding: 0;
 }
@@ -963,7 +963,7 @@ body.apphub_blue.v6 {
 }
 
 .workshopBrowsePaging {
-	color: var(--color-fg-dim);
+	color: var(--color--fg-dim);
 	font: var(--text--body-large);
 	padding: 0;
 
@@ -994,7 +994,7 @@ body.apphub_blue.v6 {
 
 .workshopBrowsePagingWithBG {
 	background-color: transparent;
-	color: var(--color-fg-dim);
+	color: var(--color--fg-dim);
 	font: var(--text--body-medium);
 	padding: 0;
 	margin-block: var(--spacing-sm) var(--spacing-xxl);
@@ -1018,7 +1018,7 @@ body.apphub_blue.v6 {
 .workshopItem {
 	--image-size: 179px;
 
-	background-color: var(--color-bg-main-50);
+	background-color: var(--color--bg-main-50);
 	border-radius: var(--rounding-lg);
 	padding: var(--spacing-md);
 	margin: 0;
@@ -1032,7 +1032,7 @@ body.apphub_blue.v6 {
 		inset-block-end: var(--spacing-md);
 		inset-inline-end: var(--spacing-md);
 
-		color: var(--color-accent-green);
+		color: var(--color--accent-green);
 
 		@include utils.icon($name: "check", $size: "lg");
 	}
@@ -1045,7 +1045,7 @@ body.apphub_blue.v6 {
 	.general_btn.subscribe {
 		--size: calc(var(--icon--size-md) + var(--spacing-lg));
 
-		background-color: var(--color-bg-main-50);
+		background-color: var(--color--bg-main-50);
 
 		min-width: var(--size);
 		min-height: var(--size);
@@ -1067,7 +1067,7 @@ body.apphub_blue.v6 {
 }
 
 .workshopItemAuthorName {
-	color: var(--color-fg-dim);
+	color: var(--color--fg-dim);
 	font: var(--text--body-small);
 	margin-top: var(--spacing-xxs);
 }
@@ -1106,7 +1106,7 @@ body.apphub_blue.v6 {
 }
 
 .workshopItemDescription {
-	color: var(--color-fg-main);
+	color: var(--color--fg-main);
 	font: var(--text--body-large);
 	padding: 0;
 	margin: 0;
@@ -1137,7 +1137,7 @@ body.apphub_blue.v6 {
 	}
 
 	.numRatings {
-		color: var(--color-fg-dim);
+		color: var(--color--fg-dim);
 		font: var(--text--body-medium);
 	}
 
@@ -1160,7 +1160,7 @@ body.apphub_blue.v6 {
 
 // TODO(js): image size
 .workshopItemPreviewImageEnlargeableContainer {
-	background-color: var(--color-bg-main-50);
+	background-color: var(--color--bg-main-50);
 	border-radius: var(--rounding-lg);
 }
 
@@ -1195,7 +1195,7 @@ body.apphub_blue.v6 {
 }
 
 .workshopItemTitle {
-	color: var(--color-fg-main);
+	color: var(--color--fg-main);
 	font: var(--text--heading-small);
 	margin: 0;
 }
@@ -1216,7 +1216,7 @@ body.apphub_blue.v6 {
 }
 
 .workshopTagsTitle {
-	color: var(--color-fg-dim);
+	color: var(--color--fg-dim);
 	font: var(--text--body-medium);
 	margin-right: 12px;
 }

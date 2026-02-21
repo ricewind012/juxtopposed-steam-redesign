@@ -16,7 +16,7 @@
 	}
 
 	&:hover {
-		background-color: var(--color-fg-main);
+		background-color: var(--color--fg-main);
 	}
 }
 
@@ -37,7 +37,7 @@
 	}
 
 	&#Selected {
-		color: var(--color-primary);
+		color: var(--color--primary);
 	}
 }
 

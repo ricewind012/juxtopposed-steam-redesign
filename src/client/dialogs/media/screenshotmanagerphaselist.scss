@@ -1,13 +1,13 @@
 @use "shared/controls";
 
 %-phase-grid-item {
-	background-color: var(--color-bg-hl);
-	color: var(--color-fg-dim);
+	background-color: var(--color--bg-hl);
+	color: var(--color--fg-dim);
 	font: inherit;
 	padding: var(--spacing-sm);
 
 	#Date {
-		color: var(--color-fg-main);
+		color: var(--color--fg-main);
 		font: var(--text--heading-small);
 	}
 }
@@ -20,7 +20,7 @@
 }
 
 #DateHeader {
-	color: var(--color-fg-dim);
+	color: var(--color--fg-dim);
 	font: var(--text--heading-medium);
 	margin-block-start: var(--spacing-lg);
 
@@ -30,7 +30,7 @@
 }
 
 #GameHeader {
-	color: var(--color-fg-dim);
+	color: var(--color--fg-dim);
 	font: var(--text--body-medium);
 	gap: var(--spacing-xs);
 	margin-block-start: var(--spacing-md);
@@ -43,7 +43,7 @@
 #InputFilter {
 	all: unset;
 
-	--color-bg-tertiary: var(--color-bg-main);
+	--color--bg-tertiary: var(--color--bg-main);
 	--spacing-sm: var(--spacing-xs);
 
 	position: relative;
@@ -56,7 +56,7 @@
 		&:focus {
 			background-color: color-mix(
 				in srgb,
-				var(--color-bg-tertiary) 50%,
+				var(--color--bg-tertiary) 50%,
 				transparent
 			);
 		}
@@ -100,17 +100,17 @@
 		gap: var(--spacing-xs);
 
 		&:has(> [style*="color: rgb(26, 159, 255)"]) {
-			--color: var(--color-primary);
+			--color: var(--color--primary);
 		}
 
 		&:has(> [style*="color: rgb(228, 190, 82)"]) {
-			--color: var(--color-accent-yellow);
+			--color: var(--color--accent-yellow);
 		}
 	}
 
 	#OverflowItem {
-		background-color: var(--color-bg-main);
-		color: var(--color-fg-main);
+		background-color: var(--color--bg-main);
+		color: var(--color--fg-main);
 		font: var(--text--body-medium);
 	}
 }

@@ -18,13 +18,13 @@
 	--table-border-color: color-mix(in srgb, currentColor 20%, transparent);
 
 	#AppName {
-		color: var(--color-fg-main);
+		color: var(--color--fg-main);
 		font: var(--text--body-large);
 	}
 
 	#ExePath {
 		opacity: 1;
-		color: var(--color-fg-dim);
+		color: var(--color--fg-dim);
 		font: var(--text--body-large);
 	}
 }
@@ -39,7 +39,7 @@
 }
 
 #GameList {
-	background-color: var(--color-bg-hl);
+	background-color: var(--color--bg-hl);
 	box-shadow: none;
 	border: none;
 	border-radius: 0 0 var(--rounding-lg) var(--rounding-lg);
@@ -63,7 +63,7 @@
 #Header {
 	@extend %-row;
 
-	background-color: var(--color-bg-hl);
+	background-color: var(--color--bg-hl);
 	border: none;
 	border-block-end: var(--border-sm) solid var(--table-border-color);
 	border-radius: var(--rounding-lg) var(--rounding-lg) 0 0;
@@ -79,7 +79,7 @@
 		}
 
 		&:hover {
-			background-color: var(--color-bg-hover);
+			background-color: var(--color--bg-hover);
 		}
 	}
 }

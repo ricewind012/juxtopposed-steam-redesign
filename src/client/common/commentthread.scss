@@ -1,5 +1,5 @@
 #ActivityCommentThread {
-	background-color: var(--color-bg-main-20);
+	background-color: var(--color--bg-main-20);
 	border-radius: var(--rounding-lg);
 	padding: var(--spacing-md);
 	margin-block-start: var(--spacing-sm);
@@ -32,13 +32,13 @@
 		}
 
 		#CommentTime {
-			color: var(--color-fg-dim);
+			color: var(--color--fg-dim);
 			font: var(--text--body-small);
 		}
 	}
 
 	#CommentText {
-		color: var(--color-fg-main);
+		color: var(--color--fg-main);
 		font: var(--text--body-medium);
 	}
 

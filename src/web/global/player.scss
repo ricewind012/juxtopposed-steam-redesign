@@ -1,7 +1,7 @@
 @use "shared/utils";
 
 .friendBlock {
-	background-color: var(--color-bg-main);
+	background-color: var(--color--bg-main);
 	border-radius: var(--rounding-md);
 	padding: var(--spacing-sm);
 	margin: 0;
@@ -11,7 +11,7 @@
 	height: unset;
 
 	&:hover {
-		background-color: var(--color-bg-hover);
+		background-color: var(--color--bg-hover);
 	}
 
 	.friendBlockContent {
@@ -55,7 +55,7 @@
 }
 
 .friendPlayerLevelNum {
-	color: var(--color-fg-main);
+	color: var(--color--fg-main);
 }
 
 :where(.appHubIconHolder),
@@ -71,19 +71,19 @@
 	height: var(--size);
 
 	&.offline {
-		--bg: var(--avatar--color-offline);
+		--bg: var(--avatar--color--offline);
 	}
 
 	&.online {
-		--bg: var(--avatar--color-online);
+		--bg: var(--avatar--color--online);
 	}
 
 	&.golden {
-		--bg: var(--avatar--color-away);
+		--bg: var(--avatar--color--away);
 	}
 
 	&.in-game {
-		--bg: var(--avatar--color-ingame);
+		--bg: var(--avatar--color--ingame);
 	}
 
 	&.tiny {
@@ -113,7 +113,7 @@ a.persona,
 .friend_status_offline,
 .friend_status_offline div,
 .friend_status_offline a {
-	color: var(--avatar--color-offline);
+	color: var(--avatar--color--offline);
 }
 
 .persona.online,
@@ -122,7 +122,7 @@ a.persona.online,
 .friend_status_online,
 .friend_status_online div,
 .friend_status_online a {
-	color: var(--avatar--color-online);
+	color: var(--avatar--color--online);
 }
 
 .persona.in-game,
@@ -131,7 +131,7 @@ a.persona.in-game,
 .friend_status_in-game,
 .friend_status_in-game div,
 .friend_status_in-game a {
-	color: var(--avatar--color-ingame);
+	color: var(--avatar--color--ingame);
 }
 
 .persona.golden,
@@ -140,21 +140,21 @@ a.persona.golden,
 .friend_status_golden,
 .friend_status_golden div,
 .friend_status_golden a {
-	color: var(--avatar--color-away);
+	color: var(--avatar--color--away);
 }
 
 .border_color_offline {
-	border-color: var(--avatar--color-offline);
+	border-color: var(--avatar--color--offline);
 }
 
 .border_color_online {
-	border-color: var(--avatar--color-online);
+	border-color: var(--avatar--color--online);
 }
 
 .border_color_in-game {
-	border-color: var(--avatar--color-ingame);
+	border-color: var(--avatar--color--ingame);
 }
 
 .border_color_golden {
-	border-color: var(--avatar--color-away);
+	border-color: var(--avatar--color--away);
 }

@@ -1,7 +1,7 @@
 @use "shared/controls";
 
 #AppNameHeader {
-	color: var(--color-fg-main);
+	color: var(--color--fg-main);
 	font: var(--text--heading-large);
 	margin: 0;
 	margin-block-end: var(--spacing-sm);
@@ -26,7 +26,7 @@
 }
 
 #LaunchOptionDialog {
-	background: var(--color-bg-main);
+	background: var(--color--bg-main);
 	font: var(--text--body-medium);
 	padding: var(--dialog--spacing-content);
 }
@@ -34,7 +34,7 @@
 #ListContainer {
 	@include controls.radio-container;
 
-	background-color: var(--color-bg-hl);
+	background-color: var(--color--bg-hl);
 	border: none;
 	border-radius: var(--rounding-md);
 	box-shadow: none;

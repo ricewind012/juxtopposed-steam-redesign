@@ -1,7 +1,7 @@
 @use "shared/utils";
 
 .newmodal {
-	background: var(--color-bg-main);
+	background: var(--color--bg-main);
 	box-shadow: var(--dialog--shadow);
 
 	.modal_top_bar {
@@ -13,7 +13,7 @@
 
 .newmodal_background {
 	opacity: 1;
-	background: var(--color-bg-main-50);
+	background: var(--color--bg-main-50);
 	backdrop-filter: var(--blur);
 }
 
@@ -36,12 +36,12 @@
 	@include utils.icon($name: "close", $size: "lg");
 
 	&:hover {
-		color: var(--color-fg-main);
+		color: var(--color--fg-main);
 	}
 }
 
 .newmodal_content {
-	color: var(--color-fg-main);
+	color: var(--color--fg-main);
 	font: var(--text--body-medium);
 	gap: var(--dialog--spacing-content);
 	padding: var(--dialog--spacing-container);
@@ -60,11 +60,11 @@
 }
 
 .newmodal_header {
-	color: var(--color-fg-dim);
+	color: var(--color--fg-dim);
 	font: var(--text--heading-large);
 
 	.title_text {
-		color: var(--color-fg-main);
+		color: var(--color--fg-main);
 		padding: var(--dialog--spacing-container);
 		padding-block-end: var(--spacing-sm);
 	}

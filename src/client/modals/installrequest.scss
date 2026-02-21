@@ -28,12 +28,12 @@
 }
 
 #AppName {
-	color: var(--color-fg-main);
+	color: var(--color--fg-main);
 	font: var(--text--heading-small);
 }
 
 #AppSizeRequired {
-	color: var(--color-fg-dim);
+	color: var(--color--fg-dim);
 	font: var(--text--body-medium);
 }
 
@@ -59,8 +59,8 @@
 #FolderOption {
 	@include controls.radio("&#Active");
 
-	background-color: var(--color-bg-hl);
-	color: var(--color-fg-main);
+	background-color: var(--color--bg-hl);
+	color: var(--color--fg-main);
 	gap: 0;
 	margin: 0;
 
@@ -108,7 +108,7 @@
 	padding: 0;
 
 	#Header {
-		color: var(--color-fg-main);
+		color: var(--color--fg-main);
 		font: var(--text--body-large);
 		letter-spacing: 0;
 		text-transform: none;

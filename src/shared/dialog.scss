@@ -3,7 +3,7 @@
 @use "shared/utils";
 
 :where(.DialogBodyText) {
-	color: var(--color-fg-main);
+	color: var(--color--fg-main);
 	font: var(--text--body-medium);
 	gap: var(--spacing-sm);
 	margin: 0;
@@ -45,12 +45,12 @@
 	align-items: center;
 
 	&:hover .DialogCheckbox {
-		color: var(--color-fg-main);
+		color: var(--color--fg-main);
 	}
 }
 
 :where(.DialogContent) {
-	background: var(--color-bg-main);
+	background: var(--color--bg-main);
 	font: var(--text--body-medium);
 	padding: var(--dialog--spacing-container);
 }
@@ -73,7 +73,7 @@
 }
 
 :where(.DialogHeader) {
-	color: var(--color-fg-main);
+	color: var(--color--fg-main);
 	font: var(--text--heading-large);
 	margin-block-end: var(--spacing-sm);
 }
@@ -99,7 +99,7 @@
 }
 
 :where(.DialogLabel) {
-	color: var(--color-fg-dim);
+	color: var(--color--fg-dim);
 	font: var(--text--body-small);
 	text-transform: none;
 	margin-bottom: var(--spacing-xxs);
@@ -123,7 +123,7 @@
 }
 
 .DialogToggle_Description {
-	color: var(--color-fg-dim);
+	color: var(--color--fg-dim);
 	font: inherit;
 	padding-top: var(--spacing-sm);
 }
@@ -154,7 +154,7 @@
 		@include controls.toggle(".Active", ".hack");
 
 		.Disabled & {
-			background: var(--color-bg-hover);
+			background: var(--color--bg-hover);
 		}
 	}
 }
@@ -168,7 +168,7 @@
 }
 
 .ModalOverlayBackground {
-	background: var(--color-bg-main-50);
+	background: var(--color--bg-main-50);
 	backdrop-filter: var(--blur);
 
 	// For the top line
@@ -176,7 +176,7 @@
 }
 
 .ModalPosition_Content {
-	color: var(--color-fg-main);
+	color: var(--color--fg-main);
 	box-shadow: var(--dialog--shadow);
 }
 
@@ -203,7 +203,7 @@
 	height: var(--border-sm);
 
 	&.Destructive {
-		--color-primary: var(--color-accent-red);
+		--color--primary: var(--color--accent-red);
 	}
 }
 
@@ -223,7 +223,7 @@
 	@include utils.icon;
 
 	&:hover {
-		color: var(--color-fg-main);
+		color: var(--color--fg-main);
 	}
 
 	&.closeButton {
@@ -249,7 +249,7 @@
 }
 
 .title-bar-actions {
-	color: var(--color-fg-dim);
+	color: var(--color--fg-dim);
 	gap: var(--dialog--window-control-spacing);
 	margin-inline-end: calc(var(--spacing) / 2);
 

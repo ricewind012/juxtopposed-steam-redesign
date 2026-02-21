@@ -2,20 +2,20 @@
 @use "web/apppage";
 
 #ControllerSupportLevelString {
-	color: var(--color-fg-dim);
+	color: var(--color--fg-dim);
 	margin-block-end: var(--spacing-xs);
 }
 
 #ImgSection {
 	background-color: transparent;
-	color: var(--color-fg-main);
+	color: var(--color--fg-main);
 	padding: 0;
 }
 
 #InfoRow {
 	@include apppage.sidebar-list-item;
 
-	color: var(--color-primary);
+	color: var(--color--primary);
 
 	align-items: center;
 }

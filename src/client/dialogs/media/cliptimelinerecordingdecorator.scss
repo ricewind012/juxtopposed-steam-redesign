@@ -1,7 +1,7 @@
 #RecordingDecorator {
-	background: var(--color-primary);
+	background: var(--color--primary);
 
 	&:where(#Clip, #Manual):not(._7MCqjcHde47TGpwTMEK5) {
-		background: var(--color-accent-yellow);
+		background: var(--color--accent-yellow);
 	}
 }

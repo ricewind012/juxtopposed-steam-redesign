@@ -14,7 +14,7 @@
 
 #Unlocked {
 	// TODO(vars)
-	--border-color: color-mix(in srgb, var(--color-fg-dim) 40%, transparent);
+	--border-color: color-mix(in srgb, var(--color--fg-dim) 40%, transparent);
 
 	background: none;
 	color: inherit;
@@ -26,6 +26,6 @@
 	margin-block-start: var(--spacing-sm);
 
 	#RareLabel {
-		color: var(--color-accent-yellow);
+		color: var(--color--accent-yellow);
 	}
 }

@@ -15,7 +15,7 @@ $-bar-colors: (
 #AppActionBar {
 	@include settings.section;
 
-	background-color: var(--color-bg-main-50);
+	background-color: var(--color--bg-main-50);
 	border-radius: 0 0 var(--rounding-md) var(--rounding-md);
 	margin: 0;
 
@@ -24,7 +24,7 @@ $-bar-colors: (
 	}
 
 	#AppActionSelected {
-		color: var(--color-fg-main);
+		color: var(--color--fg-main);
 		font: var(--text--body-small);
 		letter-spacing: 0;
 		text-transform: none;
@@ -36,7 +36,7 @@ $-bar-colors: (
 	padding-inline: var(--spacing-sm);
 
 	&:hover {
-		background-color: var(--color-bg-main);
+		background-color: var(--color--bg-main);
 		border-radius: var(--rounding-md);
 	}
 
@@ -51,24 +51,24 @@ $-bar-colors: (
 	}
 
 	#AppName {
-		color: var(--color-fg-main);
+		color: var(--color--fg-main);
 		font: var(--text--heading-small);
 	}
 
 	#AppSize {
-		color: var(--color-fg-dim);
+		color: var(--color--fg-dim);
 		font: var(--text--body-small);
 		letter-spacing: 0;
 	}
 
 	#AppUsageText,
 	#SpecialSectionText {
-		color: var(--color-fg-main);
+		color: var(--color--fg-main);
 		margin: 0;
 	}
 
 	#AppUsageValue {
-		color: var(--color-fg-dim);
+		color: var(--color--fg-dim);
 	}
 
 	#NoCheckboxSpacer {
@@ -108,7 +108,7 @@ $-bar-colors: (
 #AppsGrid {
 	@include settings.section;
 
-	background-color: var(--color-bg-main-50);
+	background-color: var(--color--bg-main-50);
 	border-radius: var(--rounding-md) var(--rounding-md) 0 0;
 	padding-block-end: 0;
 	margin-block: var(--spacing-lg) 0;
@@ -118,7 +118,7 @@ $-bar-colors: (
 
 		width: 100%;
 
-		border-block-end: var(--border-sm) solid var(--color-bg-hl);
+		border-block-end: var(--border-sm) solid var(--color--bg-hl);
 	}
 }
 
@@ -127,8 +127,8 @@ $-bar-colors: (
 }
 
 #DriveDropdownControl {
-	--item--fg-dim: var(--color-fg-dim);
-	--item--fg-main: var(--color-fg-main);
+	--item--fg-dim: var(--color--fg-dim);
+	--item--fg-main: var(--color--fg-main);
 	--item--svg-display: flex;
 
 	margin: 0;
@@ -158,13 +158,13 @@ $-bar-colors: (
 	inset-inline-end: 12px;
 
 	&:not(:hover) {
-		background-color: var(--color-bg-main-50);
+		background-color: var(--color--bg-main-50);
 	}
 }
 
 @each $k, $v in $-bar-colors {
 	#DriveUsage#{$k} {
-		background-color: hsl(from var(--color-primary) #{$v} s l);
+		background-color: hsl(from var(--color--primary) #{$v} s l);
 	}
 }
 
@@ -176,17 +176,17 @@ $-bar-colors: (
 }
 
 #DriveUsageIndicator {
-	background: var(--color-bg-main);
+	background: var(--color--bg-main);
 
 	min-height: 4px;
 }
 
 #InstallDropdownOption {
-	color: var(--color-fg-main);
+	color: var(--color--fg-main);
 	font: inherit;
 
 	&#IsSelectedDropdownOption {
-		color: var(--color-primary);
+		color: var(--color--primary);
 	}
 
 	& > svg {

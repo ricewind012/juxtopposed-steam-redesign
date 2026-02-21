@@ -3,7 +3,7 @@
 }
 
 h2 {
-	color: var(--color-fg-main);
+	color: var(--color--fg-main);
 	font: var(--text--heading-medium);
 	letter-spacing: 0;
 	text-transform: none;
@@ -18,22 +18,22 @@ h2 {
 	}
 
 	.header_inline {
-		color: var(--color-fg-dim);
+		color: var(--color--fg-dim);
 		font: var(--text--body-large);
 	}
 
 	& ~ p {
-		color: var(--color-fg-dim);
+		color: var(--color--fg-dim);
 	}
 }
 
 h3 {
-	color: var(--color-fg-main);
+	color: var(--color--fg-main);
 	font: var(--text--heading-small);
 }
 
 .bb_blockquote {
-	background-color: var(--color-bg-main-50);
+	background-color: var(--color--bg-main-50);
 	font: inherit;
 	border: none;
 	border-radius: var(--rounding-md);
@@ -42,7 +42,7 @@ h3 {
 	margin-bottom: var(--spacing-sm);
 
 	.bb_quoteauthor {
-		color: var(--color-fg-dim);
+		color: var(--color--fg-dim);
 		font: inherit;
 		margin-bottom: var(--spacing-xxs);
 	}
@@ -54,7 +54,7 @@ h3 {
 }
 
 .bb_link_host {
-	color: var(--color-fg-dim);
+	color: var(--color--fg-dim);
 	font: var(--text--body-small);
 
 	position: relative;
@@ -73,7 +73,7 @@ h3 {
 }
 
 #mainContents {
-	color: var(--color-fg-main);
+	color: var(--color--fg-main);
 	gap: var(--spacing-md);
 	margin-top: var(--spacing-lg);
 
@@ -88,7 +88,7 @@ h3 {
 }
 
 .pageheader {
-	color: var(--color-fg-main);
+	color: var(--color--fg-main);
 	font: var(--text--heading-large);
 	letter-spacing: 0;
 	text-shadow: none;
@@ -122,7 +122,7 @@ h3 {
 }
 
 .review_award {
-	background: var(--color-bg-main);
+	background: var(--color--bg-main);
 	line-height: inherit;
 	border-radius: var(--rounding-md);
 	padding: calc(var(--spacing-xxs) / 2) var(--spacing-sm);
@@ -132,7 +132,7 @@ h3 {
 }
 
 .review_award_count {
-	color: var(--color-primary);
+	color: var(--color--primary);
 	font: var(--text--body-small);
 	margin-left: var(--spacing-sm);
 }

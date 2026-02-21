@@ -10,8 +10,8 @@
 	height: unset;
 
 	&:where(#Active) {
-		background-color: var(--color-primary);
-		color: var(--color-bg-main);
+		background-color: var(--color--primary);
+		color: var(--color--bg-main);
 	}
 
 	&:where(#Combobox) {
@@ -50,7 +50,7 @@
 
 #FocusedScreenshotError {
 	background-color: #000;
-	color: var(--color-fg-main);
+	color: var(--color--fg-main);
 
 	#Caution {
 		--size: 80px;
@@ -82,7 +82,7 @@
 	}
 
 	#Metadata {
-		color: var(--color-fg-dim);
+		color: var(--color--fg-dim);
 		font: inherit;
 	}
 }
@@ -108,7 +108,7 @@
 
 	#StickyHeader {
 		backdrop-filter: var(--blur);
-		background: var(--color-bg-main-50);
+		background: var(--color--bg-main-50);
 		border: none;
 		box-shadow: none;
 		gap: var(--spacing-sm);
@@ -117,7 +117,7 @@
 		width: 100%;
 
 		#ButtonBox:not(:hover, #Active) {
-			--color-bg-hl: var(--color-bg-main-50);
+			--color--bg-hl: var(--color--bg-main-50);
 		}
 	}
 }
@@ -127,7 +127,7 @@
 }
 
 #TopListTitle {
-	color: var(--color-fg-main);
+	color: var(--color--fg-main);
 	font: var(--text--heading-large);
 	text-transform: none;
 	padding: 0;
@@ -166,11 +166,11 @@
 }
 
 #UGCMetadata {
-	color: var(--color-primary);
+	color: var(--color--primary);
 }
 
 #UploadedIcon {
-	color: var(--color-fg-main);
+	color: var(--color--fg-main);
 	margin-inline-end: var(--spacing-xxs);
 
 	width: var(--icon--size-md);

@@ -16,7 +16,7 @@
 	@include menu.item;
 
 	&:where(a):hover {
-		color: var(--color-fg-main);
+		color: var(--color--fg-main);
 	}
 }
 

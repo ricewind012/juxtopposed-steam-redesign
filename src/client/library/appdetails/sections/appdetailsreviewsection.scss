@@ -16,12 +16,12 @@
 	}
 
 	#CommentCount {
-		color: var(--color-fg-main);
+		color: var(--color--fg-main);
 		margin-inline-start: var(--spacing-xxs);
 	}
 
 	#CommentsLabel {
-		color: var(--color-fg-main);
+		color: var(--color--fg-main);
 	}
 }
 
@@ -30,13 +30,13 @@
 }
 
 #PlayedForTime {
-	color: var(--color-fg-dim);
+	color: var(--color--fg-dim);
 	font: var(--text--body-medium);
 	padding: 0;
 }
 
 #ReviewDescription {
-	color: var(--color-fg-main);
+	color: var(--color--fg-main);
 	gap: var(--spacing-xs);
 }
 
@@ -48,7 +48,7 @@
 }
 
 #ReviewTextContainer {
-	color: var(--color-fg-main);
+	color: var(--color--fg-main);
 	font: var(--text--body-medium);
 	padding-block-end: var(--spacing-sm);
 }

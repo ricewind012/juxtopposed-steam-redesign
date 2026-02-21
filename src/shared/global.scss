@@ -7,7 +7,7 @@
 body {
 	background-color: var(--color-bg-main);
 	background-attachment: fixed;
-	color: var(--color-fg-main);
+	color: var(--color--fg-main);
 	font: var(--text--body-medium);
 }
 
@@ -16,19 +16,19 @@ a {
 }
 
 :where(.ingame) {
-	color: var(--color-accent-green);
+	color: var(--color--accent-green);
 }
 
 :where(.offline) {
-	color: var(--color-fg-dim);
+	color: var(--color--fg-dim);
 }
 
 :where(.online) {
-	color: var(--color-primary);
+	color: var(--color--primary);
 }
 
 :where(.awayOrSnooze) {
-	color: var(--color-accent-yellow);
+	color: var(--color--accent-yellow);
 }
 
 ::placeholder {

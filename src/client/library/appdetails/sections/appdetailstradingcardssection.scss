@@ -8,22 +8,22 @@
 	height: var(--size);
 
 	&#EmptyCircle {
-		border-color: var(--color-fg-dim);
+		border-color: var(--color--fg-dim);
 	}
 }
 
 #BadgeName {
-	color: var(--color-fg-main);
+	color: var(--color--fg-main);
 	font: var(--text--heading-small);
 }
 
 #BadgeLevel {
-	color: var(--color-fg-dim);
+	color: var(--color--fg-dim);
 	font: var(--text--body-small);
 }
 
 #CardsLeft {
-	color: var(--color-fg-dim);
+	color: var(--color--fg-dim);
 	font: var(--text--body-medium);
 	margin-block-end: var(--spacing-xs);
 }

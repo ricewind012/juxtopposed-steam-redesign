@@ -28,7 +28,7 @@
 }
 
 #Remainder {
-	background-color: var(--color-bg-hl);
+	background-color: var(--color--bg-hl);
 	border-radius: var(--rounding-md);
 
 	width: var(--achievementiconbase_size);
@@ -36,7 +36,7 @@
 }
 
 #RemainderText {
-	color: var(--color-fg-main);
+	color: var(--color--fg-main);
 	font: var(--text--body-large);
 	line-height: var(--achievementiconbase_size);
 	letter-spacing: 0;
@@ -47,12 +47,12 @@
 	margin: 0;
 
 	#Desc {
-		color: var(--color-fg-dim);
+		color: var(--color--fg-dim);
 		font: var(--text--body-small);
 	}
 
 	#Name {
-		color: var(--color-fg-main);
+		color: var(--color--fg-main);
 		font: var(--text--heading-small);
 	}
 }
@@ -61,7 +61,7 @@
 	all: unset;
 
 	#Label {
-		color: var(--color-fg-dim);
+		color: var(--color--fg-dim);
 		font: var(--text--body-medium);
 		margin-block-end: var(--spacing-xs);
 	}

@@ -1,5 +1,5 @@
 #Container {
-	color: var(--color-fg-dim);
+	color: var(--color--fg-dim);
 	font: var(--text--body-medium);
 	box-shadow: none;
 	border: none;
@@ -7,21 +7,21 @@
 
 	&#Selected,
 	&:hover {
-		background-color: var(--color-bg-hl);
+		background-color: var(--color--bg-hl);
 	}
 
 	&#Installed,
 	&#Running {
-		color: var(--color-fg-main);
+		color: var(--color--fg-main);
 	}
 
 	&#Updating {
-		color: var(--color-primary);
+		color: var(--color--primary);
 	}
 }
 
 #DownloadProgress {
-	color: var(--color-secondary);
+	color: var(--color--secondary);
 }
 
 #AppIconDownloading,

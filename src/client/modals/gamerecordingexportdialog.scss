@@ -2,7 +2,7 @@
 @use "shared/utils";
 
 #Content {
-	color: var(--color-fg-main);
+	color: var(--color--fg-main);
 	font: var(--text--body-medium);
 	padding: 0;
 
@@ -16,14 +16,14 @@
 	font: var(--text--body-small);
 
 	#Header {
-		color: var(--color-fg-dim);
+		color: var(--color--fg-dim);
 		font: var(--text--body-medium);
 		letter-spacing: 0;
 		text-transform: none;
 	}
 
 	#Primary {
-		color: var(--color-primary);
+		color: var(--color--primary);
 		font: var(--text--heading-small);
 		margin-block-end: var(--spacing-xs);
 	}
@@ -52,24 +52,24 @@
 	}
 
 	#File {
-		color: var(--color-fg-main);
+		color: var(--color--fg-main);
 		font: var(--text--heading-small);
 	}
 
 	#Path {
-		color: var(--color-fg-dim);
+		color: var(--color--fg-dim);
 		font: var(--text--body-medium);
 	}
 }
 
 #SettingRow {
-	color: var(--color-fg-main);
+	color: var(--color--fg-main);
 	font: var(--text--heading-small);
 }
 
 #Slider {
 	#ResolutionNotchLabel {
-		color: var(--color-fg-dim);
+		color: var(--color--fg-dim);
 		font: var(--text--body-small);
 		letter-spacing: 0;
 		padding-block-start: var(--spacing-xs);
@@ -79,7 +79,7 @@
 		--pct: 20%;
 		background-color: color-mix(
 			in srgb,
-			var(--color-fg-dim) var(--pct),
+			var(--color--fg-dim) var(--pct),
 			transparent
 		);
 
@@ -90,7 +90,7 @@
 }
 
 #SliderHeader {
-	color: var(--color-fg-main);
+	color: var(--color--fg-main);
 	font: var(--text--heading-small);
 	padding-block-end: var(--spacing-sm);
 }
@@ -98,5 +98,5 @@
 #TypeSwitcher {
 	@include controls.radio-container-horizontal;
 
-	background-color: var(--color-bg-hl);
+	background-color: var(--color--bg-hl);
 }

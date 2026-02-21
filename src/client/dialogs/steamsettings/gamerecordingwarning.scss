@@ -23,14 +23,14 @@
 	margin-block: var(--spacing-sm) 0;
 
 	&#Error {
-		color: var(--color-accent-red);
+		color: var(--color--accent-red);
 	}
 
 	&#Info {
-		color: var(--color-primary);
+		color: var(--color--primary);
 	}
 
 	&#Warning {
-		color: var(--color-accent-yellow);
+		color: var(--color--accent-yellow);
 	}
 }

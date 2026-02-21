@@ -1,5 +1,5 @@
 @mixin sidebar-list-item {
-	background-color: color-mix(in srgb, var(--color-bg-hl) 39%, transparent);
+	background-color: color-mix(in srgb, var(--color--bg-hl) 39%, transparent);
 	font: var(--text--body-small);
 	border-radius: var(--rounding-md);
 	gap: var(--spacing-sm);
@@ -7,6 +7,6 @@
 	margin-block-end: var(--spacing-xs);
 
 	&:hover {
-		background: var(--color-bg-hover);
+		background: var(--color--bg-hover);
 	}
 }

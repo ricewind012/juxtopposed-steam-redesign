@@ -10,7 +10,7 @@
 }
 
 #Name {
-	color: var(--color-fg-main);
+	color: var(--color--fg-main);
 	font: var(--text--heading-small);
 
 	position: absolute;
@@ -42,7 +42,7 @@
 			$child: "&::before, &::after"
 		);
 
-		color: var(--color-fg-dim);
+		color: var(--color--fg-dim);
 
 		width: 100%;
 		height: 100%;

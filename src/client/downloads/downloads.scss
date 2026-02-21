@@ -2,7 +2,7 @@
 @use "shared/utils";
 
 #DownloadItemName > #Name {
-	color: var(--color-fg-main);
+	color: var(--color--fg-main);
 	font: var(--text--heading-small);
 	padding-block: var(--spacing-sm) 0;
 	margin: 0;
@@ -48,7 +48,7 @@
 }
 
 #Progress {
-	color: var(--color-fg-dim);
+	color: var(--color--fg-dim);
 	font: var(--text--body-medium);
 	text-transform: uppercase;
 }
@@ -63,7 +63,7 @@
 }
 
 #SectionItem {
-	background-color: var(--color-bg-main);
+	background-color: var(--color--bg-main);
 	padding: var(--spacing-sm);
 	padding-left: calc(var(--icon--size-lg) + var(--spacing-sm) * 2);
 	margin-bottom: var(--spacing-md);
@@ -109,7 +109,7 @@
 
 	#ProgressDetails {
 		all: unset;
-		color: var(--color-fg-dim);
+		color: var(--color--fg-dim);
 		font: var(--text--body-small);
 
 		#Denominator {
@@ -122,7 +122,7 @@
 		}
 
 		#InProgress {
-			color: var(--color-fg-main);
+			color: var(--color--fg-main);
 		}
 	}
 }
@@ -147,7 +147,7 @@
 
 #SectionItemStatus {
 	all: unset;
-	color: var(--color-fg-dim);
+	color: var(--color--fg-dim);
 	font: var(--text--body-medium);
 
 	flex-grow: 1;
@@ -157,7 +157,7 @@
 	}
 
 	#InProgress {
-		color: var(--color-fg-main);
+		color: var(--color--fg-main);
 	}
 }
 
@@ -188,8 +188,8 @@
 	.DialogButton {
 		--icon-name: icon("settings");
 
-		background: color-mix(in srgb, var(--color-fg-dim) 10%, transparent);
-		color: var(--color-fg-dim);
+		background: color-mix(in srgb, var(--color--fg-dim) 10%, transparent);
+		color: var(--color--fg-dim);
 	}
 }
 
@@ -209,17 +209,17 @@
 
 		#Throttle {
 			all: unset;
-			color: var(--color-fg-dim);
+			color: var(--color--fg-dim);
 			font: var(--text--body-large);
 		}
 
 		#ThrottleValue {
-			color: var(--color-fg-main);
+			color: var(--color--fg-main);
 		}
 	}
 
 	#DownloadTimeRemaining {
-		color: var(--color-fg-main);
+		color: var(--color--fg-main);
 		font: var(--text--body-medium);
 	}
 

@@ -8,7 +8,7 @@
 	background-color: transparent;
 
 	&:first-child {
-		border-block-start: var(--border-sm) solid var(--color-bg-hover);
+		border-block-start: var(--border-sm) solid var(--color--bg-hover);
 	}
 }
 
@@ -24,11 +24,11 @@
 
 .currentUserContextMenu {
 	& > .contextMenuSectionContent {
-		border-block-end: var(--border-sm) solid var(--color-bg-hover);
+		border-block-end: var(--border-sm) solid var(--color--bg-hover);
 	}
 
 	& > .personaContextMenuItem {
-		border-block-end: var(--border-sm) solid var(--color-bg-hover);
+		border-block-end: var(--border-sm) solid var(--color--bg-hover);
 
 		&:has(> [aria-checked="true"]) {
 			@include menu.item--primary;

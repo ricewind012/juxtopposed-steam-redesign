@@ -1,5 +1,5 @@
 #StoreOriginalPrice {
-	color: var(--color-fg-dim);
+	color: var(--color--fg-dim);
 	font: var(--text--heading-small);
 }
 
@@ -12,6 +12,6 @@
 	padding: 0;
 
 	#StoreSaleDiscountedPriceCtn & {
-		color: var(--color-accent-green);
+		color: var(--color--accent-green);
 	}
 }

@@ -9,7 +9,7 @@
 	transition: var(--transition);
 
 	&:not(#NewCollection) {
-		background-color: var(--color-bg-hl);
+		background-color: var(--color--bg-hl);
 
 		&::before {
 			content: "";
@@ -20,7 +20,7 @@
 			opacity: var(--bg-opacity);
 			background-image: radial-gradient(
 				farthest-corner at -40px -40px,
-				color-mix(in srgb, var(--color-primary) 50%, var(--color-bg-hl)),
+				color-mix(in srgb, var(--color--primary) 50%, var(--color--bg-hl)),
 				transparent
 			);
 			border-radius: var(--rounding-md);
@@ -39,23 +39,23 @@
 
 	&#NewCollection {
 		background-image: none;
-		border: var(--border-md) dotted var(--color-fg-dim);
+		border: var(--border-md) dotted var(--color--fg-dim);
 
 		&:hover {
-			--color-fg-dim: var(--color-fg-main);
+			--color--fg-dim: var(--color--fg-main);
 		}
 	}
 }
 
 #CollectionLabel {
-	color: var(--color-fg-main);
+	color: var(--color--fg-main);
 	font: var(--text--body-medium);
 	text-shadow: none;
 	letter-spacing: 0;
 }
 
 #CollectionLabelCount {
-	color: var(--color-fg-dim);
+	color: var(--color--fg-dim);
 	font: var(--text--body-medium);
 }
 
@@ -64,7 +64,7 @@
 }
 
 #Header {
-	color: var(--color-fg-main);
+	color: var(--color--fg-main);
 	font: var(--text--heading-small);
 	gap: 9px;
 

@@ -21,14 +21,14 @@
 	#Chevron {
 		--icon-name: icon("arrow");
 
-		color: var(--color-fg-main);
+		color: var(--color--fg-main);
 		margin-right: var(--spacing-xxs);
 
 		order: 1;
 	}
 
 	#WalletBalance {
-		color: var(--color-fg-dim);
+		color: var(--color--fg-dim);
 	}
 }
 

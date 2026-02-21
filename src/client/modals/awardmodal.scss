@@ -25,12 +25,12 @@
 		border-radius: var(--rounding-lg);
 
 		&:hover {
-			background-color: var(--color-bg-hover);
+			background-color: var(--color--bg-hover);
 		}
 
 		&#Selected {
-			background-color: var(--color-primary);
-			color: var(--color-bg-main);
+			background-color: var(--color--primary);
+			color: var(--color--bg-main);
 
 			#Label {
 				color: inherit;
@@ -39,7 +39,7 @@
 	}
 
 	#Label {
-		color: var(--color-primary);
+		color: var(--color--primary);
 		font: var(--text--heading-small);
 		letter-spacing: 0;
 	}
@@ -56,7 +56,7 @@
 }
 
 #Description {
-	color: var(--color-fg-dim);
+	color: var(--color--fg-dim);
 	font: inherit;
 }
 
@@ -73,7 +73,7 @@
 	}
 
 	#BalanceAmount {
-		color: var(--color-primary);
+		color: var(--color--primary);
 		font: var(--text--heading-small);
 		letter-spacing: 0;
 	}
@@ -95,7 +95,7 @@
 }
 
 #GrantAwardModal {
-	color: var(--color-fg-main);
+	color: var(--color--fg-main);
 
 	.DialogContent_InnerWidth {
 		gap: var(--spacing-sm);

@@ -1,7 +1,7 @@
 @use "shared/utils";
 
 #Explainer {
-	color: var(--color-fg-main);
+	color: var(--color--fg-main);
 	font: var(--text--heading-small);
 	margin-block-end: var(--spacing-xxs);
 }
@@ -11,7 +11,7 @@
 }
 
 #Subhead {
-	color: var(--color-fg-dim);
+	color: var(--color--fg-dim);
 	font: inherit;
 }
 
@@ -22,6 +22,6 @@
 	inset-inline-end: 15px;
 
 	&:not(:hover) {
-		color: var(--color-fg-dim);
+		color: var(--color--fg-dim);
 	}
 }

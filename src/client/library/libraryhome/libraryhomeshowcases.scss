@@ -61,7 +61,7 @@
 
 		line,
 		path {
-			stroke: var(--color-fg-dim);
+			stroke: var(--color--fg-dim);
 		}
 	}
 }
@@ -98,7 +98,7 @@
 	position: unset;
 
 	#ShowcaseOuter#DragElement & {
-		background-color: var(--color-bg-main);
+		background-color: var(--color--bg-main);
 		border-radius: var(--rounding-md);
 		box-shadow: none;
 		padding-inline-start: var(--spacing-md);
@@ -156,7 +156,7 @@
 	}
 
 	#CountDisplay {
-		color: var(--color-fg-dim);
+		color: var(--color--fg-dim);
 		font: inherit;
 		margin-inline-start: var(--spacing-xxs);
 	}

@@ -14,22 +14,22 @@
 }
 
 %-content-type {
-	background: var(--color-bg-main-50);
-	color: var(--color-fg-main);
+	background: var(--color--bg-main-50);
+	color: var(--color--fg-main);
 	font: inherit;
 	border-radius: 0 0 var(--rounding-lg) var(--rounding-lg);
 	padding: var(--spacing-sm);
 }
 
 @mixin -card-metadata-button {
-	background: var(--color-bg-main);
-	color: var(--color-primary);
+	background: var(--color--bg-main);
+	color: var(--color--primary);
 	font: var(--text--body-small);
 	border-radius: var(--rounding-md);
 	padding: 8px;
 
 	&:hover {
-		background: var(--color-bg-hover);
+		background: var(--color--bg-hover);
 	}
 }
 
@@ -47,7 +47,7 @@
 
 		@include utils.icon($name: #{$icon}, $size: "sm");
 
-		color: var(--color-fg-dim);
+		color: var(--color--fg-dim);
 	}
 }
 
@@ -56,7 +56,7 @@
 }
 
 .apphub_AppName {
-	color: var(--color-fg-main);
+	color: var(--color--fg-main);
 	font: var(--text--heading-large);
 }
 
@@ -81,7 +81,7 @@
 	--card-spacing: var(--spacing-md);
 	--card-footer-height: calc(var(--spacing-sm) * 2 + 1lh);
 
-	background: var(--color-bg-main-50);
+	background: var(--color--bg-main-50);
 	border: none;
 	border-radius: var(--rounding-lg);
 	gap: var(--spacing-lg);
@@ -158,7 +158,7 @@
 	}
 
 	.apphub_CardContentMoreLink {
-		color: var(--color-fg-dim);
+		color: var(--color--fg-dim);
 		font: var(--text--body-medium);
 		padding-inline-start: var(--spacing-sm);
 	}
@@ -195,20 +195,20 @@
 }
 
 .apphub_CardContentDiscussionDate {
-	color: var(--color-fg-dim);
+	color: var(--color--fg-dim);
 	font: var(--text--body-small);
 	padding-left: calc(var(--card-avatar-size) + var(--spacing-sm));
 }
 
 .apphub_CardContentDiscussionText {
-	background-color: var(--color-bg-main-50);
+	background-color: var(--color--bg-main-50);
 	border: none;
 	border-radius: var(--rounding-lg);
 	padding: var(--spacing-sm);
 }
 
 .apphub_CardContentDiscussionTitle {
-	color: var(--color-fg-main);
+	color: var(--color--fg-main);
 	font: var(--text--heading-small);
 	padding: 0;
 	margin-bottom: var(--spacing-sm);
@@ -223,7 +223,7 @@
 }
 
 .apphub_CardContentGuideDesc {
-	color: var(--color-fg-main);
+	color: var(--color--fg-main);
 	font: var(--text--body-large);
 	padding: 0;
 	margin-top: var(--spacing-lg);
@@ -238,7 +238,7 @@
 
 .apphub_CardContentGuideTitle {
 	background-color: transparent;
-	color: var(--color-fg-main);
+	color: var(--color--fg-main);
 	font: var(--text--heading-small);
 	border: none;
 	padding: 0;
@@ -256,7 +256,7 @@
 }
 
 .apphub_CardContentNewsDate {
-	color: var(--color-fg-dim);
+	color: var(--color--fg-dim);
 	font: var(--text--body-small);
 	padding: 0;
 }
@@ -264,7 +264,7 @@
 .apphub_CardContentNewsDesc {
 	--speech-bubble-size: 1.25em;
 
-	color: var(--color-fg-main);
+	color: var(--color--fg-main);
 	padding: 0;
 	margin-bottom: var(--speech-bubble-size);
 
@@ -278,7 +278,7 @@
 		left: calc(var(--card-avatar-size) / 2 + var(--spacing-xxs));
 
 		border: var(--speech-bubble-size) solid transparent;
-		border-top-color: var(--color-bg-main-50);
+		border-top-color: var(--color--bg-main-50);
 		border-bottom: none;
 		border-left: none;
 		margin-bottom: calc(var(--speech-bubble-size) * -1);
@@ -294,7 +294,7 @@
 }
 
 .apphub_CardContentNewsTitle {
-	color: var(--color-fg-main);
+	color: var(--color--fg-main);
 	font: var(--text--heading-small);
 	padding: 0;
 
@@ -314,7 +314,7 @@
 }
 
 .apphub_CardContentTitle {
-	color: var(--color-fg-main);
+	color: var(--color--fg-main);
 	font: var(--text--heading-small);
 	padding: 0;
 }
@@ -427,7 +427,7 @@
 }
 
 .apphub_HeaderBottom {
-	background-color: var(--color-bg-main);
+	background-color: var(--color--bg-main);
 	border-radius: var(--rounding-lg);
 	padding: var(--spacing-sm);
 
@@ -505,7 +505,7 @@
 }
 
 .apphub_NumInApp {
-	color: var(--color-accent-green);
+	color: var(--color--accent-green);
 	padding: 0;
 }
 
@@ -554,7 +554,7 @@
 	align-items: center;
 
 	.apphub_Chat {
-		color: var(--color-fg-dim);
+		color: var(--color--fg-dim);
 		font: inherit;
 		padding: 0;
 
@@ -591,7 +591,7 @@
 }
 
 .apphub_StoreInfoHeader {
-	background-color: var(--color-bg-main);
+	background-color: var(--color--bg-main);
 	border-radius: var(--rounding-lg);
 	padding: var(--spacing-sm);
 	// XXX(units): keep in sync with .apphub_sectionTabs
@@ -606,12 +606,12 @@
 	position: unset;
 
 	.apphub_CardTextContent {
-		color: var(--color-fg-main);
+		color: var(--color--fg-main);
 		font: var(--text--body-large);
 	}
 
 	.date_posted {
-		color: var(--color-fg-dim);
+		color: var(--color--fg-dim);
 		font: var(--text--body-small);
 
 		display: flex;
@@ -623,7 +623,7 @@
 	}
 
 	.found_helpful {
-		color: var(--color-fg-dim);
+		color: var(--color--fg-dim);
 		font: var(--text--body-medium);
 		margin: 0;
 
@@ -633,12 +633,12 @@
 
 	// TODO: is this shared ?
 	.hours {
-		color: var(--color-fg-dim);
+		color: var(--color--fg-dim);
 		font: var(--text--body-medium);
 	}
 
 	.reviewInfo {
-		background-color: var(--color-bg-main);
+		background-color: var(--color--bg-main);
 		border-radius: var(--rounding-md);
 		padding: var(--spacing-xxs);
 	}
@@ -648,7 +648,7 @@
 	}
 
 	.title {
-		color: var(--color-fg-main);
+		color: var(--color--fg-main);
 		font: var(--text--body-medium);
 		padding: 0;
 	}

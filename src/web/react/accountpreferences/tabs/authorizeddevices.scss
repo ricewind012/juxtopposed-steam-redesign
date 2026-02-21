@@ -2,7 +2,7 @@
 
 #ActiveNow,
 #AuthorizedDevicesRecentHeader {
-	color: var(--color-fg-main);
+	color: var(--color--fg-main);
 	font: var(--text--heading-medium);
 	margin-top: var(--spacing-lg);
 }
@@ -54,7 +54,7 @@
 }
 
 #LastSeenRow {
-	color: var(--color-fg-dim);
+	color: var(--color--fg-dim);
 	font: var(--text--body-large);
 }
 

@@ -64,7 +64,7 @@ body.no_home_gutter.infinite_scrolling {
 				inset-block-end: var(--spacing-md);
 
 				.hours {
-					color: var(--color-fg-dim);
+					color: var(--color--fg-dim);
 					font: var(--text--body-small);
 				}
 
@@ -72,7 +72,7 @@ body.no_home_gutter.infinite_scrolling {
 					margin-block-start: 2px;
 
 					a {
-						color: var(--color-fg-main);
+						color: var(--color--fg-main);
 						font: var(--text--body-small);
 						margin: 0;
 					}
@@ -84,7 +84,7 @@ body.no_home_gutter.infinite_scrolling {
 			}
 
 			.content {
-				color: var(--color-fg-main);
+				color: var(--color--fg-main);
 				font: var(--text--body-medium);
 
 				height: 4lh;
@@ -164,7 +164,7 @@ body.no_home_gutter.infinite_scrolling {
 	}
 
 	.title {
-		color: var(--color-fg-main);
+		color: var(--color--fg-main);
 		font: var(--text--heading-medium);
 		letter-spacing: 0;
 		text-transform: none;
@@ -209,7 +209,7 @@ body.no_home_gutter.infinite_scrolling {
 		}
 
 		.spotlight_body {
-			color: var(--color-fg-dim);
+			color: var(--color--fg-dim);
 			font: var(--text--body-medium);
 		}
 
@@ -252,7 +252,7 @@ body.no_home_gutter.infinite_scrolling {
 		}
 
 		.spotlight_title {
-			color: var(--color-fg-main);
+			color: var(--color--fg-main);
 			font: var(--text--heading-medium);
 			letter-spacing: 0;
 			text-transform: none;
@@ -272,7 +272,7 @@ body.no_home_gutter.infinite_scrolling {
 }
 
 .deep_dive_key_tags {
-	color: var(--color-fg-dim);
+	color: var(--color--fg-dim);
 	border: none;
 	gap: var(--spacing-xxs);
 	padding: 0;
@@ -320,7 +320,7 @@ body.no_home_gutter.infinite_scrolling {
 
 // The thing after the footer
 .home_content {
-	background-color: var(--color-bg-main-50);
+	background-color: var(--color--bg-main-50);
 	padding: var(--spacing-md);
 
 	&.single {
@@ -416,7 +416,7 @@ body.no_home_gutter.infinite_scrolling {
 		.home_content_items {
 			@include carousel.container;
 
-			color: var(--color-fg-dim);
+			color: var(--color--fg-dim);
 			gap: var(--spacing-md);
 			margin-block-start: var(--carousel--section-spacing);
 
@@ -455,7 +455,7 @@ body.no_home_gutter.infinite_scrolling {
 	}
 
 	.home_content_reason {
-		color: var(--color-fg-dim);
+		color: var(--color--fg-dim);
 		font: var(--text--body-small);
 		margin-block-end: var(--spacing-sm);
 	}
@@ -611,7 +611,7 @@ body.no_home_gutter.infinite_scrolling {
 	}
 
 	.dailydeal_desc {
-		color: var(--color-fg-dim);
+		color: var(--color--fg-dim);
 		font: var(--text--body-medium);
 		padding: 0;
 	}
@@ -627,7 +627,7 @@ body.no_home_gutter.infinite_scrolling {
 	gap: var(--capsule-info-gap);
 
 	.app_name {
-		color: var(--color-fg-main);
+		color: var(--color--fg-main);
 		font: var(--text--heading-large);
 		padding: 0;
 		margin-block-end: 11px;
@@ -668,7 +668,7 @@ body.no_home_gutter.infinite_scrolling {
 
 	.platforms {
 		opacity: 1;
-		color: var(--color-fg-dim);
+		color: var(--color--fg-dim);
 		gap: var(--spacing-xxs);
 
 		// Fix some bullshit CSS behavior
@@ -697,12 +697,12 @@ body.no_home_gutter.infinite_scrolling {
 		}
 
 		.main {
-			color: var(--color-fg-main);
+			color: var(--color--fg-main);
 			font: var(--text--body-medium);
 			padding: 0;
 
 			strong {
-				color: var(--color-accent-green);
+				color: var(--color--accent-green);
 				font: inherit;
 			}
 		}
@@ -757,7 +757,7 @@ body.no_home_gutter.infinite_scrolling {
 .tab_container {
 	--tab-container-spacing: 8px;
 	--tab-item-border-radius: var(--rounding-lg);
-	--tab-item-focus-bg: var(--color-bg-main);
+	--tab-item-focus-bg: var(--color--bg-main);
 	--tab-right-col-spacing: var(--spacing-md);
 
 	background-image: none;
@@ -789,7 +789,7 @@ body.no_home_gutter.infinite_scrolling {
 	}
 
 	%-tab-item {
-		background-color: var(--color-bg-main-20);
+		background-color: var(--color--bg-main-20);
 		border-radius: var(--tab-item-border-radius);
 		padding: var(--tab-container-spacing);
 	}
@@ -846,7 +846,7 @@ body.no_home_gutter.infinite_scrolling {
 		}
 
 		.release_date {
-			color: var(--color-fg-dim);
+			color: var(--color--fg-dim);
 			font: var(--text--body-small);
 
 			inset-block-end: var(--tab-container-spacing);
@@ -881,12 +881,12 @@ body.no_home_gutter.infinite_scrolling {
 	}
 
 	.tab_item_name {
-		color: var(--color-fg-main);
+		color: var(--color--fg-main);
 		font: var(--text--heading-small);
 	}
 
 	.tab_item_top_tags {
-		color: var(--color-fg-dim);
+		color: var(--color--fg-dim);
 		font: var(--text--body-small);
 		margin-block-start: var(--spacing-xxs);
 
@@ -910,13 +910,13 @@ body.no_home_gutter.infinite_scrolling {
 
 		.tab_review_summary {
 			background-color: transparent;
-			color: var(--color-fg-dim);
+			color: var(--color--fg-dim);
 			padding: 0;
 			margin-block-start: var(--spacing-sm);
 		}
 
 		.tab_title {
-			color: var(--color-fg-main);
+			color: var(--color--fg-main);
 			font: var(--text--heading-small);
 			padding: 0;
 			margin-block-end: var(--spacing-sm);
@@ -996,14 +996,14 @@ body.no_home_gutter.infinite_scrolling {
 		}
 
 		.dateline {
-			color: var(--color-fg-dim);
+			color: var(--color--fg-dim);
 			font: var(--text--body-medium);
 			letter-spacing: 0;
 			text-transform: none;
 		}
 
 		.title {
-			color: var(--color-fg-main);
+			color: var(--color--fg-main);
 			font: var(--text--heading-medium);
 			letter-spacing: 0;
 			text-shadow: none;

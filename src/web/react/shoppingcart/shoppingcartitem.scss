@@ -12,7 +12,7 @@
 	min-height: var(--size);
 
 	&:not(:hover) {
-		color: var(--color-fg-dim);
+		color: var(--color--fg-dim);
 	}
 
 	&::before {
@@ -78,12 +78,12 @@
 }
 
 #LineItemTitle {
-	color: var(--color-fg-main);
+	color: var(--color--fg-main);
 	font: var(--text--heading-medium);
 }
 
 #LineItemWrapper {
-	background-color: var(--color-bg-main);
+	background-color: var(--color--bg-main);
 	border-radius: var(--rounding-lg);
 	padding: var(--spacing-md);
 }

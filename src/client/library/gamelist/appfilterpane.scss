@@ -8,7 +8,7 @@
 	width: 100%;
 
 	&:hover {
-		background-color: var(--color-bg-hl);
+		background-color: var(--color--bg-hl);
 	}
 }
 
@@ -20,7 +20,7 @@
 	@extend %-menu-item;
 
 	&:has(> .DialogCheckbox.Active) {
-		color: var(--color-primary);
+		color: var(--color--primary);
 	}
 
 	.DialogCheckbox {
@@ -32,7 +32,7 @@
 	margin-block: 0 var(--spacing-xs);
 
 	&#ValueSelected {
-		--button--secondary-fg: var(--color-primary);
+		--button--secondary-fg: var(--color--primary);
 	}
 
 	.DialogDropDown {
@@ -76,7 +76,7 @@
 		#LanguageAndGenre,
 		#LanguageAndGenre > &:not(#Genre)
 	) {
-		border-top: var(--border-sm) solid var(--color-bg-hl);
+		border-top: var(--border-sm) solid var(--color--bg-hl);
 		padding-top: var(--spacing-sm);
 	}
 }
@@ -86,7 +86,7 @@
 }
 
 #FilterBucketLabel {
-	color: var(--color-fg-main);
+	color: var(--color--fg-main);
 	font: var(--text--body-large);
 	text-transform: unset;
 	margin-bottom: var(--spacing-sm);

@@ -3,11 +3,11 @@
 @use "shared/utils";
 
 #BackgroundRecordingListScaler {
-	background-color: var(--color-bg-hl);
+	background-color: var(--color--bg-hl);
 
 	#BackgroundRecordingLabel {
-		background-color: var(--color-bg-main);
-		color: var(--color-fg-main);
+		background-color: var(--color--bg-main);
+		color: var(--color--fg-main);
 		font: var(--text--body-medium);
 		border-radius: 0 0 var(--rounding-md) var(--rounding-md);
 	}
@@ -50,8 +50,8 @@
 }
 
 #CheckboxContainer {
-	background-color: var(--color-fg-main);
-	color: var(--color-bg-main);
+	background-color: var(--color--fg-main);
+	color: var(--color--bg-main);
 	border-radius: 0;
 
 	inset-inline-start: 0;
@@ -76,7 +76,7 @@
 	box-sizing: content-box;
 
 	&#Selected {
-		border-color: var(--color-fg-main);
+		border-color: var(--color--fg-main);
 	}
 
 	#CornerContent {
@@ -85,7 +85,7 @@
 	}
 
 	#DurationText {
-		color: var(--color-primary);
+		color: var(--color--primary);
 		// TODO(vars): monospace typography
 		font: var(--text--body-small);
 		font-family: "Roboto-Mono", "Motiva Sans", sans-serif;
@@ -93,7 +93,7 @@
 		gap: var(--spacing-xxs);
 
 		&#DurationTextClip {
-			color: var(--color-accent-yellow);
+			color: var(--color--accent-yellow);
 		}
 	}
 }
@@ -106,7 +106,7 @@
 	inset: 0;
 
 	#AppName {
-		color: var(--color-fg-main);
+		color: var(--color--fg-main);
 		font: var(--text--heading-small);
 	}
 

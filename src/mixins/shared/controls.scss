@@ -44,10 +44,10 @@
 	@include utils.icon($name: "name", $size: "lg");
 
 	appearance: none;
-	color: var(--color-fg-dim);
+	color: var(--color--fg-dim);
 
 	&:hover {
-		background: var(--color-fg-main);
+		background: var(--color--fg-main);
 	}
 
 	&#{$checked-selector} {
@@ -55,7 +55,7 @@
 	}
 
 	&#{$disabled-selector} {
-		background: var(--color-bg-hover);
+		background: var(--color--bg-hover);
 	}
 }
 
@@ -87,7 +87,7 @@
 	$remove: true,
 	$size: "md"
 ) {
-	background-color: var(--color-bg-hl);
+	background-color: var(--color--bg-hl);
 	border-radius: var(--rounding-md);
 	padding: 0;
 
@@ -95,7 +95,7 @@
 	height: #{$h};
 
 	&:hover {
-		background-color: var(--color-bg-hover);
+		background-color: var(--color--bg-hover);
 	}
 
 	#{$child} {
@@ -104,12 +104,12 @@
 }
 
 @mixin progress-bar($inner) {
-	background-color: var(--color-bg-hl);
+	background-color: var(--color--bg-hl);
 	border-radius: 10px;
 	padding: 2px;
 
 	#{$inner} {
-		background: none var(--color-primary);
+		background: none var(--color--primary);
 		border-radius: 10px;
 
 		height: 6px;
@@ -118,12 +118,12 @@
 
 @mixin radio($active) {
 	transition: var(--transition);
-	background-color: var(--color-bg-main-50);
+	background-color: var(--color--bg-main-50);
 	font: var(--text--heading-small);
 	padding: var(--spacing-md);
 
 	&:hover {
-		background-color: var(--color-bg-hover);
+		background-color: var(--color--bg-hover);
 	}
 
 	&:first-child {
@@ -135,8 +135,8 @@
 	}
 
 	#{$active} {
-		background-color: var(--color-primary);
-		color: var(--color-bg-main);
+		background-color: var(--color--primary);
+		color: var(--color--bg-main);
 	}
 }
 
@@ -170,7 +170,7 @@
 }
 
 @mixin tabs-container {
-	background-color: var(--color-bg-main);
+	background-color: var(--color--bg-main);
 	border-radius: var(--rounding-lg);
 	gap: 5px;
 	padding: 8px;
@@ -179,18 +179,18 @@
 }
 
 @mixin tab($active-selector) {
-	color: var(--color-fg-dim);
+	color: var(--color--fg-dim);
 	font: var(--text--body-large);
 	border-radius: var(--rounding-md);
 	padding: var(--spacing-xs) 20px;
 
 	&:hover {
-		background-color: var(--color-bg-hover);
+		background-color: var(--color--bg-hover);
 	}
 
 	&#{$active-selector} {
-		background-color: var(--color-bg-hl);
-		color: var(--color-fg-main);
+		background-color: var(--color--bg-hl);
+		color: var(--color--fg-main);
 	}
 }
 
@@ -202,7 +202,7 @@
 	}
 
 	background-color: var(--text-field--#{$variant}-bg);
-	color: var(--color-fg-main);
+	color: var(--color--fg-main);
 	font: var(--text--body-large);
 	border: var(--border-sm) solid var(--text-field--#{$variant}-border);
 	border-radius: var(--rounding-md);
@@ -217,7 +217,7 @@
 @mixin text-field-icon($name) {
 	@include utils.icon($name, $remove: true);
 
-	color: var(--color-secondary);
+	color: var(--color--secondary);
 
 	position: absolute;
 	inset-block-start: calc(50% - var(--icon--size-md) / 2);
@@ -264,8 +264,8 @@
 
 @mixin tooltip {
 	backdrop-filter: var(--blur);
-	background: var(--color-bg-main-50);
-	color: var(--color-fg-main);
+	background: var(--color--bg-main-50);
+	color: var(--color--fg-main);
 	font: var(--text--body-medium);
 	border-radius: var(--rounding-md);
 	box-shadow: var(--popup--container-shadow);

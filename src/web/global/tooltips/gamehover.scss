@@ -2,7 +2,7 @@
 
 .game_hover {
 	h4 {
-		color: var(--color-fg-main);
+		color: var(--color--fg-main);
 		font: var(--text--heading-medium);
 		letter-spacing: 0;
 		margin: 0;
@@ -40,7 +40,7 @@
 }
 
 .hover_release {
-	color: var(--color-fg-dim);
+	color: var(--color--fg-dim);
 	font: var(--text--body-small);
 
 	& > div {

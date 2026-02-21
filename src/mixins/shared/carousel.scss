@@ -13,7 +13,7 @@
 	height: var(--carousel--arrow-container-height);
 
 	&:hover {
-		background-color: var(--color-bg-main-20);
+		background-color: var(--color--bg-main-20);
 	}
 
 	#{$left} {
@@ -45,19 +45,19 @@
 	height: var(--size);
 
 	&:hover {
-		background-color: var(--color-bg-hover);
+		background-color: var(--color--bg-hover);
 	}
 
 	#{$child} {
 		@include utils.icon($name: #{$icon}, $size: "lg");
 
-		color: var(--color-fg-dim);
+		color: var(--color--fg-dim);
 		margin: calc((var(--size) - var(--icon--size-lg)) / 2);
 	}
 }
 
 @mixin container {
-	background-color: var(--color-bg-main-20);
+	background-color: var(--color--bg-main-20);
 	font: var(--text--heading-small);
 	border-radius: var(--rounding-lg);
 	padding-block: var(--spacing-lg);
@@ -67,13 +67,13 @@
 /// All args are selectors.
 @mixin thumb($active) {
 	transition: var(--transition);
-	background-color: var(--color-bg-main);
+	background-color: var(--color--bg-main);
 	border-radius: 40px;
 
 	width: 36px;
 	height: var(--carousel--thumb-height);
 
 	#{$active} {
-		background-color: var(--color-secondary);
+		background-color: var(--color--secondary);
 	}
 }

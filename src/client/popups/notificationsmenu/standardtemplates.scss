@@ -13,7 +13,7 @@
 	margin: 0;
 
 	#Title {
-		color: var(--color-fg-dim);
+		color: var(--color--fg-dim);
 		font: var(--text--body-small);
 		text-transform: uppercase;
 	}
@@ -47,12 +47,12 @@
 	@extend %-item;
 
 	#StandardNotificationDescription {
-		color: var(--color-fg-main);
+		color: var(--color--fg-main);
 		font: var(--text--body-small);
 	}
 
 	#StandardNotificationSubText {
-		color: var(--color-fg-dim);
+		color: var(--color--fg-dim);
 		font: var(--text--body-small);
 	}
 }

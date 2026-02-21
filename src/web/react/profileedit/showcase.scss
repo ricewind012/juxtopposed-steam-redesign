@@ -2,7 +2,7 @@
 @use "shared/utils";
 
 .customization_controls {
-	background-color: var(--color-bg-main);
+	background-color: var(--color--bg-main);
 	border-radius: var(--rounding-lg) var(--rounding-lg) 0 0;
 	padding: var(--spacing-lg);
 	margin: 0;
@@ -45,7 +45,7 @@
 	}
 
 	.profile_customization_block {
-		background-color: var(--color-bg-hl);
+		background-color: var(--color--bg-hl);
 	}
 
 	.showcase_content_bg {
@@ -60,11 +60,11 @@
 	// This looks much better
 	input[type="text"],
 	textarea {
-		background-color: var(--color-bg-main-20);
+		background-color: var(--color--bg-main-20);
 		border: none;
 
 		&:hover {
-			background-color: var(--color-bg-main-50);
+			background-color: var(--color--bg-main-50);
 		}
 	}
 }
@@ -73,17 +73,17 @@
 	background: linear-gradient(
 		90deg,
 		var(--gradient-showcase-header-left) 0%,
-		var(--color-showcase-header) 90%
+		var(--color--showcase-header) 90%
 	);
 	font: var(--text--body-large);
-	color: var(--color-fg-main);
+	color: var(--color--fg-main);
 	padding: var(--spacing-sm);
 	margin: 0;
 }
 
 .profile_showcase_drag_and_drop_highlight {
-	border: var(--border-md) dashed var(--color-fg-main);
-	background-color: var(--color-fg-dim);
+	border: var(--border-md) dashed var(--color--fg-main);
+	background-color: var(--color--fg-dim);
 	margin-block: 0 var(--spacing-lg);
 }
 
@@ -91,7 +91,7 @@
 	@include utils.icon($name: "drag-handle", $size: "lg");
 
 	&:not(:hover) {
-		color: var(--color-fg-dim);
+		color: var(--color--fg-dim);
 	}
 
 	img {
@@ -135,7 +135,7 @@
 	margin: 0;
 
 	&:not(:hover) {
-		color: var(--color-fg-dim);
+		color: var(--color--fg-dim);
 	}
 }
 
@@ -151,7 +151,7 @@
 }
 
 .showcase_preview_ctn {
-	background-color: var(--color-bg-main);
+	background-color: var(--color--bg-main);
 	border-radius: 0 0 var(--rounding-lg) var(--rounding-lg);
 	padding: var(--spacing-lg);
 	padding-top: 0;

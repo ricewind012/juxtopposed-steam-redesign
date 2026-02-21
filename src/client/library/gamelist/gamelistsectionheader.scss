@@ -7,21 +7,21 @@
 
 	&#Selected,
 	&:hover {
-		background-color: var(--color-bg-hl);
+		background-color: var(--color--bg-hl);
 		box-shadow: none;
 	}
 }
 
 #SectionCount {
 	font: inherit;
-	color: var(--color-fg-dim);
+	color: var(--color--fg-dim);
 	margin: 0;
 
 	height: unset;
 }
 
 #SectionHeaderContent {
-	color: var(--color-fg-main);
+	color: var(--color--fg-main);
 	font: var(--text--body-large);
 	gap: var(--spacing-xxs);
 	padding: 0;

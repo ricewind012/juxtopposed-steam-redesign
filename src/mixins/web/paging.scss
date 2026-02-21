@@ -21,7 +21,7 @@
 }
 
 @mixin link($selected) {
-	background-color: var(--color-bg-hl);
+	background-color: var(--color--bg-hl);
 	font: var(--text--body-medium);
 	color: inherit;
 	text-decoration: none;
@@ -34,7 +34,7 @@
 
 	#{$selected},
 	&:hover {
-		background-color: var(--color-bg-hover);
+		background-color: var(--color--bg-hover);
 	}
 }
 

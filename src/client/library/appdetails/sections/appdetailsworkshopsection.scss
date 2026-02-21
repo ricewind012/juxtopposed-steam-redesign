@@ -5,19 +5,19 @@
 	align-items: start;
 
 	#FeaturedItemDesc {
-		color: var(--color-fg-dim);
+		color: var(--color--fg-dim);
 		font: var(--text--body-small);
 		margin-block-end: var(--spacing-xs);
 	}
 
 	#FeaturedItemHeader {
-		color: var(--color-fg-dim);
+		color: var(--color--fg-dim);
 		font: var(--text--body-medium);
 		margin-block-end: var(--spacing-xs);
 	}
 
 	#FeaturedItemHideButton {
-		color: var(--color-fg-dim);
+		color: var(--color--fg-dim);
 		padding: 0;
 
 		inset-block-start: 0;
@@ -26,7 +26,7 @@
 		height: var(--icon--size-md);
 
 		&:hover {
-			color: var(--color-fg-main);
+			color: var(--color--fg-main);
 		}
 
 		svg {
@@ -52,7 +52,7 @@
 	}
 
 	#FeaturedItemName {
-		color: var(--color-fg-main);
+		color: var(--color--fg-main);
 		font: var(--text--body-large);
 		margin-block-end: var(--spacing-xs);
 	}

@@ -24,7 +24,7 @@
 }
 
 #AdvancedSearchPane {
-	background-color: var(--color-bg-main);
+	background-color: var(--color--bg-main);
 	border-radius: var(--rounding-lg);
 	box-shadow: none;
 
@@ -102,13 +102,13 @@
 		margin-left: var(--spacing-xxs);
 
 		&:hover {
-			color: var(--color-fg-main);
+			color: var(--color--fg-main);
 		}
 	}
 }
 
 #SearchByTypePrompt {
-	color: var(--color-secondary);
+	color: var(--color--secondary);
 	font: var(--text--body-medium);
 	padding: 0;
 }

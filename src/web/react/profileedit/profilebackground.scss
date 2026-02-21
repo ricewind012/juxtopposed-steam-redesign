@@ -3,16 +3,20 @@
 
 	#BackgroundOption#Active & {
 		#App {
-			color: color-mix(in srgb, var(--color-primary) 25%, var(--color-fg-dim));
+			color: color-mix(
+				in srgb,
+				var(--color--primary) 25%,
+				var(--color--fg-dim)
+			);
 		}
 
 		#Title {
-			color: var(--color-primary);
+			color: var(--color--primary);
 		}
 	}
 
 	#App {
-		color: var(--color-fg-dim);
+		color: var(--color--fg-dim);
 		font: var(--text--body-medium);
 	}
 
@@ -38,7 +42,7 @@
 
 	.DialogRoundCheckboxField_Container {
 		&:not(.Active, :hover) {
-			background-color: var(--color-bg-hl);
+			background-color: var(--color--bg-hl);
 		}
 
 		// Bro what

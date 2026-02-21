@@ -10,7 +10,7 @@
 		currentColor var(--percentage),
 		transparent
 	);
-	color: var(--color-fg-dim);
+	color: var(--color--fg-dim);
 	border-radius: var(--rounding-md);
 	padding: var(--spacing-xs);
 
@@ -23,7 +23,7 @@
 	}
 
 	#{$active-selector} {
-		color: var(--color-fg-main);
+		color: var(--color--fg-main);
 	}
 
 	svg {

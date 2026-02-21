@@ -3,7 +3,7 @@
 @mixin info {
 	--offset: calc(var(--icon--size-lg) + var(--spacing-md));
 
-	color: var(--color-fg-main);
+	color: var(--color--fg-main);
 	font: var(--text--body-medium);
 	margin-block-end: var(--spacing-sm);
 	margin-inline-start: var(--offset);
@@ -17,13 +17,13 @@
 
 		position: absolute;
 
-		color: var(--color-fg-dim);
+		color: var(--color--fg-dim);
 		margin-inline-start: calc(var(--offset) * -1);
 	}
 }
 
 @mixin header {
-	color: var(--color-fg-dim);
+	color: var(--color--fg-dim);
 	font: var(--text--heading-medium);
 	letter-spacing: 0;
 	text-transform: none;
@@ -32,7 +32,7 @@
 }
 
 @mixin section {
-	background-color: var(--color-bg-main);
+	background-color: var(--color--bg-main);
 	border-radius: var(--rounding-lg);
 	padding: var(--spacing-lg);
 	margin-bottom: var(--spacing-lg);

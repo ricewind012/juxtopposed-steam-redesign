@@ -7,7 +7,7 @@
 }
 
 #CloudStorageImpact {
-	color: var(--color-fg-main);
+	color: var(--color--fg-main);
 	font: inherit;
 }
 
@@ -34,7 +34,7 @@
 	gap: var(--spacing-xxs);
 
 	#Label {
-		color: var(--color-fg-dim);
+		color: var(--color--fg-dim);
 		font: inherit;
 	}
 }

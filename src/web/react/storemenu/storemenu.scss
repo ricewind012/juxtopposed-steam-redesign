@@ -3,7 +3,7 @@
 @use "shared/utils";
 
 #Backdrop {
-	background-color: var(--color-bg-main-50);
+	background-color: var(--color--bg-main-50);
 	backdrop-filter: var(--blur);
 
 	@media (prefers-reduced-motion: no-preference) {
@@ -27,7 +27,7 @@
 	}
 
 	&#Active {
-		background-color: var(--color-secondary);
+		background-color: var(--color--secondary);
 
 		#MenuUnderscoreCtn {
 			display: none;
@@ -53,7 +53,7 @@
 	}
 
 	#ItemCount {
-		color: var(--color-fg-dim);
+		color: var(--color--fg-dim);
 		font: inherit;
 		margin: 0;
 	}

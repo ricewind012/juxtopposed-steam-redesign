@@ -24,17 +24,17 @@
 	}
 
 	#Label {
-		color: var(--color-fg-main);
+		color: var(--color--fg-main);
 		font: var(--text--heading-small);
 	}
 
 	#Details {
-		color: var(--color-fg-dim);
+		color: var(--color--fg-dim);
 		font: var(--text--body-small);
 	}
 }
 
 #Highlight {
-	color: var(--color-primary);
+	color: var(--color--primary);
 	margin: 0;
 }

@@ -1,5 +1,5 @@
 @mixin container {
-	background-color: var(--color-bg-hl);
+	background-color: var(--color--bg-hl);
 	box-shadow: var(--popup--container-shadow);
 	border-radius: var(--rounding-md);
 
@@ -8,13 +8,13 @@
 }
 
 @mixin description {
-	color: var(--color-fg-dim);
+	color: var(--color--fg-dim);
 	font: var(--text--body-small);
 	margin-block-start: var(--spacing-xxs);
 }
 
 @mixin item {
-	color: var(--color-fg-main);
+	color: var(--color--fg-main);
 	font: var(--text--body-medium);
 	padding-block: var(--popup--spacing-block);
 	padding-inline: var(--popup--spacing-inline);
@@ -25,7 +25,7 @@
 }
 
 @mixin item--active {
-	background-color: var(--color-bg-hover);
+	background-color: var(--color--bg-hover);
 }
 
 @mixin item--disabled {
@@ -33,13 +33,13 @@
 }
 
 @mixin item--primary {
-	color: var(--color-primary);
+	color: var(--color--primary);
 }
 
 @mixin separator {
 	all: unset;
 
-	background-color: var(--color-bg-hover);
+	background-color: var(--color--bg-hover);
 
 	display: block;
 	height: var(--border-sm);

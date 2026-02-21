@@ -59,7 +59,7 @@
 }
 
 .escrow_description_link {
-	color: var(--color-fg-dim);
+	color: var(--color--fg-dim);
 	font: var(--text--body-small);
 
 	a {
@@ -101,7 +101,7 @@
 	@include layout.sidebar-item(".hack");
 
 	font: var(--text--body-small);
-	color: var(--color-fg-main);
+	color: var(--color--fg-main);
 	border: none;
 
 	width: 100%;
@@ -183,7 +183,7 @@
 }
 
 .market_listing_game_name {
-	color: var(--color-fg-dim);
+	color: var(--color--fg-dim);
 	font: var(--text--body-medium);
 }
 
@@ -203,7 +203,7 @@
 	font: var(--text--heading-small);
 
 	&[style=""] {
-		color: var(--color-fg-main);
+		color: var(--color--fg-main);
 	}
 }
 
@@ -214,7 +214,7 @@
 
 .market_listing_left_cell,
 .market_listing_right_cell {
-	color: var(--color-fg-dim);
+	color: var(--color--fg-dim);
 	line-height: unset;
 	border: none;
 
@@ -254,21 +254,21 @@
 	@extend %-row;
 
 	transition: var(--transition);
-	background-color: var(--color-bg-main-50);
+	background-color: var(--color--bg-main-50);
 	margin-top: var(--market_row-spacing-outer);
 
 	clear: unset;
 	width: 100%;
 
 	&:hover {
-		background-color: var(--color-bg-main);
+		background-color: var(--color--bg-main);
 	}
 
 	.market_listing_their_price {
 		font-size: 0;
 
 		:is(.normal_price, .sale_price)[data-price] {
-			color: var(--color-fg-main);
+			color: var(--color--fg-main);
 			font: var(--text--body-large);
 		}
 	}
@@ -279,8 +279,8 @@
 
 	@extend %-row;
 
-	background-color: var(--color-bg-main-20);
-	color: var(--color-fg-dim);
+	background-color: var(--color--bg-main-20);
+	color: var(--color--fg-dim);
 	font: var(--text--body-large);
 	margin: 0;
 	margin-block-end: var(--market_row-spacing-outer);
@@ -301,7 +301,7 @@
 			width: 100%;
 			z-index: -1;
 
-			background-color: var(--color-bg-main);
+			background-color: var(--color--bg-main);
 		}
 	}
 }
@@ -311,7 +311,7 @@
 
 	@extend %-row;
 
-	background-color: var(--color-bg-main-20);
+	background-color: var(--color--bg-main-20);
 	margin-block: 0 var(--spacing-lg);
 }
 
@@ -437,7 +437,7 @@
 }
 
 .market_search_sidebar_contents {
-	background-color: var(--color-bg-main);
+	background-color: var(--color--bg-main);
 	border-radius: var(--rounding-lg);
 	padding: var(--spacing-md);
 
@@ -445,7 +445,7 @@
 }
 
 .market_search_sidebar_section_tip_small {
-	color: var(--color-fg-main);
+	color: var(--color--fg-main);
 	font: var(--text--body-medium);
 	text-transform: uppercase;
 
@@ -456,7 +456,7 @@
 		width: 100%;
 		height: var(--border-sm);
 
-		background-color: var(--color-bg-hl);
+		background-color: var(--color--bg-hl);
 		margin: var(--spacing-md) 0;
 	}
 }
@@ -468,7 +468,7 @@
 }
 
 .market_subtitle_text {
-	color: var(--color-fg-dim);
+	color: var(--color--fg-dim);
 	font: var(--text--heading-medium);
 }
 
@@ -480,8 +480,8 @@
 	min-width: unset;
 
 	.market_tab_well_tab_active > & {
-		background-color: var(--color-bg-hl);
-		color: var(--color-fg-main);
+		background-color: var(--color--bg-hl);
+		color: var(--color--fg-main);
 	}
 }
 
@@ -504,7 +504,7 @@
 }
 
 .market_title_text {
-	color: var(--color-fg-main);
+	color: var(--color--fg-main);
 	font: var(--text--heading-large);
 }
 
@@ -519,12 +519,12 @@
 
 .my_market_header_active {
 	font: var(--text--heading-small);
-	color: var(--color-fg-main);
+	color: var(--color--fg-main);
 }
 
 .my_market_header_count {
 	font: inherit;
-	color: var(--color-fg-dim);
+	color: var(--color--fg-dim);
 }
 
 #myListings {
