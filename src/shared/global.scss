@@ -5,13 +5,18 @@
 }
 
 body {
-	background: var(--color--bg-main);
+	background: linear-gradient(
+		173.45deg,
+		var(--color--bg-hl) 1.6%,
+		var(--color--bg-tertiary) 89.87%
+	);
 	background-attachment: fixed;
 	color: var(--color--fg-main);
 	font: var(--text--body-medium);
 }
 
-a {
+a,
+.whiteLink {
 	@include style.link;
 }
 

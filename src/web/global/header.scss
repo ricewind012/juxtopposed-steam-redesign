@@ -114,19 +114,6 @@
 	width: unset;
 	height: unset;
 
-	// TODO: use greenenvelope webpack module instead
-	.responsive_page_content:has(
-			> #application_config:not(
-					[data-steam_notifications^='{"pending_gift_count":0,"pending_friend_count":0,"unread_count":0,']
-				)
-		)
-		> #global_header
-		&::before {
-		content: "";
-
-		@include style.notification-dot;
-	}
-
 	svg {
 		@include utils.icon($name: "notifications");
 
@@ -144,6 +131,26 @@
 
 #header_notification_area {
 	order: 1;
+}
+
+// Use the mobile header for the notifications count
+.responsive_header {
+	top: -9999px;
+	z-index: 1000;
+	overflow: visible;
+	display: block;
+}
+
+.responsive_header_notification_badge {
+	@include style.notification-dot;
+
+	position: fixed;
+	margin-block-start: var(--header--spacing-block);
+	margin-inline-end: var(--header--spacing-inline);
+
+	&.no_notifications {
+		display: none;
+	}
 }
 
 .supernav_container {
