@@ -12,8 +12,8 @@
 	}
 }
 
-/// @param {String} $icon - Icon name found in `assets/icons`
-@mixin apphub--card-metadata($icon) {
+/// @param {String} $icon ['name'] - Icon name found in `assets/icons`
+@mixin apphub--card-metadata($icon: "name") {
 	@include apphub--card-metadata-button;
 
 	gap: var(--spacing-xxs);
@@ -252,5 +252,18 @@
 
 	&:hover {
 		background: var(--color--bg-hover);
+	}
+}
+
+/// Safeguard for `.tooltip` elements, as not all of them are hover-only.
+@mixin tooltip-element {
+	.tooltip {
+		@include utils.tooltip-icon;
+
+		display: inline-block;
+
+		img {
+			display: none;
+		}
 	}
 }

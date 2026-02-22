@@ -35,10 +35,6 @@ body.game_bg {
 		visibility: hidden;
 	}
 
-	.leftcol {
-		width: unset;
-	}
-
 	.rightcol {
 		flex-shrink: 0;
 	}
@@ -226,6 +222,7 @@ body.game_bg {
 
 .game_area_details_specs_ctn {
 	@include web.apppage--sidebar-list-item;
+	@include web.tooltip-element;
 
 	&:where(a) {
 		color: var(--color--primary);
@@ -269,12 +266,6 @@ body.game_bg {
 		align-items: center;
 		justify-content: space-between;
 		flex-grow: 1;
-	}
-
-	.tooltip {
-		@include utils.tooltip-icon;
-
-		display: block;
 	}
 }
 
@@ -498,6 +489,8 @@ body.game_bg {
 	color: var(--color--fg-dim);
 	font: var(--text--body-large);
 	margin-block-start: var(--spacing-sm);
+
+	width: unset;
 
 	// #region shared
 	h2 {
@@ -780,10 +773,6 @@ body.game_bg {
 
 			span[aria-label]::before {
 				content: attr(aria-label);
-			}
-
-			.ico16 {
-				display: none;
 			}
 		}
 
@@ -1130,7 +1119,6 @@ body.game_bg {
 	justify-content: end;
 
 	.expand_to_fill,
-	.ico16,
 	img {
 		display: none;
 	}
@@ -1222,9 +1210,4 @@ body.game_bg {
 	.page_content {
 		flex-direction: column;
 	}
-}
-
-.review_ctn {
-	border: none;
-	margin-block: 100px 0;
 }

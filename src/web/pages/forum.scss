@@ -171,7 +171,7 @@
 	margin: 0;
 
 	.forum_comment_action {
-		@include web.apphub--card-metadata($icon: "name");
+		@include web.apphub--card-metadata;
 
 		// Remove whitespace
 		gap: 0;

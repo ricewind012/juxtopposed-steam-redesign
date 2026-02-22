@@ -346,11 +346,6 @@
 
 			@include utils.icon($size: "sm");
 		}
-
-		// TODO: unify .ico16
-		span {
-			display: none;
-		}
 	}
 }
 

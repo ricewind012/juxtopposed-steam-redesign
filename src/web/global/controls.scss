@@ -16,7 +16,8 @@
 #{controls.button-web-selector(".btn_grey_black")},
 #{controls.button-web-selector(".btn_grey_grey")},
 #{controls.button-web-selector(".btn_medium")},
-#{controls.button-web-selector(".btn_small")} {
+#{controls.button-web-selector(".btn_small")},
+#{controls.button-web-selector(".btn_small_thin")} {
 	@include -button;
 }
 
@@ -46,19 +47,6 @@ input[type="checkbox"] {
 .pagebtn {
 	@include web.paging--arrow($disabled: "&.disabled");
 }
-
-/* TODO: restrict to account preferences
-.tooltip {
-	@include utils.tooltip-icon;
-
-	display: inline-block;
-	vertical-align: sub;
-
-	img {
-		display: none;
-	}
-}
-*/
 
 .responsive_tab_baseline {
 	display: none;

@@ -1,0 +1,567 @@
+@use "shared/controls";
+@use "shared/utils";
+@use "web";
+
+@mixin -sidebar-header {
+	color: var(--color--fg-dim);
+	font: var(--text--body-medium);
+	text-transform: uppercase;
+	border-block-start: var(--border-sm) solid var(--color--bg-hl);
+	padding-block-start: var(--spacing-sm);
+	margin: 0;
+	margin-block-start: var(--spacing-sm);
+}
+
+.app_reviews_area {
+	position: relative;
+}
+
+#app_reviews_playtime_range_text {
+	color: var(--color--fg-dim);
+}
+
+#app_reviews_playtime_range_text_min,
+#app_reviews_playtime_range_text_max {
+	color: var(--color--fg-main);
+	font: inherit;
+}
+
+#app_reviews_playtime_slider {
+	border-color: var(--color--bg-hl);
+	margin: var(--spacing-sm) 0;
+
+	.ui-slider-handle {
+		background: var(--color--fg-main);
+		border-radius: 1337px;
+		box-shadow: 0 0 6px var(--color--bg-main);
+		margin-block-start: -4px;
+
+		width: var(--icon--size-sm);
+		height: var(--icon--size-sm);
+	}
+
+	.ui-widget-header {
+		background-color: var(--color--primary);
+	}
+}
+
+// Undo controls.button's inline-flex
+#{controls.button-web-selector(".btn_black")} {
+	#reviews_filter_options.graph_collapsed &#review_hide_graph_button,
+	#app_reviews_hash.graph_hidden &#review_show_graph_button {
+		display: none;
+	}
+}
+
+.graph_expander_btn {
+	display: contents;
+
+	#{controls.button-web-selector(".btn_black")} {
+		width: 100%;
+	}
+}
+
+.graph_toggle_icon {
+	display: none;
+}
+
+.review_box {
+	background: var(--color--bg-main-50);
+	// Friend review
+	border: none;
+	border-radius: var(--rounding-lg);
+	padding: var(--spacing-md);
+	margin-block-end: var(--spacing-lg);
+
+	position: relative;
+
+	&.short {
+		--thumb-size: 30px;
+
+		.hours,
+		.persona_name {
+			margin: 0;
+		}
+
+		.postedDate {
+			display: none;
+		}
+
+		.review_award_ctn {
+			display: none;
+		}
+
+		.review_source {
+			margin: var(--spacing-xxs);
+			margin-inline-start: auto;
+
+			order: 1;
+		}
+
+		.short_header {
+			background-color: var(--color--bg-main);
+			border-radius: var(--rounding-md);
+			margin-block-end: var(--spacing-sm);
+			gap: var(--spacing-sm);
+
+			display: flex;
+			align-items: center;
+		}
+
+		.shortcol {
+			padding: 0;
+		}
+	}
+
+	#{controls.button-web-selector(".btnv6_grey_black")} {
+		@include web.apphub--card-metadata-button;
+
+		.ico16 {
+			--icon--size-md: var(--icon--size-sm);
+			color: var(--color--fg-dim);
+		}
+	}
+
+	.review_source {
+		@include utils.icon($name: "star-filled");
+
+		opacity: 1;
+		margin: 0;
+
+		// TODO(mixins): <img> shit
+		content: url("data:,");
+	}
+}
+
+.review_ctn {
+	border: none;
+	margin-block: 100px 0;
+}
+
+// .review_leftcol {
+.review_box {
+	.review_leftcol {
+		opacity: 1;
+		gap: var(--spacing-sm);
+		padding: 0;
+
+		width: unset;
+	}
+
+	.author_counts,
+	.author_details {
+		display: flex;
+		align-items: center;
+	}
+
+	.avatar {
+		padding: 0;
+
+		// Friend review
+		width: unset;
+		height: unset;
+	}
+
+	.num_owned_games,
+	.num_reviews {
+		font: var(--text--body-medium);
+		margin-inline-start: var(--spacing-sm);
+
+		a {
+			color: var(--color--fg-dim);
+		}
+	}
+
+	.persona_name {
+		display: flex;
+		width: unset;
+		max-width: 140px;
+
+		a {
+			font: var(--text--body-medium);
+		}
+	}
+
+	.playerAvatar {
+		--avatar--border-size: 0px;
+		--size: var(--icon--size-md);
+	}
+
+	.playerAvatar_friendindicator {
+		display: none;
+	}
+}
+
+// .review_rightcol {
+.review_box {
+	.review_rightcol {
+		position: unset;
+	}
+
+	.content {
+		color: var(--color--fg-main);
+		font: var(--text--body-large);
+		margin: 0;
+
+		.gradient {
+			display: none;
+		}
+	}
+
+	&.partial .content {
+		mask: linear-gradient(black, transparent);
+	}
+
+	.commentCount a {
+		@include web.apphub--card-metadata($icon: "chat-bubble");
+
+		margin-inline-start: var(--spacing-sm);
+
+		height: unset;
+	}
+
+	.control_block {
+		margin-block: var(--spacing-xs) 0;
+
+		.text {
+			opacity: 1;
+			color: var(--color--fg-dim);
+			font: var(--text--body-small);
+		}
+	}
+
+	.hr {
+		background-color: var(--color--bg-hover);
+
+		height: var(--border-sm);
+	}
+
+	.posted {
+		margin-block: var(--spacing-sm) var(--spacing-xl);
+
+		a {
+			font: var(--text--body-medium);
+			text-transform: none;
+		}
+
+		.view_more {
+			margin: 0;
+		}
+	}
+
+	.postedDate {
+		opacity: 1;
+		color: var(--color--fg-dim);
+		font: var(--text--body-small);
+		text-transform: none;
+
+		position: absolute;
+		inset-block-start: var(--spacing-md);
+		inset-inline-end: var(--spacing-md);
+	}
+
+	.vote_button_ctn {
+		gap: var(--spacing-sm);
+		padding: 0;
+		margin-block-start: 1lh;
+
+		display: flex;
+	}
+
+	.short_header,
+	.vote_header {
+		background-color: var(--color--bg-main);
+		border-radius: var(--rounding-md);
+
+		height: unset;
+
+		.thumb {
+			display: flex;
+
+			img {
+				border-radius: var(--rounding-sm);
+
+				width: var(--thumb-size);
+				height: var(--thumb-size);
+			}
+		}
+	}
+
+	.vote_header {
+		--thumb-size: 49px;
+
+		padding: var(--spacing-xxs);
+		margin-block: var(--spacing-xl);
+
+		.hours {
+			opacity: 1;
+			color: var(--color--fg-dim);
+			font: var(--text--body-medium);
+			margin: 0;
+			margin-block-start: var(--spacing-sm);
+		}
+
+		.title {
+			color: var(--color--fg-main);
+			font: var(--text--body-medium);
+			padding: 0;
+		}
+	}
+
+	.vote_info {
+		color: var(--color--fg-dim);
+		font: var(--text--body-small);
+		padding: 0;
+		margin-block-start: var(--spacing-xs);
+
+		float: inline-end;
+	}
+}
+
+// Looking at game.js, its only purpose is appearance...
+#review_graph_canvas {
+	display: none;
+}
+
+.review_histogram {
+	padding: var(--spacing-lg);
+}
+
+#review_histograms_container.has_data {
+	background-color: var(--color--bg-main-50);
+	border-radius: var(--rounding-lg);
+	margin-block: var(--carousel--section-spacing) var(--spacing-lg);
+	margin-inline-start: calc(var(--content--sidebar-width) + var(--spacing-lg));
+
+	.flot-text {
+		font: var(--text--body-small);
+	}
+
+	.flot-x-axis {
+		color: var(--color--primary);
+	}
+
+	.flot-y-axis {
+		color: var(--color--fg-main);
+	}
+}
+
+#review_histogram_recent_section {
+	background-color: var(--color--bg-main);
+	border-radius: 0 var(--rounding-lg) var(--rounding-lg) 0;
+	box-shadow: none;
+
+	// 765px = left side width
+	width: calc(100% - 765px);
+}
+
+// Duplicate info, see sidebar
+.review_score_summaries {
+	display: none;
+}
+
+.ReviewContentCtn {
+	flex-direction: column;
+}
+
+.reviews_info_ctn {
+	margin-block-start: var(--carousel--section-spacing);
+	margin-inline-start: calc(var(--content--sidebar-width) + var(--spacing-lg));
+}
+
+.user_reviews_active_filters {
+	.active_filter {
+		@include web.store--tag;
+
+		margin-inline-end: var(--spacing-xxs);
+	}
+
+	.title:where(#reviews_filter_title) {
+		color: var(--color--fg-main);
+		font: var(--text--heading-small);
+		padding-block-end: var(--spacing-lg);
+
+		display: block;
+	}
+}
+
+.user_reviews_by_friends_link {
+	padding: 0;
+	margin-block: var(--spacing-lg);
+
+	img {
+		display: none;
+	}
+}
+
+.user_reviews_container {
+	margin-inline-start: calc(var(--content--sidebar-width) + var(--spacing-lg));
+
+	.leftcol {
+		//width: 67%;
+	}
+}
+
+.user_reviews_count {
+	color: var(--color--fg-dim);
+}
+
+.user_reviews_date_range_explanation,
+.user_reviews_offtopic_activity_explanation,
+.user_reviews_display_explanation {
+	color: var(--color--fg-dim);
+	font: var(--text--body-small);
+	border: none;
+	padding: 0;
+	margin-block: var(--spacing-sm);
+}
+
+.user_reviews_display_uninformative,
+.user_reviews_language_outliers_dropdown,
+.user_reviews_playtime_filter_explanation,
+.user_reviews_playtime_type {
+	border: none;
+	padding: 0;
+
+	min-width: unset;
+}
+
+.user_reviews_display_uninformative {
+	a {
+		margin-block-end: var(--spacing-xs);
+	}
+
+	input[type="checkbox"] {
+		flex-shrink: 0;
+	}
+
+	label {
+		background-color: transparent;
+		padding: 0;
+		// Fix the whitespace
+		text-indent: -4px;
+		gap: var(--spacing-xs);
+
+		align-items: start;
+	}
+}
+
+.user_reviews_filter_menu {
+	background-color: transparent;
+	padding: 0;
+
+	width: 100%;
+
+	.title {
+		@include -sidebar-header;
+
+		background: none;
+		padding-inline: 0;
+		padding-block-end: 0;
+		margin-block-end: var(--spacing-xs);
+
+		width: 100%;
+
+		cursor: initial;
+	}
+}
+
+.user_reviews_filter_menu_flyout {
+	@include web.tooltip-element;
+
+	all: unset;
+}
+
+.user_reviews_filter_menu_flyout_content {
+	display: flex;
+	flex-direction: column;
+
+	br {
+		display: none;
+	}
+
+	:where(& label) {
+		@include web.apppage--sidebar-list-item;
+
+		gap: var(--spacing-xxs);
+
+		display: flex;
+		align-items: center;
+
+		.game_review_summary {
+			margin-inline-start: auto;
+
+			order: 1;
+		}
+
+		.tooltip {
+			margin-inline-start: auto;
+		}
+	}
+
+	input[type="radio"] {
+		display: none;
+
+		&:checked + label {
+			color: var(--color--primary);
+		}
+	}
+}
+
+.user_reviews_filter_options {
+	--button-height: calc(
+		1lh + var(--button--spacing-block-sm) * 2 + var(--button--border-size) * 2
+	);
+
+	background-color: var(--color--bg-main);
+	font-size: var(--text--body-large);
+	border-radius: var(--rounding-lg);
+	padding: var(--spacing-md);
+
+	align-items: start;
+	flex-direction: column;
+	position: absolute;
+	top: calc(var(--button-height) + var(--carousel--section-spacing));
+	width: var(--content--sidebar-width);
+
+	&::before {
+		content: attr(aria-label);
+
+		text-transform: uppercase;
+		margin-block-end: var(--spacing-md);
+	}
+}
+
+.user_reviews_filter_score {
+	padding-block: var(--spacing-sm) var(--carousel--section-spacing);
+}
+
+.user_reviews_header {
+	border: none;
+
+	a {
+		@include controls.button($variant: "tertiary", $size: "sm");
+
+		text-decoration: none;
+	}
+}
+
+.user_reviews_most_helpful_days {
+	color: var(--color--fg-dim);
+	font: inherit;
+	text-transform: none;
+}
+
+.user_reviews_sub_header {
+	color: var(--color--fg-main);
+	font: var(--text--heading-small);
+	letter-spacing: 0;
+	text-transform: none;
+	padding-block-end: var(--spacing-lg);
+}
+
+.view_all_reviews_btn {
+	color: var(--color--fg-dim);
+	font: var(--text--body-large);
+	padding-block: 0 var(--spacing-lg);
+}

@@ -5,6 +5,48 @@
 	@include controls.tooltip;
 }
 
+// App page reviews
+#review_histogram_tooltip {
+	@include controls.tooltip;
+
+	.negative {
+		color: var(--color--accent-red);
+	}
+
+	.positive {
+		color: var(--color--primary);
+	}
+}
+
+// Award
+.reaction_award_hover {
+	width: 200px;
+
+	.reaction_award_desc,
+	.reaction_award_points {
+		color: var(--color--fg-dim);
+		font: inherit;
+		padding-block-start: var(--spacing-sm);
+	}
+
+	.reaction_award_icon {
+		background-color: transparent;
+		padding: 0;
+	}
+
+	.reaction_award_info {
+		padding: 0;
+		padding-block-start: var(--spacing-lg);
+
+		text-align: start;
+	}
+
+	.reaction_award_name {
+		color: var(--color--fg-main);
+		font: var(--text--heading-small);
+	}
+}
+
 // Forum
 .forum_topic_tooltip {
 	@include controls.tooltip;

@@ -1,4 +1,5 @@
 @use "shared/controls";
+@use "shared/utils";
 @use "web";
 
 // TODO: unify
@@ -86,6 +87,54 @@ h3 {
 	display: none;
 }
 
+.ico16 {
+	@include utils.icon;
+
+	background-image: none;
+
+	$-icons: (
+		arrow_down: "arrow",
+		arrow_next: "arrow",
+		arrow_up: "arrow",
+		bluearrow_down: "arrow",
+		bucketfavorite: "favorite",
+		bucketfollow: "star",
+		checkbox: "check",
+		comment: "chat-bubble",
+		funny: "emoticon",
+		report: "flag",
+		reportv6: "flag",
+		thumb_down: "thumb-up",
+		thumb_up: "thumb-up",
+		thumb_downv6: "thumb-up",
+		thumb_upv6: "thumb-up",
+	);
+
+	@each $k, $v in $-icons {
+		&.#{$k} {
+			--icon-name: icon(#{$v});
+		}
+	}
+
+	&.arrow_up,
+	&.thumb_down,
+	&.thumb_downv6 {
+		transform: rotate(180deg);
+	}
+
+	.ico16.bucketnew {
+		background-position: -208px 0px;
+	}
+
+	.ico16.bucketqueue {
+		background-position: -224px 0px;
+	}
+
+	.ico16.bucketrefresh {
+		background-position: -240px 0px;
+	}
+}
+
 .maincontent {
 	gap: var(--spacing-lg);
 
@@ -135,6 +184,10 @@ h3 {
 	.page_content {
 		flex-direction: column;
 	}
+}
+
+.responsive_page_content {
+	font: var(--text--body-medium);
 }
 
 .responsive_page_frame.with_header {
@@ -231,6 +284,8 @@ body:not(.game_bg) .rightcol {
 
 .review_award_ctn {
 	gap: var(--spacing-sm);
+
+	display: flex;
 }
 
 .review_award_icon {
