@@ -1,4 +1,5 @@
 @use "shared/controls";
+@use "web/apphub";
 
 // TODO: unify
 @mixin -sidebar-header {
@@ -211,19 +212,21 @@ body:not(.game_bg) .rightcol {
 }
 
 .review_award {
-	background: var(--color--bg-main);
-	line-height: inherit;
-	border-radius: var(--rounding-md);
-	padding: calc(var(--spacing-xxs) / 2) var(--spacing-sm);
-	margin: 0;
+	@include apphub.card-metadata($icon: "military-tech");
 
-	height: unset;
+	.review_award_ctn:not(.show_all_awards) > &.unpurchaseable,
+	.review_award_ctn.show_all_awards > &.more_btn,
+	&.more_btn .review_award_icon {
+		display: none;
+	}
+
+	&:not(.more_btn)::before {
+		display: none;
+	}
 }
 
 .review_award_count {
-	color: var(--color--primary);
-	font: var(--text--body-small);
-	margin-left: var(--spacing-sm);
+	all: unset;
 }
 
 .review_award_ctn {
@@ -231,8 +234,6 @@ body:not(.game_bg) .rightcol {
 }
 
 .review_award_icon {
-	--size: var(--spacing-xl);
-
-	width: var(--size);
-	height: var(--size);
+	width: var(--icon--size-sm);
+	height: var(--icon--size-sm);
 }

@@ -1,6 +1,7 @@
 @use "shared/controls";
 @use "shared/style";
 @use "shared/utils";
+@use "web/apphub";
 @use "web/apppage";
 @use "web/layout";
 @use "web/paging";
@@ -13,6 +14,17 @@
 		content: "";
 
 		@include utils.icon($name);
+	}
+}
+
+@mixin -row {
+	background: var(--color--bg-main-50);
+	border-radius: var(--rounding-lg);
+	padding: var(--spacing-md);
+	margin-bottom: var(--spacing-sm);
+
+	&:hover {
+		background-color: var(--color--bg-main);
 	}
 }
 
@@ -33,7 +45,10 @@
 	color: var(--color--fg-dim);
 	font: var(--text--body-medium);
 	text-transform: uppercase;
-	margin-block-end: var(--spacing-sm);
+	border-block-start: var(--border-sm) solid var(--color--bg-hl);
+	padding-block-start: var(--spacing-sm);
+	margin: 0;
+	margin-block-start: var(--spacing-sm);
 }
 
 @mixin -workshop-bg {
@@ -54,16 +69,17 @@ body.apphub_blue.v6 {
 }
 
 .browseOption {
-	@include apppage.sidebar-list-item;
+	padding: 0;
+	margin: 0;
 
-	margin-inline: 0;
-
-	.browseOptionImage ~ & {
+	.browseOptionImage ~ & > a {
 		background-color: var(--color--bg-hover);
 	}
 
-	a {
-		font: inherit;
+	& > a {
+		@include apppage.sidebar-list-item;
+
+		display: block;
 	}
 }
 
@@ -73,6 +89,34 @@ body.apphub_blue.v6 {
 
 .detailBox:not(.plain) {
 	@include -section;
+}
+
+.detailsStatLeft {
+	color: var(--color--fg-dim);
+	padding-block-start: var(--spacing-sm);
+}
+
+.detailsStatRight {
+	color: var(--color--fg-main);
+	padding-block-start: var(--spacing-sm);
+}
+
+.detailsStatNumChangeNotes {
+	color: var(--color--fg-dim);
+	font: inherit;
+	padding-block-start: var(--spacing-sm);
+
+	position: absolute;
+	top: calc(3lh + var(--spacing-sm) * 3);
+
+	a {
+		font: inherit;
+	}
+}
+
+.detailsStatsContainerLeft,
+.detailsStatsContainerRight {
+	float: unset;
 }
 
 .fileRatingDetails,
@@ -426,10 +470,13 @@ body.apphub_blue.v6 {
 	.panel,
 	.sidebar {
 		all: unset;
+		box-sizing: border-box;
 	}
 
 	select {
 		@include controls.dropdown;
+
+		margin: 0;
 	}
 }
 
@@ -440,9 +487,18 @@ body.apphub_blue.v6 {
 		display: flex;
 	}
 
+	// "clear" hack
+	& > :last-child {
+		display: block;
+	}
+
 	hr {
 		display: none;
 	}
+}
+
+.rightSectionDivider {
+	display: none;
 }
 
 .rightSectionMinorText {
@@ -457,8 +513,6 @@ body.apphub_blue.v6 {
 
 .rightSectionTopTitle {
 	@include -sidebar-header;
-
-	padding: 0;
 }
 
 .searchedForTerm {
@@ -609,12 +663,7 @@ body.apphub_blue.v6 {
 }
 
 .tag_category_desc {
-	color: var(--color--fg-main);
-	font: var(--text--body-large);
-	text-transform: none;
-	border-block-start: var(--border-sm) solid var(--color--bg-hl);
-	padding-block-start: var(--spacing-md);
-	margin-block: var(--spacing-md) var(--spacing-sm);
+	@include -sidebar-header;
 }
 
 .tag_filter_control_not {
@@ -835,10 +884,6 @@ body.apphub_blue.v6 {
 		.browseTitle,
 		.title {
 			@include -sidebar-header;
-
-			border-block-start: var(--border-sm) solid var(--color--bg-hl);
-			padding-block-start: var(--spacing-md);
-			margin-block-start: var(--spacing-md);
 		}
 
 		.tag_count {
@@ -884,29 +929,6 @@ body.apphub_blue.v6 {
 		width: calc(var(--content--sidebar-width) - var(--spacing-xl));
 	}
 
-	.detailsStatLeft {
-		color: var(--color--fg-dim);
-		padding-block-start: var(--spacing-sm);
-	}
-
-	.detailsStatRight {
-		color: var(--color--fg-main);
-		padding-block-start: var(--spacing-sm);
-	}
-
-	.detailsStatNumChangeNotes {
-		color: var(--color--fg-dim);
-		font: inherit;
-		padding-block-start: var(--spacing-sm);
-
-		position: absolute;
-		top: calc(3lh + var(--spacing-sm) * 3);
-
-		a {
-			font: inherit;
-		}
-	}
-
 	.hr {
 		display: none;
 	}
@@ -919,15 +941,9 @@ body.apphub_blue.v6 {
 .workshop_item_row {
 	--image-size: 100px;
 
-	background: var(--color--bg-main-50);
-	border: none;
-	border-radius: var(--rounding-lg);
-	padding: var(--spacing-md);
-	margin-bottom: var(--spacing-sm);
+	@include -row;
 
-	&:hover {
-		background-color: var(--color--bg-main);
-	}
+	border: none;
 
 	.preview_image {
 		border-radius: var(--rounding-md);
@@ -997,6 +1013,7 @@ body.apphub_blue.v6 {
 	margin-block: var(--spacing-sm) var(--spacing-xxl);
 
 	align-items: center;
+	justify-content: space-between;
 
 	.dropdown {
 		@include controls.dropdown;
@@ -1012,7 +1029,7 @@ body.apphub_blue.v6 {
 	align-items: center;
 }
 
-.workshopItem {
+.workshopBrowseItems .workshopItem {
 	--image-size: 179px;
 
 	background-color: var(--color--bg-main-50);
@@ -1067,6 +1084,52 @@ body.apphub_blue.v6 {
 	color: var(--color--fg-dim);
 	font: var(--text--body-small);
 	margin-top: var(--spacing-xxs);
+}
+
+.workshopItemCollection {
+	@include -row;
+
+	color: var(--color--fg-dim);
+	font: var(--text--body-medium);
+	box-shadow: none;
+
+	// BYE I'm too lazy for ts
+	.fileRating {
+		display: none;
+	}
+
+	.workshopItem {
+		--image-size: 128px;
+
+		width: var(--image-size);
+		height: var(--image-size);
+	}
+
+	.workshopItemAuthorLine {
+		color: inherit;
+		padding: 0;
+	}
+
+	.workshopItemAuthorName {
+		color: inherit;
+		font: inherit;
+		margin: 0;
+	}
+
+	.workshopItemDetails {
+		margin-inline-start: var(--spacing-md);
+	}
+
+	.workshopItemShortDesc {
+		color: var(--color--fg-main);
+		font: var(--text--body-large);
+		padding: 0;
+		padding-block-start: var(--spacing-sm);
+	}
+}
+
+.workshopItemCollectionContainer {
+	margin: 0;
 }
 
 .workshopItemControls {
@@ -1153,6 +1216,7 @@ body.apphub_blue.v6 {
 .workshopItemPreviewImage {
 	width: inherit;
 	height: inherit;
+	max-height: unset;
 }
 
 // TODO(js): image size
@@ -1194,6 +1258,8 @@ body.apphub_blue.v6 {
 .workshopItemTitle {
 	color: var(--color--fg-main);
 	font: var(--text--heading-small);
+	border: none;
+	padding: 0;
 	margin: 0;
 }
 

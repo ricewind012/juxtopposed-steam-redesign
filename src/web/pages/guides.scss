@@ -1,0 +1,295 @@
+@use "shared/controls";
+@use "shared/utils";
+@use "web/apppage";
+
+@mixin -section {
+	background: var(--color--bg-main-50);
+	border-radius: var(--rounding-lg);
+	padding: var(--spacing-xl);
+	margin-block-end: var(--spacing-md);
+}
+
+@mixin -section-header {
+	color: var(--color--fg-dim);
+	font: var(--text--heading-small);
+	margin-block-end: var(--spacing-xxl);
+}
+
+// TODO(mixins): unify
+@mixin -sidebar-header {
+	color: var(--color--fg-dim);
+	font: var(--text--body-medium);
+	text-transform: uppercase;
+	border-block-start: var(--border-sm) solid var(--color--bg-hl);
+	padding-block-start: var(--spacing-sm);
+	margin: 0;
+	margin-block-start: var(--spacing-sm);
+}
+
+.apphub_ContentGuides {
+	padding: 0;
+
+	max-width: calc(100% - var(--content--sidebar-width) - var(--spacing-lg));
+
+	.workshopItemCollectionContainer:nth-last-of-type(2) > a {
+		margin: 0;
+	}
+}
+
+.apphub_Guides {
+	.category_blocks_ctn {
+		gap: var(--spacing-sm);
+
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+	}
+
+	.subtitle_ctn {
+		display: none;
+	}
+}
+
+.FixedElementOnScrollWrapper_padding {
+	display: none;
+}
+
+.guide_category_tags.collapsed {
+	.guide_category_tags_title::after {
+		transform: rotate(180deg);
+	}
+
+	& > .rightSectionHolder {
+		display: none;
+	}
+}
+
+.guide_category_tags_title {
+	@include -sidebar-header;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	&::after {
+		content: "";
+
+		display: block;
+
+		@include utils.icon($name: "arrow", $size: "sm");
+	}
+
+	.rightSectionBrowseBarArrow {
+		display: none;
+	}
+}
+
+.guideAuthors {
+	color: var(--color--fg-dim);
+	font: var(--text--body-medium);
+}
+
+.guideInfo {
+	all: unset;
+}
+
+.guideInfoTitle {
+	@include controls.button;
+}
+
+.guidePreviewImage {
+	--image-size: 128px;
+
+	margin: 0;
+	margin-inline-end: var(--spacing-md);
+
+	width: var(--image-size);
+	height: var(--image-size);
+
+	img {
+		all: unset;
+	}
+}
+
+.guide_categories.collapsed {
+	font: var(--text--heading-small);
+
+	height: calc(
+		var(--spacing-xl) + var(--spacing-xxl) + var(--spacing-sm) + 1lh + 56px
+	);
+}
+
+.guide_category_icon {
+	display: none;
+
+	&.highlightState {
+		border-radius: var(--rounding-md) 0 0 var(--rounding-md);
+		margin: -4px -13px;
+		margin-inline-end: var(--spacing-sm);
+
+		display: initial;
+	}
+}
+
+.guide_home_category_count {
+	color: var(--color--fg-dim);
+}
+
+.guide_home_category_name {
+	color: var(--color--fg-main);
+	font: var(--text--heading-small);
+	padding: 0;
+
+	// Some names are too large for ~200px
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-line-clamp: 1;
+	-webkit-box-orient: vertical;
+}
+
+.guide_home_category_selection {
+	@include apppage.sidebar-list-item;
+
+	border: none;
+	margin: 0;
+
+	width: unset;
+
+	&:not(:hover) {
+		background: var(--color--bg-main-50);
+	}
+}
+
+.guides_home_section_desc {
+	display: none;
+}
+
+.guides_home_section_title {
+	@include -section-header;
+
+	padding: 0;
+
+	img {
+		display: none;
+	}
+}
+
+.guides_home_view_all_link:not([style="display: none;"]) {
+	all: unset;
+
+	a {
+		font: var(--text--heading-small);
+		text-transform: none;
+		padding: 0;
+	}
+}
+
+.guideSubSectionSelection {
+	padding: 0;
+}
+
+.guideSubSectionSelectionLink {
+	color: inherit;
+	padding: 0;
+
+	// Remove whitespace
+	display: flex;
+
+	& > span {
+		@include apppage.sidebar-list-item;
+
+		width: 100%;
+
+		// Move text overflow from the span's parent, as it's broken by flex
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+
+		.guideSubSectionSelection.selected > & {
+			color: var(--color--primary);
+		}
+	}
+}
+
+#rightContents #GuideTableOfContents.fixed_in_scroll {
+	position: fixed;
+	top: calc(var(--header-height) + var(--spacing-lg));
+	width: var(--content--sidebar-width);
+}
+
+.guideTop {
+	@include -section;
+
+	margin-block-start: 0;
+
+	#detailsHeaderRight,
+	.ratingSection {
+		margin: 0;
+	}
+
+	.numRatings {
+		color: var(--color--fg-dim);
+		font: var(--text--body-small);
+		margin-block-start: var(--spacing-xxs);
+	}
+
+	.workshopItemControls {
+		background-color: transparent;
+		box-shadow: none;
+
+		max-width: unset;
+	}
+
+	.workshopItemControlsCtn {
+		position: unset;
+	}
+}
+
+.guideTopContent {
+	padding: 0;
+
+	.dotHR {
+		display: none;
+	}
+}
+
+.guideTopDescription {
+	color: var(--color--fg-main);
+	font: var(--text--body-large);
+	padding: 0;
+	margin-block-start: var(--spacing-md);
+}
+
+.searchText {
+	@include controls.text-field($variant: "search");
+
+	position: unset;
+	max-width: unset;
+	height: unset;
+
+	&.defaultText {
+		color: var(--color--secondary);
+	}
+}
+
+.searchTextContainer {
+	background: none;
+	margin: 0;
+
+	position: relative;
+	inset: 0;
+	max-width: unset;
+	height: unset;
+}
+
+.searchTextSubmitImg {
+	@include controls.text-field-icon($name: "search");
+
+	// Remove the image
+	content: url("data:,");
+}
+
+.subSectionTitle {
+	@include -section-header;
+
+	padding: 0;
+}
