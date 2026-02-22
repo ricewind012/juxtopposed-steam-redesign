@@ -1,11 +1,7 @@
 @use "shared/controls";
 @use "shared/style";
 @use "shared/utils";
-@use "web/apphub";
-@use "web/apppage";
-@use "web/layout";
-@use "web/paging";
-@use "web/store";
+@use "web";
 
 @mixin -icon($name) {
 	min-width: 44px;
@@ -77,7 +73,7 @@ body.apphub_blue.v6 {
 	}
 
 	& > a {
-		@include apppage.sidebar-list-item;
+		@include web.apppage--sidebar-list-item;
 
 		display: block;
 	}
@@ -158,7 +154,7 @@ body.apphub_blue.v6 {
 }
 
 .filterOption {
-	@include apppage.sidebar-list-item;
+	@include web.apppage--sidebar-list-item;
 
 	margin-inline: 0;
 
@@ -461,7 +457,7 @@ body.apphub_blue.v6 {
 }
 
 #rightContents {
-	@include layout.sidebar-container;
+	@include web.layout--sidebar-container;
 
 	margin: 0;
 
@@ -518,7 +514,7 @@ body.apphub_blue.v6 {
 .searchedForTerm {
 	all: unset;
 
-	@include store.tag;
+	@include web.store--tag;
 }
 
 .searchedTermsContainer {
@@ -847,7 +843,7 @@ body.apphub_blue.v6 {
 			all: unset;
 
 			a {
-				@include apppage.sidebar-list-item;
+				@include web.apppage--sidebar-list-item;
 			}
 		}
 
@@ -875,7 +871,7 @@ body.apphub_blue.v6 {
 	}
 
 	.right_column {
-		@include layout.sidebar-container;
+		@include web.layout--sidebar-container;
 
 		br {
 			display: none;
@@ -989,12 +985,12 @@ body.apphub_blue.v6 {
 }
 
 .workshopBrowsePagingControls {
-	@include paging.links-container;
+	@include web.paging--links-container;
 
 	margin: 0;
 
 	.pagelink {
-		@include paging.link($selected: "&.active");
+		@include web.paging--link($selected: "&.active");
 
 		margin: 0;
 	}
@@ -1274,7 +1270,7 @@ body.apphub_blue.v6 {
 	align-items: center;
 
 	a {
-		@include store.tag;
+		@include web.store--tag;
 	}
 }
 

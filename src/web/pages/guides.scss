@@ -1,6 +1,6 @@
 @use "shared/controls";
 @use "shared/utils";
-@use "web/apppage";
+@use "web";
 
 @mixin -section {
 	background: var(--color--bg-main-50);
@@ -147,7 +147,7 @@
 }
 
 .guide_home_category_selection {
-	@include apppage.sidebar-list-item;
+	@include web.apppage--sidebar-list-item;
 
 	border: none;
 	margin: 0;
@@ -195,7 +195,7 @@
 	display: flex;
 
 	& > span {
-		@include apppage.sidebar-list-item;
+		@include web.apppage--sidebar-list-item;
 
 		width: 100%;
 

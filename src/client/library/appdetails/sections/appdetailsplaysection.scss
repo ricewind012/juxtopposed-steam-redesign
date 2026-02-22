@@ -1,6 +1,6 @@
+@use "client";
 @use "shared/controls";
 @use "shared/utils";
-@use "client/appdetails";
 
 #ActionSection {
 	margin-inline-end: var(--spacing-xxl);
@@ -15,7 +15,7 @@
 	}
 
 	#PlayBar {
-		@include appdetails.blur;
+		@include client.appdetails--blur;
 
 		// Otherwise, if there is a light image, you won't be able to see shit
 		background-color: color-mix(in srgb, var(--color--bg-hl) 75%, transparent);

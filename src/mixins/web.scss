@@ -1,17 +1,129 @@
-@mixin capsule {
+@use "shared/utils";
+
+@mixin apphub--card-metadata-button {
+	background: var(--color--bg-main);
+	color: var(--color--primary);
+	font: var(--text--body-small);
+	border-radius: var(--rounding-md);
+	padding: 8px;
+
+	&:hover {
+		background: var(--color--bg-hover);
+	}
+}
+
+/// @param {String} $icon - Icon name found in `assets/icons`
+@mixin apphub--card-metadata($icon) {
+	@include apphub--card-metadata-button;
+
+	gap: var(--spacing-xxs);
+	margin: 0;
+
+	display: inline-flex;
+	align-items: center;
+
+	&::before {
+		content: "";
+
+		@include utils.icon($name: #{$icon}, $size: "sm");
+
+		color: var(--color--fg-dim);
+	}
+}
+
+@mixin apppage--sidebar-list-item {
+	background-color: color-mix(in srgb, var(--color--bg-hl) 39%, transparent);
+	font: var(--text--body-small);
+	border-radius: var(--rounding-md);
+	gap: var(--spacing-sm);
+	padding: 4px 13px;
+	margin-block-end: var(--spacing-xs);
+
+	&:hover {
+		background: var(--color--bg-hover);
+	}
+}
+
+@mixin layout--sidebar-container {
+	background-color: var(--color--bg-main);
+	border-radius: var(--rounding-lg);
+	padding: var(--spacing-md);
+
+	min-width: var(--content--sidebar-width);
+}
+
+@mixin layout--sidebar-item($active-selector) {
+	background: transparent;
+	border-radius: var(--rounding-md);
+	padding: 8px 13px;
+	margin-bottom: var(--spacing-sm);
+
+	&:is(:hover, #{$active-selector}) {
+		background: var(--color--bg-hover);
+	}
+}
+
+@mixin paging--arrow($disabled) {
+	@include paging--link($selected: "&.hack");
+
+	border: none;
+	padding: 0;
+
+	width: 70px;
+	height: 30px;
+
+	#{$disabled} {
+		opacity: var(--dim-opacity);
+	}
+}
+
+@mixin paging--container {
+	gap: 24px;
+	padding: 0;
+	margin: 0;
+
+	display: flex;
+}
+
+@mixin paging--link($selected) {
+	background-color: var(--color--bg-hl);
+	font: var(--text--body-medium);
+	color: inherit;
+	text-decoration: none;
+	border-radius: var(--rounding-md);
+	padding: 5px var(--spacing-xs);
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	#{$selected},
+	&:hover {
+		background-color: var(--color--bg-hover);
+	}
+}
+
+@mixin paging--links-container {
+	gap: var(--spacing-xxs);
+
+	display: flex;
+	align-items: center;
+}
+
+@mixin store--capsule {
 	background-color: var(--color--bg-main);
 	border-radius: var(--rounding-lg);
 	padding: var(--spacing-md);
 }
 
-@mixin capsule-icon {
+@mixin store--capsule-icon {
 	background-color: var(--color--bg-main-50);
 	backdrop-filter: var(--blur);
 	border-radius: var(--rounding-md);
 }
 
 /// All args are selectors.
-@mixin category($gradient, $label) {
+@mixin store--category($gradient, $label) {
 	background: rgba(217, 217, 217, 0.01);
 	border-radius: var(--rounding-lg);
 	margin: 0;
@@ -74,7 +186,7 @@
 /// Because apparently there are currently 3 discount components in the theme,
 /// amazing job v*lve.
 /// All args are selectors.
-@mixin discount(
+@mixin store--discount(
 	$discount-pct,
 	$final-price,
 	$no-discount,
@@ -131,7 +243,7 @@
 	}
 }
 
-@mixin tag {
+@mixin store--tag {
 	background: var(--color--bg-hl);
 	color: var(--color--fg-dim);
 	font: var(--text--body-small);

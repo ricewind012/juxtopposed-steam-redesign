@@ -1,7 +1,7 @@
-@use "client/appdetails";
+@use "client";
 
 #CompactThumbButton {
-	@include appdetails.button;
+	@include client.appdetails--button;
 
 	margin-inline-start: var(--spacing-sm);
 }
@@ -19,5 +19,5 @@
 }
 
 #RatingContainer {
-	@include appdetails.section;
+	@include client.appdetails--section;
 }

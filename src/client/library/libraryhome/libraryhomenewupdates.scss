@@ -1,7 +1,7 @@
 @use "shared/carousel";
 @use "shared/style";
 @use "shared/utils";
-@use "web/store";
+@use "web";
 
 #EventRowCarousel {
 	margin: 0;
@@ -36,7 +36,7 @@
 }
 
 #PartnerEventRowCapsule {
-	@include store.capsule;
+	@include web.store--capsule;
 
 	&:not(:last-child) {
 		margin-inline-end: var(--spacing-md);

@@ -1,6 +1,6 @@
 @use "shared/controls";
 @use "shared/utils";
-@use "web/layout";
+@use "web";
 
 #BackToProfileCtn {
 	padding: 0;
@@ -14,11 +14,11 @@
 }
 
 #Navigation {
-	@include layout.sidebar-container;
+	@include web.layout--sidebar-container;
 }
 
 #NavLink {
-	@include layout.sidebar-item("#Active");
+	@include web.layout--sidebar-item("#Active");
 
 	line-height: unset;
 }

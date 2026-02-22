@@ -1,5 +1,5 @@
 @use "shared/utils";
-@use "web/apppage";
+@use "web";
 
 #ControllerSupportLevelString {
 	color: var(--color--fg-dim);
@@ -13,7 +13,7 @@
 }
 
 #InfoRow {
-	@include apppage.sidebar-list-item;
+	@include web.apppage--sidebar-list-item;
 
 	color: var(--color--primary);
 

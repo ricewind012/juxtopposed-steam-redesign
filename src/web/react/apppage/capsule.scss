@@ -1,5 +1,5 @@
 @use "shared/controls";
-@use "web/store";
+@use "web";
 
 #AddToWishlistButton {
 	@include controls.icon-button(
@@ -14,7 +14,7 @@
 }
 
 #Banner {
-	@include store.capsule-icon;
+	@include web.store--capsule-icon;
 
 	color: var(--color--primary);
 	font: var(--text--body-medium);
@@ -48,7 +48,7 @@
 #StoreSalePriceWidgetContainer {
 	background-color: transparent;
 
-	@include store.discount(
+	@include web.store--discount(
 		$discount-pct: "#StoreSaleDiscountBox",
 		$final-price: "#StoreSalePriceBox",
 		$no-discount: "&:not(#Discounted) #StoreSalePriceBox",
@@ -67,7 +67,7 @@
 }
 
 #Tag {
-	@include store.tag;
+	@include web.store--tag;
 
 	text-shadow: none;
 }

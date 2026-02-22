@@ -1,5 +1,5 @@
 @use "shared/controls";
-@use "web/apppage";
+@use "web";
 
 @mixin -section {
 	background: var(--color--bg-main-50);
@@ -28,7 +28,7 @@
 }
 
 .group_associated_game {
-	@include apppage.sidebar-list-item;
+	@include web.apppage--sidebar-list-item;
 
 	display: flex;
 	align-items: center;

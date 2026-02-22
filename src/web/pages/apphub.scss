@@ -1,7 +1,7 @@
 @use "shared/controls";
 @use "shared/style";
 @use "shared/utils";
-@use "web/apphub";
+@use "web";
 
 // TODO:
 // https://store.fastly.steamstatic.com/images/storepagebackground/app/2052410?t=1753952335
@@ -67,7 +67,7 @@
 	max-height: 50vh;
 
 	.review_award_aggregated {
-		@include apphub.card-metadata($icon: "military-tech");
+		@include web.apphub--card-metadata($icon: "military-tech");
 	}
 
 	.reward_btn_icon {
@@ -98,7 +98,7 @@
 }
 
 .apphub_CardCommentCount {
-	@include apphub.card-metadata($icon: "chat-bubble");
+	@include web.apphub--card-metadata($icon: "chat-bubble");
 
 	&.alignDiscussion {
 		margin-top: var(--spacing-sm);
@@ -308,7 +308,7 @@
 	align-items: center;
 
 	.apphub_CardRating {
-		@include apphub.card-metadata($icon: "thumb-up");
+		@include web.apphub--card-metadata($icon: "thumb-up");
 	}
 
 	.apphub_CardRightData {
@@ -325,7 +325,7 @@
 	flex-direction: column-reverse;
 
 	#{controls.button-web-selector(".btn_grey_grey")} {
-		@include apphub.card-metadata-button;
+		@include web.apphub--card-metadata-button;
 
 		// TODO(icons): rotate
 		&[id^="vote_down"] {

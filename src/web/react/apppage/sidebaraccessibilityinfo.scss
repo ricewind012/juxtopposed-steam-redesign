@@ -1,10 +1,10 @@
 @use "shared/controls";
 @use "shared/utils";
-@use "web/apppage";
+@use "web";
 
 #FeatureList {
 	#FeatureNameContainer {
-		@include apppage.sidebar-list-item;
+		@include web.apppage--sidebar-list-item;
 	}
 }
 
@@ -32,7 +32,7 @@
 #Summary {
 	--icon-size: 1lh;
 
-	@include apppage.sidebar-list-item;
+	@include web.apppage--sidebar-list-item;
 
 	#FeatureName {
 		all: unset;

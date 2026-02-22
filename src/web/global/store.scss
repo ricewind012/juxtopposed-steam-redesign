@@ -1,6 +1,6 @@
 @use "shared/carousel";
 @use "shared/utils";
-@use "web/store";
+@use "web";
 
 // Differences from the original mockup:
 // - The live broadcast icon uses --color--bg-main-50 instead of --color--bg-hl to make it
@@ -10,7 +10,7 @@
 	--circle-size: 1em;
 	--offset: var(--spacing-md);
 
-	@include store.capsule-icon;
+	@include web.store--capsule-icon;
 
 	color: var(--color--accent-red);
 	font: var(--text--body-medium);
@@ -119,7 +119,7 @@
 }
 
 .discount_block {
-	@include store.discount(
+	@include web.store--discount(
 		$discount-pct: ".discount_pct",
 		$final-price: ".discount_final_price",
 		$no-discount:
@@ -142,7 +142,7 @@
 
 	// TODO: wtf is this dogshit
 	@include carousel.button($child: "& > div", $icon: "settings");
-	@include store.capsule-icon;
+	@include web.store--capsule-icon;
 
 	opacity: 1;
 	font: var(--text--heading-large);
@@ -183,7 +183,7 @@
 
 .main_cap_discount,
 .main_cap_price {
-	@include store.capsule-icon;
+	@include web.store--capsule-icon;
 
 	padding: var(--spacing-sm);
 

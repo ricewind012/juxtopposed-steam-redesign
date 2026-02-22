@@ -1,5 +1,5 @@
 @use "shared/settings";
-@use "web/layout";
+@use "web";
 
 #PageListItem_Icon {
 	display: none;
@@ -77,7 +77,7 @@
 }
 
 #PagedSettingsDialog_PageListItem {
-	@include layout.sidebar-item("#Active");
+	@include web.layout--sidebar-item("#Active");
 
 	color: var(--color--fg-main);
 	font: var(--text--body-large);

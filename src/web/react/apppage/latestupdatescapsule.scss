@@ -1,4 +1,4 @@
-@use "web/store";
+@use "web";
 
 @mixin -horizontal {
 	#OtherEvents_EventCtn#HorizontalEvent & {
@@ -19,7 +19,7 @@
 }
 
 #OtherEvents_EventCtn {
-	@include store.capsule;
+	@include web.store--capsule;
 
 	background-image: none;
 	box-shadow: none;

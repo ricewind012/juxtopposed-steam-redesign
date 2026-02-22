@@ -1,11 +1,11 @@
-@use "client/titlebarcontrols";
+@use "client";
 @use "shared/controls";
 
 @mixin -button($icon) {
 	--icon-name: var(--icon-#{$icon});
 	--icon--size-lg: var(--dialog--window-control-size);
 
-	@include titlebarcontrols.button;
+	@include client.titlebarcontrols--button;
 }
 
 #AddGameButton {

@@ -1,7 +1,7 @@
-@use "client/appdetails";
+@use "client";
 
 #AppDetailsSection {
-	@include appdetails.section;
+	@include client.appdetails--section;
 }
 
 #AppDetailsSectionContainer {

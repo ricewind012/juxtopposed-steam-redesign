@@ -1,6 +1,6 @@
 @use "shared/controls";
 @use "shared/utils";
-@use "web/store";
+@use "web";
 
 #DiscoveryQueue {
 	--badge-offset: var(--spacing-md);
@@ -31,7 +31,7 @@
 	}
 
 	#New {
-		@include store.capsule-icon;
+		@include web.store--capsule-icon;
 
 		color: var(--color--accent-green);
 		font: var(--text--body-medium);

@@ -2,8 +2,7 @@
 @use "shared/menu";
 @use "shared/style";
 @use "shared/utils";
-@use "web/apppage";
-@use "web/store";
+@use "web";
 
 %-section {
 	background-color: var(--color--bg-main-50);
@@ -51,7 +50,7 @@ body.game_bg {
 
 // TODO: move to shared ?
 .app_tag {
-	@include store.tag;
+	@include web.store--tag;
 
 	margin: 0;
 }
@@ -226,7 +225,7 @@ body.game_bg {
 }
 
 .game_area_details_specs_ctn {
-	@include apppage.sidebar-list-item;
+	@include web.apppage--sidebar-list-item;
 
 	&:where(a) {
 		color: var(--color--primary);
@@ -317,7 +316,7 @@ body.game_bg {
 }
 
 .game_area_dlc_row {
-	@include apppage.sidebar-list-item;
+	@include web.apppage--sidebar-list-item;
 
 	background-image: none;
 
@@ -723,7 +722,7 @@ body.game_bg {
 	}
 
 	tr:not([style="display: none;"]) {
-		@include apppage.sidebar-list-item;
+		@include web.apppage--sidebar-list-item;
 
 		border: none;
 
@@ -803,7 +802,7 @@ body.game_bg {
 		}
 
 		.linkbar {
-			@include apppage.sidebar-list-item;
+			@include web.apppage--sidebar-list-item;
 
 			display: flex;
 			align-items: center;

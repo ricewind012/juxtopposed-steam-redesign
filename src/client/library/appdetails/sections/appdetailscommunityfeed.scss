@@ -1,9 +1,9 @@
-@use "client/appdetails";
+@use "client";
 
 #HeaderStyles {
 	background: none;
 }
 
 #LoadContentButton {
-	@include appdetails.button;
+	@include client.appdetails--button;
 }

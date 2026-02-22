@@ -1,5 +1,5 @@
 @use "shared/controls";
-@use "web/paging";
+@use "web";
 
 @mixin -button($variant: "secondary", $size: "md") {
 	all: unset;
@@ -44,7 +44,7 @@ input[type="checkbox"] {
 }
 
 .pagebtn {
-	@include paging.arrow($disabled: "&.disabled");
+	@include web.paging--arrow($disabled: "&.disabled");
 }
 
 /* TODO: restrict to account preferences

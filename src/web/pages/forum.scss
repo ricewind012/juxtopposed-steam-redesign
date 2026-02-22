@@ -1,8 +1,6 @@
 @use "shared/controls";
 @use "shared/utils";
-@use "web/apphub";
-@use "web/layout";
-@use "web/paging";
+@use "web";
 
 %-forum-post {
 	background: var(--color--bg-main-50);
@@ -153,7 +151,7 @@
 }
 
 .forum_comment_action_trigger {
-	@include apphub.card-metadata($icon: "arrow");
+	@include web.apphub--card-metadata($icon: "arrow");
 
 	margin: 0;
 	margin-inline-start: var(--spacing-sm);
@@ -173,7 +171,7 @@
 	margin: 0;
 
 	.forum_comment_action {
-		@include apphub.card-metadata($icon: "name");
+		@include web.apphub--card-metadata($icon: "name");
 
 		// Remove whitespace
 		gap: 0;
@@ -252,7 +250,7 @@
 }
 
 .forum_paging_controls {
-	@include paging.container;
+	@include web.paging--container;
 
 	&[style="display: none;"] {
 		visibility: hidden;
@@ -260,7 +258,7 @@
 }
 
 .forum_paging_pagelink {
-	@include paging.link($selected: "&.active");
+	@include web.paging--link($selected: "&.active");
 
 	margin: 0;
 }

@@ -1,7 +1,7 @@
-@use "web/store";
+@use "web";
 
 #Capsule:not(:empty) {
-	@include store.capsule;
+	@include web.store--capsule;
 
 	&#TwoWide {
 		box-shadow: none;

@@ -1,10 +1,10 @@
-@use "client/gamelist";
+@use "client";
 @use "shared/controls";
 @use "shared/utils";
-@use "web/store";
+@use "web";
 
 #AdvancedSearchButton {
-	@include gamelist.icon-button(
+	@include client.gamelist--icon-button(
 		"filter",
 		"#AdvancedSearchContainer#Extended &"
 	);
@@ -41,7 +41,7 @@
 #Container {
 	--text-field--width: 374px;
 
-	@include gamelist.part-container;
+	@include client.gamelist--part-container;
 
 	border-radius: 0;
 	margin: 0;
@@ -82,7 +82,7 @@
 }
 
 #FilterTag {
-	@include store.tag;
+	@include web.store--tag;
 
 	margin: -6.5px 0;
 

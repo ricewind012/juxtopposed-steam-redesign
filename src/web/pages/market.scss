@@ -1,8 +1,6 @@
 @use "shared/controls";
 @use "shared/utils";
-@use "web/layout";
-@use "web/paging";
-@use "web/store";
+@use "web";
 
 %-row {
 	border: none;
@@ -98,7 +96,7 @@
 
 .market_show_more_games > a,
 .game_button_contents {
-	@include layout.sidebar-item(".hack");
+	@include web.layout--sidebar-item(".hack");
 
 	font: var(--text--body-small);
 	color: var(--color--fg-main);
@@ -339,16 +337,16 @@
 	height: unset;
 
 	#searchResults_links {
-		@include paging.links-container;
+		@include web.paging--links-container;
 	}
 }
 
 .market_paging_controls {
-	@include paging.container;
+	@include web.paging--container;
 }
 
 .market_paging_pagelink {
-	@include paging.link($selected: "&.active");
+	@include web.paging--link($selected: "&.active");
 
 	margin: 0;
 }
@@ -411,7 +409,7 @@
 	}
 
 	.market_searchedForTerm {
-		@include store.tag;
+		@include web.store--tag;
 
 		border: none;
 

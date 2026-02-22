@@ -1,4 +1,4 @@
-@use "client/gamelist";
+@use "client";
 
 #Container {
 	background: linear-gradient(
@@ -10,7 +10,7 @@
 }
 
 #GameListHomeAndSearch {
-	@include gamelist.part-container;
+	@include client.gamelist--part-container;
 
 	box-shadow: none;
 	padding-inline-start: var(--spacing-sm);

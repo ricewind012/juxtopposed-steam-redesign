@@ -1,9 +1,12 @@
 @use "shared/controls";
-@use "web/store";
+@use "web";
 
 // ??? you guys maybe wanna unify this into one component ?
 #CategorySuggestion {
-	@include store.category($gradient: "#BackgroundGradient", $label: "#Content");
+	@include web.store--category(
+		$gradient: "#BackgroundGradient",
+		$label: "#Content"
+	);
 
 	img {
 		opacity: 1;

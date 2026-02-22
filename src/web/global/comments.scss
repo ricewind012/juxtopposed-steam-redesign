@@ -1,6 +1,6 @@
 @use "shared/controls";
 @use "shared/utils";
-@use "web/paging";
+@use "web";
 
 // TODO: unify with commentthread in client
 
@@ -157,11 +157,11 @@
 }
 
 .commentthread_pagelinks_ctn {
-	@include paging.container;
+	@include web.paging--container;
 }
 
 .commentthread_paging {
-	@include paging.container;
+	@include web.paging--container;
 
 	&[style="display: none;"],
 	&.has_view_all_link {
@@ -170,14 +170,14 @@
 }
 
 .commentthread_pagelink {
-	@include paging.link($selected: "&.active");
+	@include web.paging--link($selected: "&.active");
 
 	// For forums
 	margin: 0;
 }
 
 .commentthread_pagelinks {
-	@include paging.links-container;
+	@include web.paging--links-container;
 
 	margin: 0;
 }

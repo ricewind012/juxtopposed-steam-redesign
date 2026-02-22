@@ -1,9 +1,9 @@
+@use "client";
 @use "shared/style";
 @use "shared/utils";
-@use "client/titlebarcontrols";
 
 #AccountMenu {
-	@include titlebarcontrols.button;
+	@include client.titlebarcontrols--button;
 
 	font: var(--text--body-medium);
 	gap: 8px;
@@ -33,7 +33,7 @@
 }
 
 #Button {
-	@include titlebarcontrols.button;
+	@include client.titlebarcontrols--button;
 
 	color: inherit;
 }

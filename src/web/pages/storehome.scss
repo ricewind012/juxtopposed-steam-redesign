@@ -1,14 +1,14 @@
 @use "shared/carousel";
 @use "shared/controls";
 @use "shared/utils";
-@use "web/store";
+@use "web";
 
 // Differences from the original mockup:
 // - capsules use --rounding-lg instead of --rounding-md to match with
 //   the buttons inside them
 
 %-capsule {
-	@include store.capsule;
+	@include web.store--capsule;
 
 	background-image: none;
 }
@@ -141,7 +141,7 @@ body.no_home_gutter.infinite_scrolling {
 
 .content_hub_carousel_ctn {
 	.content_hub_capsule_ctn {
-		@include store.category($gradient: ".gradient", $label: ".label_ctn");
+		@include web.store--category($gradient: ".gradient", $label: ".label_ctn");
 
 		width: var(--carousel--image-width);
 		height: var(--carousel--image-width);
@@ -290,7 +290,7 @@ body.no_home_gutter.infinite_scrolling {
 	.deep_dive_tag {
 		all: unset;
 
-		@include store.tag;
+		@include web.store--tag;
 	}
 }
 
@@ -717,7 +717,7 @@ body.no_home_gutter.infinite_scrolling {
 
 		.additional > div,
 		.tags > span {
-			@include store.tag;
+			@include web.store--tag;
 
 			margin: 0;
 		}
@@ -932,7 +932,7 @@ body.no_home_gutter.infinite_scrolling {
 			height: unset;
 
 			& > a {
-				@include store.tag;
+				@include web.store--tag;
 
 				margin: 0;
 			}

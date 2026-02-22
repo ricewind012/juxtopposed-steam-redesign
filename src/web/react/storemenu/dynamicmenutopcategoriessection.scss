@@ -1,8 +1,8 @@
-@use "web/store";
+@use "web";
 
 // ??? you guys maybe wanna unify this into one component ?
 #CategoryLink {
-	@include store.category(
+	@include web.store--category(
 		$gradient: "#Gradient",
 		$label: "#CategoryTitleAlign"
 	);
@@ -39,7 +39,7 @@
 }
 
 #TagLink {
-	@include store.tag;
+	@include web.store--tag;
 
 	height: unset;
 }

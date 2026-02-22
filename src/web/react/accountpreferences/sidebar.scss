@@ -1,7 +1,7 @@
-@use "web/layout";
+@use "web";
 
 .nav_item {
-	@include layout.sidebar-item(".active");
+	@include web.layout--sidebar-item(".active");
 
 	&:last-child {
 		margin: 0;

@@ -1,0 +1,73 @@
+@use "shared/controls";
+@use "shared/style";
+@use "shared/utils";
+
+@mixin appdetails--blur {
+	background-color: color-mix(in srgb, var(--color--bg-hl) 2%, transparent);
+	backdrop-filter: var(--blur);
+}
+
+@mixin appdetails--button {
+	@include controls.button;
+
+	background: var(--color--bg-main-20);
+	margin: 0;
+}
+
+@mixin appdetails--section {
+	background: rgba(49, 56, 67, 0.5);
+	border-radius: var(--rounding-lg);
+	padding: var(--spacing-xl);
+	margin-block-end: 16px;
+}
+
+@mixin gamelist--icon-button($icon-name, $active-selector) {
+	--percentage: 5%;
+	--icon--size-lg: 30px;
+
+	background-color: color-mix(
+		in srgb,
+		currentColor var(--percentage),
+		transparent
+	);
+	color: var(--color--fg-dim);
+	border-radius: var(--rounding-md);
+	padding: var(--spacing-xs);
+
+	&:hover {
+		--percentage: 10%;
+	}
+
+	&:active {
+		--percentage: 20%;
+	}
+
+	#{$active-selector} {
+		color: var(--color--fg-main);
+	}
+
+	svg {
+		@include utils.icon($name: $icon-name, $remove: true, $size: "lg");
+	}
+}
+
+@mixin gamelist--part-container {
+	@include style.header;
+
+	gap: var(--header--button-spacing);
+	padding-inline-start: var(--library_gamelist-bar-gap);
+}
+
+@mixin titlebarcontrols--button {
+	background-color: var(--color--bg-hl);
+	border-radius: var(--rounding-md);
+	padding: var(--spacing-xs) 15px;
+
+	&:hover {
+		background-color: var(--color--bg-hover);
+	}
+
+	svg {
+		@include utils.icon($remove: true, $size: "lg");
+	}
+}

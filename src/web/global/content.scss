@@ -1,5 +1,5 @@
 @use "shared/controls";
-@use "web/apphub";
+@use "web";
 
 // TODO: unify
 @mixin -sidebar-header {
@@ -212,7 +212,7 @@ body:not(.game_bg) .rightcol {
 }
 
 .review_award {
-	@include apphub.card-metadata($icon: "military-tech");
+	@include web.apphub--card-metadata($icon: "military-tech");
 
 	.review_award_ctn:not(.show_all_awards) > &.unpurchaseable,
 	.review_award_ctn.show_all_awards > &.more_btn,

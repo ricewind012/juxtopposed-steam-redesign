@@ -1,4 +1,4 @@
-@use "client/gamelist";
+@use "client";
 @use "shared/controls";
 
 #Arrow {
@@ -6,7 +6,7 @@
 }
 
 #Bar {
-	@include gamelist.part-container;
+	@include client.gamelist--part-container;
 
 	anchor-name: --gamelistdropdown;
 
@@ -30,7 +30,7 @@
 }
 
 #CheckboxWithImage {
-	@include gamelist.icon-button("name", "&#Active");
+	@include client.gamelist--icon-button("name", "&#Active");
 
 	margin: 0;
 

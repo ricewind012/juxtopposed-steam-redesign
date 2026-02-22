@@ -1,7 +1,7 @@
-@use "web/store";
+@use "web";
 
 #DiscountBlock {
-	@include store.discount(
+	@include web.store--discount(
 		$discount-pct: "#DiscountPct",
 		$final-price: "#FinalPrice",
 		// Done elsewhere I forgot where
