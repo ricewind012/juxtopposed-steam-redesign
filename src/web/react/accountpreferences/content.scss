@@ -1,7 +1,20 @@
 @use "shared/controls";
+@use "web";
 
 body:is(.account, .account_preferences) {
 	background: #11171e;
+}
+
+.nav_item {
+	@include web.layout--sidebar-item(".active");
+
+	&:last-child {
+		margin: 0;
+	}
+
+	&::after {
+		display: none;
+	}
 }
 
 .two_column {
