@@ -118,28 +118,6 @@
 
 .commentthread_entry_submitlink {
 	padding-block-start: var(--spacing-sm);
-
-	.emoticon_button {
-		@include controls.icon-button(
-			$w: 44px,
-			$name: "emoticon",
-			$child: "&::before"
-		);
-
-		background-image: none;
-		margin: 0;
-
-		vertical-align: center;
-		display: inline-flex;
-		align-items: center;
-		justify-content: center;
-
-		&::before {
-			content: "";
-
-			display: block;
-		}
-	}
 }
 
 .commentthread_footer {
@@ -231,4 +209,26 @@
 
 .commentthread_workshop_authorbadge {
 	color: var(--color--accent-yellow);
+}
+
+.emoticon_button {
+	@include controls.icon-button(
+		$w: 44px,
+		$name: "emoticon",
+		$child: "&::before"
+	);
+
+	background-image: none;
+	margin: 0;
+
+	vertical-align: center;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+
+	&::before {
+		content: "";
+
+		display: block;
+	}
 }

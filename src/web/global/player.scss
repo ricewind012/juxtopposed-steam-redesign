@@ -59,6 +59,7 @@
 }
 
 :where(.appHubIconHolder),
+:where(.blotter_playerAvatarSmall),
 .playerAvatar {
 	--size: var(--avatar--size-sm);
 	--img-size: calc(var(--size) - var(--avatar--border-size) * 2);

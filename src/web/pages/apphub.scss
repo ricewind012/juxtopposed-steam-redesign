@@ -217,7 +217,7 @@
 }
 
 .apphub_CardContentMain {
-	position: unset;
+	position: relative;
 
 	& > .apphub_CardContentType {
 		position: absolute;
@@ -644,7 +644,7 @@
 	@extend %-content-type;
 
 	// TODO(localization): localize, webpack should be available
-	&::before {
+	.apphub_Content &::before {
 		content: "Review";
 	}
 

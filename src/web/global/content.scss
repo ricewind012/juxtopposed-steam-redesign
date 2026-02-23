@@ -292,3 +292,25 @@ body:not(.game_bg) .rightcol {
 	width: var(--icon--size-sm);
 	height: var(--icon--size-sm);
 }
+
+.shared_autocollapse_fade {
+	background: none;
+
+	&::after {
+		content: "";
+
+		position: absolute;
+		inset-block-end: 44px;
+		inset-inline: 0;
+		height: 100px;
+
+		background: linear-gradient(transparent, var(--color--bg-main));
+	}
+
+	.shared_autocollapse_readmore {
+		--button--secondary-bg: var(--color--bg-main);
+		--rounding-md: 0;
+
+		@include controls.button;
+	}
+}

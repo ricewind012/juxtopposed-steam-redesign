@@ -1,0 +1,517 @@
+@use "shared/controls";
+@use "web";
+
+// TODO: unify all
+@mixin -section {
+	background: var(--color--bg-main-50);
+	border-radius: var(--rounding-lg);
+	padding: var(--spacing-xl);
+	margin-block-end: var(--spacing-md);
+}
+
+@mixin -section-header {
+	color: var(--color--fg-dim);
+	font: var(--text--heading-small);
+	margin-block-end: var(--spacing-xxl);
+}
+
+@mixin -sidebar-container {
+	background-color: var(--color--bg-main);
+	border-radius: var(--rounding-lg);
+	padding: var(--spacing-md);
+}
+
+@mixin -sidebar-header {
+	color: var(--color--fg-dim);
+	font: var(--text--body-medium);
+	text-transform: uppercase;
+	border-block-start: var(--border-sm) solid var(--color--bg-hl);
+	padding-block-start: var(--spacing-sm);
+	margin-block: var(--spacing-sm) var(--spacing-xs);
+}
+
+/// All args are selectors.
+@mixin -search($input, $icon) {
+	all: unset;
+
+	position: relative;
+	height: 100%;
+
+	#{$icon} {
+		@include controls.text-field-icon($name: "search");
+
+		// TODO(mixins): <img> shit
+		content: url("data:,");
+	}
+
+	#{$input} {
+		all: unset;
+
+		@include controls.text-field($variant: "search");
+
+		box-sizing: border-box;
+		width: 100%;
+	}
+}
+
+.blotter_appselect {
+	@include controls.dropdown;
+
+	margin-inline-end: var(--spacing-sm);
+
+	height: unset;
+}
+
+.blotter_appselect_activeoption {
+	all: unset;
+}
+
+// Context menu, not here cuz not shared mixin yet (TODO)
+#blotter_appselect_app_filter_container {
+	@include -search(
+		$icon: "#blotter_appselect_search_img",
+		$input: "#blotter_appselect_app_filter"
+	);
+}
+
+.blotter_author_block,
+.blotter_group_announcement_header {
+	background-color: var(--color--bg-main-50);
+	color: var(--color--fg-dim);
+	font: var(--text--body-medium);
+	border: none;
+	border-radius: var(--rounding-lg) var(--rounding-lg) 0 0;
+	padding: var(--spacing-sm);
+
+	min-height: unset;
+}
+
+.blotter_avatar_holder {
+	margin-inline-end: var(--spacing-sm);
+}
+
+.blotter_block {
+	background-color: var(--color--bg-main-50);
+	border-radius: var(--rounding-lg);
+	box-shadow: none;
+	margin-block-end: var(--spacing-md);
+
+	// Review
+	.apphub_UserReviewCardContent {
+		background: var(--color--bg-main-50);
+		color: var(--color--fg-main);
+		border-radius: var(--rounding-lg) var(--rounding-lg) 0 0;
+		padding: var(--spacing-sm);
+
+		.found_helpful {
+			inset-block-end: var(--spacing-sm);
+			inset-inline-end: var(--spacing-sm);
+		}
+	}
+
+	.UserReviewCardContent_Footer {
+		.control_block .text {
+			all: unset;
+		}
+	}
+
+	// Screenshot
+	.highlight_strip {
+		margin: 0;
+	}
+
+	.highlight_strip_bg {
+		margin: var(--spacing-sm);
+	}
+
+	// Workshop
+	.dynamiclink_author,
+	.dynamiclink_type {
+		color: var(--color--fg-dim);
+		font: var(--text--body-small);
+	}
+
+	.dynamiclink_author span {
+		color: inherit;
+	}
+
+	.dynamiclink_box {
+		background: none;
+		color: var(--color--fg-main);
+		font: var(--text--body-large);
+		padding: 0;
+		margin: var(--spacing-sm);
+	}
+
+	.dynamiclink_content {
+		all: unset;
+	}
+
+	.dynamiclink_name {
+		color: var(--color--fg-main);
+		font: var(--text--heading-small);
+		border: none;
+		margin: 0;
+	}
+
+	.dynamiclink_preview {
+		border-radius: var(--rounding-md);
+		margin-inline-end: var(--spacing-md);
+	}
+}
+
+.blotter_comment_thread {
+	background-color: var(--color--bg-main-50);
+	border: none;
+	border-radius: 0 0 var(--rounding-lg) var(--rounding-lg);
+
+	.commentthread_area,
+	.commentthread_comments {
+		padding: 0;
+	}
+
+	.commentthread_area > :not(.forum_newtopic_box) {
+		margin-inline: var(--spacing-sm);
+	}
+}
+
+#blotter_content {
+	margin: 0;
+
+	width: calc(
+		var(--content--width-sm) - var(--content--sidebar-width) - var(--spacing-md)
+	);
+}
+
+.blotter_control_container {
+	// TODO(vars): border colors
+	border-block-start: var(--border-sm) solid var(--color--bg-hover);
+	padding: 0;
+	padding-block-start: var(--spacing-sm);
+	margin: var(--spacing-sm);
+}
+
+.blotter_daily_rollup {
+	background-color: transparent;
+	padding: var(--spacing-lg);
+}
+
+.blotter_daily_rollup_line {
+	padding: 0;
+	gap: var(--spacing-sm);
+	margin-block-end: var(--spacing-xxs);
+
+	display: flex;
+	align-items: center;
+	min-height: unset;
+
+	& > span {
+		color: var(--color--fg-dim);
+		margin: 0;
+	}
+}
+
+.blotter_day {
+	margin-block-end: var(--spacing-xxl);
+}
+
+.blotter_day_header {
+	color: var(--color--primary);
+	font: var(--text--body-large);
+	border-block-end: var(--border-md) solid var(--color--secondary);
+	padding: 0;
+	padding-block-end: 4px;
+	margin-block-end: var(--spacing-sm);
+
+	height: unset;
+}
+
+.blotter_day_header_date {
+	all: unset;
+}
+
+.blotter_day_header_divider {
+	display: none;
+}
+
+.blotter_eventsblock {
+	background-color: transparent;
+	padding: 0;
+	margin: 0;
+}
+
+.blotter_eventsblock_title {
+	@include -sidebar-header;
+}
+
+.blotter_gamepurchase_content {
+	padding: var(--spacing-sm);
+	padding-block-end: 0;
+
+	img {
+		border-radius: var(--rounding-md);
+	}
+}
+
+.blotter_gamepurchase_details {
+	color: var(--color--fg-dim);
+	font: var(--text--body-large);
+	padding: var(--spacing-sm);
+	padding-block-end: 0;
+}
+
+.blotter_gamepurchase_logo.single_item {
+	margin-inline-end: var(--spacing-md);
+}
+
+.blotter_group_announcement_content {
+	color: var(--color--fg-main);
+	font: var(--text--body-large);
+	padding: var(--spacing-sm);
+}
+
+.blotter_group_announcement_header_text {
+	padding: 0;
+}
+
+.blotter_group_announcement_headline {
+	font: var(--text--heading-small);
+}
+
+.blotter_group_container {
+	padding: 0;
+	margin-inline-end: var(--spacing-sm);
+
+	img {
+		width: var(--avatar--size-xs);
+		height: var(--avatar--size-xs);
+	}
+}
+
+#blotter_page {
+	width: var(--content--width-sm);
+}
+
+.blotter_page_title {
+	padding: 0;
+	margin: 0;
+
+	display: flex;
+	flex-direction: column-reverse;
+
+	h1 {
+		color: var(--color--fg-main);
+		font: var(--text--heading-large);
+	}
+
+	span {
+		color: var(--color--fg-dim);
+		font: var(--text--body-small);
+		margin: 0;
+	}
+}
+
+.blotter_playerAvatarSmall {
+	--size: var(--avatar--size-xs);
+}
+
+.blotter_poststatus_avatar,
+.blotter_rollup_avatar {
+	position: unset;
+}
+
+.blotter_recommendation_content {
+	padding: var(--spacing-sm);
+
+	a > img {
+		border-radius: var(--rounding-md);
+		margin: 0;
+	}
+
+	.hr {
+		// TODO(vars): border oclor
+		background-color: var(--color--bg-hover);
+		border: none;
+		margin-block: var(--spacing-sm);
+
+		height: var(--border-sm);
+	}
+}
+
+.blotter_screenshot_gallery_image,
+.blotter_screenshot_gallery_image_selected {
+	border: var(--border-lg) solid transparent;
+	border-radius: var(--rounding-md);
+}
+
+.blotter_screenshot_gallery_image_selected {
+	border-color: var(--color--primary);
+}
+
+.blotter_screenshot_image {
+	background-color: var(--color--bg-main-20);
+	padding: 0;
+}
+
+.blotter_screenshot_title {
+	color: var(--color--primary);
+	font: var(--text--body-large);
+	padding: var(--spacing-sm);
+}
+
+.blotter_small_friend_block_container {
+	display: contents;
+}
+
+.blotter_status_entry {
+	.commentthread_entry {
+		margin: 0;
+
+		@include -section;
+	}
+}
+
+.blotter_status_submit_ctn {
+	padding-block-start: var(--spacing-sm);
+}
+
+.blotter_viewallcomments_container {
+	padding: var(--spacing-sm);
+}
+
+.blotter_voters_names {
+	color: var(--color--fg-dim);
+	font: var(--text--body-small);
+	padding-inline-end: var(--spacing-sm);
+}
+
+.blotter_workshopcollection {
+	background: none;
+	gap: var(--spacing-md);
+	margin: var(--spacing-sm);
+
+	display: flex;
+	width: 100%;
+}
+
+.blotter_workshopitem_collection_preview img {
+	border: none;
+	margin: 0;
+}
+
+.blotter_workshopitem_description {
+	color: var(--color--fg-main);
+	font: var(--text--body-large);
+	padding: 0;
+}
+
+.blotter_workshopitem_metadata {
+	padding: 0;
+}
+
+.blotter_workshopitem_title {
+	font: var(--text--heading-small);
+	padding-block-end: var(--spacing-sm);
+}
+
+.friend_activity_header {
+	padding-block: var(--content--spacing-block-start);
+
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: space-between;
+}
+
+.friend_activity_header_search {
+	@include -search($icon: "#searchSubmitImg", $input: "#searchInputBoxNew");
+
+	width: var(--content--sidebar-width);
+}
+
+.friends_add_block {
+	background-color: transparent;
+	padding: 0;
+	margin: 0;
+}
+
+.friends_launch_area {
+	@include -sidebar-container;
+
+	color: var(--color--fg-dim);
+	font: var(--text--body-medium);
+
+	display: flex;
+	flex-direction: column;
+}
+
+#friendactivity_right_column {
+	width: var(--content--sidebar-width);
+}
+
+// Duplicate info
+.friends_link_block,
+.profile_link_block:first-child {
+	display: none;
+}
+
+.profile_add_friends_title,
+.profile_friends_ingame {
+	@include -sidebar-header;
+
+	padding-inline: 0;
+}
+
+.profile_link_block {
+	background-color: transparent;
+	padding: 0;
+	margin: 0;
+
+	order: -1;
+	display: flex;
+	flex-direction: column;
+}
+
+.profile_menu_item {
+	display: contents;
+
+	a {
+		@include web.apppage--sidebar-list-item;
+	}
+
+	img {
+		display: none;
+	}
+}
+
+.profile_menu_text {
+	padding: 0;
+}
+
+.profile_options_divider {
+	// TODO(vars): border oclor
+	background-color: var(--color--bg-hover);
+	border: none;
+	margin-block: var(--spacing-sm);
+
+	height: var(--border-sm);
+}
+
+.profileFriendSearchBox {
+	@include -search(
+		$icon: "#profileFriendSearchSubmitImg",
+		$input: "#profileFriendSearchInputBox"
+	);
+}
+
+#profileFriendSearchField {
+	display: contents;
+}
+
+#profileFriendSearchSubmitImg {
+	border: none;
+	margin: 0;
+}
+
+.webchat_own_avatar {
+	padding: 0;
+}
