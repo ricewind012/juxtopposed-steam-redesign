@@ -27,10 +27,9 @@
 	}
 
 	&:where(#IconButton) {
-		// TODO(vars): BodyLarge font-size * line-height
 		--size: calc(
-			16px * 1.4 + var(--button--border-size) * 2 +
-				var(--button--spacing-block-sm) * 2
+			var(--text--body-large-size) * var(--text--line-height) +
+				var(--button--border-size) * 2 + var(--button--spacing-block-sm) * 2
 		);
 
 		padding: 0;

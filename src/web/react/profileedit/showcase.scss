@@ -106,9 +106,7 @@
 	max-width: unset;
 
 	&::before {
-		--gpText-lh: 1.4;
-		// TODO(vars): gpText lh - (gpText lh - normal lh) / text lines
-		--lh: calc(var(--gpText-lh) - (var(--gpText-lh) - 1) / 2);
+		--lh: calc(var(--text--line-height) - (var(--text--line-height) - 1) / 2);
 
 		content: "";
 

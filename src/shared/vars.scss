@@ -20,6 +20,7 @@
 		var(--color--bg-main) 50%,
 		transparent
 	);
+	--color--border: var(--color--bg-hover);
 
 	--color--fg-main: #f3f3f3;
 	--color--fg-dim: #76808c;
@@ -49,13 +50,40 @@
 	--spacing-xxl: 30px;
 
 	// Typography
-	--text--heading-large: normal 700 26px/1.4 "Motiva Sans", Arial, Sans-serif;
-	--text--heading-medium: normal 700 22px/1.4 "Motiva Sans", Arial, Sans-serif;
-	--text--heading-small: normal 700 18px/1.4 "Motiva Sans", Arial, Sans-serif;
+	--text--font-family: "Motiva Sans", Arial, sans-serif;
+	--text--font-family-monospace: "Roboto-Mono", "Roboto Mono", monospace;
+	--text--line-height: 1.4;
 
-	--text--body-large: normal 400 16px/1.4 "Motiva Sans", Arial, Sans-serif;
-	--text--body-medium: normal 400 14px/1.4 "Motiva Sans", Arial, Sans-serif;
-	--text--body-small: normal 400 12px/1.4 "Motiva Sans", Arial, Sans-serif;
+	--text--weight-bold: 700;
+	--text--weight-normal: 400;
+
+	--text--heading-large-size: 26px;
+	--text--heading-medium-size: 22px;
+	--text--heading-small-size: 18px;
+
+	--text--body-large-size: 16px;
+	--text--body-medium-size: 14px;
+	--text--body-small-size: 12px;
+
+	--text--heading-large: normal var(--text--weight-bold)
+		var(--text--heading-large-size)/var(--text--line-height)
+		var(--text--font-family);
+	--text--heading-medium: normal var(--text--weight-bold)
+		var(--text--heading-small-size)/var(--text--line-height)
+		var(--text--font-family);
+	--text--heading-small: normal var(--text--weight-bold)
+		var(--text--heading-small-size)/var(--text--line-height)
+		var(--text--font-family);
+
+	--text--body-large: normal var(--text--weight-normal)
+		var(--text--body-large-size)/var(--text--line-height)
+		var(--text--font-family);
+	--text--body-medium: normal var(--text--weight-normal)
+		var(--text--body-medium-size)/var(--text--line-height)
+		var(--text--font-family);
+	--text--body-small: normal var(--text--weight-normal)
+		var(--text--body-small-size)/var(--text--line-height)
+		var(--text--font-family);
 
 	// Avatar
 	--avatar--border-radius: 4px;
@@ -165,9 +193,9 @@
 	--header--bg: var(--color--bg-tertiary);
 	--header--button-bg: transparent;
 	--header--button-spacing: var(--spacing-xs);
-	// TODO(vars): typography (body large)
 	--header--height: calc(
-		16px * 1.4 + var(--button--spacing-block-md) * 2 +
+		var(--text--body-large-size) * var(--text--line-height) +
+			var(--button--spacing-block-md) * 2 + var(--button--border-size) * 2 +
 			var(--header--spacing-block) * 2
 	);
 	--header--spacing-block: 6px;

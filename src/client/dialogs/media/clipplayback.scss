@@ -22,9 +22,8 @@
 
 #TimeBar {
 	color: var(--color--fg-main);
-	// TODO(vars): monospace typography
 	font: var(--text--body-small);
-	font-family: "Roboto-Mono", "Motiva Sans", sans-serif;
+	font-family: var(--text--font-family-monospace);
 
 	#TimeDash,
 	#TimeTotal {

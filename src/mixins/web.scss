@@ -194,9 +194,9 @@
 	$prices-container
 ) {
 	--discount-pct-padding-block: 8px;
-	--gpText-lh: 1.4;
-	// TODO(vars): gpText lh - (gpText lh - normal lh) / text lines
-	--right-side-line-height: calc(var(--gpText-lh) - (var(--gpText-lh) - 1) / 2);
+	--right-side-line-height: calc(
+		var(--text--line-height) - (var(--text--line-height) - 1) / 2
+	);
 
 	font: var(--text--heading-small);
 	gap: var(--spacing-sm);

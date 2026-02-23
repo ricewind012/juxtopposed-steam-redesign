@@ -52,7 +52,7 @@
 .commentthread_comment_author {
 	/* HeadingSmall is too large */
 	font: var(--text--body-large);
-	font-weight: bold;
+	font-weight: var(--text--weight-bold);
 }
 
 .commentthread_comment_avatar {

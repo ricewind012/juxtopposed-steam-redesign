@@ -207,8 +207,7 @@
 }
 
 .game_info_stats_rule {
-	// TODO(vars): border
-	background-color: var(--color--bg-hover);
+	background-color: var(--color--border);
 	border: none;
 	margin-block: var(--spacing-sm);
 
@@ -690,7 +689,7 @@
 
 	&:where(div) {
 		background-attachment: fixed;
-		background-position-y: var(--header-height);
+		background-position-y: var(--header--height);
 		padding-bottom: 187px;
 	}
 }

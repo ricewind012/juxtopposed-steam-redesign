@@ -24,15 +24,22 @@
 }
 
 #ChangeItemHoverArea {
-	--top-offset: calc(
-		var(--dialog--window-control-size) + var(--spacing-sm) * 2 +
-			var(--button--spacing-block-sm) * 2
+	--button-height: calc(
+		var(--text-height-large) + var(--button--spacing-block-sm) * 2 +
+			var(--button--border-size) * 2
+	);
+	--text-height-large: var(--text--body-large-size) * var(--text--line-height);
+	--text-height-medium: var(--text--body-medium-size) * var(--text--line-height);
+
+	--offset-top: calc(var(--spacing-sm * 2) + var(--button-height));
+	--offset-bottom: calc(
+		var(--text-height-medium) + var(--button-height) +
+			var(--dialog--spacing-container) * 2 + var(--spacing-sm)
 	);
 
-	top: var(--top-offset);
+	top: var(--offset-top);
 	width: unset;
-	// TODO(vars):
-	height: calc(100% - var(--top-offset) - 103px);
+	height: calc(100% - var(--offset-top) - var(--offset-bottom));
 
 	svg {
 		margin: 0;
@@ -86,10 +93,9 @@
 
 	#DurationText {
 		color: var(--color--primary);
-		// TODO(vars): monospace typography
 		font: var(--text--body-small);
-		font-family: "Roboto-Mono", "Motiva Sans", sans-serif;
-		font-weight: bold;
+		font-family: var(--text--font-family-monospace);
+		font-weight: var(--text--weight-bold);
 		gap: var(--spacing-xxs);
 
 		&#DurationTextClip {

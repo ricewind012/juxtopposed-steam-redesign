@@ -433,9 +433,9 @@ body.game_bg {
 	color: var(--color--fg-dim);
 	font: var(--text--body-medium);
 
-	// TODO(vars): typography
 	min-height: calc(
-		var(--button--spacing-block-md) * 2 + 16px * 1.4 + var(--spacing-xl) * 2
+		var(--button--spacing-block-md) * 2 + var(--text--body-large-size) *
+			var(--text--line-height) + var(--spacing-xl) * 2
 	);
 
 	&.demo_above_purchase {
@@ -1160,7 +1160,7 @@ body.game_bg {
 
 	position: absolute;
 	inset-block-start: calc(
-		var(--header-height) + var(--content--spacing-block-start)
+		var(--header--height) + var(--content--spacing-block-start)
 	);
 	inset-inline: calc((100vw - var(--store-page-width)) / 2 - var(--spacing-xs));
 	max-width: var(--store-page-width);

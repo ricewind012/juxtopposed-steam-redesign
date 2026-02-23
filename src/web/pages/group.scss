@@ -159,7 +159,7 @@
 
 	&:where(#group_tab_content_overview) {
 		.rightbox:nth-child(2) > .content:first-child {
-			border-block-start: var(--border-sm) solid var(--color--bg-hover);
+			border-block-start: var(--border-sm) solid var(--color--border);
 			padding-block-start: var(--spacing-sm);
 
 			order: 1;
@@ -234,7 +234,7 @@
 		all: unset;
 
 		gap: var(--spacing-sm);
-		border-block-start: var(--border-sm) solid var(--color--bg-hover);
+		border-block-start: var(--border-sm) solid var(--color--border);
 		padding-block-start: var(--spacing-sm);
 
 		display: flex;
@@ -398,7 +398,7 @@
 
 	position: absolute;
 	inset: 0;
-	inset-block-start: var(--header-height);
+	inset-block-start: var(--header--height);
 	height: calc(var(--tile-size) * 6);
 	z-index: -1;
 

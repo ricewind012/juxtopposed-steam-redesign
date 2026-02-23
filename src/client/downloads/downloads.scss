@@ -9,9 +9,12 @@
 }
 
 #DownloadsPage {
+	--button-height: calc(
+		1lh + var(--button--spacing-block-md) * 2 + var(--button--border-size) * 2
+	);
+
 	background: none;
-	// TODO(vars): button height
-	margin-top: calc(44px + var(--spacing-xl));
+	margin-top: calc(var(--button-height) + var(--spacing-xl));
 
 	.DialogButton {
 		// Assume download as this doesn't have a distinguishing class name lol
@@ -41,7 +44,6 @@
 }
 
 #ItemLists {
-	// TODO(vars):
 	margin-left: var(--spacing-xl);
 	// 16px = scrollbar for now
 	margin-right: calc(var(--spacing-xl) - 16px);

@@ -101,7 +101,7 @@ $-others: ":where(#StandaloneFieldSeparator, .DialogControlsSection)";
 }
 
 #StandaloneFieldSeparator {
-	background-color: var(--color--bg-hover);
+	background-color: var(--color--border);
 
 	.DialogBody > & {
 		display: none;

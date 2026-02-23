@@ -90,10 +90,9 @@
 
 	#DurationText {
 		color: var(--color);
-		// TODO(vars): monospace typography
 		font: var(--text--body-small);
-		font-family: "Roboto-Mono", "Motiva Sans", sans-serif;
-		font-weight: bold;
+		font-family: var(--text--font-family-monospace);
+		font-weight: var(--text--weight-bold);
 	}
 
 	#DurationMetric {

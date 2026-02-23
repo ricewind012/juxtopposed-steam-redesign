@@ -13,14 +13,16 @@
 }
 
 #Unlocked {
-	// TODO(vars)
-	--border-color: color-mix(in srgb, var(--color--fg-dim) 40%, transparent);
-
 	background: none;
 	color: inherit;
 	font: inherit;
 	border-block-start: var(--border-sm) solid;
-	border-image: linear-gradient(90deg, var(--border-color), transparent) 1;
+	border-image: linear-gradient(
+		90deg,
+		var(--button--tertiary-border-hover),
+		transparent
+	);
+	border-image-slice: 1;
 	padding: 0;
 	padding-block-start: var(--spacing-sm);
 	margin-block-start: var(--spacing-sm);

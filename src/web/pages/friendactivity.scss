@@ -184,8 +184,7 @@
 }
 
 .blotter_control_container {
-	// TODO(vars): border colors
-	border-block-start: var(--border-sm) solid var(--color--bg-hover);
+	border-block-start: var(--border-sm) solid var(--color--border);
 	padding: 0;
 	padding-block-start: var(--spacing-sm);
 	margin: var(--spacing-sm);
@@ -329,8 +328,7 @@
 	}
 
 	.hr {
-		// TODO(vars): border oclor
-		background-color: var(--color--bg-hover);
+		background-color: var(--color--border);
 		border: none;
 		margin-block: var(--spacing-sm);
 
@@ -488,8 +486,7 @@
 }
 
 .profile_options_divider {
-	// TODO(vars): border oclor
-	background-color: var(--color--bg-hover);
+	background-color: var(--color--border);
 	border: none;
 	margin-block: var(--spacing-sm);
 

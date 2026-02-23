@@ -1,8 +1,7 @@
 @use "shared/menu";
 
 #NotificationHeader {
-	// TODO(vars): border vars
-	border-block-end: var(--border-sm) solid var(--color--bg-hover);
+	border-block-end: var(--border-sm) solid var(--color--border);
 	padding: 0;
 
 	#AllNotificationsButton {
