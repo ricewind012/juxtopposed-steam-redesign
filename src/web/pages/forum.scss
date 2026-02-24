@@ -2,14 +2,6 @@
 @use "shared/utils";
 @use "web";
 
-%-forum-post {
-	background: var(--color--bg-main-50);
-	border: none;
-	border-radius: var(--rounding-lg);
-	box-shadow: none;
-	margin-bottom: var(--spacing-md);
-}
-
 %-right-side-text {
 	color: var(--color--primary);
 	font: var(--text--body-large);
@@ -211,9 +203,10 @@
 }
 
 .forum_newtopic_box {
-	@extend %-forum-post;
+	@include web.section--container;
 
-	padding: 20px;
+	border: none;
+	box-shadow: none;
 
 	&:not(.forum_topic_pinned_notice) {
 		margin: 0;
@@ -264,9 +257,10 @@
 }
 
 .forum_op {
-	@extend %-forum-post;
+	@include web.section--container;
 
-	padding: 20px;
+	border: none;
+	box-shadow: none;
 
 	max-width: unset;
 
@@ -403,7 +397,7 @@
 		--avatar-size: var(--avatar--size-sm);
 		--spacing-sm: 20px;
 
-		@extend %-forum-post;
+		@include web.section--container;
 	}
 
 	.commentthread_comment_author {

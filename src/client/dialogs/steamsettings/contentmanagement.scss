@@ -1,6 +1,6 @@
 @use "shared/controls";
-@use "shared/settings";
 @use "shared/utils";
+@use "client";
 
 $-bar-colors: (
 	DLC: 0,
@@ -13,9 +13,8 @@ $-bar-colors: (
 );
 
 #AppActionBar {
-	@include settings.section;
+	@include client.settings--section;
 
-	background-color: var(--color--bg-main-50);
 	border-radius: 0 0 var(--rounding-md) var(--rounding-md);
 	margin: 0;
 
@@ -82,7 +81,7 @@ $-bar-colors: (
 }
 
 #AppHeader {
-	@include settings.header;
+	@include client.settings--header;
 
 	padding: 0;
 
@@ -106,12 +105,10 @@ $-bar-colors: (
 }
 
 #AppsGrid {
-	@include settings.section;
+	@include client.settings--section;
 
-	background-color: var(--color--bg-main-50);
 	border-radius: var(--rounding-md) var(--rounding-md) 0 0;
 	padding-block-end: 0;
-	margin-block: var(--spacing-lg) 0;
 
 	&::after {
 		content: "";

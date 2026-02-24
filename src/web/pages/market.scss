@@ -56,6 +56,10 @@
 	}
 }
 
+#escrow_description {
+	margin: 0;
+}
+
 .escrow_description_link {
 	color: var(--color--fg-dim);
 	font: var(--text--body-small);
@@ -75,14 +79,13 @@
 
 .game_button,
 .market_show_more_games {
-	margin-top: 9px;
+	margin: 0;
 
 	width: 100%;
 }
 
 .game_button {
-	line-height: unset;
-
+	display: flex;
 	height: unset;
 }
 
@@ -90,18 +93,31 @@
 	height: unset;
 }
 
-.game_button_game_icon > img {
-	border-radius: var(--rounding-md);
+.game_button_game_icon {
+	display: flex;
+
+	& > img {
+		border-radius: var(--rounding-sm);
+
+		position: unset;
+		width: var(--icon--size-sm);
+		height: var(--icon--size-sm);
+	}
+}
+
+.game_button_game_name {
+	padding: 0;
 }
 
 .market_show_more_games > a,
 .game_button_contents {
-	@include web.layout--sidebar-item(".hack");
+	@include web.sidebar--list-item;
 
-	font: var(--text--body-small);
-	color: var(--color--fg-main);
+	background-image: none;
 	border: none;
 
+	display: flex;
+	align-items: center;
 	width: 100%;
 }
 
@@ -369,8 +385,9 @@
 	width: 100%;
 }
 
-.market_search_box_container {
-	margin-top: var(--spacing-md);
+.market_search_box_container,
+.market_search_game_button_group {
+	margin: 0;
 }
 
 .market_search_input_container {
@@ -435,28 +452,14 @@
 }
 
 .market_search_sidebar_contents {
-	background-color: var(--color--bg-main);
-	border-radius: var(--rounding-lg);
-	padding: var(--spacing-md);
-
-	width: var(--content--sidebar-width);
+	@include web.sidebar--container;
 }
 
 .market_search_sidebar_section_tip_small {
-	color: var(--color--fg-main);
-	font: var(--text--body-medium);
-	text-transform: uppercase;
+	@include web.sidebar--header;
 
-	&::after {
-		content: "";
-
-		display: block;
-		width: 100%;
-		height: var(--border-sm);
-
-		background-color: var(--color--bg-hl);
-		margin: var(--spacing-md) 0;
-	}
+	display: block;
+	width: 100%;
 }
 
 .market_show_more_games > a {

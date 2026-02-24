@@ -1,35 +1,6 @@
 @use "shared/controls";
 @use "web";
 
-// TODO: unify all
-@mixin -section {
-	background: var(--color--bg-main-50);
-	border-radius: var(--rounding-lg);
-	padding: var(--spacing-xl);
-	margin-block-end: var(--spacing-md);
-}
-
-@mixin -section-header {
-	color: var(--color--fg-dim);
-	font: var(--text--heading-small);
-	margin-block-end: var(--spacing-xxl);
-}
-
-@mixin -sidebar-container {
-	background-color: var(--color--bg-main);
-	border-radius: var(--rounding-lg);
-	padding: var(--spacing-md);
-}
-
-@mixin -sidebar-header {
-	color: var(--color--fg-dim);
-	font: var(--text--body-medium);
-	text-transform: uppercase;
-	border-block-start: var(--border-sm) solid var(--color--bg-hl);
-	padding-block-start: var(--spacing-sm);
-	margin-block: var(--spacing-sm) var(--spacing-xs);
-}
-
 [data-featuretarget="manage-friends"] > div {
 	// #Button
 	button {
@@ -39,7 +10,7 @@
 
 	// #Background, #DimBackground
 	& > div {
-		@include -section;
+		@include web.section--container;
 
 		// #HeaderBlock
 		&:first-child {
@@ -75,7 +46,7 @@
 
 	// #Heading
 	h1 {
-		@include -section-header;
+		@include web.section--header;
 	}
 
 	// #Body
@@ -182,7 +153,7 @@
 	}
 
 	.search_results_none {
-		@include -section;
+		@include web.section--container;
 
 		font: var(--text--body-large);
 	}
@@ -284,12 +255,12 @@
 }
 
 .friends_nav {
-	@include -sidebar-container;
+	@include web.sidebar--container;
 
 	margin: 0;
 
 	a {
-		@include web.apppage--sidebar-list-item;
+		@include web.sidebar--list-item;
 
 		&.active {
 			color: var(--color--primary);
@@ -315,7 +286,7 @@
 	}
 
 	h4 {
-		@include -sidebar-header;
+		@include web.sidebar--header;
 
 		letter-spacing: 0;
 		padding-inline: 0;
@@ -334,7 +305,7 @@
 
 .group_block,
 .invite_row {
-	@include -section;
+	@include web.section--container;
 
 	margin-block: var(--spacing-md) 0;
 

@@ -2,16 +2,6 @@
 @use "shared/utils";
 @use "web";
 
-@mixin -sidebar-header {
-	color: var(--color--fg-dim);
-	font: var(--text--body-medium);
-	text-transform: uppercase;
-	border-block-start: var(--border-sm) solid var(--color--bg-hl);
-	padding-block-start: var(--spacing-sm);
-	margin: 0;
-	margin-block-start: var(--spacing-sm);
-}
-
 .app_reviews_area {
 	position: relative;
 }
@@ -453,7 +443,7 @@
 	width: 100%;
 
 	.title {
-		@include -sidebar-header;
+		@include web.sidebar--header;
 
 		background: none;
 		padding-inline: 0;
@@ -481,7 +471,7 @@
 	}
 
 	:where(& label) {
-		@include web.apppage--sidebar-list-item;
+		@include web.sidebar--list-item;
 
 		gap: var(--spacing-xxs);
 

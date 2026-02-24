@@ -58,6 +58,44 @@
 	padding-inline-start: var(--library_gamelist-bar-gap);
 }
 
+@mixin settings--info {
+	--offset: calc(var(--icon--size-lg) + var(--spacing-md));
+
+	color: var(--color--fg-main);
+	font: var(--text--body-medium);
+	margin-block-end: var(--spacing-sm);
+	margin-inline-start: var(--offset);
+
+	position: relative;
+
+	&::before {
+		content: "";
+
+		@include utils.icon($name: "info", $size: "lg");
+
+		position: absolute;
+
+		color: var(--color--fg-dim);
+		margin-inline-start: calc(var(--offset) * -1);
+	}
+}
+
+@mixin settings--header {
+	color: var(--color--fg-dim);
+	font: var(--text--heading-medium);
+	letter-spacing: 0;
+	text-transform: none;
+
+	min-height: 50px;
+}
+
+@mixin settings--section {
+	background-color: var(--color--bg-main-50);
+	border-radius: var(--rounding-lg);
+	padding: var(--spacing-lg);
+	margin-block-start: var(--spacing-lg);
+}
+
 @mixin titlebarcontrols--button {
 	background-color: var(--color--bg-hl);
 	border-radius: var(--rounding-md);

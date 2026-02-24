@@ -1,6 +1,6 @@
 @use "shared/controls";
-@use "shared/settings";
 @use "shared/utils";
+@use "web";
 
 .ProfilePrivacyCheckbox {
 	padding: 0;
@@ -15,7 +15,7 @@
 }
 
 .ProfilePrivacyDesc {
-	@include settings.section;
+	@include web.section--container;
 
 	color: var(--color--fg-dim);
 	border-start-start-radius: 0;
@@ -33,7 +33,7 @@
 }
 
 .ProfilePrivacyHeader {
-	@include settings.section;
+	@include web.section--container;
 
 	color: var(--color--primary);
 	font: var(--text--heading-medium);

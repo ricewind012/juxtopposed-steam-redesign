@@ -1,34 +1,13 @@
 @use "shared/controls";
 @use "web";
 
-@mixin -section {
-	background: var(--color--bg-main-50);
-	border-radius: var(--rounding-lg);
-	padding: var(--spacing-xl);
-	margin-block-end: var(--spacing-md);
-}
-
-@mixin -section-header {
-	color: var(--color--fg-dim);
-	font: var(--text--heading-small);
-	margin-block-end: var(--spacing-xxl);
-}
-
-// TODO: same in forums
-@mixin -section-item {
-	background: var(--color--bg-main-50);
-	border-radius: var(--rounding-lg);
-	padding: var(--spacing-lg);
-	margin-bottom: var(--spacing-lg);
-}
-
 .formatted_group_summary {
 	color: var(--color--fg-main);
 	margin: 0;
 }
 
 .group_associated_game {
-	@include web.apppage--sidebar-list-item;
+	@include web.sidebar--list-item;
 
 	display: flex;
 	align-items: center;
@@ -49,7 +28,7 @@
 }
 
 .group_content {
-	@include -section;
+	@include web.section--container;
 
 	font: var(--text--body-medium);
 
@@ -57,7 +36,7 @@
 }
 
 .group_content_header {
-	@include -section-header;
+	@include web.section--header;
 
 	padding: 0;
 }
@@ -104,7 +83,7 @@
 }
 
 .group_overview_announcement {
-	@include -section-item;
+	@include web.section--container;
 
 	margin-inline: 0;
 

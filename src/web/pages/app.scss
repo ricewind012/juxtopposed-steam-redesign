@@ -221,7 +221,7 @@ body.game_bg {
 }
 
 .game_area_details_specs_ctn {
-	@include web.apppage--sidebar-list-item;
+	@include web.sidebar--list-item;
 	@include web.tooltip-element;
 
 	&:where(a) {
@@ -307,7 +307,7 @@ body.game_bg {
 }
 
 .game_area_dlc_row {
-	@include web.apppage--sidebar-list-item;
+	@include web.sidebar--list-item;
 
 	background-image: none;
 
@@ -715,7 +715,7 @@ body.game_bg {
 	}
 
 	tr:not([style="display: none;"]) {
-		@include web.apppage--sidebar-list-item;
+		@include web.sidebar--list-item;
 
 		border: none;
 
@@ -791,7 +791,7 @@ body.game_bg {
 		}
 
 		.linkbar {
-			@include web.apppage--sidebar-list-item;
+			@include web.sidebar--list-item;
 
 			display: flex;
 			align-items: center;

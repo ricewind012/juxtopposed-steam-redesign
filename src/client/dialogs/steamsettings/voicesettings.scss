@@ -1,11 +1,11 @@
-@use "shared/settings";
+@use "client";
 
 #Advanced {
 	margin-block-start: var(--spacing-lg);
 }
 
 #AdvancedDescription {
-	@include settings.info;
+	@include client.settings--info;
 }
 
 #TopMargin {

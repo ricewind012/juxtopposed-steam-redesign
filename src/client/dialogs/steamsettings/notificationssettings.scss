@@ -1,8 +1,8 @@
 @use "shared/controls";
-@use "shared/settings";
+@use "client";
 
 #FriendsDescription {
-	@include settings.info;
+	@include client.settings--info;
 }
 
 #NotificationFeedToggle {

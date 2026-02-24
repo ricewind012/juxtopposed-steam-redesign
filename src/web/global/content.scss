@@ -2,17 +2,6 @@
 @use "shared/utils";
 @use "web";
 
-// TODO: unify
-@mixin -sidebar-header {
-	color: var(--color--fg-dim);
-	font: var(--text--body-medium);
-	text-transform: uppercase;
-	border-block-start: var(--border-sm) solid var(--color--bg-hl);
-	padding-block-start: var(--spacing-sm);
-	margin: 0;
-	margin-block-start: var(--spacing-sm);
-}
-
 [style^="clear"] {
 	display: none;
 }
@@ -231,7 +220,7 @@ h3 {
 .rightbox_content_header,
 .rightbox_list_header {
 	// TODO: unify
-	@include -sidebar-header;
+	@include web.sidebar--header;
 
 	padding-inline: 0;
 	padding-block-end: 0;

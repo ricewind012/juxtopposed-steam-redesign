@@ -1,6 +1,6 @@
 @use "shared/controls";
-@use "shared/settings";
 @use "shared/utils";
+@use "client";
 
 :where(#BottomGap),
 :where(#BottomGapSmall),
@@ -11,10 +11,7 @@
 }
 
 #AdvancedOptions {
-	@include settings.section;
-
-	background-color: var(--color--bg-main-50);
-	margin-block: var(--spacing-lg) 0;
+	@include client.settings--section;
 }
 
 #AppProperties {
@@ -43,7 +40,7 @@
 	margin-block-start: var(--spacing-lg);
 
 	& + div {
-		@include settings.info;
+		@include client.settings--info;
 
 		margin-block-start: var(--spacing-sm);
 	}
@@ -93,13 +90,11 @@
 }
 
 #BuildInfo {
-	@include settings.section;
+	@include client.settings--section;
 
-	background-color: var(--color--bg-main-50);
 	color: inherit;
 	font: inherit;
 	gap: var(--spacing-xxs);
-	margin-block-start: var(--spacing-lg);
 
 	display: flex;
 	flex-direction: column;
@@ -121,7 +116,7 @@
 }
 
 #Detail {
-	@include settings.info;
+	@include client.settings--info;
 }
 
 #LocalFilesLink {

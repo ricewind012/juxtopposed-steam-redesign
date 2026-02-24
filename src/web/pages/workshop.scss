@@ -24,29 +24,6 @@
 	}
 }
 
-@mixin -section {
-	background: var(--color--bg-main-50);
-	border-radius: var(--rounding-lg);
-	padding: var(--spacing-xl);
-	margin-block-end: var(--spacing-md);
-}
-
-@mixin -section-header {
-	color: var(--color--fg-dim);
-	font: var(--text--heading-small);
-	margin-block-end: var(--spacing-xxl);
-}
-
-@mixin -sidebar-header {
-	color: var(--color--fg-dim);
-	font: var(--text--body-medium);
-	text-transform: uppercase;
-	border-block-start: var(--border-sm) solid var(--color--bg-hl);
-	padding-block-start: var(--spacing-sm);
-	margin: 0;
-	margin-block-start: var(--spacing-sm);
-}
-
 @mixin -workshop-bg {
 	@include style.workshop-bg;
 
@@ -73,7 +50,7 @@ body.apphub_blue.v6 {
 	}
 
 	& > a {
-		@include web.apppage--sidebar-list-item;
+		@include web.sidebar--list-item;
 
 		display: block;
 	}
@@ -84,7 +61,7 @@ body.apphub_blue.v6 {
 }
 
 .detailBox:not(.plain) {
-	@include -section;
+	@include web.section--container;
 }
 
 .detailsStatLeft {
@@ -154,7 +131,7 @@ body.apphub_blue.v6 {
 }
 
 .filterOption {
-	@include web.apppage--sidebar-list-item;
+	@include web.sidebar--list-item;
 
 	margin-inline: 0;
 
@@ -188,7 +165,7 @@ body.apphub_blue.v6 {
 
 // TODO: move???
 .game_area_purchase_game {
-	@include -section;
+	@include web.section--container;
 
 	border: none;
 
@@ -361,7 +338,7 @@ body.apphub_blue.v6 {
 }
 
 .just_added_to_list {
-	@include -section;
+	@include web.section--container;
 
 	background: color-mix(in srgb, var(--color--primary) 50%, transparent);
 	color: var(--color--fg-main);
@@ -382,7 +359,7 @@ body.apphub_blue.v6 {
 }
 
 .parentCollection {
-	@include -section;
+	@include web.section--container;
 
 	display: flex;
 	align-items: center;
@@ -420,7 +397,7 @@ body.apphub_blue.v6 {
 }
 
 .parentCollectionsTitle {
-	@include -section-header;
+	@include web.section--header;
 }
 
 #profileBlock {
@@ -434,7 +411,7 @@ body.apphub_blue.v6 {
 		--button--secondary-bg: var(--color--bg-main);
 		--color--bg-hl: var(--color--bg-main);
 
-		@include -section;
+		@include web.section--container;
 
 		margin: 0;
 
@@ -457,11 +434,9 @@ body.apphub_blue.v6 {
 }
 
 #rightContents {
-	@include web.layout--sidebar-container;
+	@include web.sidebar--container;
 
 	margin: 0;
-
-	width: var(--content--sidebar-width);
 
 	.panel,
 	.sidebar {
@@ -508,7 +483,7 @@ body.apphub_blue.v6 {
 }
 
 .rightSectionTopTitle {
-	@include -sidebar-header;
+	@include web.sidebar--header;
 }
 
 .searchedForTerm {
@@ -518,7 +493,7 @@ body.apphub_blue.v6 {
 }
 
 .searchedTermsContainer {
-	@include -section-header;
+	@include web.section--header;
 
 	gap: var(--spacing-xxs);
 	margin: 0;
@@ -526,7 +501,7 @@ body.apphub_blue.v6 {
 
 #sharedfiles_content_ctn {
 	.commentthread_header {
-		@include -section-header;
+		@include web.section--header;
 
 		// TODO: move to comments.scss if I see this again
 		background-color: transparent;
@@ -659,7 +634,7 @@ body.apphub_blue.v6 {
 }
 
 .tag_category_desc {
-	@include -sidebar-header;
+	@include web.sidebar--header;
 }
 
 .tag_filter_control_not {
@@ -843,7 +818,7 @@ body.apphub_blue.v6 {
 			all: unset;
 
 			a {
-				@include web.apppage--sidebar-list-item;
+				@include web.sidebar--list-item;
 			}
 		}
 
@@ -871,7 +846,7 @@ body.apphub_blue.v6 {
 	}
 
 	.right_column {
-		@include web.layout--sidebar-container;
+		@include web.sidebar--container;
 
 		br {
 			display: none;
@@ -879,7 +854,7 @@ body.apphub_blue.v6 {
 
 		.browseTitle,
 		.title {
-			@include -sidebar-header;
+			@include web.sidebar--header;
 		}
 
 		.tag_count {
@@ -894,11 +869,11 @@ body.apphub_blue.v6 {
 
 	.section {
 		&.announcements_row h2 {
-			@include -section-header();
+			@include web.section--header;
 		}
 
 		&.popular_items_row {
-			@include -section;
+			@include web.section--container;
 		}
 	}
 
@@ -910,12 +885,12 @@ body.apphub_blue.v6 {
 	}
 
 	.section_title_ctn {
-		@include -section-header;
+		@include web.section--header;
 	}
 }
 
 .workshop_item_header {
-	@include -section;
+	@include web.section--container;
 
 	gap: var(--spacing-xl);
 	box-shadow: none;
@@ -1169,7 +1144,7 @@ body.apphub_blue.v6 {
 }
 
 .workshopItemDescriptionTitle {
-	@include -section-header;
+	@include web.section--header;
 
 	text-transform: none;
 	margin-top: 0;

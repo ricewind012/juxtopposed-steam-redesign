@@ -1,35 +1,6 @@
 @use "shared/controls";
 @use "web";
 
-// TODO: unify all
-@mixin -section {
-	background: var(--color--bg-main-50);
-	border-radius: var(--rounding-lg);
-	padding: var(--spacing-xl);
-	margin-block-end: var(--spacing-md);
-}
-
-@mixin -section-header {
-	color: var(--color--fg-dim);
-	font: var(--text--heading-small);
-	margin-block-end: var(--spacing-xxl);
-}
-
-@mixin -sidebar-container {
-	background-color: var(--color--bg-main);
-	border-radius: var(--rounding-lg);
-	padding: var(--spacing-md);
-}
-
-@mixin -sidebar-header {
-	color: var(--color--fg-dim);
-	font: var(--text--body-medium);
-	text-transform: uppercase;
-	border-block-start: var(--border-sm) solid var(--color--bg-hl);
-	padding-block-start: var(--spacing-sm);
-	margin-block: var(--spacing-sm) var(--spacing-xs);
-}
-
 /// All args are selectors.
 @mixin -search($input, $icon) {
 	all: unset;
@@ -240,7 +211,7 @@
 }
 
 .blotter_eventsblock_title {
-	@include -sidebar-header;
+	@include web.sidebar--header;
 }
 
 .blotter_gamepurchase_content {
@@ -365,7 +336,7 @@
 	.commentthread_entry {
 		margin: 0;
 
-		@include -section;
+		@include web.section--container;
 	}
 }
 
@@ -433,7 +404,7 @@
 }
 
 .friends_launch_area {
-	@include -sidebar-container;
+	@include web.sidebar--container;
 
 	color: var(--color--fg-dim);
 	font: var(--text--body-medium);
@@ -454,7 +425,7 @@
 
 .profile_add_friends_title,
 .profile_friends_ingame {
-	@include -sidebar-header;
+	@include web.sidebar--header;
 
 	padding-inline: 0;
 }
@@ -473,7 +444,7 @@
 	display: contents;
 
 	a {
-		@include web.apppage--sidebar-list-item;
+		@include web.sidebar--list-item;
 	}
 
 	img {

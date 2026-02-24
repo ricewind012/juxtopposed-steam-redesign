@@ -1,6 +1,6 @@
 @use "shared/controls";
-@use "shared/settings";
 @use "shared/utils";
+@use "client";
 
 :where(.DialogBodyText) {
 	color: var(--color--fg-main);
@@ -208,7 +208,7 @@
 }
 
 .SettingsDialogSubHeader {
-	@include settings.header;
+	@include client.settings--header;
 }
 
 .title-area {

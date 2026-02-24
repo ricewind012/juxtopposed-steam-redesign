@@ -1,4 +1,4 @@
-@use "shared/settings";
+@use "client";
 @use "web";
 
 #PageListItem_Icon {
@@ -48,10 +48,7 @@
 	}
 
 	:where(& .DialogControlsSection) {
-		@include settings.section;
-
-		background-color: var(--color--bg-main-50);
-		margin-block: var(--spacing-lg) 0;
+		@include client.settings--section;
 	}
 
 	:where(& .DialogControlsSection:first-child) {

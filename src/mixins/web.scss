@@ -31,27 +31,6 @@
 	}
 }
 
-@mixin apppage--sidebar-list-item {
-	background-color: color-mix(in srgb, var(--color--bg-hl) 39%, transparent);
-	font: var(--text--body-small);
-	border-radius: var(--rounding-md);
-	gap: var(--spacing-sm);
-	padding: 4px 13px;
-	margin-block-end: var(--spacing-xs);
-
-	&:hover {
-		background: var(--color--bg-hover);
-	}
-}
-
-@mixin layout--sidebar-container {
-	background-color: var(--color--bg-main);
-	border-radius: var(--rounding-lg);
-	padding: var(--spacing-md);
-
-	min-width: var(--content--sidebar-width);
-}
-
 @mixin layout--sidebar-item($active-selector) {
 	background: transparent;
 	border-radius: var(--rounding-md);
@@ -108,6 +87,49 @@
 
 	display: flex;
 	align-items: center;
+}
+
+@mixin section--container {
+	background: var(--color--bg-main-50);
+	border-radius: var(--rounding-lg);
+	padding: var(--spacing-xl);
+	margin-block-end: var(--spacing-md);
+}
+
+@mixin section--header {
+	color: var(--color--fg-dim);
+	font: var(--text--heading-small);
+	margin-block-end: var(--spacing-xxl);
+}
+
+@mixin sidebar--container {
+	background-color: var(--color--bg-main);
+	border-radius: var(--rounding-lg);
+	padding: var(--spacing-md);
+
+	width: var(--content--sidebar-width);
+}
+
+@mixin sidebar--header {
+	color: var(--color--fg-dim);
+	font: var(--text--body-medium);
+	text-transform: uppercase;
+	border-block-start: var(--border-sm) solid var(--color--bg-hl);
+	padding-block-start: var(--spacing-sm);
+	margin-block: var(--spacing-sm) var(--spacing-xs);
+}
+
+@mixin sidebar--list-item {
+	background-color: color-mix(in srgb, var(--color--bg-hl) 39%, transparent);
+	font: var(--text--body-small);
+	border-radius: var(--rounding-md);
+	gap: var(--spacing-sm);
+	padding: 4px 13px;
+	margin-block-end: var(--spacing-xs);
+
+	&:hover {
+		background: var(--color--bg-hover);
+	}
 }
 
 @mixin store--capsule {

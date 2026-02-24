@@ -1,5 +1,5 @@
 @use "shared/controls";
-@use "shared/settings";
+@use "web";
 
 #HTMLErrorBox {
 	background: var(--color--accent-red);
@@ -11,7 +11,7 @@
 }
 
 #ItemPickerCtn {
-	@include settings.section;
+	@include web.section--container;
 }
 
 #ItemPickerList {
@@ -20,19 +20,20 @@
 }
 
 #ProfileBox {
-	@include settings.section;
+	@include web.section--container;
 }
 
 #ProfileBoxContent {
 	padding: 0;
-	margin-top: var(--spacing-lg);
 }
 
 #ProfileBoxTitle {
-	all: unset;
+	@include web.section--header;
 
-	color: var(--color--fg-dim);
-	font: var(--text--heading-medium);
+	letter-spacing: 0;
+	text-transform: none;
+	border: none;
+	padding: 0;
 }
 
 #SaveCancelButtons {

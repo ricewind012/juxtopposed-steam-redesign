@@ -4,7 +4,7 @@
 
 #FeatureList {
 	#FeatureNameContainer {
-		@include web.apppage--sidebar-list-item;
+		@include web.sidebar--list-item;
 	}
 }
 
@@ -32,7 +32,7 @@
 #Summary {
 	--icon-size: 1lh;
 
-	@include web.apppage--sidebar-list-item;
+	@include web.sidebar--list-item;
 
 	#FeatureName {
 		all: unset;

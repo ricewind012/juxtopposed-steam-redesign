@@ -2,30 +2,6 @@
 @use "shared/utils";
 @use "web";
 
-@mixin -section {
-	background: var(--color--bg-main-50);
-	border-radius: var(--rounding-lg);
-	padding: var(--spacing-xl);
-	margin-block-end: var(--spacing-md);
-}
-
-@mixin -section-header {
-	color: var(--color--fg-dim);
-	font: var(--text--heading-small);
-	margin-block-end: var(--spacing-xxl);
-}
-
-// TODO(mixins): unify
-@mixin -sidebar-header {
-	color: var(--color--fg-dim);
-	font: var(--text--body-medium);
-	text-transform: uppercase;
-	border-block-start: var(--border-sm) solid var(--color--bg-hl);
-	padding-block-start: var(--spacing-sm);
-	margin: 0;
-	margin-block-start: var(--spacing-sm);
-}
-
 .apphub_ContentGuides {
 	padding: 0;
 
@@ -64,7 +40,7 @@
 }
 
 .guide_category_tags_title {
-	@include -sidebar-header;
+	@include web.sidebar--header;
 
 	display: flex;
 	justify-content: space-between;
@@ -147,7 +123,7 @@
 }
 
 .guide_home_category_selection {
-	@include web.apppage--sidebar-list-item;
+	@include web.sidebar--list-item;
 
 	border: none;
 	margin: 0;
@@ -164,7 +140,7 @@
 }
 
 .guides_home_section_title {
-	@include -section-header;
+	@include web.section--header;
 
 	padding: 0;
 
@@ -195,7 +171,7 @@
 	display: flex;
 
 	& > span {
-		@include web.apppage--sidebar-list-item;
+		@include web.sidebar--list-item;
 
 		width: 100%;
 
@@ -217,7 +193,7 @@
 }
 
 .guideTop {
-	@include -section;
+	@include web.section--container;
 
 	margin-block-start: 0;
 
@@ -289,7 +265,7 @@
 }
 
 .subSectionTitle {
-	@include -section-header;
+	@include web.section--header;
 
 	padding: 0;
 }

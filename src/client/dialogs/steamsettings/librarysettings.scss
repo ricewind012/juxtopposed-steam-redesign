@@ -1,4 +1,4 @@
-@use "shared/settings";
+@use "client";
 
 #ActionSection {
 	gap: var(--spacing-sm);
@@ -8,7 +8,7 @@
 }
 
 #DescriptionText {
-	@include settings.header;
+	@include client.settings--header;
 
 	margin: 0;
 }

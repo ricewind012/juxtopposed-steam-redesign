@@ -13,7 +13,7 @@
 }
 
 #InfoRow {
-	@include web.apppage--sidebar-list-item;
+	@include web.sidebar--list-item;
 
 	color: var(--color--primary);
 

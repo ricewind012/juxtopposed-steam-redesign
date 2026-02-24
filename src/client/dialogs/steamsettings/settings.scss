@@ -1,11 +1,11 @@
-@use "shared/settings";
+@use "client";
 
 #SettingsDialogBodyText {
-	@include settings.header;
+	@include client.settings--header;
 }
 
 #SettingsDialogDescriptionText {
-	@include settings.info;
+	@include client.settings--info;
 }
 
 #SettingsLink {

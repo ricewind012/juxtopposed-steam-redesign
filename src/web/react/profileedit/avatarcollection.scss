@@ -1,7 +1,7 @@
-@use "shared/settings";
+@use "web";
 
 #AvatarCollection {
-	@include settings.section;
+	@include web.section--container;
 }
 
 #AvatarCollectionHeader {

@@ -33,7 +33,7 @@
 }
 
 button.MillenniumDesktopSidebar_LibraryItemButton {
-	@include web.apppage--sidebar-list-item;
+	@include web.sidebar--list-item;
 
 	&.Disabled {
 		opacity: var(--dim-opacity);
