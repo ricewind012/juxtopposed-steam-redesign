@@ -1,4 +1,4 @@
-#ScrollPanel {
+:where(#ScrollPanel) {
 	background-color: var(--color--bg-hl);
 	border: none;
 	border-radius: var(--rounding-lg);

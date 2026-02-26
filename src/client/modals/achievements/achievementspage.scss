@@ -1,0 +1,18 @@
+#HeaderContainer {
+	background-color: var(--color--bg-main-50);
+	backdrop-filter: var(--blur);
+	padding: var(--dialog--spacing-container);
+	position: fixed;
+
+	width: 100%;
+	z-index: 11;
+}
+
+#MyAchievementsHeader {
+	gap: var(--spacing-sm);
+
+	#Label {
+		color: var(--color--fg-main);
+		font: var(--text--body-medium);
+	}
+}

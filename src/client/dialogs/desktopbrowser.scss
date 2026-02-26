@@ -1,0 +1,116 @@
+@use "shared/controls";
+@use "shared/utils";
+@use "client";
+
+#BrowserTab {
+	@include controls.tab("#Active");
+
+	gap: var(--spacing-xs);
+	border: none;
+
+	#BrowserTabs > & {
+		padding-inline: var(--spacing-sm);
+	}
+
+	&#Active {
+		background-color: var(--color--primary);
+		color: var(--color--bg-main);
+	}
+
+	#AddTabButton,
+	#CloseTabButton {
+		@include utils.icon($remove: true);
+	}
+
+	#CloseTabButton {
+		--icon-name: icon("close");
+
+		&:not(:hover) {
+			color: var(--color--fg-dim);
+		}
+	}
+
+	#TabTitle {
+		all: unset;
+	}
+}
+
+#BrowserTabIcon {
+	padding: 0;
+	margin: 0;
+
+	width: var(--icon--size-sm);
+	height: var(--icon--size-sm);
+}
+
+#BrowserTabs {
+	gap: var(--spacing-xxs);
+	margin: var(--spacing-sm);
+
+	width: calc(
+		100% - var(--dialog--window-control-size) *
+			4 - var(--dialog--window-control-spacing) * 3.5
+	);
+}
+
+#BrowserViewHost {
+	background: color-mix(in srgb, var(--color--bg-tertiary) 20%, transparent);
+	margin: 0;
+}
+
+#NavigationButton {
+	@include client.gamelist--icon-button(
+		$icon-name: "name",
+		$active-selector: "&:not(#Disabled)"
+	);
+
+	height: unset;
+
+	svg {
+		// Not enough icons anyway lol
+		background: none;
+		mask: none;
+		padding: var(--spacing-xxs);
+
+		display: flex;
+
+		* {
+			display: initial;
+		}
+	}
+}
+
+#URL {
+	.PopupFullWindow:not(.OverlayBrowser_Browser) & {
+		@include controls.text-field;
+
+		margin-inline-end: calc(
+			var(--dialog--window-control-size) * 2 +
+				var(--dialog--window-control-spacing) * 1.5
+		);
+	}
+}
+
+#URLBar {
+	--text-field--normal-bg: var(--color--bg-main-50);
+
+	background: color-mix(in srgb, var(--color--bg-tertiary) 50%, transparent);
+	gap: var(--spacing-xs);
+	padding: var(--spacing-xs) var(--spacing-sm);
+}
+
+#URLBarText {
+	background-color: transparent;
+	border-radius: 0;
+	padding: 0;
+
+	overflow: hidden;
+
+	&::after {
+		display: none;
+	}
+
+	#StatusIcon {
+		display: none;
+	}
+}

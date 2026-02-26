@@ -1,0 +1,16 @@
+@use "shared/utils";
+
+#UGCRatingStar {
+	--icon-name: icon("star-filled");
+
+	@include utils.icon($size: "sm");
+
+	&:has(> [d$="1Z"]) {
+		--icon-name: icon("star");
+	}
+}
+
+#UGCRatingStars {
+	color: var(--color--fg-dim);
+	gap: 0;
+}

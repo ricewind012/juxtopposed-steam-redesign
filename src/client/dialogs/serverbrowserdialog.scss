@@ -71,6 +71,11 @@
 }
 
 #ServerBrowserDialog {
+	.OverlayServerBrowser & {
+		padding: var(--dialog--spacing-container);
+		margin: 0;
+	}
+
 	:where(& svg) {
 		color: inherit;
 	}

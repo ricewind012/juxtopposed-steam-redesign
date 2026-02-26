@@ -1,0 +1,24 @@
+#Content {
+	gap: var(--spacing-md);
+}
+
+#StatsBlock {
+	background: color-mix(in srgb, currentColor 10%, transparent);
+	color: var(--color--primary);
+	font: var(--text--body-medium);
+	border-radius: var(--rounding-md);
+	padding: var(--spacing-md);
+
+	#Label {
+		all: unset;
+	}
+
+	#Progress {
+		margin-block-start: var(--spacing-xs);
+	}
+}
+
+#Title {
+	color: var(--color--fg-main);
+	font: var(--text--heading-large);
+}

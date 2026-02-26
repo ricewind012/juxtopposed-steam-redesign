@@ -55,6 +55,10 @@
 	padding: var(--dialog--spacing-container);
 }
 
+:where(.DialogContentTransition) {
+	background: none;
+}
+
 :where(.DialogDropDown) {
 	@include controls.dropdown;
 }
@@ -216,7 +220,11 @@
 	--icon--size-md: var(--dialog--window-control-size);
 	--spacing: var(--spacing-md);
 
+	gap: var(--dialog--window-control-spacing);
+	padding-inline-end: calc(var(--spacing) / 2);
+
 	height: var(--height);
+	z-index: 99999;
 }
 
 .title-area-icon {
@@ -251,7 +259,7 @@
 .title-bar-actions {
 	color: var(--color--fg-dim);
 	gap: var(--dialog--window-control-spacing);
-	margin-inline-end: calc(var(--spacing) / 2);
+	margin: 0;
 
 	max-height: var(--height);
 }

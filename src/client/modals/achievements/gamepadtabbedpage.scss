@@ -1,0 +1,73 @@
+@use "shared/controls";
+
+#FixCenterAlignScroll {
+	background-color: transparent;
+	gap: 18px;
+	padding: 0;
+}
+
+#GamepadTabbedPage {
+	--achievements-header-height: calc(
+		var(--text--heading-large-size) * var(--text--line-height) +
+			var(--text--body-medium-size) * var(--text--line-height) +
+			var(--dialog--spacing-container) * 2 + var(--spacing-md) * 3 +
+			var(--spacing-xs) + 6px + 2px * 2
+	);
+	--tabs-height: calc(
+		var(--spacing-xxs) * 2 + var(--spacing-sm) * 2 +
+			var(--text--body-large-size) * var(--text--line-height)
+	);
+}
+
+#Glyphs,
+#TabRowSpacer {
+	display: none;
+}
+
+#Tab {
+	@include controls.tab("#Selected");
+
+	background-color: var(--color--bg-main-50);
+	letter-spacing: 0;
+	text-transform: none;
+	padding-block: var(--spacing-sm);
+
+	height: unset;
+
+	&#Selected {
+		background-color: var(--color--bg-hl);
+	}
+}
+
+#TabContentsScroll {
+	background: transparent;
+	padding: 0;
+	margin: 0;
+
+	#TabContents & {
+		padding-block-start: calc(
+			var(--achievements-header-height) + var(--tabs-height)
+		);
+	}
+}
+
+#TabHeaderRowWrapper {
+	background-color: var(--color--bg-main-20);
+	backdrop-filter: var(--blur);
+	padding: var(--spacing-xxs) var(--spacing-sm);
+
+	inset-block-start: calc(
+		var(--text--heading-large-size) * var(--text--line-height) +
+			var(--text--body-medium-size) * var(--text--line-height) +
+			var(--dialog--spacing-container) * 2 + var(--spacing-md) * 3 +
+			var(--spacing-xs) + 6px + 2px * 2
+	);
+
+	&::before {
+		display: none;
+	}
+}
+
+#TabsRowScroll {
+	mask: none;
+}

@@ -1,0 +1,312 @@
+@use "shared/controls";
+@use "shared/utils";
+@use "web";
+
+#BackToGame {
+	align-items: center;
+
+	#GameName {
+		color: var(--color--fg-main);
+		font: var(--text--heading-large);
+	}
+
+	#KBShortcut {
+		color: var(--color--fg-dim);
+		font: var(--text--body-large);
+		margin: 0;
+	}
+
+	#TextContainer {
+		max-width: unset;
+	}
+}
+
+#BackToGameBtn {
+	@include controls.icon-button(
+		$w: 59,
+		$child: "svg",
+		$name: "close",
+		$size: "lg"
+	);
+
+	margin-inline-start: var(--spacing-sm);
+}
+
+#ExitGameBtn {
+	filter: none;
+	letter-spacing: 0;
+	text-transform: none;
+	margin-block-start: var(--spacing-sm);
+}
+
+#NetworkStatus {
+	color: var(--color--fg-dim);
+	font: var(--text--body-medium);
+	margin-block-start: var(--spacing-sm);
+
+	#IPShareLearnMore svg {
+		@include utils.tooltip-icon;
+
+		vertical-align: sub;
+
+		* {
+			display: none;
+		}
+	}
+
+	#SDRPOPID {
+		color: var(--color--fg-main);
+	}
+}
+
+#TopSection {
+	padding: 0;
+
+	#CurrentDate,
+	#PlaytimeCurrentSession {
+		color: var(--color--fg-dim);
+		font: var(--text--body-large);
+		margin: 0;
+	}
+
+	#CurrentTime {
+		color: var(--color--fg-main);
+		font: var(--text--heading-large);
+	}
+}
+
+#Toolbar {
+	gap: var(--spacing-xxs);
+
+	height: unset;
+}
+
+#ToolbarButton {
+	gap: var(--spacing-sm);
+
+	justify-content: start;
+	height: unset;
+
+	#ToolbarContainer#LocationBottom & {
+		--button--spacing-inline: var(--spacing-md);
+	}
+
+	&#Toggled {
+		@include controls.button-vars($variant: "primary");
+	}
+
+	svg {
+		margin: 0;
+
+		flex-shrink: 0;
+		width: var(--icon--size-md);
+		height: var(--icon--size-md);
+	}
+}
+
+#ToolbarButtonAndLabel {
+	max-width: 300px;
+}
+
+#ToolbarContainer {
+	&#LocationBottom {
+		inset-block-end: 0;
+	}
+
+	&#LocationLeft {
+		inset-inline-start: 0;
+	}
+}
+
+#ToolbarMaxWidthContainer {
+	padding: 0;
+}
+
+#ToolbarToolTip {
+	all: unset;
+
+	// The actual tooltip
+	body > div > div > & {
+		@include controls.tooltip;
+	}
+}
+
+#Wrapper {
+	gap: var(--spacing-lg);
+	padding: var(--spacing-xl);
+
+	body:has(> [id="popup_target"] > :where(&, .OverlayTimeline)) {
+		background: transparent;
+		padding: 0;
+	}
+}
+
+// #region Dialog
+
+#OverlayPopup {
+	--button--secondary-bg: color-mix(
+		in srgb,
+		var(--color--bg-hl) 50%,
+		var(--color--bg-secondary)
+	);
+	--color--bg-hl: var(--color--bg-main);
+
+	background: radial-gradient(
+		155.42% 100% at 0% 0%,
+		color-mix(in srgb, var(--color--bg-secondary) 20%, transparent) 0 0%,
+		var(--color--bg-main) 100%
+	);
+
+	&#Resizable {
+		height: 100%;
+	}
+
+	&[class*="OverlayBrowser"] {
+		.title-area {
+			inset-inline-start: unset;
+			width: fit-content;
+		}
+	}
+
+	&.OverlayTimer {
+		#WindowControls {
+			height: calc(var(--dialog--window-control-size) + var(--spacing-md) * 2);
+		}
+	}
+
+	// Only used in browser
+	.title-area-children {
+		display: none;
+	}
+}
+
+#WindowControls {
+	height: 0;
+
+	#OverlayPopup.GameOverview > & {
+		height: var(--dialog--spacing-container);
+	}
+
+	#CloudSyncButton {
+		--icon-name: icon("cloud");
+	}
+
+	// Bro what
+	#FlipWindowButton {
+		display: none;
+	}
+
+	#OpacityButton {
+		--icon-name: icon("carousel");
+	}
+
+	// I know this doesn't look anything close to a pin
+	#PinWindowButton {
+		--icon-name: icon("star");
+
+		color: inherit;
+
+		&#Pinned {
+			--icon-name: icon("star-filled");
+
+			color: var(--color--primary);
+		}
+	}
+}
+// #endregion
+
+// #region Game Overview
+#GameOverview {
+	background: none;
+	padding: var(--dialog--spacing-container);
+	padding-block-start: 0;
+
+	z-index: 2;
+}
+
+#GameOverviewSection {
+	@include web.section--container;
+
+	margin: 0;
+	margin-block-end: var(--spacing-md);
+}
+
+#GameOverviewSectionChildren {
+	padding: 0;
+}
+
+#GameOverviewSectionHeader {
+	@include web.section--header;
+
+	background-color: transparent;
+	letter-spacing: 0;
+	text-transform: none;
+	padding: 0;
+
+	& > svg {
+		display: none;
+	}
+}
+
+#GameOverviewSectionTitle {
+	flex-direction: row-reverse;
+	justify-content: space-between;
+	width: 100%;
+
+	#DragHandle {
+		@include utils.icon($name: "drag-handle", $size: "lg", $remove: true);
+
+		color: inherit;
+		margin: 0;
+	}
+}
+
+#GuideListItem {
+	@include web.sidebar--list-item;
+
+	color: var(--color--fg-main);
+	margin-block-start: 0;
+}
+
+#GuideTitle {
+	font: inherit;
+}
+
+#OverviewTitle {
+	color: var(--color--fg-main);
+	font: var(--text--heading-large);
+	margin-inline-start: var(--dialog--spacing-container);
+	margin-block-end: var(--spacing-sm);
+
+	z-index: 2;
+}
+
+#Playtime {
+	color: var(--color--fg-main);
+	font: var(--text--body-medium);
+	gap: var(--spacing-xs);
+	padding: 0;
+	margin: 0;
+}
+// #endregion
+
+// #region Settings
+#SettingsModalRoot {
+	.DialogContent,
+	// #pagedsettings_PagedSettingsDialog
+	.ModalPosition_Content > div {
+		background: none;
+	}
+
+	.PageListColumn {
+		background-color: var(--color--bg-main-50);
+	}
+}
+// #endregion
+
+// #region Web browser
+#BrowserViewHost {
+	background: color-mix(in srgb, var(--color--bg-tertiary) 20%, transparent);
+	margin: 0;
+}
+// #endregion

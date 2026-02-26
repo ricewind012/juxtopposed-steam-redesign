@@ -1,0 +1,58 @@
+@use "shared/controls";
+
+#Colon {
+	font: var(--text--heading-large);
+	margin-inline: var(--spacing-xxs);
+}
+
+#ColonSegment,
+#TimePartSegment {
+	margin-block-end: var(--spacing-sm);
+}
+
+#ControlButtons {
+	gap: var(--spacing-sm);
+	margin: 0;
+
+	#Icon {
+		margin: 0;
+
+		svg {
+			width: var(--icon--size-md);
+			height: var(--icon--size-md);
+		}
+	}
+}
+
+#OverlayClock {
+	margin: var(--dialog--spacing-container);
+	margin-block-start: 0;
+
+	height: unset;
+}
+
+#Remaining {
+	margin-block-start: var(--spacing-sm);
+}
+
+#TabHeader {
+	--spacing-md: var(--spacing-xxs);
+
+	@include controls.radio-container-horizontal;
+}
+
+#Tabs {
+	padding: 0;
+}
+
+#TimePart {
+	background-color: var(--color--bg-main);
+	font: var(--text--heading-large);
+	border-radius: var(--rounding-md);
+	padding: var(--spacing-xxs);
+}
+
+#TimePartLabel {
+	color: var(--color--fg-dim);
+	font: var(--text--body-small);
+}

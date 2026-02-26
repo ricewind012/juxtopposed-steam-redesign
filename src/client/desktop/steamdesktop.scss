@@ -2,13 +2,36 @@
 	display: none;
 }
 
-#FocusBar#Focused {
+#FocusBar {
+	opacity: 0;
 	background-image: linear-gradient(
 		to right,
 		transparent,
 		var(--color--primary),
 		transparent
 	);
+	transition: var(--transition);
+
+	display: block;
+	z-index: 99999;
+
+	&#Focused {
+		// --color: var(--color--primary);
+		// --color-20: color-mix(in srgb, var(--color) 20%, transparent);
+		// --height: 67px;
+
+		opacity: 1;
+		// background-image:
+		// 	linear-gradient(to right, transparent, var(--color), transparent),
+		// 	radial-gradient(farthest-corner at 50% 0%, var(--color-20), transparent);
+		// background-repeat: no-repeat;
+		// background-size:
+		// 	100% var(--border-sm),
+		// 	100% 100%;
+		// mask: linear-gradient(black, transparent);
+
+		// height: var(--height);
+	}
 }
 
 #SuperNavBar {

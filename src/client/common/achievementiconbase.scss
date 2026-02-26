@@ -5,6 +5,25 @@
 	height: var(--achievementiconbase_size);
 }
 
+#HiddenLabel {
+	background: linear-gradient(
+		135deg,
+		var(--color--bg-hover),
+		var(--color--bg-main)
+	);
+	color: var(--color--fg-main);
+	font: var(--text--heading-large);
+	border-radius: var(--rounding-md);
+	box-shadow: none;
+	margin: 0;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: var(--achievementiconbase_size);
+	height: var(--achievementiconbase_size);
+}
+
 #Icon {
 	box-shadow: none;
 }

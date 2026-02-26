@@ -1,0 +1,74 @@
+@use "shared/utils";
+
+#AchievementDescription {
+	color: var(--color--fg-dim);
+	font: var(--text--body-medium);
+}
+
+#AchievementGlobalPercentage,
+#UnlockDate {
+	color: var(--color--fg-dim);
+	font: var(--text--body-small);
+}
+
+#AchievementList {
+	background: transparent;
+	gap: var(--spacing-sm);
+	padding: var(--dialog--spacing-container);
+}
+
+#AchievementListItemBase {
+	// Virtual list
+	--achievementiconbase_size: 48px;
+
+	background-color: var(--color--bg-main);
+	border-radius: var(--rounding-md);
+}
+
+#AchievementTitle {
+	color: var(--color--fg-main);
+	font: var(--text--heading-small);
+}
+
+#GlobalAchievementListItem {
+	@extend #AchievementListItemBase;
+
+	#Description {
+		@extend #AchievementDescription;
+	}
+
+	#Percent {
+		color: var(--color--fg-main);
+		font: var(--text--body-large);
+	}
+
+	#ProgressFill {
+		background-color: color-mix(
+			in srgb,
+			var(--color--primary) 20%,
+			transparent
+		);
+	}
+
+	#Title {
+		@extend #AchievementTitle;
+	}
+}
+
+#HeaderText {
+	color: var(--color--fg-main);
+	font: var(--text--body-medium);
+	letter-spacing: 0;
+	text-transform: none;
+}
+
+#UnlockContainer {
+	color: var(--color--primary);
+	padding: 0;
+
+	width: calc(var(--icon--size-md) + var(--spacing-xxs) * 2);
+
+	svg {
+		@include utils.icon($name: "check", $remove: true);
+	}
+}
