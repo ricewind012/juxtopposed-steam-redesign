@@ -230,6 +230,10 @@
 	--text-field--transparent-fg-placeholder: var(--color--bg-hover);
 	--text-field--transparent-border: var(--color--bg-hover);
 
+	// Text tag
+	--text-tag--spacing-block-sm: 0;
+	--text-tag--spacing-block-md: var(--spacing-xxs);
+
 	// Toggle
 	--toggle--swatch-bg: var(--color--bg-hover);
 	--toggle--swatch-bg-checked: var(--color--primary);

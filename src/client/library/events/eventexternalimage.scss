@@ -1,0 +1,10 @@
+@use "shared/style";
+
+// #ImageBlocked
+._1q2rpNyMVSrPH9vV02Dtrp {
+	@include style.alert;
+
+	font: var(--text--body-medium);
+	border: none;
+	margin: 0;
+}

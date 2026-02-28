@@ -1,0 +1,49 @@
+#DynamicLink_Author {
+	color: var(--color--fg-dim);
+	font: var(--text--body-small);
+	margin: 0;
+
+	height: unset;
+
+	span {
+		color: inherit;
+	}
+}
+
+#DynamicLinkBox {
+	background: var(--color--bg-hl);
+	color: var(--color--fg-dim);
+	font: var(--text--body-small);
+	border-radius: var(--rounding-lg);
+	padding: var(--spacing-md);
+	margin-block: var(--spacing-sm);
+
+	&:hover {
+		background: var(--color--bg-hover);
+		color: var(--color--fg-main);
+	}
+}
+
+#DynamicLink_Content {
+	all: unset;
+
+	display: flow-root;
+}
+
+#DynamicLink_Description {
+	color: var(--color--fg-main);
+	font: var(--text--body-large);
+	padding-block: var(--spacing-sm) 0;
+}
+
+#DynamicLink_Name {
+	color: var(--color--fg-main);
+	font: var(--text--heading-small);
+	border: none;
+	margin: 0;
+}
+
+#DynamicLink_Preview {
+	border-radius: var(--rounding-md);
+	margin-inline-end: var(--spacing-md);
+}

@@ -1,0 +1,37 @@
+@use "shared/controls";
+
+#BlockQuote {
+	background-color: color-mix(in srgb, currentColor 10%, transparent);
+	font: inherit;
+	border: none;
+	border-radius: var(--rounding-md);
+	padding: var(--spacing-sm);
+	margin: var(--spacing-sm) 0;
+}
+
+#Header1,
+#Header2,
+#Header3 {
+	color: var(--color--fg-main);
+	margin-block: 0.5em;
+}
+
+#Header1 {
+	font: var(--text--heading-large);
+}
+
+#Header2 {
+	font: var(--text--heading-medium);
+}
+
+#Header3 {
+	font: var(--text--heading-small);
+}
+
+#LinkButton {
+	@include controls.button($variant: "primary");
+
+	text-decoration: none;
+	box-shadow: none;
+	margin: 0;
+}

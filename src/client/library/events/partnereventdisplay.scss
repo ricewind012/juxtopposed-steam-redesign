@@ -1,0 +1,49 @@
+#EventBackgroundBlur {
+	display: none;
+}
+
+#EventDetailsBody {
+	color: var(--color--fg-main);
+	font: var(--text--body-medium);
+}
+
+#EventDetailsSubTitle {
+	color: var(--color--fg-dim);
+	font: var(--text--body-medium);
+	padding-block-end: var(--spacing-sm);
+	margin: 0;
+}
+
+#EventDetailTitle {
+	font: var(--text--heading-large);
+	margin: 0;
+}
+
+#EventDetailTitleContainer {
+	background: radial-gradient(
+		ellipse at bottom center,
+		color-mix(in srgb, var(--color--primary) 20%, transparent) 10%,
+		transparent 80%
+	);
+	padding: var(--dialog--spacing-container);
+
+	display: flex;
+	flex-direction: column;
+
+	#EventDetailTimeInfo {
+		color: var(--color--fg-main);
+		font: var(--text--body-medium);
+	}
+}
+
+#LibraryEventBodyContainer {
+	padding: var(--dialog--spacing-container);
+
+	:where(& a) {
+		text-decoration: underline;
+	}
+}
+
+#LibraryEventTitleContainer {
+	box-shadow: none;
+}

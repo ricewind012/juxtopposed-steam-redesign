@@ -1,0 +1,19 @@
+@use "shared/style";
+
+#ActiveEventCallOut {
+	@include style.text-tag($size: "sm");
+
+	color: var(--color--accent-red);
+	margin-block: 0;
+}
+
+#RightSideTitles {
+	color: var(--color--fg-dim);
+	font: var(--text--body-medium);
+	letter-spacing: 0;
+	text-transform: none;
+}
+
+#ShortDateAndTime {
+	color: var(--color--fg-dim);
+}

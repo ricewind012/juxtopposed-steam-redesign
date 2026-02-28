@@ -1,0 +1,7 @@
+@use "shared/controls";
+
+#DateToolTip {
+	@include controls.tooltip;
+
+	text-transform: none;
+}

@@ -1,0 +1,37 @@
+@use "shared/controls";
+
+#WishlistButton {
+	@include controls.icon-button(
+		$w: 1lh,
+		$child: "svg",
+		$name: "favorite",
+		$size: "lg"
+	);
+
+	background-image: none;
+	font: var(--text--heading-medium);
+	box-shadow: none;
+
+	overflow: visible;
+	display: block;
+	inset-inline-end: 0;
+
+	svg {
+		margin: 5px;
+	}
+}
+
+#WishlistButtonText {
+	@include controls.tooltip;
+
+	overflow: visible;
+	position: absolute;
+	inset-block-end: calc(100% + var(--spacing-sm));
+	inset-inline-end: 0;
+	min-width: 150px;
+	height: unset;
+
+	#WishlistButton:not(:hover) & {
+		display: none;
+	}
+}

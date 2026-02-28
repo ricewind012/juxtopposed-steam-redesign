@@ -43,6 +43,16 @@
 	border-radius: 1337px;
 }
 
+/// Shit for text like "Live Now", etc.
+///
+/// @param {'sm' | 'md'} $size ['md'] - Vertical spacing.
+@mixin text-tag($size: "md") {
+	background-color: color-mix(in srgb, currentColor 20%, transparent);
+	border-radius: var(--rounding-sm);
+	font: var(--text--body-medium);
+	padding: var(--text-tag--spacing-block-#{$size}) var(--spacing-xxs);
+}
+
 // cheap imitation, whatever
 @mixin workshop-bg {
 	--color: color-mix(in srgb, var(--color--secondary) 25%, transparent);

@@ -14,6 +14,9 @@
 	}
 
 	#Progress {
+		// Better visibility
+		--color--bg-hl: var(--color--bg-main);
+
 		margin-block-start: var(--spacing-xs);
 	}
 }
@@ -21,4 +24,14 @@
 #Title {
 	color: var(--color--fg-main);
 	font: var(--text--heading-large);
+
+	display: flex;
+	align-items: center;
+
+	#GameIcon {
+		margin-inline-end: var(--spacing-sm);
+
+		width: var(--icon--size-lg);
+		height: var(--icon--size-lg);
+	}
 }

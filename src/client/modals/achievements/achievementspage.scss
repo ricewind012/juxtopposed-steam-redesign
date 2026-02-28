@@ -1,11 +1,26 @@
+#Background {
+	#Blur {
+		display: none;
+	}
+}
+
+#Container {
+	padding: 0;
+}
+
 #HeaderContainer {
 	background-color: var(--color--bg-main-50);
 	backdrop-filter: var(--blur);
 	padding: var(--dialog--spacing-container);
-	position: fixed;
+	position: absolute;
 
 	width: 100%;
 	z-index: 11;
+}
+
+#HeaderImage {
+	overflow: hidden;
+	height: 210px;
 }
 
 #MyAchievementsHeader {

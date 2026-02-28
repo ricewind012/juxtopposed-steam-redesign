@@ -1,0 +1,91 @@
+@use "shared/utils";
+@use "web";
+
+@mixin -section($icon) {
+	--icon-name: icon(#{$icon});
+
+	background: none;
+	padding: 0;
+	gap: var(--spacing-sm);
+
+	align-items: center;
+}
+
+%-section-count {
+	color: var(--color--fg-main);
+	font: var(--text--body-small);
+	gap: var(--spacing-xxs);
+	padding: 0;
+	margin: 0;
+
+	align-items: center;
+	height: unset;
+
+	& > svg {
+		@include utils.icon($size: "sm", $remove: true);
+
+		margin: 0;
+	}
+}
+
+#Container {
+	background: radial-gradient(
+		ellipse at top center,
+		color-mix(in srgb, var(--color--primary) 20%, transparent) 10%,
+		transparent 80%
+	);
+	padding: var(--dialog--spacing-container);
+
+	justify-content: start;
+}
+
+#DiscussionButton {
+	@include web.apphub--card-metadata;
+
+	box-shadow: none;
+
+	&#VoteButtonSelected {
+		background-color: var(--color--bg-hl);
+	}
+
+	&[aria-label]::after {
+		content: attr(aria-label);
+	}
+
+	#ShareIcon,
+	#VoteDownIcon,
+	#VoteDownSelectedIcon,
+	#VoteUpIcon,
+	#VoteUpSelectedIcon {
+		display: none;
+	}
+}
+
+#DiscussionButtonText {
+	font: inherit;
+}
+
+#DiscussContainer {
+	@include -section($icon: "chat-bubble");
+}
+
+#DiscussionCount {
+	@extend %-section-count;
+}
+
+#InnerContainer {
+	gap: var(--spacing-lg);
+	margin-inline-end: var(--spacing-lg);
+}
+
+#ShareContainer {
+	@include -section($icon: "language");
+}
+
+#VoteContainer {
+	@include -section($icon: "thumb-up");
+}
+
+#VoteCount {
+	@extend %-section-count;
+}

@@ -1,7 +1,7 @@
 @use "shared/utils";
 
 #AchievementDescription {
-	color: var(--color--fg-dim);
+	color: var(--color--fg-main);
 	font: var(--text--body-medium);
 }
 
@@ -26,8 +26,17 @@
 }
 
 #AchievementTitle {
-	color: var(--color--fg-main);
+	color: var(--color--primary);
 	font: var(--text--heading-small);
+}
+
+#ComparisonAchieverInfo {
+	gap: var(--spacing-xs);
+
+	#ProgressLabel {
+		color: var(--color--fg-dim);
+		font: var(--text--body-small);
+	}
 }
 
 #GlobalAchievementListItem {
@@ -60,6 +69,16 @@
 	font: var(--text--body-medium);
 	letter-spacing: 0;
 	text-transform: none;
+}
+
+#ListTitle {
+	opacity: 1;
+	color: var(--color--fg-main);
+	font: var(--text--heading-small);
+	letter-spacing: 0;
+	text-transform: none;
+
+	height: unset;
 }
 
 #UnlockContainer {

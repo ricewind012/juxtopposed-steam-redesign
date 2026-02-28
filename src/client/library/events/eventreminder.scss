@@ -1,0 +1,18 @@
+@use "shared/controls";
+@use "shared/utils";
+
+#ReminderCheckBox {
+	background: none;
+	box-shadow: none;
+}
+
+#ReminderDefault {
+	@include controls.dropdown($variant: "primary", $size: "sm");
+
+	width: unset;
+	height: unset;
+}
+
+#ReminderOptions:not(#ReminderDialog) {
+	display: none;
+}

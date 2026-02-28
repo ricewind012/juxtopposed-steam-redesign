@@ -1,0 +1,179 @@
+@use "shared/controls";
+@use "shared/style";
+@use "web";
+
+// Seen in two width store capsule
+#AddToWishlistButton {
+	@include controls.icon-button(
+		$w: 47px,
+		$h: 44px,
+		$child: "svg",
+		$name: "favorite",
+		$size: "lg"
+	);
+
+	box-shadow: none;
+}
+
+#Banner {
+	@include web.store--capsule-icon;
+
+	color: var(--color--primary);
+	font: var(--text--body-medium);
+	text-transform: none;
+	box-shadow: none;
+	padding: var(--spacing-xxs);
+
+	height: unset;
+
+	#LinesImg {
+		display: none;
+	}
+}
+
+#BundleContentPreview {
+	padding-block-end: var(--spacing-sm);
+	margin: 0;
+
+	display: flex;
+	flex-direction: column;
+
+	#BundleTag {
+		@include style.text-tag($size: "sm");
+
+		color: var(--color--primary);
+		// The localization token is "bundle"
+		text-transform: capitalize;
+	}
+
+	#ContentsCount {
+		font: var(--text--body-small);
+		text-transform: none;
+		margin-block-end: var(--spacing-xxs);
+	}
+
+	#PreviewCtn {
+		background-color: var(--color--bg-main);
+		border-radius: var(--rounding-md);
+		gap: var(--spacing-xxs);
+		padding: var(--spacing-xxs);
+	}
+
+	#PreviewImg {
+		border-radius: var(--rounding-md);
+	}
+
+	#PreviewItem {
+		box-shadow: none;
+	}
+}
+
+#CapsuleBottomBar {
+	background-color: transparent;
+	padding: 0;
+	margin-block-start: var(--spacing-sm);
+
+	height: unset;
+}
+
+#CapsuleDecorators {
+	inset-block-start: 0;
+}
+
+#HeaderCapsuleImageContainer {
+	img,
+	& + video {
+		border-radius: var(--rounding-lg);
+	}
+}
+
+#StoreSalePriceWidgetContainer {
+	background-color: transparent;
+
+	@include web.store--discount(
+		$discount-pct: ":where(#BaseDiscount, #StoreSaleDiscountBox)",
+		$final-price: "#StoreSalePriceBox",
+		$no-discount: "&:not(#Discounted) #StoreSalePriceBox",
+		$original-price: "#StoreOriginalPrice",
+		$prices-container: "#StoreSaleDiscountedPriceCtn"
+	);
+
+	#StoreOriginalPrice {
+		letter-spacing: 0;
+		margin: 0;
+	}
+
+	#StoreSalePriceBox {
+		text-shadow: none;
+	}
+}
+
+#StoreSaleWidgetBgTint {
+	display: none;
+}
+
+#StoreSaleWidgetContainer {
+	@include web.store--capsule;
+
+	background: var(--capsule-bg, var(--color--bg-main));
+	box-shadow: none;
+}
+
+// "gap" is not reliable here because of grid-area
+#StoreSaleWidgetRight {
+	padding: 0;
+	margin-inline-start: var(--spacing-md);
+
+	// For wishlist button tooltip
+	overflow: visible;
+
+	#TitleCtn {
+		display: block;
+
+		& > a {
+			text-decoration: none;
+		}
+	}
+}
+
+#StoreSaleWidgetShortDesc {
+	color: var(--color--fg-dim);
+	font: var(--text--body-small);
+	padding: 0;
+	margin-block-end: var(--spacing-sm);
+}
+
+#StoreSaleWidgetTags {
+	@extend #TagBox;
+
+	margin-block: 0 var(--spacing-sm);
+}
+
+#StoreSaleWidgetTitle {
+	color: var(--color--fg-main);
+	font: var(--text--heading-medium);
+	margin: 0;
+	margin-block-end: var(--spacing-xxs);
+}
+
+#Tag {
+	@include web.store--tag;
+
+	text-decoration: none;
+	text-shadow: none;
+	margin-inline-end: var(--spacing-xxs);
+}
+
+#TagBox {
+	--tag-height: calc(1lh + 6.5px * 2);
+
+	font: var(--text--body-small);
+
+	max-height: var(--tag-height);
+	height: var(--tag-height);
+}
+
+// Price already has release date info, platforms are whatever
+#WidgetReleaseDateAndPlatformCtn {
+	display: none;
+}

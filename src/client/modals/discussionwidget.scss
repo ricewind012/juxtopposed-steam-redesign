@@ -1,0 +1,85 @@
+@use "shared/controls";
+
+#ClipboardIcon {
+	display: none;
+}
+
+#LinkButton {
+	@include controls.icon-button($w: 44px, $child: "div", $name: "carousel");
+
+	div {
+		margin: auto;
+	}
+}
+
+#linkField {
+	gap: var(--spacing-xs);
+}
+
+#LinkInput {
+	@include controls.text-field($variant: "transparent");
+
+	// TODO(controls): disabled variant
+	color: var(--color--fg-dim);
+
+	height: unset;
+}
+
+#LinkInputLabel {
+	font: var(--text--body-medium);
+	padding: 0;
+}
+
+#share_controls_ctn {
+	all: unset;
+}
+
+#ShareButtonContainer {
+	gap: var(--spacing-sm);
+	margin-block-start: var(--spacing-sm);
+	justify-content: start;
+
+	// #partnereventshared_Divider
+	& + div {
+		background: var(--color--border);
+		border: none;
+		margin-block: var(--spacing-lg);
+
+		height: var(--border-sm);
+	}
+
+	#ShareBtn {
+		@include controls.button;
+
+		img {
+			all: unset;
+
+			width: var(--icon--size-md);
+			height: var(--icon--size-md);
+		}
+	}
+
+	#ShareSteamBtn {
+		box-shadow: none;
+
+		height: unset;
+
+		& > span {
+			font: inherit;
+		}
+	}
+}
+
+#ShareLanguagePicker {
+	gap: var(--spacing-xs);
+	padding: 0;
+
+	select {
+		@include controls.button;
+	}
+
+	#LanguageLabel {
+		padding: 0;
+		margin: 0;
+	}
+}

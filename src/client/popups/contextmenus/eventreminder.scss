@@ -1,0 +1,53 @@
+@use "shared/menu";
+
+#ReminderBackground {
+	@include menu.container;
+}
+
+#ReminderCalendarOptions {
+	padding: 0;
+
+	flex-direction: column;
+
+	&::before {
+		@include menu.separator;
+
+		content: "";
+	}
+
+	#ReminderOption {
+		text-decoration: none;
+
+		text-align: start;
+	}
+}
+
+#ReminderDialog {
+	box-shadow: none;
+
+	overflow: visible;
+}
+
+#ReminderOption {
+	@include menu.item;
+
+	background: transparent;
+	margin: 0;
+
+	&:has(> #CheckboxWrapper > .DialogCheckbox_Container[aria-checked="true"]) {
+		@include menu.item--primary;
+	}
+
+	.DialogCheckbox {
+		display: none;
+	}
+
+	.DialogToggle_Label {
+		margin: 0;
+	}
+}
+
+#ReminderOpennedOptions,
+#ReminderOptionsHeader {
+	display: none;
+}

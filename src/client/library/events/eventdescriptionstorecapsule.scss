@@ -1,0 +1,10 @@
+#AppSummaryWidgetCtn {
+	--capsule-bg: radial-gradient(
+		at top left,
+		color-mix(in srgb, var(--color--primary) 20%, transparent),
+		color-mix(in srgb, var(--color--secondary) 20%, transparent)
+	);
+	--color--bg-hl: var(--color--bg-main);
+
+	margin: 0;
+}

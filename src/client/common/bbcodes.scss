@@ -1,0 +1,35 @@
+#HR {
+	background-color: var(--color--border);
+	margin-block: var(--spacing-sm);
+
+	height: var(--border-sm);
+}
+
+#ListItem {
+	margin-block-end: var(--spacing-xxs);
+}
+
+#Table {
+	--table-border-color: color-mix(in srgb, currentColor 20%, transparent);
+
+	background-color: var(--color--bg-hl);
+	border: var(--border-sm) solid var(--table-border-color);
+	padding: var(--spacing-xxs) var(--spacing-sm);
+}
+
+#TableCell {
+	border-inline-end: var(--border-sm) solid var(--table-border-color);
+	padding: var(--spacing-xxs);
+
+	&:first-of-type {
+		border-inline-start: var(--border-sm) solid var(--table-border-color);
+	}
+}
+
+#TableRow {
+	border-block-end: var(--border-sm) solid var(--table-border-color);
+
+	&:first-of-type {
+		border-block-start: var(--border-sm) solid var(--table-border-color);
+	}
+}

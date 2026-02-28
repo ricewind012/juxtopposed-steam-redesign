@@ -37,4 +37,8 @@
 #avatarStatus {
 	// !important
 	visibility: hidden;
+
+	&.none + #avatar {
+		--avatar--border-size: 0px;
+	}
 }

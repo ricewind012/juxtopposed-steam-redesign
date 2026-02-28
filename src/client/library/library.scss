@@ -1,9 +1,37 @@
+@use "shared/controls";
+
+#AchievementsOverlayContainer {
+	background-color: var(--color--bg-main-50);
+	backdrop-filter: var(--blur);
+
+	#CloseButton {
+		@include controls.icon-button($w: 36px, $child: "svg");
+
+		background: var(--color--bg-main);
+		border: none;
+		box-shadow: none;
+		padding: 8px;
+
+		inset-block-start: var(--dialog--spacing-container);
+		inset-inline-end: var(--dialog--spacing-container);
+	}
+}
+
+#AchievementsPageContainer {
+	margin-block: calc(var(--spacing-xl) * 3);
+}
+
 #AppDetailsMain {
 	border: none;
 }
 
 #AppDetailsTransitionGroup {
 	background-color: transparent;
+}
+
+#AppDetailsOverlayTransitionGroup > div {
+	background-color: var(--color--bg-main-50);
+	backdrop-filter: var(--blur);
 }
 
 #Container {

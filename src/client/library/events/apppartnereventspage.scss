@@ -1,0 +1,71 @@
+@use "shared/controls";
+
+#ControlSection {
+	background-color: color-mix(in srgb, var(--color--bg-hl) 2%, transparent);
+	backdrop-filter: var(--blur);
+	// TODO(vars): scrollbar width
+	padding-inline-end: 14px;
+
+	position: absolute;
+	inset: 0;
+	height: max-content;
+}
+
+#ControlSectionRightSide {
+	gap: var(--spacing-sm);
+	margin: var(--spacing-xxs) var(--dialog--spacing-container);
+
+	flex-direction: row-reverse;
+
+	#CloseButton,
+	#ScrollButton {
+		@include controls.icon-button($w: 36px, $child: "svg");
+
+		background: var(--color--bg-main-50);
+		border: none;
+		box-shadow: none;
+		padding: 8px;
+		margin: 0;
+	}
+
+	#GameArt > img {
+		padding: 0;
+	}
+}
+
+#ControlSectionWidth {
+	width: 848px;
+}
+
+// Throbber container
+#DirectionState {
+	margin: 0;
+}
+
+#EventType {
+	color: var(--color--primary);
+	font: inherit;
+	text-transform: none;
+}
+
+#EventTypeAndTimeRow {
+	order: 1;
+
+	&#WithReminder {
+		background: none;
+		padding: 0;
+		margin: 0;
+	}
+}
+
+#PartnerEvent {
+	background: var(--color--bg-main);
+	border: none;
+	border-radius: var(--rounding-lg);
+	box-shadow: var(--dialog--shadow);
+}
+
+#TimeandPostedBy {
+	color: var(--color--fg-main);
+	font: var(--text--body-medium);
+}
