@@ -1,0 +1,126 @@
+@use "shared/controls";
+@use "shared/style";
+@use "web";
+
+.profile_subpage_general {
+	.maincontent {
+		background: none;
+		border: none;
+		box-shadow: none;
+		padding: 0;
+		margin: 0 auto;
+
+		flex-direction: row;
+	}
+
+	.profile_leftcol {
+		& > p:first-child {
+			display: none;
+		}
+	}
+
+	.profile_rightcol {
+		& > * {
+			background-color: var(--color--bg-main);
+		}
+
+		br {
+			display: none;
+		}
+
+		#{controls.button-web-selector(".btn_medium")} {
+			margin-block-end: var(--spacing-md);
+
+			width: 100%;
+		}
+	}
+}
+
+.right_controls_large_block {
+	@include web.sidebar--list-item;
+
+	display: flex;
+	justify-content: space-between;
+
+	.secondary {
+		color: var(--color--fg-dim);
+		font: inherit;
+	}
+
+	.title {
+		color: var(--color--fg-main);
+		font: inherit;
+	}
+}
+
+.right_controls_large_block_active_bg {
+	display: none;
+}
+
+.right_controls_secondary_active_bg {
+	display: none;
+
+	& + a {
+		color: var(--color--primary);
+	}
+}
+
+.right_controls_secondary_link {
+	@include web.sidebar--list-item;
+}
+
+.rightcol_controls {
+	background: none;
+}
+
+.rightcol_controls_content {
+	padding: 0;
+
+	:where(& > a) {
+		@include web.sidebar--list-item;
+
+		display: block;
+		width: 100%;
+	}
+}
+
+.rightcol_controls_rule {
+	display: none;
+}
+
+.rightcol_controls_secondary_link_ctn > a {
+	@include web.sidebar--list-item;
+
+	display: block;
+	width: 100%;
+}
+
+.tradeoffer_privacy_box {
+	@include web.section--container;
+
+	h2 {
+		@include web.section--header;
+	}
+}
+
+.tradeoffer_privacy_note {
+	@include style.alert;
+
+	margin-block-start: var(--spacing-md);
+
+	img {
+		display: none;
+	}
+}
+
+.tradeoffer_privacy_secondary {
+	color: var(--color--fg-dim);
+	font: var(--text--body-small);
+	margin-block-end: var(--spacing-xxs);
+}
+
+.tradeoffer_welcome_ctn {
+	@include web.section--container;
+
+	font: var(--text--body-large);
+}
