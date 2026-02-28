@@ -1,4 +1,5 @@
 @use "shared/controls";
+@use "shared/utils";
 @use "web";
 
 @mixin -button($variant: "secondary", $size: "md") {
@@ -32,6 +33,10 @@
 	@include -button($variant: "tertiary", $size: "sm");
 }
 
+.btn_details_arrow {
+	display: none;
+}
+
 input[type="checkbox"] {
 	@include controls.checkbox(":checked", ":disabled");
 }
@@ -46,6 +51,15 @@ input[type="checkbox"] {
 
 .pagebtn {
 	@include web.paging--arrow($disabled: "&.disabled");
+}
+
+.popup_menu_pulldown_indicator {
+	@include utils.icon($name: "arrow");
+
+	background-image: none;
+	margin-inline-start: var(--spacing-xxs);
+
+	vertical-align: center;
 }
 
 .responsive_tab_baseline {

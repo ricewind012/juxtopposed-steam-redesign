@@ -12,6 +12,7 @@
 	@include menu.container;
 }
 
+.popup_item,
 .popup_menu_item {
 	@include menu.item;
 
@@ -73,6 +74,13 @@
 
 		height: unset;
 	}
+}
+
+// Inventory
+.context_name {
+	border: none;
+
+	height: unset;
 }
 
 // Profile

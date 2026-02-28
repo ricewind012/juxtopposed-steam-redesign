@@ -139,6 +139,7 @@ h3 {
 #mainContents {
 	color: var(--color--fg-main);
 	gap: var(--spacing-md);
+	padding: 0;
 	margin-top: var(--spacing-lg);
 
 	max-width: var(--content--width-lg);
@@ -182,6 +183,8 @@ h3 {
 .responsive_page_template_content {
 	--store-menu-overlap-height: var(--header--height);
 	--store-menu-floating-height: var(--header--height);
+
+	position: relative;
 }
 
 .rightbox {
