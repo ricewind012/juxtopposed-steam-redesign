@@ -91,7 +91,7 @@
 	overflow: hidden;
 
 	#SelectColumnsButton {
-		@include utils.icon("plus");
+		@include utils.icon($name: "plus");
 
 		margin: 6px 3px;
 
@@ -160,7 +160,7 @@
 }
 
 #SortCaret {
-	@include utils.icon("arrow", true);
+	@include utils.icon($name: "arrow", $remove: true);
 
 	vertical-align: text-bottom;
 

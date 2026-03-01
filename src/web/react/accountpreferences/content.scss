@@ -6,7 +6,7 @@ body:is(.account, .account_preferences) {
 }
 
 .nav_item {
-	@include web.layout--sidebar-item(".active");
+	@include web.layout--sidebar-item($active: "&.active");
 
 	&:last-child {
 		margin: 0;
@@ -88,7 +88,7 @@ body:is(.account, .account_preferences) {
 	margin: 0;
 
 	&.delete_link {
-		@include controls.button-vars("red");
+		@include controls.button-vars($variant: "red");
 	}
 }
 

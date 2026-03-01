@@ -209,7 +209,7 @@
 	}
 
 	#Rule {
-		@include utils.icon("drag-handle");
+		@include utils.icon($name: "drag-handle");
 
 		position: absolute;
 		inset-inline-end: 0;

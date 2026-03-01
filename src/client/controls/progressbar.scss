@@ -1,7 +1,7 @@
 @use "shared/controls";
 
 :where(#ProgressBar) {
-	@include controls.progress-bar("#Percent");
+	@include controls.progress-bar($inner: "#Percent");
 
 	height: unset;
 }

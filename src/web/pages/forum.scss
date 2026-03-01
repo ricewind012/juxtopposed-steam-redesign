@@ -137,7 +137,7 @@
 }
 
 .forum_author_action_pulldown {
-	@include utils.icon("arrow");
+	@include utils.icon($name: "arrow");
 
 	background-image: none;
 }

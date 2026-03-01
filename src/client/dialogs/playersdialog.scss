@@ -67,7 +67,7 @@
 }
 
 #SortCaret {
-	@include utils.icon("arrow", true);
+	@include utils.icon($name: "arrow", $remove: true);
 
 	vertical-align: text-bottom;
 

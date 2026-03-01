@@ -165,7 +165,7 @@
 }
 
 .commentthread_subscribe_checkbox {
-	@include controls.checkbox(".hack", ".hack2");
+	@include controls.checkbox($checked: "&.hack", $disabled: "&.hack2");
 
 	border: none;
 }

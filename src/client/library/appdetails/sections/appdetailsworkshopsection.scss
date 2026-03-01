@@ -30,7 +30,7 @@
 		}
 
 		svg {
-			@include utils.icon("close", true);
+			@include utils.icon($name: "close", $remove: true);
 		}
 	}
 

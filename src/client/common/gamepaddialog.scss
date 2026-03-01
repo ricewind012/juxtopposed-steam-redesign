@@ -58,7 +58,7 @@ $-others: ":where(#StandaloneFieldSeparator, .DialogControlsSection)";
 
 			margin-inline-start: var(--spacing-sm);
 
-			@include utils.icon("info");
+			@include utils.icon($name: "info");
 		}
 	}
 

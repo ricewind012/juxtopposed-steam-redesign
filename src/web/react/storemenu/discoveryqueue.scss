@@ -51,7 +51,7 @@
 			margin-block-start: var(--spacing-md);
 
 			svg {
-				@include utils.icon("arrow");
+				@include utils.icon($name: "arrow");
 
 				transform: rotate(-90deg);
 				fill: currentColor;

@@ -115,7 +115,7 @@
 .group_tab {
 	all: unset;
 
-	@include controls.tab(".active");
+	@include controls.tab($active: "&.active");
 
 	& > span {
 		all: unset;
@@ -150,7 +150,6 @@
 		font: var(--text--heading-small);
 	}
 
-	// TODO(mixins): unify maybe?
 	.commentthread_header {
 		color: var(--color--fg-dim);
 		font: var(--text--heading-small);

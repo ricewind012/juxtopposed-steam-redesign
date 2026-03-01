@@ -58,7 +58,7 @@
 		display: block;
 
 		&.supernav_active {
-			@include controls.button-vars("primary");
+			@include controls.button-vars($variant: "primary");
 		}
 
 		&:not(.username)::first-letter {

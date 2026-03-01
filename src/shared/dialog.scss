@@ -19,7 +19,7 @@
 	margin: 0;
 
 	&.Primary {
-		@include controls.button-vars("primary");
+		@include controls.button-vars($variant: "primary");
 	}
 
 	&::before {
@@ -28,7 +28,7 @@
 }
 
 .DialogCheckbox {
-	@include controls.checkbox(".Active", ".Disabled");
+	@include controls.checkbox($checked: "&.Active", $disabled: "&.Disabled");
 
 	box-shadow: none;
 
@@ -119,7 +119,7 @@
 }
 
 :where(.DialogRoundCheckboxField_Container) {
-	@include controls.radio("&.Active");
+	@include controls.radio($active: "&.Active");
 
 	margin: 0;
 
@@ -155,11 +155,7 @@
 	}
 
 	&.On {
-		@include controls.toggle(".Active", ".hack");
-
-		.Disabled & {
-			background: var(--color--bg-hover);
-		}
+		@include controls.toggle($checked: "&.Active", $disabled: ".Disabled &");
 	}
 }
 
@@ -194,7 +190,7 @@
 		all: unset;
 
 		svg {
-			@include utils.icon($name: "name", $size: "lg");
+			@include utils.icon($size: "lg");
 		}
 	}
 }

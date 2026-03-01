@@ -1,7 +1,7 @@
 @use "shared/controls";
 
 #Toggle {
-	@include controls.toggle("#On", "#Disabled");
+	@include controls.toggle($checked: "&#On", $disabled: "&#Disabled");
 }
 
 #ToggleRail,

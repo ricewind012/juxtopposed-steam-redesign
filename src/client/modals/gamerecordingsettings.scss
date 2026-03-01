@@ -19,7 +19,7 @@
 	flex-basis: unset;
 
 	:where(& > [role="radio"]) {
-		@include controls.radio("&[aria-checked='true']");
+		@include controls.radio($active: "&[aria-checked='true']");
 
 		width: 100%;
 	}

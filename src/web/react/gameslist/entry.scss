@@ -39,7 +39,7 @@
 }
 
 #AchievementsProgressBar {
-	@include controls.progress-bar("&::after");
+	@include controls.progress-bar($inner: "&::after");
 
 	height: unset;
 }
@@ -54,7 +54,7 @@
 	&::before {
 		content: "";
 
-		@include utils.icon("clock");
+		@include utils.icon($name: "clock");
 
 		color: color-mix(in srgb, var(--color--fg-dim) 50%, transparent);
 

@@ -9,10 +9,7 @@
 	height: 100%;
 
 	#{$icon} {
-		@include controls.text-field-icon($name: "search");
-
-		// TODO(mixins): <img> shit
-		content: url("data:,");
+		@include controls.text-field-icon($img-el: true, $name: "search");
 	}
 
 	#{$input} {

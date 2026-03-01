@@ -18,7 +18,7 @@
 }
 
 #NavLink {
-	@include web.layout--sidebar-item("#Active");
+	@include web.layout--sidebar-item($active: "&#Active");
 
 	line-height: unset;
 }

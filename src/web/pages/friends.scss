@@ -263,7 +263,7 @@
 		@include web.sidebar--list-item;
 
 		&.active {
-			color: var(--color--primary);
+			@include web.sidebar--list-item-primary;
 		}
 
 		.count {

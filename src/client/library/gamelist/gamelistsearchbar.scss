@@ -5,8 +5,8 @@
 
 #AdvancedSearchButton {
 	@include client.gamelist--icon-button(
-		"filter",
-		"#AdvancedSearchContainer#Extended &"
+		$icon: "filter",
+		$active-selector: "#AdvancedSearchContainer#Extended &"
 	);
 
 	// Fix some bullshit CSS behavior

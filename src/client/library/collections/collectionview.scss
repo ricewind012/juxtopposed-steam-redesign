@@ -70,7 +70,7 @@
 	}
 
 	svg {
-		@include utils.icon("name", "line");
+		@include utils.icon($remove: true);
 
 		color: var(--color--fg-dim);
 		margin: calc((var(--size) - var(--icon--size-md)) / 2);

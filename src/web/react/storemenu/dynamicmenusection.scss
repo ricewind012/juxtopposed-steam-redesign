@@ -36,7 +36,7 @@
 	align-items: center;
 
 	svg {
-		@include utils.icon("arrow", "path");
+		@include utils.icon($name: "arrow", $remove: true);
 
 		margin: 0;
 

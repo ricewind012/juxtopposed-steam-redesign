@@ -38,7 +38,7 @@
 }
 
 input[type="checkbox"] {
-	@include controls.checkbox(":checked", ":disabled");
+	@include controls.checkbox($checked: "&:checked", $disabled: "&:disabled");
 }
 
 .dselect_container {
@@ -69,7 +69,7 @@ input[type="checkbox"] {
 .sectionTab {
 	all: unset;
 
-	@include controls.tab(".active");
+	@include controls.tab($active: "&.active");
 
 	& > span {
 		all: unset;

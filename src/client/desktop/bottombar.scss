@@ -9,7 +9,7 @@
 }
 
 #AddGameButton {
-	@include -button("plus");
+	@include -button($icon: "plus");
 }
 
 #BottomBar {
@@ -30,7 +30,7 @@
 }
 
 #DownloadStatusContent {
-	@include -button("download");
+	@include -button($icon: "download");
 
 	#Icon {
 		border-radius: var(--rounding-md);
@@ -46,7 +46,7 @@
 }
 
 #FriendsButton {
-	@include -button("people");
+	@include -button($icon: "people");
 }
 
 #Icon {

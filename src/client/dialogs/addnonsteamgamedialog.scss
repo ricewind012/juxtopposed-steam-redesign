@@ -88,7 +88,7 @@
 	padding-inline-start: var(--spacing-xxs);
 
 	#Arrow {
-		@include utils.icon("arrow", true);
+		@include utils.icon($name: "arrow", $remove: true);
 
 		&:has(> [d="M17.98 10.23L3.20996 25H32.75L17.98 10.23Z"]) {
 			transform: rotate(180deg);

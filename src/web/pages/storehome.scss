@@ -432,7 +432,7 @@ body.no_home_gutter.infinite_scrolling {
 				position: absolute;
 				inset-block-start: calc(50% - var(--icon--size-md) / 2);
 
-				@include utils.icon("arrow");
+				@include utils.icon($name: "arrow");
 			}
 
 			&::before {

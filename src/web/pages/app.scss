@@ -150,7 +150,7 @@ body.game_bg {
 	}
 
 	#{controls.button-web-selector(".btn_medium")} {
-		@include controls.button-vars("primary");
+		@include controls.button-vars($variant: "primary");
 	}
 
 	// Leave it as is, looks cool
@@ -235,7 +235,7 @@ body.game_bg {
 
 		/* Not enough icons, maybe one day
 
-		@include utils.icon("name");
+		@include utils.icon;
 
 		$-icons: (
 			achievements: "achievements",
@@ -587,7 +587,7 @@ body.game_bg {
 	}
 
 	.sysreq_tab {
-		@include controls.tab(".active");
+		@include controls.tab($active: "&.active");
 
 		background-color: var(--color--bg-main-50);
 		padding-block: var(--spacing-sm);
@@ -885,7 +885,7 @@ body.game_bg {
 			}
 
 			&::before {
-				@include utils.icon("name");
+				@include utils.icon;
 
 				position: unset;
 
@@ -1133,7 +1133,7 @@ body.game_bg {
 }
 
 #{controls.button-web-selector(".queue_btn_active")} {
-	@include controls.button-vars("primary");
+	@include controls.button-vars($variant: "primary");
 
 	&[style="display: none;"] {
 		display: none;
@@ -1148,7 +1148,7 @@ body.game_bg {
 	min-width: calc(var(--spacing-sm) * 2 + var(--icon--size-md));
 
 	& > span {
-		@include utils.icon("arrow");
+		@include utils.icon($name: "arrow");
 
 		// Align with text
 		margin-block: 1px;

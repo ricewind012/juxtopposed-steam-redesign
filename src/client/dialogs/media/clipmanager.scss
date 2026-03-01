@@ -71,7 +71,7 @@
 	}
 
 	#Check {
-		@include utils.icon("check", true);
+		@include utils.icon($name: "check", $remove: true);
 	}
 }
 

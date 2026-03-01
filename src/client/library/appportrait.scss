@@ -19,7 +19,7 @@
 	}
 
 	svg {
-		@include utils.icon("name", "path", "lg");
+		@include utils.icon($remove: true, $size: "lg");
 
 		margin: 0;
 	}
@@ -80,7 +80,7 @@
 	&::before {
 		content: "";
 
-		@include utils.icon("name");
+		@include utils.icon;
 	}
 
 	&#Header {

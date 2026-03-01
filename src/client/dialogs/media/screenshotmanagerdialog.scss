@@ -154,7 +154,7 @@
 }
 
 #UGCCountIcon {
-	@include utils.icon("name", true);
+	@include utils.icon($remove: true);
 
 	opacity: var(--dim-opacity);
 	color: inherit;

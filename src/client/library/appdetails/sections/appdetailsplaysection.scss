@@ -28,7 +28,7 @@
 }
 
 #DetailsProgressContainer {
-	@include controls.progress-bar("#DetailsProgressBar");
+	@include controls.progress-bar($inner: "#DetailsProgressBar");
 
 	margin-block-start: var(--spacing-xxs);
 
@@ -117,7 +117,7 @@
 	}
 
 	svg {
-		@include utils.icon("name", true);
+		@include utils.icon($remove: true);
 	}
 
 	// "Scroll to top" button

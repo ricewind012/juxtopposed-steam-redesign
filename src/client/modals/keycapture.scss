@@ -16,7 +16,7 @@
 }
 
 #UnbindButton {
-	@include utils.icon("close", true, "lg");
+	@include utils.icon($name: "close", $remove: true, $size: "lg");
 
 	inset-block-start: 12px;
 	inset-inline-end: 15px;

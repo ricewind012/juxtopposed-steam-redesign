@@ -4,7 +4,7 @@
 	font: var(--text--body-medium);
 
 	svg {
-		@include utils.icon("name", true);
+		@include utils.icon($remove: true);
 
 		&#CommentIcon {
 			--icon-name: icon("chat-bubble");

@@ -9,7 +9,7 @@
 	height: unset;
 
 	&#Selected {
-		@include controls.button-vars("primary");
+		@include controls.button-vars($variant: "primary");
 	}
 }
 

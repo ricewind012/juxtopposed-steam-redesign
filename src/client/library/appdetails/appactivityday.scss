@@ -245,7 +245,7 @@
 		height: var(--icon--size-lg);
 
 		svg {
-			@include utils.icon("name", true, "lg");
+			@include utils.icon($remove: true, $size: "lg");
 		}
 	}
 }

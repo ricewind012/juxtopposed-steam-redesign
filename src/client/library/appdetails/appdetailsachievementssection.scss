@@ -1,7 +1,7 @@
 @use "shared/controls";
 
 #AchievementProgressContainer {
-	@include controls.progress-bar("#AchievementProgress");
+	@include controls.progress-bar($inner: "#AchievementProgress");
 
 	margin-block: var(--spacing-xs) 0;
 

@@ -26,7 +26,7 @@
 	width: var(--ach-progress-bar-width);
 	height: unset;
 
-	@include controls.progress_bar(".progress_bar");
+	@include controls.progress_bar($inner: ".progress_bar");
 }
 
 .customization_edit_instructions {

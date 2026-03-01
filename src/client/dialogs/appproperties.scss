@@ -159,7 +159,7 @@
 	}
 
 	#DragHandle {
-		@include utils.icon("drag-handle", true);
+		@include utils.icon($name: "drag-handle", $remove: true);
 
 		opacity: 1;
 

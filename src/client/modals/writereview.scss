@@ -72,7 +72,7 @@
 	margin-inline: var(--spacing-sm) 0;
 
 	&#Selected {
-		@include controls.button-vars("primary");
+		@include controls.button-vars($variant: "primary");
 	}
 
 	#ThumbIcon {

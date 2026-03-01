@@ -2,7 +2,7 @@
 @use "shared/utils";
 
 #Checkmark {
-	@include utils.icon("check", true);
+	@include utils.icon($name: "check", $remove: true);
 
 	color: inherit;
 }

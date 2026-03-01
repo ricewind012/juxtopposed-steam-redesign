@@ -254,7 +254,7 @@
 	width: 100%;
 
 	#DragHandle {
-		@include utils.icon($name: "drag-handle", $size: "lg", $remove: true);
+		@include utils.icon($name: "drag-handle", $remove: true, $size: "lg");
 
 		color: inherit;
 		margin: 0;

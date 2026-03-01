@@ -1,9 +1,7 @@
 @use "shared/utils";
 @use "web";
 
-@mixin -section($icon) {
-	--icon-name: icon(#{$icon});
-
+%-section {
 	background: none;
 	padding: 0;
 	gap: var(--spacing-sm);
@@ -66,7 +64,9 @@
 }
 
 #DiscussContainer {
-	@include -section($icon: "chat-bubble");
+	--icon-name: icon("chat-bubble");
+
+	@extend %-section;
 }
 
 #DiscussionCount {
@@ -79,11 +79,15 @@
 }
 
 #ShareContainer {
-	@include -section($icon: "language");
+	--icon-name: icon("language");
+
+	@extend %-section;
 }
 
 #VoteContainer {
-	@include -section($icon: "thumb-up");
+	--icon-name: icon("thumb-up");
+
+	@extend %-section;
 }
 
 #VoteCount {

@@ -8,7 +8,7 @@
 }
 
 #ScrollBarCtn {
-	@include controls.progress-bar("#ScrollThumb");
+	@include controls.progress-bar($inner: "#ScrollThumb");
 
 	// Manually set the height, since the thumb is absolutely positioned
 	height: 10px;

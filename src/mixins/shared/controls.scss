@@ -1,18 +1,5 @@
 @use "shared/utils";
 
-@mixin button-vars($variant: "secondary", $size: "md") {
-	background: var(--button--#{$variant}-bg);
-	color: var(--button--#{$variant}-fg);
-	border: var(--button--border-size) solid var(--button--#{$variant}-border);
-	padding-block: var(--button--spacing-block-#{$size});
-
-	&:hover {
-		background: var(--button--#{$variant}-bg-hover);
-		color: var(--button--#{$variant}-fg-hover);
-		border-color: var(--button--#{$variant}-border-hover);
-	}
-}
-
 /// Returns a string with the higher specificity than the
 /// `.btnv6_white_transparent:not(.btn_disabled):not(:disabled):not(.btn_active):not(.active):hover > span`
 /// selector that also uses !important, ty valve
@@ -38,10 +25,24 @@
 	cursor: pointer;
 }
 
-@mixin checkbox($checked-selector, $disabled-selector) {
+@mixin button-vars($variant: "secondary", $size: "md") {
+	background: var(--button--#{$variant}-bg);
+	color: var(--button--#{$variant}-fg);
+	border: var(--button--border-size) solid var(--button--#{$variant}-border);
+	padding-block: var(--button--spacing-block-#{$size});
+
+	&:hover {
+		background: var(--button--#{$variant}-bg-hover);
+		color: var(--button--#{$variant}-fg-hover);
+		border-color: var(--button--#{$variant}-border-hover);
+	}
+}
+
+/// All args are selectors.
+@mixin checkbox($checked, $disabled) {
 	--icon-name: icon("checkbox");
 
-	@include utils.icon($name: "name", $size: "lg");
+	@include utils.icon($size: "lg");
 
 	appearance: none;
 	color: var(--color--fg-dim);
@@ -50,11 +51,11 @@
 		background: var(--color--fg-main);
 	}
 
-	&#{$checked-selector} {
+	#{$checked} {
 		--icon-name: icon("checkbox-checked");
 	}
 
-	&#{$disabled-selector} {
+	#{$disabled} {
 		background: var(--color--bg-hover);
 	}
 }
@@ -62,14 +63,10 @@
 @mixin dropdown($variant: "secondary", $size: "md") {
 	@include button($variant, $size);
 
-	position: relative;
-
 	&::after {
 		content: "";
 
-		@include utils.icon("arrow");
-
-		right: var(--spacing-lg);
+		@include utils.icon($name: "arrow");
 	}
 }
 
@@ -103,6 +100,7 @@
 	}
 }
 
+/// All args are selectors.
 @mixin progress-bar($inner) {
 	background-color: var(--color--bg-hl);
 	border-radius: 10px;
@@ -116,6 +114,7 @@
 	}
 }
 
+/// All args are selectors.
 @mixin radio($active) {
 	transition: var(--transition);
 	background-color: var(--color--bg-main-50);
@@ -178,7 +177,8 @@
 	display: flex;
 }
 
-@mixin tab($active-selector) {
+/// All args are selectors.
+@mixin tab($active) {
 	color: var(--color--fg-dim);
 	font: var(--text--body-large);
 	border-radius: var(--rounding-md);
@@ -188,7 +188,7 @@
 		background-color: var(--color--bg-hover);
 	}
 
-	&#{$active-selector} {
+	#{$active} {
 		background-color: var(--color--bg-hl);
 		color: var(--color--fg-main);
 	}
@@ -213,9 +213,10 @@
 	);
 }
 
+/// @param {Boolean} $img-el [false] - `true` if used on an `<img>` element.
 /// @param {"close" | "search"} $name - Icon name.
-@mixin text-field-icon($name) {
-	@include utils.icon($name, $remove: true);
+@mixin text-field-icon($img-el: false, $name) {
+	@include utils.icon($img-el, $name, $remove: true);
 
 	color: var(--color--secondary);
 
@@ -224,7 +225,8 @@
 	inset-inline-end: calc(var(--text-field--spacing-inline) / 2);
 }
 
-@mixin toggle($checked-selector, $disabled-selector) {
+/// All args are selectors.
+@mixin toggle($checked, $disabled) {
 	--swatch-bg: var(--toggle--swatch-bg);
 	--swatch-pos: var(--toggle--switch-spacing) var(--toggle--swatch-pos);
 	--switch-bg: var(--toggle--switch-bg);
@@ -237,13 +239,13 @@
 	width: var(--toggle--switch-size);
 	height: calc(var(--toggle--swatch-size) + var(--toggle--switch-spacing) * 2);
 
-	&#{$checked-selector} {
+	#{$checked} {
 		--swatch-bg: var(--toggle--swatch-bg-checked);
 		--swatch-pos: var(--toggle--swatch-pos) var(--toggle--switch-spacing);
 		--switch-bg: var(--toggle--switch-bg-checked);
 	}
 
-	&#{$disabled-selector} {
+	#{$disabled} {
 		opacity: var(--dim-opacity);
 	}
 

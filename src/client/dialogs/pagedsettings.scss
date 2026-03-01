@@ -74,7 +74,7 @@
 }
 
 #PagedSettingsDialog_PageListItem {
-	@include web.layout--sidebar-item("#Active");
+	@include web.layout--sidebar-item($active: "&#Active");
 
 	color: var(--color--fg-main);
 	font: var(--text--body-large);

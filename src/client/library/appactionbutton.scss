@@ -4,7 +4,7 @@
 #ButtonChild {
 	--icon-name: icon("download");
 
-	@include controls.button("primary");
+	@include controls.button($variant: "primary");
 
 	&#StreamingSelector {
 		margin-inline-start: var(--spacing-xxs);
@@ -20,7 +20,7 @@
 	}
 
 	svg {
-		@include utils.icon("name", true, "lg");
+		@include utils.icon($remove: true, $size: "lg");
 
 		color: inherit;
 		margin: 0;
@@ -37,6 +37,6 @@
 	min-width: 151px;
 
 	&#Green > #ButtonChild {
-		@include controls.button-vars("green");
+		@include controls.button-vars($variant: "green");
 	}
 }

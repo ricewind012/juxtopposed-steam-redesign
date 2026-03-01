@@ -139,8 +139,9 @@ body.apphub_blue.v6 {
 	align-items: center;
 
 	&.checked {
+		@include web.sidebar--list-item-primary;
+
 		background-image: none;
-		color: var(--color--primary);
 	}
 
 	input[type="checkbox"] {
@@ -206,7 +207,7 @@ body.apphub_blue.v6 {
 }
 
 .general_btn {
-	@include controls.button("primary");
+	@include controls.button($variant: "primary");
 
 	margin-right: 0;
 
@@ -295,7 +296,7 @@ body.apphub_blue.v6 {
 }
 
 .home_tab {
-	@include controls.tab(".active");
+	@include controls.tab($active: "&.active");
 
 	background: none;
 	box-shadow: none;
@@ -550,7 +551,6 @@ body.apphub_blue.v6 {
 		height: var(--carousel--thumb-height);
 	}
 
-	// TODO(mixins)
 	.slider {
 		background-color: var(--color--bg-main);
 
@@ -705,7 +705,7 @@ body.apphub_blue.v6 {
 
 // TODO: simplify after unifying mixin sel args
 .workshop_browse_tab {
-	@include controls.tab(".active");
+	@include controls.tab($active: "&.active");
 
 	&.active {
 		border: none;
@@ -1036,7 +1036,7 @@ body.apphub_blue.v6 {
 		min-height: var(--size);
 
 		.subscribeIcon {
-			@include utils.icon("plus");
+			@include utils.icon($name: "plus");
 
 			background-image: none;
 		}
@@ -1108,18 +1108,18 @@ body.apphub_blue.v6 {
 	margin-block-start: var(--spacing-md);
 
 	.general_btn {
-		@include controls.button-vars("secondary");
+		@include controls.button-vars;
 
 		margin-right: var(--spacing-sm);
 
 		height: unset;
 
 		&#ReportItemBtn {
-			@include -icon("flag");
+			@include -icon($name: "flag");
 		}
 
 		&#VoteDownBtn {
-			@include -icon("thumb-up");
+			@include -icon($name: "thumb-up");
 
 			&::before {
 				transform: rotate(180deg);
@@ -1127,7 +1127,7 @@ body.apphub_blue.v6 {
 		}
 
 		&#VoteUpBtn {
-			@include -icon("thumb-up");
+			@include -icon($name: "thumb-up");
 		}
 	}
 

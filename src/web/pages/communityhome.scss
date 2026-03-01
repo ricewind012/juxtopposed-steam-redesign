@@ -119,7 +119,7 @@
 	#{controls.button-web-selector(".btn_small")} {
 		all: unset;
 
-		@include controls.tab(".btn_darkblue_white_innerfade");
+		@include controls.tab($active: "&.btn_darkblue_white_innerfade");
 
 		box-shadow: none;
 	}

@@ -21,7 +21,7 @@
 	margin: 0;
 
 	&#ActiveDevice {
-		@include controls.button-vars("primary");
+		@include controls.button-vars($variant: "primary");
 	}
 }
 
@@ -64,7 +64,7 @@
 	margin: 0;
 
 	.DialogButton.DialogButton {
-		@include controls.button-vars("red");
+		@include controls.button-vars($variant: "red");
 
 		// Some guy really thought putting an !important would be hilarious af
 		&:hover {

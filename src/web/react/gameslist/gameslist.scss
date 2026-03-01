@@ -24,7 +24,7 @@
 	}
 
 	.sectionTab {
-		@include controls.tab(".active");
+		@include controls.tab($active: "&.active");
 
 		background: none;
 		margin: 0;

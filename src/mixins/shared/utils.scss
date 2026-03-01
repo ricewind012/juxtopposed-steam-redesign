@@ -1,4 +1,8 @@
-@mixin icon($name: "name", $remove: false, $size: "md") {
+/// @param {Boolean} $img-el [false] - `true` if used on an `<img>` element.
+/// @param {String} $name ["name"] - Icon name found in `assets/icons`.
+/// @param {Boolean} $remove [false] - Remove all of element's children?
+/// @param {"sm" | "md" | "lg"} $size ["md"] - Icon size.
+@mixin icon($img-el: false, $name: "name", $remove: false, $size: "md") {
 	background-color: currentColor;
 	mask: var(--icon-#{$name});
 	mask-position: center;
@@ -6,6 +10,10 @@
 
 	width: var(--icon--size-#{$size});
 	height: var(--icon--size-#{$size});
+
+	@if $img-el {
+		content: url("data:,");
+	}
 
 	@if $remove {
 		* {
@@ -15,7 +23,7 @@
 }
 
 @mixin tooltip-icon {
-	@include icon("info");
+	@include icon($name: "info");
 
 	color: var(--color--fg-dim);
 

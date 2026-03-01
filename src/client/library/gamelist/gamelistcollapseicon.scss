@@ -1,7 +1,7 @@
 @use "shared/utils";
 
 #Container {
-	@include utils.icon("arrow", "svg", "lg");
+	@include utils.icon($name: "arrow", $remove: true, $size: "lg");
 
 	color: var(--color--fg-main);
 

@@ -8,7 +8,7 @@
 }
 
 #GraphicalAssetsTab {
-	@include controls.tab("#Active");
+	@include controls.tab($active: "&#Active");
 
 	letter-spacing: 0;
 	text-transform: unset;

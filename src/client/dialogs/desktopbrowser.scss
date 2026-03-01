@@ -3,7 +3,7 @@
 @use "client";
 
 #BrowserTab {
-	@include controls.tab("#Active");
+	@include controls.tab($active: "&#Active");
 
 	gap: var(--spacing-xs);
 	border: none;
@@ -59,10 +59,7 @@
 }
 
 #NavigationButton {
-	@include client.gamelist--icon-button(
-		$icon-name: "name",
-		$active-selector: "&:not(#Disabled)"
-	);
+	@include client.gamelist--icon-button($active-selector: "&:not(#Disabled)");
 
 	height: unset;
 

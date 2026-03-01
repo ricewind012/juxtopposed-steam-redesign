@@ -101,7 +101,7 @@
 	}
 
 	#DragHandle {
-		@include utils.icon("drag-handle");
+		@include utils.icon($name: "drag-handle");
 
 		opacity: 1;
 		margin: 0;

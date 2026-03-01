@@ -23,6 +23,6 @@
 	&::after {
 		content: "";
 
-		@include utils.icon("arrow");
+		@include utils.icon($name: "arrow");
 	}
 }

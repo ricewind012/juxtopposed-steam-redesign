@@ -113,13 +113,10 @@
 	}
 
 	.review_source {
-		@include utils.icon($name: "star-filled");
+		@include utils.icon($img-el: true, $name: "star-filled");
 
 		opacity: 1;
 		margin: 0;
-
-		// TODO(mixins): <img> shit
-		content: url("data:,");
 	}
 }
 
@@ -493,7 +490,7 @@
 		display: none;
 
 		&:checked + label {
-			color: var(--color--primary);
+			@include web.sidebar--list-item-primary;
 		}
 	}
 }

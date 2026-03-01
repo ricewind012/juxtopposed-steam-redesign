@@ -488,7 +488,7 @@
 }
 
 .apphub_sectionTab {
-	@include controls.tab(".active");
+	@include controls.tab($active: "&.active");
 
 	background-image: none;
 	margin: 0;

@@ -30,7 +30,7 @@
 }
 
 #CheckboxWithImage {
-	@include client.gamelist--icon-button("name", "&#Active");
+	@include client.gamelist--icon-button($active-selector: "&#Active");
 
 	margin: 0;
 

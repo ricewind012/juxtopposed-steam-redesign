@@ -181,7 +181,7 @@
 		white-space: nowrap;
 
 		.guideSubSectionSelection.selected > & {
-			color: var(--color--primary);
+			@include web.sidebar--list-item-primary;
 		}
 	}
 }

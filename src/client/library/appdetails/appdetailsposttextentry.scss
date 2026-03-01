@@ -10,12 +10,12 @@
 		@include controls.button;
 
 		& > div {
-			@include utils.icon("emoticon", true);
+			@include utils.icon($name: "emoticon", $remove: true);
 		}
 	}
 
 	#PostButton {
-		@include controls.button("primary");
+		@include controls.button($variant: "primary");
 
 		margin-inline-start: var(--spacing-sm);
 	}

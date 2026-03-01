@@ -30,11 +30,11 @@
 	gap: var(--spacing-xxs);
 
 	#AddLineItem {
-		@include -icon-button("plus");
+		@include -icon-button($name: "plus");
 	}
 
 	#RemoveLineItem {
-		@include -icon-button("delete");
+		@include -icon-button($name: "delete");
 	}
 }
 
