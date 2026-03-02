@@ -4,6 +4,7 @@
 	gap: var(--spacing-sm);
 
 	flex-direction: row-reverse;
+	align-items: center;
 
 	&#Selected,
 	&:hover {

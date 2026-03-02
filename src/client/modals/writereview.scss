@@ -61,7 +61,7 @@
 }
 
 #ReviewTextArea {
-	@include controls.text-field;
+	@include controls.text-field($variant: "transparent");
 
 	width: 100%;
 }

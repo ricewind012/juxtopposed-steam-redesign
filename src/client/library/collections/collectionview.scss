@@ -6,11 +6,21 @@
 }
 
 #DynamicCollectionLabel {
-	display: none;
+	all: unset;
+
+	text-transform: none;
 }
 
 #DynamicCollectionLabelAndButton {
-	all: unset;
+	@include controls.button;
+
+	svg {
+		margin: 0;
+	}
+
+	.SVGIcon_DynamicCollection {
+		display: none;
+	}
 }
 
 #DynamicCollectionSubHeader {
@@ -31,38 +41,30 @@
 }
 
 #EditButton {
-	--bg: var(--color--fg-dim);
-	--color-bg-percentage: 5%;
 	--icon-name: icon("settings");
-	--size: 26px;
 
-	background-color: color-mix(
-		in srgb,
-		var(--bg) var(--color-bg-percentage),
-		transparent
-	);
-	border-radius: var(--rounding-md);
+	@include controls.icon-button($w: 44px, $child: "svg");
+
+	background: color-mix(in srgb, currentColor 10%, transparent);
+	color: var(--color--fg-dim);
 	margin: 0;
 
-	order: 1;
-	width: var(--size);
-	height: var(--size);
+	// TODO(controls): unify icon-button with button
+	display: flex;
+	align-items: center;
+	justify-content: center;
 
 	#DynamicCollectionLabelAndButton & {
-		--icon-name: icon("filter");
-	}
+		all: unset;
 
-	#Header & {
-		align-self: unset;
+		--icon-name: icon("filter");
+
+		display: flex;
 	}
 
 	// oh my god bruh
-	#Header:has(+ div #FreezeButton) #DynamicCollectionLabelAndButton & {
-		--bg: var(--color--primary);
-	}
-
-	&:hover {
-		--color-bg-percentage: 10%;
+	#Header:has(+ div #FreezeButton) .tool-tip-source > & {
+		color: var(--color--primary);
 	}
 
 	&#Close {
@@ -70,10 +72,7 @@
 	}
 
 	svg {
-		@include utils.icon($remove: true);
-
-		color: var(--color--fg-dim);
-		margin: calc((var(--size) - var(--icon--size-md)) / 2);
+		color: inherit;
 	}
 }
 
@@ -87,6 +86,8 @@
 	#CollectionName {
 		font: inherit;
 		letter-spacing: 0;
+
+		order: -2;
 	}
 
 	#Rule {
@@ -97,15 +98,18 @@
 		color: inherit;
 		font: inherit;
 		margin: 0;
+
+		order: -1;
 	}
 
-	& > .tool-tip-source {
-		order: 1;
-	}
-
-	// lmao but at least it will be visible (I hope)
 	.DialogInput {
-		@include controls.text-field($variant: "search");
+		@include controls.text-field;
+	}
+
+	.DialogInput_Wrapper {
+		margin: 0;
+
+		order: -2;
 	}
 }
 

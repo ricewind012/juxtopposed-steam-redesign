@@ -1,13 +1,16 @@
 #FatButton {
-	--spacing-inline: var(--spacing-lg);
-
-	text-align: start;
+	border: none;
 	border-radius: 0;
-	padding-inline: var(--spacing-inline);
-	margin: calc(var(--spacing-xxs) * -1) calc(var(--spacing-inline) * -1);
+	gap: 0;
+	padding-inline: var(--gamepaddialog_field-spacing-inline);
+	margin-block: calc(var(--spacing-xxs) * -1);
+	margin-inline: calc(var(--gamepaddialog_field-spacing-inline) * -1);
 
+	flex-direction: column;
+	align-items: start;
+	justify-content: start;
 	position: relative;
-	width: calc(100% + var(--spacing-inline) * 2);
+	width: calc(100% + var(--gamepaddialog_field-spacing-inline) * 2);
 
 	&:not(:hover) {
 		background-color: transparent;
@@ -18,7 +21,7 @@
 		margin: 12px 0;
 
 		position: absolute;
-		inset-inline-end: var(--spacing-inline);
+		inset-inline-end: var(--gamepaddialog_field-spacing-inline);
 		width: var(--icon--size-md);
 		height: var(--icon--size-md);
 	}

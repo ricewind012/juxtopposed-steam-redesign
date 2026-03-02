@@ -14,34 +14,32 @@ $-others: ":where(#StandaloneFieldSeparator, .DialogControlsSection)";
 #Field {
 	--field-row-children-spacing: 0px;
 
+	background-color: var(--color--bg-main-50);
 	padding-block: var(--gamepaddialog_field-spacing-block);
-	margin-inline-start: calc(var(--spacing-lg) * var(--indent-level));
+	padding-inline: var(--gamepaddialog_field-spacing-inline);
+	margin-inline-start: calc(
+		var(--gamepaddialog_field-spacing-inline) * var(--indent-level)
+	);
 
-	// TODO: remove .DialogBody ? where else is #Field used other than gameinfo?
-	.DialogBody > & {
-		background-color: var(--color--bg-main-50);
-		padding-inline: var(--spacing-lg);
-	}
-
-	.DialogBody > &:nth-child(-n + 1 of &) {
+	&:nth-child(-n + 1 of &) {
 		border-radius: var(--rounding-lg) var(--rounding-lg) 0 0;
 	}
 
-	.DialogBody > &:has(+ #{$-others}) {
+	&:has(+ #{$-others}) {
 		border-radius: 0 0 var(--rounding-lg) var(--rounding-lg);
 	}
 
-	.DialogBody > &:nth-last-child(-n + 1 of &) {
+	&:nth-last-child(-n + 1 of &) {
 		border-radius: 0 0 var(--rounding-lg) var(--rounding-lg);
 	}
 
-	.DialogBody > #{$-others} + & {
+	#{$-others} + & {
 		border-radius: var(--rounding-lg) var(--rounding-lg) 0 0;
 		margin-block-start: var(--spacing-lg);
 	}
 
 	&:only-child,
-	.DialogBody > #{$-others} + &:last-child {
+	#{$-others} + &:last-child {
 		border-radius: var(--rounding-lg);
 	}
 
@@ -75,7 +73,7 @@ $-others: ":where(#StandaloneFieldSeparator, .DialogControlsSection)";
 
 #FieldIcon {
 	display: inline-flex;
-	vertical-align: middle;
+	vertical-align: sub;
 }
 
 #FieldLabel {

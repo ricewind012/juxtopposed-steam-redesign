@@ -31,7 +31,7 @@
 	--text-height-large: var(--text--body-large-size) * var(--text--line-height);
 	--text-height-medium: var(--text--body-medium-size) * var(--text--line-height);
 
-	--offset-top: calc(var(--spacing-sm * 2) + var(--button-height));
+	--offset-top: calc(var(--spacing-sm) * 2 + var(--button-height));
 	--offset-bottom: calc(
 		var(--text-height-medium) + var(--button-height) +
 			var(--dialog--spacing-container) * 2 + var(--spacing-sm)

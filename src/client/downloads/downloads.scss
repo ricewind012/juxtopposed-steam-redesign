@@ -190,7 +190,7 @@
 	.DialogButton {
 		--icon-name: icon("settings");
 
-		background: color-mix(in srgb, var(--color--fg-dim) 10%, transparent);
+		background: color-mix(in srgb, currentColor 10%, transparent);
 		color: var(--color--fg-dim);
 	}
 }

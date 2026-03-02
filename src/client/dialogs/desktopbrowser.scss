@@ -5,8 +5,11 @@
 #BrowserTab {
 	@include controls.tab($active: "&#Active");
 
+	background: color-mix(in srgb, var(--color--bg-tertiary) 50%, transparent);
 	gap: var(--spacing-xs);
+	padding: var(--spacing-md) var(--spacing-lg);
 	border: none;
+	border-radius: 0;
 
 	#BrowserTabs > & {
 		padding-inline: var(--spacing-sm);
@@ -44,9 +47,6 @@
 }
 
 #BrowserTabs {
-	gap: var(--spacing-xxs);
-	margin: var(--spacing-sm);
-
 	width: calc(
 		100% - var(--dialog--window-control-size) *
 			4 - var(--dialog--window-control-spacing) * 3.5
@@ -78,7 +78,7 @@
 }
 
 #URL {
-	.PopupFullWindow:not(.OverlayBrowser_Browser) & {
+	.PopupFullWindow:not(.OverlayBrowser_Browser, .TabbedPopupBrowser) & {
 		@include controls.text-field;
 
 		margin-inline-end: calc(

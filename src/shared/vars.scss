@@ -191,8 +191,8 @@
 
 	// Header
 	--header--bg: var(--color--bg-tertiary);
-	--header--button-bg: transparent;
 	--header--button-spacing: var(--spacing-xs);
+	--header--control-bg: var(--color--bg-main-20);
 	--header--height: calc(
 		var(--text--body-large-size) * var(--text--line-height) +
 			var(--button--spacing-block-md) * 2 + var(--button--border-size) * 2 +
@@ -200,7 +200,6 @@
 	);
 	--header--spacing-block: 6px;
 	--header--spacing-inline: var(--spacing-sm);
-	--header--text-field-bg: var(--color--bg-main-20);
 
 	// Popup
 	--popup--container-shadow: 0 0 4px 1px rgba(0, 0, 0, 0.25);
@@ -238,7 +237,7 @@
 	--toggle--swatch-bg: var(--color--bg-hover);
 	--toggle--swatch-bg-checked: var(--color--primary);
 	--toggle--swatch-pos: calc(
-		100% - var(--toggle--swatch-size) - var(--spacing-md)
+		100% - var(--toggle--swatch-size) - var(--toggle--switch-spacing)
 	);
 	--toggle--swatch-size: 20px;
 

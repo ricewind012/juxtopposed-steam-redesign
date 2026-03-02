@@ -24,5 +24,8 @@
 }
 
 #ScrollTrack {
-	all: unset;
+	background: none;
+	box-shadow: none;
+
+	inset-block-end: 11px;
 }

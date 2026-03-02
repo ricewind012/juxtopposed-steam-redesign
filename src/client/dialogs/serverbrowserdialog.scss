@@ -26,12 +26,9 @@
 	}
 }
 
-// TODO(controls): unify dropdown here with buttons so I can do $size: 'lg' ?
 #FilterOptionsCtr {
 	gap: var(--spacing-lg);
 	padding-block-end: var(--dialog--spacing-content);
-
-	align-items: start;
 
 	&:not(#Collapsed) {
 		margin-block-start: var(--spacing-sm);
@@ -53,15 +50,17 @@
 		}
 	}
 
-	.DialogDropDown {
-		@include controls.button-vars($size: "lg");
+	.DialogInput {
+		@include controls.text-field($variant: "transparent");
 	}
 
 	#DropdownLabel {
-		font: inherit;
+		color: var(--color--fg-dim);
+		font: var(--text--body-small);
 	}
 
 	#FilterOptionsCheckboxesCtr {
+		flex-basis: 25em;
 		align-self: unset;
 	}
 }

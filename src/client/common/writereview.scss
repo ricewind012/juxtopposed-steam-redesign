@@ -19,5 +19,9 @@
 }
 
 #RatingContainer {
+	--color--fg-dim: color-mix(in srgb, var(--color--primary) 50%, transparent);
+
 	@include client.appdetails--section;
+
+	background-color: color-mix(in srgb, var(--color--primary) 10%, transparent);
 }

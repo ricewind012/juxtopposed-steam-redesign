@@ -119,11 +119,19 @@ $-bar-colors: (
 	}
 }
 
+#AppUsageItem {
+	margin-inline-end: var(--spacing-sm);
+}
+
 #ContentManagement {
+	mask: none;
+	padding-block-start: 0;
+
 	position: relative;
 }
 
 #DriveDropdownControl {
+	--button--secondary-bg: var(--color--bg-main-50);
 	--item--fg-dim: var(--color--fg-dim);
 	--item--fg-main: var(--color--fg-main);
 	--item--svg-display: flex;
@@ -151,8 +159,7 @@ $-bar-colors: (
 
 	position: absolute;
 	inset-block-start: 0;
-	// TODO: wtf is this
-	inset-inline-end: 12px;
+	inset-inline-end: var(--dialog--spacing-container);
 
 	&:not(:hover) {
 		background-color: var(--color--bg-main-50);
@@ -176,6 +183,18 @@ $-bar-colors: (
 	background: var(--color--bg-main);
 
 	min-height: 4px;
+}
+
+#DriveUsageLabels {
+	margin-block-start: var(--spacing-xxs);
+}
+
+#DriveUsageNumber {
+	color: var(--color--fg-dim);
+}
+
+#DriveUsageText {
+	color: var(--color--fg-main);
 }
 
 #InstallDropdownOption {

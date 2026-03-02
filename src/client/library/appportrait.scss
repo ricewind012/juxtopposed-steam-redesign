@@ -1,21 +1,42 @@
 @use "shared/utils";
 
+#FooterBlurImage {
+	filter: var(--blur);
+	opacity: 1;
+
+	position: relative;
+	z-index: -1;
+}
+
 #FooterBlurImageContainer {
-	display: none;
+	filter: none;
+	background-color: var(--color--bg-main-50);
 }
 
 #LibraryItemActionButton {
-	background: color-mix(in srgb, var(--fg-dim) 20%, transparent);
+	--icon-name: icon("download");
+	--icon--size-lg: 50px;
+
+	background: color-mix(in srgb, currentColor 20%, transparent);
+	color: var(--color--primary);
 	border: none;
 	border-radius: var(--rounding-md);
 	box-shadow: none;
 	padding: var(--spacing-xxs);
 
+	inset: var(--spacing-sm);
+	inset-block-start: unset;
 	width: var(--action-button-size);
 	height: var(--action-button-size);
 
+	&:hover {
+		background: color-mix(in srgb, currentColor 50%, transparent);
+	}
+
 	&#Play {
 		--icon-name: icon("play");
+
+		color: var(--color--accent-green);
 	}
 
 	svg {
@@ -26,7 +47,7 @@
 }
 
 #LibraryItemBox {
-	--action-button-size: 51px;
+	--action-button-size: 71px;
 
 	border: none;
 	box-shadow: none;
@@ -53,34 +74,33 @@
 	&#InRecentGames#FeaturedCapsule {
 		background: linear-gradient(
 			190.47deg,
-			color-mix(in srgb, var(--bg-main) 95%, transparent) 13.71%,
+			color-mix(in srgb, var(--color--bg-main) 95%, transparent) 13.71%,
 			color-mix(in srgb, var(--color--secondary) 41.8%, transparent) 91.45%
 		);
 	}
 }
 
 #PlaytimeDetails {
-	color: var(--fg-main);
-	font: var(--gpText-BodySmall);
-	gap: 6px;
+	color: var(--color--fg-main);
+	font: var(--text--body-large);
+	gap: var(--spacing-xxs);
 	padding: 0;
 
 	flex-direction: row;
+	align-items: center;
 
 	#RecentGameFooter > & {
-		margin-inline-start: calc(var(--action-button-size) + 6px);
+		margin-inline-start: calc(
+			var(--action-button-size) + var(--spacing-sm) * 2
+		);
 
 		flex-direction: column;
+		align-items: start;
+		justify-content: center;
 
 		&::before {
 			display: none;
 		}
-	}
-
-	&::before {
-		content: "";
-
-		@include utils.icon;
 	}
 
 	&#Header {
@@ -94,10 +114,18 @@
 	&#PlayedTotal {
 		--icon-name: icon("calendar");
 	}
+
+	&::before {
+		content: "";
+
+		@include utils.icon;
+
+		color: var(--color--fg-dim);
+	}
 }
 
 #RecentGameFooter {
-	background-color: color-mix(in srgb, var(--bg-hl) 2%, transparent);
+	background-color: var(--color--bg-hl);
 
-	height: 74px;
+	height: calc(var(--action-button-size) + var(--spacing-sm) * 2);
 }

@@ -1,6 +1,25 @@
+// Overlay looks better, so use the overlay style
+#AboutSteamDialog {
+	--button--secondary-bg: color-mix(
+		in srgb,
+		var(--color--bg-hl) 50%,
+		var(--color--bg-secondary)
+	);
+	--color--bg-hl: var(--color--bg-main);
+
+	background: radial-gradient(
+		155.42% 100% at 0% 0%,
+		var(--color--bg-secondary) 0%,
+		var(--color--bg-main) 100%
+	);
+}
+
 #DialogBodyLabel {
 	color: var(--color--fg-dim);
 	font: inherit;
+
+	display: inline-block;
+	width: 50%;
 }
 
 #DialogBodyText {

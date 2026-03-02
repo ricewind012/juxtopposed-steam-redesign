@@ -9,13 +9,15 @@
 
 	height: unset;
 
-	&:where(#Active) {
+	&#Active {
 		background-color: var(--color--primary);
 		color: var(--color--bg-main);
 	}
 
 	&:where(#Combobox) {
 		@include controls.dropdown($size: "sm");
+
+		justify-content: space-between;
 
 		svg {
 			display: none;
@@ -36,6 +38,13 @@
 
 		width: var(--size);
 		height: var(--size);
+
+		svg {
+			color: inherit;
+
+			width: var(--icon--size-md);
+			height: var(--icon--size-md);
+		}
 	}
 
 	svg {
@@ -106,6 +115,8 @@
 	}
 
 	#StickyHeader {
+		--button--secondary-bg: var(--color--bg-main-50);
+
 		backdrop-filter: var(--blur);
 		background: var(--color--bg-main-50);
 		border: none;
@@ -114,10 +125,6 @@
 		padding: var(--dialog--spacing-container);
 
 		width: 100%;
-
-		#ButtonBox:not(:hover, #Active) {
-			--color--bg-hl: var(--color--bg-main-50);
-		}
 	}
 }
 

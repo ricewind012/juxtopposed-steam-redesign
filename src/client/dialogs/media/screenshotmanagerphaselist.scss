@@ -43,22 +43,17 @@
 #InputFilter {
 	all: unset;
 
-	--color--bg-tertiary: var(--color--bg-main);
-	--spacing-sm: var(--spacing-xs);
-
 	position: relative;
 
 	input {
 		@include controls.text-field($variant: "search");
 
 		transition: var(--transition);
+		// Align with buttons
+		padding-block: var(--spacing-xxs);
 
 		&:focus {
-			background-color: color-mix(
-				in srgb,
-				var(--color--bg-tertiary) 50%,
-				transparent
-			);
+			background-color: var(--color--bg-tertiary);
 		}
 	}
 

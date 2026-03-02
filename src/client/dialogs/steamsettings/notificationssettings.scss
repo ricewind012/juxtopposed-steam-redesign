@@ -42,3 +42,16 @@
 		transform: rotate(180deg);
 	}
 }
+
+#ToggleHeader {
+	color: var(--color--fg-dim);
+	font: var(--text--body-small);
+	letter-spacing: 0;
+	padding-block-end: 0;
+}
+
+#Toggles {
+	#Sound {
+		width: calc(var(--toggle--switch-size) + 80px);
+	}
+}

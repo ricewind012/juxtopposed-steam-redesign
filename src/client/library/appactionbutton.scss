@@ -7,6 +7,7 @@
 	@include controls.button($variant: "primary");
 
 	&#StreamingSelector {
+		padding-inline: var(--spacing-sm);
 		margin-inline-start: var(--spacing-xxs);
 
 		display: flex;

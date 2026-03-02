@@ -1,3 +1,4 @@
+@use "shared/controls";
 @use "shared/utils";
 
 %-row {
@@ -16,6 +17,10 @@
 #AddNonSteamGameDialog {
 	--icon-column-size: calc(var(--icon--size-lg) + var(--spacing-sm) * 2);
 	--table-border-color: color-mix(in srgb, currentColor 20%, transparent);
+
+	.DialogInput {
+		@include controls.text-field($variant: "transparent");
+	}
 
 	#AppName {
 		color: var(--color--fg-main);

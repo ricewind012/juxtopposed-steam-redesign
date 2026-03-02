@@ -30,19 +30,49 @@
 #DetailsProgressContainer {
 	@include controls.progress-bar($inner: "#DetailsProgressBar");
 
-	margin-block-start: var(--spacing-xxs);
+	margin-inline-start: var(--spacing-xxs);
 
 	height: unset;
+
+	&#DownloadProgressBar {
+		display: none;
+	}
+}
+
+#DetailsSection {
+	// No distinguishing class name
+	--icon-name: icon("play");
+
+	padding: 0;
+
+	flex-direction: row;
+	align-items: center;
+
+	&#Downloading {
+		--icon-name: icon("download");
+	}
+
+	&::before {
+		content: "";
+
+		@include utils.icon($size: "lg");
+
+		color: var(--color--fg-dim);
+		margin-inline-end: 12px;
+	}
 }
 
 #GameStat {
-	--icon--size-lg: 30px;
-
 	padding: 0;
 	margin: 0;
 
 	align-items: center;
 
+	#PlayBarCloudStatusContainer &#Visible {
+		--icon-name: icon("cloud");
+	}
+
+	// lol
 	&#LastPlayed {
 		--icon-name: icon("calendar");
 	}
@@ -60,7 +90,12 @@
 
 		@include utils.icon($size: "lg");
 
-		color: color-mix(in srgb, var(--color--fg-dim) 20%, transparent);
+		color: var(--color--fg-dim);
+	}
+
+	#ClickablePlayBarItem {
+		padding-block: 0;
+		margin: 0;
 	}
 
 	#GameStatRight {
@@ -74,7 +109,8 @@
 	align-self: unset;
 }
 
-#GameStatIcon {
+#GameStatIcon,
+#GameStatIconForced {
 	display: none;
 }
 
@@ -82,7 +118,7 @@
 	padding-block: 18px 0;
 	padding-inline: 16px var(--spacing-xxl);
 
-	#Container#StickyHeader & {
+	#Container#StickyHeader:not(#InPage) & {
 		padding-block-end: 18px;
 	}
 }
@@ -109,6 +145,10 @@
 
 	&#FavoriteButton {
 		--icon-name: icon("star");
+	}
+
+	&#Favorited {
+		--icon-name: icon("star-filled");
 	}
 
 	#DotDotDot {
@@ -140,11 +180,17 @@
 	color: var(--color--fg-dim);
 	font: var(--text--body-medium);
 	letter-spacing: 0;
-	text-transform: none;
-	margin-block-end: var(--spacing-xxs);
+
+	&:not(:only-child) {
+		margin-block-end: var(--spacing-xxs);
+	}
 }
 
 #StatusAndStats {
+	--icon--size-lg: 30px;
+
+	gap: var(--spacing-xl);
+
 	height: unset;
 	max-height: unset;
 
@@ -154,5 +200,9 @@
 }
 
 #StickyHeaderShadow {
+	display: none;
+}
+
+#SuperimposedGridItems:not(#Visible) {
 	display: none;
 }

@@ -5,7 +5,10 @@
 }
 
 #SectionHeader {
+	color: var(--appdetailssectionheader_color);
 	font: var(--text--body-large);
+	letter-spacing: 0;
+	text-transform: none;
 	margin-block-end: var(--spacing-sm);
 
 	height: var(--spacing-xxl);

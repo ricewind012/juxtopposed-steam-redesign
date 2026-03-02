@@ -10,8 +10,8 @@
 }
 
 @mixin header {
-	--button--secondary-bg: var(--header--button-bg);
-	--text-field--search-bg: var(--header--text-field-bg);
+	--button--secondary-bg: var(--header--control-bg);
+	--text-field--search-bg: var(--header--control-bg);
 
 	background-color: var(--header--bg);
 	padding: var(--header--spacing-block) var(--header--spacing-inline);

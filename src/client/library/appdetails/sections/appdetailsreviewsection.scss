@@ -1,10 +1,16 @@
 @use "shared/utils";
 
+#ButtonsGroup {
+	gap: var(--spacing-sm);
+}
+
 #CommentsContainer {
 	font: var(--text--body-medium);
 
 	svg {
 		@include utils.icon($remove: true);
+
+		color: var(--color--fg-dim);
 
 		&#CommentIcon {
 			--icon-name: icon("chat-bubble");

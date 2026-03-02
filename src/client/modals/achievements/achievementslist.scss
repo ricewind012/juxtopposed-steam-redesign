@@ -12,6 +12,8 @@
 }
 
 #AchievementList {
+	--button--secondary-bg: var(--color--bg-main);
+
 	background: transparent;
 	gap: var(--spacing-sm);
 	padding: var(--dialog--spacing-container);

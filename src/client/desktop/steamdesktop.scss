@@ -13,7 +13,7 @@
 	transition: var(--transition);
 
 	display: block;
-	z-index: 99999;
+	z-index: 1500;
 
 	&#Focused {
 		// --color: var(--color--primary);
@@ -67,6 +67,11 @@
 	align-items: center;
 }
 
+// TODO
+#URLBar {
+	display: none;
+}
+
 #URLBarReplacement {
 	display: none;
 }
@@ -79,11 +84,17 @@
 	height: 32px;
 
 	.title-area {
-		height: inherit;
+		padding: 0;
+
+		height: var(--dialog--window-control-size);
 	}
 }
 
 #Wrapper {
 	background-color: transparent;
 	border: none;
+}
+
+.window_resize_grip {
+	z-index: 1500;
 }

@@ -12,6 +12,16 @@
 	backdrop-filter: var(--blur);
 }
 
+#LeftColumn {
+	--appdetailssectionheader_color: var(--color--fg-main);
+
+	max-width: calc(67% - 32px);
+}
+
+#RightColumn {
+	--appdetailssectionheader_color: var(--color--fg-dim);
+}
+
 #Spotlights {
 	padding: 0;
 

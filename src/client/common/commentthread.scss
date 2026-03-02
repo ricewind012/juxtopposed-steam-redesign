@@ -1,3 +1,5 @@
+@use "web";
+
 #ActivityCommentThread {
 	background-color: var(--color--bg-main-20);
 	border-radius: var(--rounding-lg);
@@ -9,6 +11,10 @@
 #AddReply {
 	padding: 0;
 	padding-block-start: var(--spacing-lg);
+}
+
+#ButtonSpacer {
+	width: var(--spacing-sm);
 }
 
 #Comment {
@@ -45,4 +51,43 @@
 	#HeaderandBody {
 		margin-inline-start: var(--spacing-sm);
 	}
+}
+
+#CommentButton {
+	@include web.apphub--card-metadata($icon: "chat-bubble");
+}
+
+#DeleteButton {
+	@include web.apphub--card-metadata($icon: "delete");
+
+	opacity: 1;
+}
+
+#CommentRating,
+#LikeButton {
+	@include web.apphub--card-metadata($icon: "thumb-up");
+}
+
+#CommentCount,
+#LikeCount,
+#ReactionCount {
+	color: inherit;
+	font: inherit;
+}
+
+#CommentIcon,
+#DeleteUserNews,
+#LikeIcon,
+#ReactionIcon,
+#ThumbsUpComment {
+	display: none;
+}
+
+#RatingBar {
+	opacity: 1;
+	margin-block-start: var(--spacing-sm);
+}
+
+#Reactions {
+	@include web.apphub--card-metadata($icon: "military-tech");
 }

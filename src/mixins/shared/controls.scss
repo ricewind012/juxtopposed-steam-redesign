@@ -96,7 +96,7 @@
 	}
 
 	#{$child} {
-		@include utils.icon(#{$name}, #{$remove});
+		@include utils.icon($name: #{$name}, $remove: #{$remove});
 	}
 }
 

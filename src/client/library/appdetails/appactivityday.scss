@@ -52,6 +52,11 @@
 	& > div > :not(:first-child) > #Event {
 		margin-block-start: var(--spacing-lg);
 	}
+
+	& > #Event:first-child,
+	& > div > #Event:first-child {
+		margin: 0;
+	}
 }
 
 #Event {
@@ -111,9 +116,15 @@
 		#ScreenshotCaption#HasCaption {
 			background: var(--color--bg-main-50);
 			backdrop-filter: var(--blur);
+			color: var(--color--primary);
 			border-radius: 0;
 			border-end-start-radius: var(--rounding-lg);
 			margin-block-end: 24px;
+
+			#CaptionQuote {
+				opacity: var(--dim-opacity);
+				color: var(--color--primary);
+			}
 		}
 
 		#TimeStamp {

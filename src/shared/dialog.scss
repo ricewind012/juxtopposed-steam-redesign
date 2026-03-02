@@ -61,6 +61,8 @@
 
 :where(.DialogDropDown) {
 	@include controls.dropdown;
+
+	box-shadow: none;
 }
 
 .DialogDropDown_Arrow {
@@ -107,6 +109,11 @@
 	font: var(--text--body-small);
 	text-transform: none;
 	margin-bottom: var(--spacing-xxs);
+}
+
+:where(.DialogMenuPosition) {
+	// For menu shadow
+	overflow: visible;
 }
 
 :where(.DialogRequirementLabel) {
@@ -212,19 +219,24 @@
 }
 
 .title-area {
-	--height: calc(var(--dialog--window-control-size) + var(--spacing) * 2);
-	--icon--size-md: var(--dialog--window-control-size);
-	--spacing: var(--spacing-md);
+	--icon--size-lg: var(--dialog--window-control-size);
 
 	gap: var(--dialog--window-control-spacing);
-	padding-inline-end: calc(var(--spacing) / 2);
+	padding-block-start: var(--spacing-md);
+	padding-inline-end: var(--spacing-md);
 
-	height: var(--height);
-	z-index: 99999;
+	inset-inline-start: unset;
+	height: min-content;
+	z-index: 1500;
+}
+
+// Only used in browser
+.title-area-children {
+	display: none;
 }
 
 .title-area-icon {
-	@include utils.icon;
+	@include utils.icon($size: "lg");
 
 	&:hover {
 		color: var(--color--fg-main);
@@ -257,5 +269,5 @@
 	gap: var(--dialog--window-control-spacing);
 	margin: 0;
 
-	max-height: var(--height);
+	max-height: unset;
 }

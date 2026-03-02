@@ -1,5 +1,8 @@
 #AdditionalItem {
+	gap: var(--spacing-md);
 	padding: 0;
+
+	align-items: center;
 
 	&:hover {
 		background-color: var(--color--bg-main-20);
@@ -17,15 +20,21 @@
 	#Title {
 		color: var(--color--fg-main);
 		font: var(--text--body-medium);
-		margin-inline-start: var(--spacing-xs);
+		margin: 0;
 	}
 }
 
-#AssetImage {
+#AssetImage,
+#Image {
 	filter: none;
 
 	// #libraryassetimage_Image
 	& > img {
 		border-radius: var(--rounding-md);
+		box-shadow: none;
 	}
+}
+
+#SoundtrackDetails {
+	margin: 0;
 }

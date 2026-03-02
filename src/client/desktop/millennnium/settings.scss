@@ -1,3 +1,5 @@
+@use "shared/utils";
+
 .MillenniumItem_Version {
 	font: inherit;
 	margin: 0;
@@ -25,8 +27,16 @@
 }
 
 .MillenniumThemes_ThemeItem {
-	&:not([data-theme-name="Juxtopposed Steam Redesign"]) > div {
+	&[data-theme-name="Juxtopposed Steam Redesign"] > :first-child {
+		margin: 0;
+	}
+
+	& > div {
 		margin-inline-start: calc(var(--icon--size-md) + var(--spacing-sm));
+	}
+
+	svg {
+		@include utils.icon($name: "check", $remove: true);
 	}
 
 	.MillenniumButton:not(.MillenniumIconButton) {

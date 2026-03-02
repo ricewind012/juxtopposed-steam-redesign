@@ -1,5 +1,10 @@
 @use "client";
 
+:where(#SettingsDialogBodyFade) {
+	mask: none;
+	padding: 0;
+}
+
 #SettingsDialogBodyText {
 	@include client.settings--header;
 }

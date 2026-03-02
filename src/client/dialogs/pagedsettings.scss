@@ -16,12 +16,12 @@
 }
 
 #PagedSettingsDialog_PageContent {
-	background: linear-gradient(
-		173.45deg,
-		var(--color--bg-hover) 1.6%,
-		var(--color--bg-hl) 89.87%
+	background: radial-gradient(
+		at top left,
+		var(--color--bg-hover),
+		var(--color--bg-main)
 	);
-	padding: 0 var(--dialog--spacing-container);
+	padding: 0;
 
 	:where(& .DialogBody) {
 		--fade-direction: left;
@@ -34,16 +34,13 @@
 				black 0px 14px,
 				transparent 14px
 			);
-		padding-block-start: var(--fade-size);
+		padding: var(--dialog--spacing-container);
+		padding-block-start: calc(
+			var(--dialog--spacing-container) + var(--fade-size)
+		);
 
 		&:dir(rtl) {
 			--fade-direction: right;
-		}
-	}
-
-	:where(& .DialogButton, & .DialogDropDown) {
-		&:not(:hover) {
-			background-color: var(--color--bg-main-50);
 		}
 	}
 
@@ -68,9 +65,11 @@
 }
 
 #PagedSettingsDialog_PageListColumn {
-	background-color: var(--color--bg-hl);
+	background-color: var(--color--bg-main);
 	border-radius: 0;
 	padding: 0;
+
+	min-width: 299px;
 }
 
 #PagedSettingsDialog_PageListItem {

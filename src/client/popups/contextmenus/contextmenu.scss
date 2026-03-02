@@ -27,7 +27,7 @@
 
 	border: none;
 
-	&:has(> .SVGIcon_Button) {
+	&:has(> #IconContainer:not(:empty), > .SVGIcon_Button) {
 		@include menu.item--primary;
 	}
 
@@ -51,4 +51,8 @@
 #ContextMenuHRSeparator,
 #ContextMenuSeparator {
 	@include menu.separator;
+}
+
+#IconContainer {
+	display: none;
 }

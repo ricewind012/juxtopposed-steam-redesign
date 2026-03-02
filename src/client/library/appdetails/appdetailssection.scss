@@ -2,6 +2,8 @@
 
 #AppDetailsSection {
 	@include client.appdetails--section;
+
+	max-width: unset;
 }
 
 #AppDetailsSectionContainer {

@@ -20,6 +20,8 @@
 
 	.DialogInput_Wrapper {
 		&::before {
+			content: "";
+
 			@include controls.text-field-icon($name: "search");
 		}
 	}

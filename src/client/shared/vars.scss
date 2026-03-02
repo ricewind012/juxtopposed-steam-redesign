@@ -8,6 +8,7 @@
 		var(--spacing-sm) * 2 + 37px + var(--spacing-xl)
 	);
 	--gamepaddialog_field-spacing-block: var(--spacing-sm);
+	--gamepaddialog_field-spacing-inline: var(--spacing-lg);
 	--library_gamelist-bar-gap: var(--spacing-xl);
 	--pageablecontainer_header-offset: calc(
 		var(--text--heading-small-size) * var(--text--line-height) +

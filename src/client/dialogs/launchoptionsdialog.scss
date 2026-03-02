@@ -27,8 +27,9 @@
 
 #LaunchOptionDialog {
 	background: var(--color--bg-main);
+	color: var(--color--fg-main);
 	font: var(--text--body-medium);
-	padding: var(--dialog--spacing-content);
+	padding: var(--dialog--spacing-container);
 }
 
 #ListContainer {

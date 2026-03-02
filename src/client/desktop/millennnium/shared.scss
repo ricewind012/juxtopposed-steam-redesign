@@ -1,6 +1,6 @@
 @use "shared/controls";
 
-:root[data-millennium-plugin~="core"] {
+:root[data-millennium-plugin] {
 	--MillenniumText-HeadingLarge: var(--text--heading-large);
 	--MillenniumText-HeadingMedium: var(--text--heading-medium);
 	--MillenniumText-HeadingSmall: var(--text--heading-small);

@@ -130,7 +130,3 @@
 #SearchFilterInputClear {
 	@include controls.text-field-icon($name: "close");
 }
-
-#SearchInput {
-	--text-field--search-bg: var(--header--text-field-bg);
-}

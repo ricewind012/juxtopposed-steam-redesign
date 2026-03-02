@@ -142,7 +142,6 @@
 }
 
 // #region Dialog
-
 #OverlayPopup {
 	--button--secondary-bg: color-mix(
 		in srgb,
@@ -172,11 +171,6 @@
 		#WindowControls {
 			height: calc(var(--dialog--window-control-size) + var(--spacing-md) * 2);
 		}
-	}
-
-	// Only used in browser
-	.title-area-children {
-		display: none;
 	}
 }
 

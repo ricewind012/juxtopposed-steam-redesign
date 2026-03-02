@@ -1,0 +1,17 @@
+// This component is actually used in app details screenshots section
+
+#DurationText {
+	color: var(--color--accent-yellow);
+	font: var(--text--body-small);
+	font-family: var(--text--font-family-monospace);
+	font-weight: var(--text--weight-bold);
+	gap: var(--spacing-xxs);
+}
+
+#PostGameSummaryClip {
+	box-shadow: none;
+
+	&#NonFixedSize {
+		min-height: unset;
+	}
+}

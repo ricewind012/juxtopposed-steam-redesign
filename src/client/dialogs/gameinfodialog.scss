@@ -1,6 +1,9 @@
-#GameInfoDialogContents {
-	--gamepaddialog_field-spacing-block: var(--spacing-xxs);
+#DialogBody {
+	--gamepaddialog_field-spacing-block: 0;
+	--gamepaddialog_field-spacing-inline: 0;
+}
 
+#GameInfoDialogContents {
 	gap: 0;
 }
 

@@ -1,3 +1,5 @@
+@use "shared/utils";
+
 #Collection {
 	--bg-opacity: 0;
 
@@ -44,18 +46,29 @@
 		&:hover {
 			--color--fg-dim: var(--color--fg-main);
 		}
+
+		#BigPlus {
+			@include utils.icon($name: "plus", $remove: true, $size: "lg");
+
+			color: var(--color--fg-dim);
+		}
 	}
 }
 
 #CollectionLabel {
 	color: var(--color--fg-main);
-	font: var(--text--body-medium);
+	font: var(--text--heading-small);
 	text-shadow: none;
+	text-transform: none;
 	letter-spacing: 0;
+
+	& > .tool-tip-source {
+		display: block;
+	}
 }
 
 #CollectionLabelCount {
-	color: var(--color--fg-dim);
+	color: var(--color--fg-main);
 	font: var(--text--body-medium);
 }
 
