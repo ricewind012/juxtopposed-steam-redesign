@@ -140,6 +140,16 @@
 	}
 }
 
+#GameCarouselWrapper {
+	padding: 0;
+
+	#EventBody:has(> &) {
+		--pageablecontainer_header-offset: 0px;
+
+		background: none;
+	}
+}
+
 #MediumImageContainer {
 	margin-inline-end: var(--spacing-md);
 }

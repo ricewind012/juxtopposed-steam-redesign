@@ -19,6 +19,39 @@
 	}
 }
 
+#DesktopToastTemplate {
+	color: var(--color--fg-main);
+	padding-block: var(--popup--spacing-block);
+	padding-inline: var(--popup--spacing-inline);
+
+	height: inherit;
+
+	#AvatarStatus {
+		background: currentColor;
+		box-shadow: none;
+
+		width: var(--border-lg);
+		height: var(--avatar--size-md);
+	}
+
+	// TODO: unify?
+	#Content {
+		margin-inline-start: var(--spacing-sm);
+	}
+
+	#FriendInGameAppColor,
+	#IngameTitle {
+		color: var(--color--accent-green);
+	}
+
+	#ShortLogoDimensions,
+	#StandardLogoDimensions {
+		margin: 0;
+
+		order: -1;
+	}
+}
+
 #Icon {
 	display: none;
 }

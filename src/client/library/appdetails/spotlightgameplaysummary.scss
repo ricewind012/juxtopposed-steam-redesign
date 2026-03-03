@@ -1,0 +1,61 @@
+#EventDaySeparator {
+	background: var(--color--border);
+	margin: 0 var(--spacing-xxl);
+
+	width: var(--border-lg);
+}
+
+#EventHeaderBlock {
+	color: var(--color--fg-dim);
+	font: var(--text--body-small);
+
+	height: calc(1lh + var(--spacing-xs));
+}
+
+#GamePlaySummaryContainer {
+	--pageablecontainer_header-offset: 0px;
+}
+
+#GamePlaySummaryHeader {
+	color: var(--color--fg-main);
+	font: var(--text--body-large);
+	letter-spacing: 0;
+	text-transform: none;
+	margin-block-end: var(--spacing-sm);
+
+	height: var(--spacing-xxl);
+}
+
+#SummaryCarouselContainer {
+	background: none;
+	box-shadow: none;
+	padding: 0;
+	margin-inline: var(--carousel--arrow-size);
+
+	height: unset;
+
+	// Shadow
+	&::after {
+		display: none;
+	}
+
+	#ForcedCarouselPadding {
+		width: var(--carousel--arrow-size);
+	}
+}
+
+#SummaryContainer {
+	height: unset;
+
+	margin: 0;
+}
+
+#SummaryScreenshot {
+	border-radius: var(--rounding-md);
+	box-shadow: none;
+}
+
+#TypeSeparator {
+	background: var(--color--border);
+	margin: var(--spacing-sm);
+}

@@ -1,9 +1,149 @@
+@use "shared/controls";
+@use "shared/utils";
 @use "client";
+@use "web";
+
+#AppOverviewRow {
+	gap: var(--spacing-xxl);
+}
+
+#AuthorName {
+	color: var(--color--fg-main);
+	font: var(--text--body-medium);
+	margin-inline-start: var(--spacing-sm);
+}
+
+#AuthorSection {
+	background: var(--color--bg-main-50);
+	border-radius: 0 0 var(--rounding-md) var(--rounding-md);
+}
+
+#CommunityItem {
+	background: var(--color--bg-main-20);
+	border-radius: var(--rounding-md);
+	box-shadow: none;
+
+	#ArtItem > #PreviewContainer {
+		border-radius: var(--rounding-md) var(--rounding-md) 0 0;
+	}
+
+	#Header {
+		margin-inline-start: var(--spacing-sm);
+	}
+
+	#Title {
+		color: var(--color--fg-main);
+		font: var(--text--body-medium);
+		text-transform: none;
+		margin-block-start: var(--spacing-sm);
+	}
+
+	#TopSection {
+		margin: 0;
+	}
+
+	#TopSectionInner {
+		background: none;
+	}
+}
+
+#Control {
+	@include web.apphub--card-metadata-button;
+
+	#Button {
+		display: contents;
+	}
+
+	#Count {
+		color: inherit;
+		padding: 0;
+		margin-inline-start: var(--spacing-xxs);
+	}
+
+	#Icon16 {
+		@include utils.icon($remove: true, $size: "sm");
+
+		background-image: none;
+		color: var(--color--fg-dim);
+		margin: 0;
+
+		// TODO
+		$-icons: (
+			Comments: "chat-bubble",
+			Reactions: "military-tech",
+			ThumbsDown: "thumb-up",
+			ThumbsUp: "thumb-up",
+		);
+
+		@each $k, $v in $-icons {
+			&##{$k} {
+				--icon-name: icon(#{$v});
+			}
+		}
+	}
+}
+
+#Guide {
+	#Description {
+		color: var(--color--fg-dim);
+		font: var(--text--body-medium);
+	}
+}
+
+#GuideTitle {
+	background: var(--color--bg-main-50);
+	color: var(--color--fg-main);
+	font: var(--text--body-medium);
+	text-transform: none;
+	border-radius: var(--rounding-md) var(--rounding-md) 0 0;
+	padding: var(--spacing-sm);
+}
 
 #HeaderStyles {
 	background: none;
+	margin-inline: 0;
 }
 
 #LoadContentButton {
 	@include client.appdetails--button;
+}
+
+#MenuButton {
+	@include controls.icon-button($w: 44px, $child: "svg", $size: "lg");
+
+	// TODO(controls):
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	svg {
+		color: var(--color--fg-dim);
+	}
+}
+
+#VideoPreview {
+	--size: 58px;
+
+	&::before {
+		content: "";
+
+		position: absolute;
+		inset-block-start: calc(50% - var(--size) / 2);
+		inset-inline-start: calc(50% - var(--size) / 2);
+		width: var(--size);
+		height: var(--size);
+
+		background: var(--color--bg-main-50);
+		border-radius: var(--rounding-md);
+	}
+
+	&:hover::before {
+		background: var(--color--bg-main);
+	}
+
+	#PlayLogo {
+		--icon--size-lg: 30px;
+
+		@include utils.icon($img-el: true, $name: "play", $size: "lg");
+	}
 }

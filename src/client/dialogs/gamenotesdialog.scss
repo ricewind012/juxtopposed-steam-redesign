@@ -1,0 +1,34 @@
+@use "shared/controls";
+
+#EditorInput {
+	@include controls.text-field($variant: "transparent");
+
+	background: none;
+	box-shadow: none;
+
+	& > .ProseMirror {
+		padding: 0;
+	}
+}
+
+#NoteActions {
+	gap: var(--spacing-sm);
+
+	.DialogButton {
+		opacity: 1;
+
+		height: unset;
+
+		&:not(#CloseWindowButton) {
+			@include controls.icon-button($w: 44px, $child: "svg", $name: "delete");
+		}
+	}
+}
+
+#NoteEditorArea {
+	margin: 0;
+}
+
+#Toolbar {
+	padding-block: var(--spacing-sm);
+}

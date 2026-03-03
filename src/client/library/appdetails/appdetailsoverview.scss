@@ -25,7 +25,7 @@
 #Spotlights {
 	padding: 0;
 
-	& > div {
+	:where(& > div) {
 		margin: 0;
 	}
 }

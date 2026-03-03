@@ -1,5 +1,7 @@
 @use "shared/carousel";
+@use "shared/controls";
 @use "shared/utils";
+@use "client";
 
 // Don't position: absolute this in order to get the correct position for arrows
 #HeaderPageControls {
@@ -24,6 +26,37 @@
 	margin-block-start: var(--pageablecontainer_header-offset);
 
 	position: relative;
+
+	// In app details
+	&:has(#PageableCloseButton) {
+		@include client.appdetails--section;
+
+		#PageClickContainer {
+			align-items: end;
+			inset: var(--spacing-xl);
+			z-index: 1;
+		}
+
+		#PageLeft,
+		#PageRight {
+			height: calc(100% - var(--spacing-xxl) - var(--spacing-sm));
+		}
+	}
+}
+
+#PageableCloseButton {
+	all: unset;
+
+	@include controls.icon-button($w: 44px, $child: "svg", $name: "close");
+
+	// TODO(controls):
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	position: absolute;
+	inset-block-start: 0;
+	inset-inline-end: 0;
 }
 
 #PageClickContainer {
@@ -53,7 +86,7 @@
 		}
 	}
 
-	& > div {
+	:where(& > div) {
 		--carousel--arrow-container-height: 100%;
 
 		@include carousel.arrow(

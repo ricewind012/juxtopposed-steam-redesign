@@ -1,0 +1,59 @@
+@use "shared/controls";
+
+#AppPortraitHover {
+	--width: 260px;
+
+	@include controls.tooltip;
+
+	width: var(--width);
+}
+
+#AppStatus {
+	color: var(--color--primary);
+	font: var(--text--body-large);
+	text-transform: none;
+	padding: 0;
+	margin: 0;
+	margin-block-end: var(--spacing-sm);
+
+	min-height: unset;
+
+	&:empty {
+		height: 0;
+	}
+}
+
+#AppTitle {
+	color: var(--color--fg-main);
+	font: var(--text--heading-small);
+	text-shadow: none;
+	margin: 0;
+}
+
+#AppTitleContainer {
+	padding: 0;
+	margin-block-end: var(--spacing-sm);
+}
+
+#CapsuleBackgroundContainer {
+	display: none;
+}
+
+#PlaytimeDetails {
+	color: var(--color--fg-dim);
+	font: var(--text--body-medium);
+	letter-spacing: 0;
+	padding: 0;
+	margin: 0;
+
+	width: calc(var(--width) - var(--popup--spacing-inline) * 2);
+
+	#Header {
+		color: var(--color--fg-main);
+		margin: 0;
+	}
+}
+
+#ScreenshotCrossfade {
+	mask: none;
+}

@@ -10,6 +10,15 @@
 	align-self: start;
 }
 
+#NoActivity {
+	color: var(--color--fg-dim);
+	font: var(--text--body-large);
+	border: var(--border-md) dashed;
+	border-radius: 0;
+	padding: var(--spacing-lg);
+	margin: 0;
+}
+
 #ViewLastNews {
 	@include client.appdetails--button;
 

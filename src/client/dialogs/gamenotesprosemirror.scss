@@ -1,0 +1,22 @@
+#CommandButton {
+	svg {
+		padding: 0;
+
+		flex-shrink: 0;
+		width: var(--icon--size-md);
+		height: var(--icon--size-md);
+	}
+}
+
+#Gap,
+#Spacer {
+	width: var(--spacing-md);
+}
+
+#ToolbarRow {
+	gap: var(--spacing-xxs);
+}
+
+#ToolbarRowOverflowContainer {
+	margin: 0;
+}

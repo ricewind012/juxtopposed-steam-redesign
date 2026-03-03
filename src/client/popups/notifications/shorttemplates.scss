@@ -1,0 +1,45 @@
+#ShortLogoDimensions,
+#StandardLogoDimensions {
+	border-radius: var(--rounding-md);
+
+	width: var(--avatar--size-md);
+	height: var(--avatar--size-md);
+}
+
+#StandardNotificationDescription {
+	color: var(--color--fg-main);
+	font: var(--text--body-medium);
+}
+
+#StandardTemplate {
+	background: none;
+	color: var(--color--fg-main);
+	padding-block: var(--popup--spacing-block);
+	padding-inline: var(--popup--spacing-inline);
+
+	height: inherit;
+
+	#Content {
+		margin-inline-start: var(--spacing-sm);
+	}
+
+	#Header {
+		height: unset;
+	}
+
+	#Timestamp {
+		opacity: var(--dim-opacity);
+		color: var(--color--primary);
+		font: var(--text--body-small);
+	}
+
+	#Title {
+		color: var(--color--primary);
+		font: var(--text--body-small);
+		text-transform: uppercase;
+	}
+}
+
+#StandardTemplateContainer {
+	height: inherit;
+}
