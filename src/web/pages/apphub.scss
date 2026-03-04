@@ -217,7 +217,7 @@
 }
 
 .apphub_CardContentMain {
-	position: relative;
+	position: unset;
 
 	& > .apphub_CardContentType {
 		position: absolute;
@@ -377,6 +377,11 @@
 	padding: 0;
 
 	display: flex;
+}
+
+.apphub_friends_who_played_recently_title {
+	color: var(--color--fg-dim);
+	margin-inline-start: var(--spacing-sm);
 }
 
 .apphub_GetMoreContent {

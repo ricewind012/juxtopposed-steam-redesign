@@ -11,6 +11,8 @@
 	#{controls.button-web-selector("#CarouselFollowButton")} {
 		@include controls.button($variant: "tertiary", $size: "sm");
 
+		box-shadow: none;
+
 		.FollowBtnText {
 			font: inherit;
 		}

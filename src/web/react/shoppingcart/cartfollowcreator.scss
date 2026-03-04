@@ -1,0 +1,16 @@
+#CartCreatorCtn {
+	background-color: var(--color--bg-main-50);
+	border-radius: var(--rounding-lg);
+	padding: var(--spacing-md);
+	margin: 0;
+}
+
+#Description {
+	color: var(--color--fg-dim);
+	font: var(--text--body-small);
+}
+
+#Title {
+	font: var(--text--body-large);
+	margin-block-end: var(--spacing-sm);
+}

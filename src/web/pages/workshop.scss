@@ -3,16 +3,6 @@
 @use "shared/utils";
 @use "web";
 
-@mixin -icon($name) {
-	min-width: 44px;
-
-	&::before {
-		content: "";
-
-		@include utils.icon($name);
-	}
-}
-
 @mixin -row {
 	background: var(--color--bg-main-50);
 	border-radius: var(--rounding-lg);
@@ -333,25 +323,36 @@ body.apphub_blue.v6 {
 	}
 }
 
+.just_added_favorite_icon {
+	display: none;
+}
+
 .just_added_text {
 	float: unset;
 	width: unset;
 }
 
-.just_added_to_list {
+.just_added_to_list:not([style="display: none;"]) {
 	@include web.section--container;
 
 	background: color-mix(in srgb, var(--color--primary) 50%, transparent);
 	color: var(--color--fg-main);
 	font: var(--text--body-large);
-	margin-block-start: 0;
+	margin: 0;
+	margin-block-end: var(--spacing-lg);
+
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	.workshop_item_header & {
+		margin-block: var(--spacing-lg) 0;
+	}
 
 	.close_notification {
 		@include utils.icon($name: "close", $remove: true);
-	}
 
-	[style="float: left"] {
-		float: unset;
+		order: 1;
 	}
 }
 
@@ -1108,18 +1109,43 @@ body.apphub_blue.v6 {
 	margin-block-start: var(--spacing-md);
 
 	.general_btn {
-		@include controls.button-vars;
+		@include controls.icon-button($w: 44px, $child: "&::before");
 
+		color: var(--color--fg-main);
+		font-size: 0;
 		margin-right: var(--spacing-sm);
 
-		height: unset;
-
-		&#ReportItemBtn {
-			@include -icon($name: "flag");
+		&.toggled {
+			color: var(--color--primary);
 		}
 
+		&[onclick^="PublishedFileAward"] {
+			--icon-name: icon("military-tech");
+		}
+
+		&#AddToCollectionBtn {
+			--icon-name: icon("plus");
+		}
+
+		&#FavoriteItemBtn {
+			--icon-name: icon("star");
+
+			&.toggled {
+				--icon-name: icon("star-filled");
+			}
+		}
+
+		&#ReportItemBtn {
+			--icon-name: icon("flag");
+		}
+
+		&#ShareItemBtn {
+			--icon-name: icon("language");
+		}
+
+		// TODO(icons):
 		&#VoteDownBtn {
-			@include -icon($name: "thumb-up");
+			--icon-name: icon("thumb-up");
 
 			&::before {
 				transform: rotate(180deg);
@@ -1127,10 +1153,15 @@ body.apphub_blue.v6 {
 		}
 
 		&#VoteUpBtn {
-			@include -icon($name: "thumb-up");
+			--icon-name: icon("thumb-up");
+		}
+
+		&::before {
+			content: "";
 		}
 	}
 
+	.reward_btn_icon,
 	.vertical_divider {
 		display: none;
 	}

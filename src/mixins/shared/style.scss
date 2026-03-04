@@ -10,7 +10,7 @@
 }
 
 @mixin header {
-	--button--secondary-bg: var(--header--control-bg);
+	--button--secondary-bg: transparent;
 	--text-field--search-bg: var(--header--control-bg);
 
 	background-color: var(--header--bg);

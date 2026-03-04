@@ -53,6 +53,8 @@ body.game_bg {
 
 .package_contents {
 	color: var(--color--fg-dim);
+
+	width: 50%;
 }
 
 .package_contents_capsule a {
@@ -215,6 +217,10 @@ body.game_bg {
 		margin-block: var(--spacing-sm) 0;
 	}
 
+	ul {
+		color: inherit;
+	}
+
 	.bb_paragraph {
 		font: inherit;
 	}
@@ -360,6 +366,10 @@ body.game_bg {
 
 .game_area_features_list_ctn {
 	--icon--size-md: 1lh;
+
+	& ~ [data-featuretarget] {
+		--icon--size-md: 1lh;
+	}
 }
 
 #game_area_legal {
@@ -438,6 +448,10 @@ body.game_bg {
 			var(--text--line-height) + var(--spacing-xl) * 2
 	);
 
+	.game_area_purchase_game_wrapper > & {
+		margin: 0;
+	}
+
 	&.demo_above_purchase {
 		box-shadow: none;
 		margin-block-end: 12px;
@@ -460,6 +474,8 @@ body.game_bg {
 		color: var(--color--fg-main);
 		font: var(--text--heading-medium);
 		margin-block-end: 0;
+
+		width: 50%;
 	}
 }
 
@@ -629,6 +645,7 @@ body.game_bg {
 	background: var(--color--bg-main-50);
 	backdrop-filter: none;
 	border-radius: var(--rounding-lg);
+	gap: var(--spacing-sm);
 	padding: var(--spacing-xl);
 	margin-block-start: var(--spacing-sm);
 
@@ -689,7 +706,7 @@ body.game_bg {
 	}
 
 	.rightcol {
-		width: 416px;
+		width: calc(451px - var(--spacing-xl));
 	}
 
 	.subtitle {
@@ -770,10 +787,6 @@ body.game_bg {
 
 			display: grid;
 			grid-template-columns: repeat(2, 1fr);
-
-			span[aria-label]::before {
-				content: attr(aria-label);
-			}
 		}
 
 		:where(& a) {
@@ -1082,6 +1095,10 @@ body.game_bg {
 
 .game_title_area {
 	flex-direction: column;
+
+	.apphub_HomeHeaderContent {
+		width: var(--content--width-lg);
+	}
 
 	.saleEventBannerLink {
 		@extend %-section;

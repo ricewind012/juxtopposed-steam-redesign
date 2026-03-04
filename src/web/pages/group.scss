@@ -376,7 +376,6 @@
 
 	position: absolute;
 	inset: 0;
-	inset-block-start: var(--header--height);
 	height: calc(var(--tile-size) * 6);
 	z-index: -1;
 

@@ -1,26 +1,20 @@
 @use "shared/controls";
 @use "shared/utils";
 
-@mixin -icon-button($name) {
-	--size: 43px;
-
-	@include controls.button;
+%-icon-button {
+	@include controls.icon-button($w: 44px, $child: "&::before");
 
 	font-size: 0;
 
-	min-width: var(--size);
-	min-height: var(--size);
-
-	&:not(:hover) {
-		color: var(--color--fg-dim);
-	}
+	// TODO(controls):
+	display: flex;
+	align-items: center;
+	justify-content: center;
 
 	&::before {
 		content: "";
 
 		display: block;
-
-		@include utils.icon($name);
 	}
 }
 
@@ -30,11 +24,15 @@
 	gap: var(--spacing-xxs);
 
 	#AddLineItem {
-		@include -icon-button($name: "plus");
+		--icon-name: icon("plus");
+
+		@extend %-icon-button;
 	}
 
 	#RemoveLineItem {
-		@include -icon-button($name: "delete");
+		--icon-name: icon("delete");
+
+		@extend %-icon-button;
 	}
 }
 
@@ -62,6 +60,14 @@
 
 #LineItemDetailsRowTop {
 	flex: 1;
+}
+
+#LineItemDropDown {
+	margin: 0;
+
+	.DialogDropDown_CurrentDisplay {
+		background: none;
+	}
 }
 
 #LineItemRightCol {

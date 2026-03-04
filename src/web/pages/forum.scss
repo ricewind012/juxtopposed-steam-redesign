@@ -395,15 +395,19 @@
 .forumtopic_comments {
 	.commentthread_comment {
 		--avatar-size: var(--avatar--size-sm);
-		--spacing-sm: 20px;
+		--spacing-sm: var(--spacing-xl);
 
 		@include web.section--container;
+
+		border: none;
+		box-shadow: none;
 	}
 
 	.commentthread_comment_author {
 		opacity: 1;
 		line-height: var(--avatar-size);
 		margin-bottom: 20px;
+		margin-inline-start: calc(var(--avatar-size) + var(--spacing-xxs) * 2);
 	}
 
 	.commentthread_author_link {

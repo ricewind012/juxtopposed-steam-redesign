@@ -1,8 +1,23 @@
+@use "shared/carousel";
+
+#FullscreenArrow {
+	@include carousel.arrow($left: "&#Previous", $right: "#Next", $child: "svg");
+
+	transform: none;
+
+	height: calc(100% - var(--icon--size-lg) - 6px - 8px - 10px);
+
+	path {
+		display: none;
+	}
+}
+
 #ViewedItem {
-	background-color: transparent;
+	background-color: var(--color--bg-main-50);
+	border-radius: var(--rounding-md);
 
 	img,
 	video {
-		border-radius: var(--rounding-md);
+		border-radius: inherit;
 	}
 }

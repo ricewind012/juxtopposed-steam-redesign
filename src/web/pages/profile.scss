@@ -1,4 +1,5 @@
 @use "shared/controls";
+@use "shared/style";
 @use "shared/utils";
 
 %-badge-info {
@@ -30,7 +31,7 @@
 }
 
 .customization_edit_instructions {
-	padding: var(--spacing-lg);
+	padding: var(--spacing-sm) var(--spacing-lg);
 
 	.profile_customization_header {
 		font: var(--text--heading-small);
@@ -264,7 +265,6 @@
 	margin-bottom: 6px;
 }
 
-.profile_badges,
 .profile_item_links,
 .profile_friend_links {
 	margin: 0;
@@ -364,7 +364,7 @@
 
 .profile_count_link_preview_ctn {
 	background-color: var(--color--bg-main);
-	border-radius: var(--rounding-md) var(--rounding-md) 0 0;
+	border-radius: var(--rounding-md);
 
 	.profile_count_link {
 		padding: var(--spacing-sm);
@@ -605,6 +605,11 @@
 
 .profile_header_bg_texture {
 	max-width: var(--content--width-sm);
+
+	.private_profile & {
+		background: var(--gradient-background);
+		box-shadow: none;
+	}
 }
 
 .profile_header_centered_col {
@@ -629,6 +634,26 @@
 	padding: 0;
 
 	grid-template-columns: auto 1fr var(--content--sidebar-width);
+}
+
+.profile_header_valve_employee {
+	@include style.alert;
+
+	margin-block-end: var(--spacing-xxl);
+}
+
+.profile_header_valve_employee_desc {
+	color: inherit;
+	font: inherit;
+	padding: 0;
+
+	a {
+		text-decoration: none;
+	}
+}
+
+.profile_header_valve_employee_icon {
+	display: none;
 }
 
 .profile_in_common {
@@ -688,10 +713,29 @@
 	}
 
 	&:where(div) {
-		background-attachment: fixed;
-		background-position-y: var(--header--height);
 		padding-bottom: 187px;
+
+		&.has_profile_background {
+			background-attachment: fixed;
+			background-position-y: var(--global-header-height);
+		}
+
+		&:not(.has_profile_background) {
+			background: radial-gradient(
+				76.88% 68.46% at 50% 0%,
+				var(--color--bg-tertiary) 2.61%,
+				#111822 72.64%,
+				#0f151e 87.22%,
+				var(--color--bg-main) 100%
+			);
+		}
 	}
+}
+
+.profile_private_info {
+	color: var(--color--fg-dim);
+	font: var(--text--body-large);
+	padding: 0;
 }
 
 .profile_rightcol {
@@ -740,7 +784,7 @@
 .screenshot_showcase_primary {
 	margin-inline-end: var(--spacing-sm);
 
-	width: unset;
+	width: calc(100% - var(--spacing-sm) - 102px);
 	max-width: unset;
 }
 
@@ -803,6 +847,11 @@
 .screenshot_showcase_stats {
 	font: var(--text--body-small);
 	margin-block-start: var(--spacing-xs);
+}
+
+.showcase_achievement {
+	margin-block-end: var(--spacing-xxs);
+	margin-inline-start: 4.5%;
 }
 
 .showcase_bodylabel {

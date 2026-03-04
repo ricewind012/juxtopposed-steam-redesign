@@ -1,0 +1,68 @@
+@use "shared/menu";
+
+#MenuItem {
+	@include menu.item;
+
+	border-radius: 0;
+
+	&#Checked {
+		@include menu.item--primary;
+	}
+
+	svg {
+		display: none;
+	}
+}
+
+#PlaybackButton {
+	filter: drop-shadow(0px 1px 1px black);
+	color: var(--color--fg-main);
+
+	width: var(--icon--size-lg);
+	height: var(--icon--size-lg);
+}
+
+#PlaybackTime {
+	color: var(--color--fg-main);
+	font: var(--text--body-medium);
+	gap: var(--spacing-xxs);
+
+	#TimeDash {
+		color: var(--color--fg-dim);
+	}
+}
+
+#Separator {
+	@include menu.separator;
+
+	&::before,
+	&::after {
+		display: none;
+	}
+}
+
+#SettingsMenu {
+	@include menu.container;
+
+	gap: 0;
+	padding: 0;
+}
+
+#TimelineBar {
+	background: color-mix(in srgb, var(--color--fg-main) 20%, transparent);
+	backdrop-filter: var(--blur);
+
+	#Buffered {
+		background: color-mix(in srgb, var(--color--fg-main) 30%, transparent);
+	}
+
+	#HoverTick {
+		background: var(--color--fg-main);
+
+		width: var(--border-lg);
+	}
+
+	#Played {
+		background: var(--color--primary);
+	}
+}

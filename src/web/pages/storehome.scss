@@ -25,8 +25,6 @@ body.no_home_gutter.infinite_scrolling {
 		#040011 13.77%,
 		var(--store-home-bg)
 	);
-	// BrowserView has a bug where a transparent background renders like shit(?)
-	background-color: var(--store-home-bg);
 	background-repeat: no-repeat;
 
 	h2 {

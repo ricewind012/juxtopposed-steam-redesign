@@ -80,6 +80,7 @@ h3 {
 	@include utils.icon;
 
 	background-image: none;
+	margin: 0;
 
 	$-icons: (
 		arrow_down: "arrow",
@@ -176,8 +177,12 @@ h3 {
 	}
 }
 
-.responsive_page_frame.with_header {
-	--global-header-height: var(--header--height);
+.responsive_page_frame {
+	--global-header-height: 0px;
+
+	html:not(.client) &.with_header {
+		--global-header-height: var(--header--height);
+	}
 }
 
 .responsive_page_template_content {
@@ -185,6 +190,8 @@ h3 {
 	--store-menu-floating-height: var(--header--height);
 
 	position: relative;
+	// For group member tiles
+	z-index: 0;
 }
 
 .rightbox {
@@ -245,6 +252,7 @@ body:not(.game_bg) .rightcol {
 	display: flex;
 	flex-direction: column;
 	width: var(--content--sidebar-width);
+	z-index: 0;
 }
 
 .review_award {

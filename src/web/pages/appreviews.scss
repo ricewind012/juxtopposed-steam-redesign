@@ -342,6 +342,31 @@
 	width: calc(100% - 765px);
 }
 
+.review_recent_events {
+	background-color: var(--color--bg-main-50);
+	font: var(--text--body-medium);
+	border-radius: var(--rounding-lg);
+	gap: var(--spacing-sm);
+	padding: var(--spacing-lg);
+	margin-block: var(--carousel--section-spacing) var(--spacing-lg);
+	margin-inline-start: calc(var(--content--sidebar-width) + var(--spacing-lg));
+
+	.outlier_subtitle {
+		color: var(--color--fg-dim);
+	}
+
+	.review_anomalous_events_icon {
+		color: var(--color--primary);
+		line-height: 56px;
+		margin: 0;
+	}
+
+	.review_anomalous_events_title {
+		font: inherit;
+		margin: 0;
+	}
+}
+
 // Duplicate info, see sidebar
 .review_score_summaries {
 	display: none;
@@ -352,7 +377,7 @@
 }
 
 .reviews_info_ctn {
-	margin-block-start: var(--carousel--section-spacing);
+	margin-block: var(--carousel--section-spacing);
 	margin-inline-start: calc(var(--content--sidebar-width) + var(--spacing-lg));
 }
 
@@ -478,10 +503,13 @@
 		.game_review_summary {
 			margin-inline-start: auto;
 
+			overflow: hidden;
 			order: 1;
 		}
 
 		.tooltip {
+			--icon--size-md: var(--icon--size-sm);
+
 			margin-inline-start: auto;
 		}
 	}

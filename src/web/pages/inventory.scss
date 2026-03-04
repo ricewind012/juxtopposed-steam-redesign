@@ -49,12 +49,8 @@
 	@include web.sidebar--list-item;
 
 	&.filtered {
-		// TODO: sidebar active item
-		background-color: color-mix(
-			in srgb,
-			var(--color--primary) 20%,
-			transparent
-		);
+		// TODO(mixins): sidebar active item
+		background-color: var(--color--bg-hl);
 	}
 
 	input[type="checkbox"] {
@@ -253,6 +249,7 @@ body.inventory_page {
 	margin: 0;
 
 	display: flex;
+	flex-direction: row-reverse;
 
 	.pagecontrol_element.pagecounts {
 		color: var(--color--fg-main);

@@ -74,6 +74,9 @@
 .community_home_search_apps_image,
 .community_home_search_players_image {
 	@include controls.text-field-icon($name: "search");
+
+	// TODO(mixins): idc, unify utils.icon options with a map
+	content: url("data:,");
 }
 
 .community_home_search_app_input,

@@ -20,7 +20,11 @@
 	align-items: center;
 }
 
-#LocSection,
+#LocSection {
+	background: none;
+	color: inherit;
+}
+
 #LocString {
 	all: unset;
 }
@@ -49,4 +53,12 @@
 
 #StoreSidebarContainer {
 	margin-block-start: calc(var(--spacing-xs) * 2);
+}
+
+#ToolTipContainer {
+	margin: 0;
+}
+
+#ToolTipControl {
+	@include utils.tooltip-icon;
 }

@@ -4,6 +4,12 @@
 	box-sizing: border-box;
 }
 
+:root {
+	// BrowserView has a bug where a transparent background isn't cleared from
+	// old content
+	background-color: var(--color--bg-main);
+}
+
 body {
 	background: linear-gradient(
 		173.45deg,

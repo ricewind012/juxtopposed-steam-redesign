@@ -1,21 +1,33 @@
-#BackgroundImage {
-	opacity: 1;
+body.ShoppingCart {
 	background: linear-gradient(77.55deg, #14344b 12.47%, #0e141b 96.75%);
 }
 
+#BackgroundImage {
+	display: none;
+}
+
 #CartNoteText {
-	color: var(--color--fg-main);
+	color: var(--color--fg-dim);
+	font: var(--text--body-small);
 }
 
 #CartRightColStickyCtn {
-	border-radius: var(--rounding-lg);
+	gap: var(--spacing-lg);
 
 	max-width: 445px;
 }
 
 #CartSummaryCtn {
 	background-color: var(--color--bg-main-50);
-	padding: var(--spacing-lg);
+	border-radius: var(--rounding-lg);
+	padding: var(--spacing-md);
+}
+
+#EstimatedTotalFlex {
+	& > div {
+		color: var(--color--fg-main);
+		font: var(--text--body-large);
+	}
 }
 
 #LicenseContextCtn {
