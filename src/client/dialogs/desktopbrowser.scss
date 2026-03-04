@@ -51,6 +51,10 @@
 		100% - var(--dialog--window-control-size) *
 			4 - var(--dialog--window-control-spacing) * 3.5
 	);
+
+	html[browsertype="DirectHWND"] & {
+		width: 100%;
+	}
 }
 
 #BrowserViewHost {

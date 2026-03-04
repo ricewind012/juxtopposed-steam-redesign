@@ -81,7 +81,11 @@
 		var(--dialog--window-control-size) * 3 +
 			var(--dialog--window-control-spacing) * 2
 	);
-	height: 32px;
+	height: var(--dialog--window-control-size);
+
+	html[browsertype="DirectHWND"] & {
+		display: none;
+	}
 
 	.title-area {
 		padding: 0;

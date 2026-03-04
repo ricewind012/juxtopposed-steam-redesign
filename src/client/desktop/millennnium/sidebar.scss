@@ -54,12 +54,15 @@ button.MillenniumDesktopSidebar_LibraryItemButton {
 	font: var(--text--heading-large);
 	box-shadow: none;
 	padding-block: var(--spacing-sm);
-	padding-block-start: calc(
-		var(--dialog--window-control-size) + var(--spacing-md) * 2 +
-			var(--spacing-sm)
-	);
 	padding-inline: var(--dialog--spacing-container);
 
 	flex-direction: row;
 	justify-content: space-between;
+
+	html:not([browsertype="DirectHWND"]) & {
+		padding-block-start: calc(
+			var(--dialog--window-control-size) + var(--spacing-md) * 2 +
+				var(--spacing-sm)
+		);
+	}
 }

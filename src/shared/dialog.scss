@@ -228,6 +228,10 @@
 	inset-inline-start: unset;
 	height: min-content;
 	z-index: 1500;
+
+	html[browsertype="DirectHWND"] & {
+		display: none;
+	}
 }
 
 // Only used in browser
