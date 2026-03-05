@@ -55,254 +55,9 @@
 	display: none;
 }
 
-.review_box {
-	background: var(--color--bg-main-50);
-	// Friend review
-	border: none;
-	border-radius: var(--rounding-lg);
-	padding: var(--spacing-md);
-	margin-block-end: var(--spacing-lg);
-
-	position: relative;
-
-	&.short {
-		--thumb-size: 30px;
-
-		.hours,
-		.persona_name {
-			margin: 0;
-		}
-
-		.postedDate {
-			display: none;
-		}
-
-		.review_award_ctn {
-			display: none;
-		}
-
-		.review_source {
-			margin: var(--spacing-xxs);
-			margin-inline-start: auto;
-
-			order: 1;
-		}
-
-		.short_header {
-			background-color: var(--color--bg-main);
-			border-radius: var(--rounding-md);
-			margin-block-end: var(--spacing-sm);
-			gap: var(--spacing-sm);
-
-			display: flex;
-			align-items: center;
-		}
-
-		.shortcol {
-			padding: 0;
-		}
-	}
-
-	#{controls.button-web-selector(".btnv6_grey_black")} {
-		@include web.apphub--card-metadata-button;
-
-		.ico16 {
-			--icon--size-md: var(--icon--size-sm);
-			color: var(--color--fg-dim);
-		}
-	}
-
-	.review_source {
-		@include utils.icon($img-el: true, $name: "star-filled");
-
-		opacity: 1;
-		margin: 0;
-	}
-}
-
 .review_ctn {
 	border: none;
 	margin-block: 100px 0;
-}
-
-// .review_leftcol {
-.review_box {
-	.review_leftcol {
-		opacity: 1;
-		gap: var(--spacing-sm);
-		padding: 0;
-
-		width: unset;
-	}
-
-	.author_counts,
-	.author_details {
-		display: flex;
-		align-items: center;
-	}
-
-	.avatar {
-		padding: 0;
-
-		// Friend review
-		width: unset;
-		height: unset;
-	}
-
-	.num_owned_games,
-	.num_reviews {
-		font: var(--text--body-medium);
-		margin-inline-start: var(--spacing-sm);
-
-		a {
-			color: var(--color--fg-dim);
-		}
-	}
-
-	.persona_name {
-		display: flex;
-		width: unset;
-		max-width: 140px;
-
-		a {
-			font: var(--text--body-medium);
-		}
-	}
-
-	.playerAvatar {
-		--avatar--border-size: 0px;
-		--size: var(--icon--size-md);
-	}
-
-	.playerAvatar_friendindicator {
-		display: none;
-	}
-}
-
-// .review_rightcol {
-.review_box {
-	.review_rightcol {
-		position: unset;
-	}
-
-	.content {
-		color: var(--color--fg-main);
-		font: var(--text--body-large);
-		margin: 0;
-
-		.gradient {
-			display: none;
-		}
-	}
-
-	&.partial .content {
-		mask: linear-gradient(black, transparent);
-	}
-
-	.commentCount a {
-		@include web.apphub--card-metadata($icon: "chat-bubble");
-
-		margin-inline-start: var(--spacing-sm);
-
-		height: unset;
-	}
-
-	.control_block {
-		margin-block: var(--spacing-xs) 0;
-
-		.text {
-			opacity: 1;
-			color: var(--color--fg-dim);
-			font: var(--text--body-small);
-		}
-	}
-
-	.hr {
-		background-color: var(--color--border);
-
-		height: var(--border-sm);
-	}
-
-	.posted {
-		margin-block: var(--spacing-sm) var(--spacing-xl);
-
-		a {
-			font: var(--text--body-medium);
-			text-transform: none;
-		}
-
-		.view_more {
-			margin: 0;
-		}
-	}
-
-	.postedDate {
-		opacity: 1;
-		color: var(--color--fg-dim);
-		font: var(--text--body-small);
-		text-transform: none;
-
-		position: absolute;
-		inset-block-start: var(--spacing-md);
-		inset-inline-end: var(--spacing-md);
-	}
-
-	.vote_button_ctn {
-		gap: var(--spacing-sm);
-		padding: 0;
-		margin-block-start: 1lh;
-
-		display: flex;
-	}
-
-	.short_header,
-	.vote_header {
-		background-color: var(--color--bg-main);
-		border-radius: var(--rounding-md);
-
-		height: unset;
-
-		.thumb {
-			display: flex;
-
-			img {
-				border-radius: var(--rounding-sm);
-
-				width: var(--thumb-size);
-				height: var(--thumb-size);
-			}
-		}
-	}
-
-	.vote_header {
-		--thumb-size: 49px;
-
-		padding: var(--spacing-xxs);
-		margin-block: var(--spacing-xl);
-
-		.hours {
-			opacity: 1;
-			color: var(--color--fg-dim);
-			font: var(--text--body-medium);
-			margin: 0;
-			margin-block-start: var(--spacing-sm);
-		}
-
-		.title {
-			color: var(--color--fg-main);
-			font: var(--text--body-medium);
-			padding: 0;
-		}
-	}
-
-	.vote_info {
-		color: var(--color--fg-dim);
-		font: var(--text--body-small);
-		padding: 0;
-		margin-block-start: var(--spacing-xs);
-
-		float: inline-end;
-	}
 }
 
 // Looking at game.js, its only purpose is appearance...
@@ -377,7 +132,7 @@
 }
 
 .reviews_info_ctn {
-	margin-block: var(--carousel--section-spacing);
+	margin-block: var(--carousel--section-spacing) var(--spacing-sm);
 	margin-inline-start: calc(var(--content--sidebar-width) + var(--spacing-lg));
 }
 
@@ -397,21 +152,8 @@
 	}
 }
 
-.user_reviews_by_friends_link {
-	padding: 0;
-	margin-block: var(--spacing-lg);
-
-	img {
-		display: none;
-	}
-}
-
-.user_reviews_container {
+[data-featuretarget="appreviews"] {
 	margin-inline-start: calc(var(--content--sidebar-width) + var(--spacing-lg));
-
-	.leftcol {
-		//width: 67%;
-	}
 }
 
 .user_reviews_count {
@@ -549,6 +291,10 @@
 
 .user_reviews_filter_score {
 	padding-block: var(--spacing-sm) var(--carousel--section-spacing);
+
+	&:empty {
+		display: none;
+	}
 }
 
 .user_reviews_header {
@@ -559,24 +305,4 @@
 
 		text-decoration: none;
 	}
-}
-
-.user_reviews_most_helpful_days {
-	color: var(--color--fg-dim);
-	font: inherit;
-	text-transform: none;
-}
-
-.user_reviews_sub_header {
-	color: var(--color--fg-main);
-	font: var(--text--heading-small);
-	letter-spacing: 0;
-	text-transform: none;
-	padding-block-end: var(--spacing-lg);
-}
-
-.view_all_reviews_btn {
-	color: var(--color--fg-dim);
-	font: var(--text--body-large);
-	padding-block: 0 var(--spacing-lg);
 }

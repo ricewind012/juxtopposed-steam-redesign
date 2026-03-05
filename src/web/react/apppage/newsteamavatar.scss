@@ -1,0 +1,54 @@
+#Avatar {
+	border: var(--avatar--border-size) solid;
+	border-radius: var(--avatar--border-radius);
+
+	width: 100%;
+	height: 100%;
+}
+
+#AvatarHolder {
+	transform: none;
+	border-radius: var(--avatar--border-radius);
+
+	position: relative;
+	width: var(--steamavatar_size);
+	height: var(--steamavatar_size);
+
+	&:where([data-size="X-Small"]) {
+		--avatar--border-radius: var(--rounding-sm);
+		--steamavatar_size: var(--avatar--size-xs);
+	}
+
+	&:where([data-size="Small"]) {
+		--steamavatar_size: var(--avatar--size-sm);
+	}
+
+	&:where([data-size="Medium"]) {
+		--steamavatar_size: var(--avatar--size-md);
+	}
+
+	&:where([data-size="X-Large"]) {
+		--avatar--border-radius: var(--rounding-lg);
+		--steamavatar_size: var(--avatar--size-xl);
+	}
+
+	&:where([data-size="FillArea"]) {
+		--steamavatar_size: 100%;
+	}
+
+	&:where(#AwayOrSnooze) {
+		color: var(--color--accent-yellow);
+	}
+
+	&:where(#InGame) {
+		color: var(--color--accent-green);
+	}
+
+	&:where(#Offline) {
+		color: var(--color--fg-dim);
+	}
+
+	&:where(#Online) {
+		color: var(--color--primary);
+	}
+}

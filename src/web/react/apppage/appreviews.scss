@@ -1,0 +1,59 @@
+#BrowseAllLink {
+	color: var(--color--fg-dim);
+	font: var(--text--body-large);
+	margin-block-end: var(--spacing-lg);
+}
+
+#Reviews {
+	gap: var(--spacing-md);
+}
+
+#ReviewSection {
+	gap: var(--spacing-sm);
+}
+
+#ReviewSectionTitle {
+	color: var(--color--fg-main);
+	font: var(--text--heading-small);
+	letter-spacing: 0;
+	text-transform: none;
+}
+
+#ReviewSummary {
+	gap: var(--spacing-lg);
+
+	#Left,
+	#Right {
+		gap: var(--spacing-lg);
+	}
+}
+
+#StatusLine {
+	color: var(--color--fg-dim);
+	border: none;
+	padding: 0;
+	margin-block-end: var(--carousel--section-spacing);
+
+	height: unset;
+
+	#ReviewCount {
+		font: var(--text--body-medium);
+
+		b {
+			color: var(--color--fg-main);
+			font: inherit;
+		}
+	}
+
+	#Score {
+		color: var(--color--accent-red);
+
+		&#Positive {
+			color: var(--color--primary);
+		}
+
+		&#Mixed {
+			color: var(--color--accent-yellow);
+		}
+	}
+}

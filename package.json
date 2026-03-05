@@ -9,6 +9,6 @@
 		"postcss-discard-comments": "^7.0.5",
 		"postcss-functions": "^4.0.2",
 		"postcss-scss": "^4.0.9",
-		"steam-theming-utils": "^3.5.0"
+		"steam-theming-utils": "^3.6.0"
 	}
 }

@@ -1,0 +1,230 @@
+@use "shared/controls";
+@use "shared/style";
+@use "shared/utils";
+@use "web";
+
+#AuthorInfo {
+	opacity: 1;
+	gap: var(--spacing-sm);
+
+	flex: unset;
+
+	#AuthorNameAndCounts {
+		flex-direction: row;
+		align-items: center;
+
+		#Count {
+			color: var(--color--fg-dim);
+			font: var(--text--body-medium);
+			margin-inline-start: var(--spacing-sm);
+		}
+
+		#Counts {
+			flex-direction: row;
+		}
+
+		#Name {
+			color: var(--color--fg-main);
+			font: var(--text--body-medium);
+			margin: 0;
+		}
+	}
+
+	#AvatarContainer {
+		--avatar--border-size: 0px;
+		--steamavatar_size: var(--icon--size-md);
+
+		width: var(--steamavatar_size);
+		height: var(--steamavatar_size);
+	}
+}
+
+#Body {
+	gap: var(--spacing-xl);
+
+	hr {
+		display: none;
+	}
+
+	#PostedDateAndSource {
+		position: absolute;
+		inset-block-start: var(--spacing-md);
+		inset-inline-end: var(--spacing-md);
+
+		#PostedDate,
+		#ReviewSource {
+			opacity: 1;
+			color: var(--color--fg-dim);
+			font: var(--text--body-small);
+			text-transform: none;
+			margin-block: calc(
+				var(--text--body-medium-size) - var(--text--body-small-size)
+			);
+		}
+	}
+
+	#VoteButton {
+		@include web.apphub--card-metadata-button;
+
+		height: unset;
+
+		svg {
+			@include utils.icon($remove: true, $size: "sm");
+
+			color: var(--color--fg-dim);
+		}
+
+		#Award {
+			--icon-name: icon("military-tech");
+		}
+
+		#ThumbIcon {
+			--icon-name: icon("thumb-up");
+
+			// TODO(icons):
+			&#Down {
+				transform: rotate(180deg);
+			}
+		}
+	}
+
+	#VoteButtons {
+		gap: var(--spacing-sm);
+	}
+
+	#VoteButtonsContainer {
+		gap: var(--spacing-xl);
+
+		#Text {
+			opacity: 1;
+			color: var(--color--fg-dim);
+			font: var(--text--body-small);
+			border-block-start: var(--border-sm) solid var(--color--border);
+			padding-block-start: var(--spacing-sm);
+		}
+	}
+}
+
+#Disclaimer {
+	@include style.text-tag($size: "sm");
+
+	color: var(--color--secondary);
+	text-transform: none;
+	border: none;
+}
+
+#ReviewDetails#Short {
+	#Body {
+		padding: 0;
+	}
+
+	#PostedDateAndSource {
+		display: none;
+	}
+
+	#ReviewInfoHeader {
+		--thumb-size: var(--icon--size-md);
+
+		padding: 0;
+	}
+}
+
+#ReviewInfo {
+	gap: var(--spacing-xl);
+	padding: 0;
+}
+
+#ReviewInfoHeader {
+	--thumb-size: 49px;
+
+	background: var(--color--bg-main);
+	border-radius: var(--rounding-md);
+	gap: var(--spacing-sm);
+	padding: var(--spacing-xxs);
+	margin: 0;
+
+	height: unset;
+
+	#CountedIcon {
+		color: var(--color--fg-dim);
+
+		align-self: start;
+		height: unset;
+
+		#ReviewCountedIcon {
+			@include utils.icon($remove: true);
+		}
+	}
+
+	#Headline,
+	#Persona {
+		color: var(--color--fg-main);
+		font: var(--text--body-medium);
+	}
+
+	#Playtime {
+		color: var(--color--fg-dim);
+		font: var(--text--body-medium);
+	}
+
+	#SteamDeckIcon {
+		height: var(--icon--size-md);
+	}
+
+	#ThumbIcon {
+		border-radius: var(--rounding-sm);
+
+		width: var(--thumb-size);
+		height: var(--thumb-size);
+	}
+}
+
+#ReviewRatings {
+	// To remove parent's gap
+	&:has(> :empty) {
+		display: none;
+	}
+}
+
+#ReviewText {
+	gap: var(--spacing-sm);
+
+	&:not(#Expanded):has(#FadeGradient) #Text {
+		mask: linear-gradient(black, transparent);
+	}
+
+	&#Expanded #ReadMoreButton {
+		display: none;
+	}
+
+	#FadeGradient {
+		display: none;
+	}
+
+	#ReadMoreButton {
+		@include style.link;
+
+		background: none;
+		border: none;
+		padding: 0;
+	}
+
+	#Text {
+		color: var(--color--fg-main);
+		font: var(--text--body-large);
+	}
+}
+
+#ThumbIcon {
+	display: flex;
+}
+
+#Top {
+	background: var(--color--bg-main-50);
+	border-radius: var(--rounding-lg);
+	padding: var(--spacing-md);
+	gap: var(--spacing-xl);
+
+	flex-direction: column;
+	position: relative;
+}
