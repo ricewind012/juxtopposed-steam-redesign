@@ -1,0 +1,108 @@
+#!/bin/sh -e
+
+: "${TMPDIR:=/tmp}"
+export GH_TOKEN=$(gh auth token)
+
+DIST_BRANCH=dist
+DIST_DIR=dist
+FILE_CLIENT=import_client.css
+FILE_USERSTYLE=import_web.user.css
+FILE_WEB=import_web.css
+JASONS='package.json skin.json'
+USERSTYLE_HEADER='/* ==UserStyle==
+@name           Juxtematic
+@namespace      github.com/%s
+@version        %s
+@description    The redesign from Juxtopposed
+@author         ricewind
+==/UserStyle== */
+
+@-moz-document domain("steamcommunity.com"), domain("steampowered.com") {
+'
+
+log() {
+	printf '\033[32;0;1m%s\033[m\n' "$1" >&2
+}
+
+git_branch_exists() {
+	git show-ref --verify --quiet "refs/heads/$1"
+}
+
+build_import_file() {
+	for file in $1; do
+		printf '@import url("https://rawcdn.githack.com/%s/%s/%s/%s.css");\n' \
+			"$repo_url" "$last_dist_commit" "$DIST_DIR" "$file" >> "$2"
+	done
+}
+
+while IFS= read -r line; do case $line in
+	*'The next release version'*)
+		next=${line##*is }
+		break
+	;;
+
+	*'There are no relevant changes'*)
+		log 'nothing to release!'
+		exit 1
+	;;
+esac; done <<-EOF
+$(npx semantic-release --dry-run --no-ci 2>/dev/null)
+EOF
+commit_msg="chore(release): ${next:=1.0.0}" # for first run
+
+# Compile again in case I forget.
+for i in client shared web; do
+	npm run build "$i"
+done
+
+# In case something fucks up...
+set -x
+
+# Commit dist to... the dist branch.
+rm -rf "$TMPDIR/$DIST_DIR"
+mv "$DIST_DIR" "$TMPDIR"
+git_branch_exists "$DIST_BRANCH" || checkout_opts='--orphan' # for first run
+git checkout $checkout_opts "$DIST_BRANCH"
+git rm -rf .
+mkdir -p "$DIST_DIR"
+cp "$TMPDIR/$DIST_DIR/"* "$DIST_DIR"
+git add "$DIST_DIR"
+# No files to commit if failed, no reason to cry over this...
+git commit -m "$commit_msg" || :
+# As Millennium is currently only able to download the default branch, the
+# Steam theme will be using githack, as GitHub doesn't serve the proper
+# "Content-Type" header. This needs a commit hash instead of a branch because
+# "Files are cached permanently based on the URL". The caveat is that the
+# default theme will flash for a bit...
+last_dist_commit=$(git rev-parse HEAD)
+git push -u origin "$DIST_BRANCH"
+
+# Bump the version, then push said version.
+git checkout master
+
+cp -r "$TMPDIR/$DIST_DIR" .
+
+repo_url=$(git remote get-url origin)
+repo_url=${repo_url#'https://github.com/'}
+rm -f "$FILE_CLIENT" "$FILE_WEB" "$FILE_USERSTYLE"
+build_import_file 'client shared' "$FILE_CLIENT"
+build_import_file 'shared web web_shared' "$FILE_WEB"
+printf "$USERSTYLE_HEADER" "$repo_url" "$next" > "$FILE_USERSTYLE"
+build_import_file 'shared web web_shared' "$FILE_USERSTYLE"
+printf '}\n' >> "$FILE_USERSTYLE"
+
+for file in $JASONS; do
+	sed -i "s/\"version\": \".*\"/\"version\": \"$next\"/" "$file"
+done
+
+npx semantic-release --no-ci --plugins '
+	@semantic-release/commit-analyzer,
+	@semantic-release/release-notes-generator,
+	@semantic-release/github
+'
+git add $JASONS "$FILE_CLIENT" "$FILE_USERSTYLE"
+git commit -m "$commit_msg"
+git push
+
+set +x
+log 'success!'

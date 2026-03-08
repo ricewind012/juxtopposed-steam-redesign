@@ -1,7 +1,10 @@
 {
+	"name": "juxtematic",
+	"private": true,
+	"version": "1.0.0",
 	"type": "module",
 	"scripts": {
-		"build": "npx postcss src --base src --dir dist --ext css"
+		"build": "./scripts/build"
 	},
 	"dependencies": {
 		"@csstools/postcss-sass": "^5.1.1",

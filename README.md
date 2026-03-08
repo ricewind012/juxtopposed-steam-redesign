@@ -1,45 +1,59 @@
-# A more advanced theme template
+# Juxtematic
 
-This uses **your own** class map - more info on how it works [here][steam-theming-utils].
+The redesign from Juxtopposed. Check out the original [video][design-video] & [design][design-figma].
 
-## Example
+> [!TIP]
+> With [Stylus][stylus], you can use this theme as a userstyle. [Click here][userstyle] to install.
 
-Let's say you have a file called `src/desktop/titlebarcontrols.css`:
+> [!NOTE]
+> The design makes everything bigger, and, as a consequence, doesn't support smaller window sizes; it has only been tested on maximized windows where applicable.
 
-```css
-/* Remove useless shit */
-#AnnouncementsButton,
-#GamepadUIToggle {
-  display: none;
-}
-```
+![Main Window](https://github.com/ricewind012/juxtematic/raw/master/assets/preview/steam/main-window.png)
 
-It will be compiled to the following code residing in `dist/desktop/titlebarcontrols.css`:
+## Roadmap
 
-```css
-/* Remove useless shit */
-._5wILZhsLODVwGfcJ0hKmJ /* AnnouncementsButton */,
-._3LKQ3S_yqrebeNLF6aeiog /* GamepadUIToggle */ {
-  display: none;
-}
-```
+- [ ] Client
+  - [x] Dialogs/modals/notifications
+  - [ ] Friends & chat
+  - [x] Library
+  - [x] Overlay
+  - [ ] Millennium
+    - [ ] Options (maybe)
+    - [x] Change Window Params (only system titlebar)
+- [ ] Web
+  - [x] Account preferences
+  - [x] App hub
+  - [x] App page
+  - [ ] Dialogs/modals
+  - [x] Forum
+  - [x] Friend activity
+  - [x] Group
+  - [x] Guides
+  - [x] Market
+  - [ ] Points shop
+  - [x] Profile
+    - [x] Friends
+    - [ ] Games
+    - [x] Inventory
+    - [x] Settings
+    - [x] Trade offers
+  - [x] Shopping cart
+  - [x] Store home
+  - [ ] Store search
+  - [ ] Wishlist
+  - [x] Workshop
 
-This example resides in the `src` directory. The files whose class names will be replaced will reside in the `dist` directory.
+### Problems
 
-## Usage
+| Where                   | Why                                         |
+| ----------------------- | ------------------------------------------- |
+| Web -> Dialogs/modals   | Does anyone even use any of these?          |
+| Web -> Points shop      | idgaf                                       |
+| Web -> Profile -> Games | Broken, unable to theme with current method |
+| Web -> Market           | New filter dialog & item info not yet done. |
+| Web -> Wishlist         | Broken, unable to theme with current method |
 
-```sh
-# Install dependencies
-$ npm i
-
-# See the readable versions of classes
-$ npx steam-theming-utils make_readable_classes
-
-# ...and build!
-$ npm run build
-```
-
-[Prettier][prettier], a CSS/JS formatter, is also included as a dependency of [steam-theming-utils][steam-theming-utils].
-
-[prettier]: https://prettier.io
-[steam-theming-utils]: https://github.com/ricewind012/steam-theming-utils
+[design-figma]: https://www.figma.com/community/file/1302616100790619521/steam-redesign
+[design-video]: https://www.youtube.com/watch?v=cDY2p1CTkPo
+[stylus]: https://add0n.com/stylus.html
+[userstyle]: https://raw.githubusercontent.com/ricewind012/juxtematic/refs/heads/master/import_web.user.css
