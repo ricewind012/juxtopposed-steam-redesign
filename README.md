@@ -2,6 +2,8 @@
 
 The redesign from Juxtopposed. Check out the original [video][design-video] & [design][design-figma].
 
+If you like my work, consider supporting me by [donating your Steam items](https://steamcommunity.com/tradeoffer/new/?partner=126767191&token=VXyXSX5P).
+
 > [!TIP]
 > With [Stylus][stylus], you can use this theme as a userstyle. [Click here][userstyle] to install.
 
