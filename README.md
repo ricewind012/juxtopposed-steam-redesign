@@ -8,7 +8,7 @@ The redesign from Juxtopposed. Check out the original [video][design-video] & [d
 > [!NOTE]
 > The design makes everything bigger, and, as a consequence, doesn't support smaller window sizes; it has only been tested on maximized windows where applicable.
 
-![Main Window](https://github.com/ricewind012/juxtematic/raw/master/assets/preview/steam/main-window.png)
+![Main Window](https://github.com/ricewind012/juxtematic/raw/master/assets/preview/main-window.png)
 
 ## Roadmap
 
