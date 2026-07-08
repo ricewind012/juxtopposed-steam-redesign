@@ -46,13 +46,13 @@ while IFS= read -r line; do case $line in
 		exit 1
 	;;
 esac; done <<-EOF
-$(npx semantic-release --dry-run --no-ci 2>/dev/null)
+$(bunx semantic-release --dry-run --no-ci 2>/dev/null)
 EOF
 commit_msg="chore(release): ${next:=1.0.0}" # for first run
 
 # Compile again in case I forget.
 for i in client shared web; do
-	npm run build "$i"
+	bun run build "$i"
 done
 
 # In case something fucks up...
@@ -95,7 +95,7 @@ for file in $JASONS; do
 	sed -i "s/\"version\": \".*\"/\"version\": \"$next\"/" "$file"
 done
 
-npx semantic-release --no-ci --plugins '
+bunx semantic-release --no-ci --plugins '
 	@semantic-release/commit-analyzer,
 	@semantic-release/release-notes-generator,
 	@semantic-release/github
